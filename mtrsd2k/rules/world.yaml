@@ -1,0 +1,239 @@
+^BaseWorld:
+	Inherits: ^Palettes
+	AlwaysVisible:
+	ScreenMap:
+	ActorMap:
+	MusicPlaylist:
+		VictoryMusic: score
+		DefeatMusic: score
+	TerrainGeometryOverlay:
+	ShroudRenderer:
+		ShroudVariants: shrouda, shroudb, shroudc, shroudd
+		FogVariants: foga, fogb, fogc, fogd
+		Index: 11, 3, 7, 9, 6, 13, 12, 14, 4, 8, 2, 1, 5, 10
+		OverrideFullShroud: shroudfull
+		OverrideFullFog: fogfull
+		ShroudBlend: Multiply
+	Faction@Random:
+		Name: Any
+		InternalName: Random
+		RandomFactionMembers: atreides, harkonnen, ordos, corrino, mercenary, smuggler, freman
+		Description: Select a random House.
+	Faction@Atreides:
+		Name: Atreides
+		InternalName: atreides
+		Side: Atreides
+		Description: House Atreides\n Special Units:\n - Grenadier\n - Sonic Tank\n - Fremen\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Trike\n Combat Tank Speciality:\n - Range\n Speical Ability:\n - Ornithopter AirStrike
+	Faction@Harkonnen:
+		Name: Harkonnen
+		InternalName: harkonnen
+		Side: Harkonnen
+		Description: House Harkonnen\n Special Units:\n - Flamethrower\n - Devastator\n - Rocketeer\n Defensive Structures:\n - Flame Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Trike\n Combat Tank Speciality:\n - Armor\n Speical Ability:\n - Death Hand Missile Strike
+	Faction@Ordos:
+		Name: Ordos
+		InternalName: ordos
+		Side: Ordos
+		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Speed\n Speical Ability:\n - Their vehicles can self-repair
+	Faction@Corrino:
+		Name: Corrino
+		InternalName: corrino
+		Side: Harkonnen
+		Description: House Corrino\n Special Units:\n - Plasma Infantry\n - Quake Tank\n - Sardaukar\n Defensive Structures:\n - Flame Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Trike\n Combat Tank Speciality:\n - Damage\n Speical Ability:\n - Rocket Strike
+	Faction@Mercenaries:
+		Name: Mercenaries
+		InternalName: mercenary
+		Side: Ordos
+		Description: The Mercenaries\n Special Units:\n - Light Tank\n - Bomb Buggy\n - Sniper\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Rate of Fire\n Speical Ability:\n - Can buy everything they can build
+	Faction@Smugglers:
+		Name: Smugglers
+		InternalName: smuggler
+		Side: Ordos
+		Description: The Smugglers\n Special Units:\n - Attack Dog \n - IFV\n - Saboteur\n Defensive Structures:\n - Anti-Personnel Mine\n - Anti-Tank Mine\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Build Time\n Speical Ability:\n - Has better Refinery, Silo, Carryall and Harvester
+	Faction@Fremen:
+		Name: Fremen
+		InternalName: freman
+		Side: Atreides
+		Description: The Fremen\n Special Units:\n - Freman\n - Stealth Tank\n - Fedaykin\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Cost\n Speical Ability:\n - Stealth Device
+	ResourceType@Spice:
+		ResourceType: 1
+		Palette: d2k
+		TerrainType: Spice
+		Variants: spice
+		MaxDensity: 20
+		ValuePerUnit: 25
+		Name: Spice
+		PipColor: green
+		AllowedTerrainTypes: SpiceSand
+		AllowUnderActors: true
+
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	ProductionQueueFromSelection:
+		ProductionPaletteWidget: PRODUCTION_PALETTE
+	WormManager:
+	CrateSpawner:
+		Minimum: 0
+		Maximum: 2
+		SpawnInterval: 1500
+		WaterChance: 0
+		ValidGround: Sand, Dune, Rock, SpiceSand
+		InitialSpawnDelay: 1500
+	DomainIndex:
+	WarheadDebugOverlay:
+	BuildableTerrainLayer:
+	D2kResourceLayer:
+	ResourceClaimLayer:
+	CustomTerrainDebugOverlay:
+	SmudgeLayer@Rock:
+		Type: RockCrater
+		Sequence: rockcraters
+		SmokePercentage: 0
+	SmudgeLayer@Sand:
+		Type: SandCrater
+		Sequence: sandcraters
+		SmokePercentage: 0
+	MapCreeps:
+	SpawnMapActors:
+	MapBuildRadius:
+	MapOptions:
+		TechLevel: 7
+	CreateMPPlayers:
+	MPStartLocations:
+	MPStartUnits@mcv:
+		Class: none
+		ClassName: MCV Only
+		BaseActor: mcv
+		Factions: atreides, ordos, harkonnen, freman, corrino, smuggler, mercenary
+	MPStartUnits@lightatreides:
+		Class: light
+		ClassName: Light Support
+		Factions: atreides
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, grenadier, trike, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@lightfreman:
+		Class: light
+		ClassName: Light Support
+		Factions: freman
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, nsfremen, raider, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@lightharkonnen:
+		Class: light
+		ClassName: Light Support
+		Factions: harkonnen
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, flamethrower, trike, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@lightcorrino:
+		Class: light
+		ClassName: Light Support
+		Factions: corrino
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, plasma_infantry, trike, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@lightordos:
+		Class: light
+		ClassName: Light Support
+		Factions: ordos
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, stealth_raider, raider, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@lightmercenary:
+		Class: light
+		ClassName: Light Support
+		Factions: mercenary
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, light_tank, raider, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@smuggler:
+		Class: light
+		ClassName: Light Support
+		Factions: smuggler
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, dog, dog, raider, quad
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavyatreides:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: atreides
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, grenadier, trike, combat_tank_a, missile_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavyfreman:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: freman
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, nsfremen, raider, combat_tank_f, missile_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavyharkonnen:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: harkonnen
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, flamethrower, quad, combat_tank_h, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavycorrino:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: corrino
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, plasma_infantry, quad, combat_tank_c, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavyordos:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: ordos
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, stealth_raider, raider, combat_tank_o, missile_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavymercenary:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: mercenary
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, light_tank, raider, combat_tank_m, missile_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@heavysmuggler:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: smuggler
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, trooper, dog, dog, raider, combat_tank_s, missile_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	SpawnMPUnits:
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	RadarPings:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	D2kEditorResourceLayer:
+	EditorSelectionLayer:
+	LoadWidgetAtGameStart:

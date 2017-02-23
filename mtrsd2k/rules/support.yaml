@@ -1,0 +1,419 @@
+concretea:
+	Inherits: ^Concrete
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Valued:
+		Cost: 15
+	Buildable:
+		Prerequisites: construction_yard, ~techlevel.1
+		BuildPaletteOrder: 1
+		BuildDuration: 50
+		BuildDurationModifier: 40
+
+concreteb:
+	Inherits: ^Concrete
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Tooltip:
+		Name: Large Concrete Slab
+	Valued:
+		Cost: 35
+	Buildable:
+		Prerequisites: construction_yard, upgrade.conyard, ~techlevel.6
+		BuildPaletteOrder: 2
+		BuildDuration: 80
+		BuildDurationModifier: 40
+
+silo:
+	Inherits: ^Building
+	Buildable:
+		Prerequisites: construction_yard, refinery, ~!cyard.smuggler, ~techlevel.1
+		Queue: Support
+		BuildPaletteOrder: 3
+		BuildDuration: 135
+		BuildDurationModifier: 40
+	Selectable:
+		Bounds: 32,32
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: Silo
+		Description: Stores excess harvested Spice.
+	Building:
+		Adjacent: 4
+	-GivesBuildableArea:
+	Health:
+		HP: 1500
+	Armor:
+		Type: wall
+	RevealsShroud:
+		Range: 2c768
+	RenderSprites:
+		Image: silo.harkonnen
+		FactionImages:
+			atreides: silo.atreides
+			freman: silo.atreides
+			ordos: silo.ordos
+			smuggler: silo.ordos
+			mercenary: silo.ordos
+	WithSpriteBody:
+	WithSiloAnimation:
+	StoresResources:
+		PipColor: green
+		PipCount: 5
+		Capacity: 2000
+	-EmitInfantryOnSell:
+	Power:
+		Amount: -15
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	ThrowsShrapnel:
+		Weapons: Debris, Debris2, Debris3, Debris4
+		Pieces: 3, 5
+		Range: 2c0, 5c0
+        
+silo.smuggler:
+	Inherits: silo
+	Buildable:
+		Prerequisites: construction_yard, refinery, ~cyard.smuggler, ~techlevel.1
+		BuildPaletteOrder: 4
+	Power:
+		Amount: -10
+	StoresResources:
+		Capacity: 2500
+	Health:
+		HP: 2000
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Smuggler Silo
+
+wall:
+	Inherits@1: ^SpriteActor
+	CombatDebugOverlay:
+	HiddenUnderShroud:
+	Buildable:
+		Queue: Support
+		Prerequisites: construction_yard, barracks, ~techlevel.2
+		BuildPaletteOrder: 5
+		BuildDuration: 54
+		BuildDurationModifier: 40
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds: EXPLSML4.WAV
+	Valued:
+		Cost: 20
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+		Description: Stop units and blocks enemy fire.
+	AppearsOnRadar:
+	Building:
+		BuildSounds: CHUNG.WAV
+		Adjacent: 7
+		TerrainTypes: Rock, Concrete
+	Health:
+		HP: 2000
+		Shape: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+	Armor:
+		Type: none
+	RevealsShroud:
+		Range: 2c768
+	Crushable:
+		CrushClasses: wall
+	BlocksProjectiles:
+	LineBuild:
+		Range: 5
+		NodeTypes: wall, turret
+	LineBuildNode:
+		Types: wall
+	Targetable:
+		TargetTypes: Ground, Wall
+	WithWallSpriteBody:
+	AutoTargetIgnore:
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Guardable:
+	ThrowsShrapnel:
+		Weapons: Debris, Debris3
+		Pieces: 2, 2
+		Range: 2c0, 4c0
+
+mine_ap:
+	Inherits: ^Mine
+	Buildable:
+		Prerequisites: construction_yard, barracks, ~cyard.smuggler, ~techlevel.3
+		BuildPaletteOrder: 6
+		BuildDuration: 100
+	Mine:
+		CrushClasses: mine_ap
+		DetonateClasses: mine_ap
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Anti-Personnel Mine
+		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
+	Explodes:
+		Weapon: APMine
+		EmptyWeapon: APMine
+
+mine_at:
+	Inherits: ^Mine
+	Buildable:
+		Prerequisites: construction_yard, barracks, ~cyard.smuggler, ~techlevel.4
+		BuildPaletteOrder: 7
+		BuildDuration: 160
+	Valued:
+		Cost: 275
+	Mine:
+		CrushClasses: mine_at
+		DetonateClasses: mine_at
+	Tooltip:
+		Name: Anti-Tank Mine
+		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
+	Explodes:
+		Weapon: ATMine
+		EmptyWeapon: ATMine
+
+machine_gun_tower:
+   	Inherits: ^Defense
+	Buildable:
+		Queue: Support
+		Prerequisites: construction_yard, barracks, ~cyard.machine_gun_tower, ~techlevel.3
+		BuildPaletteOrder: 8
+		BuildDuration: 222
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Machine Gun Tower
+		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Building:
+		Adjacent: 4
+		BuildSounds: CHUNG.WAV
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Selectable:
+		Bounds: 32,32
+		Priority: 3
+	Health:
+		HP: 2500
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 4c768
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithMuzzleOverlay:
+	-WithSpriteTurret:
+	Turreted:
+		TurnSpeed: 255
+	Armament:
+		Weapon: HMGo_turret
+		LocalOffset: 256,0,576
+		MuzzleSequence: muzzle
+	Power:
+		Amount: -30
+	SelectionDecorations:
+		VisualBounds: 32,40,0,-8
+
+flame_tower:
+   	Inherits: ^Defense
+	Buildable:
+		Queue: Support
+		Prerequisites: construction_yard, barracks, ~cyard.flame_tower, ~techlevel.3
+		BuildPaletteOrder: 8
+		BuildDuration: 222
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Flame Tower
+		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Building:
+		Adjacent: 4
+		BuildSounds: CHUNG.WAV
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Selectable:
+		Bounds: 32,32
+		Priority: 3
+	Health:
+		HP: 2500
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 4c768
+	BodyOrientation:
+		QuantizedFacings: 32
+	-WithSpriteTurret:
+	Turreted:
+		TurnSpeed: 255
+	Armament:
+		Weapon: Flamegun-tower
+	Power:
+		Amount: -30
+	SelectionDecorations:
+		VisualBounds: 32,40,0,-8
+
+artillery_platform:
+   	Inherits: ^Defense
+	Buildable:
+		Queue: Support
+		Prerequisites: construction_yard, barracks, ~cyard.artillery_platform, ~techlevel.3
+		BuildPaletteOrder: 8
+		BuildDuration: 222
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Artillery Platform
+		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Building:
+		Adjacent: 4
+		BuildSounds: CHUNG.WAV
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Selectable:
+		Bounds: 32,32
+		Priority: 3
+	Health:
+		HP: 2500
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 4c768
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 3
+		InitialFacing: 128
+	Armament:
+		Weapon: 155mm
+		LocalOffset: 512,0,640
+		Recoil: 150
+		RecoilRecovery: 19
+		MuzzleSequence: muzzle
+	Power:
+		Amount: -30
+	SelectionDecorations:
+		VisualBounds: 32,40,0,-8
+
+medium_gun_turret:
+	Inherits: ^Defense
+	Buildable:
+		Queue: Support
+		Prerequisites: construction_yard, light_or_heavy, ~cyard.gun_turret, ~techlevel.4
+		BuildPaletteOrder: 8
+		BuildDuration: 231
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Gun Turret
+		Description: Defensive structure.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Requires power to operate
+	Building:
+		Adjacent: 4
+		BuildSounds: CHUNG.WAV
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Selectable:
+		Bounds: 32,32
+		Priority: 3
+	Health:
+		HP: 2750
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 4c768
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 6
+		InitialFacing: 128
+	Armament:
+		Weapon: 110mm_Gun
+		LocalOffset: 512,0,432
+		MuzzleSequence: muzzle
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
+	Power:
+		Amount: -45
+	SelectionDecorations:
+		VisualBounds: 32,40,0,-8
+
+large_gun_turret:
+	Inherits: ^Defense
+	Buildable:
+		Queue: Support
+		Prerequisites: construction_yard, hi_tech_or_ix, upgrade.conyard, ~techlevel.6
+		BuildPaletteOrder: 9
+		BuildDuration: 270
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Rocket Turret
+		Description: Defensive structure\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate
+	Building:
+		Adjacent: 4
+		BuildSounds: CHUNG.WAV
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Selectable:
+		Bounds: 32,32
+		Priority: 3
+	Health:
+		HP: 3000
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 5c768
+	BodyOrientation:
+		QuantizedFacings: 32
+	Armament@Normal:
+		Weapon: TowerMissile
+		LocalOffset: 256,384,768, 256,-384,768
+		UpgradeTypes: corrino.rocket.strike
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	Armament@AA:
+		Weapon: TowerMissileAA
+		LocalOffset: 256,384,768, 256,-384,768
+		UpgradeTypes: corrino.rocket.strike
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	Armament@Strike:
+		Weapon: TowerMissileUnlimited
+		LocalOffset: 256,384,768, 256,-384,768
+		UpgradeTypes: corrino.rocket.strike
+		UpgradeMinEnabledLevel: 1
+	Turreted:
+		TurnSpeed: 8
+		InitialFacing: 128
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
+	Power:
+		Amount: -60
+	SelectionDecorations:
+		VisualBounds: 32,40,0,-8
+	AutoTarget:
+		UpgradeTypes: corrino.rocket.strike
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	TimedUpgradeBar:
+		Upgrade: corrino.rocket.strike
+		Color: 222222

@@ -1,0 +1,174 @@
+harvester.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Spice Harvester
+	Health:
+		HP: 150
+	TransformOnCapture:
+		IntoActor: harvester
+
+harvester.smuggler.husk:
+	Inherits: harvester.husk
+	TransformOnCapture:
+		IntoActor: harvester.smuggler
+	RenderSprites:
+		Image: harvester.husk
+
+^combat_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Combat Tank
+	Health:
+		HP: 100
+	ThrowsParticle@turret:
+		Anim: turret
+
+combat_tank_a.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_a
+
+combat_tank_h.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_h
+
+combat_tank_o.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_o
+
+combat_tank_f.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_f
+
+combat_tank_m.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_m
+
+combat_tank_s.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_s
+
+combat_tank_c.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_c
+
+siege_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Siege Tank
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: siege_tank
+
+mcv.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Mobile Construction Vehicle
+	Health:
+		HP: 175
+
+missile_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Missile Tank
+	TransformOnCapture:
+		IntoActor: missile_tank
+
+sonic_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Sonic Tank
+	Health:
+		HP: 100
+	TransformOnCapture:
+		IntoActor: sonic_tank
+
+stealth_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Stealth Tank
+	TransformOnCapture:
+		IntoActor: stealth_tank
+	RenderSprites:
+		PlayerPalette: cncplayer
+		Scale: 1.25
+
+quake_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Quake Tank
+	TransformOnCapture:
+		IntoActor: quake_tank
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.25
+
+devastator.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Devastator
+	Health:
+		HP: 125
+	TransformOnCapture:
+		IntoActor: devastator
+
+deviator.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Deviator
+	TransformOnCapture:
+		IntoActor: deviator
+
+ifv.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Infantry Fighting Vehicle
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: ifv
+	RenderSprites:
+		Scale: 1.25
+		PlayerPalette: raplayer
+
+carryall.husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Carryall
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 144
+		CanHover: True
+	RenderSprites:
+		Image: carryall
+
+ornithopter.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Ornithopter
+	Aircraft:
+		TurnSpeed: 2
+		Speed: 189
+	RenderSprites:
+		Image: ornithopter
+
+rocketeer.husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Rocketeer
+	Aircraft:
+		TurnSpeed: 8
+		Speed: 88
+		CanHover: True
+	RenderSprites:
+		PlayerPalette: ra2player
+	FallsToEarth:
+		Velocity: 0c50
+		Explosion: UnitExplodeSmall

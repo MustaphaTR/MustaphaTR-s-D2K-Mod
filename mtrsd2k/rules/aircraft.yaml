@@ -1,0 +1,118 @@
+carryall.reinforce:
+	Inherits: ^Plane
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Carryall
+		Description: Large winged, planet-bound ship\n  Automatically lifts harvesters from and to Spice.\n  Lifts vehicles to Repair Pads when ordered.
+	Health:
+		HP: 4800
+	Armor:
+		Type: light
+	Aircraft:
+		CruiseAltitude: 2100
+		InitialFacing: 0
+		Speed: 144 # 112 * ~1.3 for balance reasons
+		TurnSpeed: 4
+		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
+		Repulsable: False
+		LandWhenIdle: False
+		AirborneUpgrades: airborne
+		CanHover: True
+	Targetable@GROUND:
+		TargetTypes: Ground, Vehicle
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	SpawnActorOnDeath:
+		Actor: carryall.husk
+	Carryall:
+		LoadingDelay: 10
+		UnloadingDelay: 15
+		LocalOffset: 0, 0, -128
+	RenderSprites:
+		Image: carryall
+	SelfHealing:
+		Step: 5
+		Delay: 3
+		HealIfBelow: 50
+	Buildable:
+		BuildDuration: 648
+		BuildDurationModifier: 40
+
+carryall:
+	Inherits: carryall.reinforce
+	-Carryall:
+	AutoCarryall:
+		LoadingDelay: 10
+		UnloadingDelay: 15
+		LocalOffset: 0, 0, -128
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 1
+		Prerequisites: ~!hightech.smuggler, techlevel.4
+	SpawnActorOnDeath:
+		Actor: carryall.husk
+
+carryall.smuggler:
+	Inherits: carryall
+	Tooltip:
+		Name: Smuggler Carryall
+	AutoCarryall:
+		LoadingDelay: 8
+		UnloadingDelay: 12
+	Buildable:
+		BuildPaletteOrder: 2
+		Prerequisites: ~hightech.smuggler, techlevel.4
+	SelfHealing:
+		Step: 6
+	Health:
+		HP: 5000
+	Aircraft:
+		Speed: 164
+		TurnSpeed: 5
+
+frigate:
+	Inherits: ^Plane
+	ParaDrop:
+		DropRange: 1c0
+	Tooltip:
+		Name: Frigate
+	Aircraft:
+		Speed: 189 # 126 * ~1.5 for balance reasons
+		TurnSpeed: 1
+		Repulsable: False
+		MaximumPitch: 20
+	-AppearsOnRadar:
+	Cargo:
+		MaxWeight: 20
+		PipCount: 10
+	FlyAwayOnIdle:
+	RejectsOrders:
+
+ornithopter:
+	Inherits: ^Plane
+	Targetable:
+		TargetTypes: Air
+	AttackBomber:
+	Armament:
+		Weapon: OrniBomb
+	Health:
+		HP: 900
+	Armor:
+		Type: light
+	Aircraft:
+		Speed: 189
+		TurnSpeed: 2
+		Repulsable: False
+		CanHover: True
+	AmmoPool:
+		Ammo: 5
+	Tooltip:
+		Name: Ornithopter
+	SpawnActorOnDeath:
+		Actor: ornithopter.husk
+	RejectsOrders:
