@@ -853,7 +853,7 @@ palace:
 		Cost: 1600
 	Tooltip:
 		Name: Palace
-		Description: Unlocks elite infantry for Atreides and Ordos\nand Death Hand Missile for Harkonnen.
+		Description: Unlocks elite infantry for all sides\nand Death Hand Missile for Harkonnen.
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
