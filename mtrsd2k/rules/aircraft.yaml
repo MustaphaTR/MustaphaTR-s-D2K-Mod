@@ -10,7 +10,7 @@ carryall.reinforce:
 	Armor:
 		Type: light
 	Aircraft:
-		CruiseAltitude: 2100
+		CruiseAltitude: 2160
 		InitialFacing: 0
 		Speed: 144 # 112 * ~1.3 for balance reasons
 		TurnSpeed: 4
@@ -82,6 +82,7 @@ frigate:
 	Tooltip:
 		Name: Frigate
 	Aircraft:
+		CruiseAltitude: 2048
 		Speed: 189 # 126 * ~1.5 for balance reasons
 		TurnSpeed: 1
 		Repulsable: False
@@ -105,6 +106,7 @@ ornithopter:
 	Armor:
 		Type: light
 	Aircraft:
+		CruiseAltitude: 1920
 		Speed: 189
 		TurnSpeed: 2
 		Repulsable: False
