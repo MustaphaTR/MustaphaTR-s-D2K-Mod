@@ -346,6 +346,12 @@ outpost:
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnLowPower: true
+		UpgradeTypes: severe-damaged
+		UpgradeMinEnabledLevel: 0
+		UpgradeMaxEnabledLevel: 1
+	UpgradeOnDamageState@STOPDISH:
+		Upgrades: severe-damaged
+		ValidDamageState: Medium, Heavy, Critical
 	GrantUpgradePower@stealth:
 		Icon: stealth
 		Range: 2
