@@ -1,6 +1,6 @@
 MapFormat: 11
 
-RequiresMod: d2k
+RequiresMod: mtrsd2k
 
 Title: Atreides 03b
 
@@ -131,5 +131,15 @@ Actors:
 	OrdosRally2: waypoint
 		Owner: Neutral
 		Location: 15,34
+	Actor29: wall
+		Owner: Ordos
+		Location: 15,11
+	Actor30: wall
+		Owner: Ordos
+		Location: 17,11
+	Actor31: artillery_platform
+		Owner: Ordos
+		Location: 16,11
+		TurretFacing: 92
 
 Rules: d2k|rules/campaign-rules.yaml, rules.yaml

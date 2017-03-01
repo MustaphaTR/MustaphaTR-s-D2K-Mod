@@ -1,5 +1,5 @@
 
-HarkonnenBase = { HConyard, HOutpost, HBarracks }
+HarkonnenBase = { HConyard, HPower1, HPower2, HBarracks, HOutpost }
 
 HarkonnenReinforcements = { }
 HarkonnenReinforcements["easy"] =
@@ -35,9 +35,9 @@ HarkonnenReinforcements["hard"] =
 HarkonnenAttackPaths =
 {
 	{ HarkonnenEntry1.Location, HarkonnenRally1.Location },
-	{ HarkonnenEntry1.Location, HarkonnenRally3.Location },
+	{ HarkonnenEntry1.Location, HarkonnenRally2.Location },
 	{ HarkonnenEntry2.Location, HarkonnenRally2.Location },
-	{ HarkonnenEntry2.Location, HarkonnenRally4.Location }
+	{ HarkonnenEntry2.Location, HarkonnenRally3.Location }
 }
 
 HarkonnenAttackDelay =
@@ -76,7 +76,7 @@ end
 
 Tick = function()
 	if player.HasNoRequiredUnits() then
-		harkonnen.MarkCompletedObjective(KillAtreides)
+		harkonnen.MarkCompletedObjective(KillOrdos)
 	end
 
 	if harkonnen.HasNoRequiredUnits() and not player.IsObjectiveCompleted(KillHarkonnen) then
@@ -87,11 +87,11 @@ end
 
 WorldLoaded = function()
 	harkonnen = Player.GetPlayer("Harkonnen")
-	player = Player.GetPlayer("Atreides")
+	player = Player.GetPlayer("Ordos")
 
 	InitObjectives()
 
-	Camera.Position = AConyard.CenterPosition
+	Camera.Position = OConyard.CenterPosition
 
 	Trigger.OnAllKilled(HarkonnenBase, function()
 		Utils.Do(harkonnen.GetGroundAttackers(), IdleHunt)
@@ -106,7 +106,7 @@ InitObjectives = function()
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	KillAtreides = harkonnen.AddPrimaryObjective("Kill all Atreides units.")
+	KillOrdos = harkonnen.AddPrimaryObjective("Kill all Ordos units.")
 	KillHarkonnen = player.AddPrimaryObjective("Destroy all Harkonnen forces.")
 
 	Trigger.OnObjectiveCompleted(player, function(p, id)

@@ -94,6 +94,7 @@ WorldLoaded = function()
 	end)
 
 	SendHarkonnen()
+	ActivateAI()
 end
 
 InitObjectives = function()

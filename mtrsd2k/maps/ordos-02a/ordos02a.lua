@@ -1,5 +1,6 @@
 
-HarkonnenBase = { HConyard, HOutpost, HBarracks }
+HarkonnenBase = { HConyard, HPower1, HPower2, HBarracks, HOutpost }
+HarkonnenBaseAreaTrigger = { CPos.New(31, 37), CPos.New(32, 37), CPos.New(33, 37), CPos.New(34, 37), CPos.New(35, 37), CPos.New(36, 37), CPos.New(37, 37), CPos.New(38, 37), CPos.New(39, 37), CPos.New(40, 37), CPos.New(41, 37), CPos.New(42, 37), CPos.New(42, 38), CPos.New(42, 39), CPos.New(42, 40), CPos.New(42, 41), CPos.New(42, 42), CPos.New(42, 43), CPos.New(42, 44), CPos.New(42, 45), CPos.New(42, 46), CPos.New(42, 47), CPos.New(42, 48), CPos.New(42, 49) }
 
 HarkonnenReinforcements = { }
 HarkonnenReinforcements["easy"] =
@@ -34,25 +35,36 @@ HarkonnenReinforcements["hard"] =
 
 HarkonnenAttackPaths =
 {
+	{ HarkonnenEntry3.Location, HarkonnenRally3.Location },
+	{ HarkonnenEntry4.Location, HarkonnenRally5.Location },
+	{ HarkonnenEntry4.Location, HarkonnenRally6.Location },
+	{ HarkonnenEntry5.Location, HarkonnenRally4.Location }
+}
+
+InitialHarkonnenReinforcementsPaths =
+{
 	{ HarkonnenEntry1.Location, HarkonnenRally1.Location },
-	{ HarkonnenEntry1.Location, HarkonnenRally3.Location },
-	{ HarkonnenEntry2.Location, HarkonnenRally2.Location },
-	{ HarkonnenEntry2.Location, HarkonnenRally4.Location }
+	{ HarkonnenEntry2.Location, HarkonnenRally2.Location }
 }
 
-HarkonnenAttackDelay =
+InitialHarkonnenReinforcements =
 {
-	easy = DateTime.Minutes(5),
-	normal = DateTime.Minutes(2) + DateTime.Seconds(40),
-	hard = DateTime.Minutes(1) + DateTime.Seconds(20)
+	{ "trike", "trike" },
+	{ "light_inf", "light_inf" }
 }
 
-HarkonnenAttackWaves =
-{
-	easy = 3,
-	normal = 6,
-	hard = 9
-}
+HarkonnenAttackDelay = { }
+HarkonnenAttackDelay["easy"] = DateTime.Minutes(5)
+HarkonnenAttackDelay["normal"] = DateTime.Minutes(2) + DateTime.Seconds(40)
+HarkonnenAttackDelay["hard"] = DateTime.Minutes(1) + DateTime.Seconds(20)
+
+HarkonnenAttackWaves = { }
+HarkonnenAttackWaves["easy"] = 3
+HarkonnenAttackWaves["normal"] = 6
+HarkonnenAttackWaves["hard"] = 9
+
+OrdosReinforcements = { "light_inf", "light_inf", "raider" }
+OrdosEntryPath = { OrdosEntry.Location, OrdosRally.Location }
 
 wave = 0
 SendHarkonnen = function()
@@ -74,9 +86,19 @@ IdleHunt = function(unit)
 	Trigger.OnIdle(unit, unit.Hunt)
 end
 
+SendInitialUnits = function(areaTrigger, unit, path, check)
+	Trigger.OnEnteredFootprint(areaTrigger, function(a, id)
+		if not check and a.Owner == player then
+			local units = Reinforcements.ReinforceWithTransport(harkonnen, "carryall.reinforce", unit, path, { path[1] })[2]
+			Utils.Do(units, IdleHunt)
+			check = true
+		end
+	end)
+end
+
 Tick = function()
 	if player.HasNoRequiredUnits() then
-		harkonnen.MarkCompletedObjective(KillAtreides)
+		harkonnen.MarkCompletedObjective(KillOrdos)
 	end
 
 	if harkonnen.HasNoRequiredUnits() and not player.IsObjectiveCompleted(KillHarkonnen) then
@@ -87,15 +109,23 @@ end
 
 WorldLoaded = function()
 	harkonnen = Player.GetPlayer("Harkonnen")
-	player = Player.GetPlayer("Atreides")
+	player = Player.GetPlayer("Ordos")
 
 	InitObjectives()
 
-	Camera.Position = AConyard.CenterPosition
+	Camera.Position = OConyard.CenterPosition
 
 	Trigger.OnAllKilled(HarkonnenBase, function()
 		Utils.Do(harkonnen.GetGroundAttackers(), IdleHunt)
 	end)
+
+	Trigger.AfterDelay(DateTime.Minutes(1), function()
+		Media.PlaySpeechNotification(player, "Reinforce")
+		Reinforcements.ReinforceWithTransport(player, "carryall.reinforce", OrdosReinforcements, OrdosEntryPath, { OrdosEntryPath[1] })
+	end)
+
+	SendInitialUnits(HarkonnenBaseAreaTrigger, InitialHarkonnenReinforcements[1], InitialHarkonnenReinforcementsPaths[1], InitialReinforcementsSent1)
+	SendInitialUnits(HarkonnenBaseAreaTrigger, InitialHarkonnenReinforcements[2], InitialHarkonnenReinforcementsPaths[2], InitialReinforcementsSent2)
 
 	SendHarkonnen()
 	ActivateAI()
@@ -106,7 +136,7 @@ InitObjectives = function()
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	KillAtreides = harkonnen.AddPrimaryObjective("Kill all Atreides units.")
+	KillOrdos = harkonnen.AddPrimaryObjective("Kill all Ordos units.")
 	KillHarkonnen = player.AddPrimaryObjective("Destroy all Harkonnen forces.")
 
 	Trigger.OnObjectiveCompleted(player, function(p, id)
