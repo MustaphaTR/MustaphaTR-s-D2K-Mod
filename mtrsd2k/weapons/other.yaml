@@ -431,7 +431,7 @@ Flamegun-tower:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 100
+		Damage: 90
 		Versus:
 			wall: 8
 			building: 20
