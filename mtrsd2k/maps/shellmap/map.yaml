@@ -180,10 +180,6 @@ Actors:
 	atr_wind6: wind_trap
 		Owner: Atreides
 		Location: 73,85
-	atr_gunt2: medium_gun_turret
-		Owner: Atreides
-		Location: 71,87
-		TurretFacing: 96
 	Actor58: wall
 		Owner: Atreides
 		Location: 70,87
@@ -305,10 +301,6 @@ Actors:
 		Owner: Harkonnen
 		Location: 78,30
 		TurretFacing: 160
-	har_gunt3: medium_gun_turret
-		Owner: Harkonnen
-		Location: 73,23
-		TurretFacing: 64
 	har_wind5: wind_trap
 		Owner: Ordos
 		Location: 35,17
@@ -475,10 +467,6 @@ Actors:
 	Actor160: wall
 		Owner: Emperor
 		Location: 36,85
-	emp_gunt3: medium_gun_turret
-		Owner: Emperor
-		Location: 36,84
-		TurretFacing: 192
 	Actor162: wall
 		Owner: Emperor
 		Location: 36,80
@@ -948,10 +936,6 @@ Actors:
 		Owner: Ordos
 		Location: 33,29
 		TurretFacing: 224
-	ord_gunt3: medium_gun_turret
-		Owner: Ordos
-		Location: 33,33
-		TurretFacing: 128
 	Actor287: wall
 		Owner: Emperor
 		Location: 38,86
@@ -1054,5 +1038,21 @@ Actors:
 	emp_silo4: silo
 		Owner: Emperor
 		Location: 30,85
+	emp_flame: flame_tower
+		Owner: Emperor
+		Location: 36,84
+		TurretFacing: 92
+	har_flame: flame_tower
+		Owner: Harkonnen
+		Location: 73,23
+		TurretFacing: 92
+	ord_artillery: artillery_platform
+		Owner: Ordos
+		Location: 33,33
+		TurretFacing: 128
+	atr_mg: machine_gun_tower
+		Owner: Atreides
+		Location: 71,87
+		TurretFacing: 92
 
 Rules: rules.yaml
