@@ -922,7 +922,7 @@ Actors:
 	Actor282: wall
 		Owner: Atreides
 		Location: 72,94
-	atr_gunt3: medium_gun_turret
+	atr_gunt2: medium_gun_turret
 		Owner: Atreides
 		Location: 71,94
 		TurretFacing: 64
