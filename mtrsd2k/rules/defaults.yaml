@@ -264,7 +264,7 @@
 		Voice: Guard
 	Guardable:
 	DetectCloaked:
-		Range: 1c384
+		Range: 1c768
 	DeathSounds:
 		DeathTypes: ExplosionDeath, SoundDeath, SmallExplosionDeath, BulletDeath
 	MustBeDestroyed:
@@ -372,6 +372,8 @@
 	AttackTurreted:
 	AutoTarget:
 	RenderRangeCircle:
+	DetectCloaked:
+		Range: 1c768
 	-GivesBuildableArea:
 	-WithMakeAnimation:
 	-Capturable:
