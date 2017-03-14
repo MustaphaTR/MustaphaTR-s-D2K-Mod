@@ -80,10 +80,10 @@ Rocket:
 			building: 50
 			wood: 65
 			light: 65
-			heavy: 50
+			heavy: 55
 			invulnerable: 0
 			cy: 20
-			harvester: 50
+			harvester: 55
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
