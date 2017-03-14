@@ -24,6 +24,7 @@ Bazooka:
 			wood: 45
 			concrete: 70
 			light: 45
+			heavy: 90
 			invulnerable: 0
 			cy: 20
 			harvester: 50
