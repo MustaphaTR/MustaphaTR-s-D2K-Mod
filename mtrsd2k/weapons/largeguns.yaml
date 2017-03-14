@@ -80,7 +80,7 @@
 		Damage: 340
         
 25mm:
-	Inherits: 80mm_A
+	Inherits: 80mm
 	ReloadDelay: 25
 	Range: 3c256
 	Projectile: Bullet
@@ -93,11 +93,11 @@
 			wall: 40
 			building: 40
 			wood: 40
-			light: 125
-			heavy: 200
+			light: 150
+			heavy: 220
 			invulnerable: 0
 			cy: 20
-			harvester: 75
+			harvester: 80
 
 DevBullet:
 	ReloadDelay: 75
