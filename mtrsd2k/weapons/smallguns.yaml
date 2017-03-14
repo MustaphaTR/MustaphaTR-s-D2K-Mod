@@ -162,7 +162,7 @@ HMG:
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
 		Falloff: 100, 60, 30, 0
-		Damage: 185
+		Damage: 155
 		Versus:
 			wall: 10
 			building: 25
@@ -181,13 +181,14 @@ HMGo:
 	Inherits: HMG
 	ReloadDelay: 18
 	Warhead@1Dam: SpreadDamage
-		Damage: 175
+		Damage: 145
 
 HMGo_turret:
 	Inherits: HMGo
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
+		Damage: 175
 		Versus:
 			none: 175
 
