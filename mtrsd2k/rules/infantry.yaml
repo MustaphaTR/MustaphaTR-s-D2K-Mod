@@ -337,6 +337,8 @@ fremen:
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
+	Crushable:
+		WarnProbability: 80
 	Cloak:
 		InitialDelay: 85
 		CloakDelay: 85
@@ -379,6 +381,8 @@ fedaykin:
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
+	Crushable:
+		WarnProbability: 80
 	Voiced:
 		VoiceSet: FremenVoice
 
@@ -476,6 +480,8 @@ sardaukar:
 	Armament@SECONDARY:
 		Weapon: M_HMG
 	AttackFrontal:
+	Crushable:
+		WarnProbability: 80
 	Voiced:
 		VoiceSet: GenericVoice
 	Explodes:
@@ -502,6 +508,8 @@ suicide_bomber:
 		DetonationDelay: 0
 		Flashes: 0
 		EnterBehaviour: Suicide
+	Crushable:
+		WarnProbability: 80
 	-AutoTarget:
 	Cloak:
 		InitialDelay: 85
@@ -536,6 +544,8 @@ sniper:
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
+	Crushable:
+		WarnProbability: 80
 	Cloak:
 		InitialDelay: 85
 		CloakDelay: 85
@@ -579,7 +589,7 @@ saboteur:
 		-IdleSequences:
 		StandSequences: stand
 	Crushable:
-		WarnProbability: 95
+		WarnProbability: 80
 	Cloak:
 		InitialDelay: 200
 		CloakDelay: 100
