@@ -17,8 +17,8 @@ Player:
 		QueuedAudio: Upgrading
 		ReadyAudio: NewOptions
 		BlockedAudio: NoRoom
-	ClassicProductionQueue@Support:
-		Type: Support
+	ClassicProductionQueue@Defense:
+		Type: Defense
 		BuildDurationModifier: 250
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
