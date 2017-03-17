@@ -18,7 +18,7 @@ construction_yard:
 	RevealsShroud:
 		Range: 5c768
 	Production:
-		Produces: Building, Support
+		Produces: Building, Defense
 	Exit:
 	Valued:
 		Cost: 2000
