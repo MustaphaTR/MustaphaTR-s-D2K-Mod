@@ -364,7 +364,7 @@
 	KillsSelf:
 		RemoveInstead: true
 	Buildable:
-		Queue: Support
+		Queue: Defense
 
 ^Defense:
 	Inherits: ^Building
@@ -391,7 +391,7 @@
 ^Mine:
 	Inherits: ^SpriteActor
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		BuildDurationModifier: 40
 	WithSpriteBody:
 	HiddenUnderShroud:
