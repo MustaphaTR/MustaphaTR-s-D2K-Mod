@@ -748,7 +748,7 @@ deviator:
 		Intensity: 600
 
 bomb_buggy:
-	Inherits: ^Tank
+	Inherits: ^Vehicle
 	Valued:
 		Cost: 750
 	Tooltip:
