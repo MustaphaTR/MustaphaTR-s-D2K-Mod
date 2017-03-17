@@ -259,7 +259,7 @@ Container@PLAYER_WIDGETS:
 									X: 5
 									Y: 5
 									ImageCollection: production-icons
-						ProductionTypeButton@SUPPORT:
+						ProductionTypeButton@DEFENSE:
 							Y: 57
 							Width: 25
 							Height: 25
@@ -267,7 +267,7 @@ Container@PLAYER_WIDGETS:
 							Background: sidebar-button
 							TooltipText: Support
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Support
+							ProductionGroup: Defense
 							HotkeyName: ProductionTypeSupportKey
 							Children:
 								Image@ICON:
