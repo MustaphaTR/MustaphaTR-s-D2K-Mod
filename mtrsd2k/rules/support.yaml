@@ -30,7 +30,7 @@ silo:
 	Inherits: ^Building
 	Buildable:
 		Prerequisites: construction_yard, refinery, ~!cyard.smuggler, ~techlevel.1
-		Queue: Support
+		Queue: Defense
 		BuildPaletteOrder: 3
 		BuildDuration: 135
 		BuildDurationModifier: 40
@@ -95,7 +95,7 @@ wall:
 	CombatDebugOverlay:
 	HiddenUnderShroud:
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~techlevel.2
 		BuildPaletteOrder: 5
 		BuildDuration: 54
@@ -183,7 +183,7 @@ mine_at:
 machine_gun_tower:
    	Inherits: ^Defense
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~cyard.machine_gun_tower, ~techlevel.3
 		BuildPaletteOrder: 8
 		BuildDuration: 222
@@ -225,7 +225,7 @@ machine_gun_tower:
 flame_tower:
    	Inherits: ^Defense
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~cyard.flame_tower, ~techlevel.3
 		BuildPaletteOrder: 8
 		BuildDuration: 222
@@ -264,7 +264,7 @@ flame_tower:
 artillery_platform:
    	Inherits: ^Defense
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~cyard.artillery_platform, ~techlevel.3
 		BuildPaletteOrder: 8
 		BuildDuration: 222
@@ -308,7 +308,7 @@ artillery_platform:
 medium_gun_turret:
 	Inherits: ^Defense
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		Prerequisites: construction_yard, light_or_heavy, ~cyard.gun_turret, ~techlevel.4
 		BuildPaletteOrder: 8
 		BuildDuration: 231
@@ -355,7 +355,7 @@ medium_gun_turret:
 large_gun_turret:
 	Inherits: ^Defense
 	Buildable:
-		Queue: Support
+		Queue: Defense
 		Prerequisites: construction_yard, hi_tech_or_ix, upgrade.conyard, ~techlevel.6
 		BuildPaletteOrder: 9
 		BuildDuration: 270
