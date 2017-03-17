@@ -87,9 +87,9 @@ production-icons: chrome.png
 	building: 430,0,16,16
 	building-disabled: 446,0,16,16
 	building-alert: 462,0,16,16
-	support: 430,16,16,16
-	support-disabled: 446,16,16,16
-	support-alert: 462,16,16,16
+	defense: 430,16,16,16
+	defense-disabled: 446,16,16,16
+	defense-alert: 462,16,16,16
 	upgrade: 1023,1023,1,1
 	upgrade-disabled: 1023,1023,1,1
 	upgrade-alert: 1023,1023,1,1
