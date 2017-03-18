@@ -268,7 +268,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Support
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Defense
-							HotkeyName: ProductionTypeSupportKey
+							HotkeyName: ProductionTypeDefenseKey
 							Children:
 								Image@ICON:
 									X: 5
