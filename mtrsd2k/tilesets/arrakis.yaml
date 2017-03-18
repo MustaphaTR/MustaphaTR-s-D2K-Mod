@@ -4351,7 +4351,7 @@ Templates:
 		Images: BLOXXMAS.R8
 		Frames: 350, 351, 352, 370, 371, 372, 390, 391, 392
 		Size: 3,3
-		Category: Bridge
+		Category: Rock-Detail
 		Tiles:
 			0: Rock
 			1: Rock
@@ -4367,7 +4367,7 @@ Templates:
 		Images: BLOXXMAS.R8
 		Frames: 347, 348, 349, 367, 368, 369, 387, 388, 389
 		Size: 3,3
-		Category: Bridge
+		Category: Rock-Detail
 		Tiles:
 			0: Sand
 			1: Rough
@@ -4383,7 +4383,7 @@ Templates:
 		Images: BLOXXMAS.R8
 		Frames: 340, 341, 342, 343, 360, 361, 362, 363, 380, 381, 382, 383
 		Size: 4,3
-		Category: Bridge
+		Category: Rock-Detail
 		Tiles:
 			0: Cliff
 			1: Sand
@@ -6052,14 +6052,23 @@ Templates:
 	Template@1085:
 		Id: 1085
 		Images: BLOXXMAS.R8
+		Frames: 344, 345
+		Size: 2,1
+		Category: Bridge
+		Tiles:
+			0: Cliff
+			1: Transition
+	Template@1086:
+		Id: 1086
+		Images: BLOXXMAS.R8
 		Frames: 345, 346
 		Size: 2,1
 		Category: Bridge
 		Tiles:
 			0: Transition
 			1: Cliff
-	Template@1086:
-		Id: 1086
+	Template@1087:
+		Id: 1087
 		Images: BLOXXMAS.R8
 		Frames: 364, 365
 		Size: 2,1
@@ -6067,8 +6076,8 @@ Templates:
 		Tiles:
 			0: Cliff
 			1: Transition
-	Template@1087:
-		Id: 1087
+	Template@1088:
+		Id: 1088
 		Images: BLOXXMAS.R8
 		Frames: 365, 366
 		Size: 2,1
@@ -6076,8 +6085,8 @@ Templates:
 		Tiles:
 			0: Transition
 			1: Cliff
-	Template@1088:
-		Id: 1088
+	Template@1089:
+		Id: 1089
 		Images: BLOXXMAS.R8
 		Frames: 384, 385
 		Size: 2,1
@@ -6085,8 +6094,8 @@ Templates:
 		Tiles:
 			0: Cliff
 			1: Transition
-	Template@1089:
-		Id: 1089
+	Template@1090:
+		Id: 1090
 		Images: BLOXXMAS.R8
 		Frames: 385, 386
 		Size: 2,1
@@ -6094,8 +6103,8 @@ Templates:
 		Tiles:
 			0: Transition
 			1: Cliff
-	Template@1092:
-		Id: 1092
+	Template@1091:
+		Id: 1091
 		Images: BLOXXMAS.R8
 		Frames: 1, 340, 2, 360
 		Size: 2,2
@@ -6105,8 +6114,8 @@ Templates:
 			1: Cliff
 			2: Rock
 			3: Transition
-	Template@1091:
-		Id: 1091
+	Template@1092:
+		Id: 1092
 		Images: BLOXXMAS.R8
 		Frames: 343, 4, 363, 5
 		Size: 2,2
@@ -6127,8 +6136,8 @@ Templates:
 			1: Transition
 			2: Cliff
 			3: Cliff
-	Template@1090:
-		Id: 1090
+	Template@1094:
+		Id: 1094
 		Images: BLOXXMAS.R8
 		Frames: 363, 5, 383, 6
 		Size: 2,2
@@ -6138,8 +6147,8 @@ Templates:
 			1: Rock
 			2: Cliff
 			3: Cliff
-	Template@1094:
-		Id: 1094
+	Template@1095:
+		Id: 1095
 		Images: BLOXXMAS.R8
 		Frames: 350, 351, 370, 371
 		Size: 2,2
@@ -6149,8 +6158,8 @@ Templates:
 			1: Rock
 			2: Cliff
 			3: Transition
-	Template@1095:
-		Id: 1095
+	Template@1096:
+		Id: 1096
 		Images: BLOXXMAS.R8
 		Frames: 351, 352, 371, 372
 		Size: 2,2
@@ -6160,8 +6169,8 @@ Templates:
 			1: Cliff
 			2: Transition
 			3: Cliff
-	Template@1096:
-		Id: 1096
+	Template@1097:
+		Id: 1097
 		Images: BLOXXMAS.R8
 		Frames: 367, 368, 387, 388
 		Size: 2,2
@@ -6171,8 +6180,8 @@ Templates:
 			1: Transition
 			2: Cliff
 			3: Rock
-	Template@1097:
-		Id: 1097
+	Template@1098:
+		Id: 1098
 		Images: BLOXXMAS.R8
 		Frames: 368, 369, 388, 389
 		Size: 2,2
@@ -6182,8 +6191,8 @@ Templates:
 			1: Cliff
 			2: Rock
 			3: Cliff
-	Template@1098:
-		Id: 1098
+	Template@1099:
+		Id: 1099
 		Images: BLOXXMAS.R8
 		Frames: 341, 361
 		Size: 1,2
@@ -6191,8 +6200,8 @@ Templates:
 		Tiles:
 			0: Cliff
 			1: Transition
-	Template@1099:
-		Id: 1099
+	Template@1100:
+		Id: 1100
 		Images: BLOXXMAS.R8
 		Frames: 342, 362
 		Size: 1,2
@@ -6200,8 +6209,8 @@ Templates:
 		Tiles:
 			0: Cliff
 			1: Transition
-	Template@1102:
-		Id: 1102
+	Template@1101:
+		Id: 1101
 		Images: BLOXXMAS.R8
 		Frames: 353, 373
 		Size: 1,2
@@ -6209,8 +6218,8 @@ Templates:
 		Tiles:
 			0: Cliff
 			1: Rough
-	Template@1104:
-		Id: 1104
+	Template@1102:
+		Id: 1102
 		Images: BLOXXMAS.R8
 		Frames: 354, 374
 		Size: 1,2
@@ -6218,8 +6227,8 @@ Templates:
 		Tiles:
 			0: Cliff
 			1: Rough
-	Template@1100:
-		Id: 1100
+	Template@1103:
+		Id: 1103
 		Images: BLOXXMAS.R8
 		Frames: 361, 381
 		Size: 1,2
@@ -6227,8 +6236,8 @@ Templates:
 		Tiles:
 			0: Transition
 			1: Cliff
-	Template@1101:
-		Id: 1101
+	Template@1104:
+		Id: 1104
 		Images: BLOXXMAS.R8
 		Frames: 362, 382
 		Size: 1,2
@@ -6236,8 +6245,8 @@ Templates:
 		Tiles:
 			0: Transition
 			1: Cliff
-	Template@1103:
-		Id: 1103
+	Template@1105:
+		Id: 1105
 		Images: BLOXXMAS.R8
 		Frames: 297, 393
 		Size: 1,2
@@ -6245,8 +6254,8 @@ Templates:
 		Tiles:
 			0: Rough
 			1: Cliff
-	Template@1105:
-		Id: 1105
+	Template@1106:
+		Id: 1106
 		Images: BLOXXMAS.R8
 		Frames: 316, 394
 		Size: 1,2
@@ -6254,16 +6263,16 @@ Templates:
 		Tiles:
 			0: Rough
 			1: Cliff
-	Template@1106:
-		Id: 1106
+	Template@1107:
+		Id: 1107
 		Images: BLOXTREE.R8
 		Frames: 381
 		Size: 1,1
 		Category: Rock-Detail
 		Tiles:
 			0: Rock
-	Template@1107:
-		Id: 1107
+	Template@1108:
+		Id: 1108
 		Images: BLOXXMAS.R8
 		Frames: 289, 290, 309, 310
 		Size: 2,2
@@ -6273,12 +6282,39 @@ Templates:
 			1: Cliff
 			2: Cliff
 			3: Cliff
-	Template@1108:
-		Id: 1108
+	Template@1109:
+		Id: 1109
 		Images: BLOXXMAS.R8
-		Frames: 344, 345
+		Frames: 347, 348
 		Size: 2,1
 		Category: Bridge
 		Tiles:
 			0: Cliff
-			1: Transition
+			1: Cliff
+	Template@1110:
+		Id: 1110
+		Images: BLOXXMAS.R8
+		Frames: 348, 349
+		Size: 2,1
+		Category: Bridge
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@1111:
+		Id: 1111
+		Images: BLOXXMAS.R8
+		Frames: 390, 391
+		Size: 2,1
+		Category: Bridge
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@1112:
+		Id: 1112
+		Images: BLOXXMAS.R8
+		Frames: 391, 392
+		Size: 2,1
+		Category: Bridge
+		Tiles:
+			0: Cliff
+			1: Cliff
