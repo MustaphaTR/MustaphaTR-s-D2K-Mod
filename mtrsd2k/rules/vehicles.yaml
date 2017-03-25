@@ -710,6 +710,7 @@ stealth_tank:
 		CloakDelay: 80
 		CloakSound: STEALTH1.WAV
 		UncloakSound: STEALTH2.WAV
+		UncloakOn: Unload, Infiltrate, Demolish, Dock
 		Palette: cnccloak
 		IsPlayerPalette: true
 	Armament@Ground:
