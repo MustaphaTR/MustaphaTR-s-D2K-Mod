@@ -35,10 +35,10 @@ trike.mg:
 		Speed: 128
 	Armament@damage:
 		Weapon: HMG_trike
-		LocalOffset: -416,0,0
+		LocalOffset: 180,0,110
 	Armament@muzzle:
 		Weapon: HMG_trike_muzzle
-		LocalOffset: -416,0,0
+		LocalOffset: -544,0,0
 		MuzzleSequence: muzzle
 	RenderSprites:
 		Scale: 0.9
@@ -65,10 +65,10 @@ trike.rocket:
 		Speed: 128
 	Armament@Ground:
 		Weapon: Rocket_trike
-		LocalOffset: 128,64,64, 128,-64,64
+		LocalOffset: 180,0,110
 	Armament@AA:
 		Weapon: RocketAA_trike
-		LocalOffset: 128,64,64, 128,-64,64
+		LocalOffset: 180,0,110
 
 ^raider:
 	Inherits: ^Vehicle
@@ -145,10 +145,10 @@ raider.rocket:
 	WithMuzzleOverlay:
 	Armament@Ground:
 		Weapon: Rocket_raider
-		LocalOffset: 128,64,64, 128,-64,64
+		LocalOffset: 170,0,0
 	Armament@AA:
 		Weapon: RocketAA_raider
-		LocalOffset: 128,64,64, 128,-64,64
+		LocalOffset: 170,0,0
 	AttractsWorms:
 		Intensity: 420
 
@@ -189,10 +189,10 @@ quad.mg:
 		Speed: 96
 	Armament@damage:
 		Weapon: HMG_quad
-		LocalOffset: -416,0,0
+		LocalOffset: 128,64,64, 128,-64,64
 	Armament@muzzle:
 		Weapon: HMG_quad_muzzle
-		LocalOffset: -416,0,0
+		LocalOffset: 128,64,64, 128,-64,64
 		MuzzleSequence: muzzle
 	AttractsWorms:
 		Intensity: 470

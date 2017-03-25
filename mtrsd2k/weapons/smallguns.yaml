@@ -206,6 +206,8 @@ HMG_muzzle:
 	Range: 3c0
 	Burst: 3
 	BurstDelay: 2
+	Projectile: Bullet
+		Blockable: false
 	Warhead@TargetValidation: SpreadDamage
 
 HMG_trike_muzzle:

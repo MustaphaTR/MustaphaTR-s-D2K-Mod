@@ -28,6 +28,11 @@ quad:
 	idle: DATA.R8
 		Start: 1667
 		Facings: -32
+	muzzle: DATA.R8
+		Start: 3996
+		Tick: 50
+		Facings: -32
+		BlendMode: Additive
 	icon: DATA.R8
 		Start: 4279
 		Offset: -30,-24
