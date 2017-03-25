@@ -1038,19 +1038,19 @@ Actors:
 	emp_silo4: silo
 		Owner: Emperor
 		Location: 30,85
-	Actor272: flame_tower
+	emp_flame: flame_tower
 		Owner: Emperor
 		Location: 36,84
 		TurretFacing: 92
-	Actor273: flame_tower
+	har_flame: flame_tower
 		Owner: Harkonnen
 		Location: 73,23
 		TurretFacing: 92
-	Actor274: artillery_platform
+	ord_artillery: artillery_platform
 		Owner: Ordos
 		Location: 33,33
 		TurretFacing: 128
-	Actor275: machine_gun_tower
+	atr_mg: machine_gun_tower
 		Owner: Atreides
 		Location: 71,87
 		TurretFacing: 92
