@@ -46,7 +46,7 @@ Players:
 		Enemies: Atreides, Creeps
 
 Actors:
-	Actor0: trike
+	Actor0: trike.mg
 		Location: 15,8
 		Owner: Atreides
 	Actor1: light_inf
@@ -58,13 +58,13 @@ Actors:
 	Actor3: light_inf
 		Location: 16,10
 		Owner: Atreides
-	Actor4: trike
+	Actor4: trike.mg
 		Location: 9,11
 		Owner: Atreides
 	Actor6: light_inf
 		Location: 15,11
 		Owner: Atreides
-	Actor7: trike
+	Actor7: trike.mg
 		Location: 9,13
 		Owner: Atreides
 	Actor8: light_inf

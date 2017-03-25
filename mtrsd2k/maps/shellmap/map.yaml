@@ -72,10 +72,10 @@ Actors:
 	smg_ref: refinery.smuggler
 		Owner: Smugglers
 		Location: 57,58
-	smg_silo1: silo
+	smg_silo1: silo.smuggler
 		Owner: Smugglers
 		Location: 54,62
-	smg_raider: raider
+	smg_raider: raider.rocket
 		Owner: Smugglers
 		Location: 53,57
 		Facing: 32
@@ -545,7 +545,7 @@ Actors:
 		Owner: Ordos
 		Location: 34,20
 		Facing: 160
-	ord_raider: raider
+	ord_raider: quad.mg
 		Owner: Ordos
 		Location: 23,23
 		Facing: 128
@@ -662,7 +662,7 @@ Actors:
 		SubCell: 3
 		Facing: 0
 		TurretFacing: 0
-	har_quad: quad
+	har_quad: quad.rocket
 		Owner: Harkonnen
 		Location: 90,27
 		Facing: 0
@@ -702,7 +702,7 @@ Actors:
 		Owner: Atreides
 		Location: 94,90
 		Facing: 0
-	atr_trike: trike
+	atr_trike: trike.mg
 		Owner: Atreides
 		Location: 92,82
 		Facing: 0
@@ -873,7 +873,7 @@ Actors:
 		SubCell: 3
 		Facing: 0
 		TurretFacing: 0
-	smg_silo2: silo
+	smg_silo2: silo.smuggler
 		Owner: Smugglers
 		Location: 54,63
 	atr_silo1: silo
@@ -888,7 +888,7 @@ Actors:
 	atr_silo4: silo
 		Owner: Atreides
 		Location: 73,84
-	emp_quad: quad
+	emp_quad: quad.rocket
 		Owner: Emperor
 		Location: 33,91
 		Facing: 0
@@ -1038,19 +1038,19 @@ Actors:
 	emp_silo4: silo
 		Owner: Emperor
 		Location: 30,85
-	emp_flame: flame_tower
+	Actor272: flame_tower
 		Owner: Emperor
 		Location: 36,84
 		TurretFacing: 92
-	har_flame: flame_tower
+	Actor273: flame_tower
 		Owner: Harkonnen
 		Location: 73,23
 		TurretFacing: 92
-	ord_artillery: artillery_platform
+	Actor274: artillery_platform
 		Owner: Ordos
 		Location: 33,33
 		TurretFacing: 128
-	atr_mg: machine_gun_tower
+	Actor275: machine_gun_tower
 		Owner: Atreides
 		Location: 71,87
 		TurretFacing: 92

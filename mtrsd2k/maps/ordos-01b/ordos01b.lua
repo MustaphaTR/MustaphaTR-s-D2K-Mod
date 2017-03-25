@@ -9,16 +9,16 @@ HarkonnenReinforcements["normal"] =
 {
 	{ "light_inf", "light_inf" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
+	{ "light_inf", "quad.mg" },
 }
 
 HarkonnenReinforcements["hard"] =
 {
 	{ "light_inf", "light_inf" },
-	{ "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
-	{ "trike", "trike" }
+	{ "light_inf", "quad.mg" },
+	{ "quad.mg", "quad.mg" }
 }
 
 HarkonnenEntryWaypoints = { HarkonnenWaypoint1.Location, HarkonnenWaypoint2.Location, HarkonnenWaypoint3.Location, HarkonnenWaypoint4.Location }
@@ -34,7 +34,7 @@ ToHarvest["easy"] = 2500
 ToHarvest["normal"] = 3000
 ToHarvest["hard"] = 3500
 
-OrdosReinforcements = { "light_inf", "light_inf", "light_inf", "light_inf", "raider" }
+OrdosReinforcements = { "light_inf", "light_inf", "light_inf", "light_inf", "quad.mg" }
 OrdosEntryPath = { OrdosWaypoint.Location, OrdosRally.Location }
 
 Messages =

@@ -1,60 +1,107 @@
-trike:
+^trike:
 	Inherits: ^Vehicle
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 1
-		Prerequisites: ~light.regulartrikes, ~techlevel.1
-		BuildDuration: 194
-		BuildDurationModifier: 40
-	Valued:
-		Cost: 300
-	Tooltip:
-		Name: Trike
-		Description: Fast scout\n  Strong vs Infantry\n  Weak vs Tanks
-	Selectable:
-		Class: trike
-	Health:
-		HP: 1000
 	Armor:
 		Type: light
-	Mobile:
-		TurnSpeed: 10
-		Speed: 128
 	RevealsShroud:
 		Range: 4c768
 	WithMuzzleOverlay:
-	Armament@damage:
-		Weapon: HMG
-		LocalOffset: -416,0,0
-	Armament@muzzle:
-		Weapon: HMG_muzzle
-		LocalOffset: -416,0,0
-		MuzzleSequence: muzzle
 	AttackFrontal:
 	AutoTarget:
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
-	AttractsWorms:
-		Intensity: 420  
+	RenderSprites:
+		Image: trike
 
-raider:
-	Inherits: ^Vehicle
+trike.mg:
+	Inherits: ^trike
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 1
+		Prerequisites: ~light.mgtrike, ~techlevel.1
+		BuildDuration: 194
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Machine Gun Trike
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
+	Selectable:
+		Class: trike.mg
+	Health:
+		HP: 1000
+	Mobile:
+		TurnSpeed: 10
+		Speed: 128
+	Armament@damage:
+		Weapon: HMG_trike
+		LocalOffset: -416,0,0
+	Armament@muzzle:
+		Weapon: HMG_trike_muzzle
+		LocalOffset: -416,0,0
+		MuzzleSequence: muzzle
+	RenderSprites:
+		Scale: 0.9
+
+trike.rocket:
+	Inherits: ^trike
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 2
-		Prerequisites: ~light.raiders, ~techlevel.1
+		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
+		BuildDuration: 194
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Rocket Trike
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Selectable:
+		Class: trike.rocket
+	Health:
+		HP: 1000
+	Mobile:
+		TurnSpeed: 10
+		Speed: 128
+	Armament@Ground:
+		Weapon: Rocket_trike
+		LocalOffset: 128,64,64, 128,-64,64
+	Armament@AA:
+		Weapon: RocketAA_trike
+		LocalOffset: 128,64,64, 128,-64,64
+
+^raider:
+	Inherits: ^Vehicle
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	AttackFrontal:
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderSprites:
+		Image: raider
+
+raider.mg:
+	Inherits: ^raider
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 3
+		Prerequisites: ~light.mgraider, ~techlevel.1
 		BuildDuration: 194
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: Raider Trike
-		Description: Improved Scout\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+		Name: Machine Gun Raider
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
+	Selectable:
+		Class: raider.mg
 	Health:
 		HP: 900
-	Armor:
-		Type: light
 	Mobile:
 		TurnSpeed: 10
 		Speed: 149
@@ -62,72 +109,137 @@ raider:
 		Range: 4c768
 	WithMuzzleOverlay:
 	Armament@damage:
-		Weapon: HMGo
+		Weapon: HMG_raider
 		LocalOffset: 170,0,0
 	Armament@muzzle:
-		Weapon: HMGo_muzzle
+		Weapon: HMG_raider_muzzle
 		LocalOffset: 170,0,0
 		MuzzleSequence: muzzle
-	AttackFrontal:
-	AutoTarget:
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 420
+	RenderSprites:
+		Scale: 0.9
+
+raider.rocket:
+	Inherits: ^raider
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 4
+		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.2
+		BuildDuration: 194
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Rocket Raider
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Selectable:
-		Class: raider
+		Class: raider.rocket
+	Health:
+		HP: 900
+	Mobile:
+		TurnSpeed: 10
+		Speed: 149
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	Armament@Ground:
+		Weapon: Rocket_raider
+		LocalOffset: 128,64,64, 128,-64,64
+	Armament@AA:
+		Weapon: RocketAA_raider
+		LocalOffset: 128,64,64, 128,-64,64
 	AttractsWorms:
 		Intensity: 420
 
-quad:
+^quad:
 	Inherits: ^Vehicle
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: upgrade.light, ~techlevel.2
-		BuildPaletteOrder: 3
-		BuildDuration: 277
-		BuildDurationModifier: 40
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Missile Quad
-		Description: Missile Scout\n  Strong vs Vehicles\n  Weak vs Infantry
-	Health:
-		HP: 1100
 	Armor:
 		Type: light
-	Mobile:
-		TurnSpeed: 8
-		Speed: 96
 	RevealsShroud:
 		Range: 4c768
-	Armament@Ground:
-		Weapon: Rocket
-		LocalOffset: 128,64,64, 128,-64,64
-	Armament@AA:
-		Weapon: RocketAA
-		LocalOffset: 128,64,64, 128,-64,64
+	WithMuzzleOverlay:
 	AttackFrontal:
 	AutoTarget:
 	Explodes:
 		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall 
+	RenderSprites:
+		Image: quad
+
+quad.mg:
+	Inherits: ^quad
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~light.mgquad, upgrade.light, ~techlevel.1
+		BuildPaletteOrder: 5
+		BuildDuration: 277
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Machine Gun Quad
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Selectable:
-		Class: quad
+		Class: quad.mg
+	Health:
+		HP: 1100
+	Mobile:
+		TurnSpeed: 8
+		Speed: 96
+	Armament@damage:
+		Weapon: HMG_quad
+		LocalOffset: -416,0,0
+	Armament@muzzle:
+		Weapon: HMG_quad_muzzle
+		LocalOffset: -416,0,0
+		MuzzleSequence: muzzle
+	AttractsWorms:
+		Intensity: 470
+	RenderSprites:
+		Scale: 0.9
+
+quad.rocket:
+	Inherits: ^quad
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~light.rocketquad, upgrade.light, ~techlevel.2
+		BuildPaletteOrder: 6
+		BuildDuration: 277
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Rocket Quad
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Selectable:
+		Class: quad.rocket
+	Health:
+		HP: 1100
+	Mobile:
+		TurnSpeed: 8
+		Speed: 96
+	Armament@Ground:
+		Weapon: Rocket_quad
+		LocalOffset: 128,64,64, 128,-64,64
+	Armament@AA:
+		Weapon: RocketAA_quad
+		LocalOffset: 128,64,64, 128,-64,64
 	AttractsWorms:
 		Intensity: 470
 
 stealth_raider:
-	Inherits: raider
+	Inherits: raider.rocket
 	Buildable:
 		Prerequisites: ~light.ordos, upgrade.light, high_tech_factory, ~techlevel.5
-		BuildPaletteOrder: 4
+		BuildPaletteOrder: 7
 		BuildDuration: 194
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
-		Name: Stealth Raider Trike
-		Description: Invisible Raider Trike\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+		Name: Stealth Rocket Raider
+		Description: Invisible scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Cloak:
 		InitialDelay: 45
 		CloakDelay: 90
@@ -139,6 +251,8 @@ stealth_raider:
 		InitialStanceAI: ReturnFire
 	Selectable:
 		Class: stealth_raider
+	RenderSprites:
+		Image: stealth_raider
 	-MustBeDestroyed:
 	-Cloak@STEALTH:
 	-TimedUpgradeBar:
@@ -147,7 +261,7 @@ light_tank:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 5
+		BuildPaletteOrder: 8
 		Prerequisites: ~light.mercenary, upgrade.light, high_tech_factory, ~techlevel.5
 		BuildDuration: 337
 		BuildDurationModifier: 40

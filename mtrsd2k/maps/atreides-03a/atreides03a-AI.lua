@@ -14,7 +14,7 @@ AttackDelays =
 }
 
 OrdosInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-OrdosVehicleTypes = { "raider", "raider", "quad" }
+OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.rocket" }
 
 AttackOnGoing = false
 HoldProduction = false

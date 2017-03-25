@@ -65,13 +65,13 @@ Actors:
 	ABarracks: barracks
 		Location: 9,7
 		Owner: Atreides
-	Actor7: trike
+	Actor7: trike.mg
 		Location: 12,7
 		Owner: Atreides
 	AOutpost: outpost
 		Location: 5,8
 		Owner: Atreides
-	Actor9: trike
+	Actor9: trike.mg
 		Location: 8,9
 		Owner: Atreides
 	Actor10: light_inf
@@ -80,13 +80,13 @@ Actors:
 	APower2: wind_trap
 		Location: 2,10
 		Owner: Atreides
-	Actor12: trike
+	Actor12: trike.mg
 		Location: 11,12
 		Owner: Atreides
 	Actor13: light_inf
 		Location: 42,13
 		Owner: Harkonnen
-	Actor14: trike
+	Actor14: quad.mg
 		Location: 46,13
 		Owner: Harkonnen
 	Actor15: light_inf
@@ -95,7 +95,7 @@ Actors:
 	Actor16: light_inf
 		Location: 4,15
 		Owner: Atreides
-	Actor17: trike
+	Actor17: trike.mg
 		Location: 6,15
 		Owner: Atreides
 	Actor18: light_inf
@@ -107,7 +107,7 @@ Actors:
 	Actor20: light_inf
 		Location: 49,15
 		Owner: Harkonnen
-	Actor21: trike
+	Actor21: quad.mg
 		Location: 43,18
 		Owner: Harkonnen
 	Actor22: light_inf

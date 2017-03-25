@@ -4,32 +4,32 @@ HarkonnenBase = { HConyard, HPower1, HPower2, HBarracks }
 HarkonnenReinforcements = { }
 HarkonnenReinforcements["easy"] =
 {
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" }
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" }
 }
 
 HarkonnenReinforcements["normal"] =
 {
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
+	{ "light_inf", "quad.mg" },
 }
 
 HarkonnenReinforcements["hard"] =
 {
-	{ "trike", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf" },
-	{ "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
-	{ "trike", "trike" }
+	{ "light_inf", "quad.mg" },
+	{ "quad.mg", "quad.mg" }
 }
 
 HarkonnenAttackPaths =

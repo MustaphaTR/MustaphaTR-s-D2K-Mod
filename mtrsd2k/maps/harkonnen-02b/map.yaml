@@ -50,10 +50,10 @@ Actors:
 	Actor1: light_inf
 		Location: 8,3
 		Owner: Harkonnen
-	Actor2: trike
+	Actor2: quad.mg
 		Location: 11,4
 		Owner: Harkonnen
-	Actor3: trike
+	Actor3: quad.mg
 		Location: 9,5
 		Owner: Harkonnen
 	Actor4: light_inf
@@ -62,16 +62,16 @@ Actors:
 	Actor5: light_inf
 		Location: 8,7
 		Owner: Harkonnen
-	Actor6: trike
+	Actor6: quad.mg
 		Location: 2,8
 		Owner: Harkonnen
-	Actor7: trike
+	Actor7: trike.mg
 		Location: 23,8
 		Owner: Atreides
 	Actor8: light_inf
 		Location: 5,9
 		Owner: Harkonnen
-	Actor9: trike
+	Actor9: trike.mg
 		Location: 33,17
 		Owner: Atreides
 	Actor10: wormspawner
@@ -83,10 +83,10 @@ Actors:
 	Actor12: light_inf
 		Location: 44,35
 		Owner: Atreides
-	Actor13: trike
+	Actor13: trike.mg
 		Location: 44,37
 		Owner: Atreides
-	Actor14: trike
+	Actor14: trike.mg
 		Location: 46,37
 		Owner: Atreides
 	Actor15: light_inf
@@ -95,7 +95,7 @@ Actors:
 	Actor16: light_inf
 		Location: 39,40
 		Owner: Atreides
-	Actor17: trike
+	Actor17: trike.mg
 		Location: 41,40
 		Owner: Atreides
 	ALightFactory: light_factory
@@ -104,7 +104,7 @@ Actors:
 	APower1: wind_trap
 		Location: 47,42
 		Owner: Atreides
-	Actor20: trike
+	Actor20: trike.mg
 		Location: 43,43
 		Owner: Atreides
 	Actor21: light_inf

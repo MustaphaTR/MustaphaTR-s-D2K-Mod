@@ -47,34 +47,34 @@ Actors:
 	Actor0: spicebloom
 		Location: 42,4
 		Owner: Neutral
-	Actor1: trike
+	Actor1: trike.mg
 		Location: 26,6
 		Owner: Atreides
-	Actor2: trike
+	Actor2: quad.mg
 		Location: 11,8
 		Owner: Harkonnen
-	Actor3: trike
+	Actor3: trike.mg
 		Location: 20,8
 		Owner: Atreides
-	Actor4: trike
+	Actor4: trike.mg
 		Location: 23,8
 		Owner: Atreides
 	Actor6: light_inf
 		Location: 19,11
 		Owner: Atreides
-	Actor7: trike
+	Actor7: trike.mg
 		Location: 25,11
 		Owner: Atreides
 	Actor8: light_inf
 		Location: 25,12
 		Owner: Atreides
-	Actor9: trike
+	Actor9: quad.mg
 		Location: 45,12
 		Owner: Harkonnen
 	Actor10: light_inf
 		Location: 19,13
 		Owner: Atreides
-	Actor11: trike
+	Actor11: trike.mg
 		Location: 23,13
 		Owner: Atreides
 	Actor12: light_inf
@@ -101,10 +101,10 @@ Actors:
 	Actor19: light_inf
 		Location: 7,36
 		Owner: Harkonnen
-	Actor20: trike
+	Actor20: quad.mg
 		Location: 40,37
 		Owner: Harkonnen
-	Actor21: trike
+	Actor21: quad.mg
 		Location: 23,38
 		Owner: Harkonnen
 	Actor22: light_inf
@@ -113,13 +113,13 @@ Actors:
 	Actor23: spicebloom
 		Location: 11,40
 		Owner: Neutral
-	Actor24: trike
+	Actor24: quad.mg
 		Location: 22,40
 		Owner: Harkonnen
-	Actor26: trike
+	Actor26: quad.mg
 		Location: 21,41
 		Owner: Harkonnen
-	Actor27: trike
+	Actor27: quad.mg
 		Location: 23,41
 		Owner: Harkonnen
 	Actor28: light_inf

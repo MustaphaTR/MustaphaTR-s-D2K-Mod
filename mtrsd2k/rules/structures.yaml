@@ -453,12 +453,24 @@ light_factory:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: light.corrino
 		Factions: corrino
-	ProvidesPrerequisite@trikes:
-		Prerequisite: light.regulartrikes
-		Factions: atreides, harkonnen, corrino
-	ProvidesPrerequisite@raiders:
-		Prerequisite: light.raiders
-		Factions: freman, ordos, mercenary, smuggler
+	ProvidesPrerequisite@mgtrike:
+		Prerequisite: light.mgtrike
+		Factions: atreides, corrino, smuggler
+	ProvidesPrerequisite@rockettrike:
+		Prerequisite: light.rockettrike
+		Factions: harkonnen, freman
+	ProvidesPrerequisite@mgraider:
+		Prerequisite: light.mgraider
+		Factions: freman, mercenary
+	ProvidesPrerequisite@rocketraider:
+		Prerequisite: light.rocketraider
+		Factions: ordos, smuggler
+	ProvidesPrerequisite@mgquad:
+		Prerequisite: light.mgquad
+		Factions: harkonnen, ordos
+	ProvidesPrerequisite@rocketquad:
+		Prerequisite: light.mgquad
+		Factions: atreides, corrino, mercenary
 	ProvidesPrerequisite@buildingname:
 	WithProductionOverlay@WELDING:
 		Sequence: production-welding
@@ -722,11 +734,11 @@ starport:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: starport.corrino
 		Factions: corrino
-	ProvidesPrerequisite@trikes:
-		Prerequisite: starport.regulartrikes
-		Factions: atreides, harkonnen, corrino, freman, ordos, smuggler
-	ProvidesPrerequisite@raiders:
-		Prerequisite: starport.raiders
+	ProvidesPrerequisite@mgtrike:
+		Prerequisite: starport.mgtrike
+		Factions: atreides, harkonnen, ordos, freman, corrino, smuggler
+	ProvidesPrerequisite@mgraider:
+		Prerequisite: starport.mgraider
 		Factions: mercenary
 	Power:
 		Amount: -150

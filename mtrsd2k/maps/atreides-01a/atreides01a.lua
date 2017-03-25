@@ -9,16 +9,16 @@ HarkonnenReinforcements["normal"] =
 {
 	{ "light_inf", "light_inf" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
+	{ "light_inf", "quad.mg" }
 }
 
 HarkonnenReinforcements["hard"] =
 {
 	{ "light_inf", "light_inf" },
-	{ "trike", "trike" },
+	{ "trike", "quad.mg" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
-	{ "trike", "trike" }
+	{ "light_inf", "quad.mg" },
+	{ "quad.mg", "quad.mg" }
 }
 
 HarkonnenEntryWaypoints = { HarkonnenWaypoint1.Location, HarkonnenWaypoint2.Location, HarkonnenWaypoint3.Location, HarkonnenWaypoint4.Location }

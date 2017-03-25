@@ -62,7 +62,7 @@ Players:
 		Enemies: Atreides
 
 Actors:
-	Actor4: trike
+	Actor4: quad.mg
 		Location: 44,3
 		Owner: Harkonnen
 	Actor5: wormspawner
@@ -185,7 +185,7 @@ Actors:
 	Actor69: spicebloom
 		Location: 46,42
 		Owner: Neutral
-	Actor70: quad
+	Actor70: quad.rocket
 		Location: 58,43
 		Owner: Harkonnen
 	Actor71: spicebloom
@@ -200,10 +200,10 @@ Actors:
 	Actor74: barracks
 		Location: 52,52
 		Owner: Atreides
-	Actor75: trike
+	Actor75: trike.mg
 		Location: 54,52
 		Owner: Atreides
-	Actor76: quad
+	Actor76: quad.rocket
 		Location: 51,53
 		Owner: Atreides
 	Actor77: light_inf

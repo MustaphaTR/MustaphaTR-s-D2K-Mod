@@ -58,7 +58,7 @@ Actors:
 	Actor0: wormspawner
 		Location: 63,7
 		Owner: Creeps
-	Actor1: trike
+	Actor1: quad.mg
 		Location: 17,11
 		Owner: Harkonnen
 	Actor2: spicebloom
@@ -73,10 +73,10 @@ Actors:
 	Actor5: spicebloom
 		Location: 57,24
 		Owner: Neutral
-	Actor6: trike
+	Actor6: trike.mg
 		Location: 6,25
 		Owner: Atreides
-	Actor7: trike
+	Actor7: trike.mg
 		Location: 10,26
 		Owner: Atreides
 	Actor9: combat_tank_a
@@ -91,7 +91,7 @@ Actors:
 	Actor12: light_inf
 		Location: 6,30
 		Owner: Atreides
-	Actor13: quad
+	Actor13: quad.rocket
 		Location: 8,30
 		Owner: Atreides
 	Actor14: light_inf
@@ -214,7 +214,7 @@ Actors:
 	Actor66: nsfremen
 		Location: 64,51
 		Owner: Fremen
-	Actor67: trike
+	Actor67: quad.mg
 		Location: 23,52
 		Owner: Harkonnen
 	Actor68: wall

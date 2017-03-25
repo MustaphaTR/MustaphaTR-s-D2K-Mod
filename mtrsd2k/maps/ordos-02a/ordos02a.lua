@@ -5,32 +5,32 @@ HarkonnenBaseAreaTrigger = { CPos.New(31, 37), CPos.New(32, 37), CPos.New(33, 37
 HarkonnenReinforcements = { }
 HarkonnenReinforcements["easy"] =
 {
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" }
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" }
 }
 
 HarkonnenReinforcements["normal"] =
 {
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
+	{ "light_inf", "quad.mg" },
 }
 
 HarkonnenReinforcements["hard"] =
 {
-	{ "trike", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "quad.mg" },
+	{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf" },
-	{ "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
-	{ "trike", "trike" }
+	{ "light_inf", "quad.mg" },
+	{ "quad.mg", "quad.mg" }
 }
 
 HarkonnenAttackPaths =
@@ -49,7 +49,7 @@ InitialHarkonnenReinforcementsPaths =
 
 InitialHarkonnenReinforcements =
 {
-	{ "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf" }
 }
 
@@ -63,7 +63,7 @@ HarkonnenAttackWaves["easy"] = 3
 HarkonnenAttackWaves["normal"] = 6
 HarkonnenAttackWaves["hard"] = 9
 
-OrdosReinforcements = { "light_inf", "light_inf", "raider" }
+OrdosReinforcements = { "light_inf", "light_inf", "quad.mg" }
 OrdosEntryPath = { OrdosEntry.Location, OrdosRally.Location }
 
 wave = 0
@@ -128,7 +128,7 @@ WorldLoaded = function()
 	SendInitialUnits(HarkonnenBaseAreaTrigger, InitialHarkonnenReinforcements[2], InitialHarkonnenReinforcementsPaths[2], InitialReinforcementsSent2)
 
 	SendHarkonnen()
-	ActivateAI()
+	Trigger.AfterDelay(0, ActivateAI)
 end
 
 InitObjectives = function()

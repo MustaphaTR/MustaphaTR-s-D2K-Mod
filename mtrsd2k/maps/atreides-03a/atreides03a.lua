@@ -4,32 +4,32 @@ OrdosReinforcements =
 {
 	easy =
 	{
-		{ "light_inf", "raider", "trooper" },
-		{ "light_inf", "raider", "quad" },
-		{ "light_inf", "light_inf", "trooper", "raider", "raider", "quad" }
+		{ "light_inf", "quad.mg", "trooper" },
+		{ "light_inf", "quad.mg", "raider.rocket" },
+		{ "light_inf", "light_inf", "trooper", "quad.mg", "quad.mg", "raider.rocket" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "raider", "trooper" },
-		{ "light_inf", "raider", "raider" },
-		{ "light_inf", "light_inf", "trooper", "raider", "raider", "quad" },
+		{ "light_inf", "quad.mg", "trooper" },
+		{ "light_inf", "quad.mg", "quad.mg" },
+		{ "light_inf", "light_inf", "trooper", "quad.mg", "quad.mg", "raider.rocket" },
 		{ "light_inf", "light_inf", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "raider", "quad", "quad" }
+		{ "light_inf", "quad.mg", "raider.rocket", "raider.rocket" }
 	},
 
 	hard =
 	{
-		{ "raider", "raider", "quad" },
-		{ "light_inf", "raider", "raider" },
-		{ "trooper", "trooper", "light_inf", "raider" },
-		{ "light_inf", "light_inf", "light_inf", "raider", "raider" },
+		{ "quad.mg", "quad.mg", "raider.rocket" },
+		{ "light_inf", "quad.mg", "quad.mg" },
+		{ "trooper", "trooper", "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "trooper", "trooper" },
-		{ "raider", "raider", "quad", "quad", "quad", "raider" },
+		{ "quad.mg", "quad.mg", "raider.rocket", "raider.rocket", "raider.rocket", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "raider", "raider" },
-		{ "light_inf", "raider", "light_inf", "trooper", "trooper", "quad" },
-		{ "raider", "raider", "quad", "quad", "quad", "raider" }
+		{ "light_inf", "quad.mg", "light_inf", "trooper", "trooper", "raider.rocket" },
+		{ "quad.mg", "quad.mg", "raider.rocket", "raider.rocket", "raider.rocket", "quad.mg" }
 	}
 }
 
@@ -54,7 +54,7 @@ ToHarvest =
 	hard = 7000
 }
 
-InitialOrdosReinforcements = { "light_inf", "light_inf", "quad", "quad", "raider", "raider", "trooper", "trooper" }
+InitialOrdosReinforcements = { "light_inf", "light_inf", "raider.rocket", "raider.rocket", "quad.mg", "quad.mg", "trooper", "trooper" }
 
 OrdosPaths =
 {
@@ -62,7 +62,7 @@ OrdosPaths =
 	{ OrdosEntry2.Location, OrdosRally2.Location }
 }
 
-AtreidesReinforcements = { "quad", "quad", "trike", "trike" }
+AtreidesReinforcements = { "quad.rocket", "quad.rocket", "trike.mg", "trike.mg" }
 AtreidesPath = { AtreidesEntry.Location, AtreidesRally.Location }
 
 AtreidesBaseBuildings = { "barracks", "light_factory" }

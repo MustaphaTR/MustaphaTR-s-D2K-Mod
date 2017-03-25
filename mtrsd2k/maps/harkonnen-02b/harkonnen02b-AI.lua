@@ -14,7 +14,7 @@ AttackDelays =
 }
 
 AtreidesInfantryTypes = { "light_inf" }
-AtreidesVehicleTypes = { "trike" }
+AtreidesVehicleTypes = { "trike.mg" }
 
 AttackOnGoing = false
 HoldProduction = false
@@ -140,11 +140,8 @@ ProduceVehicles = function()
 end
 
 ActivateAI = function()
-	Trigger.AfterDelay(0, InitAIUnits)
+	InitAIUnits()
 
-	-- Finish the upgrades first before trying to build something
-	Trigger.AfterDelay(DateTime.Seconds(14), function()
-		ProduceInfantry()
-		ProduceVehicles()
-	end)
+	ProduceInfantry()
+	ProduceVehicles()
 end

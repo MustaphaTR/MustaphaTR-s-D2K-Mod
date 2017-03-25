@@ -47,16 +47,16 @@ Actors:
 	Actor0: light_inf
 		Location: 14,10
 		Owner: Atreides
-	Actor1: trike
+	Actor1: trike.mg
 		Location: 10,12
 		Owner: Atreides
-	Actor2: quad
+	Actor2: quad.rocket
 		Location: 18,12
 		Owner: Atreides
-	Actor5: trike
+	Actor5: trike.mg
 		Location: 18,16
 		Owner: Atreides
-	Actor8: quad
+	Actor8: quad.rocket
 		Location: 11,17
 		Owner: Atreides
 	Actor10: light_inf
@@ -74,7 +74,7 @@ Actors:
 	OTrooper2: trooper
 		Location: 36,28
 		Owner: Ordos
-	ORaider: raider
+	ORaider: quad.mg
 		Location: 39,28
 		Owner: Ordos
 	OBarracks: barracks

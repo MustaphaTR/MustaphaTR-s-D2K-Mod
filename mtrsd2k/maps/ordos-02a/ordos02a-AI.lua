@@ -117,10 +117,7 @@ ProduceInfantry = function()
 end
 
 ActivateAI = function()
-	Trigger.AfterDelay(0, InitAIUnits)
+	InitAIUnits()
 
-	-- Finish the upgrades first before trying to build something
-	Trigger.AfterDelay(DateTime.Seconds(14), function()
-		ProduceInfantry()
-	end)
+	ProduceInfantry()
 end

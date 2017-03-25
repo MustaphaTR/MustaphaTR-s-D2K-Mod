@@ -62,8 +62,8 @@ HarkonnenPaths =
 
 AtreidesReinforcements =
 {
-	{ "trike", "combat_tank_a", "combat_tank_a" },
-	{ "quad", "combat_tank_a", "combat_tank_a" }
+	{ "trike.mg", "combat_tank_a", "combat_tank_a" },
+	{ "quad.rocket", "combat_tank_a", "combat_tank_a" }
 }
 AtreidesPath = { AtreidesEntry.Location, AtreidesRally.Location }
 

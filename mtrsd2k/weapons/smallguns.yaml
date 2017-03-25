@@ -177,14 +177,23 @@ HMG:
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 
-HMGo:
+HMG_trike:
+	Inherits: HMG
+
+HMG_raider:
 	Inherits: HMG
 	ReloadDelay: 18
 	Warhead@1Dam: SpreadDamage
 		Damage: 145
 
-HMGo_turret:
-	Inherits: HMGo
+HMG_quad:
+	Inherits: HMG
+	ReloadDelay: 22
+	Warhead@1Dam: SpreadDamage
+		Damage: 165
+
+HMG_turret:
+	Inherits: HMG_raider
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
@@ -199,10 +208,17 @@ HMG_muzzle:
 	BurstDelay: 2
 	Warhead@TargetValidation: SpreadDamage
 
-HMGo_muzzle:
+HMG_trike_muzzle:
+	Inherits: HMG_muzzle
+
+HMG_raider_muzzle:
 	Inherits: HMG_muzzle
 	ReloadDelay: 14
-    
+
+HMG_quad_muzzle:
+	Inherits: HMG_muzzle
+	ReloadDelay: 18
+
 SniperRifle:
 	Report: FREMODD1.WAV
 	ReloadDelay: 80

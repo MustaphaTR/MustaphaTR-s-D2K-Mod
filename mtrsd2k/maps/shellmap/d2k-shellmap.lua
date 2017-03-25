@@ -26,22 +26,22 @@ IsAttacking =
 }
 
 AtreidesInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper", "grenadier", "grenadier" }
-AtreidesVehicleTypes = { "trike", "trike", "quad" }
+AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 AtreidesTankTypes = { "combat_tank_a", "combat_tank_a", "combat_tank_a", "siege_tank" }
 AtreidesStarportTypes = { "trike.starport", "quad.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_a.starport" }
 
 HarkonnenInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper", "flamethrower", "flamethrower" }
-HarkonnenVehicleTypes = { "trike", "quad", "quad" }
+HarkonnenVehicleTypes = { "quad.mg", "quad.rocket", "quad.rocket" }
 HarkonnenTankTypes = { "combat_tank_h", "combat_tank_h", "combat_tank_h", "siege_tank" }
 HarkonnenStarportTypes = { "trike.starport", "quad.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_h.starport" }
 
 OrdosInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-OrdosVehicleTypes = { "raider", "raider", "quad", "stealth_raider" }
+OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.rocket", "stealth_raider" }
 OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "combat_tank_o", "siege_tank" }
 OrdosStarportTypes = { "trike.starport", "quad.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_o.starport" }
 
 EmperorInfantryTypes = { "light_inf", "trooper", "plasma_infantry", "plasma_infantry", "sardaukar", "sardaukar", "sardaukar" }
-EmperorVehicleTypes = { "trike", "quad", "quad" }
+EmperorVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 EmperorTankTypes = { "combat_tank_c", "combat_tank_c", "combat_tank_c", "siege_tank" }
 EmperorStarportTypes = { "trike.starport", "quad.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_c.starport" }
 

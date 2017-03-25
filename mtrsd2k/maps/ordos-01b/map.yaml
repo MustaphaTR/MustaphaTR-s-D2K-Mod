@@ -70,10 +70,10 @@ Actors:
 	Actor7: light_inf
 		Location: 22,13
 		Owner: Ordos
-	Actor8: raider
+	Actor8: quad.mg
 		Location: 15,14
 		Owner: Ordos
-	Actor9: raider
+	Actor9: quad.mg
 		Location: 18,15
 		Owner: Ordos
 	Actor10: light_inf

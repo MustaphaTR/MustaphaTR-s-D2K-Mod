@@ -101,6 +101,36 @@ RocketAA:
 		ValidTargets: Air
  	-Warhead@2Smu:
 
+Rocket_trike:
+	Inherits: Rocket
+
+RocketAA_trike:
+	Inherits: RocketAA
+
+Rocket_raider:
+	Inherits: Rocket
+	ReloadDelay: 28
+	Warhead@1Dam: SpreadDamage
+		Damage: 225
+
+RocketAA_raider:
+	Inherits: RocketAA
+	ReloadDelay: 28
+	Warhead@1Dam: SpreadDamage
+		Damage: 225
+
+Rocket_quad:
+	Inherits: Rocket
+	ReloadDelay: 32
+	Warhead@1Dam: SpreadDamage
+		Damage: 275
+
+RocketAA_quad:
+	Inherits: RocketAA
+	ReloadDelay: 32
+	Warhead@1Dam: SpreadDamage
+		Damage: 275
+
 Rocket.stealth:
 	Inherits: Rocket
 	ReloadDelay: 40

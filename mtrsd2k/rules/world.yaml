@@ -23,37 +23,37 @@
 		Name: Atreides
 		InternalName: atreides
 		Side: Atreides
-		Description: House Atreides\n Special Units:\n - Grenadier\n - Sonic Tank\n - Fremen\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Trike\n Combat Tank Speciality:\n - Range\n Speical Ability:\n - Ornithopter AirStrike
+		Description: House Atreides\n Special Units:\n - Grenadier\n - Sonic Tank\n - Fremen\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Trike\n - Rocket Quad\n Combat Tank Speciality:\n - Range\n Speical Ability:\n - Ornithopter AirStrike
 	Faction@Harkonnen:
 		Name: Harkonnen
 		InternalName: harkonnen
 		Side: Harkonnen
-		Description: House Harkonnen\n Special Units:\n - Flamethrower\n - Devastator\n - Rocketeer\n Defensive Structures:\n - Flame Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Trike\n Combat Tank Speciality:\n - Armor\n Speical Ability:\n - Death Hand Missile Strike
+		Description: House Harkonnen\n Special Units:\n - Flamethrower\n - Devastator\n - Rocketeer\n Defensive Structures:\n - Flame Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Quad\n - Rocket Trike\n Combat Tank Speciality:\n - Armor\n Speical Ability:\n - Death Hand Missile Strike
 	Faction@Ordos:
 		Name: Ordos
 		InternalName: ordos
 		Side: Ordos
-		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Speed\n Speical Ability:\n - Their vehicles can self-repair
+		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Quad\n - Rocket Radier\n Combat Tank Speciality:\n - Speed\n Speical Ability:\n - Their vehicles can self-repair
 	Faction@Corrino:
 		Name: Corrino
 		InternalName: corrino
 		Side: Harkonnen
-		Description: House Corrino\n Special Units:\n - Plasma Infantry\n - Quake Tank\n - Sardaukar\n Defensive Structures:\n - Flame Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Trike\n Combat Tank Speciality:\n - Damage\n Speical Ability:\n - Rocket Strike
+		Description: House Corrino\n Special Units:\n - Plasma Infantry\n - Quake Tank\n - Sardaukar\n Defensive Structures:\n - Flame Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Trike\n - Rocket Quad\n Combat Tank Speciality:\n - Damage\n Speical Ability:\n - Rocket Strike
 	Faction@Mercenaries:
 		Name: Mercenaries
 		InternalName: mercenary
 		Side: Ordos
-		Description: The Mercenaries\n Special Units:\n - Light Tank\n - Bomb Buggy\n - Sniper\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Rate of Fire\n Speical Ability:\n - Can buy everything they can build
+		Description: The Mercenaries\n Special Units:\n - Light Tank\n - Bomb Buggy\n - Sniper\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Quad\n Combat Tank Speciality:\n - Rate of Fire\n Speical Ability:\n - Can buy everything they can build
 	Faction@Smugglers:
 		Name: Smugglers
 		InternalName: smuggler
 		Side: Ordos
-		Description: The Smugglers\n Special Units:\n - Attack Dog \n - IFV\n - Saboteur\n Defensive Structures:\n - Anti-Personnel Mine\n - Anti-Tank Mine\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Build Time\n Speical Ability:\n - Has better Refinery, Silo, Carryall and Harvester
+		Description: The Smugglers\n Special Units:\n - Attack Dog \n - IFV\n - Saboteur\n Defensive Structures:\n - Anti-Personnel Mine\n - Anti-Tank Mine\n - Missile Turret\n Light Vehicles:\n - MG Trike\n - Rocket Raider\n Combat Tank Speciality:\n - Build Time\n Speical Ability:\n - Has better Refinery, Silo, Carryall and Harvester
 	Faction@Fremen:
 		Name: Fremen
 		InternalName: freman
 		Side: Atreides
-		Description: The Fremen\n Special Units:\n - Freman\n - Stealth Tank\n - Fedaykin\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Main Light Vehicle:\n - Raider\n Combat Tank Speciality:\n - Cost\n Speical Ability:\n - Stealth Device
+		Description: The Fremen\n Special Units:\n - Freman\n - Stealth Tank\n - Fedaykin\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Trike\n Combat Tank Speciality:\n - Cost\n Speical Ability:\n - Stealth Device
 	ResourceType@Spice:
 		ResourceType: 1
 		Palette: d2k
@@ -171,7 +171,7 @@ World:
 		ClassName: Heavy Support
 		Factions: atreides
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, grenadier, trike, combat_tank_a, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, grenadier, trike.mg, quad.rocket, combat_tank_a, missile_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavyfreman:
@@ -179,7 +179,7 @@ World:
 		ClassName: Heavy Support
 		Factions: freman
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, nsfremen, raider, combat_tank_f, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, nsfremen, raider.mg, trike.rocket, combat_tank_f, missile_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavyharkonnen:
@@ -187,7 +187,7 @@ World:
 		ClassName: Heavy Support
 		Factions: harkonnen
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, flamethrower, quad, combat_tank_h, siege_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, flamethrower, quad.mg, quad.rocket, combat_tank_h, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavycorrino:
@@ -195,7 +195,7 @@ World:
 		ClassName: Heavy Support
 		Factions: corrino
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, plasma_infantry, quad, combat_tank_c, siege_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, plasma_infantry, trike.mg, quad.rocket, combat_tank_c, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavyordos:
@@ -203,7 +203,7 @@ World:
 		ClassName: Heavy Support
 		Factions: ordos
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, stealth_raider, raider, combat_tank_o, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, stealth_raider, quad.mg, raider.rocket, combat_tank_o, missile_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavymercenary:
@@ -211,7 +211,7 @@ World:
 		ClassName: Heavy Support
 		Factions: mercenary
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, light_tank, raider, combat_tank_m, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, light_tank, raider.mg, quad.rocket, combat_tank_m, missile_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavysmuggler:
@@ -219,7 +219,7 @@ World:
 		ClassName: Heavy Support
 		Factions: smuggler
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, dog, dog, raider, combat_tank_s, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, trooper, dog, dog, trike.mg, radier.rocket, combat_tank_s, missile_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	SpawnMPUnits:

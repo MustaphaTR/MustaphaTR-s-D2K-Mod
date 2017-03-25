@@ -20,7 +20,7 @@ HarkonnenAttackDelay =
 
 InitialReinforcements = 
 {
-	Harkonnen = { "combat_tank_h", "combat_tank_h", "trike", "quad" },
+	Harkonnen = { "combat_tank_h", "combat_tank_h", "quad.mg", "quad.mg" },
 	Smugglers = { "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" }
 }
 

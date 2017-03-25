@@ -4,32 +4,32 @@ AtreidesBase = { AConyard, APower1, APower2, ABarracks, AOutpost }
 AtreidesReinforcements = { }
 AtreidesReinforcements["easy"] =
 {
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" }
+	{ "light_inf", "trike.mg" },
+	{ "light_inf", "trike.mg" },
+	{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" }
 }
 
 AtreidesReinforcements["normal"] =
 {
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+	{ "light_inf", "trike.mg" },
+	{ "light_inf", "trike.mg" },
+	{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
 	{ "light_inf", "light_inf" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
+	{ "light_inf", "trike.mg" },
 }
 
 AtreidesReinforcements["hard"] =
 {
-	{ "trike", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+	{ "trike.mg", "trike.mg" },
+	{ "light_inf", "trike.mg" },
+	{ "light_inf", "trike.mg" },
+	{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
 	{ "light_inf", "light_inf" },
-	{ "trike", "trike" },
+	{ "trike.mg", "trike.mg" },
 	{ "light_inf", "light_inf", "light_inf" },
-	{ "light_inf", "trike" },
-	{ "trike", "trike" }
+	{ "light_inf", "trike.mg" },
+	{ "trike.mg", "trike.mg" }
 }
 
 AtreidesAttackPaths =

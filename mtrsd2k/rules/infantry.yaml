@@ -480,10 +480,10 @@ sardaukar:
 	Armament@SECONDARY:
 		Weapon: M_HMG
 	AttackFrontal:
-	Crushable:
-		WarnProbability: 80
 	Voiced:
 		VoiceSet: GenericVoice
+	Crushable:
+		WarnProbability: 80
 	Explodes:
 		Weapon: SardDeath
 		EmptyWeapon: SardDeath
