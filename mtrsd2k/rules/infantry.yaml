@@ -374,8 +374,6 @@ fedaykin:
 		ScanRadius: 6
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	Targetable:
-		TargetTypes: Ground, Infantry, Sonictank
 	Armament:
 		Weapon: sound2
 	AttackFrontal:
