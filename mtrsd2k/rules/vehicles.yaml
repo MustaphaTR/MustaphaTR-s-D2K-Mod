@@ -7,7 +7,7 @@ trike.mg:
 		BuildDuration: 194
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 300
+		Cost: 325
 	Tooltip:
 		Name: Machine Gun Trike
 		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
@@ -39,7 +39,7 @@ raider.mg:
 		BuildDuration: 250
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 350
+		Cost: 325
 	Tooltip:
 		Name: Machine Gun Raider
 		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
@@ -74,7 +74,7 @@ quad.mg:
 		BuildDuration: 250
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 350
+		Cost: 325
 	Tooltip:
 		Name: Machine Gun Quad
 		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
@@ -106,7 +106,7 @@ trike.rocket:
 		BuildDuration: 266
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 400
+		Cost: 425
 	Tooltip:
 		Name: Rocket Trike
 		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
@@ -135,7 +135,7 @@ raider.rocket:
 		BuildDuration: 277
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 450
+		Cost: 425
 	Tooltip:
 		Name: Rocket Raider
 		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
@@ -167,7 +167,7 @@ quad.rocket:
 		BuildDuration: 277
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 450
+		Cost: 425
 	Tooltip:
 		Name: Rocket Quad
 		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
