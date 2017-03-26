@@ -67,141 +67,63 @@
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 4
 
-^Vehicle:
+^Building:
 	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^GainsExperience
-	Inherits@3: ^SpriteActor
-	Inherits@4: ^Cloakable
+	Inherits@2: ^SpriteActor
+	Inherits@3: ^Cloakable
 	Huntable:
-	Mobile:
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
-		Crushes: crate, spicebloom, mine
-		TerrainSpeeds:
-			Sand: 100
-			Rock: 100
-			Transition: 100
-			Concrete: 100
-			SpiceSand: 100
-			Spice: 100
-			SpiceBlobs: 100
-			Dune: 50
-		TurnSpeed: 5
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-		Bounds: 32,32
+		Priority: 2
+	RevealsShroud:
+		VisibilityType: CenterPosition
 	Targetable:
-		TargetTypes: Ground, C4, Vehicle, DetonateAttack
-	Passenger:
-		CargoType: Vehicle
-	AttackMove:
-	DrawLineToTarget:
-	HiddenUnderFog:
-	ActorLostNotification:
-	Repairable:
-		RepairBuildings: repair_pad
-	Guard:
-		Voice: Guard
-	Guardable:
-	WithFacingSpriteBody:
-	Demolishable:
-	TemporaryOwnerManager:
+		TargetTypes: Ground, C4, Structure, DetonateAttack
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Rock, Concrete
+		BuildSounds: BUILD1.WAV
+		Adjacent: 3
+	GivesBuildableArea:
+	Capturable:
+		CaptureThreshold: 100
+	SoundOnDamageTransition:
+		DamagedSounds: EXPLSML1.WAV
+		DestroyedSounds: EXPLHG1.WAV
+	WithSpriteBody:
+	WithBuildingExplosion:
+		Sequences: building, self_destruct, large_explosion
+	RepairableBuilding:
+		RepairStep: 50
+		PlayerExperience: 25
+	EmitInfantryOnSell:
+		ActorTypes: light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, trooper, trooper, trooper, trooper, engineer, engineer, engineer, engineer, engineer
 	MustBeDestroyed:
-	Voiced:
-		VoiceSet: VehicleVoice
-	AutoCarryable:
-		CarryableUpgrades: notmobile
-	WithDecorationCarryable:
-		Image: pips
-		Sequence: pickup-indicator
-		Offset: -12, -12
-	Capturable:
-		Type: vehicle
-		CaptureThreshold: 100
-		CancelActivity: True
-	GlobalUpgradable@Ordos:
-		Upgrades: selfheal.upg.ordos
-		Prerequisites: selfheal.prereq.ordos
-	SelfHealing@Ordos:
-		Step: 0
-		PercentageStep: 2
-		Delay: 100
-		HealIfBelow: 100
-		DamageCooldown: 250
-		UpgradeTypes: selfheal.upg.ordos
-		UpgradeMinEnabledLevel: 1
-	ProvidesPrerequisite@Ordos:
-		Prerequisite: selfheal.prereq.ordos
-		Factions: ordos
-
-^Tank:
-	Inherits: ^Vehicle
-	Mobile:
-		Crushes: crate, infantry, spicebloom, mine
-
-^Husk:
-	Inherits@1: ^SpriteActor
-	Health:
-		HP: 75
-	Armor:
-		Type: light
-	HiddenUnderFog:
-		Type: CenterPosition
-	Tooltip:
-		Name: Wreck
-	Capturable:
-		Type: husk
-		AllowAllies: yes
-		CaptureThreshold: 100
-	TransformOnCapture:
-		ForceHealthPercentage: 25
-	AutoTargetIgnore:
-	ScriptTriggers:
-	WithFacingSpriteBody:
-
-^VehicleHusk:
-	Inherits: ^Husk
-	Husk:
-		AllowedTerrain: Sand, Rock, Transition, Concrete, Spice, SpiceSand, SpiceBlobs, Dune
-	Burns:
-		Interval: 4
-	Targetable:
-		TargetTypes: Ground, Vehicle, DetonateAttack
-		RequiresForceFire: true
-	DisabledOverlay:
-	Explodes:
-		Weapon: UnitExplodeMed
-		EmptyWeapon: UnitExplodeMed
-
-^AircraftHusk:
-	Inherits: ^Husk
-	WithShadow:
-	FallsToEarth:
-		Spins: False
-		Moves: True
-		Explosion: UnitExplodeLarge
-
-^HelicopterHusk:
-	Inherits: ^AircraftHusk
-	WithShadow:
-	FallsToEarth:
-		Spins: True
-		Moves: False
-
-^TowerHusk:
-	Health:
-		HP: 125
-	Armor:
-		Type: concrete
-	Husk:
-	AppearsOnRadar:
-	HiddenUnderFog:
-	Burns:
-		Interval: 2
-	Tooltip:
-		Name: Destroyed Tower
-	ScriptTriggers:
+		RequiredForShortGame: true
+	FrozenUnderFog:
+	CaptureNotification:
+	ActorLostNotification:
+		Notification: BuildingLost
+	ShakeOnDeath:
+	Sellable:
+		SellSounds: BUILD1.WAV
+	Guardable:
+		Range: 3c0
+	WithCrumbleOverlay:
+	Demolishable:
+	DamagedByTerrain:
+		Damage: 50
+		DamageInterval: 100
+		Terrain: Rock
+		DamageThreshold: 50
+		StartOnThreshold: true
+	ThrowsShrapnel:
+		Weapons: Debris, Debris2, Debris3, Debris4
+		Pieces: 2, 5
+		Range: 1c512, 4c0
+	WithMakeAnimation:
 
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
@@ -274,6 +196,74 @@
 	Voiced:
 		VoiceSet: InfantryVoice
 
+^Vehicle:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^GainsExperience
+	Inherits@3: ^SpriteActor
+	Inherits@4: ^Cloakable
+	Huntable:
+	Mobile:
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+		Crushes: crate, spicebloom, mine
+		TerrainSpeeds:
+			Sand: 100
+			Rock: 100
+			Transition: 100
+			Concrete: 100
+			SpiceSand: 100
+			Spice: 100
+			SpiceBlobs: 100
+			Dune: 50
+		TurnSpeed: 5
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 32,32
+	Targetable:
+		TargetTypes: Ground, C4, Vehicle, DetonateAttack
+	Passenger:
+		CargoType: Vehicle
+	AttackMove:
+	DrawLineToTarget:
+	HiddenUnderFog:
+	ActorLostNotification:
+	Repairable:
+		RepairBuildings: repair_pad
+	Guard:
+		Voice: Guard
+	Guardable:
+	WithFacingSpriteBody:
+	Demolishable:
+	TemporaryOwnerManager:
+	MustBeDestroyed:
+	Voiced:
+		VoiceSet: VehicleVoice
+	AutoCarryable:
+		CarryableUpgrades: notmobile
+	WithDecorationCarryable:
+		Image: pips
+		Sequence: pickup-indicator
+		Offset: -12, -12
+	Capturable:
+		Type: vehicle
+		CaptureThreshold: 100
+		CancelActivity: True
+	GlobalUpgradable@Ordos:
+		Upgrades: selfheal.upg.ordos
+		Prerequisites: selfheal.prereq.ordos
+	SelfHealing@Ordos:
+		Step: 0
+		PercentageStep: 2
+		Delay: 100
+		HealIfBelow: 100
+		DamageCooldown: 250
+		UpgradeTypes: selfheal.upg.ordos
+		UpgradeMinEnabledLevel: 1
+	ProvidesPrerequisite@Ordos:
+		Prerequisite: selfheal.prereq.ordos
+		Factions: ordos
+
 ^Plane:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -288,64 +278,6 @@
 	DrawLineToTarget:
 	WithFacingSpriteBody:
 	WithShadow:
-
-^Building:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Inherits@3: ^Cloakable
-	Huntable:
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-		Priority: 2
-	RevealsShroud:
-		VisibilityType: CenterPosition
-	Targetable:
-		TargetTypes: Ground, C4, Structure, DetonateAttack
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		TerrainTypes: Rock, Concrete
-		BuildSounds: BUILD1.WAV
-		Adjacent: 3
-	GivesBuildableArea:
-	Capturable:
-		CaptureThreshold: 100
-	SoundOnDamageTransition:
-		DamagedSounds: EXPLSML1.WAV
-		DestroyedSounds: EXPLHG1.WAV
-	WithSpriteBody:
-	WithBuildingExplosion:
-		Sequences: building, self_destruct, large_explosion
-	RepairableBuilding:
-		RepairStep: 50
-		PlayerExperience: 25
-	EmitInfantryOnSell:
-		ActorTypes: light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, trooper, trooper, trooper, trooper, engineer, engineer, engineer, engineer, engineer
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	FrozenUnderFog:
-	CaptureNotification:
-	ActorLostNotification:
-		Notification: BuildingLost
-	ShakeOnDeath:
-	Sellable:
-		SellSounds: BUILD1.WAV
-	Guardable:
-		Range: 3c0
-	WithCrumbleOverlay:
-	Demolishable:
-	DamagedByTerrain:
-		Damage: 50
-		DamageInterval: 100
-		Terrain: Rock
-		DamageThreshold: 50
-		StartOnThreshold: true
-	ThrowsShrapnel:
-		Weapons: Debris, Debris2, Debris3, Debris4
-		Pieces: 2, 5
-		Range: 1c512, 4c0
-	WithMakeAnimation:
 
 ^Concrete:
 	AlwaysVisible:
@@ -426,3 +358,157 @@
 	RenderSprites:
 		PlayerPalette: raplayer
 		Scale: 1.25
+^Trike:
+	Inherits: ^Vehicle
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	AttackFrontal:
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderSprites:
+		Image: trike
+
+^Raider:
+	Inherits: ^Vehicle
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	AttackFrontal:
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderSprites:
+		Image: raider
+
+^Quad:
+	Inherits: ^Vehicle
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	AttackFrontal:
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall 
+	RenderSprites:
+		Image: quad
+
+^Tank:
+	Inherits: ^Vehicle
+	Mobile:
+		Crushes: crate, infantry, spicebloom, mine
+
+^CombatTank:
+	Inherits: ^Tank
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 3
+		BuildDuration: 373
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Combat Tank
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Atreides: +Range\n  Fremen: -Cost\n  Harkonnen: +Armor\n  Corrino: +Damage\n  Ordos: +Speed\n  Mercenaries: -Rate of Fire\n  Smugglers: -Build Time
+	Health:
+		HP: 2100
+	Armor:
+		Type: heavy
+	Mobile:
+		Speed: 75
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 5c768
+	Turreted:
+		TurnSpeed: 5
+		RealignDelay: 0
+	Armament:
+		Weapon: 80mm
+		Recoil: 128
+		RecoilRecovery: 32
+		LocalOffset: 256,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeMed
+		EmptyWeapon: UnitExplodeMed
+	Selectable:
+		Class: combat
+	AttractsWorms:
+		Intensity: 520
+
+^Husk:
+	Inherits@1: ^SpriteActor
+	Health:
+		HP: 75
+	Armor:
+		Type: light
+	HiddenUnderFog:
+		Type: CenterPosition
+	Tooltip:
+		Name: Wreck
+	Capturable:
+		Type: husk
+		AllowAllies: yes
+		CaptureThreshold: 100
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+	AutoTargetIgnore:
+	ScriptTriggers:
+	WithFacingSpriteBody:
+
+^VehicleHusk:
+	Inherits: ^Husk
+	Husk:
+		AllowedTerrain: Sand, Rock, Transition, Concrete, Spice, SpiceSand, SpiceBlobs, Dune
+	Burns:
+		Interval: 4
+	Targetable:
+		TargetTypes: Ground, Vehicle, DetonateAttack
+		RequiresForceFire: true
+	DisabledOverlay:
+	Explodes:
+		Weapon: UnitExplodeMed
+		EmptyWeapon: UnitExplodeMed
+
+^AircraftHusk:
+	Inherits: ^Husk
+	WithShadow:
+	FallsToEarth:
+		Spins: False
+		Moves: True
+		Explosion: UnitExplodeLarge
+
+^HelicopterHusk:
+	Inherits: ^AircraftHusk
+	WithShadow:
+	FallsToEarth:
+		Spins: True
+		Moves: False
+
+^TowerHusk:
+	Health:
+		HP: 125
+	Armor:
+		Type: concrete
+	Husk:
+	AppearsOnRadar:
+	HiddenUnderFog:
+	Burns:
+		Interval: 2
+	Tooltip:
+		Name: Destroyed Tower
+	ScriptTriggers:
