@@ -139,7 +139,7 @@ InitObjectives = function()
 
 	KillOrdosH = harkonnen.AddPrimaryObjective("Kill all Ordos units.")
 	KillOrdosS = smuggler.AddSecondaryObjective("Kill all Ordos units.")
-	DefendOutpost = smuggler.AddPrimaryObjective("Don't let the outpost to be captured or dostroyed.")
+	DefendOutpost = smuggler.AddPrimaryObjective("Don't let the outpost to be captured or destroyed.")
 	CaptureOutpost = player.AddPrimaryObjective("Capture the Smuggler Outpost.")
 	KillHarkonnen = player.AddSecondaryObjective("Destroy the Harkonnen.")
 
