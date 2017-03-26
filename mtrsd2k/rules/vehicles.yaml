@@ -171,7 +171,7 @@ quad.mg:
 	Inherits: ^quad
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~light.mgquad, upgrade.light, ~techlevel.1
+		Prerequisites: ~light.mgquad, ~techlevel.1
 		BuildPaletteOrder: 5
 		BuildDuration: 277
 		BuildDurationModifier: 40
