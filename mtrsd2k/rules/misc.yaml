@@ -64,17 +64,29 @@ crate:
 		SelectionShares: 6
 		Units: dog, dog, dog, dog, dog
 		Prerequisites: techlevel.5, barracks
-	GiveUnitCrateAction@Trike:
-		SelectionShares: 25
-		Units: trike
-		Prerequisites: techlevel.1, light_factory
-	GiveUnitCrateAction@Raider:
-		SelectionShares: 25
-		Units: raider
-		Prerequisites: techlevel.1, light_factory
-	GiveUnitCrateAction@Quad:
+	GiveUnitCrateAction@MGTrike:
 		SelectionShares: 20
-		Units: quad
+		Units: trike.mg
+		Prerequisites: techlevel.1, light_factory
+	GiveUnitCrateAction@MGRaider:
+		SelectionShares: 20
+		Units: raider.mg
+		Prerequisites: techlevel.1, light_factory
+	GiveUnitCrateAction@MGQuad:
+		SelectionShares: 20
+		Units: quad.mg
+		Prerequisites: techlevel.1, light_factory
+	GiveUnitCrateAction@RocketTrike:
+		SelectionShares: 15
+		Units: trike.rocket
+		Prerequisites: techlevel.2, light_factory, upgrade.light
+	GiveUnitCrateAction@RocketRaider:
+		SelectionShares: 15
+		Units: raider.rocket
+		Prerequisites: techlevel.2, light_factory, upgrade.light
+	GiveUnitCrateAction@RocketQuad:
+		SelectionShares: 15
+		Units: quad.rocket
 		Prerequisites: techlevel.2, light_factory, upgrade.light
 	GiveUnitCrateAction@StealthRaider:
 		SelectionShares: 8
