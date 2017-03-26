@@ -19,8 +19,8 @@ HarkonnenReinforcements =
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "quad.rocket" },
-		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket" }
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" }
 	},
 
 	hard =
@@ -30,9 +30,9 @@ HarkonnenReinforcements =
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "quad.rocket" },
-		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket" },
-		{ "combat_tank_h", "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
+		{ "combat_tank_h", "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
 		{ "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h" }
 	}
 }
@@ -118,7 +118,7 @@ MercenarySpawn = { HarkonnenRally4.Location + CVec.New(2, -2) }
 -- Ordos tanks because those were intended for the Smugglers not the Atreides
 ContrabandReinforcements = { "mcv", "quad.rocket", "quad.rocket", "combat_tank_o", "combat_tank_o", "combat_tank_o" }
 SmugglerReinforcements = { "quad.rocket", "quad.rocket", "trike.mg", "trike.mg" }
-InitialHarkonnenReinforcements = { "trooper", "trooper", "quad.rocket", "quad.rocket", "quad.mg", "quad.mg", "quad.mg", "light_inf" }
+InitialHarkonnenReinforcements = { "trooper", "trooper", "trike.rocket", "trike.rocket", "quad.mg", "quad.mg", "quad.mg", "light_inf" }
 
 HarkonnenPaths =
 {
