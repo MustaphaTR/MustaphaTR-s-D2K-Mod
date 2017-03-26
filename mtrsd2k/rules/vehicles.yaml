@@ -476,6 +476,7 @@ combat_tank_m:
 combat_tank_s:
 	Inherits: ^combat_tank
 	Buildable:
+		BuildDuration: 325
 		Prerequisites: ~heavy.smuggler, ~techlevel.3
 	Tooltip:
 		Name: Smuggler Combat Tank
