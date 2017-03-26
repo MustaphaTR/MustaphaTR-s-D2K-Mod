@@ -25,6 +25,8 @@ trike.mg:
 		Weapon: HMG_trike_muzzle
 		LocalOffset: -544,0,0
 		MuzzleSequence: muzzle
+	AttractsWorms:
+		Intensity: 420
 	RenderSprites:
 		Scale: 0.9
 
@@ -91,7 +93,7 @@ quad.mg:
 		LocalOffset: 128,64,64, 128,-64,64
 		MuzzleSequence: muzzle
 	AttractsWorms:
-		Intensity: 470
+		Intensity: 420
 	RenderSprites:
 		Scale: 0.9
 
@@ -121,6 +123,8 @@ trike.rocket:
 	Armament@AA:
 		Weapon: RocketAA_trike
 		LocalOffset: 180,0,110
+	AttractsWorms:
+		Intensity: 470
 
 raider.rocket:
 	Inherits: ^Raider
@@ -152,7 +156,7 @@ raider.rocket:
 		Weapon: RocketAA_raider
 		LocalOffset: 170,0,0
 	AttractsWorms:
-		Intensity: 420
+		Intensity: 470
 
 quad.rocket:
 	Inherits: ^Quad
