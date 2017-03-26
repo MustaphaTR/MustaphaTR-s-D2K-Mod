@@ -1203,3 +1203,10 @@ hi_tech_or_ix:
 	Tooltip:
 		Name: High Tech Factory or Ix Research Center
 		Description: High Tech Factory or Ix Research Center
+
+palace.sardaukar:
+	AlwaysVisible:
+	Tooltip:
+		Name: Imperial Palace
+		Description: Imperial Palace
+
