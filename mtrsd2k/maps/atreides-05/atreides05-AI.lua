@@ -14,7 +14,7 @@ AttackDelays =
 	hard = { DateTime.Seconds(1), DateTime.Seconds(3) }
 }
 
-HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "quad.mg", "quad.rocket", "quad.rocket" }
+HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "quad.mg", "trike.rocket", "trike.rocket" }
 HarkonnenTankType = { "combat_tank_h" }
 
 HarvesterKilled = true
