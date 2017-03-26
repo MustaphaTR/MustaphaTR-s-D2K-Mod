@@ -8,7 +8,7 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" }
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" }
 	},
 
 	normal =
@@ -17,9 +17,9 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "combat_tank_h", "light_inf", "trooper", "trooper", "quad" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" }
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" }
 	},
 
 	hard =
@@ -28,10 +28,10 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "combat_tank_h", "light_inf", "trooper", "trooper", "quad" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
-		{ "combat_tank_h", "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
+		{ "combat_tank_h", "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
 		{ "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h" }
 	}
 }
