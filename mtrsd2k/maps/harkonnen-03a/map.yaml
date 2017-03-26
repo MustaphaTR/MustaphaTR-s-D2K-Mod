@@ -53,7 +53,7 @@ Actors:
 	HConyard: construction_yard
 		Location: 31,11
 		Owner: Harkonnen
-	Actor3: quad.rocket
+	Actor3: trike.rocket
 		Location: 37,12
 		Owner: Harkonnen
 	Actor4: wormspawner
