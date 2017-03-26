@@ -194,10 +194,10 @@ grenadier:
 		Queue: Infantry
 		BuildPaletteOrder: 6
 		Prerequisites: ~barracks.atreides, upgrade.barracks, high_tech_factory, ~techlevel.5
-		BuildDuration: 81
+		BuildDuration: 85
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 80
+		Cost: 90
 	Tooltip:
 		Name: Grenadier
 		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
@@ -456,10 +456,10 @@ sardaukar:
 		Queue: Infantry
 		BuildPaletteOrder: 13
 		Prerequisites: ~barracks.corrino, palace.sardaukar, ~techlevel.7
-		BuildDuration: 81
+		BuildDuration: 80
 		BuildDurationModifier: 40
 	Valued:
-		Cost: 125
+		Cost: 120
 	Tooltip:
 		Name: Sardaukar
 		Description: Elite assault infantry\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
@@ -468,7 +468,7 @@ sardaukar:
 	Passenger:
 		GrantUpgrades: ifv-sardaukar
 	Health:
-		HP: 1000
+		HP: 1200
 	Mobile:
 		Speed: 31
 	RevealsShroud:
