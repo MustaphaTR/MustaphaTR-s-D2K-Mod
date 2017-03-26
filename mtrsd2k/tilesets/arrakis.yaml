@@ -16,6 +16,10 @@ Terrain:
 		Type: Cliff
 		TargetTypes: Ground
 		Color: 4A2910
+	TerrainType@Cliff-Sietch:
+		Type: Cliff-Sietch
+		TargetTypes: Ground
+		Color: 4A2910
 	TerrainType@Concrete:
 		Type: Concrete
 		TargetTypes: Ground
@@ -209,10 +213,10 @@ Templates:
 		Size: 2,2
 		Category: Sand-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@13:
 		Id: 13
 		Images: BLOXBASE.R8
@@ -220,10 +224,10 @@ Templates:
 		Size: 2,2
 		Category: Sand-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@14:
 		Id: 14
 		Images: BLOXBASE.R8
@@ -286,10 +290,10 @@ Templates:
 		Size: 2,2
 		Category: Sand-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@20:
 		Id: 20
 		Images: BLOXBASE.R8
@@ -1050,8 +1054,8 @@ Templates:
 		Size: 1,2
 		Category: Sand-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
 	Template@107:
 		Id: 107
 		Images: BLOXBASE.R8
@@ -1472,10 +1476,10 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@197:
 		Id: 197
 		Images: BLOXBASE.R8
@@ -2015,10 +2019,10 @@ Templates:
 		Size: 2,2
 		Category: Cliff-Type-Changer
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@254:
 		Id: 254
 		Images: BLOXBASE.R8
@@ -2026,10 +2030,10 @@ Templates:
 		Size: 2,2
 		Category: Cliff-Type-Changer
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@255:
 		Id: 255
 		Images: BLOXBASE.R8
@@ -2037,10 +2041,10 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@256:
 		Id: 256
 		Images: BLOXBASE.R8
@@ -2048,10 +2052,10 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@258:
 		Id: 258
 		Images: BLOXBASE.R8
@@ -2059,8 +2063,8 @@ Templates:
 		Size: 1,2
 		Category: Rock-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
 	Template@259:
 		Id: 259
 		Images: BLOXBASE.R8
@@ -4171,10 +4175,10 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@476:
 		Id: 476
 		Images: BLOXWAST.R8
@@ -4537,8 +4541,8 @@ Templates:
 		Size: 1,2
 		Category: Rock-Cliff-Rock
 		Tiles:
-			0: Cliff
-			1: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
 	Template@610:
 		Id: 610
 		Images: t610.tmp
@@ -4618,30 +4622,30 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff-Rock
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@618:
 		Id: 618
 		Images: t618.tmp
 		Size: 2,2
 		Category: Rock-Cliff-Rock
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@619:
 		Id: 619
 		Images: t619.tmp
 		Size: 2,2
 		Category: Rock-Cliff-Rock
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@620:
 		Id: 620
 		Images: t620.tmp
@@ -4870,10 +4874,10 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@801:
 		Id: 801
 		Images: t801.tmp
@@ -4980,20 +4984,20 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@812:
 		Id: 812
 		Images: t812.tmp
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@813:
 		Id: 813
 		Images: t813.tmp
@@ -5074,8 +5078,8 @@ Templates:
 		Size: 1,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
 	Template@822:
 		Id: 822
 		Images: t822.tmp
@@ -5209,20 +5213,20 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@835:
 		Id: 835
 		Images: t835.tmp
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@836:
 		Id: 836
 		Images: t836.tmp
@@ -5327,20 +5331,20 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@846:
 		Id: 846
 		Images: t846.tmp
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@847:
 		Id: 847
 		Images: t847.tmp
@@ -5377,20 +5381,20 @@ Templates:
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@851:
 		Id: 851
 		Images: t851.tmp
 		Size: 2,2
 		Category: Rock-Cliff-Sand
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
+			0: Cliff-Sietch
+			1: Cliff-Sietch
+			2: Cliff-Sietch
+			3: Cliff-Sietch
 	Template@852:
 		Id: 852
 		Images: t852.tmp
