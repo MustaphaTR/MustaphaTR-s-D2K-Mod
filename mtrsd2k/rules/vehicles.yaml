@@ -36,7 +36,7 @@ raider.mg:
 		Queue: Vehicle
 		BuildPaletteOrder: 2
 		Prerequisites: ~light.mgraider, ~techlevel.1
-		BuildDuration: 250
+		BuildDuration: 194
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 325
@@ -71,7 +71,7 @@ quad.mg:
 		Queue: Vehicle
 		Prerequisites: ~light.mgquad, ~techlevel.1
 		BuildPaletteOrder: 3
-		BuildDuration: 250
+		BuildDuration: 194
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 325
@@ -103,7 +103,7 @@ trike.rocket:
 		Queue: Vehicle
 		BuildPaletteOrder: 4
 		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
-		BuildDuration: 266
+		BuildDuration: 277
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 425
