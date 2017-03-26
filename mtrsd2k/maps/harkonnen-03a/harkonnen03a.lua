@@ -78,7 +78,7 @@ AtreidesInitialPaths =
 	{ AtreidesEntry8.Location, AtreidesRally8.Location }
 }
 
-HarkonnenReinforcements = { "quad.mg", "quad.mg", "quad.rocket" }
+HarkonnenReinforcements = { "quad.mg", "quad.mg", "trike.rocket" }
 HarkonnenPath = { HarkonnenEntry.Location, HarkonnenRally.Location }
 
 HarkonnenBaseBuildings = { "barracks", "light_factory" }
