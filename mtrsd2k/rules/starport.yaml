@@ -135,18 +135,7 @@ trike.mg.starport:
 		BuildPaletteOrder: 13
 		Queue: Starport
 	Valued:
-		Cost: 350
-	RenderSprites:
-		Image: trike
-
-trike.rocket.starport:
-	Inherits: trike.rocket
-	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
-		BuildPaletteOrder: 14
-		Queue: Starport
-	Valued:
-		Cost: 400
+		Cost: 375
 	RenderSprites:
 		Image: trike
 
@@ -157,16 +146,7 @@ raider.mg.starport:
 		BuildPaletteOrder: 15
 		Queue: Starport
 	Valued:
-		Cost: 450
-
-raider.rocket.starport:
-	Inherits: raider.rocket
-	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
-		BuildPaletteOrder: 16
-		Queue: Starport
-	Valued:
-		Cost: 500
+		Cost: 375
 
 quad.mg.starport:
 	Inherits: quad.mg
@@ -175,7 +155,27 @@ quad.mg.starport:
 		BuildPaletteOrder: 17
 		Queue: Starport
 	Valued:
-		Cost: 450
+		Cost: 375
+
+trike.rocket.starport:
+	Inherits: trike.rocket
+	Buildable:
+		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
+		BuildPaletteOrder: 14
+		Queue: Starport
+	Valued:
+		Cost: 475
+	RenderSprites:
+		Image: trike
+
+raider.rocket.starport:
+	Inherits: raider.rocket
+	Buildable:
+		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
+		BuildPaletteOrder: 16
+		Queue: Starport
+	Valued:
+		Cost: 475
 
 quad.rocket.starport:
 	Inherits: quad.rocket
@@ -184,7 +184,7 @@ quad.rocket.starport:
 		BuildPaletteOrder: 18
 		Queue: Starport
 	Valued:
-		Cost: 500
+		Cost: 475
 
 stealth_raider.starport:
 	Inherits: stealth_raider
