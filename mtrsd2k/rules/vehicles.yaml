@@ -34,7 +34,7 @@ raider.mg:
 		Queue: Vehicle
 		BuildPaletteOrder: 2
 		Prerequisites: ~light.mgraider, ~techlevel.1
-		BuildDuration: 194
+		BuildDuration: 250
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 350
@@ -69,7 +69,7 @@ quad.mg:
 		Queue: Vehicle
 		Prerequisites: ~light.mgquad, ~techlevel.1
 		BuildPaletteOrder: 3
-		BuildDuration: 277
+		BuildDuration: 250
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 350
@@ -101,7 +101,7 @@ trike.rocket:
 		Queue: Vehicle
 		BuildPaletteOrder: 4
 		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
-		BuildDuration: 194
+		BuildDuration: 266
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 400
@@ -128,7 +128,7 @@ raider.rocket:
 		Queue: Vehicle
 		BuildPaletteOrder: 5
 		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.2
-		BuildDuration: 194
+		BuildDuration: 277
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 450
@@ -188,7 +188,7 @@ stealth_raider:
 	Buildable:
 		Prerequisites: ~light.ordos, upgrade.light, high_tech_factory, ~techlevel.5
 		BuildPaletteOrder: 7
-		BuildDuration: 194
+		BuildDuration: 280
 		BuildDurationModifier: 40
 	Valued:
 		Cost: 500
