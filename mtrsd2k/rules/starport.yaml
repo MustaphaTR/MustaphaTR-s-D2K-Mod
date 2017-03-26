@@ -60,7 +60,7 @@ grenadier.starport:
 		BuildPaletteOrder: 6
 		Queue: Starport
 	Valued:
-		Cost: 95
+		Cost: 105
 	RenderSprites:
 		Image: grenadier
 
@@ -102,7 +102,7 @@ sardaukar.starport:
 		BuildPaletteOrder: 10
 		Queue: Starport
 	Valued:
-		Cost: 175
+		Cost: 170
 	RenderSprites:
 		Image: sardaukar
 
