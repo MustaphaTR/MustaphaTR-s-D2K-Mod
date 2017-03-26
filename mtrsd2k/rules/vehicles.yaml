@@ -1,20 +1,5 @@
-^trike:
-	Inherits: ^Vehicle
-	Armor:
-		Type: light
-	RevealsShroud:
-		Range: 4c768
-	WithMuzzleOverlay:
-	AttackFrontal:
-	AutoTarget:
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
-	RenderSprites:
-		Image: trike
-
 trike.mg:
-	Inherits: ^trike
+	Inherits: ^Trike
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 1
@@ -43,53 +28,11 @@ trike.mg:
 	RenderSprites:
 		Scale: 0.9
 
-trike.rocket:
-	Inherits: ^trike
+raider.mg:
+	Inherits: ^Raider
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 2
-		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
-		BuildDuration: 194
-		BuildDurationModifier: 40
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Rocket Trike
-		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
-	Selectable:
-		Class: trike.rocket
-	Health:
-		HP: 1000
-	Mobile:
-		TurnSpeed: 10
-		Speed: 128
-	Armament@Ground:
-		Weapon: Rocket_trike
-		LocalOffset: 180,0,110
-	Armament@AA:
-		Weapon: RocketAA_trike
-		LocalOffset: 180,0,110
-
-^raider:
-	Inherits: ^Vehicle
-	Armor:
-		Type: light
-	RevealsShroud:
-		Range: 4c768
-	WithMuzzleOverlay:
-	AttackFrontal:
-	AutoTarget:
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
-	RenderSprites:
-		Image: raider
-
-raider.mg:
-	Inherits: ^raider
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 3
 		Prerequisites: ~light.mgraider, ~techlevel.1
 		BuildDuration: 194
 		BuildDurationModifier: 40
@@ -120,11 +63,70 @@ raider.mg:
 	RenderSprites:
 		Scale: 0.9
 
-raider.rocket:
-	Inherits: ^raider
+quad.mg:
+	Inherits: ^Quad
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~light.mgquad, ~techlevel.1
+		BuildPaletteOrder: 3
+		BuildDuration: 277
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Machine Gun Quad
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
+	Selectable:
+		Class: quad.mg
+	Health:
+		HP: 1100
+	Mobile:
+		TurnSpeed: 8
+		Speed: 96
+	Armament@damage:
+		Weapon: HMG_quad
+		LocalOffset: 128,64,64, 128,-64,64
+	Armament@muzzle:
+		Weapon: HMG_quad_muzzle
+		LocalOffset: 128,64,64, 128,-64,64
+		MuzzleSequence: muzzle
+	AttractsWorms:
+		Intensity: 470
+	RenderSprites:
+		Scale: 0.9
+
+trike.rocket:
+	Inherits: ^Trike
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 4
+		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
+		BuildDuration: 194
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Rocket Trike
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Selectable:
+		Class: trike.rocket
+	Health:
+		HP: 1000
+	Mobile:
+		TurnSpeed: 10
+		Speed: 128
+	Armament@Ground:
+		Weapon: Rocket_trike
+		LocalOffset: 180,0,110
+	Armament@AA:
+		Weapon: RocketAA_trike
+		LocalOffset: 180,0,110
+
+raider.rocket:
+	Inherits: ^Raider
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 5
 		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.2
 		BuildDuration: 194
 		BuildDurationModifier: 40
@@ -152,55 +154,8 @@ raider.rocket:
 	AttractsWorms:
 		Intensity: 420
 
-^quad:
-	Inherits: ^Vehicle
-	Armor:
-		Type: light
-	RevealsShroud:
-		Range: 4c768
-	WithMuzzleOverlay:
-	AttackFrontal:
-	AutoTarget:
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall 
-	RenderSprites:
-		Image: quad
-
-quad.mg:
-	Inherits: ^quad
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: ~light.mgquad, ~techlevel.1
-		BuildPaletteOrder: 5
-		BuildDuration: 277
-		BuildDurationModifier: 40
-	Valued:
-		Cost: 350
-	Tooltip:
-		Name: Machine Gun Quad
-		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
-	Selectable:
-		Class: quad.mg
-	Health:
-		HP: 1100
-	Mobile:
-		TurnSpeed: 8
-		Speed: 96
-	Armament@damage:
-		Weapon: HMG_quad
-		LocalOffset: 128,64,64, 128,-64,64
-	Armament@muzzle:
-		Weapon: HMG_quad_muzzle
-		LocalOffset: 128,64,64, 128,-64,64
-		MuzzleSequence: muzzle
-	AttractsWorms:
-		Intensity: 470
-	RenderSprites:
-		Scale: 0.9
-
 quad.rocket:
-	Inherits: ^quad
+	Inherits: ^Quad
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: ~light.rocketquad, upgrade.light, ~techlevel.2
@@ -381,50 +336,8 @@ harvester.smuggler:
 	AttractsWorms:
 		Intensity: 600
 
-^combat_tank:
-	Inherits: ^Tank
-	Buildable:
-		Queue: Armor
-		BuildPaletteOrder: 3
-		BuildDuration: 373
-		BuildDurationModifier: 40
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Atreides: +Range\n  Freman: -Cost\n  Harkonnen: +Armor\n  Corrino: +Damage\n  Ordos: +Speed\n  Mercenaries: -Rate of Fire\n  Smugglers: -Build Time
-	Health:
-		HP: 2100
-	Armor:
-		Type: heavy
-	Mobile:
-		Speed: 75
-		TurnSpeed: 5
-	RevealsShroud:
-		Range: 5c768
-	Turreted:
-		TurnSpeed: 5
-		RealignDelay: 0
-	Armament:
-		Weapon: 80mm
-		Recoil: 128
-		RecoilRecovery: 32
-		LocalOffset: 256,0,0
-		MuzzleSequence: muzzle
-	AttackTurreted:
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-	AutoTarget:
-	Explodes:
-		Weapon: UnitExplodeMed
-		EmptyWeapon: UnitExplodeMed
-	Selectable:
-		Class: combat
-	AttractsWorms:
-		Intensity: 520
-
 combat_tank_a:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.atreides, ~techlevel.3
 	Tooltip:
@@ -436,7 +349,7 @@ combat_tank_a:
 		Actor: combat_tank_a.husk
 
 combat_tank_h:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.harkonnen, ~techlevel.3
 	Tooltip:
@@ -448,7 +361,7 @@ combat_tank_h:
 		Actor: combat_tank_h.husk
 
 combat_tank_o:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.ordos, ~techlevel.3
 	Tooltip:
@@ -462,7 +375,7 @@ combat_tank_o:
 		Actor: combat_tank_o.husk
 
 combat_tank_m:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.mercenary, ~techlevel.3
 	Tooltip:
@@ -474,7 +387,7 @@ combat_tank_m:
 		Actor: combat_tank_m.husk
 
 combat_tank_s:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		BuildDuration: 325
 		Prerequisites: ~heavy.smuggler, ~techlevel.3
@@ -485,7 +398,7 @@ combat_tank_s:
 		Actor: combat_tank_s.husk
 
 combat_tank_f:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.freman, ~techlevel.3
 	Tooltip:
@@ -497,7 +410,7 @@ combat_tank_f:
 		Actor: combat_tank_f.husk
 
 combat_tank_c:
-	Inherits: ^combat_tank
+	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.corrino, ~techlevel.3
 	Tooltip:
