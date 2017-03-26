@@ -20,7 +20,7 @@ AttackDelays =
 
 EnemyInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
 
-HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "quad.rocket" }
+HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "trike.rocket" }
 HarkonnenTankType = { "combat_tank_h" }
 
 SmugglerVehicleTypes = { "trike.mg", "trike.mg", "raider.rocket" }
