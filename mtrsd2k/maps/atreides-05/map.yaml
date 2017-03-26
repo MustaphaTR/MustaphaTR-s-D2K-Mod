@@ -185,7 +185,7 @@ Actors:
 	Actor69: spicebloom
 		Location: 46,42
 		Owner: Neutral
-	Actor70: quad.rocket
+	Actor70: trike.rocket
 		Location: 58,43
 		Owner: Harkonnen
 	Actor71: spicebloom
