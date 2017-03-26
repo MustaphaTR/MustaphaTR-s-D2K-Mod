@@ -16,7 +16,7 @@ trike.mg:
 	Health:
 		HP: 1000
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 9
 		Speed: 128
 	Armament@damage:
 		Weapon: HMG_trike
@@ -113,7 +113,7 @@ trike.rocket:
 	Health:
 		HP: 1000
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 9
 		Speed: 128
 	Armament@Ground:
 		Weapon: Rocket_trike
