@@ -469,7 +469,7 @@ light_factory:
 		Prerequisite: light.mgquad
 		Factions: harkonnen, ordos
 	ProvidesPrerequisite@rocketquad:
-		Prerequisite: light.mgquad
+		Prerequisite: light.rocketquad
 		Factions: atreides, corrino, mercenary
 	ProvidesPrerequisite@buildingname:
 	WithProductionOverlay@WELDING:
