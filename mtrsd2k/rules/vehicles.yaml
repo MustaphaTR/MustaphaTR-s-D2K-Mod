@@ -329,6 +329,8 @@ harvester.smuggler:
 		HP: 5000
 	Mobile:
 		Speed: 50
+		TerrainSpeeds:
+			Rough: 50
 	RevealsShroud:
 		Range: 4c0
 	SpawnActorOnDeath:
