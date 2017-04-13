@@ -64,6 +64,8 @@ carryall.smuggler:
 	AutoCarryall:
 		LoadingDelay: 8
 		UnloadingDelay: 12
+	Aircraft:
+		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete, Rough
 	Buildable:
 		BuildPaletteOrder: 2
 		Prerequisites: ~hightech.smuggler, ~techlevel.4
