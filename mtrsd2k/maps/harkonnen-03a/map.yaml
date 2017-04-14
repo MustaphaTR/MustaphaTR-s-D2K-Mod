@@ -1,6 +1,6 @@
 MapFormat: 11
 
-RequiresMod: d2k
+RequiresMod: mtrsd2k
 
 Title: Harkonnen 03a
 
@@ -79,12 +79,6 @@ Actors:
 		Owner: Atreides
 	Actor11: wall
 		Location: 34,52
-		Owner: Atreides
-	Actor12: wall
-		Location: 35,52
-		Owner: Atreides
-	Actor13: wall
-		Location: 40,52
 		Owner: Atreides
 	Actor14: wall
 		Location: 41,52
@@ -176,5 +170,13 @@ Actors:
 	HarkonnenEntry: waypoint
 		Owner: Neutral
 		Location: 29,2
+	Actor42: machine_gun_tower
+		Owner: Atreides
+		Location: 40,52
+		TurretFacing: 92
+	Actor43: machine_gun_tower
+		Owner: Atreides
+		Location: 35,52
+		TurretFacing: 92
 
 Rules: d2k|rules/campaign-rules.yaml, rules.yaml

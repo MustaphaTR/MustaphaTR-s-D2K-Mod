@@ -1,0 +1,24 @@
+Player:
+	PlayerResources:
+		DefaultCash: 5000
+
+World:
+	LuaScript:
+		Scripts: harkonnen03b.lua, harkonnen03b-AI.lua
+	MissionData:
+		Briefing: Attack and destroy the Atreides base at Sietch Tabr. Strike hard and eliminate all resistance.\n\nHeavier Quad vehicles will be made available for your attack. Upgrade your Light Factory to gain access to these vehicles.\n
+		BriefingVideo: H_BR03_E.VQA
+	MapOptions:
+		TechLevel: 2
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			easy: Easy
+			normal: Normal
+			hard: Hard
+		Default: easy
+
+carryall.reinforce:
+	Cargo:
+		MaxWeight: 10
