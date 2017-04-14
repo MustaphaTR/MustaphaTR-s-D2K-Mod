@@ -72,10 +72,20 @@ Player:
 			harvester.smuggler: 1%
 			light_inf.starport: 3%
 			trooper.starport: 2%
-			sardaukar.starport: 3%
-			raider.starport: 5%
-			trike.starport: 5%
-			quad.starport: 7.5%
+			dog.starport: 0.05%
+			sardaukar.starport: 1%
+			plasma_infantry.starport: 1%
+			nsfremen.starport: 1%
+			flamethrower.starport: 1%
+			grenadier.starport: 1%
+			trike.mg.starport: 5%
+			raider.mg.starport: 5%
+			quad.mg.starport: 5%
+			trike.rocket.starport: 7.5%
+			raider.rocket.starport: 7.5%
+			quad.rocket.starport: 7.5%
+			light_tank.starport: 4%
+			stealth_raider.starport: 4%
 			siege_tank.starport: 5%
 			missile_tank.starport: 7.5%
 			combat_tank_a.starport: 15%
@@ -85,18 +95,26 @@ Player:
 			combat_tank_m.starport: 15%
 			combat_tank_s.starport: 15%
 			combat_tank_c.starport: 15%
+			sonic_tank.starport: 2%
+			devastator.starport: 2%
+			deviator.starport: 1.5%
+			ifv.starport: 1.5%
+			stealth_tank.starport: 2%
 			sonic_tank: 10%
 			devastator: 10%
 			deviator: 7.5%
 			ifv: 7.5%
 			stealth_tank: 10%
-			trike: 10%
-			raider: 10%
-			light_tank: 12%
-			quad: 15%
+			trike.mg: 10%
+			raider.mg: 10%
+			quad.mg: 10%
+			trike.rocket: 15%
+			raider.rocket: 15%
+			quad.rocket: 15%
+			light_tank: 8%
+			stealth_raider: 8%
 			siege_tank: 10%
 			missile_tank: 15%
-			stealth_raider: 5%
 			combat_tank_a: 100%
 			combat_tank_h: 100%
 			combat_tank_o: 100%
@@ -247,10 +265,20 @@ Player:
 			harvester.smuggler: 1%
 			light_inf.starport: 3%
 			trooper.starport: 2%
-			sardaukar.starport: 3%
-			raider.starport: 7.5%
-			trike.starport: 7.5%
-			quad.starport: 12.5%
+			dog.starport: 0.05%
+			sardaukar.starport: 1%
+			plasma_infantry.starport: 1%
+			nsfremen.starport: 1%
+			flamethrower.starport: 1%
+			grenadier.starport: 1%
+			trike.mg.starport: 7.5%
+			raider.mg.starport: 7.5%
+			quad.mg.starport: 7.5%
+			trike.rocket.starport: 12.5%
+			raider.rocket.starport: 12.5%
+			quad.rocket.starport: 12.5%
+			light_tank.starport: 5%
+			stealth_raider.starport: 5%
 			siege_tank.starport: 5%
 			missile_tank.starport: 7.5%
 			combat_tank_a.starport: 15%
@@ -260,18 +288,26 @@ Player:
 			combat_tank_m.starport: 15%
 			combat_tank_s.starport: 15%
 			combat_tank_c.starport: 15%
+			sonic_tank.starport: 10%
+			devastator.starport: 8%
+			deviator.starport: 1%
+			ifv.starport: 3%
+			stealth_tank.starport: 9%
 			sonic_tank: 50%
 			devastator: 40%
 			deviator: 5%
 			ifv: 15%
 			stealth_tank: 45%
-			trike: 15%
-			raider: 15%
+			trike.mg: 15%
+			raider.mg: 15%
+			quad.mg: 15%
+			trike.rocket: 25%
+			raider.rocket: 25%
+			quad.rocket: 25%
 			light_tank: 10%
-			quad: 25%
+			stealth_raider: 10%
 			siege_tank: 10%
 			missile_tank: 15%
-			stealth_raider: 5%
 			combat_tank_a: 100%
 			combat_tank_h: 100%
 			combat_tank_o: 100%
@@ -421,10 +457,20 @@ Player:
 			harvester.smuggler: 1%
 			light_inf.starport: 3%
 			trooper.starport: 2%
-			sardaukar.starport: 3%
-			raider.starport: 5%
-			trike.starport: 5%
-			quad.starport: 7.5%
+			dog.starport: 0.05%
+			sardaukar.starport: 1%
+			plasma_infantry.starport: 1%
+			nsfremen.starport: 1%
+			flamethrower.starport: 1%
+			grenadier.starport: 1%
+			trike.mg.starport: 5%
+			raider.mg.starport: 5%
+			quad.mg.starport: 5%
+			trike.rocket.starport: 7.5%
+			raider.rocket.starport: 7.5%
+			quad.rocket.starport: 7.5%
+			light_tank.starport: 4.5%
+			stealth_raider.starport: 4.5%
 			siege_tank.starport: 5%
 			missile_tank.starport: 7.5%
 			combat_tank_a.starport: 15%
@@ -434,18 +480,26 @@ Player:
 			combat_tank_m.starport: 15%
 			combat_tank_s.starport: 15%
 			combat_tank_c.starport: 15%
+			sonic_tank.starport: 2%
+			devastator.starport: 2%
+			deviator.starport: 1.5%
+			ifv.starport: 1.5%
+			stealth_tank.starport: 2%
 			sonic_tank: 10%
 			devastator: 10%
 			deviator: 7.5%
 			ifv: 7.5%
 			stealth_tank: 10%
-			trike: 10%
-			raider: 10%
-			light_tank: 7%
-			quad: 15%
+			trike.mg: 10%
+			raider.mg: 10%
+			quad.mg: 10%
+			trike.rocket: 15%
+			raider.rocket: 15%
+			quad.rocket: 15%
+			light_tank: 9%
+			stealth_raider: 9%
 			siege_tank: 10%
 			missile_tank: 15%
-			stealth_raider: 7.5%
 			combat_tank_a: 100%
 			combat_tank_h: 100%
 			combat_tank_o: 100%
