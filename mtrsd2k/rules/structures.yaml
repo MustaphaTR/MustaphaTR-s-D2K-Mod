@@ -947,7 +947,7 @@ palace:
 		OrderName: ProduceActorPower.Fremen
 	ProduceActorPower@fedaykin:
 		Description: Recruit Fedaykin
-		LongDesc: Elite infantry unit armed with machine guns and rockets\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
+		LongDesc: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 		Icon: fedaykin
 		Prerequisites: ~techlevel.7, ~palace.fedaykin
 		Actors: fedaykin, fedaykin, fedaykin
