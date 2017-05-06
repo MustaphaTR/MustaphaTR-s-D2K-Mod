@@ -362,5 +362,24 @@ Actors:
 	HarkonnenRally4: waypoint
 		Owner: Neutral
 		Location: 49,4
+	Actor100: mine_ap
+		Owner: Smugglers
+		Location: 63,34
+	Actor101: mine_ap
+		Owner: Smugglers
+		Location: 52,31
+	Actor102: mine_at
+		Owner: Smugglers
+		Location: 57,28
+	Actor103: flame_tower
+		Owner: Harkonnen
+		Location: 29,19
+		TurretFacing: 92
+	Actor104: wall
+		Owner: Harkonnen
+		Location: 30,19
+	Actor105: wall
+		Owner: Harkonnen
+		Location: 30,19
 
 Rules: d2k|rules/campaign-rules.yaml, rules.yaml

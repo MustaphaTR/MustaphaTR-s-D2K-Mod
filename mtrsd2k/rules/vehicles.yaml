@@ -905,7 +905,7 @@ ifv:
 			trooper: ifv-trooper
 			grenadier: ifv-grenade
 			flamethrower: ifv-flamer
-			freman: ifv-freman
+			fremen: ifv-freman
 			nsfremen: ifv-freman
 			fedaykin: ifv-sonic
 			sardaukar: ifv-sardaukar

@@ -14,9 +14,9 @@ AttackDelays =
 	hard = { DateTime.Seconds(1), DateTime.Seconds(3) }
 }
 
-HarkonnenInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper" }
-HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "quad.mg", "trike.rocket", "trike.rocket" }
-HarkonnenTankType = { "combat_tank_h" }
+AtreidesInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper" }
+AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
+AtreidesTankType = { "combat_tank_a" }
 
 HarvesterKilled = true
 
@@ -49,10 +49,7 @@ SendAttack = function()
 	HoldProduction = true
 
 	local units = SetupAttackGroup()
-	Utils.Do(units, function(unit)
-		unit.AttackMove(HarkonnenAttackLocation)
-		IdleHunt(unit)
-	end)
+	Utils.Do(units, IdleHunt)
 
 	Trigger.OnAllRemovedFromWorld(units, function()
 		Attacking = false
@@ -95,33 +92,23 @@ DefendActor = function(unit)
 	end)
 end
 
-RepairBuilding = function(owner, actor)
-	Trigger.OnDamaged(actor, function(building)
-		if building.Owner == owner and building.Health < building.MaxHealth * 3/4 then
-			building.StartBuildingRepairs()
-		end
-	end)
+InitAIUnits = function()
+	IdlingUnits = Reinforcements.Reinforce(atreides, InitialAtreidesReinforcements[1], AtreidesPaths[2]), Reinforcements.Reinforce(atreides, InitialAtreidesReinforcements[2], AtreidesPaths[3])
 end
 
-InitAIUnits = function()
-	IdlingUnits = Reinforcements.ReinforceWithTransport(harkonnen, "carryall.reinforce", InitialHarkonnenReinforcements, HarkonnenPaths[1], { HarkonnenPaths[1][1] })[2]
-
-	Utils.Do(HarkonnenBase, function(actor)
+RepairBase = function(house)
+	Utils.Do(Base[house.Name], function(actor)
 		DefendActor(actor)
-		RepairBuilding(harkonnen, actor)
+		Trigger.OnDamaged(actor, function(building)
+			if building.Owner == house and building.Health < building.MaxHealth * 3/4 then
+				building.StartBuildingRepairs()
+			end
+		end)
 	end)
-
-	DefendActor(HarkonnenBarracks)
-	RepairBuilding(harkonnen, HarkonnenBarracks)
-
-	Utils.Do(SmugglerBase, function(actor)
-		RepairBuilding(smuggler, actor)
-	end)
-	RepairBuilding(smuggler, Starport)
 end
 
 ProduceInfantry = function()
-	if StopInfantryProduction or HarkonnenBarracks.IsDead or HarkonnenBarracks.Owner ~= harkonnen then
+	if ABarracks.IsDead then
 		return
 	end
 
@@ -131,8 +118,8 @@ ProduceInfantry = function()
 	end
 
 	local delay = Utils.RandomInteger(AttackDelays[Difficulty][1], AttackDelays[Difficulty][2] + 1)
-	local toBuild = { Utils.Random(HarkonnenInfantryTypes) }
-	harkonnen.Build(toBuild, function(unit)
+	local toBuild = { Utils.Random(AtreidesInfantryTypes) }
+	atreides.Build(toBuild, function(unit)
 		IdlingUnits[#IdlingUnits + 1] = unit[1]
 		Trigger.AfterDelay(delay, ProduceInfantry)
 
@@ -143,7 +130,7 @@ ProduceInfantry = function()
 end
 
 ProduceVehicles = function()
-	if HarkonnenLightFactory.IsDead or HarkonnenLightFactory.Owner ~= harkonnen  then
+	if ALightFactory.IsDead then
 		return
 	end
 
@@ -153,8 +140,8 @@ ProduceVehicles = function()
 	end
 
 	local delay = Utils.RandomInteger(AttackDelays[Difficulty][1], AttackDelays[Difficulty][2] + 1)
-	local toBuild = { Utils.Random(HarkonnenVehicleTypes) }
-	harkonnen.Build(toBuild, function(unit)
+	local toBuild = { Utils.Random(AtreidesVehicleTypes) }
+	atreides.Build(toBuild, function(unit)
 		IdlingUnits[#IdlingUnits + 1] = unit[1]
 		Trigger.AfterDelay(delay, ProduceVehicles)
 
@@ -165,7 +152,7 @@ ProduceVehicles = function()
 end
 
 ProduceTanks = function()
-	if HarkonnenHeavyFactory.IsDead or HarkonnenHeavyFactory.Owner ~= harkonnen then
+	if AHeavyFactory.IsDead then
 		return
 	end
 
@@ -175,7 +162,7 @@ ProduceTanks = function()
 	end
 
 	local delay = Utils.RandomInteger(AttackDelays[Difficulty][1], AttackDelays[Difficulty][2] + 1)
-	harkonnen.Build(HarkonnenTankType, function(unit)
+	atreides.Build(AtreidesTankType, function(unit)
 		IdlingUnits[#IdlingUnits + 1] = unit[1]
 		Trigger.AfterDelay(delay, ProduceTanks)
 
@@ -186,8 +173,11 @@ ProduceTanks = function()
 end
 
 ActivateAI = function()
-	harkonnen.Cash = 15000
 	InitAIUnits()
+	FremenProduction()
+	
+	RepairBase(atreides)
+	RepairBase(fremen)
 
 	ProduceInfantry()
 	ProduceVehicles()

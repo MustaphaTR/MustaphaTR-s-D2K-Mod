@@ -48,7 +48,7 @@ Players:
 	PlayerReference@Fremen:
 		Name: Fremen
 		LockFaction: True
-		Faction: fremen
+		Faction: freman
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides
