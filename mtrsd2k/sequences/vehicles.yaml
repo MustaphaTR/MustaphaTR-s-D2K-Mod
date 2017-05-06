@@ -64,7 +64,7 @@ light_tank:
 		Facings: -32
 		BlendMode: Additive
 	icon: light_tankicon.shp
-        
+
 harvester:
 	idle: DATA.R8
 		Start: 1699
@@ -89,7 +89,7 @@ harvester.husk:
 	idle: DATA.R8
 		Start: 1699
 		Facings: -32
-		ZOffset: -1023  
+		ZOffset: -1023
 
 combat_tank_a:
 	idle: DATA.R8

@@ -78,7 +78,7 @@
 	Range: 4c128
 	Warhead@1Dam: SpreadDamage
 		Damage: 340
-        
+
 25mm:
 	Inherits: 80mm
 	ReloadDelay: 25
@@ -125,7 +125,7 @@ DevBullet:
 	Warhead@3Eff: CreateEffect
 		Explosions: plasmaexplrg
 		ImpactSounds: EXPLMD1.WAV
-        
+
 PlasBullet:
 	ReloadDelay: 60
 	Range: 3c512
@@ -161,7 +161,7 @@ PlasBullet-ifv:
 		Speed: 192
 		Blockable: false
 		Shadow: yes
-		Angle: 62
+		LaunchAngle: 62
 		Inaccuracy: 768
 		ContrailLength: 20
 		Image: 155mm

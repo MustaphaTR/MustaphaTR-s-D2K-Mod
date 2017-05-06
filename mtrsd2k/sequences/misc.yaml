@@ -79,6 +79,7 @@ small_trail:
 		Start: 3988
 		Length: 4
 		Tick: 80
+		BlendMode: Additive
 		ZOffset: 1023
 
 small_trail2:
@@ -86,6 +87,7 @@ small_trail2:
 		Start: 3793
 		Length: 4
 		Tick: 80
+		BlendMode: Additive
 		ZOffset: 1023
 
 bazooka_trail:
@@ -177,8 +179,13 @@ poweroff:
 		ZOffset: 2047
 
 rank:
-	rank: rank.shp
-		Length: *
+	rank-veteran-1: rank.shp
+	rank-veteran-2: rank.shp
+		Start: 1
+	rank-veteran-3: rank.shp
+		Start: 2
+	rank-elite: rank.shp
+		Start: 3
 
 overlay:
 	Defaults: DATA.R8
@@ -452,6 +459,13 @@ spicebloom:
 		Length: 1
 		ZOffset: -1023
 		Offset: -16,-16
+	spurt: DATA.R8
+		Start: 4233
+		Length: 8
+		Tick: 80
+		BlendMode: Additive
+		ZOffset: 511
+		Offset: 0, -16
 
 moveflsh:
 	idle: DATA.R8

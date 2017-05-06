@@ -76,25 +76,24 @@ construction_yard:
 	WithBuildingPlacedOverlay:
 		Palette: d2k
 	PrimaryBuilding:
+		PrimaryCondition: primary
 	ProvidesPrerequisite@buildingname:
-	GlobalUpgradable:
+	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.conyard
-		Upgrades: stardecoration
+		Condition: stardecoration
 	WithDecoration@upgraded:
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-upgraded
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: stardecoration
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stardecoration
 	WithTextDecoration@primary:
 		RequiresSelection: true
 		Text: PRIMARY
 		ReferencePoint: Top
 		ZOffset: 256
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
 
 wind_trap:
 	Inherits: ^Building
@@ -104,13 +103,13 @@ wind_trap:
 		BuildPaletteOrder: 1
 		BuildDuration: 180
 		BuildDurationModifier: 40
+		Description: Provides power for other structures.
 	Selectable:
 		Bounds: 64,64
 	Valued:
 		Cost: 225
 	Tooltip:
 		Name: Wind Trap
-		Description: Provides power for other structures.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -149,13 +148,13 @@ barracks:
 		BuildPaletteOrder: 2
 		BuildDuration: 231
 		BuildDurationModifier: 40
+		Description: Trains infantry.
 	Selectable:
 		Bounds: 64,64
 	Valued:
 		Cost: 225
 	Tooltip:
 		Name: Barracks
-		Description: Trains infantry.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -177,6 +176,7 @@ barracks:
 	Production:
 		Produces: Infantry
 	PrimaryBuilding:
+		PrimaryCondition: primary
 	ProductionBar:
 	ProvidesPrerequisite@atreides:
 		Prerequisite: barracks.atreides
@@ -210,24 +210,22 @@ barracks:
 			smuggler: barracks.ordos
 			mercenary: barracks.ordos
 	ProvidesPrerequisite@buildingname:
-	GlobalUpgradable:
+	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.barracks
-		Upgrades: stardecoration
+		Condition: stardecoration
 	WithDecoration@upgraded:
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-upgraded
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: stardecoration
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stardecoration
 	WithTextDecoration@primary:
 		RequiresSelection: true
 		Text: PRIMARY
 		ReferencePoint: Top
 		ZOffset: 256
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
 
 refinery:
 	Inherits: ^Building
@@ -237,13 +235,13 @@ refinery:
 		BuildPaletteOrder: 3
 		BuildDuration: 540
 		BuildDurationModifier: 40
+		Description: Harvesters unload Spice here for processing.
 	Selectable:
 		Bounds: 96,64
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Spice Refinery
-		Description: Harvesters unload Spice here for processing.
 	Building:
 		Footprint: =xx xx=
 		Dimensions: 3,2
@@ -284,7 +282,7 @@ refinery:
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
 	ProvidesPrerequisite@buildingname:
-    
+
 refinery.smuggler:
 	Inherits: refinery
 	Buildable:
@@ -315,6 +313,7 @@ outpost:
 		BuildPaletteOrder: 5
 		BuildDuration: 270
 		BuildDurationModifier: 40
+		Description: Provides a radar map of the battlefield.\n  Requires power to operate
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Sabotage, DetonateAttack
 	Selectable:
@@ -323,7 +322,6 @@ outpost:
 		Cost: 750
 	Tooltip:
 		Name: Outpost
-		Description: Provides a radar map of the battlefield.\n  Requires power to operate
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -335,6 +333,7 @@ outpost:
 	RevealsShroud:
 		Range: 4c768
 	ProvidesRadar:
+		RequiresCondition: !disabled
 	RenderSprites:
 		Image: outpost.harkonnen
 		FactionImages:
@@ -346,12 +345,11 @@ outpost:
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnLowPower: true
-		UpgradeTypes: severe-damaged
-		UpgradeMaxEnabledLevel: 0
-	UpgradeOnDamageState@STOPDISH:
-		Upgrades: severe-damaged
+		RequiresCondition: !severe-damaged
+	GrantConditionOnDamageState@STOPDISH:
+		Condition: severe-damaged
 		ValidDamageState: Medium, Heavy, Critical
-	GrantUpgradePower@stealth:
+	GrantExternalConditionPower@stealth:
 		Icon: stealth
 		Range: 2
 		Prerequisites: ~techlevel.6, upgrade.outpost
@@ -359,9 +357,7 @@ outpost:
 		Description: Stealth Device
 		LongDesc: Makes a group of units stealth\nfor 30 seconds.
 		Duration: 750
-		Upgrades: stealth
-		-GrantUpgradeSound:
-		-GrantUpgradeSequence:
+		Condition: stealth
 	ProvidesPrerequisite@atreides:
 		Prerequisite: outpost.atreides
 		Factions: atreides
@@ -387,6 +383,8 @@ outpost:
 		Amount: -125
 	InfiltrateForExploration:
 	ProvidesPrerequisite@buildingname:
+	GrantConditionOnDisabled@IDISABLE:
+		Condition: disabled
 
 light_factory:
 	Inherits: ^Building
@@ -396,13 +394,13 @@ light_factory:
 		BuildPaletteOrder: 6
 		BuildDuration: 277
 		BuildDurationModifier: 40
+		Description: Produces light vehicles.
 	Selectable:
 		Bounds: 96,64
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Light Factory
-		Description: Produces light vehicles.
 	Building:
 		Footprint: xxx xx=
 		Dimensions: 3,2
@@ -429,6 +427,7 @@ light_factory:
 	Production:
 		Produces: Vehicle
 	PrimaryBuilding:
+		PrimaryCondition: primary
 	ProductionBar:
 	ProvidesPrerequisite@light_or_heavy:
 		Prerequisite: light_or_heavy
@@ -478,24 +477,22 @@ light_factory:
 		Sequence: idle-top
 	Power:
 		Amount: -125
-	GlobalUpgradable:
+	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.light
-		Upgrades: stardecoration
+		Condition: stardecoration
 	WithDecoration@upgraded:
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-upgraded
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: stardecoration
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stardecoration
 	WithTextDecoration@primary:
 		RequiresSelection: true
 		Text: PRIMARY
 		ReferencePoint: Top
 		ZOffset: 256
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
 
 heavy_factory:
 	Inherits: ^Building
@@ -505,13 +502,13 @@ heavy_factory:
 		BuildPaletteOrder: 7
 		BuildDuration: 648
 		BuildDurationModifier: 40
+		Description: Produces heavy vehicles.
 	Selectable:
 		Bounds: 96,68,0,12
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Heavy Factory
-		Description: Produces heavy vehicles.
 	Building:
 		Footprint: _x_ xxx =xx
 		Dimensions: 3,3
@@ -530,6 +527,7 @@ heavy_factory:
 	Production:
 		Produces: Armor
 	PrimaryBuilding:
+		PrimaryCondition: primary
 	ProductionBar:
 	ProvidesPrerequisite@light_or_heavy:
 		Prerequisite: light_or_heavy
@@ -571,24 +569,22 @@ heavy_factory:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 96,96
-	GlobalUpgradable:
+	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.heavy
-		Upgrades: stardecoration
+		Condition: stardecoration
 	WithDecoration@upgraded:
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-upgraded
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: stardecoration
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stardecoration
 	WithTextDecoration@primary:
 		RequiresSelection: true
 		Text: PRIMARY
 		ReferencePoint: Top
 		ZOffset: 256
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
 
 high_tech_factory:
 	Inherits: ^Building
@@ -598,13 +594,13 @@ high_tech_factory:
 		BuildPaletteOrder: 8
 		BuildDuration: 380
 		BuildDurationModifier: 40
+		Description: Unlocks advanced technology.
 	Selectable:
 		Bounds: 96,68,0,12
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: High Tech Factory
-		Description: Unlocks advanced technology.
 	ProductionFromMapEdge:
 		Produces: Aircraft
 	Exit:
@@ -636,6 +632,15 @@ high_tech_factory:
 	ProvidesPrerequisite@smuggler:
 		Prerequisite: hightech.smuggler
 		Factions: smuggler
+	ProvidesPrerequisite@ornithopter:
+		Prerequisite: hightech.ornithopter
+		Factions: atreides, freman
+	ProvidesPrerequisite@phoenix:
+		Prerequisite: hightech.phoenix
+		Factions: harkonnen, corrino
+	ProvidesPrerequisite@swarmer:
+		Prerequisite: hightech.swarmer
+		Factions: ordos, mercenary, smuggler
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: ornistrike
@@ -648,35 +653,37 @@ high_tech_factory:
 		UnitType: ornithopter
 		DisplayBeacon: True
 		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
 	WithProductionOverlay@WELDING:
 		Sequence: production-welding
 	Power:
 		Amount: -75
 	SelectionDecorations:
 		VisualBounds: 96,96
-	GlobalUpgradable:
+	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.hightech
-		Upgrades: stardecoration
+		Condition: stardecoration
 	WithDecoration@upgraded:
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-upgraded
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: stardecoration
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stardecoration
 
 starport:
 	Inherits: ^Building
 	Tooltip:
 		Name: Starport
-		Description: Dropzone for quick reinforcements, at a price.
 	Buildable:
 		Prerequisites: construction_yard, heavy_factory, outpost, ~techlevel.5
 		Queue: Building
 		BuildPaletteOrder: 9
 		BuildDuration: 540
 		BuildDurationModifier: 40
+		Description: Dropzone for quick reinforcements, at a price.
 	Valued:
 		Cost: 1500
 	Building:
@@ -713,6 +720,7 @@ starport:
 		Palette: starportlights
 	ProductionBar:
 	PrimaryBuilding:
+		PrimaryCondition: primary
 	ProvidesPrerequisite@atreides:
 		Prerequisite: starport.atreides
 		Factions: atreides
@@ -748,8 +756,7 @@ starport:
 		Text: PRIMARY
 		ReferencePoint: Top
 		ZOffset: 256
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
 
 repair_pad:
 	Inherits: ^Building
@@ -759,11 +766,11 @@ repair_pad:
 		BuildPaletteOrder: 10
 		BuildDuration: 324
 		BuildDurationModifier: 40
+		Description: Repairs vehicles.\n Allows construction of MCVs
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Repair Pad
-		Description: Repairs vehicles.\n Allows construction of MCVs
 	Building:
 		Footprint: =x= =x= ===
 		Dimensions: 3,3
@@ -807,13 +814,13 @@ research_centre:
 		BuildPaletteOrder: 11
 		BuildDuration: 300
 		BuildDurationModifier: 40
+		Description: Unlocks advanced tanks.
 	Selectable:
 		Bounds: 96,64,0,16
 	Valued:
 		Cost: 1150
 	Tooltip:
 		Name: IX Research Center
-		Description: Unlocks advanced tanks.
 	Building:
 		Footprint: _x_ xxx xxx
 		Dimensions: 3,3
@@ -841,7 +848,7 @@ research_centre:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: research_centre.corrino
 		Factions: corrino
-	GrantUpgradePower@RocketStrike:
+	GrantExternalConditionPower@RocketStrike:
 		Icon: large_gun_turret
 		Range: 1
 		Prerequisites: ~techlevel.6, research_centre.corrino
@@ -849,10 +856,11 @@ research_centre:
 		Description: Rocket Strike
 		LongDesc: Makes a group of rocket turrets\nable to attack anywhere for 10 seconds.
 		Duration: 250
-		Upgrades: corrino.rocket.strike
+		Condition: corrino.rocket.strike
 		-GrantUpgradeSound:
 		-GrantUpgradeSequence:
 		OrderName: RocketStrikePowerInfoOrder
+		OnFireSound: ironcur9.aud
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 96,80
@@ -865,13 +873,13 @@ palace:
 		BuildPaletteOrder: 12
 		BuildDuration: 810
 		BuildDurationModifier: 40
+		Description: Unlocks elite infantry for all sides\nand Death Hand Missile for Harkonnen.
 	Selectable:
 		Bounds: 96,96
 	Valued:
 		Cost: 1600
 	Tooltip:
 		Name: Palace
-		Description: Unlocks elite infantry for all sides\nand Death Hand Missile for Harkonnen.
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
@@ -932,8 +940,11 @@ palace:
 		SpawnOffset: -512,1c171,0
 		DisplayBeacon: True
 		DisplayRadarPing: True
-		CameraActor: camera
 		ActivationSequence:
+		CameraRange: 10
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
 	ProduceActorPower@fremen:
 		Description: Recruit Fremen
 		LongDesc: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
@@ -1056,6 +1067,7 @@ sietch:
 	Production:
 		Produces: Infantry
 	PrimaryBuilding:
+		PrimaryCondition: primary
 	ProductionBar:
 	Power:
 		Amount: 0
@@ -1091,15 +1103,13 @@ sietch:
 		Sequence: tag-upgraded
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: stardecoration
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stardecoration
 	WithTextDecoration@primary:
 		RequiresSelection: true
 		Text: PRIMARY
 		ReferencePoint: Top
 		ZOffset: 256
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
 
 conyard.atreides:
 	Inherits: construction_yard
@@ -1196,17 +1206,19 @@ light_or_heavy:
 	AlwaysVisible:
 	Tooltip:
 		Name: Light or Heavy Factory
+	Buildable:
 		Description: Light or Heavy Factory
 
 hi_tech_or_ix:
 	AlwaysVisible:
 	Tooltip:
 		Name: High Tech Factory or Ix Research Center
+	Buildable:
 		Description: High Tech Factory or Ix Research Center
 
 palace.sardaukar:
 	AlwaysVisible:
 	Tooltip:
 		Name: Imperial Palace
+	Buildable:
 		Description: Imperial Palace
-

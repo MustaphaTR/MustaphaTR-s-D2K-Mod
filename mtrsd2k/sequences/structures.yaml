@@ -1056,10 +1056,6 @@ palace.harkonnen:
 	damaged-idle: DATA.R8
 		Start: 3085
 		Offset: -48,48
-#	active: DATA.R8 # TODO: overlay
-#		Start:  5084
-#		Length: 20
-#		Offset: -48,64
 	damaged-active: DATA.R8
 		Start: 5084
 		Length: 20
@@ -1679,7 +1675,7 @@ heavy.mercenary:
 		Start: 4353
 		Offset: -30,-24
 
-plates: # TODO: unused
+plates:
 	idle: DATA.R8
 		Start: 3256
 		Length: 6

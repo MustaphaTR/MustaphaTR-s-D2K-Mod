@@ -48,7 +48,7 @@ BazookaAA:
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
- 	-Warhead@2Smu:
+	-Warhead@2Smu:
 
 BazookaAA-ifv:
 	Inherits: BazookaAA
@@ -99,7 +99,7 @@ RocketAA:
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
- 	-Warhead@2Smu:
+	-Warhead@2Smu:
 
 Rocket_trike:
 	Inherits: Rocket
@@ -150,7 +150,7 @@ Rocket.stealthAA:
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
- 	-Warhead@2Smu:
+	-Warhead@2Smu:
 
 TowerMissile:
 	ReloadDelay: 60
@@ -201,7 +201,7 @@ TowerMissileAA:
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
- 	-Warhead@2Smu:
+	-Warhead@2Smu:
 
 TowerMissileUnlimited:
 	Inherits: TowerMissile
@@ -262,7 +262,19 @@ mtank_priAA:
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
- 	-Warhead@2Smu:
+	-Warhead@2Smu:
+
+OrniRocket:
+	Inherits: mtank_pri
+	BurstDelay: 5
+	Range: 4c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 300
+	Projectile: Missile
+		Speed: 256
+		RangeLimit: 5c204
+		HorizontalRateOfTurn: 6
+		VerticalRateOfTurn: 20
 
 DeviatorMissile:
 	ReloadDelay: 160

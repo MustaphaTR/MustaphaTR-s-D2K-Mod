@@ -5,7 +5,7 @@
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	ScriptTriggers:
-	UpgradeManager:
+	ConditionManager:
 	RenderDebugState:
 
 ^SpriteActor:
@@ -21,51 +21,116 @@
 		CloakSound: STEALTH1.WAV
 		UncloakSound: STEALTH2.WAV
 		IsPlayerPalette: true
-		UpgradeTypes: stealth
-		UpgradeMinEnabledLevel: 1
-	TimedUpgradeBar:
-		Upgrade: stealth
+		RequiresCondition: stealth
+	TimedConditionBar:
+		Condition: stealth
 		Color: DDDDDD
 
 ^GainsExperience:
 	GainsExperience:
-		Upgrades:
-			200: firepower, damage, speed, reload, inaccuracy, rank
-			400: firepower, damage, speed, reload, inaccuracy, rank
-			800: firepower, damage, speed, reload, inaccuracy, rank
-			1600: firepower, damage, speed, reload, inaccuracy, rank, eliteweapon, selfheal
-	FirepowerMultiplier@EXPERIENCE:
-		UpgradeTypes: firepower
-		Modifier: 105, 110, 115, 125
-	DamageMultiplier@EXPERIENCE:
-		UpgradeTypes: damage
-		Modifier: 96, 92, 88, 80
-	SpeedMultiplier@EXPERIENCE:
-		UpgradeTypes: speed
-		Modifier: 105, 110, 115, 125
-	ReloadDelayMultiplier@EXPERIENCE:
-		UpgradeTypes: reload
-		Modifier: 96, 92, 88, 80
-	InaccuracyMultiplier@EXPERIENCE:
-		UpgradeTypes: inaccuracy
-		Modifier: 90, 80, 70, 50
+		Conditions:
+			200: rank-veteran
+			400: rank-veteran
+			800: rank-veteran
+			1600: rank-veteran
+	GrantCondition@RANK-ELITE:
+		RequiresCondition: rank-veteran >= 4
+		Condition: rank-elite
+	DamageMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 96
+	DamageMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 92
+	DamageMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 88
+	DamageMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 80
+	FirepowerMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 105
+	FirepowerMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 110
+	FirepowerMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 115
+	FirepowerMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 125
+	SpeedMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 105
+	SpeedMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 110
+	SpeedMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 115
+	SpeedMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 125
+	ReloadDelayMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 96
+	ReloadDelayMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 92
+	ReloadDelayMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 88
+	ReloadDelayMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 80
+	InaccuracyMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 90
+	InaccuracyMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 80
+	InaccuracyMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 70
+	InaccuracyMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 50
 	SelfHealing@ELITE:
 		Step: 0
 		PercentageStep: 4
 		Delay: 125
 		HealIfBelow: 100
 		DamageCooldown: 125
-		UpgradeTypes: selfheal
-		UpgradeMinEnabledLevel: 1
-	WithRankDecoration:
+		RequiresCondition: rank-elite
+	WithDecoration@RANK-1:
 		Image: rank
-		Sequence: rank
+		Sequence: rank-veteran-1
 		Palette: effect
 		ReferencePoint: Bottom, Right
-		UpgradeTypes: rank
+		RequiresCondition: rank-veteran == 1
 		ZOffset: 256
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxAcceptedLevel: 4
+	WithDecoration@RANK-2:
+		Image: rank
+		Sequence: rank-veteran-2
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 2
+		ZOffset: 256
+	WithDecoration@RANK-3:
+		Image: rank
+		Sequence: rank-veteran-3
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 3
+		ZOffset: 256
+	WithDecoration@RANK-ELITE:
+		Image: rank
+		Sequence: rank-elite
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-elite
+		ZOffset: 256
 
 ^Building:
 	Inherits@1: ^ExistsInWorld
@@ -93,8 +158,10 @@
 		DamagedSounds: EXPLSML1.WAV
 		DestroyedSounds: EXPLHG1.WAV
 	WithSpriteBody:
-	WithBuildingExplosion:
-		Sequences: building, self_destruct, large_explosion
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
 	RepairableBuilding:
 		RepairStep: 50
 		PlayerExperience: 25
@@ -203,8 +270,6 @@
 	Inherits@4: ^Cloakable
 	Huntable:
 	Mobile:
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
 		Crushes: crate, spicebloom, mine
 		TerrainSpeeds:
 			Sand: 100
@@ -216,6 +281,7 @@
 			SpiceBlobs: 100
 			Dune: 50
 		TurnSpeed: 5
+		RequiresCondition: !notmobile
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -240,17 +306,18 @@
 	Voiced:
 		VoiceSet: VehicleVoice
 	AutoCarryable:
-		CarryableUpgrades: notmobile
-	WithDecorationCarryable:
+		CarriedCondition: notmobile
+	WithDecoration@CARRYALL:
 		Image: pips
 		Sequence: pickup-indicator
 		Offset: -12, -12
+		RequiresCondition: carryall-reserved
 	Capturable:
 		Type: vehicle
 		CaptureThreshold: 100
 		CancelActivity: True
-	GlobalUpgradable@Ordos:
-		Upgrades: selfheal.upg.ordos
+	GrantConditionOnPrerequisite@Ordos:
+		Condition: selfheal.upg.ordos
 		Prerequisites: selfheal.prereq.ordos
 	SelfHealing@Ordos:
 		Step: 0
@@ -258,8 +325,7 @@
 		Delay: 100
 		HealIfBelow: 100
 		DamageCooldown: 250
-		UpgradeTypes: selfheal.upg.ordos
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: selfheal.upg.ordos
 	ProvidesPrerequisite@Ordos:
 		Prerequisite: selfheal.prereq.ordos
 		Factions: ordos
@@ -291,12 +357,12 @@
 		TerrainTypes: Rock
 	Tooltip:
 		Name: Concrete Slab
-		Description: Provides a strong foundation that prevents\ndamage from the terrain.
 	RenderSprites:
 	KillsSelf:
 		RemoveInstead: true
 	Buildable:
 		Queue: Defense
+		Description: Provides a strong foundation that prevents\ndamage from the terrain.
 
 ^Defense:
 	Inherits: ^Building
@@ -358,6 +424,7 @@
 	RenderSprites:
 		PlayerPalette: raplayer
 		Scale: 1.25
+
 ^Trike:
 	Inherits: ^Vehicle
 	Armor:
@@ -399,7 +466,7 @@
 	AutoTarget:
 	Explodes:
 		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall 
+		EmptyWeapon: UnitExplodeSmall
 	RenderSprites:
 		Image: quad
 
@@ -415,11 +482,11 @@
 		BuildPaletteOrder: 3
 		BuildDuration: 373
 		BuildDurationModifier: 40
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Atreides: +Range\n  Fremen: -Cost\n  Harkonnen: +Armor\n  Corrino: +Damage\n  Ordos: +Speed\n  Mercenaries: -Rate of Fire\n  Smugglers: -Build Time
 	Valued:
 		Cost: 700
 	Tooltip:
 		Name: Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Atreides: +Range\n  Fremen: -Cost\n  Harkonnen: +Armor\n  Corrino: +Damage\n  Ordos: +Speed\n  Mercenaries: -Rate of Fire\n  Smugglers: -Build Time
 	Health:
 		HP: 2100
 	Armor:

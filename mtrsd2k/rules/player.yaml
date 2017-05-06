@@ -117,7 +117,7 @@ Player:
 		Id: 7
 	EnemyWatcher:
 	HarvesterInsurance:
-	GlobalUpgradeManager:
+	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 		AdviceInterval: 26
 	PlayerExperience:

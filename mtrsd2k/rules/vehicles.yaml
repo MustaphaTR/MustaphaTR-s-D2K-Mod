@@ -6,11 +6,11 @@ trike.mg:
 		Prerequisites: ~light.mgtrike, ~techlevel.1
 		BuildDuration: 194
 		BuildDurationModifier: 40
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 325
 	Tooltip:
 		Name: Machine Gun Trike
-		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Selectable:
 		Class: trike.mg
 	Health:
@@ -38,11 +38,11 @@ raider.mg:
 		Prerequisites: ~light.mgraider, ~techlevel.1
 		BuildDuration: 194
 		BuildDurationModifier: 40
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 325
 	Tooltip:
 		Name: Machine Gun Raider
-		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Selectable:
 		Class: raider.mg
 	Health:
@@ -73,11 +73,11 @@ quad.mg:
 		BuildPaletteOrder: 3
 		BuildDuration: 194
 		BuildDurationModifier: 40
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 325
 	Tooltip:
 		Name: Machine Gun Quad
-		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Selectable:
 		Class: quad.mg
 	Health:
@@ -105,11 +105,11 @@ trike.rocket:
 		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
 		BuildDuration: 277
 		BuildDurationModifier: 40
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 425
 	Tooltip:
 		Name: Rocket Trike
-		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Selectable:
 		Class: trike.rocket
 	Health:
@@ -134,11 +134,11 @@ raider.rocket:
 		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.2
 		BuildDuration: 277
 		BuildDurationModifier: 40
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 425
 	Tooltip:
 		Name: Rocket Raider
-		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Selectable:
 		Class: raider.rocket
 	Health:
@@ -166,11 +166,11 @@ quad.rocket:
 		BuildPaletteOrder: 6
 		BuildDuration: 277
 		BuildDurationModifier: 40
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 425
 	Tooltip:
 		Name: Rocket Quad
-		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Selectable:
 		Class: quad.rocket
 	Health:
@@ -194,11 +194,11 @@ stealth_raider:
 		BuildPaletteOrder: 7
 		BuildDuration: 280
 		BuildDurationModifier: 40
+		Description: Invisible scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Stealth Rocket Raider
-		Description: Invisible scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Cloak:
 		InitialDelay: 45
 		CloakDelay: 90
@@ -214,7 +214,7 @@ stealth_raider:
 		Image: stealth_raider
 	-MustBeDestroyed:
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:
 
 light_tank:
 	Inherits: ^Vehicle
@@ -224,11 +224,11 @@ light_tank:
 		Prerequisites: ~light.mercenary, upgrade.light, high_tech_factory, ~techlevel.5
 		BuildDuration: 337
 		BuildDurationModifier: 40
+		Description: Light anti-tank vehicle.\n Strong vs Tanks\n Weak vs Infantry
 	Valued:
 		Cost: 550
 	Tooltip:
 		Name: Light Tank
-		Description: Light anti-tank vehicle.\n Strong vs Tanks\n Weak vs Infantry
 	Health:
 		HP: 1500
 	Armor:
@@ -255,7 +255,7 @@ light_tank:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	Selectable:
-		Class: light_tank 
+		Class: light_tank
 	AttractsWorms:
 		Intensity: 480
 	Cloak@STEALTH:
@@ -263,7 +263,7 @@ light_tank:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Scale: 1.25
-      
+
 harvester:
 	Inherits: ^Vehicle
 	Buildable:
@@ -272,11 +272,11 @@ harvester:
 		BuildPaletteOrder: 1
 		BuildDuration: 540
 		BuildDurationModifier: 40
+		Description: Collects Spice for processing\n  Unarmed
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Spice Harvester
-		Description: Collects Spice for processing\n  Unarmed
 	Selectable:
 		Class: harvester
 		Priority: 7
@@ -346,9 +346,9 @@ combat_tank_a:
 	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.atreides, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas longer range than its counterparts.
 	Tooltip:
 		Name: Atreides Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas longer range than its counterparts.
 	Armament:
 		Weapon: 80mm_A
 	SpawnActorOnDeath:
@@ -358,9 +358,9 @@ combat_tank_h:
 	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.harkonnen, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas better armor than its counterparts.
 	Tooltip:
 		Name: Harkonnen Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas better armor than its counterparts.
 	Health:
 		HP: 2700
 	SpawnActorOnDeath:
@@ -370,9 +370,9 @@ combat_tank_o:
 	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.ordos, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nIs quicker than its counterparts.
 	Tooltip:
 		Name: Ordos Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nIs quicker than its counterparts.
 	Turreted:
 		TurnSpeed: 5
 	Mobile:
@@ -384,9 +384,9 @@ combat_tank_m:
 	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.mercenary, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nFires quicker than its counterparts.
 	Tooltip:
 		Name: Mercenary Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nFires quicker than its counterparts.
 	Armament:
 		Weapon: 80mm_M
 	SpawnActorOnDeath:
@@ -397,9 +397,9 @@ combat_tank_s:
 	Buildable:
 		BuildDuration: 325
 		Prerequisites: ~heavy.smuggler, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be built quicker than its counterparts.
 	Tooltip:
 		Name: Smuggler Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be built quicker than its counterparts.
 	SpawnActorOnDeath:
 		Actor: combat_tank_s.husk
 
@@ -407,9 +407,9 @@ combat_tank_f:
 	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.freman, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCosts less than its counterparts.
 	Tooltip:
 		Name: Freman Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCosts less than its counterparts.
 	Valued:
 		Cost: 600
 	SpawnActorOnDeath:
@@ -419,9 +419,9 @@ combat_tank_c:
 	Inherits: ^CombatTank
 	Buildable:
 		Prerequisites: ~heavy.corrino, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nDamages more than its counterparts.
 	Tooltip:
 		Name: Imperial Combat Tank
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nDamages more than its counterparts.
 	Armament:
 		Weapon: 80mm_C
 	SpawnActorOnDeath:
@@ -435,11 +435,11 @@ siege_tank:
 		BuildPaletteOrder: 4
 		BuildDuration: 324
 		BuildDurationModifier: 40
+		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 	Valued:
 		Cost: 700
 	Tooltip:
 		Name: Siege Tank
-		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 	Health:
 		HP: 1200
 	Armor:
@@ -481,11 +481,11 @@ mcv:
 		BuildPaletteOrder: 5
 		BuildDuration: 648
 		BuildDurationModifier: 40
+		Description: Deploys into another Construction Yard\n  Unarmed
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Construction Vehicle
-		Description: Deploys into another Construction Yard\n  Unarmed
 	Selectable:
 		Class: mcv
 		Priority: 3
@@ -525,13 +525,13 @@ missile_tank:
 	Inherits: ^Tank
 	Tooltip:
 		Name: Missile Tank
-		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Armor
 		Prerequisites: upgrade.heavy, research_centre, ~techlevel.4
 		BuildPaletteOrder: 6
 		BuildDuration: 441
 		BuildDurationModifier: 40
+		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry
 	Valued:
 		Cost: 900
 	Mobile:
@@ -570,11 +570,11 @@ sonic_tank:
 		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.6
 		BuildDuration: 486
 		BuildDurationModifier: 40
+		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Sonic Tank
-		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Health:
 		HP: 3000
 	Armor:
@@ -605,13 +605,13 @@ stealth_tank:
 		Cost: 950
 	Tooltip:
 		Name: Stealth Tank
-		Description: Stealth light tank that armed with dual missile launchers\n  Strong vs Tanks\n  Weak vs Infantry
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 8
 		Prerequisites: ~heavy.freman, research_centre, ~techlevel.6
 		BuildDuration: 460
 		BuildDurationModifier: 40
+		Description: Stealth light tank that armed with dual missile launchers\n  Strong vs Tanks\n  Weak vs Infantry
 	Selectable:
 		Class: stealth_tank
 	Mobile:
@@ -649,7 +649,7 @@ stealth_tank:
 		PlayerPalette: cncplayer
 		Scale: 1.25
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:
 
 devastator:
 	Inherits: ^Tank
@@ -659,11 +659,11 @@ devastator:
 		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.6
 		BuildDuration: 540
 		BuildDurationModifier: 40
+		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
 	Valued:
 		Cost: 1050
 	Tooltip:
 		Name: Devastator
-		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
 	Health:
 		HP: 5000
 	Armor:
@@ -706,11 +706,11 @@ quake_tank:
 		Prerequisites: ~heavy.corrino, research_centre, ~techlevel.6
 		BuildDuration: 670
 		BuildDurationModifier: 40
+		Description: Deals seismic damage to nearby vehicles\nand structures\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Quake Tank
-		Description: Deals seismic damage to nearby vehicles\nand structures\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Health:
 		HP: 5500
 	Armor:
@@ -748,13 +748,13 @@ deviator:
 		Cost: 1000
 	Tooltip:
 		Name: Deviator
-		Description: Fires a warhead which changes\nthe allegiance of enemy vehicles
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 11
 		Prerequisites: ~heavy.ordos, research_centre, ~techlevel.6
 		BuildDuration: 486
 		BuildDurationModifier: 40
+		Description: Fires a warhead which changes\nthe allegiance of enemy vehicles
 	Mobile:
 		TurnSpeed: 3
 		Speed: 53
@@ -786,27 +786,23 @@ bomb_buggy:
 		Cost: 750
 	Tooltip:
 		Name: Bomb Buggy
-		Description: Fast remote vehicle armed with high explosives\nHas very weak armor \n\n Requires a Heavy Factory in order to move.
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 12
 		Prerequisites: ~heavy.mercenary, research_centre, ~techlevel.6
 		BuildDuration: 460
 		BuildDurationModifier: 40
-	UpgradeOverlay:
+		Description: Fast remote vehicle armed with high explosives\nHas very weak armor \n\n Requires a Heavy Factory in order to move.
+	WithColoredOverlay:
 		Palette: disabled
-		UpgradeTypes: remote
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: !remote
 	Mobile:
 		TurnSpeed: 8
 		Speed: 110
-		UpgradeTypes: remote
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxEnabledLevel: 1
-	GlobalUpgradable@Remote:
+		RequiresCondition: 1 <= remote && remote <= 1
+	GrantConditionOnPrerequisite@Remote:
 		Prerequisites: heavy_factory
-		Upgrades: remote
+		Condition: remote
 	SelectionDecorations:
 		VisualBounds: 28,28
 	Health:
@@ -836,13 +832,13 @@ ifv:
 		Cost: 900
 	Tooltip:
 		Name: Infantry Fighting Vehicle
-		Description: Multi-Purpose Vehicle\nWithout passenger:\n  Strong vs Vehicles\n  Weak vs Infantry\nSpecial Ability: Armament depends on passenger.
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 13
 		Prerequisites: ~heavy.smuggler, research_centre, ~techlevel.6
 		BuildDuration: 480
 		BuildDurationModifier: 40
+		Description: Multi-Purpose Vehicle\nWithout passenger:\n  Strong vs Vehicles\n  Weak vs Infantry\nSpecial Ability: Armament depends on passenger.
 	Mobile:
 		TurnSpeed: 4
 		Speed: 70
@@ -859,57 +855,43 @@ ifv:
 		EmptyWeapon: UnitExplodeLarge
 	Armament@primary:
 		Weapon: 90mm
-		UpgradeTypes: ifv-light, ifv-trooper, ifv-grenade, ifv-flamer, ifv-freman, ifv-sonic, ifv-sardaukar, ifv-plasma, ifv-sniper
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper
 	Armament@light:
 		Weapon: LMG-ifv
-		UpgradeTypes: ifv-light
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-light
 	Armament@trooper:
 		Weapon: Bazooka-ifv
-		UpgradeTypes: ifv-trooper
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-trooper
 	Armament@trooperAA:
 		Weapon: BazookaAA-ifv
-		UpgradeTypes: ifv-trooper
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-trooper
 	Armament@grenade:
 		Weapon: grenade-ifv
-		UpgradeTypes: ifv-grenade
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-grenade
 	Armament@flamer:
 		Weapon: flamegun-ifv
-		UpgradeTypes: ifv-flamer
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-flamer
 	Armament@freman1:
 		Weapon: Fremen_S-ifv
-		UpgradeTypes: ifv-freman
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-freman
 	Armament@freman2:
 		Weapon: Fremen_L-ifv
-		UpgradeTypes: ifv-freman
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-freman
 	Armament@sonic:
 		Weapon: sound2-ifv
-		UpgradeTypes: ifv-sonic
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sonic
 	Armament@sardaukar1:
 		Weapon: M_LMG-ifv
-		UpgradeTypes: ifv-sardaukar
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sardaukar
 	Armament@sardaukar2:
 		Weapon: M_HMG-ifv
-		UpgradeTypes: ifv-sardaukar
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sardaukar
 	Armament@plasma:
 		Weapon: PlasBullet-ifv
-		UpgradeTypes: ifv-plasma
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-plasma
 	Armament@sniper:
 		Weapon: SniperRifle-ifv
-		UpgradeTypes: ifv-sniper
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sniper
 	AttackTurreted:
 	AutoTarget:
 	Cargo:
@@ -917,47 +899,48 @@ ifv:
 		MaxWeight: 1
 		PipCount: 1
 		UnloadVoice: Move
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
+		PassengerConditions:
+			light_inf: ifv-light
+			trooper: ifv-trooper
+			grenadier: ifv-grenade
+			flamethrower: ifv-flamer
+			freman: ifv-freman
+			nsfremen: ifv-freman
+			fedaykin: ifv-sonic
+			sardaukar: ifv-sardaukar
+			plasma_infantry: ifv-plasma
+			sniper: ifv-sniper
 	WithSpriteTurret@default:
 		Sequence: turret-tank
-		UpgradeTypes: ifv-light, ifv-trooper, ifv-grenade, ifv-flamer, ifv-freman, ifv-sonic, ifv-sardaukar, ifv-plasma, ifv-sniper
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper
 	WithSpriteTurret@light:
 		Sequence: turret-light
-		UpgradeTypes: ifv-light
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-light
 	WithSpriteTurret@trooper:
 		Sequence: turret-trooper
-		UpgradeTypes: ifv-trooper
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-trooper
 	WithSpriteTurret@grenade:
 		Sequence: turret-grenade
-		UpgradeTypes: ifv-grenade
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-grenade
 	WithSpriteTurret@flamer:
 		Sequence: turret-flamer
-		UpgradeTypes: ifv-flamer
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-flamer
 	WithSpriteTurret@freman:
 		Sequence: turret-freman
-		UpgradeTypes: ifv-freman
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-freman
 	WithSpriteTurret@sonic:
 		Sequence: turret-sonic
-		UpgradeTypes: ifv-sonic
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sonic
 	WithSpriteTurret@sardaukar:
 		Sequence: turret-sardaukar
-		UpgradeTypes: ifv-sardaukar
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sardaukar
 	WithSpriteTurret@plasma:
 		Sequence: turret-plasma
-		UpgradeTypes: ifv-plasma
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-plasma
 	WithSpriteTurret@sniper:
 		Sequence: turret-sniper
-		UpgradeTypes: ifv-sniper
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ifv-sniper
 	SpawnActorOnDeath:
 		Actor: ifv.husk
 	RenderSprites:

@@ -6,15 +6,13 @@ light_inf:
 		Prerequisites: barracks, ~techlevel.1
 		BuildDuration: 54
 		BuildDurationModifier: 40
+		Description: General-purpose infantry\n  Strong vs Infantry\n  Weak vs Vehicles, Artillery
 	Valued:
 		Cost: 50
 	Tooltip:
 		Name: Light Infantry
-		Description: General-purpose infantry\n  Strong vs Infantry\n  Weak vs Vehicles, Artillery
 	Selectable:
 		Class: light_inf
-	Passenger:
-		GrantUpgrades: ifv-light
 	Health:
 		HP: 600
 	Mobile:
@@ -23,7 +21,7 @@ light_inf:
 		Weapon: LMG
 	AttackFrontal:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 
 trooper:
 	Inherits: ^Infantry
@@ -33,15 +31,13 @@ trooper:
 		Prerequisites: upgrade.barracks, ~techlevel.2
 		BuildDuration: 73
 		BuildDurationModifier: 40
+		Description: Anti-tank infantry\n  Strong vs Tanks\n  Weak vs Infantry, Artillery
 	Valued:
 		Cost: 90
 	Tooltip:
 		Name: Trooper
-		Description: Anti-tank infantry\n  Strong vs Tanks\n  Weak vs Infantry, Artillery
 	Selectable:
 		Class: trooper
-	Passenger:
-		GrantUpgrades: ifv-trooper
 	Health:
 		HP: 700
 	RevealsShroud:
@@ -56,7 +52,7 @@ trooper:
 		LocalOffset: 128,0,256
 	AttackFrontal:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 
 dog:
 	Inherits: ^Infantry
@@ -64,11 +60,11 @@ dog:
 		Queue: Infantry
 		BuildPaletteOrder: 3
 		Prerequisites: barracks, ~barracks.smuggler, ~techlevel.5
+		Description: Anti-infantry unit.\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Valued:
 		Cost: 75
 	Tooltip:
 		Name: Attack Dog
-		Description: Anti-infantry unit.\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Vehicles
 		GenericName: Dog
 	Selectable:
 		Class: dog
@@ -111,11 +107,11 @@ engineer:
 		Prerequisites: upgrade.barracks, ~techlevel.3
 		BuildDuration: 108
 		BuildDurationModifier: 40
+		Description: Infiltrates and captures enemy structures\n  Strong vs Buildings\n  Weak vs Everything
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Engineer
-		Description: Infiltrates and captures enemy structures\n  Strong vs Buildings\n  Weak vs Everything
 	Selectable:
 		Class: engineer
 	Health:
@@ -143,11 +139,11 @@ thumper:
 		Prerequisites: upgrade.barracks, ~techlevel.7
 		BuildDuration: 108
 		BuildDurationModifier: 40
+		Description: Attracts nearby worms when deployed\n  Unarmed
 	Valued:
 		Cost: 200
 	Tooltip:
 		Name: Thumper Infantry
-		Description: Attracts nearby worms when deployed\n  Unarmed
 	Selectable:
 		Class: thumper
 	Health:
@@ -158,31 +154,29 @@ thumper:
 		UpgradeTypes: deployed
 		UpgradeMaxEnabledLevel: 0
 		Speed: 43
-	DeployToUpgrade:
-		DeployedUpgrades: deployed
+	Mobile:
+		Speed: 43
+		RequiresCondition: !deployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
 		Facing: 128
 		AllowedTerrainTypes: Sand, Spice, Dune, SpiceSand
 	WithInfantryBody:
-		UpgradeTypes: deployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !deployed
 	WithSpriteBody@DEPLOYED:
 		Sequence: thump
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	WithIdleOverlay@DEPLOYED:
 		Sequence: thump-sand
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	AmbientSound:
 		SoundFile: THUMPER1.WAV
 		Interval: 60
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	AttractsWorms:
 		Intensity: 1000
 		Falloff: 0, 0, 0, 100, 100, 100, 25, 11, 6, 4, 3, 2, 1, 0
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	Passenger:
 		PipType: Yellow
 	Voiced:
@@ -196,15 +190,13 @@ grenadier:
 		Prerequisites: ~barracks.atreides, upgrade.barracks, high_tech_factory, ~techlevel.5
 		BuildDuration: 85
 		BuildDurationModifier: 40
+		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
 	Valued:
 		Cost: 90
 	Tooltip:
 		Name: Grenadier
-		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
 	Selectable:
 		Class: grenadier
-	Passenger:
-		GrantUpgrades: ifv-grenade
 	Health:
 		HP: 600
 	Mobile:
@@ -215,18 +207,17 @@ grenadier:
 		FireDelay: 3
 	AttackFrontal:
 	WithInfantryBody:
-		AttackSequence: throw
+		DefaultAttackSequence: throw
 	Explodes:
 		Weapon: GrenDeath
 		EmptyWeapon: GrenDeath
 
 nsfremen:
 	Inherits: fremen
-	Tooltip:
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Buildable:
 		BuildPaletteOrder: 7
 		Prerequisites: ~barracks.freman, upgrade.barracks, high_tech_factory, ~techlevel.5
+		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Selectable:
 		Class: nsfremen
 	RenderSprites:
@@ -240,8 +231,8 @@ nsfremen:
 		IsPlayerPalette: true
 		UpgradeTypes: stealth
 		UpgradeMinEnabledLevel: 1
-	TimedUpgradeBar:
-		Upgrade: stealth
+	TimedConditionBar:
+		Condition: stealth
 		Color: DDDDDD
 
 flamethrower:
@@ -252,15 +243,13 @@ flamethrower:
 		Prerequisites: ~barracks.harkonnen, upgrade.barracks, high_tech_factory, ~techlevel.5
 		BuildDuration: 144
 		BuildDurationModifier: 40
+		Description: Advanced anti-structure unit\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Flamethrower
-		Description: Advanced anti-structure unit\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
 	Selectable:
 		Class: flamethrower
-	Passenger:
-		GrantUpgrades: ifv-flamer
 	Health:
 		HP: 600
 	Mobile:
@@ -268,7 +257,7 @@ flamethrower:
 	RevealsShroud:
 		Range: 4c768
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Armament:
 		Weapon: flamegun
 	AttackFrontal:
@@ -285,15 +274,13 @@ plasma_infantry:
 		Prerequisites: ~barracks.corrino, upgrade.barracks, high_tech_factory, ~techlevel.5
 		BuildDuration: 94
 		BuildDurationModifier: 40
+		Description: Advanced infantry armed with a plasma ball launcher\n  Strong vs Tanks\n  Weak vs Artillery
 	Valued:
 		Cost: 175
 	Tooltip:
 		Name: Plasma Infantry
-		Description: Advanced infantry armed with a plasma ball launcher\n  Strong vs Tanks\n  Weak vs Artillery
 	Selectable:
 		Class: plasma_infantry
-	Passenger:
-		GrantUpgrades: ifv-plasma
 	Health:
 		HP: 650
 	Mobile:
@@ -301,7 +288,7 @@ plasma_infantry:
 	RevealsShroud:
 		Range: 4c0
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Armament:
 		Weapon: PlasBullet
 		LocalOffset: 427,0,341
@@ -311,17 +298,15 @@ fremen:
 	Inherits: ^Infantry
 	Tooltip:
 		Name: Fremen
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 10
 		Prerequisites: ~disabled
+		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
 	Mobile:
 		Speed: 43
 	Valued:
 		Cost: 200	## actually 0, but spawns from support power at Palace
-	Passenger:
-		GrantUpgrades: ifv-freman
 	Health:
 		HP: 700
 	RevealsShroud:
@@ -336,7 +321,7 @@ fremen:
 		Weapon: Fremen_L
 	AttackFrontal:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Crushable:
 		WarnProbability: 80
 	Cloak:
@@ -349,23 +334,21 @@ fremen:
 	Voiced:
 		VoiceSet: FremenVoice
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:
 
 fedaykin:
 	Inherits: ^Infantry
 	Tooltip:
 		Name: Fedaykin
-		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 11
 		Prerequisites: ~disabled
+		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Mobile:
 		Speed: 41
 	Valued:
 		Cost: 400	## actually 0, but spawns from support power at Palace
-	Passenger:
-		GrantUpgrades: ifv-sonic
 	Health:
 		HP: 850
 	RevealsShroud:
@@ -378,7 +361,7 @@ fedaykin:
 		Weapon: sound2
 	AttackFrontal:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Crushable:
 		WarnProbability: 80
 	Voiced:
@@ -392,11 +375,11 @@ rocketeer:
 		Queue: Infantry
 		BuildPaletteOrder: 12
 		Prerequisites: ~disabled
+		Description: Flying infantry unit armed with dual machine guns.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Rocketeer
-		Description: Flying infantry unit armed with dual machine guns.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Health:
 		HP: 500
 	Armor:
@@ -423,7 +406,7 @@ rocketeer:
 	WithInfantryBody:
 		StandSequences: fly
 		MoveSequence: fly
-		AttackSequence: shoot-air
+		DefaultAttackSequence: shoot-air
 		IdleSequences: idle-air
 	Hovers:
 		OffsetModifier: -45
@@ -444,7 +427,7 @@ rocketeer:
 	RenderSprites:
 		PlayerPalette: ra2player
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:
 	SpawnActorOnDeath:
 		Actor: rocketeer.husk
 
@@ -456,15 +439,13 @@ sardaukar:
 		Prerequisites: ~barracks.corrino, palace.sardaukar, ~techlevel.7
 		BuildDuration: 80
 		BuildDurationModifier: 40
+		Description: Elite assault infantry\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Valued:
 		Cost: 120
 	Tooltip:
 		Name: Sardaukar
-		Description: Elite assault infantry\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Selectable:
 		Class: sardaukar
-	Passenger:
-		GrantUpgrades: ifv-sardaukar
 	Health:
 		HP: 1200
 	Mobile:
@@ -472,7 +453,7 @@ sardaukar:
 	RevealsShroud:
 		Range: 4c768
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Armament@PRIMARY:
 		Weapon: M_LMG
 	Armament@SECONDARY:
@@ -493,11 +474,11 @@ suicide_bomber:
 		Queue: Infantry
 		BuildPaletteOrder: 14
 		Prerequisites: ~disabled
+		Description: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
 	Valued:
 		Cost: 300	## actually 0, but spawns from support power at Palace
 	Tooltip:
 		Name: Suicide Bomber
-		Description: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
 	Health:
 		HP: 400
 	Mobile:
@@ -519,7 +500,7 @@ suicide_bomber:
 	Voiced:
 		VoiceSet: SaboteurVoice
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:
 
 sniper:
 	Inherits: ^Infantry
@@ -527,6 +508,7 @@ sniper:
 		Queue: Infantry
 		BuildPaletteOrder: 15
 		Prerequisites: ~disabled
+		Description: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -537,11 +519,9 @@ sniper:
 		Speed: 40
 	Armament:
 		Weapon: SniperRifle
-	Passenger:
-		GrantUpgrades: ifv-sniper
 	AttackFrontal:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Crushable:
 		WarnProbability: 80
 	Cloak:
@@ -555,7 +535,7 @@ sniper:
 	RenderSprites:
 		PlayerPalette: raplayer
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:
 
 saboteur:
 	Inherits: ^Infantry
@@ -563,11 +543,11 @@ saboteur:
 		Queue: Infantry
 		BuildPaletteOrder: 16
 		Prerequisites: ~disabled
+		Description: Steals enemy vehicles and disables enemy structures.\n  Unarmed
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Saboteur
-		Description: Steals enemy vehicles and disables enemy structures.\n  Unarmed
 	Health:
 		HP: 500
 	RevealsShroud:
@@ -602,4 +582,4 @@ saboteur:
 	RenderSprites:
 		PlayerPalette: raplayer
 	-Cloak@STEALTH:
-	-TimedUpgradeBar:
+	-TimedConditionBar:

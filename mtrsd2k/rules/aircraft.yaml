@@ -4,7 +4,6 @@ carryall.reinforce:
 		Cost: 1100
 	Tooltip:
 		Name: Carryall
-		Description: Large winged, planet-bound ship\n  Automatically lifts harvesters from and to Spice.\n  Lifts vehicles to Repair Pads when ordered.
 	Health:
 		HP: 4800
 	Armor:
@@ -12,21 +11,19 @@ carryall.reinforce:
 	Aircraft:
 		CruiseAltitude: 2160
 		InitialFacing: 0
-		Speed: 144 # 112 * ~1.3 for balance reasons
+		Speed: 144
 		TurnSpeed: 4
 		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
 		Repulsable: False
 		LandWhenIdle: False
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		CanHover: True
 	Targetable@GROUND:
 		TargetTypes: Ground, Vehicle
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
 		TargetTypes: Air
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
 	SpawnActorOnDeath:
 		Actor: carryall.husk
 	Carryall:
@@ -42,6 +39,7 @@ carryall.reinforce:
 	Buildable:
 		BuildDuration: 648
 		BuildDurationModifier: 40
+		Description: Large winged, planet-bound ship\n  Automatically lifts harvesters from and to Spice.\n  Lifts vehicles to Repair Pads when ordered.
 
 carryall:
 	Inherits: carryall.reinforce
@@ -85,7 +83,7 @@ frigate:
 		Name: Frigate
 	Aircraft:
 		CruiseAltitude: 2048
-		Speed: 189 # 126 * ~1.5 for balance reasons
+		Speed: 189
 		TurnSpeed: 1
 		Repulsable: False
 		MaximumPitch: 20
@@ -120,3 +118,41 @@ ornithopter:
 	SpawnActorOnDeath:
 		Actor: ornithopter.husk
 	RejectsOrders:
+
+ornithopter.controllable:
+	Inherits: ornithopter
+	Valued:
+		Cost: 1000
+	-AttackBomber:
+	AmmoPool:
+		Ammo: 8
+		SelfReloads: true
+		SelfReloadDelay: 200
+		ResetOnFire: true
+		ReloadCount: 2
+	AttackPlane:
+		FacingTolerance: 20
+	Armament:
+		Weapon: OrniRocket
+		LocalOffset: 0,128,0, 0,-128,0
+	Aircraft:
+		Speed: 156
+		MaximumPitch: 56
+		CanHover: false
+	RevealsShroud:
+		Range: 4c0
+		Type: GroundPosition
+	Selectable:
+		Bounds: 40,30,0,0
+	SelectionDecorations:
+		VisualBounds: 40,30,0,0
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 2
+		Prerequisites: outpost, ~hightech.ornithopter, ~techlevel.6
+		BuildDuration: 555
+		BuildDurationModifier: 40
+		Description: Light attack craft armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
+	-RejectsOrders:
+	RenderSprites:
+		Image: ornithopter

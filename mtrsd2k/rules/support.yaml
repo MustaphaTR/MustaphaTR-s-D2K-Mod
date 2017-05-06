@@ -34,13 +34,13 @@ silo:
 		BuildPaletteOrder: 3
 		BuildDuration: 135
 		BuildDurationModifier: 40
+		Description: Stores excess harvested Spice.
 	Selectable:
 		Bounds: 32,32
 	Valued:
 		Cost: 120
 	Tooltip:
 		Name: Silo
-		Description: Stores excess harvested Spice.
 	Building:
 		Adjacent: 4
 	-GivesBuildableArea:
@@ -73,7 +73,7 @@ silo:
 		Weapons: Debris, Debris2, Debris3, Debris4
 		Pieces: 3, 5
 		Range: 2c0, 5c0
-        
+
 silo.smuggler:
 	Inherits: silo
 	Buildable:
@@ -100,6 +100,7 @@ wall:
 		BuildPaletteOrder: 5
 		BuildDuration: 54
 		BuildDurationModifier: 40
+		Description: Stop units and blocks enemy fire.
 	SoundOnDamageTransition:
 		DamagedSounds:
 		DestroyedSounds: EXPLSML4.WAV
@@ -109,7 +110,6 @@ wall:
 		Value: 0
 	Tooltip:
 		Name: Concrete Wall
-		Description: Stop units and blocks enemy fire.
 	AppearsOnRadar:
 	Building:
 		BuildSounds: CHUNG.WAV
@@ -134,6 +134,9 @@ wall:
 		Types: wall
 	Targetable:
 		TargetTypes: Ground, Wall
+	Explodes:
+		Weapon: WallExplode
+		EmptyWeapon: WallExplode
 	WithWallSpriteBody:
 	AutoTargetIgnore:
 	Sellable:
@@ -150,6 +153,7 @@ mine_ap:
 		Prerequisites: construction_yard, barracks, ~cyard.smuggler, ~techlevel.3
 		BuildPaletteOrder: 6
 		BuildDuration: 100
+		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
 	Mine:
 		CrushClasses: mine_ap
 		DetonateClasses: mine_ap
@@ -157,7 +161,6 @@ mine_ap:
 		Cost: 150
 	Tooltip:
 		Name: Anti-Personnel Mine
-		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
 	Explodes:
 		Weapon: APMine
 		EmptyWeapon: APMine
@@ -168,6 +171,7 @@ mine_at:
 		Prerequisites: construction_yard, barracks, ~cyard.smuggler, ~techlevel.4
 		BuildPaletteOrder: 7
 		BuildDuration: 160
+		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
 	Valued:
 		Cost: 275
 	Mine:
@@ -175,24 +179,23 @@ mine_at:
 		DetonateClasses: mine_at
 	Tooltip:
 		Name: Anti-Tank Mine
-		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
 	Explodes:
 		Weapon: ATMine
 		EmptyWeapon: ATMine
 
 machine_gun_tower:
-   	Inherits: ^Defense
+	Inherits: ^Defense
 	Buildable:
 		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~cyard.machine_gun_tower, ~techlevel.3
 		BuildPaletteOrder: 8
 		BuildDuration: 222
 		BuildDurationModifier: 40
+		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Machine Gun Tower
-		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 		Adjacent: 4
 		BuildSounds: CHUNG.WAV
@@ -223,18 +226,18 @@ machine_gun_tower:
 		VisualBounds: 32,40,0,-8
 
 flame_tower:
-   	Inherits: ^Defense
+	Inherits: ^Defense
 	Buildable:
 		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~cyard.flame_tower, ~techlevel.3
 		BuildPaletteOrder: 8
 		BuildDuration: 222
 		BuildDurationModifier: 40
+		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Flame Tower
-		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 		Adjacent: 4
 		BuildSounds: CHUNG.WAV
@@ -262,18 +265,18 @@ flame_tower:
 		VisualBounds: 32,40,0,-8
 
 artillery_platform:
-   	Inherits: ^Defense
+	Inherits: ^Defense
 	Buildable:
 		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~cyard.artillery_platform, ~techlevel.3
 		BuildPaletteOrder: 8
 		BuildDuration: 222
 		BuildDurationModifier: 40
+		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Artillery Platform
-		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 		Adjacent: 4
 		BuildSounds: CHUNG.WAV
@@ -313,11 +316,11 @@ medium_gun_turret:
 		BuildPaletteOrder: 8
 		BuildDuration: 231
 		BuildDurationModifier: 40
+		Description: Defensive structure.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Requires power to operate
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Gun Turret
-		Description: Defensive structure.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Requires power to operate
 	Building:
 		Adjacent: 4
 		BuildSounds: CHUNG.WAV
@@ -360,11 +363,11 @@ large_gun_turret:
 		BuildPaletteOrder: 9
 		BuildDuration: 270
 		BuildDurationModifier: 40
+		Description: Defensive structure\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Rocket Turret
-		Description: Defensive structure\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate
 	Building:
 		Adjacent: 4
 		BuildSounds: CHUNG.WAV
@@ -384,20 +387,15 @@ large_gun_turret:
 	Armament@Normal:
 		Weapon: TowerMissile
 		LocalOffset: 256,384,768, 256,-384,768
-		UpgradeTypes: corrino.rocket.strike
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: !corrino.rocket.strike
 	Armament@AA:
 		Weapon: TowerMissileAA
 		LocalOffset: 256,384,768, 256,-384,768
-		UpgradeTypes: corrino.rocket.strike
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: !corrino.rocket.strike
 	Armament@Strike:
 		Weapon: TowerMissileUnlimited
 		LocalOffset: 256,384,768, 256,-384,768
-		UpgradeTypes: corrino.rocket.strike
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: corrino.rocket.strike
 	Turreted:
 		TurnSpeed: 8
 		InitialFacing: 128
@@ -411,9 +409,7 @@ large_gun_turret:
 	SelectionDecorations:
 		VisualBounds: 32,40,0,-8
 	AutoTarget:
-		UpgradeTypes: corrino.rocket.strike
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
-	TimedUpgradeBar:
-		Upgrade: corrino.rocket.strike
+		RequiresCondition: !corrino.rocket.strike
+	TimedConditionBar:
+		Condition: corrino.rocket.strike
 		Color: 222222
