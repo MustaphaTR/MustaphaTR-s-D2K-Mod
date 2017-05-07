@@ -282,8 +282,10 @@ phoenix:
 	SelectionDecorations:
 		VisualBounds: 40,29,0,1
 	Contrail@1:
-		Offset: -598,-683,0
+		Offset: -538,-614,0
+		UsePlayerColor: false
 	Contrail@2:
-		Offset: -598,683,0
+		Offset: -538,614,0
+		UsePlayerColor: false
 	RenderSprites:
 		PlayerPalette: raplayer
