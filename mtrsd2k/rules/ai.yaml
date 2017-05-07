@@ -122,6 +122,9 @@ Player:
 			combat_tank_m: 100%
 			combat_tank_s: 100%
 			combat_tank_c: 100%
+			ornithopter.controllable: 2%
+			swarmer: 2%
+			phoenix: 2%
 		UnitLimits:
 			harvester: 8
 			harvester.smuggler: 8
@@ -315,6 +318,9 @@ Player:
 			combat_tank_m: 100%
 			combat_tank_s: 100%
 			combat_tank_c: 100%
+			ornithopter.controllable: 4%
+			swarmer: 4%
+			phoenix: 4%
 		UnitLimits:
 			harvester: 8
 			harvester.smuggler: 8
@@ -507,6 +513,9 @@ Player:
 			combat_tank_m: 100%
 			combat_tank_s: 100%
 			combat_tank_c: 100%
+			ornithopter.controllable: 6%
+			swarmer: 6%
+			phoenix: 6%
 		UnitLimits:
 			harvester: 8
 			harvester.smuggler: 8
