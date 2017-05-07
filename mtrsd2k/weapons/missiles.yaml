@@ -46,6 +46,8 @@ Bazooka-ifv:
 BazookaAA:
 	Inherits: Bazooka
 	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
@@ -97,6 +99,8 @@ Rocket:
 RocketAA:
 	Inherits: Rocket
 	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
@@ -148,6 +152,8 @@ Rocket.stealth:
 Rocket.stealthAA:
 	Inherits: Rocket.stealth
 	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
@@ -223,6 +229,8 @@ TowerMissile:
 TowerMissileAA:
 	Inherits: TowerMissile
 	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
@@ -284,6 +292,8 @@ mtank_pri:
 mtank_priAA:
 	Inherits: mtank_pri
 	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
