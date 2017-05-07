@@ -152,6 +152,30 @@ Rocket.stealthAA:
 		ValidTargets: Air
 	-Warhead@2Smu:
 
+PhoenixRocket:
+	Inherits: Rocket
+	ReloadDelay: 100
+	Burst: 2
+	BurstDelay: 10
+	Range: 4c0
+	Projectile: Missile
+		Inaccuracy: 128
+		Speed: 256
+		RangeLimit: 4c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 350
+		Versus:
+			none: 100
+			building: 75
+			wood: 75
+			light: 45
+			cy: 30
+	Warhead@3Eff: CreateEffect
+		Explosions: napalm
+		ExplosionPalette: effect75alpha
+		ImpactSounds: firebl3.aud
+
 TowerMissile:
 	ReloadDelay: 60
 	Burst: 2
@@ -266,7 +290,7 @@ mtank_priAA:
 
 OrniRocket:
 	Inherits: mtank_pri
-	BurstDelay: 5
+	BurstDelay: 10
 	Range: 4c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 300

@@ -21,3 +21,16 @@ frigate:
 	idle: DATA.R8
 		Start: 2517
 		Facings: 1
+
+phoenix:
+	idle: phoenix.shp
+		Facings: 16
+	icon: phoenixicon.shp
+
+swarmer:
+	idle: swarmer.shp
+		Facings: 16
+	muzzle: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: swarmericon.shp

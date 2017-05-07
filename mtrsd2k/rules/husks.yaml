@@ -159,6 +159,33 @@ ornithopter.husk:
 	RenderSprites:
 		Image: ornithopter
 
+ornithopter.controllable.husk:
+	Inherits: ornithopter.husk
+	Aircraft:
+		Speed: 156
+
+swarmer.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Swarmer
+	Aircraft:
+		TurnSpeed: 2
+		Speed: 172
+	RenderSprites:
+		Image: swarmer
+		PlayerPalette: raplayer
+
+phoenix.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Phoenix
+	Aircraft:
+		TurnSpeed: 2
+		Speed: 172
+	RenderSprites:
+		Image: phoenix
+		PlayerPalette: raplayer
+
 rocketeer.husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:

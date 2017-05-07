@@ -268,3 +268,28 @@ SniperRifle-ifv:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
+
+ChainGun:
+	ReloadDelay: 3
+	Range: 5c0
+	Report: MGUN2.WAV
+	MinRange: 3c0
+	Projectile: Bullet
+		Speed: 1c682
+		Blockable: false
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		Versus:
+			wall: 10
+			building: 25
+			wood: 75
+			concrete: 40
+			light: 75
+			heavy: 20
+			invulnerable: 0
+			cy: 20
+			harvester: 25
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs

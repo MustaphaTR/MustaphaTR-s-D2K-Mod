@@ -70,6 +70,8 @@ explosion:
 		Length: 8
 		Tick: 120
 		BlendMode: Alpha
+	napalm: napalm2.shp
+		Length: *
 
 large_trail:
 	idle: DATA.R8
