@@ -103,6 +103,18 @@ missile_tank:
 carryall.reinforce:
 	Cargo:
 		MaxWeight: 10
+        
+ornithopter.controllable:
+	Valued:
+		Cost: 0
+
+swarmer:
+	Valued:
+		Cost: 0
+
+phoenix:
+	Valued:
+		Cost: 0
 
 barracks:
 	ProvidesPrerequisite@harkonnen:

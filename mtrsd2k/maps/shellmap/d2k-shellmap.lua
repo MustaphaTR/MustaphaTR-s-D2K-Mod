@@ -29,21 +29,25 @@ AtreidesInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "tro
 AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 AtreidesTankTypes = { "combat_tank_a", "combat_tank_a", "combat_tank_a", "siege_tank" }
 AtreidesStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_a.starport" }
+AtreidesAirTypes = { "ornithopter.controllable" }
 
 HarkonnenInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper", "flamethrower", "flamethrower" }
 HarkonnenVehicleTypes = { "quad.mg", "quad.rocket", "quad.rocket" }
 HarkonnenTankTypes = { "combat_tank_h", "combat_tank_h", "combat_tank_h", "siege_tank" }
 HarkonnenStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_h.starport" }
+HarkonnenAirTypes = { "phoenix" }
 
 OrdosInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
 OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.rocket", "stealth_raider" }
 OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "combat_tank_o", "siege_tank" }
 OrdosStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_o.starport" }
+OrdosAirTypes = { "swarmer" }
 
 EmperorInfantryTypes = { "light_inf", "trooper", "plasma_infantry", "plasma_infantry", "sardaukar", "sardaukar", "sardaukar" }
 EmperorVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 EmperorTankTypes = { "combat_tank_c", "combat_tank_c", "combat_tank_c", "siege_tank" }
 EmperorStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_c.starport" }
+EmperorAirTypes = { "phoenix" }
 
 Upgrades = { "upgrade.barracks", "upgrade.light", "upgrade.conyard", "upgrade.heavy", "upgrade.hightech" }
 
@@ -173,20 +177,24 @@ WorldLoaded = function()
 		Produce(atreides, AtreidesVehicleTypes)
 		Produce(atreides, AtreidesTankTypes)
 		Produce(atreides, AtreidesStarportTypes)
+		Produce(atreides, AtreidesAirTypes)
 
 		Produce(harkonnen, HarkonnenInfantryTypes)
 		Produce(harkonnen, HarkonnenVehicleTypes)
 		Produce(harkonnen, HarkonnenTankTypes)
 		Produce(harkonnen, HarkonnenStarportTypes)
+		Produce(harkonnen, HarkonnenAirTypes)
 
 		Produce(ordos, OrdosInfantryTypes)
 		Produce(ordos, OrdosVehicleTypes)
 		Produce(ordos, OrdosTankTypes)
 		Produce(ordos, OrdosStarportTypes)
+		Produce(ordos, OrdosAirTypes)
 
 		Produce(emperor, EmperorInfantryTypes)
 		Produce(emperor, EmperorVehicleTypes)
 		Produce(emperor, EmperorTankTypes)
 		Produce(emperor, EmperorStarportTypes)
+		Produce(emperor, EmperorAirTypes)
 	end)
 end
