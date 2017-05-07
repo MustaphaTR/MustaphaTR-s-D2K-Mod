@@ -231,8 +231,7 @@ nsfremen:
 		CloakSound: STEALTH1.WAV
 		UncloakSound: STEALTH2.WAV
 		IsPlayerPalette: true
-		UpgradeTypes: stealth
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: stealth
 	TimedConditionBar:
 		Condition: stealth
 		Color: DDDDDD
