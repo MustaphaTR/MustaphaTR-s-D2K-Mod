@@ -17,11 +17,11 @@
 			wall: 50
 			building: 50
 			wood: 60
-			light: 60
-			heavy: 75
+			light: 75
+			heavy: 85
 			invulnerable: 0
 			cy: 20
-			harvester: 50
+			harvester: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -112,10 +112,10 @@ DevBullet:
 		Falloff: 100, 50, 25, 0
 		Damage: 650
 		Versus:
-			none: 50
+			none: 60
 			building: 75
 			wood: 60
-			light: 60
+			light: 70
 			invulnerable: 0
 			cy: 40
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -137,10 +137,10 @@ PlasBullet:
 		Spread: 256
 		Damage: 250
 		Versus:
-			none: 50
+			none: 60
 			building: 40
 			wood: 30
-			light: 60
+			light: 70
 			invulnerable: 0
 			cy: 20
 	Warhead@3Eff: CreateEffect
@@ -170,7 +170,7 @@ PlasBullet-ifv:
 		Falloff: 100, 65, 35, 20, 0
 		Damage: 450
 		Versus:
-			none: 125
+			none: 150
 			wood: 70
 			concrete: 30
 			light: 70

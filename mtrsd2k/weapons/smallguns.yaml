@@ -9,11 +9,12 @@ LMG:
 		Falloff: 100, 50, 25, 0
 		Damage: 125
 		Versus:
-			wall: 10
+			none: 200
+			wall: 8
 			building: 25
-			wood: 75
-			concrete: 40
-			light: 75
+			wood: 50
+			concrete: 30
+			light: 50
 			heavy: 20
 			invulnerable: 0
 			cy: 20
@@ -40,11 +41,12 @@ Fremen_S:
 		Falloff: 100, 50, 25, 0
 		Damage: 125
 		Versus:
-			wall: 10
+			none: 200
+			wall: 8
 			building: 25
-			wood: 75
-			concrete: 40
-			light: 75
+			wood: 50
+			concrete: 30
+			light: 50
 			heavy: 20
 			invulnerable: 0
 			cy: 20
@@ -72,11 +74,12 @@ M_LMG:
 		Falloff: 100, 50, 25, 0
 		Damage: 125
 		Versus:
-			wall: 10
+			none: 200
+			wall: 8
 			building: 25
-			wood: 75
-			concrete: 40
-			light: 75
+			wood: 50
+			concrete: 30
+			light: 50
 			heavy: 20
 			invulnerable: 0
 			cy: 20
@@ -164,11 +167,12 @@ HMG:
 		Falloff: 100, 60, 30, 0
 		Damage: 155
 		Versus:
-			wall: 10
+			none: 200
+			wall: 8
 			building: 25
-			wood: 75
-			concrete: 40
-			light: 75
+			wood: 50
+			concrete: 30
+			light: 50
 			heavy: 20
 			invulnerable: 0
 			cy: 20
@@ -256,11 +260,12 @@ SniperRifle-ifv:
 		Damage: 125
 		ValidTargets: Ground, Air
 		Versus:
-			wall: 10
+			none: 200
+			wall: 8
 			building: 25
-			wood: 75
-			concrete: 40
-			light: 75
+			wood: 50
+			concrete: 30
+			light: 50
 			heavy: 20
 			invulnerable: 0
 			cy: 20
@@ -281,11 +286,12 @@ ChainGun:
 		Spread: 128
 		Damage: 40
 		Versus:
-			wall: 10
+			none: 200
+			wall: 8
 			building: 25
-			wood: 75
-			concrete: 40
-			light: 75
+			wood: 50
+			concrete: 30
+			light: 50
 			heavy: 20
 			invulnerable: 0
 			cy: 20

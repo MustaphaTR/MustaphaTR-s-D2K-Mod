@@ -45,10 +45,13 @@ Bazooka-ifv:
 
 BazookaAA:
 	Inherits: Bazooka
+	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
 		Inaccuracy: 0
+		Speed: 384
 	Warhead@1Dam: SpreadDamage
+		Spread: 256
 		ValidTargets: Air
 	-Warhead@2Smu:
 
@@ -98,10 +101,13 @@ Rocket:
 
 RocketAA:
 	Inherits: Rocket
+	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
 		Inaccuracy: 0
+		Speed: 384
 	Warhead@1Dam: SpreadDamage
+		Spread: 256
 		ValidTargets: Air
 	-Warhead@2Smu:
 
@@ -151,10 +157,13 @@ Rocket.stealth:
 
 Rocket.stealthAA:
 	Inherits: Rocket.stealth
+	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
 		Inaccuracy: 0
+		Speed: 384
 	Warhead@1Dam: SpreadDamage
+		Spread: 256
 		ValidTargets: Air
 	-Warhead@2Smu:
 
@@ -172,10 +181,11 @@ PhoenixRocket:
 		Spread: 256
 		Damage: 350
 		Versus:
-			none: 100
+			none: 150
+			wall: 50
 			building: 75
 			wood: 75
-			light: 45
+			light: 60
 			cy: 30
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
@@ -213,7 +223,7 @@ TowerMissile:
 			wall: 75
 			building: 60
 			wood: 65
-			light: 65
+			light: 70
 			concrete: 90
 			invulnerable: 0
 			cy: 30
@@ -231,6 +241,8 @@ TowerMissileAA:
 	ValidTargets: Air
 	Projectile: Missile
 		Inaccuracy: 0
+		HorizontalRateOfTurn: 6
+		VerticalRateOfTurn: 20
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
@@ -277,7 +289,7 @@ mtank_pri:
 			building: 60
 			wood: 65
 			concrete: 90
-			light: 65
+			light: 70
 			invulnerable: 0
 			cy: 30
 			harvester: 50
@@ -291,9 +303,12 @@ mtank_pri:
 
 mtank_priAA:
 	Inherits: mtank_pri
+	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
 		Inaccuracy: 0
+		HorizontalRateOfTurn: 6
+		VerticalRateOfTurn: 20
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 	-Warhead@2Smu:
@@ -354,3 +369,14 @@ DeviatorMissile:
 		Range: 512
 		Duration: 375
 		InvalidTargets: Infantry, Structure
+
+DeviatorMissileAA:
+	Inherits: DeviatorMissile
+	MinRange: 0c512
+	ValidTargets: Plane
+	Projectile: Missile
+		Inaccuracy: 0
+		HorizontalRateOfTurn: 6
+		VerticalRateOfTurn: 20
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Plane

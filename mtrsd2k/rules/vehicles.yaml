@@ -766,8 +766,11 @@ deviator:
 		Type: light
 	RevealsShroud:
 		Range: 4c768
-	Armament:
+	Armament@Ground:
 		Weapon: DeviatorMissile
+		LocalOffset: -299,0,85
+	Armament@AA:
+		Weapon: DeviatorMissileAA
 		LocalOffset: -299,0,85
 	AttackFrontal:
 	AutoTarget:

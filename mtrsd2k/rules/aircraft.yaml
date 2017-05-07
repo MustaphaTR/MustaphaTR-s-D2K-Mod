@@ -155,6 +155,8 @@ ornithopter.controllable:
 	Guard:
 		Voice: Guard
 	Guardable:
+	Targetable:
+		TargetTypes: Air, Plane
 	Selectable:
 		Bounds: 40,30,0,0
 	SelectionDecorations:
@@ -216,7 +218,7 @@ swarmer:
 	Guardable:
 	WithMuzzleOverlay:
 	Targetable:
-		TargetTypes: Air
+		TargetTypes: Air, Plane
 	SpawnActorOnDeath:
 		Actor: swarmer.husk
 	Selectable:
@@ -272,7 +274,7 @@ phoenix:
 	Guardable:
 	WithMuzzleOverlay:
 	Targetable:
-		TargetTypes: Air
+		TargetTypes: Air, Plane
 	SpawnActorOnDeath:
 		Actor: phoenix.husk
 	Selectable:

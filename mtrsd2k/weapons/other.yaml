@@ -270,10 +270,10 @@ grenade:
 		Falloff: 100, 65, 35, 20, 0
 		Damage: 150
 		Versus:
-			none: 125
-			wood: 70
-			concrete: 30
-			light: 70
+			none: 160
+			wood: 75
+			concrete: 35
+			light: 75
 			heavy: 20
 			invulnerable: 0
 			cy: 20
@@ -299,10 +299,10 @@ GrenDeath:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 150
 		Versus:
-			none: 125
-			wood: 70
-			concrete: 30
-			light: 70
+			none: 160
+			wood: 75
+			concrete: 35
+			light: 75
 			heavy: 20
 			invulnerable: 0
 			cy: 20
