@@ -213,6 +213,7 @@ stealth_raider:
 	RenderSprites:
 		Image: stealth_raider
 	-MustBeDestroyed:
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 
@@ -648,6 +649,7 @@ stealth_tank:
 	RenderSprites:
 		PlayerPalette: cncplayer
 		Scale: 1.25
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 

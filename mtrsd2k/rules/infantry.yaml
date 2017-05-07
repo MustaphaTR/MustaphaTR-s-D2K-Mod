@@ -223,6 +223,8 @@ nsfremen:
 	RenderSprites:
 		Image: fremen
 	-Cloak:
+	ExternalCondition@STEALTH:
+		Condition: stealth
 	Cloak@STEALTH:
 		InitialDelay: 10
 		CloakDelay: 25
@@ -333,6 +335,7 @@ fremen:
 	-MustBeDestroyed:
 	Voiced:
 		VoiceSet: FremenVoice
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 
@@ -426,6 +429,7 @@ rocketeer:
 	-WithDeathAnimation:
 	RenderSprites:
 		PlayerPalette: ra2player
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 	SpawnActorOnDeath:
@@ -499,6 +503,7 @@ suicide_bomber:
 		IsPlayerPalette: true
 	Voiced:
 		VoiceSet: SaboteurVoice
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 
@@ -534,6 +539,7 @@ sniper:
 	-MustBeDestroyed:
 	RenderSprites:
 		PlayerPalette: raplayer
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 
@@ -581,5 +587,6 @@ saboteur:
 		VoiceSet: EngineerVoice
 	RenderSprites:
 		PlayerPalette: raplayer
+	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
