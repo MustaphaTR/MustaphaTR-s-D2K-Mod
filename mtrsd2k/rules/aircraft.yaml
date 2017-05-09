@@ -130,6 +130,8 @@ ornithopter.controllable:
 		BuildDuration: 555
 		BuildDurationModifier: 40
 		Description: Light air unit armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
+	Health:
+		HP: 1000
 	-AttackBomber:
 	ReturnOnIdle:
 	AmmoPool:
@@ -181,7 +183,7 @@ swarmer:
 	Tooltip:
 		Name: Swarmer
 	Health:
-		HP: 400
+		HP: 500
 	Armor:
 		Type: light
 	ReturnOnIdle:
@@ -243,7 +245,7 @@ phoenix:
 	Tooltip:
 		Name: Phoenix
 	Health:
-		HP: 650
+		HP: 750
 	Armor:
 		Type: light
 	ReturnOnIdle:

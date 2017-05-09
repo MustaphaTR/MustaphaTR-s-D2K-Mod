@@ -179,14 +179,17 @@ PhoenixRocket:
 		RangeLimit: 4c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 350
+		Damage: 700
 		Versus:
-			none: 150
+			none: 100
 			wall: 50
-			building: 75
-			wood: 75
-			light: 60
-			cy: 30
+			building: 90
+			wood: 95
+			light: 50
+			concrete: 70
+			heavy: 20
+			cy: 50
+			harvester: 25
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
 		ExplosionPalette: effect75alpha
@@ -318,7 +321,7 @@ OrniRocket:
 	BurstDelay: 10
 	Range: 4c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 300
+		Damage: 600
 	Projectile: Missile
 		Speed: 256
 		RangeLimit: 5c204

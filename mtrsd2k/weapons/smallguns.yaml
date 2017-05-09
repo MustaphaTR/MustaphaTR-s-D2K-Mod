@@ -283,8 +283,8 @@ ChainGun:
 		Speed: 1c682
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 40
+		Spread: 192
+		Damage: 45
 		Versus:
 			none: 200
 			wall: 8
