@@ -180,7 +180,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, grenadier, trike.mg, quad.rocket, combat_tank_a
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavyfreman:
+	MPStartUnits@mediumfreman:
 		Class: medium
 		ClassName: Medium Support
 		Factions: freman
@@ -188,7 +188,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, nsfremen, raider.mg, trike.rocket, combat_tank_f
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavyharkonnen:
+	MPStartUnits@mediumharkonnen:
 		Class: medium
 		ClassName: Medium Support
 		Factions: harkonnen
@@ -196,7 +196,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, flamethrower, quad.mg, trike.rocket, combat_tank_h
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavycorrino:
+	MPStartUnits@mediumcorrino:
 		Class: medium
 		ClassName: Medium Support
 		Factions: corrino
@@ -204,7 +204,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, plasma_infantry, trike.mg, quad.rocket, combat_tank_c
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavyordos:
+	MPStartUnits@mediumordos:
 		Class: medium
 		ClassName: Medium Support
 		Factions: ordos
@@ -212,7 +212,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, stealth_raider, quad.mg, raider.rocket, combat_tank_o
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavymercenary:
+	MPStartUnits@mediummercenary:
 		Class: medium
 		ClassName: Medium Support
 		Factions: mercenary
@@ -220,7 +220,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, light_tank, raider.mg, quad.rocket, combat_tank_m
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavysmuggler:
+	MPStartUnits@mediumsmuggler:
 		Class: medium
 		ClassName: Medium Support
 		Factions: smuggler
