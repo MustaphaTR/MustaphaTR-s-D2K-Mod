@@ -33,7 +33,7 @@
 		Name: Ordos
 		InternalName: ordos
 		Side: Ordos
-		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Quad\n - Rocket Radier\n Combat Tank Speciality:\n - Speed\n Aircraft:\n - Swarmer\n Speical Ability:\n - Their vehicles can self-repair
+		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Quad\n - Rocket Raider\n Combat Tank Speciality:\n - Speed\n Aircraft:\n - Swarmer\n Speical Ability:\n - Their vehicles can self-repair
 	Faction@Corrino:
 		Name: Corrino
 		InternalName: corrino
@@ -225,7 +225,7 @@ World:
 		ClassName: Medium Support
 		Factions: smuggler
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, dog, dog, trike.mg, radier.rocket, combat_tank_s
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, dog, dog, trike.mg, raider.rocket, combat_tank_s
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavyatreides:
@@ -281,7 +281,7 @@ World:
 		ClassName: Heavy Support
 		Factions: smuggler
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, dog, dog, trike.mg, trike.mg, radier.rocket, combat_tank_s, combat_tank_s, missile_tank, siege_tank
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, dog, dog, trike.mg, trike.mg, raider.rocket, combat_tank_s, combat_tank_s, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
 	SpawnMPUnits:
