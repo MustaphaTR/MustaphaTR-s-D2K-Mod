@@ -400,7 +400,7 @@ rocketeer:
 		TurnSpeed: 8
 		Speed: 88
 		AltitudeVelocity: 83
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		RepairBuildings:
 		RearmBuildings:
 		CanHover: True
@@ -413,14 +413,12 @@ rocketeer:
 	Hovers:
 		OffsetModifier: -45
 	-Targetable:
-	Targetable@airborne:
-		TargetTypes: Air
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
-	Targetable@ground:
+	Targetable@GROUND:
 		TargetTypes: Ground, Infantry, DetonateAttack
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
 	WithShadow:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
