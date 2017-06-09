@@ -95,6 +95,7 @@ Player:
 			combat_tank_m.starport: 15%
 			combat_tank_s.starport: 15%
 			combat_tank_c.starport: 15%
+			combat_tank_i.starport: 15%
 			sonic_tank.starport: 2%
 			devastator.starport: 2%
 			deviator.starport: 1.5%
@@ -122,6 +123,7 @@ Player:
 			combat_tank_m: 100%
 			combat_tank_s: 100%
 			combat_tank_c: 100%
+			combat_tank_i: 100%
 			ornithopter.controllable: 2%
 			swarmer: 2%
 			phoenix: 2%
@@ -291,6 +293,7 @@ Player:
 			combat_tank_m.starport: 15%
 			combat_tank_s.starport: 15%
 			combat_tank_c.starport: 15%
+			combat_tank_i.starport: 15%
 			sonic_tank.starport: 10%
 			devastator.starport: 8%
 			deviator.starport: 1%
@@ -318,6 +321,7 @@ Player:
 			combat_tank_m: 100%
 			combat_tank_s: 100%
 			combat_tank_c: 100%
+			combat_tank_i: 100%
 			ornithopter.controllable: 4%
 			swarmer: 4%
 			phoenix: 4%
@@ -486,6 +490,7 @@ Player:
 			combat_tank_m.starport: 15%
 			combat_tank_s.starport: 15%
 			combat_tank_c.starport: 15%
+			combat_tank_i.starport: 15%
 			sonic_tank.starport: 2%
 			devastator.starport: 2%
 			deviator.starport: 1.5%
@@ -513,6 +518,7 @@ Player:
 			combat_tank_m: 100%
 			combat_tank_s: 100%
 			combat_tank_c: 100%
+			combat_tank_i: 100%
 			ornithopter.controllable: 6%
 			swarmer: 6%
 			phoenix: 6%

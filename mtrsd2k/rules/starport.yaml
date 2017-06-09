@@ -285,11 +285,22 @@ combat_tank_c.starport:
 	RenderSprites:
 		Image: combat_tank_c
 
+combat_tank_i.starport:
+	Inherits: combat_tank_i
+	Buildable:
+		Prerequisites: ~starport.ixian, ~techlevel.3
+		BuildPaletteOrder: 28
+		Queue: Starport
+	Valued:
+		Cost: 875
+	RenderSprites:
+		Image: combat_tank_i
+
 siege_tank.starport:
 	Inherits: siege_tank
 	Buildable:
 		Prerequisites: starport, ~techlevel.5
-		BuildPaletteOrder: 28
+		BuildPaletteOrder: 29
 		Queue: Starport
 	Valued:
 		Cost: 1075
@@ -300,7 +311,7 @@ mcv.starport:
 	Inherits: mcv
 	Buildable:
 		Prerequisites: starport, ~techlevel.3
-		BuildPaletteOrder: 29
+		BuildPaletteOrder: 30
 		Queue: Starport
 	Valued:
 		Cost: 2500
@@ -311,7 +322,7 @@ missile_tank.starport:
 	Inherits: missile_tank
 	Buildable:
 		Prerequisites: starport, ~techlevel.4
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 31
 		Queue: Starport
 	Valued:
 		Cost: 1250
@@ -322,7 +333,7 @@ sonic_tank.starport:
 	Inherits: sonic_tank
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.atreides, ~techlevel.6
-		BuildPaletteOrder: 31
+		BuildPaletteOrder: 32
 		Queue: Starport
 	Valued:
 		Cost: 1200
@@ -333,7 +344,7 @@ stealth_tank.starport:
 	Inherits: stealth_tank
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.freman, ~techlevel.6
-		BuildPaletteOrder: 32
+		BuildPaletteOrder: 33
 		Queue: Starport
 	Valued:
 		Cost: 1075

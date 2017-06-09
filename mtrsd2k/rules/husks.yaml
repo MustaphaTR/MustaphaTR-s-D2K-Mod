@@ -58,6 +58,11 @@ combat_tank_c.husk:
 	TransformOnCapture:
 		IntoActor: combat_tank_c
 
+combat_tank_i.husk:
+	Inherits: ^combat_tank.husk
+	TransformOnCapture:
+		IntoActor: combat_tank_i
+
 siege_tank.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:

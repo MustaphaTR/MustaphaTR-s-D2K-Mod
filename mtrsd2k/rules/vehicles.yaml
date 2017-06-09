@@ -428,6 +428,19 @@ combat_tank_c:
 	SpawnActorOnDeath:
 		Actor: combat_tank_c.husk
 
+combat_tank_i:
+	Inherits: ^CombatTank
+	Buildable:
+		Prerequisites: ~heavy.ixian, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be repaired with repair tool like a structure.
+	Tooltip:
+		Name: Ixian Combat Tank
+	-Repairable:
+	RepairableBuilding:
+		RepairStep: 75
+	SpawnActorOnDeath:
+		Actor: combat_tank_i.husk
+
 siege_tank:
 	Inherits: ^Tank
 	Buildable:

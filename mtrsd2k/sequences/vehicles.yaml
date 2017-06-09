@@ -273,6 +273,32 @@ combat_tank_c.husk:
 		Facings: -32
 		ZOffset: -512
 
+combat_tank_i:
+	idle: DATA.R8
+		Start: 2453
+		Facings: -32
+	turret: DATA.R8
+		Start: 2115
+		Facings: -32
+	muzzle: DATA.R8
+		Start: 4028
+		Tick: 60
+		Facings: -32
+		BlendMode: Additive
+	icon: DATA.R8
+		Start: 4281
+		Offset: -30,-24
+
+combat_tank_i.husk:
+	idle: DATA.R8
+		Start: 2453
+		Facings: -32
+		ZOffset: -512
+	turret: DATA.R8
+		Start: 2115
+		Facings: -32
+		ZOffset: -512
+
 mcv:
 	idle: DATA.R8
 		Start: 1795
