@@ -16,7 +16,7 @@
 	PaletteFromFile@ra2:
 		Name: ra2
 		Filename: unittem.pal
-		ShadowIndex: 12
+		ShadowIndex: 1
 	PaletteFromFile@chrome:
 		Name: chrome
 		Filename: PALETTE.BIN
