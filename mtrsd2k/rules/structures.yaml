@@ -791,7 +791,7 @@ repair_pad:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		Prerequisites: construction_yard, heavy_factory, upgrade.heavy, ~techlevel.3
+		Prerequisites: construction_yard, heavy_factory, upgrade.heavy, ~!cyard.ixian, ~techlevel.3
 		BuildPaletteOrder: 10
 		BuildDuration: 324
 		BuildDurationModifier: 40
@@ -801,7 +801,7 @@ repair_pad:
 	Tooltip:
 		Name: Repair Pad
 	Building:
-		Footprint: =x= =x= ===
+		Footprint: =x= xxx =x=
 		Dimensions: 3,3
 	Health:
 		HP: 3000
@@ -835,13 +835,34 @@ repair_pad:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
+    
+repair_pad.ixian:
+	Inherits: repair_pad
+	Buildable:
+		Prerequisites: construction_yard, light_or_heavy, ~cyard.ixian, ~techlevel.3
+		BuildPaletteOrder: 11
+		BuildDuration: 286
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Ixian Repair Pad
+	Building:
+		Footprint: _x_ xxx _x_
+	Health:
+		HP: 4000
+	RepairsUnits:
+		Interval: 5
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@repair_pad:
+		Prerequisite: repair_pad
 
 research_centre:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
 		Prerequisites: construction_yard, outpost, heavy_factory, upgrade.heavy, ~techlevel.4
-		BuildPaletteOrder: 11
+		BuildPaletteOrder: 12
 		BuildDuration: 300
 		BuildDurationModifier: 40
 		Description: Unlocks advanced tanks.
@@ -901,6 +922,7 @@ palace:
 	Buildable:
 		Prerequisites: construction_yard, research_centre, ~techlevel.7
 		Queue: Building
+		BuildPaletteOrder: 13
 		BuildDuration: 810
 		BuildDurationModifier: 40
 		Description: Unlocks elite infantry for all sides\nand Death Hand Missile for Harkonnen.
@@ -1068,7 +1090,7 @@ sietch:
 	Buildable:
 		Prerequisites: ~disabled
 		Queue: Building
-		BuildPaletteOrder: 13
+		BuildPaletteOrder: 14
 		BuildDuration: 231
 		BuildDurationModifier: 40
 	Building:

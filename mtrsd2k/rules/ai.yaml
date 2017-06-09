@@ -25,6 +25,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			upgrade.conyard: 1
 			upgrade.barracks: 1
@@ -50,6 +51,7 @@ Player:
 			heavy_factory: 0.1%
 			starport: 0.1%
 			repair_pad: 0.1%
+			repair_pad.ixian: 0.1%
 			research_centre: 0.1%
 			upgrade.conyard: 0.1%
 			upgrade.barracks: 0.1%
@@ -221,6 +223,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -247,6 +250,7 @@ Player:
 			heavy_factory: 0.1%
 			starport: 0.1%
 			repair_pad: 0.1%
+			repair_pad.ixian: 0.1%
 			research_centre: 0.1%
 			palace: 0.1%
 			upgrade.conyard: 0.1%
@@ -419,6 +423,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -444,6 +449,7 @@ Player:
 			light_factory: 0.1%
 			heavy_factory: 0.1%
 			repair_pad: 0.1%
+			repair_pad.ixian: 0.1%
 			research_centre: 0.1%
 			palace: 0.1%
 			upgrade.conyard: 0.1%

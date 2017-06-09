@@ -297,7 +297,7 @@
 	HiddenUnderFog:
 	ActorLostNotification:
 	Repairable:
-		RepairBuildings: repair_pad
+		RepairBuildings: repair_pad, repair_pad.ixian
 	Guard:
 		Voice: Guard
 	Guardable:
