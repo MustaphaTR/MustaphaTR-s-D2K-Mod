@@ -341,7 +341,7 @@ outpost:
 	RevealsShroud:
 		Range: 4c768
 	ProvidesRadar:
-		RequiresCondition: !disabled
+		RequiresCondition: !jammed && !disabled
 	RenderSprites:
 		Image: outpost.harkonnen
 		FactionImages:

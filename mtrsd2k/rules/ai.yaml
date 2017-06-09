@@ -103,6 +103,7 @@ Player:
 			deviator.starport: 1.5%
 			ifv.starport: 1.5%
 			stealth_tank.starport: 2%
+			jammer.starport: 0.05%
 			sonic_tank: 10%
 			devastator: 10%
 			deviator: 7.5%
@@ -116,6 +117,7 @@ Player:
 			quad.rocket: 15%
 			light_tank: 8%
 			stealth_raider: 8%
+			jammer: 0.1%
 			siege_tank: 10%
 			missile_tank: 15%
 			combat_tank_a: 100%
@@ -288,6 +290,7 @@ Player:
 			quad.rocket.starport: 12.5%
 			light_tank.starport: 5%
 			stealth_raider.starport: 5%
+			jammer.starport: 0.05%
 			siege_tank.starport: 5%
 			missile_tank.starport: 7.5%
 			combat_tank_a.starport: 15%
@@ -308,6 +311,7 @@ Player:
 			deviator: 5%
 			ifv: 15%
 			stealth_tank: 45%
+			jammer: 0.1%
 			trike.mg: 15%
 			raider.mg: 15%
 			quad.mg: 15%
@@ -487,6 +491,7 @@ Player:
 			quad.rocket.starport: 7.5%
 			light_tank.starport: 4.5%
 			stealth_raider.starport: 4.5%
+			jammer.starport: 0.05%
 			siege_tank.starport: 5%
 			missile_tank.starport: 7.5%
 			combat_tank_a.starport: 15%
@@ -507,6 +512,7 @@ Player:
 			deviator: 7.5%
 			ifv: 7.5%
 			stealth_tank: 10%
+			jammer: 0.1%
 			trike.mg: 10%
 			raider.mg: 10%
 			quad.mg: 10%

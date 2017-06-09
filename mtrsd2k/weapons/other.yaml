@@ -533,3 +533,24 @@ APMine:
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Structure, Wall
+
+ECMRay:
+	ReloadDelay: 3
+	Range: 6c0
+	ValidTargets: Vehicle
+	InvaildTargets: Jammer
+	Projectile: LaserZap
+		Width: 60
+		BeamDuration: 2
+		Color: 00FF0070
+		SecondaryBeam: true
+		SecondaryBeamWidth: 90
+		SecondaryBeamColor: FF000035
+	Warhead@1Dam: TargetDamage
+		ValidTargets: Vehicle
+		InvaildTargets: Jammer
+	Warhead@ECM: GrantExternalCondition
+		Spread: 128
+		Duration: 100
+		Delay: 50
+		Condition: ecmdisable

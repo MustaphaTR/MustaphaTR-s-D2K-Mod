@@ -362,11 +362,22 @@ stealth_tank.starport:
 	RenderSprites:
 		Image: stealth_tank
 
+jammer.starport:
+	Inherits: jammer
+	Buildable:
+		Prerequisites: starport, ~starport.mercenary, ~heavy.ixian, ~techlevel.6
+		BuildPaletteOrder: 35
+		Queue: Starport
+	Valued:
+		Cost: 1200
+	RenderSprites:
+		Image: jammer
+
 devastator.starport:
 	Inherits: devastator
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.harkonnen, ~techlevel.6
-		BuildPaletteOrder: 33
+		BuildPaletteOrder: 36
 		Queue: Starport
 	Valued:
 		Cost: 1275
@@ -377,7 +388,7 @@ quake_tank.starport:
 	Inherits: quake_tank
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.corrino, ~techlevel.6
-		BuildPaletteOrder: 34
+		BuildPaletteOrder: 37
 		Queue: Starport
 	Valued:
 		Cost: 1750
@@ -388,7 +399,7 @@ deviator.starport:
 	Inherits: deviator
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.ordos, ~techlevel.6
-		BuildPaletteOrder: 35
+		BuildPaletteOrder: 38
 		Queue: Starport
 	Valued:
 		Cost: 1200
@@ -399,7 +410,7 @@ bomb_buggy.starport:
 	Inherits: bomb_buggy
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.mercenary, ~techlevel.6
-		BuildPaletteOrder: 36
+		BuildPaletteOrder: 39
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -410,7 +421,7 @@ ifv.starport:
 	Inherits: ifv
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.smuggler, ~techlevel.6
-		BuildPaletteOrder: 37
+		BuildPaletteOrder: 40
 		Queue: Starport
 	Valued:
 		Cost: 1050
@@ -421,7 +432,7 @@ carryall.starport:
 	Inherits: carryall
 	Buildable:
 		Prerequisites: starport, ~!starport.smuggler, ~techlevel.4
-		BuildPaletteOrder: 38
+		BuildPaletteOrder: 41
 		Queue: Starport
 	Valued:
 		Cost: 1500
@@ -430,7 +441,7 @@ carryall.smuggler.starport:
 	Inherits: carryall.smuggler
 	Buildable:
 		Prerequisites: starport, ~starport.smuggler, ~techlevel.4
-		BuildPaletteOrder: 39
+		BuildPaletteOrder: 42
 		Queue: Starport
 	Valued:
 		Cost: 1500

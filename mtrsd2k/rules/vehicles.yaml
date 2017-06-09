@@ -21,10 +21,12 @@ trike.mg:
 	Armament@damage:
 		Weapon: HMG_trike
 		LocalOffset: 180,0,110
+		RequiresCondition: !ecmdisable
 	Armament@muzzle:
 		Weapon: HMG_trike_muzzle
 		LocalOffset: -544,0,0
 		MuzzleSequence: muzzle
+		RequiresCondition: !ecmdisable
 	AttractsWorms:
 		Intensity: 420
 	RenderSprites:
@@ -56,10 +58,12 @@ raider.mg:
 	Armament@damage:
 		Weapon: HMG_raider
 		LocalOffset: 170,0,0
+		RequiresCondition: !ecmdisable
 	Armament@muzzle:
 		Weapon: HMG_raider_muzzle
 		LocalOffset: 170,0,0
 		MuzzleSequence: muzzle
+		RequiresCondition: !ecmdisable
 	AttractsWorms:
 		Intensity: 420
 	RenderSprites:
@@ -88,10 +92,12 @@ quad.mg:
 	Armament@damage:
 		Weapon: HMG_quad
 		LocalOffset: 128,64,64, 128,-64,64
+		RequiresCondition: !ecmdisable
 	Armament@muzzle:
 		Weapon: HMG_quad_muzzle
 		LocalOffset: 128,64,64, 128,-64,64
 		MuzzleSequence: muzzle
+		RequiresCondition: !ecmdisable
 	AttractsWorms:
 		Intensity: 420
 	RenderSprites:
@@ -120,9 +126,11 @@ trike.rocket:
 	Armament@Ground:
 		Weapon: Rocket_trike
 		LocalOffset: 180,0,110
+		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: RocketAA_trike
 		LocalOffset: 180,0,110
+		RequiresCondition: !ecmdisable
 	AttractsWorms:
 		Intensity: 470
 
@@ -152,9 +160,11 @@ raider.rocket:
 	Armament@Ground:
 		Weapon: Rocket_raider
 		LocalOffset: 170,0,0
+		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: RocketAA_raider
 		LocalOffset: 170,0,0
+		RequiresCondition: !ecmdisable
 	AttractsWorms:
 		Intensity: 470
 
@@ -181,9 +191,11 @@ quad.rocket:
 	Armament@Ground:
 		Weapon: Rocket_quad
 		LocalOffset: 128,64,64, 128,-64,64
+		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: RocketAA_quad
 		LocalOffset: 128,64,64, 128,-64,64
+		RequiresCondition: !ecmdisable
 	AttractsWorms:
 		Intensity: 470
 
@@ -249,6 +261,7 @@ light_tank:
 		RecoilRecovery: 25
 		LocalOffset: 768,0,90
 		MuzzleSequence: muzzle
+		RequiresCondition: !ecmdisable
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -472,6 +485,7 @@ siege_tank:
 		RecoilRecovery: 19
 		LocalOffset: 512,0,320
 		MuzzleSequence: muzzle
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -560,9 +574,11 @@ missile_tank:
 	Armament@Ground:
 		Weapon: mtank_pri
 		LocalOffset: -128,128,171, -128,-128,171
+		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: mtank_priAA
 		LocalOffset: -128,128,171, -128,-128,171
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	AutoTarget:
 		InitialStanceAI: Defend
@@ -601,6 +617,7 @@ sonic_tank:
 	Armament:
 		Weapon: Sound
 		LocalOffset: 600,0,427
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	AutoTarget:
 	Explodes:
@@ -648,14 +665,15 @@ stealth_tank:
 	Armament@Ground:
 		Weapon: Rocket.stealth
 		LocalOffset: 213,43,128, 213,-43,128
+		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: Rocket.stealthAA
 		LocalOffset: 213,43,128, 213,-43,128
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	Targetable:
 	SpawnActorOnDeath:
 		Actor: stealth_tank.husk
 	-MustBeDestroyed:
@@ -666,11 +684,64 @@ stealth_tank:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 
+jammer:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Jammer
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 9
+		Prerequisites: ~heavy.ixian, research_centre, ~techlevel.6
+		BuildDuration: 486
+		BuildDurationModifier: 40
+		Description: Jams nearby enemy outposts\nand deflects incoming missiles.\nCan detect cloaked units.\nCan disable enemy vehicles.
+	Health:
+		HP: 900
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 3
+		Speed: 62
+	RevealsShroud:
+		Range: 7c0
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: -256,0,256
+	ProximityExternalCondition@JAMMER:
+		Range: 18c0
+		ValidStances: Enemy, Neutral
+		Condition: jammed
+	WithRangeCircle@JAMMER:
+		Type: jammer
+		Range: 18c0
+		Color: 0000FF80
+	Armament:
+		Weapon: ECMRay
+	AttackFrontal:
+	AutoTarget:
+	JamsMissiles:
+		Range: 5c0
+		DeflectionStances: Neutral, Enemy
+	Targetable:
+		TargetTypes: Ground, Jammer, Repair, Vehicle
+	RenderJammerCircle:
+	SpawnActorOnDeath:
+		Actor: jammer.husk
+	DetectCloaked:
+		Range: 7c0
+	Cloak@STEALTH:
+		Palette: racloak
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.1
+
 devastator:
 	Inherits: ^Tank
 	Buildable:
 		Queue: Armor
-		BuildPaletteOrder: 9
+		BuildPaletteOrder: 10
 		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.6
 		BuildDuration: 540
 		BuildDurationModifier: 40
@@ -717,7 +788,7 @@ quake_tank:
 	Inherits: ^Tank
 	Buildable:
 		Queue: Armor
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 11
 		Prerequisites: ~heavy.corrino, research_centre, ~techlevel.6
 		BuildDuration: 670
 		BuildDurationModifier: 40
@@ -765,7 +836,7 @@ deviator:
 		Name: Deviator
 	Buildable:
 		Queue: Armor
-		BuildPaletteOrder: 11
+		BuildPaletteOrder: 12
 		Prerequisites: ~heavy.ordos, research_centre, ~techlevel.6
 		BuildDuration: 486
 		BuildDurationModifier: 40
@@ -806,7 +877,7 @@ bomb_buggy:
 		Name: Bomb Buggy
 	Buildable:
 		Queue: Armor
-		BuildPaletteOrder: 12
+		BuildPaletteOrder: 13
 		Prerequisites: ~heavy.mercenary, research_centre, ~techlevel.6
 		BuildDuration: 460
 		BuildDurationModifier: 40
@@ -852,7 +923,7 @@ ifv:
 		Name: Infantry Fighting Vehicle
 	Buildable:
 		Queue: Armor
-		BuildPaletteOrder: 13
+		BuildPaletteOrder: 14
 		Prerequisites: ~heavy.smuggler, research_centre, ~techlevel.6
 		BuildDuration: 480
 		BuildDurationModifier: 40

@@ -105,6 +105,18 @@ stealth_tank.husk:
 		PlayerPalette: cncplayer
 		Scale: 1.25
 
+jammer.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Jammer
+	ThrowsParticle@spinner:
+		Anim: spinner
+	TransformOnCapture:
+		IntoActor: jammer
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.1
+
 quake_tank.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:
