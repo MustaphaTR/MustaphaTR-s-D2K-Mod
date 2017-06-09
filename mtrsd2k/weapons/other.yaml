@@ -460,7 +460,7 @@ MADTankThump:
 	Warhead@1Dam: HealthPercentageDamage
 		Spread: 7c0
 		Damage: 3
-		InvalidTargets: MADTank, Infantry, Vehicles
+		InvalidTargets: MADTank, Infantry, Vehicle
 	Warhead@2Dam: HealthPercentageDamage
 		Spread: 7c0
 		Damage: 4
@@ -471,7 +471,7 @@ MADTankDetonate:
 	Warhead@1Dam: HealthPercentageDamage
 		Spread: 7c0
 		Damage: 16
-		InvalidTargets: MADTank, Infantry, Vehicles
+		InvalidTargets: MADTank, Infantry, Vehicle
 	Warhead@2Dam: HealthPercentageDamage
 		Spread: 7c0
 		Damage: 26
