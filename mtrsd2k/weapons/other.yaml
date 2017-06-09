@@ -94,6 +94,12 @@ Repair:
 		Damage: -150
 		ValidTargets: Repair
 
+Repair-ifv:
+	Inherits: Repair
+	ReloadDelay: 60
+	Warhead@1Dam: SpreadDamage
+		Damage: -175
+
 WormJaw:
 	ReloadDelay: 10
 	InvalidTargets: Structure, Infantry

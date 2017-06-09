@@ -497,6 +497,10 @@ ifv:
 		Start: 32
 		Facings: 32
 		UseClassicFacingFudge: True
+	turret-repair: ifv.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
 	icon: ifvicon.shp
 
 ifv.husk:

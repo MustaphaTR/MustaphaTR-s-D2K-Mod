@@ -944,7 +944,7 @@ ifv:
 		EmptyWeapon: UnitExplodeLarge
 	Armament@primary:
 		Weapon: 90mm
-		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair
 	Armament@light:
 		Weapon: LMG-ifv
 		RequiresCondition: ifv-light
@@ -981,6 +981,9 @@ ifv:
 	Armament@sniper:
 		Weapon: SniperRifle-ifv
 		RequiresCondition: ifv-sniper
+	Armament@repair:
+		Weapon: Repair-ifv
+		RequiresCondition: ifv-repair
 	AttackTurreted:
 	AutoTarget:
 	Cargo:
@@ -1000,9 +1003,10 @@ ifv:
 			sardaukar: ifv-sardaukar
 			plasma_infantry: ifv-plasma
 			sniper: ifv-sniper
+			mechanic: ifv-repair
 	WithSpriteTurret@default:
 		Sequence: turret-tank
-		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair
 	WithSpriteTurret@light:
 		Sequence: turret-light
 		RequiresCondition: ifv-light
@@ -1030,6 +1034,9 @@ ifv:
 	WithSpriteTurret@sniper:
 		Sequence: turret-sniper
 		RequiresCondition: ifv-sniper
+	WithSpriteTurret@repair:
+		Sequence: turret-repair
+		RequiresCondition: ifv-repair
 	SpawnActorOnDeath:
 		Actor: ifv.husk
 	RenderSprites:
