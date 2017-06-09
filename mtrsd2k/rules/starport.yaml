@@ -73,11 +73,22 @@ nsfremen.starport:
 	Valued:
 		Cost: 220
 
+mechanic.starport:
+	Inherits: mechanic
+	Buildable:
+		Prerequisites: starport, ~starport.mercenary, ~barracks.ixian, ~techlevel.5
+		BuildPaletteOrder: 8
+		Queue: Starport
+	Valued:
+		Cost: 310
+	RenderSprites:
+		Image: mechanic
+
 flamethrower.starport:
 	Inherits: flamethrower
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~barracks.harkonnen, ~techlevel.5
-		BuildPaletteOrder: 8
+		BuildPaletteOrder: 9
 		Queue: Starport
 	Valued:
 		Cost: 325
@@ -88,7 +99,7 @@ plasma_infantry.starport:
 	Inherits: plasma_infantry
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~barracks.corrino, ~techlevel.5
-		BuildPaletteOrder: 9
+		BuildPaletteOrder: 10
 		Queue: Starport
 	Valued:
 		Cost: 190
@@ -99,7 +110,7 @@ sardaukar.starport:
 	Inherits: sardaukar
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~barracks.corrino, ~techlevel.7
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 11
 		Queue: Starport
 	Valued:
 		Cost: 170
@@ -110,7 +121,7 @@ harvester.starport:
 	Inherits: harvester
 	Buildable:
 		Prerequisites: starport, ~!starport.smuggler, ~techlevel.1
-		BuildPaletteOrder: 11
+		BuildPaletteOrder: 12
 		Queue: Starport
 	Valued:
 		Cost: 1500
@@ -121,7 +132,7 @@ harvester.smuggler.starport:
 	Inherits: harvester.smuggler
 	Buildable:
 		Prerequisites: starport, ~starport.smuggler, ~techlevel.1
-		BuildPaletteOrder: 12
+		BuildPaletteOrder: 13
 		Queue: Starport
 	Valued:
 		Cost: 1250
@@ -132,7 +143,7 @@ trike.mg.starport:
 	Inherits: trike.mg
 	Buildable:
 		Prerequisites: starport, ~starport.mgtrike, ~techlevel.1
-		BuildPaletteOrder: 13
+		BuildPaletteOrder: 14
 		Queue: Starport
 	Valued:
 		Cost: 375
@@ -152,7 +163,7 @@ quad.mg.starport:
 	Inherits: quad.mg
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~light.mgquad, ~techlevel.1
-		BuildPaletteOrder: 17
+		BuildPaletteOrder: 16
 		Queue: Starport
 	Valued:
 		Cost: 375
@@ -161,7 +172,7 @@ trike.rocket.starport:
 	Inherits: trike.rocket
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
-		BuildPaletteOrder: 14
+		BuildPaletteOrder: 17
 		Queue: Starport
 	Valued:
 		Cost: 475
@@ -172,7 +183,7 @@ raider.rocket.starport:
 	Inherits: raider.rocket
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
-		BuildPaletteOrder: 16
+		BuildPaletteOrder: 18
 		Queue: Starport
 	Valued:
 		Cost: 475
@@ -181,7 +192,7 @@ quad.rocket.starport:
 	Inherits: quad.rocket
 	Buildable:
 		Prerequisites: starport, ~techlevel.2
-		BuildPaletteOrder: 18
+		BuildPaletteOrder: 19
 		Queue: Starport
 	Valued:
 		Cost: 475
@@ -190,7 +201,7 @@ stealth_raider.starport:
 	Inherits: stealth_raider
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~light.ordos, ~techlevel.5
-		BuildPaletteOrder: 19
+		BuildPaletteOrder: 20
 		Queue: Starport
 	Valued:
 		Cost: 550
@@ -201,7 +212,7 @@ light_tank.starport:
 	Inherits: light_tank
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~techlevel.5
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 21
 		Queue: Starport
 	Valued:
 		Cost: 575
@@ -212,7 +223,7 @@ combat_tank_a.starport:
 	Inherits: combat_tank_a
 	Buildable:
 		Prerequisites: ~starport.atreides, ~techlevel.3
-		BuildPaletteOrder: 21
+		BuildPaletteOrder: 22
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -223,7 +234,7 @@ combat_tank_h.starport:
 	Inherits: combat_tank_h
 	Buildable:
 		Prerequisites: ~starport.harkonnen, ~techlevel.3
-		BuildPaletteOrder: 22
+		BuildPaletteOrder: 23
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -234,7 +245,7 @@ combat_tank_o.starport:
 	Inherits: combat_tank_o
 	Buildable:
 		Prerequisites: ~starport.ordos, ~techlevel.3
-		BuildPaletteOrder: 23
+		BuildPaletteOrder: 24
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -245,7 +256,7 @@ combat_tank_f.starport:
 	Inherits: combat_tank_f
 	Buildable:
 		Prerequisites: ~starport.freman, ~techlevel.3
-		BuildPaletteOrder: 24
+		BuildPaletteOrder: 25
 		Queue: Starport
 	Valued:
 		Cost: 775
@@ -256,7 +267,7 @@ combat_tank_m.starport:
 	Inherits: combat_tank_m
 	Buildable:
 		Prerequisites: ~starport.mercenary, ~techlevel.3
-		BuildPaletteOrder: 25
+		BuildPaletteOrder: 26
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -267,7 +278,7 @@ combat_tank_s.starport:
 	Inherits: combat_tank_s
 	Buildable:
 		Prerequisites: ~starport.smuggler, ~techlevel.3
-		BuildPaletteOrder: 26
+		BuildPaletteOrder: 27
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -278,7 +289,7 @@ combat_tank_c.starport:
 	Inherits: combat_tank_c
 	Buildable:
 		Prerequisites: ~starport.corrino, ~techlevel.3
-		BuildPaletteOrder: 27
+		BuildPaletteOrder: 28
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -289,7 +300,7 @@ combat_tank_i.starport:
 	Inherits: combat_tank_i
 	Buildable:
 		Prerequisites: ~starport.ixian, ~techlevel.3
-		BuildPaletteOrder: 28
+		BuildPaletteOrder: 29
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -300,7 +311,7 @@ siege_tank.starport:
 	Inherits: siege_tank
 	Buildable:
 		Prerequisites: starport, ~techlevel.5
-		BuildPaletteOrder: 29
+		BuildPaletteOrder: 30
 		Queue: Starport
 	Valued:
 		Cost: 1075
@@ -311,7 +322,7 @@ mcv.starport:
 	Inherits: mcv
 	Buildable:
 		Prerequisites: starport, ~techlevel.3
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 31
 		Queue: Starport
 	Valued:
 		Cost: 2500
@@ -322,7 +333,7 @@ missile_tank.starport:
 	Inherits: missile_tank
 	Buildable:
 		Prerequisites: starport, ~techlevel.4
-		BuildPaletteOrder: 31
+		BuildPaletteOrder: 32
 		Queue: Starport
 	Valued:
 		Cost: 1250
@@ -333,7 +344,7 @@ sonic_tank.starport:
 	Inherits: sonic_tank
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.atreides, ~techlevel.6
-		BuildPaletteOrder: 32
+		BuildPaletteOrder: 33
 		Queue: Starport
 	Valued:
 		Cost: 1200
@@ -344,7 +355,7 @@ stealth_tank.starport:
 	Inherits: stealth_tank
 	Buildable:
 		Prerequisites: starport, ~starport.mercenary, ~heavy.freman, ~techlevel.6
-		BuildPaletteOrder: 33
+		BuildPaletteOrder: 34
 		Queue: Starport
 	Valued:
 		Cost: 1075

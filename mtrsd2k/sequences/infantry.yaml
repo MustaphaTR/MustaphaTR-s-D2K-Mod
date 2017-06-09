@@ -982,3 +982,58 @@ rocketeer.husk:
 		Length: 16
 		Facings: 2
 		Tick: 80
+
+mechanic:
+	stand: mechanic.shp
+		Facings: 8
+	run: mechanic.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	repair: mechanic.shp
+		Start: 56
+		Length: 58
+		Tick: 120
+	standup: mechanic.shp
+		Start: 114
+		Length: 2
+		Facings: 8
+	idle1: mechanic.shp
+		Start: 163
+		Length: 14
+		Tick: 120
+	idle2: mechanic.shp
+		Start: 178
+		Length: 14
+		Tick: 120
+	die1: mechanic.shp
+		Start: 193
+		Length: 7
+	die2: mechanic.shp
+		Start: 201
+		Length: 8
+	die3: mechanic.shp
+		Start: 209
+		Length: 8
+	die4: mechanic.shp
+		Start: 217
+		Length: 12
+	die5: mechanic.shp
+		Start: 229
+		Length: 18
+	die-crushed: DATA.R8
+		Frames: 2698, 2705, 2712, 2719, 2726, 2733, 2740, 2747
+		Tick: 800
+		ZOffset: -511
+	prone-stand: mechanic.shp
+		Start: 130
+		Stride: 4
+		Facings: 8
+	prone-run: mechanic.shp
+		Start: 130
+		Length: 4
+		Facings: 8
+		Tick: 100
+	icon: mechanicicon.shp
+

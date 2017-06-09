@@ -85,6 +85,15 @@ Heal:
 		ValidTargets: Infantry
 		DebugOverlayColor: 00FF00
 
+Repair:
+	Inherits: Heal
+	ReloadDelay: 80
+	Report: fixit1.aud
+	ValidTargets: Repair
+	Warhead@1Dam: SpreadDamage
+		Damage: -150
+		ValidTargets: Repair
+
 WormJaw:
 	ReloadDelay: 10
 	InvalidTargets: Structure, Infantry

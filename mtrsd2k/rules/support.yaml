@@ -134,7 +134,7 @@ wall:
 	LineBuildNode:
 		Types: wall
 	Targetable:
-		TargetTypes: Ground, Wall
+		TargetTypes: Ground, Wall, Repair
 	Explodes:
 		Weapon: WallExplode
 		EmptyWeapon: WallExplode

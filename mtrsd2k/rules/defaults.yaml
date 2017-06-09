@@ -289,7 +289,7 @@
 	Selectable:
 		Bounds: 32,32
 	Targetable:
-		TargetTypes: Ground, C4, Vehicle, DetonateAttack
+		TargetTypes: Ground, C4, Vehicle, DetonateAttack, Repair
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -385,6 +385,8 @@
 		Weapons: Debris, Debris3
 		Pieces: 2, 2
 		Range: 2c0, 4c0
+	Targetable:
+		TargetTypes: Ground, C4, Structure, DetonateAttack, Repair
 	MustBeDestroyed:
 		RequiredForShortGame: false
 
