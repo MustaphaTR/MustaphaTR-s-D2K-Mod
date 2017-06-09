@@ -340,6 +340,18 @@ sonic_tank.husk:
 		Facings: -32
 		ZOffset: -512
 
+stealth_tank:
+	idle: stealth_tank.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon: stealth_tankicon.shp
+
+stealth_tank.husk:
+	idle: stealth_tank.shp
+		Facings: 32
+		ZOffset: -512
+		UseClassicFacingFudge: True
+
 devastator:
 	idle: DATA.R8
 		Start: 2083
@@ -358,18 +370,6 @@ devastator.husk:
 		Start: 2083
 		Facings: -32
 		ZOffset: -512
-
-stealth_tank:
-	idle: stealth_tank.shp
-		Facings: 32
-		UseClassicFacingFudge: True
-	icon: stealth_tankicon.shp
-
-stealth_tank.husk:
-	idle: stealth_tank.shp
-		Facings: 32
-		ZOffset: -512
-		UseClassicFacingFudge: True
 
 quake_tank:
 	idle: quake_tank.shp
