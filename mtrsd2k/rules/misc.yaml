@@ -408,6 +408,7 @@ upgrade.conyard:
 		FactionImages:
 			atreides: conyard.atreides
 			freman: conyard.atreides
+			ixian: conyard.atreides
 			ordos: conyard.ordos
 			mercenary: conyard.ordos
 			smuggler: conyard.ordos
@@ -433,6 +434,7 @@ upgrade.barracks:
 		FactionImages:
 			atreides: barracks.atreides
 			freman: barracks.atreides
+			ixian: barracks.atreides
 			ordos: barracks.ordos
 			mercenary: barracks.ordos
 			smuggler: barracks.ordos
@@ -457,6 +459,7 @@ upgrade.outpost:
 		FactionImages:
 			atreides: outpost.atreides
 			freman: outpost.atreides
+			ixian: outpost.atreides
 			ordos: outpost.ordos
 			mercenary: outpost.ordos
 			smuggler: outpost.ordos
@@ -481,6 +484,7 @@ upgrade.light:
 		FactionImages:
 			atreides: light.atreides
 			freman: light.atreides
+			ixian: light.atreides
 			ordos: light.ordos
 			mercenary: light.ordos
 			smuggler: light.ordos
@@ -505,6 +509,7 @@ upgrade.heavy:
 		FactionImages:
 			atreides: heavy.atreides
 			freman: heavy.atreides
+			ixian: heavy.atreides
 			ordos: heavy.ordos
 			mercenary: heavy.mercenary
 			smuggler: heavy.ordos
@@ -529,6 +534,7 @@ upgrade.hightech:
 		FactionImages:
 			atreides: hightech.atreides
 			freman: hightech.atreides
+			ixian: hightech.atreides
 			ordos: hightech.ordos
 			mercenary: hightech.mercenary
 			smuggler: hightech.ordos

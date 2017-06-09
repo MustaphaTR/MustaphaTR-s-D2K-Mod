@@ -17,7 +17,7 @@
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: atreides, harkonnen, ordos, corrino, mercenary, smuggler, freman
+		RandomFactionMembers: atreides, harkonnen, ordos, corrino, mercenary, smuggler, freman, ixian
 		Description: Select a random House.
 	Faction@Atreides:
 		Name: Atreides
@@ -54,6 +54,11 @@
 		InternalName: freman
 		Side: Atreides
 		Description: The Fremen\n Special Units:\n - Freman\n - Stealth Tank\n - Fedaykin\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Trike\n Combat Tank Speciality:\n - Cost\n Aircraft:\n - Ornithopter\n Speical Ability:\n - Stealth Device
+	Faction@Ixians:
+		Name: Ixians
+		InternalName: ixian
+		Side: Atreides
+		Description: Ixians\n Special Units:\n - Mechanic\n - Jammer\n - \n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Raider\n Combat Tank Speciality:\n - Manual Repair\n Aircraft:\n - Ornithopter\n Speical Ability:\n - Better Repair Pad
 	ResourceType@Spice:
 		ResourceType: 1
 		Palette: d2k
@@ -110,66 +115,34 @@ World:
 		Class: none
 		ClassName: MCV Only
 		BaseActor: mcv
-		Factions: atreides, ordos, harkonnen, freman, corrino, smuggler, mercenary
+		Factions: atreides, ordos, harkonnen, freman, ixian, corrino, smuggler, mercenary
 	MPStartUnits@cyard:
 		Class: cyard
 		ClassName: Con. Yard Only
 		BaseActor: construction_yard
-		Factions: atreides, ordos, harkonnen, freman, corrino, smuggler, mercenary
-	MPStartUnits@lightatreides:
+		Factions: atreides, ordos, harkonnen, freman, ixian, corrino, smuggler, mercenary
+	MPStartUnits@lighttrike:
 		Class: light
 		ClassName: Light Support
-		Factions: atreides
+		Factions: atreides, corrino, smuggler
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, trooper, trike.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@lightfreman:
+	MPStartUnits@lightraider:
 		Class: light
 		ClassName: Light Support
-		Factions: freman
+		Factions: freman, ixian, mercenary
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, trooper, raider.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@lightharkonnen:
+	MPStartUnits@lightquad:
 		Class: light
 		ClassName: Light Support
-		Factions: harkonnen
+		Factions: harkonnen, ordos, 
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, trooper, quad.mg
-		InnerSupportRadius: 3
-		OuterSupportRadius: 5
-	MPStartUnits@lightcorrino:
-		Class: light
-		ClassName: Light Support
-		Factions: corrino
-		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, trike.mg
-		InnerSupportRadius: 3
-		OuterSupportRadius: 5
-	MPStartUnits@lightordos:
-		Class: light
-		ClassName: Light Support
-		Factions: ordos
-		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, quad.mg
-		InnerSupportRadius: 3
-		OuterSupportRadius: 5
-	MPStartUnits@lightmercenary:
-		Class: light
-		ClassName: Light Support
-		Factions: mercenary
-		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, raider.mg
-		InnerSupportRadius: 3
-		OuterSupportRadius: 5
-	MPStartUnits@smuggler:
-		Class: light
-		ClassName: Light Support
-		Factions: smuggler
-		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, trike.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@mediumatreides:
@@ -186,6 +159,14 @@ World:
 		Factions: freman
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, nsfremen, raider.mg, trike.rocket, combat_tank_f
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumixian:
+		Class: medium
+		ClassName: Medium Support
+		Factions: ixian
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, mechanic, raider.mg, raider.rocket, combat_tank_i
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@mediumharkonnen:
@@ -242,6 +223,14 @@ World:
 		Factions: freman
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, nsfremen, raider.mg, raider.mg, trike.rocket, combat_tank_f, combat_tank_f, missile_tank, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 6
+	MPStartUnits@heavyixian:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: ixian
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, mechanic, raider.mg, raider.mg, raider.rocket, combat_tank_i, combat_tank_i, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
 	MPStartUnits@heavyharkonnen:

@@ -36,6 +36,9 @@ construction_yard:
 	ProvidesPrerequisite@freman:
 		Prerequisite: cyard.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: cyard.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: cyard.ordos
 		Factions: ordos
@@ -70,6 +73,7 @@ construction_yard:
 		FactionImages:
 			atreides: conyard.atreides
 			freman: conyard.atreides
+			ixian: conyard.atreides
 			ordos: conyard.ordos
 			smuggler: conyard.ordos
 			mercenary: conyard.ordos
@@ -127,6 +131,7 @@ wind_trap:
 		FactionImages:
 			atreides: power.atreides
 			freman: power.atreides
+			ixian: power.atreides
 			ordos: power.ordos
 			smuggler: power.ordos
 			mercenary: power.ordos
@@ -184,6 +189,9 @@ barracks:
 	ProvidesPrerequisite@freman:
 		Prerequisite: barracks.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: barracks.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: barracks.ordos
 		Factions: ordos
@@ -206,6 +214,7 @@ barracks:
 		FactionImages:
 			atreides: barracks.atreides
 			freman: barracks.atreides
+			ixian: barracks.atreides
 			ordos: barracks.ordos
 			smuggler: barracks.ordos
 			mercenary: barracks.ordos
@@ -272,6 +281,7 @@ refinery:
 		FactionImages:
 			atreides: refinery.atreides
 			freman: refinery.atreides
+			ixian: refinery.atreides
 			ordos: refinery.ordos
 			smuggler: refinery.ordos
 			mercenary: refinery.ordos
@@ -339,6 +349,7 @@ outpost:
 		FactionImages:
 			atreides: outpost.atreides
 			freman: outpost.atreides
+			ixian: outpost.atreides
 			ordos: outpost.ordos
 			smuggler: outpost.ordos
 			mercenary: outpost.ordos
@@ -364,6 +375,9 @@ outpost:
 	ProvidesPrerequisite@freman:
 		Prerequisite: outpost.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: outpost.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: outpost.ordos
 		Factions: ordos
@@ -385,6 +399,8 @@ outpost:
 	ProvidesPrerequisite@buildingname:
 	GrantConditionOnDisabled@IDISABLE:
 		Condition: disabled
+	ExternalCondition@JAMMED:
+		Condition: jammed
 
 light_factory:
 	Inherits: ^Building
@@ -416,6 +432,7 @@ light_factory:
 		FactionImages:
 			atreides: light.atreides
 			freman: light.atreides
+			ixian: light.atreides
 			ordos: light.ordos
 			smuggler: light.ordos
 			mercenary: light.ordos
@@ -437,6 +454,9 @@ light_factory:
 	ProvidesPrerequisite@freman:
 		Prerequisite: light.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: light.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: light.ordos
 		Factions: ordos
@@ -537,6 +557,9 @@ heavy_factory:
 	ProvidesPrerequisite@freman:
 		Prerequisite: heavy.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: heavy.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: heavy.ordos
 		Factions: ordos
@@ -557,6 +580,7 @@ heavy_factory:
 		FactionImages:
 			atreides: heavy.atreides
 			freman: heavy.atreides
+			ixian: heavy.atreides
 			ordos: heavy.ordos
 			mercenary: heavy.mercenary
 			smuggler: heavy.ordos
@@ -621,6 +645,7 @@ high_tech_factory:
 		FactionImages:
 			atreides: hightech.atreides
 			freman: hightech.atreides
+			ixian: hightech.atreides
 			ordos: hightech.ordos
 			smuggler: hightech.ordos
 			mercenary: hightech.ordos
@@ -713,6 +738,7 @@ starport:
 		FactionImages:
 			atreides: starport.atreides
 			freman: starport.atreides
+			ixian: starport.atreides
 			ordos: starport.ordos
 			smuggler: starport.smuggler
 			mercenary: starport.ordos
@@ -727,6 +753,9 @@ starport:
 	ProvidesPrerequisite@freman:
 		Prerequisite: starport.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: starport.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: starport.ordos
 		Factions: ordos
@@ -797,6 +826,7 @@ repair_pad:
 		FactionImages:
 			atreides: repair_pad.atreides
 			freman: repair_pad.atreides
+			ixian: repair_pad.atreides
 			ordos: repair_pad.ordos
 			smuggler: repair_pad.ordos
 			mercenary: repair_pad.ordos
@@ -836,6 +866,7 @@ research_centre:
 		FactionImages:
 			atreides: research.atreides
 			freman: research.atreides
+			ixian: research.atreides
 			ordos: research.ordos
 			smuggler: research.ordos
 			mercenary: research.ordos
@@ -870,7 +901,6 @@ palace:
 	Buildable:
 		Prerequisites: construction_yard, research_centre, ~techlevel.7
 		Queue: Building
-		BuildPaletteOrder: 12
 		BuildDuration: 810
 		BuildDurationModifier: 40
 		Description: Unlocks elite infantry for all sides\nand Death Hand Missile for Harkonnen.
@@ -896,6 +926,7 @@ palace:
 		FactionImages:
 			atreides: palace.atreides
 			freman: palace.atreides
+			ixian: palace.atreides
 			ordos: palace.ordos
 			corrino: palace.corrino
 			smuggler: palace.ordos
@@ -1077,6 +1108,9 @@ sietch:
 	ProvidesPrerequisite@freman:
 		Prerequisite: barracks.freman
 		Factions: freman
+	ProvidesPrerequisite@ixian:
+		Prerequisite: barracks.ixian
+		Factions: ixian
 	ProvidesPrerequisite@ordos:
 		Prerequisite: barracks.ordos
 		Factions: ordos
@@ -1137,11 +1171,24 @@ conyard.freman:
 		Image: conyard.atreides
 		-FactionImages:
 
-conyard.harkonnen:
+conyard.ixian:
 	Inherits: construction_yard
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1002
+		Prerequisites: ~disabled
+		ForceFaction: ixian
+	Tooltip:
+		Name: Ixian Construction Yard
+	RenderSprites:
+		Image: conyard.atreides
+		-FactionImages:
+
+conyard.harkonnen:
+	Inherits: construction_yard
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 1003
 		Prerequisites: ~disabled
 		ForceFaction: harkonnen
 	Tooltip:
@@ -1154,7 +1201,7 @@ conyard.corrino:
 	Inherits: construction_yard
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 1003
+		BuildPaletteOrder: 1004
 		Prerequisites: ~disabled
 		ForceFaction: corrino
 	Tooltip:
@@ -1167,7 +1214,7 @@ conyard.ordos:
 	Inherits: construction_yard
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 1004
+		BuildPaletteOrder: 1005
 		Prerequisites: ~disabled
 		ForceFaction: ordos
 	Tooltip:
@@ -1180,7 +1227,7 @@ conyard.smuggler:
 	Inherits: construction_yard
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 1005
+		BuildPaletteOrder: 1006
 		Prerequisites: ~disabled
 		ForceFaction: smuggler
 	Tooltip:
@@ -1193,7 +1240,7 @@ conyard.mercenary:
 	Inherits: construction_yard
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 1006
+		BuildPaletteOrder: 1007
 		Prerequisites: ~disabled
 		ForceFaction: mercenary
 	Tooltip:

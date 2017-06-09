@@ -5,6 +5,7 @@ Speech:
 	Prefixes:
 		atreides: AI_
 		freman: AI_
+		ixian: AI_
 		ordos: OI_
 		smuggler: OI_
 		mercenary: OI_

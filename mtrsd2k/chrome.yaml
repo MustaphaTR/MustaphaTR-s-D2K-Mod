@@ -72,6 +72,8 @@ radar-ordos: chrome.png
 	insignia: 341,266,100,106
 radar-freman: chrome.png
 	insignia: 236,268,100,106
+radar-ixian: chrome.png
+	insignia: 236,268,100,106
 radar-corrino: chrome.png
 	insignia: 341,377,100,106
 radar-mercenary: chrome.png
@@ -145,7 +147,7 @@ flags: buttons.png
 	corrino: 90,114,22,21
 	smuggler: 112,114,22,21
 	freman: 134,114,22,21
-	ix: 199,114,21,21
+	ixian: 199,114,21,21
 	worm: 156,114,22,21
 
 # Used for the menu

@@ -5,6 +5,7 @@ GenericVoice:
 	Variants:
 		atreides: .WAV
 		freman: .WAV
+		ixian: .WAV
 		ordos: .WAV
 		smugger: .WAV
 		mercenary: .WAV
@@ -13,6 +14,7 @@ GenericVoice:
 	Prefixes:
 		atreides: A
 		freman: A
+		ixian: A
 		ordos: O
 		smugger: O
 		mercenary: O
@@ -31,6 +33,7 @@ VehicleVoice:
 	Prefixes:
 		atreides: A
 		freman: A
+		ixian: A
 		ordos: O
 		smugger: O
 		mercenary: O
@@ -46,6 +49,7 @@ InfantryVoice:
 	Variants:
 		atreides: .WAV
 		freman: .WAV
+		ixian: .WAV
 		ordos: .WAV
 		smugger: .WAV
 		mercenary: .WAV
@@ -54,6 +58,7 @@ InfantryVoice:
 	Prefixes:
 		atreides: A
 		freman: A
+		ixian: A
 		ordos: O
 		smugger: O
 		mercenary: O
@@ -72,6 +77,7 @@ EngineerVoice:
 	Variants:
 		atreides: .WAV
 		freman: .WAV
+		ixian: .WAV
 		ordos: .WAV
 		smugger: .WAV
 		mercenary: .WAV
@@ -80,6 +86,7 @@ EngineerVoice:
 	Prefixes:
 		atreides: A
 		freman: A
+		ixian: A
 		ordos: O
 		smugger: O
 		mercenary: O
@@ -98,6 +105,7 @@ FremenVoice:
 	Variants:
 		atreides: .WAV
 		freman: .WAV
+		ixian: .WAV
 		ordos: .WAV
 		smugger: .WAV
 		mercenary: .WAV
@@ -106,6 +114,7 @@ FremenVoice:
 	Prefixes:
 		atreides: A
 		freman: A
+		ixian: A
 		ordos: O
 		smugger: O
 		mercenary: O
@@ -124,6 +133,7 @@ SaboteurVoice:
 	Variants:
 		atreides: .WAV
 		freman: .WAV
+		ixian: .WAV
 		ordos: .WAV
 		smugger: .WAV
 		mercenary: .WAV
@@ -132,6 +142,7 @@ SaboteurVoice:
 	Prefixes:
 		atreides: A
 		freman: A
+		ixian: A
 		ordos: O
 		smugger: O
 		mercenary: O

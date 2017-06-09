@@ -55,6 +55,7 @@ silo:
 		FactionImages:
 			atreides: silo.atreides
 			freman: silo.atreides
+			ixian: silo.atreides
 			ordos: silo.ordos
 			smuggler: silo.ordos
 			mercenary: silo.ordos
