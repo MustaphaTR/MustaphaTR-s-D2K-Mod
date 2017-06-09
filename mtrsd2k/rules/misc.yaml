@@ -60,6 +60,10 @@ crate:
 		SelectionShares: 4
 		Units: nsfremen, nsfremen, nsfremen
 		Prerequisites: techlevel.5, barracks, upgrade.barracks, high_tech_factory
+	GiveUnitCrateAction@Mechanic:
+		SelectionShares: 4
+		Units: mechanic, mechanic, mechanic
+		Prerequisites: techlevel.5, barracks, upgrade.barracks, high_tech_factory
 	GiveUnitCrateAction@AttackDog:
 		SelectionShares: 6
 		Units: dog, dog, dog, dog, dog
@@ -141,6 +145,11 @@ crate:
 		Units: combat_tank_c
 		ValidFactions: corrino
 		Prerequisites: techlevel.3, heavy_factory
+	GiveUnitCrateAction@CombatI:
+		SelectionShares: 15
+		Units: combat_tank_i
+		ValidFactions: ixian
+		Prerequisites: techlevel.3, heavy_factory
 	GiveUnitCrateAction@SiegeTank:
 		SelectionShares: 12
 		Units: siege_tank
@@ -156,6 +165,10 @@ crate:
 	GiveUnitCrateAction@Fedaykin:
 		SelectionShares: 5
 		Units: fedaykin, fedaykin, fedaykin
+		Prerequisites: techlevel.7, palace
+	GiveUnitCrateAction@Drone:
+		SelectionShares: 5
+		Units: drone, drone, drone
 		Prerequisites: techlevel.7, palace
 	GiveUnitCrateAction@Sardaukar:
 		SelectionShares: 5
@@ -180,6 +193,10 @@ crate:
 	GiveUnitCrateAction@StealthTank:
 		SelectionShares: 5
 		Units: stealth_tank
+		Prerequisites: techlevel.6, heavy_factory, research_centre
+	GiveUnitCrateAction@Jammer:
+		SelectionShares: 5
+		Units: jammer
 		Prerequisites: techlevel.6, heavy_factory, research_centre
 	GiveUnitCrateAction@Devastator:
 		SelectionShares: 5
