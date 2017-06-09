@@ -196,7 +196,7 @@
 	Guardable:
 		Range: 3c0
 	WithCrumbleOverlay:
-	Demolishable:
+#	Demolishable:  # Will use that for Drone for now. Will make Suicide Bomber like RA terrorist temporarily.
 	DamagedByTerrain:
 		Damage: 50
 		DamageInterval: 100

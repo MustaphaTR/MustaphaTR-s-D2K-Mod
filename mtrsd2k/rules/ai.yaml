@@ -191,6 +191,10 @@ Player:
 			OrderName: ProduceActorPower.Fedaykin
 			Consideration@1:
 				Against: Ally
+		SupportPowerDecision@Drone:
+			OrderName: ProduceActorPower.Drone
+			Consideration@1:
+				Against: Ally
 		SupportPowerDecision@Rocketeer:
 			OrderName: ProduceActorPower.Rocketeer
 			Consideration@1:
@@ -391,6 +395,10 @@ Player:
 				Against: Ally
 		SupportPowerDecision@Fedaykin:
 			OrderName: ProduceActorPower.Fedaykin
+			Consideration@1:
+				Against: Ally
+		SupportPowerDecision@Drone:
+			OrderName: ProduceActorPower.Drone
 			Consideration@1:
 				Against: Ally
 		SupportPowerDecision@Rocketeer:
@@ -596,6 +604,10 @@ Player:
 			Consideration@1:
 				Against: Ally
 				CheckRadius: 10c0
+		SupportPowerDecision@Drone:
+			OrderName: ProduceActorPower.Drone
+			Consideration@1:
+				Against: Ally
 		SupportPowerDecision@Rocketeer:
 			OrderName: ProduceActorPower.Rocketeer
 			Consideration@1:

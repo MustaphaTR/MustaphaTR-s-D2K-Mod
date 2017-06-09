@@ -407,13 +407,75 @@ fedaykin:
 	Voiced:
 		VoiceSet: FremenVoice
 
+drone:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 13
+		Prerequisites: ~disabled
+		Description: Robotic vehicle that can sabotage vehicles\nand kill infantry.\nCan detect cloaked units.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+	Valued:
+		Cost: 175
+	Tooltip:
+		Name: Drone
+		GenericName: Drone
+	Selectable:
+		Bounds: 24,24,0,0
+	Health:
+		HP: 300
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 76
+		Voice: Move
+	RevealsShroud:
+		Range: 4c384
+	Armament:
+		Weapon: DroneJaw
+	AttackLeap:
+		Voice: Attack
+	AttackMove:
+		Voice: Attack
+	Demolition:
+		DetonationDelay: 500
+		Flashes: 100
+		FlashInterval: 5
+		EnterBehaviour: Dispose
+		Voice: Attack
+		Cursor: enter
+	Repairable:
+		RepairBuildings: repair_pad, repair_pad.ixian
+	WithInfantryBody:
+	-TakeCover:
+	AutoTarget:
+		ScanRadius: 5
+	Targetable:
+		TargetTypes: Ground, Infantry, DetonateAttack, Repair
+	IgnoresDisguise:
+	-WithDeathAnimation:
+	-Passenger:
+	Crushable:
+		CrushClasses: drone
+	DetectCloaked:
+		Range: 4c384
+	Voiced:
+		VoiceSet: DroneVoice
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderSprites:
+		Scale: 0.75
+		PlayerPalette: ra2player
+	Cloak@STEALTH:
+		Palette: ra2cloak
+
 rocketeer:
 	Inherits: ^Infantry
 	HiddenUnderFog:
 		Type: CenterPosition
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 12
+		BuildPaletteOrder: 14
 		Prerequisites: ~disabled
 		Description: Flying infantry unit armed with dual machine guns.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Valued:
@@ -474,7 +536,7 @@ sardaukar:
 	Inherits: ^Infantry
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 13
+		BuildPaletteOrder: 15
 		Prerequisites: ~barracks.corrino, palace.sardaukar, ~techlevel.7
 		BuildDuration: 80
 		BuildDurationModifier: 40
@@ -511,9 +573,9 @@ suicide_bomber:
 	Inherits: ^Infantry
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 14
+		BuildPaletteOrder: 16
 		Prerequisites: ~disabled
-		Description: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
+		Description: Sneaky infantry armed with explosives\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibile while not Moving
 	Valued:
 		Cost: 300	## actually 0, but spawns from support power at Palace
 	Tooltip:
@@ -522,10 +584,10 @@ suicide_bomber:
 		HP: 400
 	Mobile:
 		Speed: 43
-	Demolition:
-		DetonationDelay: 0
-		Flashes: 0
-		EnterBehaviour: Suicide
+#	Demolition:
+#		DetonationDelay: 0
+#		Flashes: 0
+#		EnterBehaviour: Suicide
 	Crushable:
 		WarnProbability: 80
 	-AutoTarget:
@@ -538,6 +600,10 @@ suicide_bomber:
 		IsPlayerPalette: true
 	Voiced:
 		VoiceSet: SaboteurVoice
+	Explodes:
+		Weapon: SuicideBomberExplosion
+		EmptyWeapon: SuicideBomberExplosion
+	AttackSuicides:
 	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
@@ -546,7 +612,7 @@ sniper:
 	Inherits: ^Infantry
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 15
+		BuildPaletteOrder: 17
 		Prerequisites: ~disabled
 		Description: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
 	Valued:
@@ -582,7 +648,7 @@ saboteur:
 	Inherits: ^Infantry
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 16
+		BuildPaletteOrder: 18
 		Prerequisites: ~disabled
 		Description: Steals enemy vehicles and disables enemy structures.\n  Unarmed
 	Valued:

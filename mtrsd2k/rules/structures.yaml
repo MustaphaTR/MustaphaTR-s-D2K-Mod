@@ -962,6 +962,9 @@ palace:
 	ProvidesPrerequisite@fedaykin:
 		Prerequisite: palace.fedaykin
 		Factions: freman
+	ProvidesPrerequisite@drone:
+		Prerequisite: palace.drone
+		Factions: ixian
 	ProvidesPrerequisite@rocketeer:
 		Prerequisite: palace.rocketeer
 		Factions: harkonnen
@@ -1018,6 +1021,17 @@ palace:
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Fedaykin
+	ProduceActorPower@drone:
+		Description: Build Drones
+		LongDesc: Robotic vehicle that can sabotage vehicles\nand kill infantry.\nCan detect cloaked units.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Icon: drone
+		Prerequisites: ~techlevel.7, ~palace.drone
+		Actors: drone, drone, drone
+		Type: Palace
+		ChargeTime: 120
+		ReadyAudio: Reinforce
+		BlockedAudio: NoRoom
+		OrderName: ProduceActorPower.Drone
 	ProduceActorPower@rocketeer:
 		Description: Recruit Rocketeer
 		LongDesc: Flying infantry unit armed with dual machine guns\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Flying
@@ -1031,7 +1045,7 @@ palace:
 		OrderName: ProduceActorPower.Rocketeer
 	ProduceActorPower@suicide_bomber:
 		Description: Recruit Suicide Bomber
-		LongDesc: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
+		LongDesc: Sneaky infantry armed with explosives\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibile while not Moving
 		Icon: suicide_bomber
 		Prerequisites: ~techlevel.7, ~palace.suicide_bomber
 		Actors: suicide_bomber

@@ -438,6 +438,7 @@ icon:
 		Offset: -30,-24
 	fedaykin: fedaykinicon.shp
 	rocketeer: rocketeericon.shp
+	drone: droneicon.shp
 
 crate:
 	idle: DATA.R8

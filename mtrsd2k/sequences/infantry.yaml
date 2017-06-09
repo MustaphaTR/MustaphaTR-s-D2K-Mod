@@ -1037,3 +1037,17 @@ mechanic:
 		Tick: 100
 	icon: mechanicicon.shp
 
+drone:
+	stand: drone.shp
+		Start: 48
+		ShadowStart: 138
+		Facings: -8
+	run: drone.shp
+		Start: 0
+		Length: 6
+		ShadowStart: 88
+		Facings: -8
+	shoot: dronejump.shp
+		Facings: 8
+		ShadowStart: 8
+	icon: droneicon.shp
