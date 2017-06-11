@@ -437,6 +437,7 @@
 		UncloakSound:
 		Palette:
 		CloakTypes: Mine
+		InitialDelay: 0
 	Tooltip:
 		Name: Mine
 	Targetable:

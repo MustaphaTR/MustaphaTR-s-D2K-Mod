@@ -155,9 +155,6 @@ mine_ap:
 		BuildPaletteOrder: 6
 		BuildDuration: 100
 		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
-	Mine:
-		CrushClasses: mine_ap
-		DetonateClasses: mine_ap
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -175,9 +172,6 @@ mine_at:
 		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
 	Valued:
 		Cost: 275
-	Mine:
-		CrushClasses: mine_at
-		DetonateClasses: mine_at
 	Tooltip:
 		Name: Anti-Tank Mine
 	Explodes:
