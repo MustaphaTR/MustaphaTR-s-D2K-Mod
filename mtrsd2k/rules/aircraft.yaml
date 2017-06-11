@@ -129,7 +129,7 @@ ornithopter.controllable:
 		Prerequisites: outpost, ~hightech.ornithopter, ~techlevel.6
 		BuildDuration: 555
 		BuildDurationModifier: 40
-		Description: Light air unit armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
+		Description: Aircraft armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
 	Health:
 		HP: 1000
 	-AttackBomber:
