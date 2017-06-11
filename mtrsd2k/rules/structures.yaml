@@ -54,13 +54,13 @@ construction_yard:
 		Factions: corrino
 	ProvidesPrerequisite@gun_turret:
 		Prerequisite: cyard.gun_turret
-		Factions: atreides, freman, harkonnen, corrino, ordos, mercenary
+		Factions: atreides, freman, ixian, harkonnen, corrino, ordos, mercenary
 	ProvidesPrerequisite@artillery_platform:
 		Prerequisite: cyard.artillery_platform
 		Factions: ordos, mercenary
 	ProvidesPrerequisite@machine_gun_tower:
 		Prerequisite: cyard.machine_gun_tower
-		Factions: atreides, freman
+		Factions: atreides, freman, ixian
 	ProvidesPrerequisite@flame_tower:
 		Prerequisite: cyard.flame_tower
 		Factions: harkonnen, corrino
@@ -478,10 +478,10 @@ light_factory:
 		Factions: harkonnen, freman
 	ProvidesPrerequisite@mgraider:
 		Prerequisite: light.mgraider
-		Factions: freman, mercenary
+		Factions: freman, mercenary, ixian
 	ProvidesPrerequisite@rocketraider:
 		Prerequisite: light.rocketraider
-		Factions: ordos, smuggler
+		Factions: ordos, smuggler, ixian
 	ProvidesPrerequisite@mgquad:
 		Prerequisite: light.mgquad
 		Factions: harkonnen, ordos
@@ -657,7 +657,7 @@ high_tech_factory:
 		Factions: smuggler
 	ProvidesPrerequisite@ornithopter:
 		Prerequisite: hightech.ornithopter
-		Factions: atreides, freman
+		Factions: atreides, freman, ixian
 	ProvidesPrerequisite@phoenix:
 		Prerequisite: hightech.phoenix
 		Factions: harkonnen, corrino
