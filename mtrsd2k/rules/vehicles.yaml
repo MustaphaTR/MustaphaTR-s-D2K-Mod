@@ -944,45 +944,59 @@ ifv:
 		EmptyWeapon: UnitExplodeLarge
 	Armament@primary:
 		Weapon: 90mm
+		LocalOffset: 575, 0, 175
 		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair
 	Armament@light:
 		Weapon: LMG-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-light
 	Armament@trooper:
 		Weapon: Bazooka-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-trooper
 	Armament@trooperAA:
 		Weapon: BazookaAA-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-trooper
 	Armament@grenade:
 		Weapon: grenade-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-grenade
 	Armament@flamer:
 		Weapon: flamegun-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-flamer
 	Armament@freman1:
 		Weapon: Fremen_S-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-freman
 	Armament@freman2:
 		Weapon: Fremen_L-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-freman
 	Armament@sonic:
 		Weapon: sound2-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-sonic
 	Armament@sardaukar1:
 		Weapon: M_LMG-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-sardaukar
 	Armament@sardaukar2:
 		Weapon: M_HMG-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-sardaukar
 	Armament@plasma:
 		Weapon: PlasBullet-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-plasma
 	Armament@sniper:
 		Weapon: SniperRifle-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-sniper
 	Armament@repair:
 		Weapon: Repair-ifv
+		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-repair
 	AttackTurreted:
 	AutoTarget:
