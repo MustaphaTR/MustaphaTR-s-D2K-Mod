@@ -581,7 +581,7 @@ ECMRay:
 		ValidTargets: Vehicle
 		InvaildTargets: Jammer
 	Warhead@ECM: GrantExternalCondition
-		Spread: 128
+		Spread: 64
 		Duration: 100
 		Delay: 50
 		Condition: ecmdisable
