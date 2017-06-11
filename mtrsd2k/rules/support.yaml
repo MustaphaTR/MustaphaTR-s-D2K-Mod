@@ -358,7 +358,7 @@ large_gun_turret:
 		BuildPaletteOrder: 9
 		BuildDuration: 270
 		BuildDurationModifier: 40
-		Description: Defensive structure\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate
+		Description: Defensive structure.\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate
 	Valued:
 		Cost: 800
 	Tooltip:
