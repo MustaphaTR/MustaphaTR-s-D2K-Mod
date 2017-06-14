@@ -616,7 +616,7 @@ high_tech_factory:
 		BuildPaletteOrder: 8
 		BuildDuration: 380
 		BuildDurationModifier: 40
-		Description: Unlocks advanced technology.
+		Description: Produces aircraft.\n\nUnlocks advanced technology.
 	Selectable:
 		Bounds: 96,68,0,12
 	Valued:
