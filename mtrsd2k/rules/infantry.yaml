@@ -409,6 +409,7 @@ fedaykin:
 
 drone:
 	Inherits: ^Infantry
+	Inherits@2: ^EcmDisable
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 13
@@ -428,10 +429,12 @@ drone:
 	Mobile:
 		Speed: 76
 		Voice: Move
+		RequiresCondition: !ecmdisable
 	RevealsShroud:
 		Range: 4c384
 	Armament:
 		Weapon: DroneJaw
+		RequiresCondition: !ecmdisable
 	AttackLeap:
 		Voice: Attack
 	AttackMove:
@@ -450,7 +453,7 @@ drone:
 	AutoTarget:
 		ScanRadius: 5
 	Targetable:
-		TargetTypes: Ground, Infantry, DetonateAttack, Repair
+		TargetTypes: Ground, Infantry, DetonateAttack, Repair, Drone
 	IgnoresDisguise:
 	-WithDeathAnimation:
 	-Passenger:

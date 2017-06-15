@@ -578,7 +578,7 @@ ECMRay:
 		SecondaryBeamWidth: 90
 		SecondaryBeamColor: FF000035
 	Warhead@1Dam: TargetDamage
-		ValidTargets: Vehicle
+		ValidTargets: Vehicle, Drone
 		InvaildTargets: Jammer
 	Warhead@ECM: GrantExternalCondition
 		Range: 0c512
