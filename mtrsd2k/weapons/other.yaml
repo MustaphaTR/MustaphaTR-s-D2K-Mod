@@ -568,7 +568,7 @@ APMine:
 ECMRay:
 	ReloadDelay: 3
 	Range: 6c0
-	ValidTargets: Vehicle
+	ValidTargets: Vehicle, Drone
 	InvaildTargets: Jammer
 	Projectile: LaserZap
 		Width: 60

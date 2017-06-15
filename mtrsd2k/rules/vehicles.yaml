@@ -719,6 +719,7 @@ jammer:
 		Color: 0000FF80
 	Armament:
 		Weapon: ECMRay
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	AutoTarget:
 	JamsMissiles:
@@ -764,6 +765,7 @@ devastator:
 		Weapon: DevBullet
 		LocalOffset: 640,0,32
 		MuzzleSequence: muzzle
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	WithMuzzleOverlay:
 		IgnoreOffset: true
@@ -853,9 +855,11 @@ deviator:
 	Armament@Ground:
 		Weapon: DeviatorMissile
 		LocalOffset: -299,0,85
+		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: DeviatorMissileAA
 		LocalOffset: -299,0,85
+		RequiresCondition: !ecmdisable
 	AttackFrontal:
 	AutoTarget:
 		InitialStanceAI: Defend
@@ -888,7 +892,7 @@ bomb_buggy:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 110
-		RequiresCondition: 1 <= remote && remote <= 1
+		RequiresCondition: 1 <= remote && remote <= 1 && !ecmdisable
 	GrantConditionOnPrerequisite@Remote:
 		Prerequisites: heavy_factory
 		Condition: remote
@@ -945,59 +949,59 @@ ifv:
 	Armament@primary:
 		Weapon: 90mm
 		LocalOffset: 575, 0, 175
-		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-freman && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair && !ecmdisable
 	Armament@light:
 		Weapon: LMG-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-light
+		RequiresCondition: ifv-light && !ecmdisable
 	Armament@trooper:
 		Weapon: Bazooka-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-trooper
+		RequiresCondition: ifv-trooper && !ecmdisable
 	Armament@trooperAA:
 		Weapon: BazookaAA-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-trooper
+		RequiresCondition: ifv-trooper && !ecmdisable
 	Armament@grenade:
 		Weapon: grenade-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-grenade
+		RequiresCondition: ifv-grenade && !ecmdisable
 	Armament@flamer:
 		Weapon: flamegun-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-flamer
+		RequiresCondition: ifv-flamer && !ecmdisable
 	Armament@freman1:
 		Weapon: Fremen_S-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-freman
+		RequiresCondition: ifv-freman && !ecmdisable
 	Armament@freman2:
 		Weapon: Fremen_L-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-freman
+		RequiresCondition: ifv-freman && !ecmdisable
 	Armament@sonic:
 		Weapon: sound2-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-sonic
+		RequiresCondition: ifv-sonic && !ecmdisable
 	Armament@sardaukar1:
 		Weapon: M_LMG-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-sardaukar
+		RequiresCondition: ifv-sardaukar && !ecmdisable
 	Armament@sardaukar2:
 		Weapon: M_HMG-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-sardaukar
+		RequiresCondition: ifv-sardaukar && !ecmdisable
 	Armament@plasma:
 		Weapon: PlasBullet-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-plasma
+		RequiresCondition: ifv-plasma && !ecmdisable
 	Armament@sniper:
 		Weapon: SniperRifle-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-sniper
+		RequiresCondition: ifv-sniper && !ecmdisable
 	Armament@repair:
 		Weapon: Repair-ifv
 		LocalOffset: 575, 0, 175
-		RequiresCondition: ifv-repair
+		RequiresCondition: ifv-repair && !ecmdisable
 	AttackTurreted:
 	AutoTarget:
 	Cargo:
