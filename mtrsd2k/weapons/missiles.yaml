@@ -174,7 +174,7 @@ PhoenixRocket:
 	BurstDelay: 10
 	Range: 4c0
 	Projectile: Missile
-		Inaccuracy: 128
+		Inaccuracy: 96
 		Speed: 256
 		RangeLimit: 4c512
 	Warhead@1Dam: SpreadDamage
@@ -187,9 +187,9 @@ PhoenixRocket:
 			wood: 95
 			light: 50
 			concrete: 70
-			heavy: 20
+			heavy: 10
 			cy: 50
-			harvester: 25
+			harvester: 15
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
 		ExplosionPalette: effect75alpha
@@ -320,13 +320,19 @@ OrniRocket:
 	Inherits: mtank_pri
 	BurstDelay: 10
 	Range: 4c0
-	Warhead@1Dam: SpreadDamage
-		Damage: 600
 	Projectile: Missile
 		Speed: 256
 		RangeLimit: 5c204
 		HorizontalRateOfTurn: 6
 		VerticalRateOfTurn: 20
+	Warhead@1Dam: SpreadDamage
+		Damage: 600
+		Versus:
+			wall: 35
+			building: 40
+			wood: 45
+			concrete: 90
+			cy: 10
 
 DeviatorMissile:
 	ReloadDelay: 160
