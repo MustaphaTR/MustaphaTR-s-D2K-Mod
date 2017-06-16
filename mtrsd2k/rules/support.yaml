@@ -405,6 +405,8 @@ large_gun_turret:
 		VisualBounds: 32,40,0,-8
 	AutoTarget:
 		RequiresCondition: !corrino.rocket.strike
-	TimedConditionBar:
+	ExternalCondition@Strike:
+		Condition: corrino.rocket.strike
+	TimedConditionBar@Strike:
 		Condition: corrino.rocket.strike
 		Color: 222222
