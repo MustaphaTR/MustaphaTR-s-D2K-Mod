@@ -58,7 +58,7 @@
 		Name: Ixians
 		InternalName: ixian
 		Side: Atreides
-		Description: Ixians\n Special Units:\n - Mechanic\n - Jammer\n - Drone\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Raider\n Combat Tank Speciality:\n - Manual Repair\n Aircraft:\n - Ornithopter\n Speical Ability:\n - Better Repair Pad
+		Description: Ixians\n Special Units:\n - Mechanic\n - Jammer\n - Drone\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Raider\n Combat Tank Speciality:\n - Manual Repair\n Aircraft:\n - Ornithopter\n Speical Ability:\n - Has better Repair Pad
 	ResourceType@Spice:
 		ResourceType: 1
 		Palette: d2k
