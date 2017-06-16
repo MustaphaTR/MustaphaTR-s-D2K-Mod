@@ -284,9 +284,9 @@ ChainGun:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 192
-		Damage: 45
+		Damage: 50
 		Versus:
-			none: 200
+			none: 250
 			wall: 8
 			building: 25
 			wood: 50
