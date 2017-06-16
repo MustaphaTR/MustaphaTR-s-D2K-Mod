@@ -45,6 +45,7 @@ Bazooka-ifv:
 
 BazookaAA:
 	Inherits: Bazooka
+	Range: 4c0
 	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
@@ -101,6 +102,7 @@ Rocket:
 
 RocketAA:
 	Inherits: Rocket
+	Range: 4c512
 	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
@@ -157,6 +159,7 @@ Rocket.stealth:
 
 Rocket.stealthAA:
 	Inherits: Rocket.stealth
+	Range: 5c0
 	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
@@ -241,6 +244,7 @@ TowerMissile:
 
 TowerMissileAA:
 	Inherits: TowerMissile
+	Range: 6c512
 	ValidTargets: Air
 	Projectile: Missile
 		Inaccuracy: 0
@@ -306,6 +310,7 @@ mtank_pri:
 
 mtank_priAA:
 	Inherits: mtank_pri
+	Range: 7c0
 	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
@@ -381,6 +386,7 @@ DeviatorMissile:
 
 DeviatorMissileAA:
 	Inherits: DeviatorMissile
+	Range: 6c0
 	MinRange: 0c512
 	ValidTargets: Plane
 	Projectile: Missile

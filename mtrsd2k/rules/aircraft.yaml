@@ -122,7 +122,7 @@ ornithopter:
 ornithopter.controllable:
 	Inherits: ornithopter
 	Valued:
-		Cost: 1000
+		Cost: 1200
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 2
@@ -172,7 +172,7 @@ ornithopter.controllable:
 swarmer:
 	Inherits: ^Plane
 	Valued:
-		Cost: 400
+		Cost: 450
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 3
@@ -234,7 +234,7 @@ swarmer:
 phoenix:
 	Inherits: ^Plane
 	Valued:
-		Cost: 950
+		Cost: 1150
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 4
