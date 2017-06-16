@@ -443,7 +443,7 @@ upgrade.barracks:
 		BuildLimit: 1
 		BuildDuration: 290
 		BuildDurationModifier: 40
-		Description: Unlocks additional infantry:\n Trooper\n Engineer\n Thumper Infantry\n\nRequired to unlock faction specific infantry:\n Atreides: Grenadier\n Harkonnen: Flamethrower\n Fremen: Freman\n Emparor: Plasma Trooper
+		Description: Unlocks additional infantry:\n Trooper\n Engineer\n Thumper Infantry\n\nRequired to unlock faction specific infantry:\n Atreides: Grenadier\n Harkonnen: Flamethrower\n Fremen: Freman\n Ixian: Mechanic\n Emparor: Plasma Trooper
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -493,7 +493,7 @@ upgrade.light:
 		BuildLimit: 1
 		BuildDuration: 215
 		BuildDurationModifier: 40
-		Description: Unlocks additional light unit:\n Missile Quad \n\nRequired to unlock faction specific light unit:\n Ordos: Stealth Raider Trike\n Mercenary: Light Tank
+		Description: Unlocks additional light missile units.\n\nRequired to unlock faction specific light unit:\n Ordos: Stealth Raider Trike\n Mercenary: Light Tank
 	Valued:
 		Cost: 400
 	RenderSprites:
@@ -518,7 +518,7 @@ upgrade.heavy:
 		BuildLimit: 1
 		BuildDuration: 380
 		BuildDurationModifier: 40
-		Description: Unlocks additional construction options:\n Repair Pad \n IX Research Center\n\nUnlocks additional heavy units:\n Siege Tank\n Missile Tank\n MCV
+		Description: Unlocks additional construction options:\n Repair Pad\n IX Research Center\n\nUnlocks additional heavy units:\n Siege Tank\n Missile Tank\n MCV
 	Valued:
 		Cost: 800
 	RenderSprites:
