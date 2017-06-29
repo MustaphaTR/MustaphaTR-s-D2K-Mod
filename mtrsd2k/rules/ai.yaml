@@ -136,6 +136,9 @@ Player:
 			harvester.smuggler: 8
 			carryall: 4
 			carryall.smuggler: 4
+			ornithopter.controllable: 5
+			swarmer: 10
+			phoenix: 5
 		SquadSize: 8
 		MaxBaseRadius: 40
 		SupportPowerDecision@Airstrike:
@@ -342,6 +345,9 @@ Player:
 			harvester.smuggler: 8
 			carryall: 4
 			carryall.smuggler: 4
+			ornithopter.controllable: 5
+			swarmer: 10
+			phoenix: 5
 		SquadSize: 6
 		MaxBaseRadius: 40
 		SupportPowerDecision@Airstrike:
@@ -547,6 +553,9 @@ Player:
 			harvester.smuggler: 8
 			carryall: 4
 			carryall.smuggler: 4
+			ornithopter.controllable: 5
+			swarmer: 10
+			phoenix: 5
 		SquadSize: 10
 		MaxBaseRadius: 40
 		SupportPowerDecision@Airstrike:
