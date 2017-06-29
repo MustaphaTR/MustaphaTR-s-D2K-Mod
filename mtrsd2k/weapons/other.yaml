@@ -19,12 +19,19 @@ Sound:
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
-			wall: 50
-			building: 60
-			heavy: 60
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 100
+			armor_infantry_flak: 100
+			armor_infantry_plate: 100
+			armor_building_wall: 50
+			armor_building_wood: 100
+			armor_building_steel: 60
+			armor_building_concrete: 50
+			armor_building_conyard: 20
+			armor_vehicle_light: 100
+			armor_vehicle_medium: 80
+			armor_vehicle_heavy: 60
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 32
@@ -33,12 +40,19 @@ Sound:
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:
-			wall: 50
-			building: 60
-			heavy: 60
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 100
+			armor_infantry_flak: 100
+			armor_infantry_plate: 100
+			armor_building_wall: 50
+			armor_building_wood: 100
+			armor_building_steel: 60
+			armor_building_concrete: 50
+			armor_building_conyard: 20
+			armor_vehicle_light: 100
+			armor_vehicle_medium: 80
+			armor_vehicle_heavy: 60
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
 
 sound2:
@@ -52,11 +66,15 @@ sound2:
 	Warhead@1Dam: SpreadDamage
 		Damage: 125
 		Versus:
-			none: 150
+			armor_infantry_none: 150
+			armor_infantry_flak: 150
+			armor_infantry_plate: 150
 	Warhead@2Dam: SpreadDamage
 		Damage: 125
 		Versus:
-			none: 150
+			armor_infantry_none: 150
+			armor_infantry_flak: 150
+			armor_infantry_plate: 150
 
 sound2-ifv:
 	Inherits: sound2
@@ -65,11 +83,15 @@ sound2-ifv:
 	Warhead@1Dam: SpreadDamage
 		Damage: 175
 		Versus:
-			none: 125
+			armor_infantry_none: 125
+			armor_infantry_flak: 125
+			armor_infantry_plate: 125
 	Warhead@2Dam: SpreadDamage
 		Damage: 175
 		Versus:
-			none: 125
+			armor_infantry_none: 125
+			armor_infantry_flak: 125
+			armor_infantry_plate: 125
 
 Heal:
 	ReloadDelay: 160
@@ -122,16 +144,19 @@ OrniBomb:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 1000
 		Versus:
-			none: 90
-			wall: 50
-			building: 75
-			wood: 60
-			concrete: 60
-			light: 60
-			heavy: 60
-			invulnerable: 0
-			cy: 25
-			harvester: 60
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 75
+			armor_building_concrete: 90
+			armor_building_conyard: 25
+			armor_vehicle_light: 60
+			armor_vehicle_medium: 60
+			armor_vehicle_heavy: 60
+			armor_vehicle_harvester: 60
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -160,16 +185,19 @@ Atomic:
 		Falloff: 200, 100, 50, 25, 12, 0
 		Damage: 2700
 		Versus:
-			none: 90
-			wall: 50
-			building: 75
-			wood: 60
-			concrete: 60
-			light: 60
-			heavy: 60
-			invulnerable: 0
-			cy: 25
-			harvester: 60
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 75
+			armor_building_concrete: 90
+			armor_building_conyard: 25
+			armor_vehicle_light: 60
+			armor_vehicle_medium: 60
+			armor_vehicle_heavy: 60
+			armor_vehicle_harvester: 60
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: nuke
@@ -181,16 +209,19 @@ CrateNuke:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 500
 		Versus:
-			none: 90
-			wall: 50
-			building: 75
-			wood: 60
-			concrete: 60
-			light: 60
-			heavy: 60
-			invulnerable: 0
-			cy: 25
-			harvester: 60
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 75
+			armor_building_concrete: 90
+			armor_building_conyard: 25
+			armor_vehicle_light: 60
+			armor_vehicle_medium: 60
+			armor_vehicle_heavy: 60
+			armor_vehicle_harvester: 60
+			armor_invulnerable: 0
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
 	Warhead@2Eff: CreateEffect
@@ -203,16 +234,19 @@ CrateExplosion:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 500
 		Versus:
-			none: 90
-			wall: 5
-			building: 65
-			wood: 50
-			concrete: 40
-			light: 50
-			heavy: 30
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 5
+			armor_building_wood: 50
+			armor_building_steel: 65
+			armor_building_concrete: 80
+			armor_building_conyard: 20
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 30
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -227,16 +261,19 @@ BuggyExplosion:
 		ValidTargets: Ground, Air
 		Damage: 1500
 		Versus:
-			none: 90
-			wall: 50
-			building: 75
-			wood: 60
-			concrete: 60
-			light: 70
-			heavy: 70
-			invulnerable: 0
-			cy: 30
-			harvester: 70
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 75
+			armor_building_concrete: 90
+			armor_building_conyard: 30
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 70
+			armor_vehicle_heavy: 70
+			armor_vehicle_harvester: 70
+			armor_invulnerable: 0
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -251,11 +288,14 @@ SuicideBomberExplosion:
 		Falloff: 100, 100, 100, 100, 75, 50
 		ValidTargets: Ground
 		Versus:
-			none: 150
-			wall: 90
-			building: 100
-			wood: 100
-			cy: 90
+			armor_infantry_none: 150
+			armor_infantry_flak: 140
+			armor_infantry_plate: 130
+			armor_building_wall: 90
+			armor_building_wood: 100
+			armor_building_steel: 100
+			armor_building_concrete: 100
+			armor_building_conyard: 90
 
 UnitExplodeSmall:
 	Warhead@1Eff: CreateEffect
@@ -296,14 +336,19 @@ grenade:
 		Falloff: 100, 65, 35, 20, 0
 		Damage: 150
 		Versus:
-			none: 160
-			wood: 75
-			concrete: 35
-			light: 75
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 160
+			armor_infantry_flak: 150
+			armor_infantry_plate: 140
+			armor_building_wall: 100
+			armor_building_wood: 75
+			armor_building_steel: 80
+			armor_building_concrete: 85
+			armor_building_conyard: 20
+			armor_vehicle_light: 75
+			armor_vehicle_medium: 50
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater
@@ -325,14 +370,19 @@ GrenDeath:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 150
 		Versus:
-			none: 160
-			wood: 75
-			concrete: 35
-			light: 75
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 160
+			armor_infantry_flak: 150
+			armor_infantry_plate: 140
+			armor_building_wall: 100
+			armor_building_wood: 75
+			armor_building_steel: 80
+			armor_building_concrete: 85
+			armor_building_conyard: 20
+			armor_vehicle_light: 75
+			armor_vehicle_medium: 50
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -346,15 +396,19 @@ SardDeath:
 		Falloff: 100, 50, 25, 0
 		Damage: 300
 		Versus:
-			none: 15
-			wall: 75
-			building: 60
-			wood: 65
-			concrete: 90
-			light: 65
-			invulnerable: 0
-			cy: 30
-			harvester: 50
+			armor_infantry_none: 15
+			armor_infantry_flak: 12
+			armor_infantry_plate: 10
+			armor_building_wall: 75
+			armor_building_wood: 65
+			armor_building_steel: 60
+			armor_building_concrete: 55
+			armor_building_conyard: 30
+			armor_vehicle_light: 65
+			armor_vehicle_medium: 80
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -374,16 +428,19 @@ SpiceExplosion:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 75
 		Versus:
-			none: 90
-			wall: 5
-			building: 65
-			wood: 50
-			concrete: 40
-			light: 50
-			heavy: 30
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 5
+			armor_building_wood: 50
+			armor_building_steel: 65
+			armor_building_concrete: 80
+			armor_building_conyard: 20
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 30
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		AffectsParent: true
 	Warhead@2Res: CreateResource
@@ -404,16 +461,19 @@ BloomExplosion:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 750
 		Versus:
-			none: 90
-			wall: 5
-			building: 65
-			wood: 50
-			concrete: 40
-			light: 50
-			heavy: 30
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 5
+			armor_building_wood: 50
+			armor_building_steel: 65
+			armor_building_concrete: 80
+			armor_building_conyard: 20
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 30
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		AffectsParent: true
 
@@ -437,16 +497,19 @@ Flamegun:
 		Falloff: 100, 50, 0
 		Damage: 80
 		Versus:
-			none: 150
-			wall: 10
-			building: 25
-			wood: 30
-			concrete: 25
-			light: 35
-			heavy: 10
-			invulnerable: 0
-			cy: 10
-			harvester: 10
+			armor_infantry_none: 150
+			armor_infantry_flak: 95
+			armor_infantry_plate: 90
+			armor_building_wall: 10
+			armor_building_wood: 30
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 35
+			armor_vehicle_medium: 20
+			armor_vehicle_heavy: 10
+			armor_vehicle_harvester: 10
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: flame
@@ -467,11 +530,19 @@ Flamegun-tower:
 	Warhead@1Dam: SpreadDamage
 		Damage: 90
 		Versus:
-			wall: 8
-			building: 20
-			wood: 25
-			concrete: 20
-			cy: 8
+			armor_infantry_none: 100
+			armor_infantry_flak: 95
+			armor_infantry_plate: 90
+			armor_building_wall: 8
+			armor_building_wood: 25
+			armor_building_steel: 20
+			armor_building_concrete: 15
+			armor_building_conyard: 8
+			armor_vehicle_light: 35
+			armor_vehicle_medium: 20
+			armor_vehicle_heavy: 10
+			armor_vehicle_harvester: 10
+			armor_invulnerable: 0
 
 DogJaw:
 	ValidTargets: Infantry
@@ -529,11 +600,19 @@ ATMine:
 		Falloff: 100, 100, 100, 100, 100
 		Damage: 1500
 		Versus:
-			none: 50
-			light: 80
-			heavy: 100
-			invulnerable: 0
-			harvester: 100
+			armor_infantry_none: 50
+			armor_infantry_flak: 40
+			armor_infantry_plate: 30
+			armor_building_wall: 0
+			armor_building_wood: 0
+			armor_building_steel: 0
+			armor_building_concrete: 0
+			armor_building_conyard: 0
+			armor_vehicle_light: 80
+			armor_vehicle_medium: 90
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 100
+			armor_invulnerable: 0
 		AffectsParent: true
 		InvalidTargets: Structure, Wall, Mine
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -550,11 +629,19 @@ APMine:
 		Falloff: 100, 100, 100, 100, 100
 		Damage: 1500
 		Versus:
-			none: 100
-			light: 25
-			heavy: 5
-			invulnerable: 0
-			harvester: 10
+			armor_infantry_none: 100
+			armor_infantry_flak: 100
+			armor_infantry_plate: 100
+			armor_building_wall: 0
+			armor_building_wood: 0
+			armor_building_steel: 0
+			armor_building_concrete: 0
+			armor_building_conyard: 0
+			armor_vehicle_light: 25
+			armor_vehicle_medium: 15
+			armor_vehicle_heavy: 5
+			armor_vehicle_harvester: 10
+			armor_invulnerable: 0
 		AffectsParent: true
 		InvalidTargets: Structure, Wall, Mine
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath

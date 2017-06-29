@@ -219,7 +219,7 @@
 		Shape: Circle
 			Radius: 96
 	Armor:
-		Type: none
+		Type: armor_infantry_none
 	RevealsShroud:
 		Range: 3c768
 	Mobile:
@@ -421,7 +421,7 @@
 		HP: 100
 		NotifyAppliedDamage: false
 	Armor:
-		Type: Light
+		Type: armor_building_wall
 	Building:
 		TerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
 		Adjacent: 8
@@ -449,7 +449,7 @@
 ^Trike:
 	Inherits: ^Vehicle
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	RevealsShroud:
 		Range: 4c768
 	WithMuzzleOverlay:
@@ -464,7 +464,7 @@
 ^Raider:
 	Inherits: ^Vehicle
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	RevealsShroud:
 		Range: 4c768
 	WithMuzzleOverlay:
@@ -479,7 +479,7 @@
 ^Quad:
 	Inherits: ^Vehicle
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	RevealsShroud:
 		Range: 4c768
 	WithMuzzleOverlay:
@@ -511,7 +511,7 @@
 	Health:
 		HP: 2100
 	Armor:
-		Type: heavy
+		Type: armor_vehicle_heavy
 	Mobile:
 		Speed: 75
 		TurnSpeed: 5
@@ -544,7 +544,7 @@
 	Health:
 		HP: 75
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	HiddenUnderFog:
 		Type: CenterPosition
 	Tooltip:
@@ -592,7 +592,7 @@
 	Health:
 		HP: 125
 	Armor:
-		Type: concrete
+		Type: armor_building_wall
 	Husk:
 	AppearsOnRadar:
 	HiddenUnderFog:

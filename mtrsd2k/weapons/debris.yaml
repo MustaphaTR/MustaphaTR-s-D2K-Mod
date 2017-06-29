@@ -15,16 +15,19 @@ Debris:
 		Falloff: 100, 60, 30, 15, 0
 		Damage: 150
 		Versus:
-			none: 20
-			wall: 50
-			building: 50
-			wood: 60
-			light: 100
-			heavy: 75
-			concrete: 100
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 20
+			armor_infantry_flak: 15
+			armor_infantry_plate: 10
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 50
+			armor_building_concrete: 40
+			armor_building_conyard: 20
+			armor_vehicle_light: 100
+			armor_vehicle_medium: 90
+			armor_vehicle_heavy: 75
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater
@@ -42,16 +45,19 @@ Debris2:
 	Warhead@1Dam: SpreadDamage
 		Damage: 250
 		Versus:
-			none: 90
-			wall: 5
-			building: 65
-			wood: 50
-			light: 40
-			heavy: 30
-			concrete: 100
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 90
+			armor_infantry_flak: 85
+			armor_infantry_plate: 80
+			armor_building_wall: 5
+			armor_building_wood: 50
+			armor_building_steel: 65
+			armor_building_concrete: 80
+			armor_building_conyard: 20
+			armor_vehicle_light: 40
+			armor_vehicle_medium: 35
+			armor_vehicle_heavy: 30
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: small_napalm

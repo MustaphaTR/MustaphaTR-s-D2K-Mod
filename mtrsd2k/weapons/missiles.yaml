@@ -18,16 +18,19 @@ Bazooka:
 		Damage: 300
 		ValidTargets: Ground
 		Versus:
-			none: 8
-			wall: 75
-			building: 40
-			wood: 45
-			concrete: 70
-			light: 45
-			heavy: 90
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 8
+			armor_infantry_flak: 7
+			armor_infantry_plate: 6
+			armor_building_wall: 75
+			armor_building_wood: 45
+			armor_building_steel: 40
+			armor_building_concrete: 35
+			armor_building_conyard: 20
+			armor_vehicle_light: 45
+			armor_vehicle_medium: 65
+			armor_vehicle_heavy: 90
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -83,14 +86,19 @@ Rocket:
 		Damage: 250
 		ValidTargets: Ground
 		Versus:
-			none: 25
-			building: 50
-			wood: 65
-			light: 65
-			heavy: 55
-			invulnerable: 0
-			cy: 20
-			harvester: 55
+			armor_infantry_none: 25
+			armor_infantry_flak: 20
+			armor_infantry_plate: 15
+			armor_building_wall: 100
+			armor_building_wood: 65
+			armor_building_steel: 50
+			armor_building_concrete: 35
+			armor_building_conyard: 20
+			armor_vehicle_light: 65
+			armor_vehicle_medium: 50
+			armor_vehicle_heavy: 55
+			armor_vehicle_harvester: 55
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -184,15 +192,19 @@ PhoenixRocket:
 		Spread: 256
 		Damage: 700
 		Versus:
-			none: 100
-			wall: 50
-			building: 90
-			wood: 95
-			light: 50
-			concrete: 70
-			heavy: 10
-			cy: 50
-			harvester: 15
+			armor_infantry_none: 100
+			armor_infantry_flak: 95
+			armor_infantry_plate: 90
+			armor_building_wall: 50
+			armor_building_wood: 95
+			armor_building_steel: 90
+			armor_building_concrete: 85
+			armor_building_conyard: 50
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 30
+			armor_vehicle_heavy: 10
+			armor_vehicle_harvester: 15
+			armor_invulnerable: 0
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
 		ExplosionPalette: effect75alpha
@@ -225,15 +237,19 @@ TowerMissile:
 		Damage: 480
 		ValidTargets: Ground
 		Versus:
-			none: 15
-			wall: 75
-			building: 60
-			wood: 65
-			light: 70
-			concrete: 90
-			invulnerable: 0
-			cy: 30
-			harvester: 50
+			armor_infantry_none: 15
+			armor_infantry_flak: 12
+			armor_infantry_plate: 10
+			armor_building_wall: 75
+			armor_building_wood: 65
+			armor_building_steel: 60
+			armor_building_concrete: 55
+			armor_building_conyard: 30
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 85
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -291,15 +307,19 @@ mtank_pri:
 		Damage: 600
 		ValidTargets: Ground
 		Versus:
-			none: 15
-			wall: 75
-			building: 60
-			wood: 65
-			concrete: 90
-			light: 70
-			invulnerable: 0
-			cy: 30
-			harvester: 50
+			armor_infantry_none: 15
+			armor_infantry_flak: 12
+			armor_infantry_plate: 10
+			armor_building_wall: 75
+			armor_building_wood: 65
+			armor_building_steel: 60
+			armor_building_concrete: 55
+			armor_building_conyard: 30
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 85
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -333,11 +353,19 @@ OrniRocket:
 	Warhead@1Dam: SpreadDamage
 		Damage: 600
 		Versus:
-			wall: 35
-			building: 40
-			wood: 45
-			concrete: 90
-			cy: 10
+			armor_infantry_none: 15
+			armor_infantry_flak: 12
+			armor_infantry_plate: 10
+			armor_building_wall: 35
+			armor_building_wood: 45
+			armor_building_steel: 40
+			armor_building_concrete: 35
+			armor_building_conyard: 10
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 85
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 
 DeviatorMissile:
 	ReloadDelay: 160
@@ -363,16 +391,19 @@ DeviatorMissile:
 		Falloff: 100, 50, 25, 0
 		Damage: 500
 		Versus:
-			none: 20
-			wall: 20
-			building: 20
-			wood: 20
-			concrete: 20
-			light: 20
-			heavy: 20
-			invulnerable: 0
-			cy: 10
-			harvester: 20
+			armor_infantry_none: 20
+			armor_infantry_flak: 20
+			armor_infantry_plate: 20
+			armor_building_wall: 20
+			armor_building_wood: 20
+			armor_building_steel: 20
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 20
+			armor_vehicle_medium: 20
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 20
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: deviator

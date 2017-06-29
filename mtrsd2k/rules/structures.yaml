@@ -14,7 +14,7 @@ construction_yard:
 	Health:
 		HP: 3000
 	Armor:
-		Type: cy
+		Type: armor_building_conyard
 	RevealsShroud:
 		Range: 5c768
 	Production:
@@ -121,7 +121,7 @@ wind_trap:
 	Health:
 		HP: 3000
 	Armor:
-		Type: building
+		Type: armor_building_steel
 	RevealsShroud:
 		Range: 3c768
 	RenderSprites:
@@ -165,7 +165,7 @@ barracks:
 	Health:
 		HP: 3200
 	Armor:
-		Type: wood
+		Type: armor_building_wood
 	RevealsShroud:
 		Range: 3c768
 	RallyPoint:
@@ -256,7 +256,7 @@ refinery:
 	Health:
 		HP: 3000
 	Armor:
-		Type: building
+		Type: armor_building_concrete
 	RevealsShroud:
 		Range: 4c768
 	Refinery:
@@ -337,7 +337,7 @@ outpost:
 	Health:
 		HP: 3500
 	Armor:
-		Type: concrete
+		Type: armor_building_steel
 	RevealsShroud:
 		Range: 4c768
 	ProvidesRadar:
@@ -422,7 +422,7 @@ light_factory:
 	Health:
 		HP: 3300
 	Armor:
-		Type: concrete
+		Type: armor_building_steel
 	RevealsShroud:
 		Range: 4c768
 	RenderSprites:
@@ -534,7 +534,7 @@ heavy_factory:
 	Health:
 		HP: 3500
 	Armor:
-		Type: wood
+		Type: armor_building_concrete
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
@@ -638,7 +638,7 @@ high_tech_factory:
 	Health:
 		HP: 3500
 	Armor:
-		Type: wood
+		Type: armor_building_steel
 	RevealsShroud:
 		Range: 4c768
 	RenderSprites:
@@ -726,7 +726,7 @@ starport:
 	Health:
 		HP: 3500
 	Armor:
-		Type: building
+		Type: armor_building_steel
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
@@ -813,7 +813,7 @@ repair_pad:
 	Health:
 		HP: 3000
 	Armor:
-		Type: building
+		Type: armor_building_steel
 	RevealsShroud:
 		Range: 4c768
 	Selectable:
@@ -857,6 +857,8 @@ repair_pad.ixian:
 		Footprint: _x_ xxx _x_
 	Health:
 		HP: 4000
+	Armor:
+		Type: armor_building_concrete
 	RepairsUnits:
 		Interval: 5
 	Power:
@@ -886,7 +888,7 @@ research_centre:
 	Health:
 		HP: 2500
 	Armor:
-		Type: wood
+		Type: armor_building_wood
 	RevealsShroud:
 		Range: 4c768
 	RenderSprites:
@@ -947,7 +949,7 @@ palace:
 	Health:
 		HP: 4000
 	Armor:
-		Type: wood
+		Type: armor_building_conyard
 	RevealsShroud:
 		Range: 4c768
 	RenderSprites:
@@ -1123,7 +1125,7 @@ sietch:
 	Health:
 		HP: 6000
 	Armor:
-		Type: wood
+		Type: armor_building_wood
 	RevealsShroud:
 		Range: 3c768
 	-DamagedByTerrain:

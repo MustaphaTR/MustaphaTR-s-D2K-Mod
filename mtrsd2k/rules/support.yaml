@@ -47,7 +47,7 @@ silo:
 	Health:
 		HP: 1500
 	Armor:
-		Type: wall
+		Type: armor_building_wood
 	RevealsShroud:
 		Range: 2c768
 	RenderSprites:
@@ -122,7 +122,7 @@ wall:
 			TopLeft: -512, -512
 			BottomRight: 512, 512
 	Armor:
-		Type: none
+		Type: armor_building_wall
 	RevealsShroud:
 		Range: 2c768
 	Crushable:
@@ -202,7 +202,7 @@ machine_gun_tower:
 	Health:
 		HP: 2500
 	Armor:
-		Type: heavy
+		Type: armor_building_wall
 	RevealsShroud:
 		Range: 4c768
 	BodyOrientation:
@@ -244,7 +244,7 @@ flame_tower:
 	Health:
 		HP: 2500
 	Armor:
-		Type: heavy
+		Type: armor_building_wall
 	RevealsShroud:
 		Range: 4c768
 	BodyOrientation:
@@ -283,7 +283,7 @@ artillery_platform:
 	Health:
 		HP: 2500
 	Armor:
-		Type: heavy
+		Type: armor_building_wall
 	RevealsShroud:
 		Range: 4c768
 	BodyOrientation:
@@ -327,7 +327,7 @@ medium_gun_turret:
 	Health:
 		HP: 2750
 	Armor:
-		Type: heavy
+		Type: armor_building_wall
 	RevealsShroud:
 		Range: 4c768
 	BodyOrientation:
@@ -374,7 +374,7 @@ large_gun_turret:
 	Health:
 		HP: 3000
 	Armor:
-		Type: heavy
+		Type: armor_building_wall
 	RevealsShroud:
 		Range: 5c768
 	BodyOrientation:

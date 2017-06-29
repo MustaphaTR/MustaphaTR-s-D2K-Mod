@@ -7,7 +7,7 @@ carryall.reinforce:
 	Health:
 		HP: 4800
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	Aircraft:
 		CruiseAltitude: 2160
 		InitialFacing: 0
@@ -104,7 +104,7 @@ ornithopter:
 	Health:
 		HP: 900
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	Aircraft:
 		CruiseAltitude: 1920
 		Speed: 189
@@ -121,6 +121,7 @@ ornithopter:
 
 ornithopter.controllable:
 	Inherits: ornithopter
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 1200
 	Buildable:
@@ -171,6 +172,7 @@ ornithopter.controllable:
 
 swarmer:
 	Inherits: ^Plane
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 450
 	Buildable:
@@ -185,7 +187,7 @@ swarmer:
 	Health:
 		HP: 500
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	ReturnOnIdle:
 	RevealsShroud:
 		Range: 5c0
@@ -233,6 +235,7 @@ swarmer:
 
 phoenix:
 	Inherits: ^Plane
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 1150
 	Buildable:
@@ -247,7 +250,7 @@ phoenix:
 	Health:
 		HP: 750
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	ReturnOnIdle:
 	RevealsShroud:
 		Range: 4c512

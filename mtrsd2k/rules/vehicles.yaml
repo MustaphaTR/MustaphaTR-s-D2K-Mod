@@ -245,7 +245,7 @@ light_tank:
 	Health:
 		HP: 1500
 	Armor:
-		Type: heavy
+		Type: armor_vehicle_heavy
 	Mobile:
 		TurnSpeed: 7
 		Speed: 98
@@ -305,7 +305,7 @@ harvester:
 	Health:
 		HP: 4500
 	Armor:
-		Type: harvester
+		Type: armor_vehicle_harvester
 	Mobile:
 		Speed: 43
 		Crushes: crate, infantry, spicebloom, mine
@@ -470,7 +470,7 @@ siege_tank:
 	Health:
 		HP: 1200
 	Armor:
-		Type: light
+		Type: armor_vehicle_medium
 	Mobile:
 		Speed: 43
 		TurnSpeed: 3
@@ -520,7 +520,7 @@ mcv:
 	Health:
 		HP: 4500
 	Armor:
-		Type: light
+		Type: armor_vehicle_heavy
 	Mobile:
 		Speed: 31
 		Crushes: crate, infantry, spicebloom, mine
@@ -568,7 +568,7 @@ missile_tank:
 	Health:
 		HP: 1300
 	Armor:
-		Type: light
+		Type: armor_vehicle_medium
 	RevealsShroud:
 		Range: 6c768
 	Armament@Ground:
@@ -608,7 +608,7 @@ sonic_tank:
 	Health:
 		HP: 3000
 	Armor:
-		Type: light
+		Type: armor_vehicle_heavy
 	Mobile:
 		TurnSpeed: 3
 		Speed: 31
@@ -651,7 +651,7 @@ stealth_tank:
 	Health:
 		HP: 950
 	Armor:
-		Type: light
+		Type: armor_vehicle_medium
 	RevealsShroud:
 		Range: 3c0
 	Cloak:
@@ -700,7 +700,7 @@ jammer:
 	Health:
 		HP: 900
 	Armor:
-		Type: Heavy
+		Type: armor_vehicle_heavy
 	Mobile:
 		TurnSpeed: 3
 		Speed: 62
@@ -754,7 +754,7 @@ devastator:
 	Health:
 		HP: 5000
 	Armor:
-		Type: heavy
+		Type: armor_vehicle_heavy
 	Mobile:
 		TurnSpeed: 3
 		Speed: 31
@@ -802,7 +802,7 @@ quake_tank:
 	Health:
 		HP: 5500
 	Armor:
-		Type: heavy
+		Type: armor_vehicle_heavy
 	Mobile:
 		Speed: 34
 		Crushes: crate, infantry, spicebloom, wall, mine
@@ -849,7 +849,7 @@ deviator:
 	Health:
 		HP: 1100
 	Armor:
-		Type: light
+		Type: armor_vehicle_medium
 	RevealsShroud:
 		Range: 4c768
 	Armament@Ground:
@@ -901,7 +901,7 @@ bomb_buggy:
 	Health:
 		HP: 400
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	RevealsShroud:
 		Range: 4c768
 	Explodes:
@@ -938,7 +938,7 @@ ifv:
 	Health:
 		HP: 1300
 	Armor:
-		Type: heavy
+		Type: armor_vehicle_heavy
 	RevealsShroud:
 		Range: 3c768
 	Turreted:

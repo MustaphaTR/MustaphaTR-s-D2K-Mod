@@ -9,16 +9,19 @@ LMG:
 		Falloff: 100, 50, 25, 0
 		Damage: 125
 		Versus:
-			none: 200
-			wall: 8
-			building: 25
-			wood: 50
-			concrete: 30
-			light: 50
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 200
+			armor_infantry_flak: 175
+			armor_infantry_plate: 150
+			armor_building_wall: 8
+			armor_building_wood: 50
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -41,16 +44,19 @@ Fremen_S:
 		Falloff: 100, 50, 25, 0
 		Damage: 125
 		Versus:
-			none: 200
-			wall: 8
-			building: 25
-			wood: 50
-			concrete: 30
-			light: 50
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 200
+			armor_infantry_flak: 175
+			armor_infantry_plate: 150
+			armor_building_wall: 8
+			armor_building_wood: 50
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_explosion
@@ -74,16 +80,19 @@ M_LMG:
 		Falloff: 100, 50, 25, 0
 		Damage: 125
 		Versus:
-			none: 200
-			wall: 8
-			building: 25
-			wood: 50
-			concrete: 30
-			light: 50
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 200
+			armor_infantry_flak: 175
+			armor_infantry_plate: 150
+			armor_building_wall: 8
+			armor_building_wood: 50
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -106,14 +115,19 @@ M_HMG:
 		Falloff: 100, 50, 25, 0
 		Damage: 250
 		Versus:
-			none: 25
-			building: 50
-			wood: 65
-			light: 65
-			heavy: 50
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 25
+			armor_infantry_flak: 20
+			armor_infantry_plate: 15
+			armor_building_wall: 100
+			armor_building_wood: 65
+			armor_building_steel: 50
+			armor_building_concrete: 35
+			armor_building_conyard: 20
+			armor_vehicle_light: 65
+			armor_vehicle_medium: 60
+			armor_vehicle_heavy: 50
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -137,14 +151,19 @@ Fremen_L:
 		Falloff: 100, 50, 25, 0
 		Damage: 250
 		Versus:
-			none: 25
-			building: 50
-			wood: 65
-			light: 65
-			heavy: 50
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 25
+			armor_infantry_flak: 20
+			armor_infantry_plate: 15
+			armor_building_wall: 100
+			armor_building_wood: 65
+			armor_building_steel: 50
+			armor_building_concrete: 35
+			armor_building_conyard: 20
+			armor_vehicle_light: 65
+			armor_vehicle_medium: 60
+			armor_vehicle_heavy: 50
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_explosion
@@ -167,16 +186,19 @@ HMG:
 		Falloff: 100, 60, 30, 0
 		Damage: 155
 		Versus:
-			none: 200
-			wall: 8
-			building: 25
-			wood: 50
-			concrete: 30
-			light: 50
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 200
+			armor_infantry_flak: 175
+			armor_infantry_plate: 150
+			armor_building_wall: 8
+			armor_building_wood: 50
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -260,16 +282,19 @@ SniperRifle-ifv:
 		Damage: 125
 		ValidTargets: Ground, Air
 		Versus:
-			none: 200
-			wall: 8
-			building: 25
-			wood: 50
-			concrete: 30
-			light: 50
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 200
+			armor_infantry_flak: 175
+			armor_infantry_plate: 150
+			armor_building_wall: 8
+			armor_building_wood: 50
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -286,16 +311,19 @@ ChainGun:
 		Spread: 192
 		Damage: 50
 		Versus:
-			none: 250
-			wall: 8
-			building: 25
-			wood: 50
-			concrete: 30
-			light: 50
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 250
+			armor_infantry_flak: 225
+			armor_infantry_plate: 200
+			armor_building_wall: 8
+			armor_building_wood: 50
+			armor_building_steel: 25
+			armor_building_concrete: 20
+			armor_building_conyard: 10
+			armor_vehicle_light: 50
+			armor_vehicle_medium: 40
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs

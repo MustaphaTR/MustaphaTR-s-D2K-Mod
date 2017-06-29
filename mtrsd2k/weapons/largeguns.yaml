@@ -13,15 +13,19 @@
 		Falloff: 100, 50, 25, 0
 		Damage: 290
 		Versus:
-			none: 20
-			wall: 50
-			building: 50
-			wood: 60
-			light: 75
-			heavy: 85
-			invulnerable: 0
-			cy: 20
-			harvester: 60
+			armor_infantry_none: 20
+			armor_infantry_flak: 15
+			armor_infantry_plate: 10
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 50
+			armor_building_concrete: 40
+			armor_building_conyard: 20
+			armor_vehicle_light: 75
+			armor_vehicle_medium: 80
+			armor_vehicle_heavy: 85
+			armor_vehicle_harvester: 60
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -43,15 +47,19 @@
 		Falloff: 100, 50, 25, 0
 		Damage: 270
 		Versus:
-			none: 20
-			wall: 50
-			building: 50
-			wood: 60
-			light: 60
-			heavy: 75
-			invulnerable: 0
-			cy: 20
-			harvester: 50
+			armor_infantry_none: 20
+			armor_infantry_flak: 15
+			armor_infantry_plate: 10
+			armor_building_wall: 50
+			armor_building_wood: 60
+			armor_building_steel: 50
+			armor_building_concrete: 40
+			armor_building_conyard: 20
+			armor_vehicle_light: 60
+			armor_vehicle_medium: 65
+			armor_vehicle_heavy: 75
+			armor_vehicle_harvester: 50
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -89,15 +97,19 @@
 	Warhead@1Dam: SpreadDamage
 		Damage: 70
 		Versus:
-			none: 20
-			wall: 40
-			building: 40
-			wood: 40
-			light: 150
-			heavy: 220
-			invulnerable: 0
-			cy: 20
-			harvester: 80
+			armor_infantry_none: 20
+			armor_infantry_flak: 15
+			armor_infantry_plate: 10
+			armor_building_wall: 40
+			armor_building_wood: 40
+			armor_building_steel: 40
+			armor_building_concrete: 30
+			armor_building_conyard: 20
+			armor_vehicle_light: 150
+			armor_vehicle_medium: 190
+			armor_vehicle_heavy: 220
+			armor_vehicle_harvester: 80
+			armor_invulnerable: 0
 
 DevBullet:
 	ReloadDelay: 75
@@ -112,12 +124,19 @@ DevBullet:
 		Falloff: 100, 50, 25, 0
 		Damage: 650
 		Versus:
-			none: 60
-			building: 75
-			wood: 60
-			light: 70
-			invulnerable: 0
-			cy: 40
+			armor_infantry_none: 60
+			armor_infantry_flak: 55
+			armor_infantry_plate: 50
+			armor_building_wall: 100
+			armor_building_wood: 60
+			armor_building_steel: 75
+			armor_building_concrete: 80
+			armor_building_conyard: 40
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 85
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 80
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -137,12 +156,19 @@ PlasBullet:
 		Spread: 256
 		Damage: 250
 		Versus:
-			none: 60
-			building: 40
-			wood: 30
-			light: 70
-			invulnerable: 0
-			cy: 20
+			armor_infantry_none: 60
+			armor_infantry_flak: 55
+			armor_infantry_plate: 50
+			armor_building_wall: 100
+			armor_building_wood: 30
+			armor_building_steel: 40
+			armor_building_concrete: 50
+			armor_building_conyard: 20
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 85
+			armor_vehicle_heavy: 100
+			armor_vehicle_harvester: 80
+			armor_invulnerable: 0
 	Warhead@3Eff: CreateEffect
 		Explosions: plasmaexpsml
 
@@ -170,14 +196,19 @@ PlasBullet-ifv:
 		Falloff: 100, 65, 35, 20, 0
 		Damage: 450
 		Versus:
-			none: 150
-			wood: 70
-			concrete: 30
-			light: 70
-			heavy: 20
-			invulnerable: 0
-			cy: 20
-			harvester: 25
+			armor_infantry_none: 150
+			armor_infantry_flak: 140
+			armor_infantry_plate: 130
+			armor_building_wall: 100
+			armor_building_wood: 70
+			armor_building_steel: 80
+			armor_building_concrete: 90
+			armor_building_conyard: 30
+			armor_vehicle_light: 70
+			armor_vehicle_medium: 50
+			armor_vehicle_heavy: 20
+			armor_vehicle_harvester: 25
+			armor_invulnerable: 0
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater

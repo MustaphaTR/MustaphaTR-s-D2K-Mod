@@ -116,6 +116,8 @@ engineer:
 		Class: engineer
 	Health:
 		HP: 500
+	Armor:
+		Type: armor_infantry_flak
 	RevealsShroud:
 		Range: 2c768
 	Mobile:
@@ -148,6 +150,8 @@ thumper:
 		Class: thumper
 	Health:
 		HP: 375
+	Armor:
+		Type: armor_infantry_flak
 	RevealsShroud:
 		Range: 2c768
 	Mobile:
@@ -199,6 +203,8 @@ grenadier:
 		Class: grenadier
 	Health:
 		HP: 600
+	Armor:
+		Type: armor_infantry_flak
 	Mobile:
 		Speed: 43
 	Armament:
@@ -251,6 +257,8 @@ mechanic:
 		Name: Mechanic
 	Health:
 		HP: 525
+	Armor:
+		Type: armor_infantry_flak
 	Mobile:
 		Speed: 38
 	RevealsShroud:
@@ -291,6 +299,8 @@ flamethrower:
 		Class: flamethrower
 	Health:
 		HP: 600
+	Armor:
+		Type: armor_infantry_flak
 	Mobile:
 		Speed: 36
 	RevealsShroud:
@@ -322,6 +332,8 @@ plasma_infantry:
 		Class: plasma_infantry
 	Health:
 		HP: 650
+	Armor:
+		Type: armor_infantry_plate
 	Mobile:
 		Speed: 28
 	RevealsShroud:
@@ -425,7 +437,7 @@ drone:
 	Health:
 		HP: 300
 	Armor:
-		Type: light
+		Type: armor_vehicle_light
 	Mobile:
 		Speed: 76
 		Voice: Move
@@ -488,7 +500,7 @@ rocketeer:
 	Health:
 		HP: 500
 	Armor:
-		Type: light # all AA Weapons are Anti-Armor, infantry armor makes them OP.
+		Type: armor_vehicle_light # all AA Weapons are Anti-Armor, infantry armor makes them OP.
 	-Mobile:
 	RevealsShroud:
 		Range: 5c0
@@ -552,6 +564,8 @@ sardaukar:
 		Class: sardaukar
 	Health:
 		HP: 1200
+	Armor:
+		Type: armor_infantry_plate
 	Mobile:
 		Speed: 31
 	RevealsShroud:
@@ -624,6 +638,8 @@ sniper:
 		Name: Sniper
 	Health:
 		HP: 750
+	Armor:
+		Type: armor_infantry_flak
 	Mobile:
 		Speed: 40
 	Armament:
