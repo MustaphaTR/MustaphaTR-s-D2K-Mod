@@ -356,11 +356,11 @@ OrniRocket:
 			armor_infantry_none: 15
 			armor_infantry_flak: 12
 			armor_infantry_plate: 10
-			armor_building_wall: 35
-			armor_building_wood: 45
-			armor_building_steel: 40
-			armor_building_concrete: 35
-			armor_building_conyard: 10
+			armor_building_wall: 30
+			armor_building_wood: 40
+			armor_building_steel: 30
+			armor_building_concrete: 20
+			armor_building_conyard: 8
 			armor_vehicle_light: 70
 			armor_vehicle_medium: 85
 			armor_vehicle_heavy: 100
