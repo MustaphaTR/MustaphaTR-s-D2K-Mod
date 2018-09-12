@@ -364,7 +364,7 @@ outpost:
 		Prerequisites: ~techlevel.6, upgrade.outpost
 		ChargeTime: 150
 		Description: Stealth Device
-		LongDesc: Makes a group of units stealth\nfor 30 seconds.
+		LongDesc: Makes a group of units or buildings stealth\nfor 30 seconds.
 		Duration: 750
 		Condition: stealth
 	ProvidesPrerequisite@atreides:
