@@ -842,7 +842,7 @@ repair_pad:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
-    
+
 repair_pad.ixian:
 	Inherits: repair_pad
 	Buildable:

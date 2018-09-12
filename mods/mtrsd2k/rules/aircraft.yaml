@@ -151,6 +151,8 @@ ornithopter.controllable:
 		MaximumPitch: 56
 		Repulsable: true
 		CanHover: false
+		AirborneCondition: airborne
+		RepairBuildings: repair_pad, repair_pad.ixian
 	RevealsShroud:
 		Range: 4c0
 		Type: GroundPosition
@@ -159,6 +161,11 @@ ornithopter.controllable:
 	Guardable:
 	Targetable:
 		TargetTypes: Air, Plane
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@LANDED:
+		Sequence: idle-landed
+		RequiresCondition: !airborne
 	Selectable:
 		Bounds: 40,30,0,0
 	SelectionDecorations:
@@ -216,6 +223,7 @@ swarmer:
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: false
+		RepairBuildings: repair_pad, repair_pad.ixian
 	Guard:
 		Voice: Guard
 	Guardable:
@@ -273,6 +281,7 @@ phoenix:
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: false
+		RepairBuildings: repair_pad, repair_pad.ixian
 	Guard:
 		Voice: Guard
 	Guardable:
