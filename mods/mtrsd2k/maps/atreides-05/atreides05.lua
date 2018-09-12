@@ -129,7 +129,7 @@ HarkonnenPaths =
 	{ HarkonnenEntry2.Location }
 }
 
-AtreidesReinforcements = { "trike", "combat_tank_a" }
+AtreidesReinforcements = { "trike.mg", "combat_tank_a" }
 AtreidesPath = { AtreidesEntry.Location, AtreidesRally.Location }
 
 ContrabandTimes =
