@@ -325,7 +325,7 @@ outpost:
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Sabotage, DetonateAttack
 	Selectable:
-		Bounds: 96,72,0,-8
+		Bounds: 96,64
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -522,7 +522,7 @@ heavy_factory:
 		BuildDurationModifier: 40
 		Description: Produces heavy vehicles.
 	Selectable:
-		Bounds: 96,68,0,12
+		Bounds: 96,96
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -589,8 +589,6 @@ heavy_factory:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 96,96
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.heavy
 		Condition: stardecoration
@@ -618,7 +616,7 @@ high_tech_factory:
 		BuildDurationModifier: 40
 		Description: Produces aircraft.\n\nUnlocks advanced technology.
 	Selectable:
-		Bounds: 96,68,0,12
+		Bounds: 96,96
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -686,8 +684,6 @@ high_tech_factory:
 		Sequence: production-welding
 	Power:
 		Amount: -80
-	SelectionDecorations:
-		VisualBounds: 96,96
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.hightech
 		Condition: stardecoration
@@ -722,7 +718,7 @@ starport:
 		Footprint: xxx x=x =x=
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 96,64
+		Bounds: 96,96
 	Health:
 		HP: 3500
 	Armor:
@@ -817,9 +813,7 @@ repair_pad:
 	RevealsShroud:
 		Range: 4c768
 	Selectable:
-		Bounds: 96,64
-	SelectionDecorations:
-		VisualBounds: 96,80
+		Bounds: 96,96
 	Reservable:
 	RepairsUnits:
 		Interval: 10
@@ -876,7 +870,7 @@ research_centre:
 		BuildDurationModifier: 40
 		Description: Unlocks advanced tanks.
 	Selectable:
-		Bounds: 96,64,0,16
+		Bounds: 96,96
 	Valued:
 		Cost: 1150
 	Tooltip:
@@ -923,8 +917,6 @@ research_centre:
 		OrderName: RocketStrikePowerInfoOrder
 		OnFireSound: ironcur9.aud
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 96,80
 
 palace:
 	Inherits: ^Building
