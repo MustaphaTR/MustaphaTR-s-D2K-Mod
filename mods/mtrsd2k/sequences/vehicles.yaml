@@ -456,60 +456,46 @@ bomb_buggy:
 ifv:
 	idle: ifv.shp
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-tank: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-light: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-trooper: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-grenade: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-flamer: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-freman: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-sonic: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-sardaukar: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-plasma: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-sniper: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	turret-repair: ifv.shp
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
 	icon: ifvicon.shp
 
 ifv.husk:
 	idle: ifv.shp
 		Facings: 32
 		ZOffset: -512
-		UseClassicFacingFudge: True
 	turret: ifv.shp
 		Start: 32
 		Facings: 32
 		ZOffset: -512
-		UseClassicFacingFudge: True
