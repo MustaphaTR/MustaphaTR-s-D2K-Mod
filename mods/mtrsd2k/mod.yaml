@@ -16,8 +16,6 @@ Packages:
 	.
 	$d2k: d2k
 	$mtrsd2k: mtrsd2k
-	$ra: ra
-	$cnc: cnc
 	./mods/common: common
 
 	~SOUND.RS
