@@ -7,7 +7,7 @@ GenericVoice:
 		freman: .WAV
 		ixian: .WAV
 		ordos: .WAV
-		smugger: .WAV
+		smuggler: .WAV
 		mercenary: .WAV
 		harkonnen: .WAV
 		corrino: .WAV
@@ -16,7 +16,7 @@ GenericVoice:
 		freman: A
 		ixian: A
 		ordos: O
-		smugger: O
+		smuggler: O
 		mercenary: O
 		harkonnen: H
 		corrino: H
@@ -35,7 +35,7 @@ VehicleVoice:
 		freman: A
 		ixian: A
 		ordos: O
-		smugger: O
+		smuggler: O
 		mercenary: O
 		harkonnen: H
 		corrino: H
@@ -51,7 +51,7 @@ InfantryVoice:
 		freman: .WAV
 		ixian: .WAV
 		ordos: .WAV
-		smugger: .WAV
+		smuggler: .WAV
 		mercenary: .WAV
 		harkonnen: .WAV
 		corrino: .WAV
@@ -60,7 +60,7 @@ InfantryVoice:
 		freman: A
 		ixian: A
 		ordos: O
-		smugger: O
+		smuggler: O
 		mercenary: O
 		harkonnen: H
 		corrino: H
@@ -79,7 +79,7 @@ EngineerVoice:
 		freman: .WAV
 		ixian: .WAV
 		ordos: .WAV
-		smugger: .WAV
+		smuggler: .WAV
 		mercenary: .WAV
 		harkonnen: .WAV
 		corrino: .WAV
@@ -88,7 +88,7 @@ EngineerVoice:
 		freman: A
 		ixian: A
 		ordos: O
-		smugger: O
+		smuggler: O
 		mercenary: O
 		harkonnen: H
 		corrino: H
@@ -107,7 +107,7 @@ FremenVoice:
 		freman: .WAV
 		ixian: .WAV
 		ordos: .WAV
-		smugger: .WAV
+		smuggler: .WAV
 		mercenary: .WAV
 		harkonnen: .WAV
 		corrino: .WAV
@@ -116,7 +116,7 @@ FremenVoice:
 		freman: A
 		ixian: A
 		ordos: O
-		smugger: O
+		smuggler: O
 		mercenary: O
 		harkonnen: H
 		corrino: H
@@ -135,7 +135,7 @@ SaboteurVoice:
 		freman: .WAV
 		ixian: .WAV
 		ordos: .WAV
-		smugger: .WAV
+		smuggler: .WAV
 		mercenary: .WAV
 		harkonnen: .WAV
 		corrino: .WAV
@@ -144,7 +144,7 @@ SaboteurVoice:
 		freman: A
 		ixian: A
 		ordos: O
-		smugger: O
+		smuggler: O
 		mercenary: O
 		harkonnen: H
 		corrino: H
