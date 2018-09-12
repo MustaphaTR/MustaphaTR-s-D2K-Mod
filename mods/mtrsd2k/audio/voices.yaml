@@ -169,6 +169,7 @@ DogVoice:
 DroneVoice:
 	DefaultVariant: .wav
 	Voices:
+		Action: vtermova
 		Select: vtersela, vterselb
 		Move: vtermova
 		Attack: vteratta
