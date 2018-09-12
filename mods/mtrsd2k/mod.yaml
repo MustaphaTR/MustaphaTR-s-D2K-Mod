@@ -184,6 +184,10 @@ SpriteFormats: R8, ShpTD, TmpRA, ShpTS
 SpriteSequenceFormat: DefaultSpriteSequence
 
 GameSpeeds:
+	slowest:
+		Name: Slowest
+		Timestep: 80
+		OrderLatency: 2
 	slower:
 		Name: Slower
 		Timestep: 50
