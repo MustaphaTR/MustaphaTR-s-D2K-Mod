@@ -63,6 +63,8 @@ carryall.smuggler:
 		LoadingDelay: 8
 		UnloadingDelay: 12
 	Aircraft:
+		Speed: 164
+		TurnSpeed: 5
 		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete, Rough
 	Buildable:
 		BuildPaletteOrder: 2
@@ -71,9 +73,6 @@ carryall.smuggler:
 		Step: 6
 	Health:
 		HP: 5000
-	Aircraft:
-		Speed: 164
-		TurnSpeed: 5
 
 frigate:
 	Inherits: ^Plane
