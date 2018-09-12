@@ -94,7 +94,7 @@ silo.smuggler:
 wall:
 	Inherits@1: ^SpriteActor
 	CombatDebugOverlay:
-	HiddenUnderShroud:
+	FrozenUnderFog:
 	Buildable:
 		Queue: Defense
 		Prerequisites: construction_yard, barracks, ~techlevel.2
