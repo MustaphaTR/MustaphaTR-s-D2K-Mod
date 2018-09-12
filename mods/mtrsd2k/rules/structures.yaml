@@ -258,7 +258,7 @@ refinery:
 	Armor:
 		Type: armor_building_concrete
 	RevealsShroud:
-		Range: 4c768
+		Range: 3c768
 	Refinery:
 		DockAngle: 160
 		DockOffset: 2,1
@@ -339,7 +339,7 @@ outpost:
 	Armor:
 		Type: armor_building_steel
 	RevealsShroud:
-		Range: 4c768
+		Range: 5c768
 	ProvidesRadar:
 		RequiresCondition: !jammed && !disabled
 	RenderSprites:
@@ -424,7 +424,7 @@ light_factory:
 	Armor:
 		Type: armor_building_steel
 	RevealsShroud:
-		Range: 4c768
+		Range: 5c768
 	RenderSprites:
 		Image: light.harkonnen
 		FactionImages:
