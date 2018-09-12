@@ -846,7 +846,7 @@ repair_pad:
 repair_pad.ixian:
 	Inherits: repair_pad
 	Buildable:
-		Prerequisites: construction_yard, light_or_heavy, ~cyard.ixian, ~techlevel.3
+		Prerequisites: construction_yard, refinery, ~cyard.ixian, ~techlevel.3
 		BuildPaletteOrder: 11
 		BuildDuration: 286
 	Valued:
