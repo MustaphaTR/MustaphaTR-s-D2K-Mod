@@ -64,6 +64,7 @@ light_tank:
 		Facings: -32
 		BlendMode: Additive
 	icon: light_tankicon.shp
+		Offset: 0,-1
 
 harvester:
 	idle: DATA.R8
@@ -371,6 +372,7 @@ stealth_tank:
 		Facings: 32
 		UseClassicFacingFudge: True
 	icon: stealth_tankicon.shp
+		Offset: 0,-1
 
 stealth_tank.husk:
 	idle: stealth_tank.shp
@@ -386,6 +388,7 @@ jammer:
 		Start: 32
 		Length: 32
 	icon: jammericon.shp
+		Offset: 0,-1
 
 jammer.husk:
 	idle: jammer.shp
@@ -426,6 +429,7 @@ quake_tank:
 		Facings: 8
 		Length: 8
 	icon: quake_tankicon.shp
+		Offset: 0,-1
 
 quake_tank.husk:
 	idle: quake_tank.shp
@@ -452,6 +456,7 @@ bomb_buggy:
 		Facings: 32
 		UseClassicFacingFudge: True
 	icon: bomb_buggyicon.shp
+		Offset: 0,-1
 
 ifv:
 	idle: ifv.shp
@@ -490,6 +495,7 @@ ifv:
 		Start: 32
 		Facings: 32
 	icon: ifvicon.shp
+		Offset: 0,-2
 
 ifv.husk:
 	idle: ifv.shp

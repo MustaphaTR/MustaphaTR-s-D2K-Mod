@@ -578,6 +578,7 @@ sandworm:
 		Tick: 80
 		BlendMode: Additive
 	icon: wormicon.shp
+		Offset: 0,-1
 
 sniper:
 	stand: sniper.shp
@@ -643,6 +644,7 @@ sniper:
 		Tick: 800
 		ZOffset: -511
 	icon: snipericon.shp
+		Offset: 0,-1
 
 flamethrower:
 	stand: flamethrower.shp
@@ -704,6 +706,7 @@ flamethrower:
 		Length: 16
 		Facings: 8
 	icon: flamethrowericon.shp
+		Offset: 0,-1
 
 dog:
 	stand: dog.shp
@@ -747,6 +750,7 @@ dog:
 		Length: 4
 		Facings: 8
 	icon: dogicon.shp
+		Offset: 0,-1
 
 saboteur:
 	stand: hijacker.shp
@@ -786,6 +790,7 @@ saboteur:
 		Facings: 8
 		Tick: 80
 	icon: hijackericon.shp
+		Offset: 0,-1
 
 plasma_infantry:
 	stand: plasma_infantry.shp
@@ -847,6 +852,7 @@ plasma_infantry:
 		Length: 16
 		Facings: 8
 	icon: plasma_infantryicon.shp
+		Offset: 0,-1
 
 fedaykin:
 	stand: fedaykin.shp
@@ -908,6 +914,7 @@ fedaykin:
 		Length: 16
 		Facings: 8
 	icon: fedaykinicon.shp
+		Offset: 0,-1
 
 rocketeer:
 	Defaults: rocketeer.shp
@@ -975,6 +982,7 @@ rocketeer:
 	icon: rocketeericon.shp
 		Length: *
 		Facings: 1
+		Offset: 0,-1
 
 rocketeer.husk:
 	idle: rocketeer.shp
@@ -1036,6 +1044,7 @@ mechanic:
 		Facings: 8
 		Tick: 100
 	icon: mechanicicon.shp
+		Offset: 0,-1
 
 drone:
 	stand: drone.shp
@@ -1051,3 +1060,4 @@ drone:
 		Facings: 8
 		ShadowStart: 8
 	icon: droneicon.shp
+		Offset: 0,-1
