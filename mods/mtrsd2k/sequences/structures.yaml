@@ -12,11 +12,13 @@ mine_ap:
 	idle: mine_ap.shp
 		ZOffset: -512
 	icon: mine_apicon.shp
+		Offset: 0,-1
 
 mine_at:
 	idle: mine_at.shp
 		ZOffset: -512
 	icon: mine_aticon.shp
+		Offset: 0,-1
 
 wall:
 	idle: DATA.R8
@@ -51,6 +53,7 @@ machine_gun_tower:
 		Facings: 8
 		BlendMode: Additive
 	icon: machine_gun_towericon.shp
+		Offset: 0,-1
 
 flame_tower:
 	idle: flame_tower.shp
@@ -72,6 +75,7 @@ flame_tower:
 		Length: 3
 		BlendMode: Additive
 	icon: flame_towericon.shp
+		Offset: 0,-1
 
 artillery_platform:
 	idle: DATA.R8
@@ -98,6 +102,7 @@ artillery_platform:
 		Length: 3
 		BlendMode: Additive
 	icon: artillery_platformicon.shp
+		Offset: 0,-1
 
 medium_gun_turret:
 	idle: DATA.R8
