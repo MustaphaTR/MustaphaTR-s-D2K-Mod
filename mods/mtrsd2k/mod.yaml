@@ -5,8 +5,8 @@ Metadata:
 	Author: MustaphaTR
 
 RequiresMods:
-	modchooser: aeb16d3
-	d2k: aeb16d3
+	modchooser: 4ff712c
+	d2k: 4ff712c
 
 Packages:
 	~^Content/d2k/v2/
