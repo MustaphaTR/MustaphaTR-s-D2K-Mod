@@ -1,0 +1,800 @@
+trike.mg:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~light.mgtrike
+		BuildDuration: 225
+		BuildDurationModifier: 100
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
+	Valued:
+		Cost: 325
+	Tooltip:
+		Name: Machine Gun Trike
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Class: trike.mg
+	Health:
+		HP: 10000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 36
+		Speed: 128
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	Armament@damage:
+		Weapon: HMG_trike
+		LocalOffset: 180,0,110
+	Armament@muzzle:
+		Weapon: HMG_trike_muzzle
+		LocalOffset: -544,0,0
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 420
+	RenderSprites:
+		Image: trike
+		Scale: 0.9
+
+raider.mg:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 20
+		Prerequisites: ~light.mgraider
+		BuildDuration: 225
+		BuildDurationModifier: 100
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
+	Valued:
+		Cost: 325
+	Tooltip:
+		Name: Machine Gun Raider
+	Selectable:
+		Class: raider.mg
+	Health:
+		HP: 9000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 40
+		Speed: 149
+	RevealsShroud:
+		Range: 4c768
+	WithMuzzleOverlay:
+	Armament@damage:
+		Weapon: HMG_raider
+		LocalOffset: 170,0,0
+	Armament@muzzle:
+		Weapon: HMG_raider_muzzle
+		LocalOffset: 170,0,0
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 420
+	RenderSprites:
+		Image: raider
+		Scale: 0.9
+
+quad.mg:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~light.mgquad
+		BuildDuration: 225
+		BuildDurationModifier: 100
+		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
+	Valued:
+		Cost: 325
+	Tooltip:
+		Name: Machine Gun Quad
+	Selectable:
+		Class: quad.mg
+	Health:
+		HP: 11000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 32
+		Speed: 96
+	RevealsShroud:
+		Range: 4c768
+	Armament@damage:
+		Weapon: HMG_quad
+		LocalOffset: 128,64,64, 128,-64,64
+	Armament@muzzle:
+		Weapon: HMG_quad_muzzle
+		LocalOffset: -544,64,64, -544,-64,64
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 420
+	RenderSprites:
+		Image: quad
+		Scale: 0.9
+
+trike.rocket:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.medium
+		BuildPaletteOrder: 40
+		BuildDuration: 321
+		BuildDurationModifier: 100
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Valued:
+		Cost: 425
+	Tooltip:
+		Name: Rocket Trike
+	Selectable:
+		Class: trike.rocket
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 36
+		Speed: 128
+	RevealsShroud:
+		Range: 4c768
+	Armament@Ground:
+		Weapon: Rocket_trike
+		LocalOffset: 180,0,110
+	Armament@AA:
+		Weapon: RocketAA_trike
+		LocalOffset: 180,0,110
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 470
+	RenderSprites:
+		Image: trike
+
+raider.rocket:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.medium
+		BuildPaletteOrder: 50
+		BuildDuration: 321
+		BuildDurationModifier: 100
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Valued:
+		Cost: 425
+	Tooltip:
+		Name: Rocket Raider
+	Selectable:
+		Class: raider.rocket
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 40
+		Speed: 149
+	RevealsShroud:
+		Range: 4c768
+	Armament@Ground:
+		Weapon: Rocket_raider
+		LocalOffset: 170,0,0
+	Armament@AA:
+		Weapon: RocketAA_raider
+		LocalOffset: 170,0,0
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 470
+	RenderSprites:
+		Image: raider
+
+quad.rocket:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~light.rocketquad, upgrade.light, ~techlevel.medium
+		BuildPaletteOrder: 60
+		BuildDuration: 321
+		BuildDurationModifier: 100
+		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Valued:
+		Cost: 425
+	Tooltip:
+		Name: Rocket Quad
+	Selectable:
+		Class: quad.rocket
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 11000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 32
+		Speed: 96
+	RevealsShroud:
+		Range: 4c768
+	Armament@Ground:
+		Weapon: Rocket_quad
+		LocalOffset: 128,64,64, 128,-64,64
+	Armament@AA:
+		Weapon: RocketAA_quad
+		LocalOffset: 128,64,64, 128,-64,64
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttractsWorms:
+		Intensity: 470
+	RenderSprites:
+		Image: quad
+
+mcv:
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Prerequisites: repair_pad, upgrade.heavy, ~techlevel.medium
+		Queue: Armor
+		BuildPaletteOrder: 110
+		BuildDuration: 750
+		BuildDurationModifier: 100
+		Description: Deploys into another Construction Yard\n  Unarmed
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+	Selectable:
+		Class: mcv
+		DecorationBounds: 42,42
+	Health:
+		HP: 45000
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 31
+	RevealsShroud:
+		Range: 2c768
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	Transforms:
+		Facing: 64
+		IntoActor: construction_yard
+		Offset: -1,-1
+		TransformSounds: BUILD1.WAV
+		NoTransformNotification: CannotDeploy
+	SpawnActorOnDeath:
+		Actor: mcv.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 700
+	ChangesHealth:
+		Step: 50
+		Delay: 3
+		StartIfBelow: 50
+	-RevealOnFire:
+
+harvester:
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableEconomicUnit
+	Buildable:
+		Queue: Armor
+		Prerequisites: refinery
+		BuildPaletteOrder: 10
+		BuildDuration: 625
+		BuildDurationModifier: 100
+		Description: Collects Spice for processing\n  Unarmed
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Spice Harvester
+	Selectable:
+		Class: harvester
+		DecorationBounds: 42,42
+	Harvester:
+		Capacity: 28
+		HarvestFacings: 8
+		Resources: Spice
+		BaleUnloadDelay: 5
+		SearchFromProcRadius: 30
+		SearchFromHarvesterRadius: 15
+	CarryableHarvester:
+	Health:
+		HP: 45000
+	Armor:
+		Type: harvester
+	Mobile:
+		Speed: 43
+	RevealsShroud:
+		Range: 3c768
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	SpawnActorOnDeath:
+		Actor: harvester.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	WithHarvestOverlay:
+		Palette: effect50alpha
+	WithDockingAnimation:
+	AttractsWorms:
+		Intensity: 700
+	ChangesHealth:
+		Step: 50
+		Delay: 3
+		StartIfBelow: 50
+	-RevealOnFire:
+	WithHarvesterPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, 4
+		RequiresSelection: true
+		PipCount: 7
+
+siege_tank:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Armor
+		Prerequisites: upgrade.heavy, ~techlevel.medium
+		BuildPaletteOrder: 50
+		BuildDuration: 375
+		BuildDurationModifier: 100
+		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Siege Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 43
+		TurnSpeed: 12
+	RevealsShroud:
+		Range: 6c768
+	Turreted:
+		TurnSpeed: 12
+		Offset: 0,0,-32
+	Armament:
+		Weapon: 155mm
+		Recoil: 150
+		RecoilRecovery: 19
+		LocalOffset: 512,0,320
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Explodes:
+		Weapon: UnitExplodeMed
+		EmptyWeapon: UnitExplodeMed
+	AutoTarget:
+		InitialStanceAI: Defend
+	Selectable:
+		Class: siegetank
+	SpawnActorOnDeath:
+		Actor: siege_tank.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 600
+
+missile_tank:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Tooltip:
+		Name: Missile Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Armor
+		Prerequisites: ~heavy.missile_tank, upgrade.heavy, research_centre, ~techlevel.high
+		BuildPaletteOrder: 60
+		BuildDuration: 512
+		BuildDurationModifier: 100
+		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry
+	Valued:
+		Cost: 900
+	Mobile:
+		Speed: 64
+		TurnSpeed: 20
+	Health:
+		HP: 13000
+	Armor:
+		Type: wood
+	RevealsShroud:
+		Range: 6c768
+	Armament:
+		Weapon: mtank_pri
+		LocalOffset: -128,128,171, -128,-128,171
+	AttackFrontal:
+	AutoTarget:
+		InitialStanceAI: Defend
+	Explodes:
+		Weapon: UnitExplodeMed
+		EmptyWeapon: UnitExplodeMed
+	Selectable:
+		Class: missiletank
+	SpawnActorOnDeath:
+		Actor: missile_tank.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 600
+
+sonic_tank:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 100
+		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.high
+		BuildDuration: 562
+		BuildDurationModifier: 100
+		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Sonic Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 12
+		Speed: 31
+	RevealsShroud:
+		Range: 5c768
+	Armament:
+		Weapon: Sound
+		LocalOffset: 600,0,427
+	AttackFrontal:
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	SpawnActorOnDeath:
+		Actor: sonic_tank.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 600
+
+devastator:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 100
+		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.high
+		BuildDuration: 625
+		BuildDurationModifier: 100
+		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: Devastator
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 50000
+	Armor:
+		Type: heavy
+	Mobile:
+		TurnSpeed: 12
+		Speed: 31
+		Locomotor: devastator
+		RequiresCondition: !overload
+		PauseOnCondition: notmobile
+	AutoCarryable:
+		RequiresCondition: !overload
+	RevealsShroud:
+		Range: 4c768
+	Armament:
+		Weapon: DevBullet
+		LocalOffset: 640,0,32
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleOverlay:
+		IgnoreOffset: true
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+		RequiresCondition: !overload
+	SpawnActorOnDeath:
+		Actor: devastator.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	Explodes@OVERLOAD:
+		Weapon: PlasmaExplosion
+		EmptyWeapon: PlasmaExplosion
+		RequiresCondition: meltdown
+	GrantConditionOnDeploy@REACTOR:
+		DeployedCondition: overload
+		PauseOnCondition: overload
+	WithIdleOverlay@OVERLOAD:
+		Sequence: active
+		RequiresCondition: overload
+	WithIdleOverlay@OVERLOAD2:
+		Sequence: active-2
+		RequiresCondition: overload
+	KillsSelf@MELTDOWN:
+		Delay: 240
+		RequiresCondition: overload
+		GrantsCondition: meltdown
+	AttractsWorms:
+		Intensity: 700
+	ChangesHealth:
+		Step: 50
+		Delay: 3
+		StartIfBelow: 50
+	Selectable:
+		DecorationBounds: 44,38,0,0
+
+stealth_raider:
+	Inherits: raider.rocket
+	Buildable:
+		Prerequisites: ~light.ordos, upgrade.light, high_tech_factory, ~techlevel.medium
+		BuildPaletteOrder: 70
+		BuildDuration: 225
+		BuildDurationModifier: 100
+		Description: Invisible scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Stealth Rocket Raider
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Cloak:
+		InitialDelay: 45
+		CloakDelay: 90
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Damage, Heal
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Selectable:
+		Class: stealth_raider
+	RenderSprites:
+		Image: stealth_raider
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	-MustBeDestroyed:
+
+deviator:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Deviator
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 50
+		Prerequisites: ~heavy.ordos, research_centre, ~techlevel.high
+		BuildDuration: 562
+		BuildDurationModifier: 100
+		Description: Fires a warhead which changes\nthe allegiance of enemy vehicles
+	Mobile:
+		TurnSpeed: 12
+		Speed: 53
+	Health:
+		HP: 11000
+	Armor:
+		Type: wood
+	RevealsShroud:
+		Range: 4c768
+	Armament:
+		Weapon: DeviatorMissile
+		LocalOffset: -299,0,85
+	AttackFrontal:
+	AutoTarget:
+		InitialStanceAI: Defend
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	SpawnActorOnDeath:
+		Actor: deviator.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 600
+
+^combat_tank:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 40
+		BuildDuration: 432
+		BuildDurationModifier: 100
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Combat Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	Armor:
+		Type: heavy
+	Mobile:
+		Speed: 75
+		TurnSpeed: 20
+	RevealsShroud:
+		Range: 5c768
+	Turreted:
+		TurnSpeed: 20
+		RealignDelay: 0
+	Armament:
+		Weapon: 80mm
+		Recoil: 128
+		RecoilRecovery: 32
+		LocalOffset: 256,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Explodes:
+		Weapon: UnitExplodeMed
+		EmptyWeapon: UnitExplodeMed
+	Selectable:
+		Class: combat
+	AttractsWorms:
+		Intensity: 520
+	SpawnActorOnDeath:
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+
+combat_tank_a:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.atreides_combat
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas longer range than its counterparts.
+	Tooltip:
+		Name: Atreides Combat Tank
+	Armament:
+		Weapon: 80mm_A
+	SpawnActorOnDeath:
+		Actor: combat_tank_a.husk
+
+combat_tank_h:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.harkonnen_combat
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas better armor than its counterparts.
+	Tooltip:
+		Name: Harkonnen Combat Tank
+	Health:
+		HP: 27000
+	SpawnActorOnDeath:
+		Actor: combat_tank_h.husk
+
+combat_tank_o:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.ordos_combat
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nMoves quicker than its counterparts.
+	Tooltip:
+		Name: Ordos Combat Tank
+	Mobile:
+		Speed: 85
+	SpawnActorOnDeath:
+		Actor: combat_tank_o.husk
+
+combat_tank_m:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.mercenary
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nFires quicker than its counterparts.
+	Tooltip:
+		Name: Mercenary Combat Tank
+	Armament:
+		Weapon: 80mm_M
+	SpawnActorOnDeath:
+		Actor: combat_tank_m.husk
+
+combat_tank_s:
+	Inherits: ^combat_tank
+	Buildable:
+		BuildDuration: 373
+		Prerequisites: ~heavy.smuggler
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be built quicker than its counterparts.
+	Tooltip:
+		Name: Smuggler Combat Tank
+	SpawnActorOnDeath:
+		Actor: combat_tank_s.husk
+
+combat_tank_f:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.fremen
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCosts less than its counterparts.
+	Tooltip:
+		Name: Freman Combat Tank
+	Valued:
+		Cost: 600
+	SpawnActorOnDeath:
+		Actor: combat_tank_f.husk
+
+combat_tank_c:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.corrino
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nDamages more than its counterparts.
+	Tooltip:
+		Name: Imperial Combat Tank
+	Armament:
+		Weapon: 80mm_C
+	SpawnActorOnDeath:
+		Actor: combat_tank_c.husk
+
+combat_tank_i:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.ixian
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be repaired with repair tool like a structure.
+	Tooltip:
+		Name: Ixian Combat Tank
+	-Repairable:
+	RepairableBuilding:
+		RepairStep: 750
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		Position: Center
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorOnDeath:
+		Actor: combat_tank_i.husk

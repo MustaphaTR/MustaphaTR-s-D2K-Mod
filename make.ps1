@@ -10,23 +10,19 @@ function All-Command
 		return
 	}
 
-	$msBuild = FindMSBuild
-	$msBuildArguments = "/t:Rebuild /nr:false"
-	if ($msBuild -eq $null)
+	if ((CheckForDotnet) -eq 1)
 	{
-		echo "Unable to locate an appropriate version of MSBuild."
+		return
+	}
+
+	dotnet build /p:Configuration=Release /nologo
+	if ($lastexitcode -ne 0)
+	{
+		Write-Host "Build failed. If just the development tools failed to build, try installing Visual Studio. You may also still be able to run the game." -ForegroundColor Red
 	}
 	else
 	{
-		$proc = Start-Process $msBuild $msBuildArguments -NoNewWindow -PassThru -Wait
-		if ($proc.ExitCode -ne 0)
-		{
-			echo "Build failed. If just the development tools failed to build, try installing Visual Studio. You may also still be able to run the game."
-		}
-		else
-		{
-			echo "Build succeeded."
-		}
+		Write-Host "Build succeeded." -ForegroundColor Green
 	}
 }
 
@@ -37,25 +33,17 @@ function Clean-Command
 		return
 	}
 
-	$msBuild = FindMSBuild
-	$msBuildArguments = "/t:Clean /nr:false"
-	if ($msBuild -eq $null)
+	if ((CheckForDotnet) -eq 1)
 	{
-		echo "Unable to locate an appropriate version of MSBuild."
+		return
 	}
-	else
-	{
-		$proc = Start-Process $msBuild $msBuildArguments -NoNewWindow -PassThru -Wait
-		rm *.dll
-		rm *.dll.config
-		rm mods/*/*.dll
-		rm *.pdb
-		rm mods/*/*.pdb
-		rm *.exe
-		rm ./*/bin -r
-		rm ./*/obj -r
-		echo "Clean complete."
-	}
+
+	dotnet clean /nologo
+	Remove-Item ./*/obj -Recurse -ErrorAction Ignore
+	Remove-Item env:ENGINE_DIRECTORY/bin -Recurse -ErrorAction Ignore
+	Remove-Item env:ENGINE_DIRECTORY/*/obj -Recurse -ErrorAction Ignore
+
+	Write-Host "Clean complete." -ForegroundColor Green
 }
 
 function Version-Command
@@ -77,12 +65,12 @@ function Version-Command
 		}
 		else
 		{
-			echo "Not a git repository. The version will remain unchanged."
+			Write-Host "Not a git repository. The version will remain unchanged." -ForegroundColor Red
 		}
 	}
 	else
 	{
-		echo "Unable to locate Git. The version will remain unchanged."
+		Write-Host "Unable to locate Git. The version will remain unchanged." -ForegroundColor Red
 	}
 
 	if ($version -ne $null)
@@ -99,43 +87,46 @@ function Version-Command
 		$replacement = (gc $mod) -Replace ".*: User", ("{0}/{1}: User" -f $prefix, $version)
 		sc $mod $replacement
 
-		echo ("Version strings set to '{0}'." -f $version)
+		Write-Host ("Version strings set to '{0}'." -f $version)
 	}
 }
 
 function Test-Command
 {
-	if (Test-Path $utilityPath)
+	if ((CheckForUtility) -eq 1)
 	{
-		echo "Testing $modID mod MiniYAML"
-		Invoke-Expression "$utilityPath $modID --check-yaml"
+		return
 	}
-	else
-	{
-		UtilityNotFound
-	}
+
+	Write-Host "Testing $modID mod MiniYAML..." -ForegroundColor Cyan
+	InvokeCommand "$utilityPath $modID --check-yaml"
 }
 
 function Check-Command
 {
-	if (Test-Path $utilityPath)
+	If (!(Test-Path "*.sln"))
 	{
-		echo "Checking for explicit interface violations..."
-		Invoke-Expression "$utilityPath $modID --check-explicit-interfaces"
-	}
-	else
-	{
-		UtilityNotFound
+		Write-Host "No custom solution file found. Skipping static code checks." -ForegroundColor Cyan
+		return
 	}
 
-	if (Test-Path $styleCheckPath)
+	Write-Host "Compiling in debug configuration..." -ForegroundColor Cyan
+	dotnet build /p:Configuration=Debug /nologo
+	if ($lastexitcode -ne 0)
 	{
-		echo "Checking for code style violations in OpenRA.Mods.$modID..."
-		Invoke-Expression "$styleCheckPath OpenRA.Mods.$modID"
+		Write-Host "Build failed." -ForegroundColor Red
 	}
-	else
+
+	if ((CheckForUtility) -eq 0)
 	{
-		echo "$styleCheckPath could not be found. Build the project first using the `"all`" command."
+		Write-Host "Checking runtime assemblies..." -ForegroundColor Cyan
+		InvokeCommand "$utilityPath $modID --check-runtime-assemblies $env:WHITELISTED_OPENRA_ASSEMBLIES $env:WHITELISTED_THIRDPARTY_ASSEMBLIES $env:WHITELISTED_CORE_ASSEMBLIES $env:WHITELISTED_MOD_ASSEMBLIES"
+
+		Write-Host "Checking for explicit interface violations..." -ForegroundColor Cyan
+		InvokeCommand "$utilityPath $modID --check-explicit-interfaces"
+
+		Write-Host "Checking for incorrect conditional trait interface overrides..." -ForegroundColor Cyan
+		InvokeCommand "$utilityPath $modID --check-conditional-trait-interface-overrides"
 	}
 }
 
@@ -143,54 +134,39 @@ function Check-Scripts-Command
 {
 	if ((Get-Command "luac.exe" -ErrorAction SilentlyContinue) -ne $null)
 	{
-		echo "Testing Lua scripts..."
+		Write-Host "Testing Lua scripts..." -ForegroundColor Cyan
 		foreach ($script in ls "mods/*/maps/*/*.lua")
 		{
 			luac -p $script
 		}
-		echo "Check completed!"
+		Write-Host "Check completed!" -ForegroundColor Green
 	}
 	else
 	{
-		echo "luac.exe could not be found. Please install Lua."
+		Write-Host "luac.exe could not be found. Please install Lua." -ForegroundColor Red
 	}
 }
 
-function Docs-Command
+function CheckForUtility
 {
 	if (Test-Path $utilityPath)
 	{
-		Invoke-Expression "$utilityPath $modID --docs | Out-File -Encoding 'UTF8' DOCUMENTATION.md"
-		Invoke-Expression "$utilityPath $modID --lua-docs | Out-File -Encoding 'UTF8' Lua-API.md"
-		echo "Docs generated."
+		return 0
 	}
-	else
-	{
-		UtilityNotFound
-	}
+
+	Write-Host "OpenRA.Utility.exe could not be found. Build the project first using the `"all`" command." -ForegroundColor Red
+	return 1
 }
 
-function FindMSBuild
+function CheckForDotnet
 {
-	$key = "HKLM:\SOFTWARE\Microsoft\MSBuild\ToolsVersions\4.0"
-	$property = Get-ItemProperty $key -ErrorAction SilentlyContinue
-	if ($property -eq $null -or $property.MSBuildToolsPath -eq $null)
+	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null) 
 	{
-		return $null
+		Write-Host "The 'dotnet' tool is required to compile OpenRA. Please install the .NET Core SDK or Visual Studio and try again. https://dotnet.microsoft.com/download" -ForegroundColor Red
+		return 1
 	}
 
-	$path = Join-Path $property.MSBuildToolsPath -ChildPath "MSBuild.exe"
-	if (Test-Path $path)
-	{
-		return $path
-	}
-
-	return $null
-}
-
-function UtilityNotFound
-{
-	echo "$utilityPath could not be found. Build the project first using the `"all`" command."
+	return 0
 }
 
 function WaitForInput
@@ -218,7 +194,9 @@ function ReadConfigLine($line, $name)
 function ParseConfigFile($fileName)
 {
 	$names = @("MOD_ID", "ENGINE_VERSION", "AUTOMATIC_ENGINE_MANAGEMENT", "AUTOMATIC_ENGINE_SOURCE",
-		"AUTOMATIC_ENGINE_EXTRACT_DIRECTORY", "AUTOMATIC_ENGINE_TEMP_ARCHIVE_NAME", "ENGINE_DIRECTORY")
+		"AUTOMATIC_ENGINE_EXTRACT_DIRECTORY", "AUTOMATIC_ENGINE_TEMP_ARCHIVE_NAME", "ENGINE_DIRECTORY",
+		"WHITELISTED_OPENRA_ASSEMBLIES", "WHITELISTED_THIRDPARTY_ASSEMBLIES", "WHITELISTED_CORE_ASSEMBLIES",
+		"WHITELISTED_MOD_ASSEMBLIES")
 
 	$reader = [System.IO.File]::OpenText($fileName)
 	while($null -ne ($line = $reader.ReadLine()))
@@ -228,6 +206,7 @@ function ParseConfigFile($fileName)
 			ReadConfigLine $line $name
 		}
 	}
+	$reader.Close()
 
 	$missing = @()
 	foreach ($name in $names)
@@ -248,6 +227,20 @@ function ParseConfigFile($fileName)
 		echo "Repair your mod.config (or user.config) and try again."
 		WaitForInput
 		exit
+	}
+}
+
+function InvokeCommand
+{
+	param($expression)
+	# $? is the return value of the called expression
+	# Invoke-Expression itself will always succeed, even if the invoked expression fails
+	# So temporarily store the return value in $success
+	$expression += '; $success = $?'
+	Invoke-Expression $expression
+	if ($success -eq $False)
+	{
+		exit 1
 	}
 }
 
@@ -273,7 +266,6 @@ if ($args.Length -eq 0)
 	echo "  test            Tests the mod's MiniYAML for errors."
 	echo "  check           Checks .cs files for StyleCop violations."
 	echo "  check-scripts   Checks .lua files for syntax errors."
-	echo "  docs            Generates the trait and Lua API documentation."
 	echo ""
 	$command = (Read-Host "Enter command").Split(' ', 2)
 }
@@ -281,6 +273,10 @@ else
 {
 	$command = $args
 }
+
+# Set the working directory for our IO methods
+$templateDir = $pwd.Path
+[System.IO.Directory]::SetCurrentDirectory($templateDir)
 
 # Load the environment variables from the config file
 # and get the mod ID from the local environment variable
@@ -294,13 +290,21 @@ if (Test-Path "user.config")
 $modID = $env:MOD_ID
 
 $env:MOD_SEARCH_PATHS = (Get-Item -Path ".\" -Verbose).FullName + "\mods,./mods"
+$env:ENGINE_DIR = ".."
 
-# Run the same command on the engine's make file
-if ($command -eq "all" -or $command -eq "clean")
+# Fetch the engine if required
+if ($command -eq "all" -or $command -eq "clean" -or $command -eq "check")
 {
-	$templateDir = $pwd.Path
 	$versionFile = $env:ENGINE_DIRECTORY + "/VERSION"
-	if ((Test-Path $versionFile) -and [System.IO.File]::OpenText($versionFile).ReadLine() -eq $env:ENGINE_VERSION)
+	$currentEngine = ""
+	if (Test-Path $versionFile)
+	{
+		$reader = [System.IO.File]::OpenText($versionFile)
+		$currentEngine = $reader.ReadLine()
+		$reader.Close()
+	}
+
+	if ($currentEngine -ne "" -and $currentEngine -eq $env:ENGINE_VERSION)
 	{
 		cd $env:ENGINE_DIRECTORY
 		Invoke-Expression ".\make.cmd $command"
@@ -319,7 +323,7 @@ if ($command -eq "all" -or $command -eq "clean")
 
 		if (Test-Path $env:ENGINE_DIRECTORY)
 		{
-			if ((Test-Path $versionFile) -and [System.IO.File]::OpenText($versionFile).ReadLine() -ne "")
+			if ($currentEngine -ne "")
 			{
 				echo "Deleting engine version $currentEngine."
 			}
@@ -367,8 +371,7 @@ if ($command -eq "all" -or $command -eq "clean")
 	}
 }
 
-$utilityPath = $env:ENGINE_DIRECTORY + "/OpenRA.Utility.exe"
-$styleCheckPath = $env:ENGINE_DIRECTORY + "/OpenRA.StyleCheck.exe"
+$utilityPath = $env:ENGINE_DIRECTORY + "/bin/OpenRA.Utility.exe"
 
 $execute = $command
 if ($command.Length -gt 1)
@@ -384,7 +387,6 @@ switch ($execute)
 	"test" { Test-Command }
 	"check" { Check-Command }
 	"check-scripts" { Check-Scripts-Command }
-	"docs" { Docs-Command }
 	Default { echo ("Invalid command '{0}'" -f $command) }
 }
 

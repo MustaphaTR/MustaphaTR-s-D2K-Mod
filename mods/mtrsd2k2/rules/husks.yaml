@@ -1,0 +1,182 @@
+mcv.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 1750
+	Tooltip:
+		Name: Mobile Construction Vehicle (Destroyed)
+
+harvester.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 1500
+	Tooltip:
+		Name: Spice Harvester (Destroyed)
+	TransformOnCapture:
+		IntoActor: harvester
+
+siege_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Siege Tank (Destroyed)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: siege_tank
+
+missile_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Missile Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: missile_tank
+
+sonic_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Sonic Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: sonic_tank
+
+devastator.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 1250
+	Tooltip:
+		Name: Devastator (Destroyed)
+	TransformOnCapture:
+		IntoActor: devastator
+
+deviator.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Deviator (Destroyed)
+	TransformOnCapture:
+		IntoActor: deviator
+
+^combat_tank.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 1000
+	Tooltip:
+		Name: Combat Tank (Destroyed)
+	ThrowsParticle@turret:
+		Anim: turret
+
+combat_tank_a.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Atreides Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_a
+
+combat_tank_h.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Harkonnen Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_h
+
+combat_tank_o.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Ordos Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_o
+
+combat_tank_f.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Freman Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_f
+
+combat_tank_m.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Mercenary Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_m
+
+combat_tank_s.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Smuggler Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_s
+
+combat_tank_c.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Imperial Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_c
+
+combat_tank_i.husk:
+	Inherits: ^combat_tank.husk
+	Tooltip:
+		Name: Ixian Combat Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: combat_tank_i
+
+ornithopter.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Ornithopter
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 224
+	RenderSprites:
+		Image: ornithopter
+
+ornithopter.controllable.husk:
+	Inherits: ornithopter.husk
+	Aircraft:
+		Speed: 156
+
+swarmer.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Swarmer
+	Aircraft:
+		TurnSpeed: 2
+		Speed: 172
+	RenderSprites:
+		Image: swarmer
+		PlayerPalette: raplayer
+
+phoenix.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Phoenix
+	Aircraft:
+		TurnSpeed: 2
+		Speed: 172
+	RenderSprites:
+		Image: phoenix
+		PlayerPalette: raplayer
+
+carryall.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Carryall
+	Aircraft:
+		TurnSpeed: 16
+		Speed: 144
+		CanSlide: True
+		VTOL: true
+	RenderSprites:
+		Image: carryall
+
+carryall.huskVTOL:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Carryall
+	FallsToEarth:
+		Moves: False
+		Velocity: 0c128
+	Aircraft:
+		TurnSpeed: 16
+		CanSlide: True
+		VTOL: true
+	RenderSprites:
+		Image: carryall

@@ -1,0 +1,35 @@
+ProductionTypeBuilding: E
+	Description: Building Tab
+	Types: Production, Player
+
+ProductionTypeDefense: R
+	Description: Building Tab
+	Types: Production, Player
+
+ProductionTypeUpgrade: T
+	Description: Upgrade Tab
+	Types: Production, Player
+
+ProductionTypeInfantry: Y
+	Description: Infantry Tab
+	Types: Production, Player
+
+ProductionTypeVehicle: U
+	Description: Vehicle Tab
+	Types: Production, Player
+
+ProductionTypeAircraft: I
+	Description: Aircraft Tab
+	Types: Production, Player
+
+ProductionTypeTank: O
+	Description: Tank Tab
+	Types: Production, Player
+
+ProductionTypeMerchant: P
+	Description: Starport Tab
+	Types: Production, Player
+
+PowerDown: X
+	Description: Power-down mode
+	Types: OrderGenerator, Player

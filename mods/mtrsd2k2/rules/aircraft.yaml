@@ -1,0 +1,338 @@
+carryall.reinforce:
+	Inherits: ^Plane
+	Valued:
+		Cost: 1100
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	Tooltip:
+		Name: Carryall
+	Health:
+		HP: 48000
+	Armor:
+		Type: light
+	Aircraft:
+		CruiseAltitude: 2160
+		CruisingCondition: cruising
+		Speed: 144
+		TurnSpeed: 16
+		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
+		Repulsable: False
+		AirborneCondition: airborne
+		CanSlide: True
+		VTOL: true
+		IdleTurnSpeed: 4
+	Targetable@GROUND:
+		TargetTypes: Ground, Vehicle
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	SpawnActorOnDeath@CRUISING:
+		Actor: carryall.husk
+		RequiresCondition: cruising
+	SpawnActorOnDeath@LANDING:
+		Actor: carryall.huskVTOL
+		RequiresCondition: !cruising
+	Carryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 15
+		LocalOffset: 0, 0, -128
+	RenderSprites:
+		Image: carryall
+	ChangesHealth:
+		Step: 50
+		Delay: 3
+		StartIfBelow: 50
+	Buildable:
+		BuildDuration: 750
+		BuildDurationModifier: 100
+		Description: Large winged, planet-bound ship\n  Automatically lifts harvesters from and to Spice.\n  Lifts vehicles to Repair Pads when ordered.
+
+carryall:
+	Inherits: carryall.reinforce
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: true
+	-Carryall:
+	AutoCarryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 15
+		LocalOffset: 0, 0, -128
+	Aircraft:
+		MinAirborneAltitude: 400
+	RevealsShroud@lifting_low:
+		Range: 2c512
+		Type: GroundPosition
+		RequiresCondition: !airborne
+	RevealsShroud@lifting_high:
+		Range: 1c256
+		Type: GroundPosition
+		RequiresCondition: !cruising
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 10
+
+frigate:
+	Inherits: ^Plane
+	ParaDrop:
+		DropRange: 1c0
+	Interactable:
+	Tooltip:
+		Name: Frigate
+	Aircraft:
+		IdleBehavior: LeaveMap
+		Speed: 189
+		TurnSpeed: 4
+		Repulsable: False
+		MaximumPitch: 20
+		CruiseAltitude: 2048
+		VTOL: true
+		CanHover: true
+		CanSlide: true
+	-AppearsOnRadar:
+	Cargo:
+		MaxWeight: 20
+	RejectsOrders:
+
+ornithopter:
+	Inherits: ^Plane
+	AttackBomber:
+	Armament:
+		Weapon: OrniBomb
+	Health:
+		HP: 9000
+	Armor:
+		Type: light
+	Aircraft:
+		Speed: 224
+		TurnSpeed: 8
+		Repulsable: False
+		CruiseAltitude: 1920
+	AmmoPool:
+		Ammo: 5
+	Tooltip:
+		Name: Ornithopter
+	SpawnActorOnDeath:
+		Actor: ornithopter.husk
+	RejectsOrders:
+	RevealOnFire:
+	-MapEditorData:
+
+ornithopter.controllable:
+	Inherits: ornithopter
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	AutoTarget:
+		InitialStance: ReturnFire
+	Valued:
+		Cost: 1200
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
+		Prerequisites: outpost, ~hightech.ornithopter
+		BuildDuration: 562
+		BuildDurationModifier: 100
+		Description: Aircraft armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
+	Health:
+		HP: 10000
+	-AttackBomber:
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 180
+		Count: 2
+		ResetOnFire: true
+	AttackAircraft:
+		FacingTolerance: 80
+	Armament:
+		Weapon: OrniRocket
+		LocalOffset: 0,128,0, 0,-128,0
+		PauseOnCondition: !ammo
+	Aircraft:
+		Speed: 117
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		Repulsable: true
+		CanHover: false
+		AirborneCondition: airborne
+	Repairable:
+		RepairActors: repair_pad, repair_pad.ixian
+	RevealsShroud:
+		Range: 4c0
+		Type: GroundPosition
+	Guard:
+		Voice: Guard
+	Guardable:
+	Targetable:
+		TargetTypes: Air, Plane
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@LANDED:
+		Sequence: idle-landed
+		RequiresCondition: !airborne
+	-Interactable:
+	Selectable:
+		Bounds: 40,30,0,0
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: ornithopter.controllable.husk
+	-RejectsOrders:
+	Voiced:
+		VoiceSet: VehicleVoice
+	RenderSprites:
+		Image: ornithopter
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, 4
+		RequiresSelection: true
+
+swarmer:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	AutoTarget:
+		InitialStance: ReturnFire
+	Valued:
+		Cost: 450
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: outpost, ~hightech.swarmer
+		BuildDuration: 321
+		BuildDurationModifier: 100
+		Description: Light plane armed with dual machine guns.\n Strong vs Infantry\n  Weak vs Tanks
+	Tooltip:
+		Name: Swarmer
+	Health:
+		HP: 5000
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 5c0
+		Type: GroundPosition
+	AmmoPool:
+		Ammo: 24
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 6
+		ResetOnFire: true
+	AttackAircraft:
+		FacingTolerance: 80
+	Armament@PRIMARY:
+		Weapon: ChainGun
+		LocalOffset: 256,-213,0
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: ChainGun
+		LocalOffset: 256,213,0
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	Aircraft:
+		CruiseAltitude: 1920
+		Speed: 147
+		TurnSpeed: 16
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		CanHover: false
+	Repairable:
+		RepairActors: repair_pad, repair_pad.ixian
+	Guard:
+		Voice: Guard
+	Guardable:
+	WithMuzzleOverlay:
+	Targetable:
+		TargetTypes: Air, Plane
+	SpawnActorOnDeath:
+		Actor: swarmer.husk
+	-Interactable:
+	Selectable:
+		Bounds: 30,25,0,0
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: VehicleVoice
+	RenderSprites:
+		Scale: 0.8
+		PlayerPalette: raplayer
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, 4
+		RequiresSelection: true
+		PipCount: 6
+
+phoenix:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	AutoTarget:
+		InitialStance: ReturnFire
+	Valued:
+		Cost: 1150
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 40
+		Prerequisites: outpost, ~hightech.phoenix
+		BuildDuration: 512
+		BuildDurationModifier: 100
+		Description: Light plane armed with dual flame rockets.\n Strong vs Buildings\n  Weak vs Tanks
+	Tooltip:
+		Name: Phoenix
+	Health:
+		HP: 7500
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 4c512
+		Type: GroundPosition
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 180
+		Count: 2
+		ResetOnFire: true
+	AttackAircraft:
+		FacingTolerance: 80
+	Armament:
+		Weapon: PhoenixRocket
+		LocalOffset: 0,-640,0, 0,640,0
+		LocalYaw: -40, 24
+		PauseOnCondition: !ammo
+	Aircraft:
+		CruiseAltitude: 1920
+		Speed: 129
+		TurnSpeed: 16
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		CanHover: false
+	Repairable:
+		RepairActors: repair_pad, repair_pad.ixian
+	Guard:
+		Voice: Guard
+	Guardable:
+	WithMuzzleOverlay:
+	Targetable:
+		TargetTypes: Air, Plane
+	SpawnActorOnDeath:
+		Actor: phoenix.husk
+	-Interactable:
+	Selectable:
+		Bounds: 36,28,0,2
+		DecorationBounds: 40,29,0,1
+	SelectionDecorations:
+	Contrail@1:
+		Offset: -538,-614,0
+		UsePlayerColor: false
+	Contrail@2:
+		Offset: -538,614,0
+		UsePlayerColor: false
+	Voiced:
+		VoiceSet: VehicleVoice
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, 4
+		RequiresSelection: true
