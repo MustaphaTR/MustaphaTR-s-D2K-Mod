@@ -250,6 +250,11 @@ Player:
 			combat_tank_a.starport: 15
 			combat_tank_h.starport: 15
 			combat_tank_o.starport: 15
+			combat_tank_f.starport: 15
+			combat_tank_i.starport: 15
+			combat_tank_c.starport: 15
+			combat_tank_m.starport: 15
+			combat_tank_s.starport: 15
 			sonic_tank: 10
 			stealth_tank: 10
 			devastator: 10
@@ -267,6 +272,11 @@ Player:
 			combat_tank_a: 100
 			combat_tank_h: 100
 			combat_tank_o: 100
+			combat_tank_f: 100
+			combat_tank_i: 100
+			combat_tank_c: 100
+			combat_tank_m: 100
+			combat_tank_s: 100
 		UnitLimits:
 			harvester: 8
 			carryall: 4
@@ -301,6 +311,11 @@ Player:
 			combat_tank_a.starport: 15
 			combat_tank_h.starport: 15
 			combat_tank_o.starport: 15
+			combat_tank_f.starport: 15
+			combat_tank_i.starport: 15
+			combat_tank_c.starport: 15
+			combat_tank_m.starport: 15
+			combat_tank_s.starport: 15
 			sonic_tank: 50
 			stealth_tank: 50
 			devastator: 40
@@ -318,6 +333,11 @@ Player:
 			combat_tank_a: 100
 			combat_tank_h: 100
 			combat_tank_o: 100
+			combat_tank_f: 100
+			combat_tank_i: 100
+			combat_tank_c: 100
+			combat_tank_m: 100
+			combat_tank_s: 100
 		UnitLimits:
 			harvester: 8
 			carryall: 4
@@ -347,6 +367,11 @@ Player:
 			combat_tank_a.starport: 15
 			combat_tank_h.starport: 15
 			combat_tank_o.starport: 15
+			combat_tank_f.starport: 15
+			combat_tank_i.starport: 15
+			combat_tank_c.starport: 15
+			combat_tank_m.starport: 15
+			combat_tank_s.starport: 15
 			sonic_tank: 10
 			stealth_tank: 10
 			devastator: 10
@@ -364,6 +389,11 @@ Player:
 			combat_tank_a: 100
 			combat_tank_h: 100
 			combat_tank_o: 100
+			combat_tank_f: 100
+			combat_tank_i: 100
+			combat_tank_c: 100
+			combat_tank_m: 100
+			combat_tank_s: 100
 		UnitLimits:
 			harvester: 8
 			carryall: 4
