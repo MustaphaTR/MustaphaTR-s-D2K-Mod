@@ -263,6 +263,7 @@ Player:
 			siege_tank: 10
 			missile_tank: 15
 			stealth_raider: 5
+			light_tank: 5
 			combat_tank_a: 100
 			combat_tank_h: 100
 			combat_tank_o: 100
@@ -313,6 +314,7 @@ Player:
 			siege_tank: 10
 			missile_tank: 15
 			stealth_raider: 5
+			light_tank: 5
 			combat_tank_a: 100
 			combat_tank_h: 100
 			combat_tank_o: 100
@@ -358,6 +360,7 @@ Player:
 			siege_tank: 10
 			missile_tank: 15
 			stealth_raider: 7
+			light_tank: 7
 			combat_tank_a: 100
 			combat_tank_h: 100
 			combat_tank_o: 100
