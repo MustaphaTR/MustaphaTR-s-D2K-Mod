@@ -301,6 +301,7 @@ refinery:
 outpost:
 	Inherits: ^Building
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@UPGRADEABLE: ^Upgradeable
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
@@ -347,7 +348,33 @@ outpost:
 		Condition: severe-damaged
 	Power:
 		Amount: -125
+	ProvidesPrerequisite@atreides:
+		Prerequisite: outpost.atreides
+		Factions: atreides
+	ProvidesPrerequisite@fremen:
+		Prerequisite: outpost.fremen
+		Factions: fremen
+	ProvidesPrerequisite@ixian:
+		Prerequisite: outpost.ixian
+		Factions: ixian
+	ProvidesPrerequisite@ordos:
+		Prerequisite: outpost.ordos
+		Factions: ordos
+	ProvidesPrerequisite@mercenary:
+		Prerequisite: outpost.mercenary
+		Factions: mercenary
+	ProvidesPrerequisite@smuggler:
+		Prerequisite: outpost.smuggler
+		Factions: smuggler
+	ProvidesPrerequisite@harkonnen:
+		Prerequisite: outpost.harkonnen
+		Factions: harkonnen
+	ProvidesPrerequisite@corrino:
+		Prerequisite: outpost.corrino
+		Factions: corrino
 	ProvidesPrerequisite@buildingname:
+	GrantConditionOnPrerequisite@UPGRADEABLE:
+		Prerequisites: upgrade.outpost
 
 light_factory:
 	Inherits: ^Building
