@@ -173,6 +173,9 @@ fremen:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
 	-MustBeDestroyed:
+	-ExternalCondition@STEALTH:
+	-Cloak@STEALTH:
+	-TimedConditionBar:
 	Voiced:
 		VoiceSet: FremenVoice
 
@@ -310,3 +313,15 @@ nsfremen:
 		Image: fremen
 	-Cloak:
 	-GrantConditionOnDamageState@UNCLOAK:
+	ExternalCondition@STEALTH:
+		Condition: stealth
+	Cloak@STEALTH:
+		InitialDelay: 10
+		CloakDelay: 25
+		CloakSound: STEALTH1.WAV
+		UncloakSound: STEALTH2.WAV
+		IsPlayerPalette: true
+		RequiresCondition: stealth
+	TimedConditionBar:
+		Condition: stealth
+		Color: DDDDDD

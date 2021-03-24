@@ -346,6 +346,16 @@ outpost:
 		PauseOnCondition: disabled
 	GrantConditionOnDamageState@STOPDISH:
 		Condition: severe-damaged
+	GrantExternalConditionPower@stealth:
+		Icon: stealth
+		Dimensions: 5,5
+		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
+		Prerequisites: upgrade.outpost, ~techlevel.6
+		ChargeInterval: 3750
+		Description: Stealth Device
+		LongDesc: Makes a group of units or buildings stealth\nfor 30 seconds.
+		Duration: 750
+		Condition: stealth
 	Power:
 		Amount: -125
 	ProvidesPrerequisite@atreides:

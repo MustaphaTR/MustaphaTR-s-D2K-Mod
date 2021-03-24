@@ -120,6 +120,20 @@
 		Margin: 5, 6
 		RequiresCondition: rank-elite
 
+^Cloakable:
+	ExternalCondition@STEALTH:
+		Condition: stealth
+	Cloak@STEALTH:
+		InitialDelay: 10
+		CloakDelay: 25
+		CloakSound: STEALTH1.WAV
+		UncloakSound: STEALTH2.WAV
+		IsPlayerPalette: true
+		RequiresCondition: stealth
+	TimedConditionBar:
+		Condition: stealth
+		Color: DDDDDD
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -192,6 +206,7 @@
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@3: ^Cloakable
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
@@ -303,6 +318,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
 	Inherits@3: ^SpriteActor
+	Inherits@4: ^Cloakable
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
@@ -398,6 +414,7 @@
 ^Building:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@3: ^Cloakable
 	Inherits@selection: ^SelectableBuilding
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:

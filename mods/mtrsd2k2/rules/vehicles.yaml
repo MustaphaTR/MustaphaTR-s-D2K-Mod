@@ -291,6 +291,9 @@ stealth_raider:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	-MustBeDestroyed:
+	-ExternalCondition@STEALTH:
+	-Cloak@STEALTH:
+	-TimedConditionBar:
 
 harvester:
 	Inherits: ^Tank
@@ -739,9 +742,9 @@ stealth_tank:
 	RenderSprites:
 		PlayerPalette: cncplayer
 		Scale: 1.25
-	#-ExternalCondition@STEALTH:
-	#-Cloak@STEALTH:
-	#-TimedConditionBar:
+	-ExternalCondition@STEALTH:
+	-Cloak@STEALTH:
+	-TimedConditionBar:
 	AttractsWorms:
 		Intensity: 520
 

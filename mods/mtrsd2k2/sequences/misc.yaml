@@ -404,6 +404,7 @@ icon:
 	deathhand: DATA.R8
 		Start: 4296
 		Offset: -30,-24
+	stealth: stealthicon.shp
 
 crate:
 	idle: DATA.R8
