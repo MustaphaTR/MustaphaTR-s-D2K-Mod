@@ -240,6 +240,7 @@ Player:
 			trooper: 40
 			mpsardaukar: 20
 			grenadier: 20
+			nsfremen: 20
 			harvester: 1
 			trike.starport: 5
 			raider.starport: 5
@@ -288,6 +289,7 @@ Player:
 			trooper: 40
 			mpsardaukar: 20
 			grenadier: 20
+			nsfremen: 20
 			harvester: 1
 			trike.starport: 7
 			raider.starport: 7
@@ -331,6 +333,7 @@ Player:
 			trooper: 40
 			mpsardaukar: 20
 			grenadier: 20
+			nsfremen: 20
 			harvester: 1
 			trike.starport: 5
 			raider.starport: 5

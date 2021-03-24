@@ -301,8 +301,10 @@ nsfremen:
 	Tooltip:
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: ~disabled
+		Prerequisites: ~barracks.fremen, upgrade.barracks, high_tech_factory, ~techlevel.5
 		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+	Selectable:
+		Class: nsfremen
 	RenderSprites:
 		Image: fremen
 	-Cloak:
