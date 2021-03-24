@@ -295,6 +295,56 @@ stealth_raider:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
 
+light_tank:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 80
+		BuildDuration: 380
+		BuildDurationModifier: 100
+		Prerequisites: ~light.mercenary, upgrade.light, high_tech_factory, ~techlevel.5
+		Description: Light anti-tank vehicle.\n Strong vs Tanks\n Weak vs Infantry
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Light Tank
+	Health:
+		HP: 15000
+	Armor:
+		Type: heavy
+	Mobile:
+		TurnSpeed: 28
+		Speed: 98
+	Turreted:
+		TurnSpeed: 24
+		RealignDelay: 0
+	RevealsShroud:
+		Range: 4c0
+	WithMuzzleOverlay:
+	Armament:
+		Weapon: 25mm
+		Recoil: 65
+		RecoilRecovery: 25
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Class: light_tank
+	AttractsWorms:
+		Intensity: 480
+	Cloak@STEALTH:
+		Palette: racloak
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.25
+
 harvester:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit

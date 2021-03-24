@@ -45,6 +45,22 @@ stealth_raider:
 		Start: 4298
 		Offset: -30,-24
 
+light_tank:
+	idle: light_tank.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret: light_tank.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle: DATA.R8
+		Start: 4028
+		Tick: 60
+		Facings: -32
+		BlendMode: Additive
+	icon: light_tankicon.shp
+		Offset: 0,-1
+
 harvester:
 	idle: DATA.R8
 		Start: 1699

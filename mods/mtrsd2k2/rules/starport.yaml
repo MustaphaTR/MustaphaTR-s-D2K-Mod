@@ -72,6 +72,34 @@ quad.rocket.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: quad.rocket
 
+stealth_raider.starport:
+	Inherits: stealth_raider
+	Buildable:
+		Prerequisites: starport, ~starport.mercenary, ~light.ordos, ~techlevel.5
+		BuildPaletteOrder: 20
+		Queue: Starport
+	Valued:
+		Cost: 550
+	-MapEditorData:
+	RenderSprites:
+		Image: stealth_raider
+	UpdatesPlayerStatistics:
+		OverrideActor: stealth_raider
+
+light_tank.starport:
+	Inherits: light_tank
+	Buildable:
+		Prerequisites: starport, ~starport.mercenary, ~techlevel.5
+		BuildPaletteOrder: 21
+		Queue: Starport
+	Valued:
+		Cost: 575
+	-MapEditorData:
+	RenderSprites:
+		Image: light_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: light_tank
+
 harvester.starport:
 	Inherits: harvester
 	Buildable:

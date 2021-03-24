@@ -60,6 +60,26 @@
 	Warhead@1Dam: SpreadDamage
 		Damage: 330
 
+25mm:
+	Inherits: 80mm
+	ReloadDelay: 25
+	Range: 3c256
+	Projectile: Bullet
+		Speed: 768
+		Inaccuracy: 96
+	Warhead@1Dam: SpreadDamage
+		Damage: 700
+		Versus:
+			none: 20
+			wall: 40
+			wood: 40
+			building: 40
+			light: 150
+			heavy: 220
+			invulnerable: 0
+			cy: 20
+			harvester: 80
+
 DevBullet:
 	Inherits: ^Cannon
 	ReloadDelay: 75
