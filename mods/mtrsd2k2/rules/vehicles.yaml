@@ -310,6 +310,8 @@ light_tank:
 		Cost: 550
 	Tooltip:
 		Name: Light Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 15000
 	Armor:
@@ -749,6 +751,8 @@ stealth_tank:
 		Cost: 950
 	Tooltip:
 		Name: Stealth Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 70

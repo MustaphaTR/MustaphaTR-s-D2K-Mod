@@ -133,6 +133,8 @@ ornithopter.controllable:
 		BuildDuration: 562
 		BuildDurationModifier: 100
 		Description: Aircraft armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 10000
 	-AttackBomber:
@@ -204,6 +206,8 @@ swarmer:
 		Description: Light plane armed with dual machine guns.\n Strong vs Infantry\n  Weak vs Tanks
 	Tooltip:
 		Name: Swarmer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 5000
 	Armor:
@@ -280,6 +284,8 @@ phoenix:
 		Description: Light plane armed with dual flame rockets.\n Strong vs Buildings\n  Weak vs Tanks
 	Tooltip:
 		Name: Phoenix
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 7500
 	Armor:
