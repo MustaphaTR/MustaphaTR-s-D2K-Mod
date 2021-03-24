@@ -229,6 +229,39 @@ flamethrower:
 	Cloak@STEALTH:
 		Palette: racloak
 
+plasma_infantry:
+	Inherits: ^Infantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 90
+		BuildDuration: 111
+		BuildDurationModifier: 40
+		Prerequisites: ~barracks.corrino, upgrade.barracks, high_tech_factory, ~techlevel.5
+		Description: Advanced infantry armed with a plasma ball launcher\n  Strong vs Tanks\n  Weak vs Artillery
+	Valued:
+		Cost: 175
+	Tooltip:
+		Name: Plasma Infantry
+	Selectable:
+		Class: plasma_infantry
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 6500
+	Armor:
+		Type: none
+	Mobile:
+		Speed: 28
+	RevealsShroud:
+		Range: 4c0
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armament:
+		Weapon: PlasBullet
+		LocalOffset: 427,0,341
+	AttackFrontal:
+
 fremen:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

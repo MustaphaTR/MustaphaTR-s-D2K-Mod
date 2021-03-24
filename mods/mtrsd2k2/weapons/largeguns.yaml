@@ -104,6 +104,29 @@ DevBullet:
 		Explosions: shockwave
 		ImpactSounds: EXPLMD1.WAV
 
+PlasBullet:
+	Inherits: DevBullet
+	ReloadDelay: 60
+	Range: 3c512
+	Projectile: Bullet
+		Speed: 320
+		Image: oneblastbullet
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 2500
+		Versus:
+			none: 60
+			wall: 100
+			building: 40
+			wood: 30
+			light: 70
+			heavy: 100
+			invulnerable: 0
+			harvester: 80
+			cy: 20
+	Warhead@3Eff: CreateEffect
+		Explosions: plasmaexpsml
+
 155mm:
 	Inherits: ^Cannon
 	ReloadDelay: 80

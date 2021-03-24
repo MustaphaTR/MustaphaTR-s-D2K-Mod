@@ -41,6 +41,10 @@ explosion:
 		Start: 3940
 		Length: 6
 		Tick: 120
+	plasmaexpsml: plasmaexpsml.shp
+		Frames: 6, 5, 4, 3, 2 ,1 ,0
+		Length: 7
+		Tick: 120
 	deviator: DATA.R8
 		Start: 3765
 		Length: 23
@@ -388,6 +392,11 @@ doubleblastbullet:
 	idle: DATA.R8
 		Start: 3496
 		Facings: -16
+		BlendMode: Additive
+		ZOffset: 1023
+
+oneblastbullet:
+	idle: oneblastbullet.shp
 		BlendMode: Additive
 		ZOffset: 1023
 
