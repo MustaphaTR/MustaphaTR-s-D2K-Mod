@@ -261,6 +261,30 @@ upgrade.barracks:
 			corrino: barracks.harkonnen
 	ProvidesPrerequisite@upgradename:
 
+upgrade.outpost:
+	AlwaysVisible:
+	Tooltip:
+		Name: Outpost Upgrade
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ~outpost.freman, ~techlevel.6
+		Queue: Upgrade
+		BuildLimit: 1
+		BuildDuration: 256
+		BuildDurationModifier: 100
+		Description: Unlocks the Fremen Cloak Device support weapon
+	Valued:
+		Cost: 600
+	RenderSprites:
+		Image: outpost.ordos
+		FactionImages:
+			atreides: outpost.atreides
+			fremen: outpost.atreides
+			ixian: outpost.atreides
+			harkonnen: outpost.harkonnen
+			corrino: outpost.harkonnen
+	ProvidesPrerequisite@upgradename:
+
 upgrade.light:
 	AlwaysVisible:
 	Interactable:
