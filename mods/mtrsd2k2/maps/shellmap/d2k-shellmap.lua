@@ -48,7 +48,7 @@ OrdosVehicleTypes = { "quad.mg", "quad.rocket", "raider.rocket", "stealth_raider
 OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "combat_tank_o", "siege_tank" }
 OrdosStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_o.starport" }
 
-CorrinoInfantryTypes = { "light_inf", "trooper", "sardaukar", "sardaukar", "sardaukar", "sardaukar" }
+CorrinoInfantryTypes = { "light_inf", "trooper", "plasma_infantry", "sardaukar", "sardaukar", "sardaukar" }
 CorrinoVehicleTypes = { "trike.mg", "quad.rocket", "quad.rocket" }
 CorrinoTankTypes = { "combat_tank_c", "combat_tank_c", "combat_tank_c", "siege_tank" }
 CorrinoStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_c.starport" }

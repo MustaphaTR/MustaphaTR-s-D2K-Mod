@@ -762,12 +762,12 @@ Actors:
 		Location: 30,91
 		SubCell: 3
 		Facing: 0
-	cor_sardaukar5: sardaukar
+	cor_plasma_infantry1: plasma_infantry
 		Owner: Corrino
 		Location: 17,88
 		SubCell: 3
 		Facing: 0
-	cor_sardaukar6: sardaukar
+	cor_plasma_infantry2: plasma_infantry
 		Owner: Corrino
 		Location: 33,81
 		SubCell: 3
