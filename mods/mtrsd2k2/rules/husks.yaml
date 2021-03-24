@@ -1,10 +1,3 @@
-mcv.husk:
-	Inherits: ^VehicleHusk
-	Health:
-		HP: 1750
-	Tooltip:
-		Name: Mobile Construction Vehicle (Destroyed)
-
 harvester.husk:
 	Inherits: ^VehicleHusk
 	Health:
@@ -13,45 +6,6 @@ harvester.husk:
 		Name: Spice Harvester (Destroyed)
 	TransformOnCapture:
 		IntoActor: harvester
-
-siege_tank.husk:
-	Inherits: ^VehicleHusk
-	Tooltip:
-		Name: Siege Tank (Destroyed)
-	ThrowsParticle@turret:
-		Anim: turret
-	TransformOnCapture:
-		IntoActor: siege_tank
-
-missile_tank.husk:
-	Inherits: ^VehicleHusk
-	Tooltip:
-		Name: Missile Tank (Destroyed)
-	TransformOnCapture:
-		IntoActor: missile_tank
-
-sonic_tank.husk:
-	Inherits: ^VehicleHusk
-	Tooltip:
-		Name: Sonic Tank (Destroyed)
-	TransformOnCapture:
-		IntoActor: sonic_tank
-
-devastator.husk:
-	Inherits: ^VehicleHusk
-	Health:
-		HP: 1250
-	Tooltip:
-		Name: Devastator (Destroyed)
-	TransformOnCapture:
-		IntoActor: devastator
-
-deviator.husk:
-	Inherits: ^VehicleHusk
-	Tooltip:
-		Name: Deviator (Destroyed)
-	TransformOnCapture:
-		IntoActor: deviator
 
 ^combat_tank.husk:
 	Inherits: ^VehicleHusk
@@ -117,6 +71,64 @@ combat_tank_i.husk:
 		Name: Ixian Combat Tank (Destroyed)
 	TransformOnCapture:
 		IntoActor: combat_tank_i
+
+siege_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Siege Tank (Destroyed)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: siege_tank
+
+mcv.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 1750
+	Tooltip:
+		Name: Mobile Construction Vehicle (Destroyed)
+	TransformOnCapture:
+		IntoActor: mcv
+
+missile_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Missile Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: missile_tank
+
+sonic_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Sonic Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: sonic_tank
+
+stealth_tank.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Stealth Tank
+	TransformOnCapture:
+		IntoActor: stealth_tank
+	RenderSprites:
+		PlayerPalette: cncplayer
+		Scale: 1.25
+
+devastator.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 1250
+	Tooltip:
+		Name: Devastator (Destroyed)
+	TransformOnCapture:
+		IntoActor: devastator
+
+deviator.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Deviator (Destroyed)
+	TransformOnCapture:
+		IntoActor: deviator
 
 ornithopter.husk:
 	Inherits: ^AircraftHusk

@@ -108,6 +108,18 @@
 		BaseName: cloak
 		BasePalette: player
 		Alpha: 0.55
+	PaletteFromPlayerPaletteWithAlpha@racloak:
+		BaseName: racloak
+		BasePalette: raplayer
+		Alpha: 0.55
+	PaletteFromPlayerPaletteWithAlpha@cnccloak:
+		BaseName: cnccloak
+		BasePalette: cncplayer
+		Alpha: 0.55
+	PaletteFromPlayerPaletteWithAlpha@ra2cloak:
+		BaseName: ra2cloak
+		BasePalette: ra2player
+		Alpha: 0.55
 	PaletteFromPaletteWithAlpha@placelinesegment:
 		Name: placelinesegment
 		BasePalette: terrain

@@ -251,6 +251,7 @@ Player:
 			combat_tank_h.starport: 15
 			combat_tank_o.starport: 15
 			sonic_tank: 10
+			stealth_tank: 10
 			devastator: 10
 			deviator: 7
 			trike.mg: 10
@@ -300,6 +301,7 @@ Player:
 			combat_tank_h.starport: 15
 			combat_tank_o.starport: 15
 			sonic_tank: 50
+			stealth_tank: 50
 			devastator: 40
 			deviator: 5
 			trike.mg: 15
@@ -344,6 +346,7 @@ Player:
 			combat_tank_h.starport: 15
 			combat_tank_o.starport: 15
 			sonic_tank: 10
+			stealth_tank: 10
 			devastator: 10
 			deviator: 7
 			trike.mg: 10

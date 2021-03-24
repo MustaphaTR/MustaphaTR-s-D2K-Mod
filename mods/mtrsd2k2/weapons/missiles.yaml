@@ -140,6 +140,33 @@ RocketAA_quad:
 	Warhead@1Dam: SpreadDamage
 		Damage: 2750
 
+Rocket.stealth:
+	Inherits: Rocket
+	ReloadDelay: 40
+	Range: 4c0
+	Projectile: Bullet
+		Inaccuracy: 64
+	Warhead@1Dam: SpreadDamage
+		Damage: 3750
+		Versus:
+			wall: 80
+			building: 40
+			wood: 50
+			cy: 15
+
+Rocket.stealthAA:
+	Inherits: Rocket.stealth
+	Range: 5c0
+	MinRange: 0c512
+	ValidTargets: Air
+	Projectile: Bullet
+		Inaccuracy: 0
+		Speed: 384
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		ValidTargets: Air
+	-Warhead@2Smu:
+
 PhoenixRocket:
 	Inherits: Rocket
 	ReloadDelay: 100
