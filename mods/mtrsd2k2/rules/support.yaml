@@ -31,9 +31,9 @@ concretea:
 		Cost: 15
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~!global-auto-concrete
 		BuildDuration: 62
 		BuildDurationModifier: 100
+		Prerequisites: ~!global-auto-concrete, ~techlevel.1
 
 concreteb:
 	Inherits: ^concrete
@@ -46,18 +46,18 @@ concreteb:
 		Cost: 35
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: upgrade.conyard, ~!global-auto-concrete
 		BuildDuration: 94
 		BuildDurationModifier: 100
+		Prerequisites: upgrade.conyard, ~!global-auto-concrete, ~techlevel.6
 
 silo:
 	Inherits: ^Building
 	Buildable:
-		Prerequisites: refinery
 		Queue: Defense
 		BuildPaletteOrder: 30
 		BuildDuration: 156
 		BuildDurationModifier: 100
+		Prerequisites: refinery, ~techlevel.1
 		Description: Stores excess harvested Spice.
 	Selectable:
 		Bounds: 32,32
@@ -114,10 +114,10 @@ wall:
 		Action: ChangeOwner
 	Buildable:
 		Queue: Defense
-		Prerequisites: barracks
 		BuildPaletteOrder: 40
 		BuildDuration: 62
 		BuildDurationModifier: 100
+		Prerequisites: barracks, ~techlevel.2
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 20
@@ -180,10 +180,10 @@ machine_gun_tower:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Defense
-		Prerequisites: construction_yard, barracks, ~cyard.machine_gun_tower, ~techlevel.medium
 		BuildPaletteOrder: 50
 		BuildDuration: 222
 		BuildDurationModifier: 40
+		Prerequisites: barracks, ~cyard.machine_gun_tower, ~techlevel.3
 		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 500
@@ -220,10 +220,10 @@ flame_tower:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Defense
-		Prerequisites: construction_yard, barracks, ~cyard.flame_tower, ~techlevel.medium
 		BuildPaletteOrder: 50
 		BuildDuration: 222
 		BuildDurationModifier: 40
+		Prerequisites: barracks, ~cyard.flame_tower, ~techlevel.3
 		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 500
@@ -257,10 +257,10 @@ artillery_platform:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Defense
-		Prerequisites: construction_yard, barracks, ~cyard.artillery_platform, ~techlevel.medium
 		BuildPaletteOrder: 50
 		BuildDuration: 222
 		BuildDurationModifier: 40
+		Prerequisites: barracks, ~cyard.artillery_platform, ~techlevel.3
 		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 500
@@ -303,10 +303,10 @@ medium_gun_turret:
 		PauseOnCondition: disabled
 	Buildable:
 		Queue: Defense
-		Prerequisites: construction_yard, light_or_heavy, ~cyard.gun_turret
 		BuildPaletteOrder: 60
 		BuildDuration: 268
 		BuildDurationModifier: 100
+		Prerequisites: light_or_heavy, ~cyard.gun_turret, ~techlevel.4
 		Description: Defensive structure.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Requires power to operate.
 	Valued:
 		Cost: 550
@@ -347,10 +347,10 @@ large_gun_turret:
 		PauseOnCondition: disabled
 	Buildable:
 		Queue: Defense
-		Prerequisites: outpost, upgrade.conyard, ~techlevel.medium
 		BuildPaletteOrder: 70
 		BuildDuration: 312
 		BuildDurationModifier: 100
+		Prerequisites: outpost, upgrade.conyard, ~techlevel.6
 		Description: Defensive structure.\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate.
 	Valued:
 		Cost: 750

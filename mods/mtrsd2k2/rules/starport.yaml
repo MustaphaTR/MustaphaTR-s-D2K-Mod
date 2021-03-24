@@ -1,7 +1,7 @@
 trike.mg.starport:
 	Inherits: trike.mg
 	Buildable:
-		Prerequisites: starport, ~starport.mgtrike
+		Prerequisites: starport, ~starport.mgtrike, ~techlevel.1
 		BuildPaletteOrder: 14
 		Queue: Starport
 	Valued:
@@ -15,7 +15,7 @@ trike.mg.starport:
 raider.mg.starport:
 	Inherits: raider.mg
 	Buildable:
-		Prerequisites: starport, ~starport.mgraider
+		Prerequisites: starport, ~starport.mgraider, ~techlevel.1
 		BuildPaletteOrder: 15
 		Queue: Starport
 	Valued:
@@ -27,7 +27,7 @@ raider.mg.starport:
 quad.mg.starport:
 	Inherits: quad.mg
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.mgquad
+		Prerequisites: starport, ~starport.mercenary, ~light.mgquad, ~techlevel.1
 		BuildPaletteOrder: 16
 		Queue: Starport
 	Valued:
@@ -39,7 +39,7 @@ quad.mg.starport:
 trike.rocket.starport:
 	Inherits: trike.rocket
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike
+		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
 		BuildPaletteOrder: 17
 		Queue: Starport
 	Valued:
@@ -51,7 +51,7 @@ trike.rocket.starport:
 raider.rocket.starport:
 	Inherits: raider.rocket
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider
+		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
 		BuildPaletteOrder: 18
 		Queue: Starport
 	Valued:
@@ -63,7 +63,7 @@ raider.rocket.starport:
 quad.rocket.starport:
 	Inherits: quad.rocket
 	Buildable:
-		Prerequisites: starport
+		Prerequisites: starport, ~techlevel.2
 		BuildPaletteOrder: 19
 		Queue: Starport
 	Valued:
@@ -75,7 +75,7 @@ quad.rocket.starport:
 harvester.starport:
 	Inherits: harvester
 	Buildable:
-		Prerequisites: starport
+		Prerequisites: starport, ~techlevel.1
 		Queue: Starport
 	Valued:
 		Cost: 1500
@@ -88,7 +88,7 @@ harvester.starport:
 mcv.starport:
 	Inherits: mcv
 	Buildable:
-		Prerequisites: starport
+		Prerequisites: starport, ~techlevel.3
 		Queue: Starport
 	Valued:
 		Cost: 2500
@@ -101,7 +101,7 @@ mcv.starport:
 siege_tank.starport:
 	Inherits: siege_tank
 	Buildable:
-		Prerequisites: starport
+		Prerequisites: starport, ~techlevel.5
 		Queue: Starport
 	Valued:
 		Cost: 1075
@@ -114,7 +114,7 @@ siege_tank.starport:
 missile_tank.starport:
 	Inherits: missile_tank
 	Buildable:
-		Prerequisites: starport
+		Prerequisites: starport, ~techlevel.4
 		Queue: Starport
 	Valued:
 		Cost: 1250
@@ -127,7 +127,7 @@ missile_tank.starport:
 combat_tank_a.starport:
 	Inherits: combat_tank_a
 	Buildable:
-		Prerequisites: ~starport.atreides
+		Prerequisites: ~starport.atreides, ~techlevel.3
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -140,7 +140,7 @@ combat_tank_a.starport:
 combat_tank_h.starport:
 	Inherits: combat_tank_h
 	Buildable:
-		Prerequisites: ~starport.harkonnen
+		Prerequisites: ~starport.harkonnen, ~techlevel.3
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -153,7 +153,7 @@ combat_tank_h.starport:
 combat_tank_o.starport:
 	Inherits: combat_tank_o
 	Buildable:
-		Prerequisites: ~starport.ordos
+		Prerequisites: ~starport.ordos, ~techlevel.3
 		Queue: Starport
 	Valued:
 		Cost: 875
@@ -236,7 +236,7 @@ combat_tank_i.starport:
 carryall.starport:
 	Inherits: carryall
 	Buildable:
-		Prerequisites: starport
+		Prerequisites: starport, ~techlevel.4
 		Queue: Starport
 	Valued:
 		Cost: 1500

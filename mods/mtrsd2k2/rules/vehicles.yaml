@@ -5,9 +5,9 @@ trike.mg:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
-		Prerequisites: ~light.mgtrike
 		BuildDuration: 225
 		BuildDurationModifier: 100
+		Prerequisites: ~light.mgtrike, ~techlevel.1
 		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 325
@@ -51,9 +51,9 @@ raider.mg:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: ~light.mgraider
 		BuildDuration: 225
 		BuildDurationModifier: 100
+		Prerequisites: ~light.mgraider, ~techlevel.1
 		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 325
@@ -95,9 +95,9 @@ quad.mg:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
-		Prerequisites: ~light.mgquad
 		BuildDuration: 225
 		BuildDurationModifier: 100
+		Prerequisites: ~light.mgquad, ~techlevel.1
 		Description: Fast scout vehicle armed with machine guns.\n  Strong vs Infantry\n  Weak vs Tanks
 	Valued:
 		Cost: 325
@@ -137,10 +137,10 @@ trike.rocket:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.medium
 		BuildPaletteOrder: 40
 		BuildDuration: 321
 		BuildDurationModifier: 100
+		Prerequisites: ~light.rockettrike, upgrade.light, ~techlevel.2
 		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 425
@@ -180,10 +180,10 @@ raider.rocket:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.medium
 		BuildPaletteOrder: 50
 		BuildDuration: 321
 		BuildDurationModifier: 100
+		Prerequisites: ~light.rocketraider, upgrade.light, ~techlevel.2
 		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 425
@@ -223,10 +223,10 @@ quad.rocket:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~light.rocketquad, upgrade.light, ~techlevel.medium
 		BuildPaletteOrder: 60
 		BuildDuration: 321
 		BuildDurationModifier: 100
+		Prerequisites: ~light.rocketquad, upgrade.light, ~techlevel.2
 		Description: Fast scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
 		Cost: 425
@@ -260,64 +260,47 @@ quad.rocket:
 	RenderSprites:
 		Image: quad
 
-mcv:
-	Inherits: ^Tank
-	Inherits@selection: ^SelectableSupportUnit
+stealth_raider:
+	Inherits: raider.rocket
 	Buildable:
-		Prerequisites: repair_pad, upgrade.heavy, ~techlevel.medium
-		Queue: Armor
-		BuildPaletteOrder: 110
-		BuildDuration: 750
+		BuildPaletteOrder: 70
+		BuildDuration: 225
 		BuildDurationModifier: 100
-		Description: Deploys into another Construction Yard\n  Unarmed
+		Prerequisites: ~light.ordos, upgrade.light, high_tech_factory, ~techlevel.5
+		Description: Invisible scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
 	Valued:
-		Cost: 2000
+		Cost: 500
 	Tooltip:
-		Name: Mobile Construction Vehicle
+		Name: Stealth Rocket Raider
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Cloak:
+		InitialDelay: 45
+		CloakDelay: 90
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Damage, Heal
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 	Selectable:
-		Class: mcv
-		DecorationBounds: 42,42
-	Health:
-		HP: 45000
-	Armor:
-		Type: light
-	Mobile:
-		Speed: 31
-	RevealsShroud:
-		Range: 2c768
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	BaseBuilding:
-	Explodes:
-		Weapon: UnitExplodeLarge
-		EmptyWeapon: UnitExplodeLarge
-	Transforms:
-		Facing: 64
-		IntoActor: construction_yard
-		Offset: -1,-1
-		TransformSounds: BUILD1.WAV
-		NoTransformNotification: CannotDeploy
-	SpawnActorOnDeath:
-		Actor: mcv.husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
-	AttractsWorms:
-		Intensity: 700
-	ChangesHealth:
-		Step: 50
-		Delay: 3
-		StartIfBelow: 50
-	-RevealOnFire:
+		Class: stealth_raider
+	RenderSprites:
+		Image: stealth_raider
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	-MustBeDestroyed:
 
 harvester:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
 	Buildable:
 		Queue: Armor
-		Prerequisites: refinery
 		BuildPaletteOrder: 10
 		BuildDuration: 625
 		BuildDurationModifier: 100
+		Prerequisites: refinery, ~techlevel.1
 		Description: Collects Spice for processing\n  Unarmed
 	Valued:
 		Cost: 1200
@@ -365,16 +348,168 @@ harvester:
 		RequiresSelection: true
 		PipCount: 7
 
+^combat_tank:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 40
+		BuildDuration: 432
+		BuildDurationModifier: 100
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Combat Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	Armor:
+		Type: heavy
+	Mobile:
+		Speed: 75
+		TurnSpeed: 20
+	RevealsShroud:
+		Range: 5c768
+	Turreted:
+		TurnSpeed: 20
+		RealignDelay: 0
+	Armament:
+		Weapon: 80mm
+		Recoil: 128
+		RecoilRecovery: 32
+		LocalOffset: 256,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Explodes:
+		Weapon: UnitExplodeMed
+		EmptyWeapon: UnitExplodeMed
+	Selectable:
+		Class: combat
+	AttractsWorms:
+		Intensity: 520
+	SpawnActorOnDeath:
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+
+combat_tank_a:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.atreides, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas longer range than its counterparts.
+	Tooltip:
+		Name: Atreides Combat Tank
+	Armament:
+		Weapon: 80mm_A
+	SpawnActorOnDeath:
+		Actor: combat_tank_a.husk
+
+combat_tank_h:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.harkonnen, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas better armor than its counterparts.
+	Tooltip:
+		Name: Harkonnen Combat Tank
+	Health:
+		HP: 27000
+	SpawnActorOnDeath:
+		Actor: combat_tank_h.husk
+
+combat_tank_o:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.ordos, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nMoves quicker than its counterparts.
+	Tooltip:
+		Name: Ordos Combat Tank
+	Mobile:
+		Speed: 85
+	SpawnActorOnDeath:
+		Actor: combat_tank_o.husk
+
+combat_tank_m:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.mercenary, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nFires quicker than its counterparts.
+	Tooltip:
+		Name: Mercenary Combat Tank
+	Armament:
+		Weapon: 80mm_M
+	SpawnActorOnDeath:
+		Actor: combat_tank_m.husk
+
+combat_tank_s:
+	Inherits: ^combat_tank
+	Buildable:
+		BuildDuration: 373
+		Prerequisites: ~heavy.smuggler, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be built quicker than its counterparts.
+	Tooltip:
+		Name: Smuggler Combat Tank
+	SpawnActorOnDeath:
+		Actor: combat_tank_s.husk
+
+combat_tank_f:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.fremen, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCosts less than its counterparts.
+	Tooltip:
+		Name: Freman Combat Tank
+	Valued:
+		Cost: 600
+	SpawnActorOnDeath:
+		Actor: combat_tank_f.husk
+
+combat_tank_c:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.corrino, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nDamages more than its counterparts.
+	Tooltip:
+		Name: Imperial Combat Tank
+	Armament:
+		Weapon: 80mm_C
+	SpawnActorOnDeath:
+		Actor: combat_tank_c.husk
+
+combat_tank_i:
+	Inherits: ^combat_tank
+	Buildable:
+		Prerequisites: ~heavy.ixian, ~techlevel.3
+		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be repaired with repair tool like a structure.
+	Tooltip:
+		Name: Ixian Combat Tank
+	-Repairable:
+	RepairableBuilding:
+		RepairStep: 750
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		Position: Center
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorOnDeath:
+		Actor: combat_tank_i.husk
+
 siege_tank:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Armor
-		Prerequisites: upgrade.heavy, ~techlevel.medium
 		BuildPaletteOrder: 50
 		BuildDuration: 375
 		BuildDurationModifier: 100
+		Prerequisites: upgrade.heavy, ~techlevel.5
 		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 	Valued:
 		Cost: 700
@@ -417,6 +552,56 @@ siege_tank:
 	AttractsWorms:
 		Intensity: 600
 
+
+mcv:
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 110
+		BuildDuration: 750
+		BuildDurationModifier: 100
+		Prerequisites: repair_pad, upgrade.heavy, ~techlevel.3
+		Description: Deploys into another Construction Yard\n  Unarmed
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+	Selectable:
+		Class: mcv
+		DecorationBounds: 42,42
+	Health:
+		HP: 45000
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 31
+	RevealsShroud:
+		Range: 2c768
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	Transforms:
+		Facing: 64
+		IntoActor: construction_yard
+		Offset: -1,-1
+		TransformSounds: BUILD1.WAV
+		NoTransformNotification: CannotDeploy
+	SpawnActorOnDeath:
+		Actor: mcv.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 700
+	ChangesHealth:
+		Step: 50
+		Delay: 3
+		StartIfBelow: 50
+	-RevealOnFire:
+
 missile_tank:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -427,10 +612,10 @@ missile_tank:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Armor
-		Prerequisites: ~heavy.missile_tank, upgrade.heavy, research_centre, ~techlevel.high
 		BuildPaletteOrder: 60
 		BuildDuration: 512
 		BuildDurationModifier: 100
+		Prerequisites: upgrade.heavy, research_centre, ~techlevel.4
 		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry
 	Valued:
 		Cost: 900
@@ -468,9 +653,9 @@ sonic_tank:
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 100
-		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.high
 		BuildDuration: 562
 		BuildDurationModifier: 100
+		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.6
 		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Valued:
 		Cost: 1000
@@ -508,9 +693,9 @@ devastator:
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 100
-		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.high
 		BuildDuration: 625
 		BuildDurationModifier: 100
+		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.6
 		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
 	Valued:
 		Cost: 1050
@@ -573,38 +758,6 @@ devastator:
 	Selectable:
 		DecorationBounds: 44,38,0,0
 
-stealth_raider:
-	Inherits: raider.rocket
-	Buildable:
-		Prerequisites: ~light.ordos, upgrade.light, high_tech_factory, ~techlevel.medium
-		BuildPaletteOrder: 70
-		BuildDuration: 225
-		BuildDurationModifier: 100
-		Description: Invisible scout vehicle armed with rockets.\n  Strong vs Vehicles\n  Weak vs Infantry
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Stealth Rocket Raider
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Cloak:
-		InitialDelay: 45
-		CloakDelay: 90
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Damage, Heal
-		IsPlayerPalette: true
-		PauseOnCondition: cloak-force-disabled
-	GrantConditionOnDamageState@UNCLOAK:
-		Condition: cloak-force-disabled
-		ValidDamageStates: Critical
-	Selectable:
-		Class: stealth_raider
-	RenderSprites:
-		Image: stealth_raider
-	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: ReturnFire
-	-MustBeDestroyed:
-
 deviator:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -618,9 +771,9 @@ deviator:
 	Buildable:
 		Queue: Armor
 		BuildPaletteOrder: 50
-		Prerequisites: ~heavy.ordos, research_centre, ~techlevel.high
 		BuildDuration: 562
 		BuildDurationModifier: 100
+		Prerequisites: ~heavy.ordos, research_centre, ~techlevel.6
 		Description: Fires a warhead which changes\nthe allegiance of enemy vehicles
 	Mobile:
 		TurnSpeed: 12
@@ -646,155 +799,3 @@ deviator:
 		EffectiveOwnerFromOwner: true
 	AttractsWorms:
 		Intensity: 600
-
-^combat_tank:
-	Inherits: ^Tank
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Armor
-		BuildPaletteOrder: 40
-		BuildDuration: 432
-		BuildDurationModifier: 100
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Combat Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 21000
-	Armor:
-		Type: heavy
-	Mobile:
-		Speed: 75
-		TurnSpeed: 20
-	RevealsShroud:
-		Range: 5c768
-	Turreted:
-		TurnSpeed: 20
-		RealignDelay: 0
-	Armament:
-		Weapon: 80mm
-		Recoil: 128
-		RecoilRecovery: 32
-		LocalOffset: 256,0,0
-		MuzzleSequence: muzzle
-	AttackTurreted:
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-	Explodes:
-		Weapon: UnitExplodeMed
-		EmptyWeapon: UnitExplodeMed
-	Selectable:
-		Class: combat
-	AttractsWorms:
-		Intensity: 520
-	SpawnActorOnDeath:
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
-
-combat_tank_a:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.atreides_combat
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas longer range than its counterparts.
-	Tooltip:
-		Name: Atreides Combat Tank
-	Armament:
-		Weapon: 80mm_A
-	SpawnActorOnDeath:
-		Actor: combat_tank_a.husk
-
-combat_tank_h:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.harkonnen_combat
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nHas better armor than its counterparts.
-	Tooltip:
-		Name: Harkonnen Combat Tank
-	Health:
-		HP: 27000
-	SpawnActorOnDeath:
-		Actor: combat_tank_h.husk
-
-combat_tank_o:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.ordos_combat
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nMoves quicker than its counterparts.
-	Tooltip:
-		Name: Ordos Combat Tank
-	Mobile:
-		Speed: 85
-	SpawnActorOnDeath:
-		Actor: combat_tank_o.husk
-
-combat_tank_m:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.mercenary
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nFires quicker than its counterparts.
-	Tooltip:
-		Name: Mercenary Combat Tank
-	Armament:
-		Weapon: 80mm_M
-	SpawnActorOnDeath:
-		Actor: combat_tank_m.husk
-
-combat_tank_s:
-	Inherits: ^combat_tank
-	Buildable:
-		BuildDuration: 373
-		Prerequisites: ~heavy.smuggler
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be built quicker than its counterparts.
-	Tooltip:
-		Name: Smuggler Combat Tank
-	SpawnActorOnDeath:
-		Actor: combat_tank_s.husk
-
-combat_tank_f:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.fremen
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCosts less than its counterparts.
-	Tooltip:
-		Name: Freman Combat Tank
-	Valued:
-		Cost: 600
-	SpawnActorOnDeath:
-		Actor: combat_tank_f.husk
-
-combat_tank_c:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.corrino
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nDamages more than its counterparts.
-	Tooltip:
-		Name: Imperial Combat Tank
-	Armament:
-		Weapon: 80mm_C
-	SpawnActorOnDeath:
-		Actor: combat_tank_c.husk
-
-combat_tank_i:
-	Inherits: ^combat_tank
-	Buildable:
-		Prerequisites: ~heavy.ixian
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry\n\nCan be repaired with repair tool like a structure.
-	Tooltip:
-		Name: Ixian Combat Tank
-	-Repairable:
-	RepairableBuilding:
-		RepairStep: 750
-		PlayerExperience: 25
-		RepairingNotification: Repairing
-	WithBuildingRepairDecoration:
-		Image: allyrepair
-		Sequence: repair
-		Position: Center
-		Palette: player
-		IsPlayerPalette: True
-	SpawnActorOnDeath:
-		Actor: combat_tank_i.husk

@@ -176,6 +176,7 @@ World:
 		BuildRadiusCheckboxVisible: False
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
+		TechLevel: 7
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
 	CreateMPPlayers:

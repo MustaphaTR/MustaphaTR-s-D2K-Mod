@@ -101,6 +101,7 @@ wind_trap:
 		BuildPaletteOrder: 10
 		BuildDuration: 208
 		BuildDurationModifier: 100
+		Prerequisites: ~techlevel.1
 		Description: Provides power for other structures.
 	Selectable:
 		Bounds: 64,64
@@ -146,11 +147,11 @@ barracks:
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Inherits@UPGRADEABLE: ^Upgradeable
 	Buildable:
-		Prerequisites: wind_trap
 		Queue: Building
 		BuildPaletteOrder: 20
 		BuildDuration: 268
 		BuildDurationModifier: 100
+		Prerequisites: wind_trap, ~techlevel.1
 		Description: Trains infantry.
 	Selectable:
 		Bounds: 64,64
@@ -229,11 +230,11 @@ barracks:
 refinery:
 	Inherits: ^Building
 	Buildable:
-		Prerequisites: wind_trap
 		Queue: Building
 		BuildPaletteOrder: 30
 		BuildDuration: 625
 		BuildDurationModifier: 100
+		Prerequisites: wind_trap, ~techlevel.1
 		Description: Harvesters unload Spice here for processing.
 	Selectable:
 		Bounds: 96,64
@@ -301,11 +302,11 @@ outpost:
 	Inherits: ^Building
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Buildable:
-		Prerequisites: barracks, ~techlevel.medium
 		Queue: Building
 		BuildPaletteOrder: 40
 		BuildDuration: 312
 		BuildDurationModifier: 100
+		Prerequisites: barracks, ~techlevel.1
 		Description: Provides a radar map of the battlefield.\n  Requires power to operate.
 	Selectable:
 		Bounds: 96,64
@@ -353,11 +354,11 @@ light_factory:
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Inherits@UPGRADEABLE: ^Upgradeable
 	Buildable:
-		Prerequisites: refinery
 		Queue: Building
 		BuildPaletteOrder: 50
 		BuildDuration: 321
 		BuildDurationModifier: 100
+		Prerequisites: refinery, ~techlevel.1
 		Description: Produces light vehicles.
 	Selectable:
 		Bounds: 96,64
@@ -461,11 +462,11 @@ heavy_factory:
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Inherits@UPGRADEABLE: ^Upgradeable
 	Buildable:
-		Prerequisites: refinery
 		Queue: Building
 		BuildPaletteOrder: 60
 		BuildDuration: 750
 		BuildDurationModifier: 100
+		Prerequisites: refinery, ~techlevel.3
 		Description: Produces heavy vehicles.
 	Selectable:
 		Bounds: 96,96
@@ -557,11 +558,11 @@ high_tech_factory:
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Inherits@UPGRADEABLE: ^Upgradeable
 	Buildable:
-		Prerequisites: outpost, ~techlevel.medium
 		Queue: Building
 		BuildPaletteOrder: 70
 		BuildDuration: 468
 		BuildDurationModifier: 100
+		Prerequisites: outpost, ~techlevel.4
 		Description: Unlocks advanced technology.
 	Selectable:
 		Bounds: 96,96
@@ -635,7 +636,7 @@ high_tech_factory:
 	AirstrikePower:
 		Icon: ornistrike
 		Description: Air Strike
-		Prerequisites: ~techlevel.superweapons, upgrade.hightech
+		Prerequisites: upgrade.hightech, ~techlevel.6
 		ChargeInterval: 7500
 		SquadSize: 3
 		SquadOffset: -1536, 1024, 0
@@ -657,11 +658,11 @@ starport:
 	Tooltip:
 		Name: Starport
 	Buildable:
-		Prerequisites: heavy_factory, outpost, ~techlevel.high
 		Queue: Building
 		BuildPaletteOrder: 80
 		BuildDuration: 625
 		BuildDurationModifier: 100
+		Prerequisites: heavy_factory, outpost, ~techlevel.5
 		Description: Dropzone for quick reinforcements, at a price.
 	Valued:
 		Cost: 1500
@@ -748,10 +749,10 @@ repair_pad:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		Prerequisites: heavy_factory, upgrade.heavy, ~techlevel.medium
 		BuildPaletteOrder: 90
 		BuildDuration: 375
 		BuildDurationModifier: 100
+		Prerequisites: heavy_factory, upgrade.heavy, ~techlevel.3
 		Description: Repairs vehicles.\n Allows construction of MCVs
 	Valued:
 		Cost: 800
@@ -803,10 +804,10 @@ research_centre:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		Prerequisites: outpost, heavy_factory, upgrade.heavy, ~techlevel.high
 		BuildPaletteOrder: 100
 		BuildDuration: 312
 		BuildDurationModifier: 100
+		Prerequisites: outpost, heavy_factory, upgrade.heavy, ~techlevel.4
 		Description: Unlocks advanced tanks.
 	Selectable:
 		Bounds: 96,96
@@ -860,11 +861,11 @@ palace:
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Buildable:
-		Prerequisites: research_centre, ~techlevel.high
 		Queue: Building
 		BuildPaletteOrder: 120
 		BuildDuration: 937
 		BuildDurationModifier: 100
+		Prerequisites: research_centre, ~techlevel.7
 		Description: Unlocks elite infantry and weapons.
 	Selectable:
 		Bounds: 96,96
@@ -930,7 +931,7 @@ palace:
 		Icon: deathhand
 		PauseOnCondition: disabled
 		RequiresCondition: harkonnen
-		Prerequisites: ~techlevel.superweapons, ~palace.nuke
+		Prerequisites: ~palace.nuke, ~techlevel.7
 		ChargeInterval: 7500
 		Description: Death Hand
 		LongDesc: Launches an atomic missile at a target location
@@ -958,7 +959,7 @@ palace:
 		Icon: fremen
 		PauseOnCondition: disabled
 		RequiresCondition: atreides
-		Prerequisites: ~techlevel.superweapons, ~palace.fremen
+		Prerequisites: ~palace.fremen, ~techlevel.7
 		Actors: fremen, fremen
 		Type: Fremen
 		ChargeInterval: 2250
@@ -972,7 +973,7 @@ palace:
 		Icon: saboteur
 		PauseOnCondition: disabled
 		RequiresCondition: ordos
-		Prerequisites: ~techlevel.superweapons, ~palace.saboteur
+		Prerequisites: ~palace.saboteur, ~techlevel.7
 		Actors: saboteur
 		Type: Saboteur
 		ChargeInterval: 2250

@@ -6,6 +6,7 @@ light_inf:
 		BuildPaletteOrder: 10
 		BuildDuration: 62
 		BuildDurationModifier: 100
+		Prerequisites: ~techlevel.1
 		Description: General-purpose infantry\n  Strong vs Infantry\n  Weak vs Vehicles, Artillery
 	Valued:
 		Cost: 50
@@ -22,15 +23,45 @@ light_inf:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 
+trooper:
+	Inherits: ^Infantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		BuildDuration: 85
+		BuildDurationModifier: 100
+		Prerequisites: upgrade.barracks, ~techlevel.2
+		Description: Anti-tank infantry\n  Strong vs Tanks\n  Weak vs Infantry, Artillery
+	Valued:
+		Cost: 90
+	Tooltip:
+		Name: Trooper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 7000
+	RevealsShroud:
+		Range: 4c768
+	Mobile:
+		Speed: 31
+	Armament:
+		Weapon: Bazooka
+		LocalOffset: 128,0,256
+	TakeCover:
+		ProneOffset: 324,0,-204
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+
 engineer:
 	Inherits: ^Infantry
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 30
-		Prerequisites: upgrade.barracks, ~techlevel.medium
 		BuildDuration: 125
 		BuildDurationModifier: 100
+		Prerequisites: upgrade.barracks, ~techlevel.3
 		Description: Infiltrates and captures enemy structures\n  Strong vs Buildings\n  Weak vs Everything
 	Valued:
 		Cost: 400
@@ -54,45 +85,15 @@ engineer:
 		VoiceSet: EngineerVoice
 	-AttackFrontal:
 
-trooper:
-	Inherits: ^Infantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 20
-		Prerequisites: upgrade.barracks, ~techlevel.medium
-		BuildDuration: 85
-		BuildDurationModifier: 100
-		Description: Anti-tank infantry\n  Strong vs Tanks\n  Weak vs Infantry, Artillery
-	Valued:
-		Cost: 90
-	Tooltip:
-		Name: Trooper
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 7000
-	RevealsShroud:
-		Range: 4c768
-	Mobile:
-		Speed: 31
-	Armament:
-		Weapon: Bazooka
-		LocalOffset: 128,0,256
-	TakeCover:
-		ProneOffset: 324,0,-204
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-
 thumper:
 	Inherits: ^Infantry
 	-RevealOnFire:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 40
-		Prerequisites: upgrade.barracks, ~techlevel.high
 		BuildDuration: 125
 		BuildDurationModifier: 100
+		Prerequisites: upgrade.barracks, ~techlevel.7
 		Description: Attracts nearby worms when deployed\n  Unarmed
 	Valued:
 		Cost: 200
@@ -181,9 +182,9 @@ grenadier:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 60
-		Prerequisites: ~barracks.atreides, upgrade.barracks, high_tech_factory, ~techlevel.medium
 		BuildDuration: 94
 		BuildDurationModifier: 100
+		Prerequisites: ~barracks.atreides, upgrade.barracks, high_tech_factory, ~techlevel.5
 		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
 	Valued:
 		Cost: 80
@@ -213,9 +214,9 @@ sardaukar:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 50
-		Prerequisites: ~palace.sardaukar, ~techlevel.high
 		BuildDuration: 94
 		BuildDurationModifier: 100
+		Prerequisites: ~barracks.corrino, palace.sardaukar, ~techlevel.7
 		Description: Elite assault infantry of Corrino\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Valued:
 		Cost: 120
@@ -247,9 +248,9 @@ mpsardaukar:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 70
-		Prerequisites: ~barracks.harkonnen, upgrade.barracks, high_tech_factory, ~techlevel.medium
 		BuildDuration: 160
 		BuildDurationModifier: 100
+		Prerequisites: ~barracks.harkonnen, upgrade.barracks, high_tech_factory, ~techlevel.5
 		Description: Elite assault infantry of Harkonnen\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Valued:
 		Cost: 200

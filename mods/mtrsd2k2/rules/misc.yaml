@@ -218,8 +218,8 @@ upgrade.conyard:
 	Tooltip:
 		Name: Construction Yard Upgrade
 	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: construction_yard
+		BuildPaletteOrder: 10
+		Prerequisites: construction_yard, ~techlevel.6
 		Queue: Upgrade
 		BuildLimit: 1
 		BuildDuration: 625
@@ -232,6 +232,7 @@ upgrade.conyard:
 		FactionImages:
 			atreides: conyard.atreides
 			fremen: conyard.atreides
+			ixian: conyard.atreides
 			harkonnen: conyard.harkonnen
 			corrino: conyard.harkonnen
 	ProvidesPrerequisite@upgradename:
@@ -243,8 +244,8 @@ upgrade.barracks:
 	Tooltip:
 		Name: Barracks Upgrade
 	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: barracks
+		BuildPaletteOrder: 20
+		Prerequisites: barracks, ~techlevel.2
 		Queue: Upgrade
 		BuildLimit: 1
 		BuildDuration: 208
@@ -257,6 +258,7 @@ upgrade.barracks:
 		FactionImages:
 			atreides: barracks.atreides
 			fremen: barracks.atreides
+			ixian: barracks.atreides
 			harkonnen: barracks.harkonnen
 			corrino: barracks.harkonnen
 	ProvidesPrerequisite@upgradename:
@@ -292,13 +294,13 @@ upgrade.light:
 	Tooltip:
 		Name: Light Factory Upgrade
 	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: light_factory
+		BuildPaletteOrder: 40
+		Prerequisites: light_factory, ~techlevel.2
 		Queue: Upgrade
 		BuildLimit: 1
 		BuildDuration: 268
 		BuildDurationModifier: 100
-		Description: Unlocks additional light unit \n(Missile Quad) \n\nRequired to unlock faction specific light unit \n(Ordos: Stealth Raider Trike)
+		Description: Unlocks additional light unit \n(Missile Quad) \n\nRequired to unlock faction specific light unit \n(Ordos: Stealth Rocket Raider)
 	Valued:
 		Cost: 400
 	RenderSprites:
@@ -306,6 +308,7 @@ upgrade.light:
 		FactionImages:
 			atreides: light.atreides
 			fremen: light.atreides
+			ixian: light.atreides
 			harkonnen: light.harkonnen
 			corrino: light.harkonnen
 	ProvidesPrerequisite@upgradename:
@@ -318,7 +321,7 @@ upgrade.heavy:
 		Name: Heavy Factory Upgrade
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: heavy_factory
+		Prerequisites: heavy_factory, ~techlevel.3
 		Queue: Upgrade
 		BuildLimit: 1
 		BuildDuration: 468
@@ -331,6 +334,7 @@ upgrade.heavy:
 		FactionImages:
 			atreides: heavy.atreides
 			fremen: heavy.atreides
+			ixian: heavy.atreides
 			harkonnen: heavy.harkonnen
 			corrino: heavy.harkonnen
 			mercenary: heavy.mercenary
@@ -343,13 +347,13 @@ upgrade.hightech:
 	Tooltip:
 		Name: High Tech Factory Upgrade
 	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hightech.atreides, ~techlevel.superweapons
+		BuildPaletteOrder: 60
+		Prerequisites: ~hightech.atreides, ~techlevel.6
 		Queue: Upgrade
 		BuildLimit: 1
 		BuildDuration: 937
 		BuildDurationModifier: 100
-		Description: Unlocks the Atreides Air Strike superweapon
+		Description: Unlocks the Air Strike superweapon
 	Valued:
 		Cost: 1500
 	RenderSprites:

@@ -70,6 +70,7 @@ carryall:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 10
+		Prerequisites: ~techlevel.4
 
 frigate:
 	Inherits: ^Plane
@@ -128,7 +129,7 @@ ornithopter.controllable:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: outpost, ~hightech.ornithopter
+		Prerequisites: outpost, ~hightech.ornithopter, ~techlevel.6
 		BuildDuration: 562
 		BuildDurationModifier: 100
 		Description: Aircraft armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
@@ -197,7 +198,7 @@ swarmer:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: outpost, ~hightech.swarmer
+		Prerequisites: outpost, ~hightech.swarmer, ~techlevel.6
 		BuildDuration: 321
 		BuildDurationModifier: 100
 		Description: Light plane armed with dual machine guns.\n Strong vs Infantry\n  Weak vs Tanks
@@ -273,7 +274,7 @@ phoenix:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: outpost, ~hightech.phoenix
+		Prerequisites: outpost, ~hightech.phoenix, ~techlevel.6
 		BuildDuration: 512
 		BuildDurationModifier: 100
 		Description: Light plane armed with dual flame rockets.\n Strong vs Buildings\n  Weak vs Tanks
