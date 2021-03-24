@@ -353,5 +353,12 @@ upgrade.hightech:
 	Valued:
 		Cost: 1500
 	RenderSprites:
-		Image: hightech.atreides
+		Image: hightech.ordos
+		FactionImages:
+			atreides: hightech.atreides
+			fremen: hightech.atreides
+			ixian: hightech.atreides
+			harkonnen: hightech.harkonnen
+			corrino: hightech.harkonnen
+			mercenary: hightech.mercenary
 	ProvidesPrerequisite@upgradename:
