@@ -265,6 +265,8 @@ upgrade.barracks:
 
 upgrade.outpost:
 	AlwaysVisible:
+	Interactable:
+	ScriptTriggers:
 	Tooltip:
 		Name: Outpost Upgrade
 	Buildable:
