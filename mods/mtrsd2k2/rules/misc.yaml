@@ -269,7 +269,7 @@ upgrade.outpost:
 		Name: Outpost Upgrade
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~outpost.freman, ~techlevel.6
+		Prerequisites: ~outpost.fremen, ~techlevel.6
 		Queue: Upgrade
 		BuildLimit: 1
 		BuildDuration: 256
