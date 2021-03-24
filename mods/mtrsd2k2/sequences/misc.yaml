@@ -414,6 +414,7 @@ icon:
 		Start: 4296
 		Offset: -30,-24
 	stealth: stealthicon.shp
+	sniper: snipericon.shp
 
 crate:
 	idle: DATA.R8

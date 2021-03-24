@@ -134,6 +134,20 @@ HMG_quad_muzzle:
 	Inherits: HMG_muzzle
 	ReloadDelay: 18
 
+SniperRifle:
+	Report: FREMODD1.WAV
+	ReloadDelay: 80
+	Range: 12c0
+	ValidTargets: Ground, Infantry
+	InvalidTargets: Vehicle, Tank, Water, Structure, Wall, Husk
+	Projectile: Bullet
+		Speed: 1c768
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 7000
+		ValidTargets: Infantry
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
 ChainGun:
 	ReloadDelay: 3
 	Range: 5c0

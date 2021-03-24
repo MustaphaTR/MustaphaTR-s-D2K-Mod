@@ -378,3 +378,48 @@ saboteur:
 	Voiced:
 		VoiceSet: SaboteurVoice
 	-AttackFrontal:
+
+sniper:
+	Inherits: ^Infantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 150
+		Prerequisites: ~disabled
+		Description: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Sniper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 7500
+	Armor:
+		Type: none
+	Mobile:
+		Speed: 40
+	Armament:
+		Weapon: SniperRifle
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Crushable:
+		WarnProbability: 80
+	Cloak:
+		InitialDelay: 85
+		CloakDelay: 85
+		Palette: racloak
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	-MustBeDestroyed:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	-ExternalCondition@STEALTH:
+	-Cloak@STEALTH:
+	-TimedConditionBar:

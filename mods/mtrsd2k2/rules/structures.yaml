@@ -947,18 +947,30 @@ palace:
 		Condition: launchpad-damaged
 	Power:
 		Amount: -200
-	ProvidesPrerequisite@nuke:
-		Prerequisite: palace.nuke
-		Factions: harkonnen
+	ProvidesPrerequisite@atreides:
+		Prerequisite: palace.atreides
+		Factions: atreides
 	ProvidesPrerequisite@fremen:
 		Prerequisite: palace.fremen
-		Factions: atreides
-	ProvidesPrerequisite@saboteur:
-		Prerequisite: palace.saboteur
+		Factions: fremen
+	ProvidesPrerequisite@ixian:
+		Prerequisite: palace.ixian
+		Factions: ixian
+	ProvidesPrerequisite@harkonnen:
+		Prerequisite: palace.harkonnen
+		Factions: harkonnen
+	ProvidesPrerequisite@ordos:
+		Prerequisite: palace.ordos
 		Factions: ordos
-	ProvidesPrerequisite@sardaukar:
-		Prerequisite: palace.sardaukar
+	ProvidesPrerequisite@corrino:
+		Prerequisite: palace.corrino
 		Factions: corrino
+	ProvidesPrerequisite@mercenary:
+		Prerequisite: palace.mercenary
+		Factions: mercenary
+	ProvidesPrerequisite@smuggler:
+		Prerequisite: palace.smuggler
+		Factions: smuggler
 	PrimaryBuilding:
 		RequiresCondition: atreides || ordos
 	WithTextDecoration@primary:
@@ -968,7 +980,7 @@ palace:
 		Icon: deathhand
 		PauseOnCondition: disabled
 		RequiresCondition: harkonnen
-		Prerequisites: ~palace.nuke, ~techlevel.7
+		Prerequisites: ~palace.harkonnen, ~techlevel.7
 		ChargeInterval: 7500
 		Description: Death Hand
 		LongDesc: Launches an atomic missile at a target location
@@ -996,7 +1008,7 @@ palace:
 		Icon: fremen
 		PauseOnCondition: disabled
 		RequiresCondition: atreides
-		Prerequisites: ~palace.fremen, ~techlevel.7
+		Prerequisites: ~palace.atreides, ~techlevel.7
 		Actors: fremen, fremen
 		Type: Fremen
 		ChargeInterval: 2250
@@ -1010,13 +1022,26 @@ palace:
 		Icon: saboteur
 		PauseOnCondition: disabled
 		RequiresCondition: ordos
-		Prerequisites: ~palace.saboteur, ~techlevel.7
+		Prerequisites: ~palace.ordos, ~techlevel.7
 		Actors: saboteur
 		Type: Saboteur
 		ChargeInterval: 2250
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Saboteur
+	ProduceActorPower@sniper:
+		Description: Recruit Sniper
+		LongDesc: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
+		Icon: sniper
+		PauseOnCondition: disabled
+		RequiresCondition: mercenary
+		Prerequisites: ~palace.sniper, ~techlevel.7
+		Actors: sniper, sniper
+		Type: Sniper
+		ChargeInterval: 2500
+		ReadyAudio: Reinforce
+		BlockedAudio: NoRoom
+		OrderName: ProduceActorPower.Sniper
 		SupportPowerPaletteOrder: 30
 	Exit@1:
 		SpawnOffset: -704,768,0
@@ -1033,6 +1058,9 @@ palace:
 	Production@Ordos:
 		Produces: Saboteur
 		RequiresCondition: ordos
+	Production@Sniper:
+		Produces: Sniper
+		RequiresCondition: mercenary
 	GrantConditionOnFaction@Atreides:
 		Condition: atreides
 		Factions: atreides, fremen
@@ -1041,9 +1069,12 @@ palace:
 		Factions: harkonnen
 	GrantConditionOnFaction@Ordos:
 		Condition: ordos
-		Factions: ordos, mercenary, smuggler
+		Factions: ordos, smuggler
+	GrantConditionOnFaction@Mercenary:
+		Condition: mercenary
+		Factions: mercenary
 	SupportPowerChargeBar:
-		RequiresCondition: atreides || harkonnen || ordos
+		RequiresCondition: atreides || harkonnen || ordos || mercenary
 	ProvidesPrerequisite@buildingname:
 
 conyard.atreides:
@@ -1158,7 +1189,7 @@ hi_tech_or_ix:
 	Buildable:
 		Description: High Tech Factory or Ix Research Center
 
-palace.sardaukar:
+palace.corrino:
 	AlwaysVisible:
 	Tooltip:
 		Name: Imperial Palace
