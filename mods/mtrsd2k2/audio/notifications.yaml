@@ -4,7 +4,7 @@ Speech:
 	DefaultVariant: .AUD
 	Prefixes:
 		atreides: AI_
-		freman: AI_
+		fremen: AI_
 		ixian: AI_
 		ordos: OI_
 		smuggler: OI_

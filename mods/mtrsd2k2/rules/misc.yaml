@@ -353,7 +353,7 @@ upgrade.hightech:
 		BuildLimit: 1
 		BuildDuration: 937
 		BuildDurationModifier: 100
-		Description: Unlocks the Air Strike superweapon
+		Description: Unlocks the Atreides Air Strike superweapon
 	Valued:
 		Cost: 1500
 	RenderSprites:
