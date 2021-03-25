@@ -1,9 +1,133 @@
+light_inf.starport:
+	Inherits: light_inf
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 10
+		Prerequisites: starport, ~starport.mercenary, ~techlevel.1
+	Valued:
+		Cost: 60
+	-MapEditorData:
+	RenderSprites:
+		Image: light_inf
+	UpdatesPlayerStatistics:
+		OverrideActor: light_inf
+
+trooper.starport:
+	Inherits: trooper
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 20
+		Prerequisites: starport, ~starport.mercenary, ~techlevel.2
+	Valued:
+		Cost: 100
+	-MapEditorData:
+	RenderSprites:
+		Image: trooper
+	UpdatesPlayerStatistics:
+		OverrideActor: trooper
+
+engineer.starport:
+	Inherits: engineer
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 40
+		Prerequisites: starport, ~starport.mercenary, ~techlevel.3
+	Valued:
+		Cost: 750
+	-MapEditorData:
+	RenderSprites:
+		Image: engineer
+	UpdatesPlayerStatistics:
+		OverrideActor: engineer
+
+thumper.starport:
+	Inherits: thumper
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 50
+		Prerequisites: starport, ~starport.mercenary, ~techlevel.7
+	Valued:
+		Cost: 300
+	-MapEditorData:
+	RenderSprites:
+		Image: thumper
+	UpdatesPlayerStatistics:
+		OverrideActor: thumper
+
+grenadier.starport:
+	Inherits: grenadier
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 60
+		Prerequisites: starport, ~starport.mercenary, ~barracks.atreides, ~techlevel.5
+	Valued:
+		Cost: 105
+	-MapEditorData:
+	RenderSprites:
+		Image: grenadier
+	UpdatesPlayerStatistics:
+		OverrideActor: grenadier
+
+nsfremen.starport:
+	Inherits: nsfremen
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 70
+		Prerequisites: starport, ~starport.mercenary, ~barracks.fremen, ~techlevel.5
+	Valued:
+		Cost: 220
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: nsfremen
+
+flamethrower.starport:
+	Inherits: flamethrower
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 90
+		Prerequisites: starport, ~starport.mercenary, ~barracks.harkonnen, ~techlevel.5
+	Valued:
+		Cost: 325
+	-MapEditorData:
+	RenderSprites:
+		Image: flamethrower
+	UpdatesPlayerStatistics:
+		OverrideActor: flamethrower
+
+plasma_infantry.starport:
+	Inherits: plasma_infantry
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 100
+		Prerequisites: starport, ~starport.mercenary, ~barracks.corrino, ~techlevel.5
+	Valued:
+		Cost: 190
+	-MapEditorData:
+	RenderSprites:
+		Image: plasma_infantry
+	UpdatesPlayerStatistics:
+		OverrideActor: plasma_infantry
+
+sardaukar.starport:
+	Inherits: sardaukar
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 110
+		Prerequisites: starport, ~starport.mercenary, ~barracks.corrino, ~techlevel.7
+	Valued:
+		Cost: 170
+	-MapEditorData:
+	RenderSprites:
+		Image: sardaukar
+	UpdatesPlayerStatistics:
+		OverrideActor: sardaukar
+
 trike.mg.starport:
 	Inherits: trike.mg
 	Buildable:
-		Prerequisites: starport, ~starport.mgtrike, ~techlevel.1
-		BuildPaletteOrder: 14
 		Queue: Starport
+		BuildPaletteOrder: 120
+		Prerequisites: starport, ~starport.mgtrike, ~techlevel.1
 	Valued:
 		Cost: 375
 	RenderSprites:
@@ -15,9 +139,9 @@ trike.mg.starport:
 raider.mg.starport:
 	Inherits: raider.mg
 	Buildable:
-		Prerequisites: starport, ~starport.mgraider, ~techlevel.1
-		BuildPaletteOrder: 15
 		Queue: Starport
+		BuildPaletteOrder: 130
+		Prerequisites: starport, ~starport.mgraider, ~techlevel.1
 	Valued:
 		Cost: 375
 	-MapEditorData:
@@ -27,9 +151,9 @@ raider.mg.starport:
 quad.mg.starport:
 	Inherits: quad.mg
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.mgquad, ~techlevel.1
-		BuildPaletteOrder: 16
 		Queue: Starport
+		BuildPaletteOrder: 140
+		Prerequisites: starport, ~starport.mercenary, ~light.mgquad, ~techlevel.1
 	Valued:
 		Cost: 375
 	-MapEditorData:
@@ -39,9 +163,9 @@ quad.mg.starport:
 trike.rocket.starport:
 	Inherits: trike.rocket
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
-		BuildPaletteOrder: 17
 		Queue: Starport
+		BuildPaletteOrder: 150
+		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
 	Valued:
 		Cost: 475
 	-MapEditorData:
@@ -51,9 +175,9 @@ trike.rocket.starport:
 raider.rocket.starport:
 	Inherits: raider.rocket
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
-		BuildPaletteOrder: 18
 		Queue: Starport
+		BuildPaletteOrder: 160
+		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
 	Valued:
 		Cost: 475
 	-MapEditorData:
@@ -63,9 +187,9 @@ raider.rocket.starport:
 quad.rocket.starport:
 	Inherits: quad.rocket
 	Buildable:
-		Prerequisites: starport, ~techlevel.2
-		BuildPaletteOrder: 19
 		Queue: Starport
+		BuildPaletteOrder: 170
+		Prerequisites: starport, ~techlevel.2
 	Valued:
 		Cost: 475
 	-MapEditorData:
@@ -75,9 +199,9 @@ quad.rocket.starport:
 stealth_raider.starport:
 	Inherits: stealth_raider
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~light.ordos, ~techlevel.5
-		BuildPaletteOrder: 20
 		Queue: Starport
+		BuildPaletteOrder: 180
+		Prerequisites: starport, ~starport.mercenary, ~light.ordos, ~techlevel.5
 	Valued:
 		Cost: 550
 	-MapEditorData:
@@ -89,9 +213,9 @@ stealth_raider.starport:
 light_tank.starport:
 	Inherits: light_tank
 	Buildable:
-		Prerequisites: starport, ~starport.mercenary, ~techlevel.5
-		BuildPaletteOrder: 21
 		Queue: Starport
+		BuildPaletteOrder: 190
+		Prerequisites: starport, ~starport.mercenary, ~techlevel.5
 	Valued:
 		Cost: 575
 	-MapEditorData:
@@ -103,8 +227,9 @@ light_tank.starport:
 harvester.starport:
 	Inherits: harvester
 	Buildable:
-		Prerequisites: starport, ~techlevel.1
 		Queue: Starport
+		BuildPaletteOrder: 200
+		Prerequisites: starport, ~techlevel.1
 	Valued:
 		Cost: 1500
 	-MapEditorData:
@@ -113,50 +238,12 @@ harvester.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: harvester
 
-mcv.starport:
-	Inherits: mcv
-	Buildable:
-		Prerequisites: starport, ~techlevel.3
-		Queue: Starport
-	Valued:
-		Cost: 2500
-	-MapEditorData:
-	RenderSprites:
-		Image: mcv
-	UpdatesPlayerStatistics:
-		OverrideActor: mcv
-
-siege_tank.starport:
-	Inherits: siege_tank
-	Buildable:
-		Prerequisites: starport, ~techlevel.5
-		Queue: Starport
-	Valued:
-		Cost: 1075
-	-MapEditorData:
-	RenderSprites:
-		Image: siege_tank
-	UpdatesPlayerStatistics:
-		OverrideActor: siege_tank
-
-missile_tank.starport:
-	Inherits: missile_tank
-	Buildable:
-		Prerequisites: starport, ~techlevel.4
-		Queue: Starport
-	Valued:
-		Cost: 1250
-	-MapEditorData:
-	RenderSprites:
-		Image: missile_tank
-	UpdatesPlayerStatistics:
-		OverrideActor: missile_tank
-
 combat_tank_a.starport:
 	Inherits: combat_tank_a
 	Buildable:
-		Prerequisites: ~starport.atreides, ~techlevel.3
 		Queue: Starport
+		BuildPaletteOrder: 220
+		Prerequisites: ~starport.atreides, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -168,8 +255,9 @@ combat_tank_a.starport:
 combat_tank_h.starport:
 	Inherits: combat_tank_h
 	Buildable:
-		Prerequisites: ~starport.harkonnen, ~techlevel.3
 		Queue: Starport
+		BuildPaletteOrder: 230
+		Prerequisites: ~starport.harkonnen, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -181,8 +269,9 @@ combat_tank_h.starport:
 combat_tank_o.starport:
 	Inherits: combat_tank_o
 	Buildable:
-		Prerequisites: ~starport.ordos, ~techlevel.3
 		Queue: Starport
+		BuildPaletteOrder: 240
+		Prerequisites: ~starport.ordos, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -194,9 +283,9 @@ combat_tank_o.starport:
 combat_tank_f.starport:
 	Inherits: combat_tank_f
 	Buildable:
-		Prerequisites: ~starport.freman, ~techlevel.3
-		BuildPaletteOrder: 25
 		Queue: Starport
+		BuildPaletteOrder: 250
+		Prerequisites: ~starport.fremen, ~techlevel.3
 	Valued:
 		Cost: 775
 	-MapEditorData:
@@ -208,9 +297,9 @@ combat_tank_f.starport:
 combat_tank_m.starport:
 	Inherits: combat_tank_m
 	Buildable:
-		Prerequisites: ~starport.mercenary, ~techlevel.3
-		BuildPaletteOrder: 26
 		Queue: Starport
+		BuildPaletteOrder: 260
+		Prerequisites: ~starport.mercenary, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -222,9 +311,9 @@ combat_tank_m.starport:
 combat_tank_s.starport:
 	Inherits: combat_tank_s
 	Buildable:
-		Prerequisites: ~starport.smuggler, ~techlevel.3
-		BuildPaletteOrder: 27
 		Queue: Starport
+		BuildPaletteOrder: 270
+		Prerequisites: ~starport.smuggler, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -236,9 +325,9 @@ combat_tank_s.starport:
 combat_tank_c.starport:
 	Inherits: combat_tank_c
 	Buildable:
-		Prerequisites: ~starport.corrino, ~techlevel.3
-		BuildPaletteOrder: 28
 		Queue: Starport
+		BuildPaletteOrder: 280
+		Prerequisites: ~starport.corrino, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -250,9 +339,9 @@ combat_tank_c.starport:
 combat_tank_i.starport:
 	Inherits: combat_tank_i
 	Buildable:
-		Prerequisites: ~starport.ixian, ~techlevel.3
-		BuildPaletteOrder: 29
 		Queue: Starport
+		BuildPaletteOrder: 290
+		Prerequisites: ~starport.ixian, ~techlevel.3
 	Valued:
 		Cost: 875
 	-MapEditorData:
@@ -261,11 +350,110 @@ combat_tank_i.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: combat_tank_i
 
+siege_tank.starport:
+	Inherits: siege_tank
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 300
+		Prerequisites: starport, ~techlevel.5
+	Valued:
+		Cost: 1075
+	-MapEditorData:
+	RenderSprites:
+		Image: siege_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: siege_tank
+
+mcv.starport:
+	Inherits: mcv
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 310
+		Prerequisites: starport, ~techlevel.3
+	Valued:
+		Cost: 2500
+	-MapEditorData:
+	RenderSprites:
+		Image: mcv
+	UpdatesPlayerStatistics:
+		OverrideActor: mcv
+
+missile_tank.starport:
+	Inherits: missile_tank
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 320
+		Prerequisites: starport, ~techlevel.4
+	Valued:
+		Cost: 1250
+	-MapEditorData:
+	RenderSprites:
+		Image: missile_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: missile_tank
+
+sonic_tank.starport:
+	Inherits: sonic_tank
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 330
+		Prerequisites: starport, ~starport.mercenary, ~heavy.atreides, ~techlevel.6
+	Valued:
+		Cost: 1200
+	-MapEditorData:
+	RenderSprites:
+		Image: sonic_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: sonic_tank
+
+stealth_tank.starport:
+	Inherits: stealth_tank
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 340
+		Prerequisites: starport, ~starport.mercenary, ~heavy.fremen, ~techlevel.6
+	Valued:
+		Cost: 1075
+	-MapEditorData:
+	RenderSprites:
+		Image: stealth_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: stealth_tank
+
+devastator.starport:
+	Inherits: devastator
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 360
+		Prerequisites: starport, ~starport.mercenary, ~heavy.harkonnen, ~techlevel.6
+	Valued:
+		Cost: 1275
+	-MapEditorData:
+	RenderSprites:
+		Image: devastator
+	UpdatesPlayerStatistics:
+		OverrideActor: devastator
+
+deviator.starport:
+	Inherits: deviator
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 380
+		Prerequisites: starport, ~starport.mercenary, ~heavy.ordos, ~techlevel.6
+	Valued:
+		Cost: 1200
+	-MapEditorData:
+	RenderSprites:
+		Image: deviator
+	UpdatesPlayerStatistics:
+		OverrideActor: deviator
+
 carryall.starport:
 	Inherits: carryall
 	Buildable:
-		Prerequisites: starport, ~techlevel.4
 		Queue: Starport
+		BuildPaletteOrder: 410
+		Prerequisites: starport, ~techlevel.4
 	Valued:
 		Cost: 1500
 	-MapEditorData:
