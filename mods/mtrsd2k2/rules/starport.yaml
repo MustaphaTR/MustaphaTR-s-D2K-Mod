@@ -476,6 +476,20 @@ deviator.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: deviator
 
+bomb_buggy.starport:
+	Inherits: bomb_buggy
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 390
+		Prerequisites: starport, ~starport.mercenary, ~heavy.mercenary, ~techlevel.6
+	Valued:
+		Cost: 875
+	-MapEditorData:
+	RenderSprites:
+		Image: bomb_buggy
+	UpdatesPlayerStatistics:
+		OverrideActor: bomb_buggy
+
 ifv.starport:
 	Inherits: ifv
 	Buildable:

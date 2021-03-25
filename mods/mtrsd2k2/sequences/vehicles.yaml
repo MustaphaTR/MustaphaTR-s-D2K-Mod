@@ -418,6 +418,13 @@ deviator.husk:
 		Facings: -32
 		ZOffset: -512
 
+bomb_buggy:
+	idle: bomb_buggy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon: bomb_buggyicon.shp
+		Offset: 0,-1
+
 ifv:
 	idle: ifv.shp
 		Facings: 32

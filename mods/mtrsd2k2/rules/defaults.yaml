@@ -221,7 +221,7 @@
 	Selectable:
 		Bounds: 32,32
 	Targetable:
-		TargetTypes: Ground, Vehicle, C4
+		TargetTypes: Ground, Vehicle, DetonateAttack, C4
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -339,7 +339,7 @@
 		Bounds: 24,24,0,-4
 		DecorationBounds: 12,20,0,-4
 	Targetable:
-		TargetTypes: Ground, Infantry
+		TargetTypes: Ground, Infantry, DetonateAttack
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -425,7 +425,7 @@
 		Action: Kill
 	RevealsShroud:
 	Targetable:
-		TargetTypes: Ground, C4, Structure
+		TargetTypes: Ground, Structure, DetonateAttack, C4
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
@@ -529,7 +529,7 @@
 		RequiredForShortGame: false
 	RevealOnFire:
 	Targetable:
-		TargetTypes: Ground, C4, Structure, Defense
+		TargetTypes: Ground, Structure, Defense, DetonateAttack, C4
 	MapEditorData:
 		Categories: Defense
 	-CommandBarBlacklist:

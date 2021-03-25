@@ -948,6 +948,60 @@ deviator:
 	AttractsWorms:
 		Intensity: 600
 
+bomb_buggy:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Bomb Buggy
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 110
+		BuildDuration: 531
+		BuildDurationModifier: 100
+		Prerequisites: ~heavy.mercenary, research_centre, ~techlevel.6
+		Description: Fast remote vehicle armed with high explosives\nHas very weak armor \n\n Requires a Heavy Factory in order to move.
+	WithColoredOverlay:
+		Palette: disabled
+		RequiresCondition: !remote
+	Selectable:
+		Class: bomb_buggy
+		DecorationBounds: 28,28
+	Mobile:
+		TurnSpeed: 24
+		Speed: 110
+		PauseOnCondition: !remote
+	GrantConditionOnPrerequisite@Remote:
+		Prerequisites: heavy_factory
+		Condition: remote
+	Health:
+		HP: 4000
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 4c768
+	Explodes:
+		Weapon: BuggyExplosion
+		EmptyWeapon: BuggyExplosion
+	AttackFrontal:
+		FacingTolerance: 512
+	Armament@PRIMARY:
+		Weapon: BombBuggyTargeting
+	GrantConditionOnAttack:
+		Condition: triggered
+	GrantConditionOnDeploy:
+		DeployedCondition: triggered
+	KillsSelf@Triggered:
+		RequiresCondition: triggered
+	ThrowsShrapnel:
+		Weapons: Debris, Debris2, Debris3, Debris4
+		Pieces: 4, 8
+		Range: 1c0, 3c768
+	RenderSprites:
+		PlayerPalette: cncplayer
+	Cloak@STEALTH:
+		Palette: cnccloak
+
 ifv:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience

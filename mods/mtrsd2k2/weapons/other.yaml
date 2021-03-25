@@ -502,3 +502,33 @@ DogJaw:
 		Damage: 10000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+BombBuggyTargeting:
+	ValidTargets: DetonateAttack
+	Range: 2c0
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		ValidTargets: DetonateAttack
+
+BuggyExplosion:
+	ValidTargets: Ground, Air
+	Warhead@1Dam: SpreadDamage
+		Spread: 1024
+		Falloff: 100, 90, 80, 60, 40, 10, 0
+		ValidTargets: Ground, Air
+		Damage: 15000
+		Versus:
+			none: 90
+			wall: 50
+			building: 75
+			wood: 60
+			light: 70
+			heavy: 70
+			invulnerable: 0
+			cy: 30
+			harvester: 70
+		AffectsParent: true
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSounds: EXPLSML4.WAV
