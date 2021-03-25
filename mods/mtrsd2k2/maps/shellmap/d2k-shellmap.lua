@@ -12,24 +12,30 @@ AttackDelay = { DateTime.Seconds(2), DateTime.Seconds(4) }
 IdlingUnits =
 {
 	Atreides = { },
+	Fremen = { },
 	Harkonnen = { },
 	Ordos = { },
+	Mercenaries = { },
 	Corrino = { }
 }
 
 HoldProduction =
 {
 	Atreides = false,
+	Fremen = false,
 	Harkonnen = false,
 	Ordos = false,
+	Mercenaries = false,
 	Corrino = false
 }
 
 IsAttacking =
 {
 	Atreides = false,
+	Fremen = false,
 	Harkonnen = false,
 	Ordos = false,
+	Mercenaries = false,
 	Corrino = false
 }
 
@@ -37,6 +43,8 @@ AtreidesInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "tro
 AtreidesVehicleTypes = { "trike.mg", "trike.mg", "trike.rocket" }
 AtreidesTankTypes = { "combat_tank_a", "combat_tank_a", "combat_tank_a", "siege_tank" }
 AtreidesStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_a.starport" }
+
+FremenInfantryTypes = { "light_inf", "trooper", "nsfremen", "nsfremen", "nsfremen", "nsfremen", "nsfremen", "nsfremen" }
 
 HarkonnenInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper", "flamethrower" }
 HarkonnenVehicleTypes = { "quad.mg", "quad.rocket", "quad.rocket" }
@@ -46,7 +54,8 @@ HarkonnenStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_t
 OrdosInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
 OrdosVehicleTypes = { "quad.mg", "quad.rocket", "raider.rocket", "stealth_raider" }
 OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "combat_tank_o", "siege_tank" }
-OrdosStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_o.starport" }
+
+MercenaryStarportTypes = { "raider.mg.starport", "quad.rocket.starport", "light_tank.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_m.starport", "light_inf.starport", "trooper.starport" }
 
 CorrinoInfantryTypes = { "light_inf", "trooper", "plasma_infantry", "sardaukar", "sardaukar", "sardaukar" }
 CorrinoVehicleTypes = { "trike.mg", "quad.rocket", "quad.rocket" }
@@ -153,8 +162,10 @@ end
 
 WorldLoaded = function()
 	atreides = Player.GetPlayer("Atreides")
+	fremen = Player.GetPlayer("Fremen")
 	harkonnen = Player.GetPlayer("Harkonnen")
 	ordos = Player.GetPlayer("Ordos")
+	mercenary = Player.GetPlayer("Mercenaries")
 	corrino = Player.GetPlayer("Corrino")
 	smugglers = Player.GetPlayer("Smugglers")
 
@@ -167,6 +178,7 @@ WorldLoaded = function()
 		cor_cyard.Produce(upgrade)
 	end)
 	atr_cyard.Produce(Upgrades[5])
+	fre_sietch.Produce(Upgrades[1])
 
 	Trigger.AfterDelay(DateTime.Seconds(45), function()
 		SendNewHarv(atreides, AtrCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
@@ -182,6 +194,8 @@ WorldLoaded = function()
 		Produce(atreides, AtreidesTankTypes)
 		Produce(atreides, AtreidesStarportTypes)
 
+		Produce(fremen, FremenInfantryTypes)
+
 		Produce(harkonnen, HarkonnenInfantryTypes)
 		Produce(harkonnen, HarkonnenVehicleTypes)
 		Produce(harkonnen, HarkonnenTankTypes)
@@ -190,7 +204,8 @@ WorldLoaded = function()
 		Produce(ordos, OrdosInfantryTypes)
 		Produce(ordos, OrdosVehicleTypes)
 		Produce(ordos, OrdosTankTypes)
-		Produce(ordos, OrdosStarportTypes)
+
+		Produce(mercenary, MercenaryStarportTypes)
 
 		Produce(corrino, CorrinoInfantryTypes)
 		Produce(corrino, CorrinoVehicleTypes)

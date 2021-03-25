@@ -21,22 +21,36 @@ Players:
 		Name: Atreides
 		Faction: atreides
 		Color: 9191FF
-		Enemies: Corrino, Ordos, Harkonnen, Creeps
+		Allies: Fremen
+		Enemies: Corrino, Ordos, Mercenaries, Harkonnen, Creeps
+	PlayerReference@Fremen:
+		Name: Fremen
+		Faction: fremen
+		Color: DDDDDD
+		Allies: Atreides
+		Enemies: Corrino, Ordos, Mercenaries, Harkonnen, Creeps
 	PlayerReference@Corrino:
 		Name: Corrino
 		Faction: corrino
 		Color: EF00FE
-		Enemies: Atreides, Ordos, Harkonnen, Creeps
+		Enemies: Atreides, Fremen, Ordos, Mercenaries, Harkonnen, Creeps
 	PlayerReference@Ordos:
 		Name: Ordos
 		Faction: ordos
 		Color: B3EAA5
-		Enemies: Atreides, Corrino, Harkonnen, Creeps
+		Allies: Mercenaries
+		Enemies: Atreides, Fremen, Corrino, Harkonnen, Creeps
+	PlayerReference@Mercenaries:
+		Name: Mercenaries
+		Faction: mercenary
+		Color: DDDD00
+		Allies: Ordos
+		Enemies: Atreides, Fremen, Corrino, Harkonnen, Creeps
 	PlayerReference@Harkonnen:
 		Name: Harkonnen
 		Faction: harkonnen
 		Color: FE0000
-		Enemies: Atreides, Corrino, Ordos, Creeps
+		Enemies: Atreides, Fremen, Corrino, Mercenaries, Ordos, Creeps
 	PlayerReference@Smugglers:
 		Name: Smugglers
 		Faction: smuggler
@@ -325,18 +339,9 @@ Actors:
 	ord_ref2: refinery
 		Owner: Ordos
 		Location: 28,30
-	ord_wind1: wind_trap
-		Owner: Ordos
-		Location: 27,17
-	ord_wind2: wind_trap
-		Owner: Ordos
-		Location: 25,17
 	ord_outp: outpost
 		Owner: Ordos
 		Location: 17,17
-	ord_sport: starport
-		Owner: Ordos
-		Location: 21,17
 	ord_wind3: wind_trap
 		Owner: Ordos
 		Location: 17,21
@@ -981,5 +986,67 @@ Actors:
 	Actor267: spicebloom.spawnpoint
 		Owner: Neutral
 		Location: 50,65
+	fre_sietch: sietch
+		Owner: Fremen
+		Location: 60,79
+	fre_fremen1: nsfremen
+		Owner: Fremen
+		SubCell: 3
+		Location: 61,77
+		Facing: 0
+	fre_fremen2: nsfremen
+		Owner: Fremen
+		SubCell: 3
+		Location: 63,80
+		Facing: 896
+	fre_fremen3: nsfremen
+		Owner: Fremen
+		SubCell: 3
+		Location: 59,81
+		Facing: 384
+	fre_combat1: combat_tank_f
+		Owner: Fremen
+		Location: 70,88
+		Facing: 256
+	fre_combat2: combat_tank_f
+		Owner: Fremen
+		Location: 70,93
+		Facing: 256
+	mer_starport: starport
+		Owner: Mercenaries
+		Location: 24,17
+	mer_power1: wind_trap
+		Owner: Mercenaries
+		Location: 27,17
+	mer_power2: wind_trap
+		Owner: Mercenaries
+		Location: 21,17
+	mer_combat: combat_tank_m
+		Owner: Mercenaries
+		Location: 23,19
+		Facing: 0
+	mer_raider: raider.mg
+		Owner: Mercenaries
+		Location: 33,35
+		Facing: 512
+	fre_stealth: stealth_tank
+		Owner: Fremen
+		Location: 60,78
+		Facing: 128
+	mer_sniper1: sniper
+		Owner: Mercenaries
+		SubCell: 3
+		Location: 35,41
+		Facing: 640
+	mer_sniper2: sniper
+		Owner: Mercenaries
+		SubCell: 3
+		Location: 21,38
+		Facing: 128
+	fre_fedaykin: fedaykin
+		Owner: Fremen
+		SubCell: 3
+		Location: 62,81
+		Facing: 512
 
 Rules: mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
