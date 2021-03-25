@@ -55,8 +55,6 @@ CorrinoStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tan
 
 Upgrades = { "upgrade.barracks", "upgrade.light", "upgrade.conyard", "upgrade.heavy", "upgrade.hightech" }
 
-Harvester = { "harvester" }
-
 AtrCarryHarvWaypoints = { atr_harvcarry_2.Location, atr_harvcarry_1.Location }
 HarCarryHarvWaypoints = { har_harvcarry_2.Location, har_harvcarry_1.Location }
 OrdCarryHarvWaypoints = { ord_harvcarry_2.Location, ord_harvcarry_1.Location }
@@ -124,14 +122,14 @@ SendAttack = function(house)
 	end)
 end
 
-SendNewHarv = function(house, waypoint, count)
-	local harvs = house.GetActorsByType("harvester")
+SendNewHarv = function(house, waypoint, harvType, carryType, count)
+	local harvs = house.GetActorsByType(harvType)
 	if #harvs < count then
-		local harvesters = Reinforcements.ReinforceWithTransport(house, "carryall.reinforce", Harvester, waypoint, { waypoint[1] })[2]
+		local harvesters = Reinforcements.ReinforceWithTransport(house, carryType, { harvType }, waypoint, { waypoint[1] })[2]
 		Utils.Do(harvesters, function(harvester)
 			Trigger.OnAddedToWorld(harvester, function()
 				InitializeHarvester(harvester)
-				SendNewHarv(house, waypoint, count)
+				SendNewHarv(house, waypoint, harvType, carryType, count)
 			end)
 		end)
 	end
@@ -171,11 +169,11 @@ WorldLoaded = function()
 	atr_cyard.Produce(Upgrades[5])
 
 	Trigger.AfterDelay(DateTime.Seconds(45), function()
-		SendNewHarv(atreides, AtrCarryHarvWaypoints, 3)
-		SendNewHarv(harkonnen, HarCarryHarvWaypoints, 3)
-		SendNewHarv(ordos, OrdCarryHarvWaypoints, 3)
-		SendNewHarv(corrino, CorCarryHarvWaypoints, 3)
-		SendNewHarv(smugglers, SmgCarryHarvWaypoints, 1)
+		SendNewHarv(atreides, AtrCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(harkonnen, HarCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(ordos, OrdCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(corrino, CorCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(smugglers, SmgCarryHarvWaypoints, "harvester.smuggler", "carryall.reinforce.smuggler", 1)
 	end)
 
 	Trigger.AfterDelay(DateTime.Seconds(1), function()

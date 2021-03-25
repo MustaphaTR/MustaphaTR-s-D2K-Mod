@@ -69,10 +69,10 @@ Actors:
 	smg_wind: wind_trap
 		Owner: Smugglers
 		Location: 54,58
-	smg_ref: refinery
+	smg_ref: refinery.smuggler
 		Owner: Smugglers
 		Location: 57,58
-	smg_silo1: silo
+	smg_silo1: silo.smuggler
 		Owner: Smugglers
 		Location: 54,62
 	smg_raider: raider.rocket
@@ -839,7 +839,7 @@ Actors:
 		Location: 77,29
 		SubCell: 3
 		Facing: 0
-	smg_silo2: silo
+	smg_silo2: silo.smuggler
 		Owner: Smugglers
 		Location: 54,63
 	atr_silo1: silo
@@ -900,7 +900,7 @@ Actors:
 	Actor282: wall
 		Owner: Atreides
 		Location: 72,94
-	atr_gunt3: medium_gun_turret
+	atr_gunt2: medium_gun_turret
 		Owner: Atreides
 		Location: 71,94
 		TurretFacing: 256

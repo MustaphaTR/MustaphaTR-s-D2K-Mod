@@ -355,7 +355,7 @@ harvester:
 		BuildPaletteOrder: 10
 		BuildDuration: 625
 		BuildDurationModifier: 100
-		Prerequisites: refinery, ~techlevel.1
+		Prerequisites: refinery, ~!heavy.smuggler, ~techlevel.1
 		Description: Collects Spice for processing\n  Unarmed
 	Valued:
 		Cost: 1200
@@ -402,6 +402,33 @@ harvester:
 		Margin: 1, 4
 		RequiresSelection: true
 		PipCount: 7
+
+harvester.smuggler:
+	Inherits: harvester
+	Buildable:
+		BuildPaletteOrder: 15
+		Prerequisites: refinery, ~heavy.smuggler, ~techlevel.1
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Smuggler Spice Harvester
+	Harvester:
+		BaleUnloadDelay: 4
+	Health:
+		HP: 50000
+	Mobile:
+		Speed: 50
+		Locomotor: smugglerharvester
+	RevealsShroud:
+		Range: 4c0
+	SpawnActorOnDeath:
+		Actor: harvester.smuggler.Husk
+	ChangesHealth:
+		Step: 60
+	RenderSprites:
+		Image: harvester
+	AttractsWorms:
+		Intensity: 550
 
 ^combat_tank:
 	Inherits: ^Tank

@@ -229,9 +229,23 @@ harvester.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 200
-		Prerequisites: starport, ~techlevel.1
+		Prerequisites: starport, ~!starport.smuggler, ~techlevel.1
 	Valued:
 		Cost: 1500
+	-MapEditorData:
+	RenderSprites:
+		Image: harvester
+	UpdatesPlayerStatistics:
+		OverrideActor: harvester
+
+harvester.smuggler.starport:
+	Inherits: harvester.smuggler
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 210
+		Prerequisites: starport, ~starport.smuggler, ~techlevel.1
+	Valued:
+		Cost: 1250
 	-MapEditorData:
 	RenderSprites:
 		Image: harvester
@@ -453,7 +467,19 @@ carryall.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 410
-		Prerequisites: starport, ~techlevel.4
+		Prerequisites: starport, ~!starport.smuggler, ~techlevel.4
+	Valued:
+		Cost: 1500
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: carryall
+
+carryall.smuggler.starport:
+	Inherits: carryall.smuggler
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 420
+		Prerequisites: starport, ~starport.smuggler, ~techlevel.4
 	Valued:
 		Cost: 1500
 	-MapEditorData:

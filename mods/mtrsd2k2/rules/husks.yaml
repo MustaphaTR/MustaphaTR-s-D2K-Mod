@@ -7,6 +7,15 @@ harvester.husk:
 	TransformOnCapture:
 		IntoActor: harvester
 
+harvester.smuggler.husk:
+	Inherits: harvester.husk
+	Tooltip:
+		Name: Smuggler Spice Harvester (Destroyed)
+	TransformOnCapture:
+		IntoActor: harvester.smuggler
+	RenderSprites:
+		Image: harvester.husk
+
 ^combat_tank.husk:
 	Inherits: ^VehicleHusk
 	Health:

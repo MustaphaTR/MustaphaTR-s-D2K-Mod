@@ -55,6 +55,19 @@
 			Spice: 100
 			SpiceBlobs: 100
 			Dune: 50
+	Locomotor@SMUGGLERHARVESTER:
+		Name: smugglerharvester
+		Crushes: crate, infantry, spicebloom
+		TerrainSpeeds:
+			Sand: 100
+			Rock: 100
+			Transition: 100
+			Concrete: 100
+			SpiceSand: 100
+			Spice: 100
+			SpiceBlobs: 100
+			Dune: 50
+			Rough: 50
 	Locomotor@DEVASTATOR:
 		Name: devastator
 		Crushes: crate, infantry, spicebloom, wall

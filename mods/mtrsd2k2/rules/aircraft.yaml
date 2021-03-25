@@ -48,6 +48,22 @@ carryall.reinforce:
 		BuildDurationModifier: 100
 		Description: Large winged, planet-bound ship\n  Automatically lifts harvesters from and to Spice.\n  Lifts vehicles to Repair Pads when ordered.
 
+carryall.reinforce.smuggler:
+	Inherits: carryall.reinforce
+	Tooltip:
+		Name: Smuggler Carryall
+	Carryall:
+		LoadingDelay: 8
+		UnloadingDelay: 12
+	Aircraft:
+		Speed: 164
+		TurnSpeed: 20
+		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete, Rough
+	ChangesHealth:
+		Step: 60
+	Health:
+		HP: 50000
+
 carryall:
 	Inherits: carryall.reinforce
 	UpdatesPlayerStatistics:
@@ -70,7 +86,26 @@ carryall:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.4
+		Prerequisites: ~!hightech.smuggler, ~techlevel.4
+
+carryall.smuggler:
+	Inherits: carryall
+	Tooltip:
+		Name: Smuggler Carryall
+	AutoCarryall:
+		LoadingDelay: 8
+		UnloadingDelay: 12
+	Aircraft:
+		Speed: 164
+		TurnSpeed: 20
+		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete, Rough
+	Buildable:
+		BuildPaletteOrder: 15
+		Prerequisites: ~hightech.smuggler, ~techlevel.4
+	ChangesHealth:
+		Step: 60
+	Health:
+		HP: 50000
 
 frigate:
 	Inherits: ^Plane

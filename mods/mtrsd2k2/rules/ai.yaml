@@ -66,8 +66,8 @@ Player:
 					Against: Ally
 	HarvesterBotModule:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
-		HarvesterTypes: harvester
-		RefineryTypes: refinery
+		HarvesterTypes: harvester, harvester.smuggler
+		RefineryTypes: refinery, refinery.smuggler
 	BaseBuilderBotModule@omnius:
 		RequiresCondition: enable-omnius-ai
 		BuildingQueues: Building, Defense, Upgrade
@@ -77,14 +77,15 @@ Player:
 		ExcessPowerIncreaseThreshold: 4
 		MaxBaseRadius: 40
 		ConstructionYardTypes: construction_yard
-		RefineryTypes: refinery
+		RefineryTypes: refinery, refinery.smuggler
 		PowerTypes: wind_trap
 		VehiclesFactoryTypes: light_factory, heavy_factory, starport
 		ProductionTypes: light_factory, heavy_factory, barracks, starport
-		SiloTypes: silo
+		SiloTypes: silo, silo.smuggler
 		BuildingLimits:
 			barracks: 1
 			refinery: 4
+			refinery.smuggler: 4
 			outpost: 1
 			high_tech_factory: 1
 			light_factory: 1
@@ -101,6 +102,7 @@ Player:
 		BuildingFractions:
 			barracks: 1
 			refinery: 20
+			refinery.smuggler: 20
 			machine_gun_tower: 4
 			flame_tower: 4
 			artillery_platform: 4
@@ -130,14 +132,15 @@ Player:
 		ExcessPowerIncreaseThreshold: 4
 		MaxBaseRadius: 40
 		ConstructionYardTypes: construction_yard
-		RefineryTypes: refinery
+		RefineryTypes: refinery, refinery.smuggler
 		PowerTypes: wind_trap
 		VehiclesFactoryTypes: light_factory, heavy_factory, starport
 		ProductionTypes: light_factory, heavy_factory, barracks, starport
-		SiloTypes: silo
+		SiloTypes: silo, silo.smuggler
 		BuildingLimits:
 			barracks: 1
 			refinery: 4
+			refinery.smuggler: 4
 			outpost: 1
 			high_tech_factory: 1
 			light_factory: 1
@@ -154,6 +157,7 @@ Player:
 		BuildingFractions:
 			barracks: 1
 			refinery: 20
+			refinery.smuggler: 20
 			machine_gun_tower: 3
 			flame_tower: 3
 			artillery_platform: 3
@@ -183,14 +187,15 @@ Player:
 		ExcessPowerIncreaseThreshold: 4
 		MaxBaseRadius: 40
 		ConstructionYardTypes: construction_yard
-		RefineryTypes: refinery
+		RefineryTypes: refinery, refinery.smuggler
 		PowerTypes: wind_trap
 		VehiclesFactoryTypes: light_factory, heavy_factory, starport
 		ProductionTypes: light_factory, heavy_factory, barracks, starport
-		SiloTypes: silo
+		SiloTypes: silo, silo.smuggler
 		BuildingLimits:
 			barracks: 1
 			refinery: 4
+			refinery.smuggler: 4
 			outpost: 1
 			high_tech_factory: 1
 			light_factory: 1
@@ -207,6 +212,7 @@ Player:
 		BuildingFractions:
 			barracks: 1
 			refinery: 20
+			refinery.smuggler: 20
 			machine_gun_tower: 2
 			flame_tower: 2
 			artillery_platform: 2
@@ -232,7 +238,7 @@ Player:
 		RequiresCondition: enable-omnius-ai
 		SquadSize: 8
 		MaxBaseRadius: 40
-		ExcludeFromSquadsTypes: harvester, mcv, carryall, carryall.reinforce
+		ExcludeFromSquadsTypes: harvester, harvester.smuggler, mcv, carryall, carryall.smuggler, carryall.reinforce, carryall.reinforce.smuggler
 		ConstructionYardTypes: construction_yard
 		IgnoredEnemyTargetTypes: Creep
 	UnitBuilderBotModule@omnius:
@@ -240,6 +246,7 @@ Player:
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
 		UnitsToBuild:
 			carryall: 1
+			carryall.smuggler: 1
 			light_inf: 65
 			trooper: 40
 			grenadier: 20
@@ -247,6 +254,7 @@ Player:
 			flamethrower: 20
 			plasma_infantry: 20
 			harvester: 1
+			harvester.smuggler: 1
 			trike.starport: 5
 			raider.starport: 5
 			quad.starport: 7
@@ -284,7 +292,9 @@ Player:
 			combat_tank_s: 100
 		UnitLimits:
 			harvester: 8
+			harvester.smuggler: 8
 			carryall: 4
+			carryall.smuggler: 4
 	McvManagerBotModule:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 		McvTypes: mcv
@@ -294,7 +304,7 @@ Player:
 		RequiresCondition: enable-vidious-ai
 		SquadSize: 6
 		MaxBaseRadius: 40
-		ExcludeFromSquadsTypes: harvester, mcv, carryall, carryall.reinforce
+		ExcludeFromSquadsTypes: harvester, harvester.smuggler, mcv, carryall, carryall.smuggler, carryall.reinforce, carryall.reinforce.smuggler
 		ConstructionYardTypes: construction_yard
 		IgnoredEnemyTargetTypes: Creep
 	UnitBuilderBotModule@vidious:
@@ -302,6 +312,7 @@ Player:
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
 		UnitsToBuild:
 			carryall: 1
+			carryall.smuggler: 1
 			light_inf: 65
 			trooper: 40
 			grenadier: 20
@@ -309,6 +320,7 @@ Player:
 			flamethrower: 20
 			plasma_infantry: 20
 			harvester: 1
+			harvester.smuggler: 1
 			trike.starport: 7
 			raider.starport: 7
 			quad.starport: 12
@@ -346,12 +358,14 @@ Player:
 			combat_tank_s: 100
 		UnitLimits:
 			harvester: 8
+			harvester.smuggler: 8
 			carryall: 4
+			carryall.smuggler: 4
 	SquadManagerBotModule@gladius:
 		RequiresCondition: enable-gladius-ai
 		SquadSize: 10
 		MaxBaseRadius: 40
-		ExcludeFromSquadsTypes: harvester, mcv, carryall, carryall.reinforce
+		ExcludeFromSquadsTypes: harvester, harvester.smuggler, mcv, carryall, carryall.smuggler, carryall.reinforce, carryall.reinforce.smuggler
 		ConstructionYardTypes: construction_yard
 		IgnoredEnemyTargetTypes: Creep
 	UnitBuilderBotModule@gladius:
@@ -359,6 +373,7 @@ Player:
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
 		UnitsToBuild:
 			carryall: 1
+			carryall.smuggler: 1
 			light_inf: 65
 			trooper: 40
 			grenadier: 20
@@ -366,6 +381,7 @@ Player:
 			flamethrower: 20
 			plasma_infantry: 20
 			harvester: 1
+			harvester.smuggler: 1
 			trike.starport: 5
 			raider.starport: 5
 			quad.starport: 7
@@ -403,4 +419,6 @@ Player:
 			combat_tank_s: 100
 		UnitLimits:
 			harvester: 8
+			harvester.smuggler: 8
 			carryall: 4
+			carryall.smuggler: 4
