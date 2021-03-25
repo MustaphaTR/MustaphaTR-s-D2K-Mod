@@ -1072,7 +1072,7 @@ palace:
 		Icon: sniper
 		PauseOnCondition: disabled
 		RequiresCondition: mercenary
-		Prerequisites: ~palace.sniper, ~techlevel.7
+		Prerequisites: ~palace.mercenary, ~techlevel.7
 		Actors: sniper, sniper
 		Type: Sniper
 		ChargeInterval: 2500
