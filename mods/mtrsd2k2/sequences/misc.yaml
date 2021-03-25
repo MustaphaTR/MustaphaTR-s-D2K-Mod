@@ -380,6 +380,9 @@ sietch:
 	idle: DATA.R8
 		Start: 3246
 		Offset: -32,32
+	icon: DATA.R8
+		Start: 4292
+		Offset: -30,-24
 
 doubleblast:
 	idle: DATA.R8
