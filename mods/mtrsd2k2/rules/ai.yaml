@@ -259,9 +259,9 @@ Player:
 			plasma_infantry: 20
 			harvester: 1
 			harvester.smuggler: 1
-			trike.starport: 5
-			raider.starport: 5
-			quad.starport: 7
+			trike.mg.starport: 5
+			raider.mg.starport: 5
+			quad.rocket.starport: 7
 			siege_tank.starport: 5
 			missile_tank.starport: 7
 			combat_tank_a.starport: 15
@@ -325,9 +325,9 @@ Player:
 			plasma_infantry: 20
 			harvester: 1
 			harvester.smuggler: 1
-			trike.starport: 7
-			raider.starport: 7
-			quad.starport: 12
+			trike.mg.starport: 7
+			raider.mg.starport: 7
+			quad.rocket.starport: 12
 			siege_tank.starport: 5
 			missile_tank.starport: 7
 			combat_tank_a.starport: 15
@@ -386,9 +386,9 @@ Player:
 			plasma_infantry: 20
 			harvester: 1
 			harvester.smuggler: 1
-			trike.starport: 5
-			raider.starport: 5
-			quad.starport: 7
+			trike.mg.starport: 5
+			raider.mg.starport: 5
+			quad.rocket.starport: 7
 			siege_tank.starport: 5
 			missile_tank.starport: 7
 			combat_tank_a.starport: 15
