@@ -237,9 +237,13 @@ grenadier:
 
 nsfremen:
 	Inherits: fremen
-	Tooltip:
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
 	Buildable:
 		BuildPaletteOrder: 70
+		BuildDuration: 94
+		BuildDurationModifier: 100
 		Prerequisites: ~barracks.fremen, upgrade.barracks, high_tech_factory, ~techlevel.5
 		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Selectable:
@@ -335,6 +339,9 @@ plasma_infantry:
 fremen:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
 	Tooltip:
 		Name: Fremen
 	UpdatesPlayerStatistics:
@@ -352,10 +359,6 @@ fremen:
 		HP: 7000
 	RevealsShroud:
 		Range: 4c768
-	AutoTarget:
-		ScanRadius: 7
-		InitialStance: HoldFire
-		InitialStanceAI: ReturnFire
 	Armament@PRIMARY:
 		Weapon: Fremen_S
 	Armament@SECONDARY:
