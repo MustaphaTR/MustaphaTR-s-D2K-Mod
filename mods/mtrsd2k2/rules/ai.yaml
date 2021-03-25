@@ -60,6 +60,10 @@ Player:
 				OrderName: ProduceActorPower.Fremen
 				Consideration@1:
 					Against: Ally
+			Fedaykin:
+				OrderName: ProduceActorPower.Fedaykin
+				Consideration@1:
+					Against: Ally
 			Sniper:
 				OrderName: ProduceActorPower.Sniper
 				Consideration@1:

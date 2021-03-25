@@ -378,6 +378,36 @@ fremen:
 	Voiced:
 		VoiceSet: FremenVoice
 
+fedaykin:
+	Inherits: ^Infantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Fedaykin
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 120
+		Prerequisites: ~disabled
+		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+	Mobile:
+		Speed: 41
+	Valued:
+		Cost: 400	## actually 0, but spawns from support power at Palace
+	Health:
+		HP: 8500
+	RevealsShroud:
+		Range: 4c768
+	Armament:
+		Weapon: sound2
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Crushable:
+		WarnProbability: 80
+	Voiced:
+		VoiceSet: FremenVoice
+
 sardaukar:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
