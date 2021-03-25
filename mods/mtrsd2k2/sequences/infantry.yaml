@@ -566,6 +566,60 @@ sandworm:
 		BlendMode: Additive
 	icon: wormicon.shp
 
+dog:
+	stand: dog.shp
+		Facings: 8
+	stand2: dog.shp
+		Facings: 8
+	walk: dog.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	run: dog.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	eat: dog.shp
+		Start: 104
+		Length: 14
+		Facings: 8
+		Tick: 120
+	idle1: dog.shp
+		Start: 216
+		Length: 7
+		Tick: 120
+	idle2: dog.shp
+		Start: 224
+		Length: 11
+		Tick: 120
+	die1: dog.shp
+		Start: 236
+		Length: 6
+	die2: dog.shp
+		Start: 242
+		Length: 9
+	die3: dog.shp
+		Start: 236
+		Length: 6
+	die4: dog.shp
+		Start: 242
+		Length: 9
+	die5: dog.shp
+		Start: 251
+		Length: 14
+	die-crushed: DATA.R8
+		Frames: 386, 393, 400, 407, 414, 421, 428, 435
+		Length: 8
+		Tick: 800
+		ZOffset: -511
+	jump: dogbullt.shp
+		Length: 4
+		Facings: 8
+	icon: dogicon.shp
+		Offset: 0,-1
+
 flamethrower:
 	stand: flamethrower.shp
 		Facings: 8

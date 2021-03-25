@@ -130,3 +130,14 @@ SaboteurVoice:
 		Guard: I_GUARD
 	DisablePrefixes: Select, Action, Die
 	DisableVariants: Select, Action, Guard
+
+DogVoice:
+	Voices:
+		Select: dogw3px
+		Move: dogy1
+		Action: dogg5p
+		Attack: dogg5p
+		Die: dogw5,dogw7
+		Burned: dogw6
+		Zapped: dogw6
+		Guard: I_GUARD

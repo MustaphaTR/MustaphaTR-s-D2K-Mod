@@ -26,6 +26,20 @@ trooper.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: trooper
 
+dog.starport:
+	Inherits: dog
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 30
+		Prerequisites: starport, ~starport.mercenary, ~barracks.smuggler, ~techlevel.5
+	Valued:
+		Cost: 90
+	-MapEditorData:
+	RenderSprites:
+		Image: dog
+	UpdatesPlayerStatistics:
+		OverrideActor: dog
+
 engineer.starport:
 	Inherits: engineer
 	Buildable:

@@ -104,6 +104,11 @@ Actors:
 		Location: 54,60
 		SubCell: 3
 		Facing: 256
+	smg_dog: dog
+		Owner: Smugglers
+		Location: 56,62
+		SubCell: 3
+		Facing: 384
 	atr_cyard: construction_yard
 		Owner: Atreides
 		Location: 90,90

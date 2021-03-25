@@ -385,6 +385,7 @@
 	MapEditorData:
 		Categories: Infantry
 	AttackFrontal:
+	EdibleByLeap:
 
 ^Plane:
 	Inherits@1: ^ExistsInWorld

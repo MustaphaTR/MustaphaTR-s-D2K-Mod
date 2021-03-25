@@ -417,3 +417,16 @@ Flamegun-tower:
 			invulnerable: 0
 			cy: 8
 			harvester: 10
+
+DogJaw:
+	ValidTargets: Infantry
+	ReloadDelay: 10
+	Range: 3c0
+	Report: dogg5p.aud
+	TargetActorCenter: true
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: 10000
+		ValidTargets: Infantry
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
