@@ -58,7 +58,14 @@
 80mm_C:
 	Inherits: ^Cannon
 	Warhead@1Dam: SpreadDamage
-		Damage: 330
+		Damage: 3300
+
+90mm:
+	Inherits: 80mm
+	ReloadDelay: 48
+	Range: 4c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 3400
 
 25mm:
 	Inherits: 80mm
@@ -126,6 +133,13 @@ PlasBullet:
 			cy: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: plasmaexpsml
+
+PlasBullet-ifv:
+	Inherits: PlasBullet
+	ReloadDelay: 55
+	Range: 4c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 3250
 
 155mm:
 	Inherits: ^Cannon

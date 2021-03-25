@@ -116,6 +116,8 @@ dog:
 		Range: 5c384
 	Voiced:
 		VoiceSet: DogVoice
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
 	Cloak@STEALTH:

@@ -476,6 +476,20 @@ deviator.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: deviator
 
+ifv.starport:
+	Inherits: ifv
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 400
+		Prerequisites: starport, ~starport.mercenary, ~heavy.smuggler, ~techlevel.6
+	Valued:
+		Cost: 1050
+	-MapEditorData:
+	RenderSprites:
+		Image: ifv
+	UpdatesPlayerStatistics:
+		OverrideActor: ifv
+
 carryall.starport:
 	Inherits: carryall
 	Buildable:

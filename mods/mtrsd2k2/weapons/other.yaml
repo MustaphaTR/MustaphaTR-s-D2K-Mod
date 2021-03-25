@@ -51,6 +51,69 @@ Sound:
 	Warhead@3Concrete: DamagesConcrete
 		Damage: 1720
 
+sound2:
+	Inherits: Sound
+	Range: 4c0
+	ReloadDelay: 70
+	Projectile: AreaBeam
+		Speed: 0c256
+		Duration: 2
+		Width: 0c256
+	Warhead@1Dam: SpreadDamage
+		Damage: 800
+		Versus:
+			none: 150
+	Warhead@2Dam: SpreadDamage
+		Damage: 800
+		Versus:
+			none: 150
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 1500
+
+sound2-ifv:
+	Inherits: sound2
+	ReloadDelay: 65
+	Range: 4c768
+	Warhead@1Dam: SpreadDamage
+		Damage: 900
+		Versus:
+			none: 125
+	Warhead@2Dam: SpreadDamage
+		Damage: 900
+		Versus:
+			none: 125
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 2000
+
+Heal:
+	ReloadDelay: 160
+	Range: 4c0
+	Report:
+	ValidTargets: Infantry
+	Projectile: InstantHit
+		Blockable: false
+	Warhead@1Dam: SpreadDamage
+		Spread: 160
+		Falloff: 100, 100, 0
+		Damage: -2000
+		ValidTargets: Infantry
+		DebugOverlayColor: 00FF00
+
+Repair:
+	Inherits: Heal
+	ReloadDelay: 80
+	Report: fixit1.aud
+	ValidTargets: Repair
+	Warhead@1Dam: SpreadDamage
+		Damage: -1500
+		ValidTargets: Repair
+
+Repair-ifv:
+	Inherits: Repair
+	ReloadDelay: 60
+	Warhead@1Dam: SpreadDamage
+		Damage: -1750
+
 WormJaw:
 	ReloadDelay: 10
 	InvalidTargets: Structure, Infantry
@@ -245,6 +308,15 @@ grenade:
 		ImpactActors: false
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 1875
+
+grenade-ifv:
+	Inherits: grenade
+	ReloadDelay: 45
+	Range: 4c768
+	Warhead@1Dam: SpreadDamage
+		Damage: 2250
+	Warhead@4Concrete: DamagesConcrete
+		Damage: 2625
 
 GrenDeath:
 	Warhead@1Dam: SpreadDamage

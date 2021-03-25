@@ -73,6 +73,33 @@
 Bazooka:
 	Inherits: ^Rocket
 
+Bazooka-ifv:
+	Inherits: Bazooka
+	ReloadDelay: 35
+	Range: 3c768
+	Warhead@1Dam: SpreadDamage
+		Damage: 4250
+
+BazookaAA:
+	Inherits: Bazooka
+	Range: 4c0
+	MinRange: 0c512
+	ValidTargets: Air
+	Projectile: Bullet
+		Inaccuracy: 64
+		Speed: 384
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		ValidTargets: Air
+	-Warhead@2Smu:
+
+BazookaAA-ifv:
+	Inherits: BazookaAA
+	ReloadDelay: 35
+	Range: 4c768
+	Warhead@1Dam: SpreadDamage
+		Damage: 4250
+
 Rocket:
 	Inherits: ^Rocket
 	ReloadDelay: 30

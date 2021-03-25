@@ -29,6 +29,13 @@
 LMG:
 	Inherits: ^MG
 
+LMG-ifv:
+	Inherits: LMG
+	ReloadDelay: 25
+	Range: 3c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+
 Fremen_S:
 	Inherits: ^MG
 	ReloadDelay: 40
@@ -36,14 +43,24 @@ Fremen_S:
 	Warhead@2Eff: CreateEffect
 		Explosions: small_explosion
 
+Fremen_S-ifv:
+	Inherits: Fremen_S
+	ReloadDelay: 35
+	Range: 3c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+
 M_LMG:
 	Inherits: ^MG
 	ReloadDelay: 40
 	ValidTargets: Infantry
 
-M_LMG_H:
+M_LMG-ifv:
 	Inherits: M_LMG
-	ReloadDelay: 50
+	ReloadDelay: 35
+	Range: 3c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
 
 M_HMG:
 	Inherits: ^MG
@@ -67,9 +84,12 @@ M_HMG:
 	Warhead@3Concrete: DamagesConcrete
 		Damage: 625
 
-M_HMG_H:
+M_HMG-ifv:
 	Inherits: M_HMG
-	ReloadDelay: 50
+	ReloadDelay: 35
+	Range: 4c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 3750
 
 Fremen_L:
 	Inherits: M_HMG
@@ -78,6 +98,13 @@ Fremen_L:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_explosion
+
+Fremen_L-ifv:
+	Inherits: Fremen_L
+	ReloadDelay: 35
+	Range: 4c128
+	Warhead@1Dam: SpreadDamage
+		Damage: 3750
 
 HMG:
 	Inherits: ^MG
@@ -147,6 +174,13 @@ SniperRifle:
 		Damage: 7000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+SniperRifle-ifv:
+	Inherits: SniperRifle
+	ReloadDelay: 70
+	Range: 13c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 8500
 
 ChainGun:
 	ReloadDelay: 3

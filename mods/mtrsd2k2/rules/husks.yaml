@@ -139,6 +139,44 @@ deviator.husk:
 	TransformOnCapture:
 		IntoActor: deviator
 
+ifv.husk:
+	Inherits: ^VehicleHusk
+	Tooltip:
+		Name: Destroyed Infantry Fighting Vehicle
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: ifv
+	RenderSprites:
+		Scale: 1.25
+		PlayerPalette: raplayer
+
+carryall.husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Carryall
+	Aircraft:
+		TurnSpeed: 16
+		Speed: 144
+		CanSlide: True
+		VTOL: true
+	RenderSprites:
+		Image: carryall
+
+carryall.huskVTOL:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Carryall
+	FallsToEarth:
+		Moves: False
+		Velocity: 0c128
+	Aircraft:
+		TurnSpeed: 16
+		CanSlide: True
+		VTOL: true
+	RenderSprites:
+		Image: carryall
+
 ornithopter.husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
@@ -175,29 +213,3 @@ phoenix.husk:
 	RenderSprites:
 		Image: phoenix
 		PlayerPalette: raplayer
-
-carryall.husk:
-	Inherits: ^AircraftHusk
-	Tooltip:
-		Name: Carryall
-	Aircraft:
-		TurnSpeed: 16
-		Speed: 144
-		CanSlide: True
-		VTOL: true
-	RenderSprites:
-		Image: carryall
-
-carryall.huskVTOL:
-	Inherits: ^AircraftHusk
-	Tooltip:
-		Name: Carryall
-	FallsToEarth:
-		Moves: False
-		Velocity: 0c128
-	Aircraft:
-		TurnSpeed: 16
-		CanSlide: True
-		VTOL: true
-	RenderSprites:
-		Image: carryall

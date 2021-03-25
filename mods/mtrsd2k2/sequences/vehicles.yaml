@@ -417,3 +417,51 @@ deviator.husk:
 		Start: 2389
 		Facings: -32
 		ZOffset: -512
+
+ifv:
+	idle: ifv.shp
+		Facings: 32
+	turret-tank: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-light: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-trooper: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-grenade: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-flamer: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-fremen: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-sonic: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-sardaukar: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-plasma: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-sniper: ifv.shp
+		Start: 32
+		Facings: 32
+	turret-repair: ifv.shp
+		Start: 32
+		Facings: 32
+	icon: ifvicon.shp
+		Offset: 0,-2
+
+ifv.husk:
+	idle: ifv.shp
+		Facings: 32
+		ZOffset: -512
+	turret: ifv.shp
+		Start: 32
+		Facings: 32
+		ZOffset: -512

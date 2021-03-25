@@ -738,6 +738,8 @@ sonic_tank:
 		BuildDurationModifier: 100
 		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.6
 		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+	Selectable:
+		Class: sonic_tank
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -840,6 +842,9 @@ devastator:
 		BuildDurationModifier: 100
 		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.6
 		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
+	Selectable:
+		Class: devastator
+		DecorationBounds: 44,38,0,0
 	Valued:
 		Cost: 1050
 	Tooltip:
@@ -898,8 +903,6 @@ devastator:
 		Step: 50
 		Delay: 3
 		StartIfBelow: 50
-	Selectable:
-		DecorationBounds: 44,38,0,0
 
 deviator:
 	Inherits: ^Tank
@@ -918,6 +921,8 @@ deviator:
 		BuildDurationModifier: 100
 		Prerequisites: ~heavy.ordos, research_centre, ~techlevel.6
 		Description: Fires a warhead which changes\nthe allegiance of enemy vehicles
+	Selectable:
+		Class: deviator
 	Mobile:
 		TurnSpeed: 12
 		Speed: 53
@@ -942,3 +947,173 @@ deviator:
 		EffectiveOwnerFromOwner: true
 	AttractsWorms:
 		Intensity: 600
+
+ifv:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !ifv-trooper && !ifv-sniper && !ifv-repair
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !ifv-trooper && !ifv-sniper && !ifv-repair
+	AutoTargetPriority@DEFAULT_AIR:
+		RequiresCondition: (!stance-attackanything && !assault-move) && ifv-trooper
+		ValidTargets: Infantry, Vehicle, Water, Air, Defense
+		InvalidTargets: NoAutoTarget
+	AutoTargetPriority@ATTACKANYTHING_AIR:
+		RequiresCondition: (stance-attackanything || assault-move) && ifv-trooper
+		ValidTargets: Infantry, Vehicle, Water, Air, Structure, Defense
+		InvalidTargets: NoAutoTarget
+	AutoTargetPriority@INFONLY:
+		RequiresCondition: ifv-sniper
+		ValidTargets: Infantry
+		InvalidTargets: NoAutoTarget
+	AutoTargetPriority@REPAIR:
+		RequiresCondition: ifv-repair
+		ValidTargets: Repair
+		InvalidTargets: NoAutoTarget
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Infantry Fighting Vehicle
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 120
+		BuildDuration: 555
+		BuildDurationModifier: 100
+		Prerequisites: ~heavy.smuggler, research_centre, ~techlevel.6
+		Description: Multi-Purpose Vehicle\nWithout passenger:\n  Strong vs Vehicles\n  Weak vs Infantry\nSpecial Ability: Armament depends on passenger.
+	Selectable:
+		Class: ifv
+	Mobile:
+		TurnSpeed: 16
+		Speed: 70
+	Health:
+		HP: 13000
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 3c768
+	Turreted:
+		TurnSpeed: 20
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	Armament@primary:
+		Weapon: 90mm
+		LocalOffset: 575, 0, 175
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-fremen && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair
+	Armament@light:
+		Weapon: LMG-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-light
+	Armament@trooper:
+		Weapon: Bazooka-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-trooper
+	Armament@trooperAA:
+		Weapon: BazookaAA-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-trooper
+	Armament@grenade:
+		Weapon: grenade-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-grenade
+	Armament@flamer:
+		Weapon: flamegun-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-flamer
+	Armament@fremen1:
+		Weapon: Fremen_S-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-fremen
+	Armament@fremen2:
+		Weapon: Fremen_L-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-fremen
+	Armament@sonic:
+		Weapon: sound2-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-sonic
+	Armament@sardaukar1:
+		Weapon: M_LMG-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-sardaukar
+	Armament@sardaukar2:
+		Weapon: M_HMG-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-sardaukar
+	Armament@plasma:
+		Weapon: PlasBullet-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-plasma
+	Armament@sniper:
+		Weapon: SniperRifle-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-sniper
+	Armament@repair:
+		Weapon: Repair-ifv
+		LocalOffset: 575, 0, 175
+		RequiresCondition: ifv-repair
+	AttackTurreted:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		UnloadVoice: Move
+		LoadingCondition: notmobile
+		PassengerConditions:
+			light_inf: ifv-light
+			trooper: ifv-trooper
+			grenadier: ifv-grenade
+			flamethrower: ifv-flamer
+			fremen: ifv-fremen
+			nsfremen: ifv-fremen
+			fedaykin: ifv-sonic
+			sardaukar: ifv-sardaukar
+			plasma_infantry: ifv-plasma
+			sniper: ifv-sniper
+			mechanic: ifv-repair
+	WithSpriteTurret@default:
+		Sequence: turret-tank
+		RequiresCondition: !ifv-light && !ifv-trooper && !ifv-grenade && !ifv-flamer && !ifv-fremen && !ifv-sonic && !ifv-sardaukar && !ifv-plasma && !ifv-sniper && !ifv-repair
+	WithSpriteTurret@light:
+		Sequence: turret-light
+		RequiresCondition: ifv-light
+	WithSpriteTurret@trooper:
+		Sequence: turret-trooper
+		RequiresCondition: ifv-trooper
+	WithSpriteTurret@grenade:
+		Sequence: turret-grenade
+		RequiresCondition: ifv-grenade
+	WithSpriteTurret@flamer:
+		Sequence: turret-flamer
+		RequiresCondition: ifv-flamer
+	WithSpriteTurret@fremen:
+		Sequence: turret-fremen
+		RequiresCondition: ifv-fremen
+	WithSpriteTurret@sonic:
+		Sequence: turret-sonic
+		RequiresCondition: ifv-sonic
+	WithSpriteTurret@sardaukar:
+		Sequence: turret-sardaukar
+		RequiresCondition: ifv-sardaukar
+	WithSpriteTurret@plasma:
+		Sequence: turret-plasma
+		RequiresCondition: ifv-plasma
+	WithSpriteTurret@sniper:
+		Sequence: turret-sniper
+		RequiresCondition: ifv-sniper
+	WithSpriteTurret@repair:
+		Sequence: turret-repair
+		RequiresCondition: ifv-repair
+	SpawnActorOnDeath:
+		Actor: ifv.husk
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, 4
+		RequiresSelection: true
+	RenderSprites:
+		Scale: 1.25
+		PlayerPalette: raplayer
