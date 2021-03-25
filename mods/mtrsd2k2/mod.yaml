@@ -268,5 +268,5 @@ ModContent:
 		mtrsd2k2|installer/downloads.yaml
 		mtrsd2k2|installer/gruntmods.yaml
 
-#DiscordService:
-#	ApplicationId: 712711732770111550
+DiscordService:
+	ApplicationId: 824580617084600401
