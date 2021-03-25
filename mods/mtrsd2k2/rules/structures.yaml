@@ -1092,6 +1092,9 @@ palace:
 	Production@Atreides:
 		Produces: Fremen
 		RequiresCondition: atreides
+	Production@Fremen:
+		Produces: Fedaykin
+		RequiresCondition: fremen
 	Production@Ordos:
 		Produces: Saboteur
 		RequiresCondition: ordos
@@ -1100,7 +1103,10 @@ palace:
 		RequiresCondition: mercenary
 	GrantConditionOnFaction@Atreides:
 		Condition: atreides
-		Factions: atreides, fremen
+		Factions: atreides
+	GrantConditionOnFaction@Fremen:
+		Condition: fremen
+		Factions: fremen
 	GrantConditionOnFaction@Harkonnen:
 		Condition: harkonnen
 		Factions: harkonnen
@@ -1111,7 +1117,7 @@ palace:
 		Condition: mercenary
 		Factions: mercenary
 	SupportPowerChargeBar:
-		RequiresCondition: atreides || harkonnen || ordos || mercenary
+		RequiresCondition: atreides || fremen || harkonnen || ordos || mercenary
 	ProvidesPrerequisite@buildingname:
 
 conyard.atreides:
