@@ -174,7 +174,7 @@ Actors:
 	atr_wind6: wind_trap
 		Owner: Atreides
 		Location: 73,85
-	atr_gunt2: medium_gun_turret
+	atr_mgun: machine_gun_tower
 		Owner: Atreides
 		Location: 71,87
 		TurretFacing: 384
@@ -298,7 +298,7 @@ Actors:
 		Owner: Harkonnen
 		Location: 78,30
 		TurretFacing: 640
-	har_gunt3: medium_gun_turret
+	har_ftur: flame_tower
 		Owner: Harkonnen
 		Location: 73,23
 		TurretFacing: 256
@@ -472,7 +472,7 @@ Actors:
 	Actor160: wall
 		Owner: Corrino
 		Location: 36,85
-	cor_gunt3: medium_gun_turret
+	cor_ftur: flame_tower
 		Owner: Corrino
 		Location: 36,84
 		TurretFacing: 768
@@ -914,7 +914,7 @@ Actors:
 		Owner: Ordos
 		Location: 33,29
 		TurretFacing: 896
-	ord_gunt3: medium_gun_turret
+	ord_artp: artillery_platform
 		Owner: Ordos
 		Location: 33,33
 		TurretFacing: 512
