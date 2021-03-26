@@ -1060,7 +1060,7 @@ palace:
 		Prerequisites: ~palace.fremen, ~techlevel.7
 		Actors: fedaykin, fedaykin, fedaykin
 		Type: Fedaykin
-		ChargeTime: 2750
+		ChargeInterval: 2750
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Fedaykin
