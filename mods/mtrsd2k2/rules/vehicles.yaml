@@ -709,8 +709,11 @@ missile_tank:
 		Type: wood
 	RevealsShroud:
 		Range: 6c768
-	Armament:
+	Armament@Ground:
 		Weapon: mtank_pri
+		LocalOffset: -128,128,171, -128,-128,171
+	Armament@AA:
+		Weapon: mtank_priAA
 		LocalOffset: -128,128,171, -128,-128,171
 	AttackFrontal:
 	AutoTarget:

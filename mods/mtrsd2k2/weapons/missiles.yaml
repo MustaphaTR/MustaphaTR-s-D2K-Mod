@@ -260,14 +260,27 @@ mtank_pri:
 	Burst: 2
 	BurstDelays: 115
 	Range: 6c0
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile: Missile
 		RangeLimit: 7c204
 	Warhead@1Dam: SpreadDamage
 		Damage: 6000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 900
+
+mtank_priAA:
+	Inherits: mtank_pri
+	Range: 7c0
+	MinRange: 0c512
+	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
+		HorizontalRateOfTurn: 24
+		VerticalRateOfTurn: 80
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+	-Warhead@2Smu:
 
 OrniRocket:
 	Inherits: mtank_pri
