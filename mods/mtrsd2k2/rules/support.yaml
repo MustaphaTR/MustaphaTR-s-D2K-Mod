@@ -361,6 +361,8 @@ large_gun_turret:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	AutoTarget:
+		ScanRadius: 7
 	AttackTurreted:
 		PauseOnCondition: disabled
 	Buildable:
@@ -390,6 +392,15 @@ large_gun_turret:
 	Armament:
 		Weapon: TowerMissile
 		LocalOffset: 256,384,768, 256,-384,768
+		RequiresCondition: !corrino.rocket_strike
+	Armament@AA:
+		Weapon: TowerMissileAA
+		LocalOffset: 256,384,768, 256,-384,768
+		RequiresCondition: !corrino.rocket_strike
+	Armament@Strike:
+		Weapon: TowerMissileUnlimited
+		LocalOffset: 256,384,768, 256,-384,768
+		RequiresCondition: corrino.rocket_strike
 	Turreted:
 		TurnSpeed: 32
 		InitialFacing: 512
@@ -400,3 +411,8 @@ large_gun_turret:
 		Radius: 5c768
 	Replacement:
 		ReplaceableTypes: Tower
+	ExternalCondition@Strike:
+		Condition: corrino.rocket_strike
+	TimedConditionBar@Strike:
+		Condition: corrino.rocket_strike
+		Color: 222222

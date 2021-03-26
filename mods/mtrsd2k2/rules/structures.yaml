@@ -915,6 +915,17 @@ research_centre:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: research_centre.corrino
 		Factions: corrino
+	GrantExternalConditionPower@RocketStrike:
+		OrderName: RocketStrikePowerInfoOrder
+		Icon: large_gun_turret
+		Dimensions: 3, 3
+		Footprint: _x_ xxx _x_
+		Prerequisites: research_centre.corrino, ~techlevel.6
+		ChargeInterval: 6250
+		Description: Rocket Strike
+		LongDesc: Makes a group of rocket turrets\nable to attack anywhere for 10 seconds.
+		Duration: 250
+		Condition: corrino.rocket_strike
 	ProvidesPrerequisite@buildingname:
 
 palace:

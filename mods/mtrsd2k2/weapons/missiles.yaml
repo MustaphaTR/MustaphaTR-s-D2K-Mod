@@ -227,12 +227,32 @@ TowerMissile:
 	ReloadDelay: 60
 	Burst: 2
 	BurstDelays: 60
-	ValidTargets: Ground, Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 4
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+
+TowerMissileAA:
+	Inherits: TowerMissile
+	Range: 6c512
+	ValidTargets: Air
+	Projectile: Missile
+		Inaccuracy: 0
+		HorizontalRateOfTurn: 24
+		VerticalRateOfTurn: 80
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+	-Warhead@2Smu:
+
+TowerMissileUnlimited:
+	Inherits: TowerMissile
+	Range: 1000c0
+	ValidTargets: Ground
+	Projectile: Missile
+		Inaccuracy: 8
+		RangeLimit: 1000c0
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground
 
 mtank_pri:
 	Inherits: ^Missile

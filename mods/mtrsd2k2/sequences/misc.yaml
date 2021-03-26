@@ -416,6 +416,9 @@ icon:
 	deathhand: DATA.R8
 		Start: 4296
 		Offset: -30,-24
+	large_gun_turret: DATA.R8
+		Start: 4339
+		Offset: -30,-24
 	stealth: stealthicon.shp
 	sniper: snipericon.shp
 	fedaykin: fedaykinicon.shp
