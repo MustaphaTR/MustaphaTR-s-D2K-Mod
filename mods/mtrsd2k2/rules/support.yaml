@@ -370,7 +370,7 @@ large_gun_turret:
 		BuildPaletteOrder: 70
 		BuildDuration: 312
 		BuildDurationModifier: 100
-		Prerequisites: outpost, upgrade.conyard, ~techlevel.6
+		Prerequisites: hi_tech_or_ix, upgrade.conyard, ~techlevel.6
 		Description: Defensive structure.\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate.
 	Valued:
 		Cost: 750
