@@ -19,7 +19,7 @@
 		ShroudBlend: Multiply
 	Locomotor@FOOT:
 		Name: foot
-		Crushes: crate, spicebloom
+		Crushes: crate, spicebloom, mine
 		SharesCell: true
 		TerrainSpeeds:
 			Sand: 100
@@ -33,7 +33,7 @@
 			Rough: 80
 	Locomotor@VEHICLE:
 		Name: vehicle
-		Crushes: crate, spicebloom
+		Crushes: crate, spicebloom, mine
 		TerrainSpeeds:
 			Sand: 100
 			Rock: 100
@@ -45,7 +45,7 @@
 			Dune: 50
 	Locomotor@TANK:
 		Name: tank
-		Crushes: crate, infantry, spicebloom
+		Crushes: crate, infantry, spicebloom, mine
 		TerrainSpeeds:
 			Sand: 100
 			Rock: 100
@@ -57,7 +57,7 @@
 			Dune: 50
 	Locomotor@SMUGGLERHARVESTER:
 		Name: smugglerharvester
-		Crushes: crate, infantry, spicebloom
+		Crushes: crate, infantry, spicebloom, mine
 		TerrainSpeeds:
 			Sand: 100
 			Rock: 100
@@ -70,7 +70,7 @@
 			Rough: 50
 	Locomotor@DEVASTATOR:
 		Name: devastator
-		Crushes: crate, infantry, spicebloom, wall
+		Crushes: crate, infantry, spicebloom, mine, wall
 		TerrainSpeeds:
 			Sand: 100
 			Rock: 100

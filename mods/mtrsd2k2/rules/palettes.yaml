@@ -128,3 +128,7 @@
 		BaseName: placebuilding
 		BasePalette: player
 		Alpha: 0.65
+	PaletteFromPlayerPaletteWithAlpha@placebuildingra:
+		BaseName: placebuildingra
+		BasePalette: raplayer
+		Alpha: 0.65

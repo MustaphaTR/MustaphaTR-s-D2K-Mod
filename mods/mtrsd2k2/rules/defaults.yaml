@@ -534,6 +534,53 @@
 		Categories: Defense
 	-CommandBarBlacklist:
 
+^Mine:
+	Inherits: ^SpriteActor
+	Interactable:
+		Bounds: 24,24
+	Buildable:
+		Queue: Defense
+		BuildDurationModifier: 100
+	WithSpriteBody:
+	HiddenUnderFog:
+	Mine:
+		CrushClasses: mine
+		DetonateClasses: mine
+	Health:
+		HP: 10000
+		NotifyAppliedDamage: false
+	Armor:
+		Type: wall
+	Building:
+		TerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
+		Adjacent: 8
+		BuildSounds: CHUNG.WAV
+		Dimensions: 1,1
+		Footprint: x
+	ActorPreviewPlaceBuildingPreview:
+		OverridePalette: placebuildingra
+	RevealsShroud:
+		Range: 1c0
+	Sellable:
+		SellSounds: CHUNG.WAV
+	Cloak:
+		CloakSound:
+		UncloakSound:
+		Palette:
+		CloakTypes: Mine
+		InitialDelay: 0
+	Tooltip:
+		Name: Mine
+		GenericName: Mine
+	Targetable:
+		TargetTypes: Ground, Mine
+	HitShape:
+	MapEditorData:
+		Categories: System
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.25
+
 ^DisableOnLowPower:
 	WithColoredOverlay@IDISABLE:
 		RequiresCondition: disabled

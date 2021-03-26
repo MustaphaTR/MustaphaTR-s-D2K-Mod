@@ -107,7 +107,7 @@ silo:
 silo.smuggler:
 	Inherits: silo
 	Buildable:
-		BuildPaletteOrder: 35
+		BuildPaletteOrder: 40
 		Prerequisites: refinery, ~cyard.smuggler, ~techlevel.1
 	StoresResources:
 		Capacity: 2500
@@ -132,7 +132,7 @@ wall:
 		Action: ChangeOwner
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 50
 		BuildDuration: 62
 		BuildDurationModifier: 100
 		Prerequisites: barracks, ~techlevel.2
@@ -193,12 +193,42 @@ wall:
 	Replaceable:
 		Types: Tower
 
+mine_ap:
+	Inherits: ^Mine
+	Buildable:
+		BuildPaletteOrder: 60
+		BuildDuration: 150
+		Prerequisites: barracks, ~cyard.smuggler, ~techlevel.3
+		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Anti-Personnel Mine
+	Explodes:
+		Weapon: APMine
+		EmptyWeapon: APMine
+
+mine_at:
+	Inherits: ^Mine
+	Buildable:
+		BuildPaletteOrder: 70
+		BuildDuration: 200
+		Prerequisites: barracks, ~cyard.smuggler, ~techlevel.4
+		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
+	Valued:
+		Cost: 275
+	Tooltip:
+		Name: Anti-Tank Mine
+	Explodes:
+		Weapon: ATMine
+		EmptyWeapon: ATMine
+
 machine_gun_tower:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 80
 		BuildDuration: 222
 		BuildDurationModifier: 40
 		Prerequisites: barracks, ~cyard.machine_gun_tower, ~techlevel.3
@@ -238,7 +268,7 @@ flame_tower:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 90
 		BuildDuration: 222
 		BuildDurationModifier: 40
 		Prerequisites: barracks, ~cyard.flame_tower, ~techlevel.3
@@ -275,7 +305,7 @@ artillery_platform:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 100
 		BuildDuration: 222
 		BuildDurationModifier: 40
 		Prerequisites: barracks, ~cyard.artillery_platform, ~techlevel.3
@@ -321,7 +351,7 @@ medium_gun_turret:
 		PauseOnCondition: disabled
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 110
 		BuildDuration: 268
 		BuildDurationModifier: 100
 		Prerequisites: light_or_heavy, ~cyard.gun_turret, ~techlevel.4
@@ -367,7 +397,7 @@ large_gun_turret:
 		PauseOnCondition: disabled
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 120
 		BuildDuration: 312
 		BuildDurationModifier: 100
 		Prerequisites: hi_tech_or_ix, upgrade.conyard, ~techlevel.6

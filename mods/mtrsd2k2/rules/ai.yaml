@@ -90,6 +90,8 @@ Player:
 			barracks: 1
 			refinery: 4
 			refinery.smuggler: 4
+			mine_ap: 6
+			mine_at: 6
 			outpost: 1
 			high_tech_factory: 1
 			light_factory: 1
@@ -110,6 +112,8 @@ Player:
 			machine_gun_tower: 4
 			flame_tower: 4
 			artillery_platform: 4
+			mine_ap: 8
+			mine_at: 6
 			medium_gun_turret: 6
 			outpost: 1
 			high_tech_factory: 1
@@ -145,6 +149,8 @@ Player:
 			barracks: 1
 			refinery: 4
 			refinery.smuggler: 4
+			mine_ap: 6
+			mine_at: 6
 			outpost: 1
 			high_tech_factory: 1
 			light_factory: 1
@@ -165,6 +171,8 @@ Player:
 			machine_gun_tower: 3
 			flame_tower: 3
 			artillery_platform: 3
+			mine_ap: 6
+			mine_at: 4
 			medium_gun_turret: 4
 			outpost: 1
 			high_tech_factory: 1
@@ -200,6 +208,8 @@ Player:
 			barracks: 1
 			refinery: 4
 			refinery.smuggler: 4
+			mine_ap: 6
+			mine_at: 6
 			outpost: 1
 			high_tech_factory: 1
 			light_factory: 1
@@ -220,6 +230,8 @@ Player:
 			machine_gun_tower: 2
 			flame_tower: 2
 			artillery_platform: 2
+			mine_ap: 5
+			mine_at: 3
 			medium_gun_turret: 3
 			outpost: 1
 			high_tech_factory: 1

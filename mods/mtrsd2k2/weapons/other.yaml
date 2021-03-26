@@ -532,3 +532,55 @@ BuggyExplosion:
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: EXPLSML4.WAV
+
+ATMine:
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Falloff: 100, 100, 100, 100, 100
+		Damage: 1500
+		Versus:
+			none: 50
+			flak: 40
+			plate: 30
+			wall: 0
+			building: 0
+			wood: 0
+			light: 80
+			heavy: 100
+			invulnerable: 0
+			cy: 0
+			harvester: 100
+		AffectsParent: true
+		InvalidTargets: Structure, Wall, Mine
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSounds: EXPLLG2.WAV
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall
+
+APMine:
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Falloff: 100, 100, 100, 100, 100
+		Damage: 1500
+		Versus:
+			none: 100
+			wall: 0
+			building: 0
+			wood: 0
+			light: 25
+			heavy: 5
+			invulnerable: 0
+			cy: 0
+			harvester: 10
+		AffectsParent: true
+		InvalidTargets: Structure, Wall, Mine
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: self_destruct
+		ImpactSounds: EXPLSML1.WAV
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall

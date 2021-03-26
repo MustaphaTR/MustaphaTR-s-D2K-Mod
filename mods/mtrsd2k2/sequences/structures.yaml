@@ -8,6 +8,18 @@ concreteb:
 		Start: 4317
 		Offset: -30,-24
 
+mine_ap:
+	idle: mine_ap.shp
+		ZOffset: -512
+	icon: mine_apicon.shp
+		Offset: 0,-1
+
+mine_at:
+	idle: mine_at.shp
+		ZOffset: -512
+	icon: mine_aticon.shp
+		Offset: 0,-1
+
 wall:
 	idle: DATA.R8
 		Frames: 2775, 2778, 2776, 2786, 2779, 2780, 2790, 2783, 2777, 2787, 2781, 2782, 2788, 2784, 2785, 2789
