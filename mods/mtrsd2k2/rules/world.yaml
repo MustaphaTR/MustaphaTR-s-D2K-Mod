@@ -200,54 +200,164 @@ World:
 		ClassName: MCV Only
 		BaseActor: mcv
 		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, smuggler, mercenary
-	MPStartUnits@lightatreides:
+	MPStartUnits@cyard:
+		Class: cyard
+		ClassName: Con. Yard Only
+		BaseActor: construction_yard
+		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, smuggler, mercenary
+		BaseActorOffset: -1,-1
+	MPStartUnits@lighttrike:
 		Class: light
 		ClassName: Light Support
-		Factions: atreides, fremen, ixian
+		Factions: atreides, corrino, smuggler
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, grenadier, trike, quad
+		SupportActors: light_inf, light_inf, light_inf, trooper, trike.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@lightharkonnen:
+	MPStartUnits@lightraider:
 		Class: light
 		ClassName: Light Support
-		Factions: harkonnen, corrino
+		Factions: fremen, ixian, mercenary
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, trooper, trike, quad
+		SupportActors: light_inf, light_inf, light_inf, trooper, raider.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@lightordos:
+	MPStartUnits@lightquad:
 		Class: light
 		ClassName: Light Support
-		Factions: ordos, smuggler, mercenary
+		Factions: harkonnen, ordos
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, engineer, raider, quad
+		SupportActors: light_inf, light_inf, light_inf, trooper, quad.mg
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumatreides:
+		Class: medium
+		ClassName: Medium Support
+		Factions: atreides
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, grenadier, trike.mg, quad.rocket, combat_tank_a
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumfremen:
+		Class: medium
+		ClassName: Medium Support
+		Factions: fremen
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, nsfremen, raider.mg, trike.rocket, combat_tank_f
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumixian:
+		Class: medium
+		ClassName: Medium Support
+		Factions: ixian
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, grenadier, raider.mg, raider.rocket, combat_tank_i
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumharkonnen:
+		Class: medium
+		ClassName: Medium Support
+		Factions: harkonnen
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, flamethrower, quad.mg, trike.rocket, combat_tank_h
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumcorrino:
+		Class: medium
+		ClassName: Medium Support
+		Factions: corrino
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, plasma_infantry, trike.mg, quad.rocket, combat_tank_c
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumordos:
+		Class: medium
+		ClassName: Medium Support
+		Factions: ordos
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, stealth_raider, quad.mg, raider.rocket, combat_tank_o
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediummercenary:
+		Class: medium
+		ClassName: Medium Support
+		Factions: mercenary
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, light_tank, raider.mg, quad.rocket, combat_tank_m
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@mediumsmuggler:
+		Class: medium
+		ClassName: Medium Support
+		Factions: smuggler
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, dog, dog, trike.mg, raider.rocket, combat_tank_s
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@heavyatreides:
 		Class: heavy
 		ClassName: Heavy Support
-		Factions: atreides, fremen, ixian
+		Factions: atreides
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, grenadier, trike, combat_tank_a, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, grenadier, trike.mg, trike.mg, quad.rocket, combat_tank_a, combat_tank_a, missile_tank, siege_tank
 		InnerSupportRadius: 3
-		OuterSupportRadius: 5
+		OuterSupportRadius: 6
+	MPStartUnits@heavyfremen:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: fremen
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, nsfremen, raider.mg, raider.mg, trike.rocket, combat_tank_f, combat_tank_f, missile_tank, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 6
+	MPStartUnits@heavyixian:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: ixian
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, grenadier, raider.mg, raider.mg, raider.rocket, combat_tank_i, combat_tank_i, missile_tank, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 6
 	MPStartUnits@heavyharkonnen:
 		Class: heavy
 		ClassName: Heavy Support
-		Factions: harkonnen, corrino
+		Factions: harkonnen
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, engineer, quad, combat_tank_h, siege_tank
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, flamethrower, quad.mg, quad.mg, trike.rocket, combat_tank_h, combat_tank_h, missile_tank, siege_tank
 		InnerSupportRadius: 3
-		OuterSupportRadius: 5
+		OuterSupportRadius: 6
+	MPStartUnits@heavycorrino:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: corrino
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, plasma_infantry, trike.mg, trike.mg, quad.rocket, combat_tank_c, combat_tank_c, missile_tank, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 6
 	MPStartUnits@heavyordos:
 		Class: heavy
 		ClassName: Heavy Support
-		Factions: ordos, smuggler, mercenary
+		Factions: ordos
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, trooper, engineer, raider, combat_tank_o, missile_tank
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, stealth_raider, quad.mg, quad.mg, raider.rocket, combat_tank_o, combat_tank_o, missile_tank, siege_tank
 		InnerSupportRadius: 3
-		OuterSupportRadius: 5
+		OuterSupportRadius: 6
+	MPStartUnits@heavymercenary:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: mercenary
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, light_tank, raider.mg, raider.mg, quad.rocket, combat_tank_m, combat_tank_m, missile_tank, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 6
+	MPStartUnits@heavysmuggler:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: smuggler
+		BaseActor: mcv
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, dog, dog, trike.mg, trike.mg, raider.rocket, combat_tank_s, combat_tank_s, missile_tank, siege_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 6
 	SpawnMPUnits:
 		DropdownDisplayOrder: 1
 	PathFinder:
