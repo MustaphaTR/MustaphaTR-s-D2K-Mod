@@ -142,11 +142,15 @@ sietch:
 		BuildDuration: 268
 		BuildDurationModifier: 100
 		Prerequisites: ~disabled
-	D2kBuilding:
+	-D2kBuilding:
+	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 		TerrainTypes: Cliff
-		DamageTerrainTypes:
+		BuildSounds: BUILD1.WAV
+	-D2kActorPreviewPlaceBuildingPreview:
+	ActorPreviewPlaceBuildingPreview:
+		OverridePalette: placebuilding
 	Valued:
 		Cost: 225
 	Health:
