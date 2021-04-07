@@ -862,10 +862,7 @@ devastator:
 		TurnSpeed: 12
 		Speed: 31
 		Locomotor: devastator
-		RequiresCondition: !overload
 		PauseOnCondition: notmobile
-	AutoCarryable:
-		RequiresCondition: !overload
 	RevealsShroud:
 		Range: 4c768
 	Armament:
@@ -878,34 +875,64 @@ devastator:
 	Explodes:
 		Weapon: UnitExplodeLarge
 		EmptyWeapon: UnitExplodeLarge
-		RequiresCondition: !overload
 	SpawnActorOnDeath:
 		Actor: devastator.husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	Explodes@OVERLOAD:
-		Weapon: PlasmaExplosion
-		EmptyWeapon: PlasmaExplosion
-		RequiresCondition: meltdown
-	GrantConditionOnDeploy@REACTOR:
-		DeployedCondition: overload
-		PauseOnCondition: overload
-	WithIdleOverlay@OVERLOAD:
-		Sequence: active
-		RequiresCondition: overload
-	WithIdleOverlay@OVERLOAD2:
-		Sequence: active-2
-		RequiresCondition: overload
-	KillsSelf@MELTDOWN:
-		Delay: 240
-		RequiresCondition: overload
-		GrantsCondition: meltdown
 	AttractsWorms:
 		Intensity: 700
 	ChangesHealth:
 		Step: 50
 		Delay: 3
 		StartIfBelow: 50
+
+quake_tank:
+	Inherits: ^Tank
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 90
+		Prerequisites: ~heavy.corrino, research_centre, ~techlevel.6
+		BuildDuration: 750
+		BuildDurationModifier: 100
+		Description: Deals seismic damage to nearby vehicles\nand structures\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Quake Tank
+	Health:
+		HP: 550000
+	Armor:
+		Type: heavy
+	Mobile:
+		Speed: 34
+		Locomotor: devastator
+		RequiresCondition: !deployed
+	RevealsShroud:
+		Range: 4c128
+	MadTank:
+		ThumpInterval: 25
+		ChargeDelay: 125
+		DetonationDelay: 25
+		DriverActor: sardaukar
+		DeployedCondition: deployed
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	Selectable:
+		Class: quake_tank
+		DecorationBounds: 44,38,0,-4
+	Targetable:
+		TargetTypes: Ground, MADTank, Repair, Vehicle
+	AttractsWorms:
+		Intensity: 700
+	WithRangeCircle:
+		Color: FFFF0080
+		Range: 7c0
+	Cloak@STEALTH:
+		Palette: racloak
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.25
 
 deviator:
 	Inherits: ^Tank

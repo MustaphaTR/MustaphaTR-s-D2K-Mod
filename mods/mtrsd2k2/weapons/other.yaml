@@ -533,6 +533,38 @@ BuggyExplosion:
 		Explosions: large_explosion
 		ImpactSounds: EXPLSML4.WAV
 
+MADTankThump:
+	InvalidTargets: MADTank, Infantry
+	Warhead@1Dam: HealthPercentageDamage
+		Spread: 7c0
+		Damage: 3
+		InvalidTargets: MADTank, Infantry, Vehicle
+	Warhead@2Dam: HealthPercentageDamage
+		Spread: 7c0
+		Damage: 4
+		InvalidTargets: MADTank, Infantry, Structure
+	Warhead@Shake: ShakeScreen
+		Duration: 10
+		Intensity: 3
+		Multiplier: 1,0
+
+MADTankDetonate:
+	InvalidTargets: MADTank, Infantry
+	Warhead@1Dam: HealthPercentageDamage
+		Spread: 7c0
+		Damage: 16
+		InvalidTargets: MADTank, Infantry, Vehicle
+	Warhead@2Dam: HealthPercentageDamage
+		Spread: 7c0
+		Damage: 26
+		InvalidTargets: MADTank, Infantry, Structure
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		Size: 7,6
+	Warhead@3Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSounds: EXPLLG2.WAV
+
 ATMine:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256

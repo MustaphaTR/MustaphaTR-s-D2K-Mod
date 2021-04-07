@@ -97,14 +97,15 @@ DevBullet:
 	Warhead@1Dam: SpreadDamage
 		Damage: 6500
 		Versus:
-			none: 50
+			none: 60
 			wall: 100
 			building: 75
 			wood: 60
+			light: 70
 			heavy: 100
 			invulnerable: 0
 			cy: 40
-			harvester: 100
+			harvester: 80
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 3250
 	Warhead@3Eff: CreateEffect
@@ -122,14 +123,8 @@ PlasBullet:
 		Spread: 256
 		Damage: 2500
 		Versus:
-			none: 60
-			wall: 100
 			building: 40
 			wood: 30
-			light: 70
-			heavy: 100
-			invulnerable: 0
-			harvester: 80
 			cy: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: plasmaexpsml

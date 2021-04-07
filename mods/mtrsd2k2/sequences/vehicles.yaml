@@ -404,6 +404,23 @@ devastator.husk:
 		Facings: -32
 		ZOffset: -512
 
+quake_tank:
+	idle: quake_tank.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	piston: quake_tank.shp
+		Start: 32
+		Facings: 8
+		Length: 8
+	icon: quake_tankicon.shp
+		Offset: 0,-1
+
+quake_tank.husk:
+	idle: quake_tank.shp
+		Facings: 32
+		ZOffset: -512
+		UseClassicFacingFudge: True
+
 deviator:
 	idle: DATA.R8
 		Start: 2389

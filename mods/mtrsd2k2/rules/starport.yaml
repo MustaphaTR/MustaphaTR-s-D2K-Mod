@@ -462,6 +462,20 @@ devastator.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: devastator
 
+quake_tank.starport:
+	Inherits: quake_tank
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 370
+		Prerequisites: starport, ~starport.mercenary, ~heavy.corrino, ~techlevel.6
+	Valued:
+		Cost: 1750
+	-MapEditorData:
+	RenderSprites:
+		Image: quake_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: quake_tank
+
 deviator.starport:
 	Inherits: deviator
 	Buildable:
