@@ -813,7 +813,7 @@ repair_pad:
 		BuildPaletteOrder: 90
 		BuildDuration: 375
 		BuildDurationModifier: 100
-		Prerequisites: heavy_factory, upgrade.heavy, ~techlevel.3
+		Prerequisites: heavy_factory, upgrade.heavy, ~!cyard.ixian, ~techlevel.3
 		Description: Repairs vehicles.\n Allows construction of MCVs
 	Valued:
 		Cost: 800
@@ -861,11 +861,32 @@ repair_pad:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 
+repair_pad.ixian:
+	Inherits: repair_pad
+	Buildable:
+		Prerequisites: refinery, ~cyard.ixian, ~techlevel.3
+		BuildPaletteOrder: 100
+		BuildDuration: 250
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Ixian Repair Pad
+	D2kBuilding:
+		Footprint: _x_ xxx _x_
+	Health:
+		HP: 400000
+	RepairsUnits:
+		Interval: 5
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@repair_pad:
+		Prerequisite: repair_pad
+
 research_centre:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 110
 		BuildDuration: 312
 		BuildDurationModifier: 100
 		Prerequisites: outpost, heavy_factory, upgrade.heavy, ~techlevel.4
