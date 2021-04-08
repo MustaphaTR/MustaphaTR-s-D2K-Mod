@@ -222,6 +222,12 @@
 		Bounds: 32,32
 	Targetable:
 		TargetTypes: Ground, Vehicle, DetonateAttack, C4
+	Targetable@REPAIR:
+		TargetTypes: Repair
+		RequiresCondition: damaged
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -284,7 +290,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Health:
-		HP: 750
+		HP: 7500
 	Armor:
 		Type: light
 	HiddenUnderFog:
@@ -305,8 +311,10 @@
 	Husk:
 		AllowedTerrain: Sand, Rock, Transition, Concrete, Spice, SpiceSand, SpiceBlobs, Dune
 	Targetable:
-		TargetTypes: Ground, Vehicle
+		TargetTypes: Ground, Vehicle, Husk, NoAutoTarget
 		RequiresForceFire: true
+	OwnerLostAction:
+		Action: ChangeOwner
 	WithColoredOverlay@IDISABLE:
 		Palette: disabled
 	Explodes:
@@ -317,9 +325,18 @@
 		Sequence: 1
 		IsDecoration: True
 	ChangesHealth:
-		Step: -10
+		Step: -100
 		StartIfBelow: 101
-		Delay: 4
+		Delay: 6
+	CaptureManager:
+	Capturable:
+		Types: husk
+		ValidRelationships: Enemy, Neutral
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+	InfiltrateForTransform:
+		Types: Husk
+		ForceHealthPercentage: 25
 
 ^AircraftHusk:
 	Inherits: ^Husk
@@ -548,6 +565,12 @@
 	RevealOnFire:
 	Targetable:
 		TargetTypes: Ground, Structure, Defense, DetonateAttack, C4
+	Targetable@REPAIR:
+		TargetTypes: Repair
+		RequiresCondition: damaged
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
 	MapEditorData:
 		Categories: Defense
 	-CommandBarBlacklist:

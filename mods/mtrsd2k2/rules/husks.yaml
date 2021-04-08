@@ -1,10 +1,12 @@
 harvester.husk:
 	Inherits: ^VehicleHusk
 	Health:
-		HP: 1500
+		HP: 15000
 	Tooltip:
 		Name: Spice Harvester (Destroyed)
 	TransformOnCapture:
+		IntoActor: harvester
+	InfiltrateForTransform:
 		IntoActor: harvester
 
 harvester.smuggler.husk:
@@ -13,13 +15,15 @@ harvester.smuggler.husk:
 		Name: Smuggler Spice Harvester (Destroyed)
 	TransformOnCapture:
 		IntoActor: harvester.smuggler
+	InfiltrateForTransform:
+		IntoActor: harvester.smuggler
 	RenderSprites:
 		Image: harvester.husk
 
 ^combat_tank.husk:
 	Inherits: ^VehicleHusk
 	Health:
-		HP: 1000
+		HP: 10000
 	Tooltip:
 		Name: Combat Tank (Destroyed)
 	ThrowsParticle@turret:
@@ -31,12 +35,16 @@ combat_tank_a.husk:
 		Name: Atreides Combat Tank (Destroyed)
 	TransformOnCapture:
 		IntoActor: combat_tank_a
+	InfiltrateForTransform:
+		IntoActor: combat_tank_a
 
 combat_tank_h.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
 		Name: Harkonnen Combat Tank (Destroyed)
 	TransformOnCapture:
+		IntoActor: combat_tank_h
+	InfiltrateForTransform:
 		IntoActor: combat_tank_h
 
 combat_tank_o.husk:
@@ -45,12 +53,16 @@ combat_tank_o.husk:
 		Name: Ordos Combat Tank (Destroyed)
 	TransformOnCapture:
 		IntoActor: combat_tank_o
+	InfiltrateForTransform:
+		IntoActor: combat_tank_o
 
 combat_tank_f.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
 		Name: Freman Combat Tank (Destroyed)
 	TransformOnCapture:
+		IntoActor: combat_tank_f
+	InfiltrateForTransform:
 		IntoActor: combat_tank_f
 
 combat_tank_m.husk:
@@ -59,12 +71,16 @@ combat_tank_m.husk:
 		Name: Mercenary Combat Tank (Destroyed)
 	TransformOnCapture:
 		IntoActor: combat_tank_m
+	InfiltrateForTransform:
+		IntoActor: combat_tank_m
 
 combat_tank_s.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
 		Name: Smuggler Combat Tank (Destroyed)
 	TransformOnCapture:
+		IntoActor: combat_tank_s
+	InfiltrateForTransform:
 		IntoActor: combat_tank_s
 
 combat_tank_c.husk:
@@ -73,12 +89,16 @@ combat_tank_c.husk:
 		Name: Imperial Combat Tank (Destroyed)
 	TransformOnCapture:
 		IntoActor: combat_tank_c
+	InfiltrateForTransform:
+		IntoActor: combat_tank_c
 
 combat_tank_i.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
 		Name: Ixian Combat Tank (Destroyed)
 	TransformOnCapture:
+		IntoActor: combat_tank_i
+	InfiltrateForTransform:
 		IntoActor: combat_tank_i
 
 siege_tank.husk:
@@ -89,14 +109,18 @@ siege_tank.husk:
 		Anim: turret
 	TransformOnCapture:
 		IntoActor: siege_tank
+	InfiltrateForTransform:
+		IntoActor: siege_tank
 
 mcv.husk:
 	Inherits: ^VehicleHusk
 	Health:
-		HP: 1750
+		HP: 17500
 	Tooltip:
 		Name: Mobile Construction Vehicle (Destroyed)
 	TransformOnCapture:
+		IntoActor: mcv
+	InfiltrateForTransform:
 		IntoActor: mcv
 
 missile_tank.husk:
@@ -105,12 +129,18 @@ missile_tank.husk:
 		Name: Missile Tank (Destroyed)
 	TransformOnCapture:
 		IntoActor: missile_tank
+	InfiltrateForTransform:
+		IntoActor: missile_tank
 
 sonic_tank.husk:
 	Inherits: ^VehicleHusk
+	Health:
+		HP: 10000
 	Tooltip:
 		Name: Sonic Tank (Destroyed)
 	TransformOnCapture:
+		IntoActor: sonic_tank
+	InfiltrateForTransform:
 		IntoActor: sonic_tank
 
 stealth_tank.husk:
@@ -119,6 +149,8 @@ stealth_tank.husk:
 		Name: Destroyed Stealth Tank
 	TransformOnCapture:
 		IntoActor: stealth_tank
+	InfiltrateForTransform:
+		IntoActor: stealth_tank
 	RenderSprites:
 		PlayerPalette: cncplayer
 		Scale: 1.25
@@ -126,10 +158,12 @@ stealth_tank.husk:
 devastator.husk:
 	Inherits: ^VehicleHusk
 	Health:
-		HP: 1250
+		HP: 12500
 	Tooltip:
 		Name: Devastator (Destroyed)
 	TransformOnCapture:
+		IntoActor: devastator
+	InfiltrateForTransform:
 		IntoActor: devastator
 
 deviator.husk:
@@ -138,14 +172,20 @@ deviator.husk:
 		Name: Deviator (Destroyed)
 	TransformOnCapture:
 		IntoActor: deviator
+	InfiltrateForTransform:
+		IntoActor: deviator
 
 ifv.husk:
 	Inherits: ^VehicleHusk
+	Health:
+		HP: 10000
 	Tooltip:
 		Name: Destroyed Infantry Fighting Vehicle
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
+		IntoActor: ifv
+	InfiltrateForTransform:
 		IntoActor: ifv
 	RenderSprites:
 		Scale: 1.25
