@@ -106,7 +106,7 @@
 		Name: Ordos
 		InternalName: ordos
 		Side: Ordos
-		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Quad\n - Rocket Raider\n Combat Tank Speciality:\n - Speed\n Aircraft:\n - Swarmer\n Speical Ability:\n - Their vehicles can self-repair
+		Description: House Ordos\n Special Units:\n - Stealth Raider\n - Deviator\n - Suicide Bomber\n Defensive Structures:\n - Artillery Platform\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Quad\n - Rocket Raider\n Combat Tank Speciality:\n - Speed\n Aircraft:\n - Swarmer\n Speical Ability:\n - Vehicles can self-repair
 	Faction@Corrino:
 		Name: Corrino
 		InternalName: corrino
