@@ -558,10 +558,12 @@
 		Type: wall
 	Building:
 		TerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
-		Adjacent: 8
 		BuildSounds: CHUNG.WAV
 		Dimensions: 1,1
 		Footprint: x
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
 	ActorPreviewPlaceBuildingPreview:
 		OverridePalette: placebuildingra
 	RevealsShroud:
