@@ -496,7 +496,7 @@
 		PlayerExperience: 25
 		RepairingNotification: Repairing
 	SpawnActorsOnSell:
-		ActorTypes: light_inf
+		ActorTypes: light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, trooper, trooper, trooper, trooper, engineer, engineer, engineer, engineer, engineer
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	FrozenUnderFog:
