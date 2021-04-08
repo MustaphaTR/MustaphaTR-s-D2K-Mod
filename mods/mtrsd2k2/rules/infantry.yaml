@@ -456,7 +456,7 @@ saboteur:
 	Valued:
 		Cost: 300 ## actually 0, but spawns from support power at Palace
 	Tooltip:
-		Name: Saboteur
+		Name: Suicide Bomber
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -519,6 +519,56 @@ sniper:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
 	-MustBeDestroyed:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	-ExternalCondition@STEALTH:
+	-Cloak@STEALTH:
+	-TimedConditionBar:
+
+hijacker:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 170
+		Prerequisites: ~disabled
+		Description: Steals enemy vehicles and disables enemy structures.\n  Unarmed
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Saboteur
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	CaptureManager:
+	Captures:
+		CaptureTypes: vehicle
+		PlayerExperience: 50
+	Infiltrates:
+		Types: Sabotage
+		PlayerExperience: 50
+		Notification:
+	-TakeCover:
+	WithInfantryBody:
+		-IdleSequences:
+		StandSequences: stand
+	Crushable:
+		WarnProbability: 80
+	Cloak:
+		InitialDelay: 200
+		CloakDelay: 100
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		CloakTypes: Cloak, Hijacker
+		Palette: racloak
+		IsPlayerPalette: true
+	Mobile:
+		Speed: 43
+	Voiced:
+		VoiceSet: EngineerVoice
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	RenderSprites:

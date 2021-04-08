@@ -871,3 +871,43 @@ sniper:
 		ZOffset: -511
 	icon: snipericon.shp
 		Offset: 0,-1
+
+hijacker:
+	stand: hijacker.shp
+		Facings: 8
+	run: hijacker.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	die1: hijacker.shp
+		Start: 139
+		Length: 8
+	die2: hijacker.shp
+		Start: 147
+		Length: 8
+	die3: hijacker.shp
+		Start: 155
+		Length: 8
+	die4: hijacker.shp
+		Start: 163
+		Length: 12
+	die5: hijacker.shp
+		Start: 175
+		Length: 18
+	die-crushed: DATA.R8
+		Frames: 386, 393, 400, 407, 414, 421, 428, 435
+		Length: 8
+		Tick: 800
+		ZOffset: -511
+	prone-stand: hijacker.shp
+		Start: 72
+		Stride: 4
+		Facings: 8
+	prone-run: hijacker.shp
+		Start: 72
+		Length: 4
+		Facings: 8
+		Tick: 80
+	icon: hijackericon.shp
+		Offset: 0,-1

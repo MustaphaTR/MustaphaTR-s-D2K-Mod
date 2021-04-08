@@ -96,6 +96,7 @@ construction_yard:
 
 wind_trap:
 	Inherits: ^Building
+	Inherits@SABOTAGE: ^DisabledByPowerOutage
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
@@ -103,6 +104,8 @@ wind_trap:
 		BuildDurationModifier: 100
 		Prerequisites: ~techlevel.1
 		Description: Provides power for other structures.
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Sabotage, DetonateAttack
 	Selectable:
 		Bounds: 64,64
 	Valued:
@@ -333,6 +336,8 @@ outpost:
 		BuildDurationModifier: 100
 		Prerequisites: barracks, ~techlevel.1
 		Description: Provides a radar map of the battlefield.\n  Requires power to operate.
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Sabotage, DetonateAttack
 	Selectable:
 		Bounds: 96,64
 	Valued:
@@ -380,8 +385,6 @@ outpost:
 		LongDesc: Makes a group of units or buildings stealth\nfor 30 seconds.
 		Duration: 750
 		Condition: stealth
-	Power:
-		Amount: -125
 	ProvidesPrerequisite@atreides:
 		Prerequisite: outpost.atreides
 		Factions: atreides
@@ -407,6 +410,10 @@ outpost:
 		Prerequisite: outpost.corrino
 		Factions: corrino
 	ProvidesPrerequisite@buildingname:
+	Power:
+		Amount: -125
+	InfiltrateForExploration:
+		Types: Sabotage
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.outpost
 
@@ -1085,19 +1092,19 @@ palace:
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Fedaykin
-	ProduceActorPower@saboteur:
-		Description: Recruit Saboteur
+	ProduceActorPower@suicidebomber:
+		Description: Recruit Suicide Bomber
 		LongDesc: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
 		Icon: saboteur
 		PauseOnCondition: disabled
 		RequiresCondition: ordos
 		Prerequisites: ~palace.ordos, ~techlevel.7
 		Actors: saboteur
-		Type: Saboteur
+		Type: SuicideBomber
 		ChargeInterval: 2250
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
-		OrderName: ProduceActorPower.Saboteur
+		OrderName: ProduceActorPower.SuicideBomber
 	ProduceActorPower@sniper:
 		Description: Recruit Sniper
 		LongDesc: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
@@ -1112,6 +1119,17 @@ palace:
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Sniper
 		SupportPowerPaletteOrder: 30
+	ProduceActorPower@saboteur:
+		Description: Recruit Saboteur
+		LongDesc: Stealth infantry that can steal enemy vehicles\nand disable enemy structures\n\n  Unarmed
+		Icon: hijacker
+		Prerequisites: ~palace.smuggler, ~techlevel.7
+		Actors: hijacker
+		Type: Saboteur
+		ChargeInterval: 2000
+		ReadyAudio: Reinforce
+		BlockedAudio: NoRoom
+		OrderName: ProduceActorPower.Saboteur
 	Exit@1:
 		SpawnOffset: -704,768,0
 		ExitCell: -1,2
@@ -1128,11 +1146,14 @@ palace:
 		Produces: Fedaykin
 		RequiresCondition: fremen
 	Production@Ordos:
-		Produces: Saboteur
+		Produces: SuicideBomber
 		RequiresCondition: ordos
-	Production@Sniper:
+	Production@Mercenary:
 		Produces: Sniper
 		RequiresCondition: mercenary
+	Production@Smuggler:
+		Produces: Saboteur
+		RequiresCondition: smuggler
 	GrantConditionOnFaction@Atreides:
 		Condition: atreides
 		Factions: atreides
@@ -1144,12 +1165,15 @@ palace:
 		Factions: harkonnen
 	GrantConditionOnFaction@Ordos:
 		Condition: ordos
-		Factions: ordos, smuggler
+		Factions: ordos
 	GrantConditionOnFaction@Mercenary:
 		Condition: mercenary
 		Factions: mercenary
+	GrantConditionOnFaction@Smuggler:
+		Condition: smuggler
+		Factions: smuggler
 	SupportPowerChargeBar:
-		RequiresCondition: atreides || fremen || harkonnen || ordos || mercenary
+		RequiresCondition: atreides || fremen || harkonnen || ordos || mercenary || smuggler
 	ProvidesPrerequisite@buildingname:
 
 conyard.atreides:

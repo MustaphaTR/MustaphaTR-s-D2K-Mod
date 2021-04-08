@@ -862,7 +862,6 @@ devastator:
 		TurnSpeed: 12
 		Speed: 31
 		Locomotor: devastator
-		PauseOnCondition: notmobile
 	RevealsShroud:
 		Range: 4c768
 	Armament:
@@ -1027,6 +1026,8 @@ bomb_buggy:
 		Weapons: Debris, Debris2, Debris3, Debris4
 		Pieces: 4, 8
 		Range: 1c0, 3c768
+	-CaptureManager:
+	-Capturable:
 	RenderSprites:
 		PlayerPalette: cncplayer
 	Cloak@STEALTH:
