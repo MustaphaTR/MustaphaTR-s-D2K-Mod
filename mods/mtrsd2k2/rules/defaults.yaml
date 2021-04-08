@@ -259,6 +259,19 @@
 	HitShape:
 		Type: Circle
 			Radius: 16
+	GrantConditionOnPrerequisite@Ordos:
+		Condition: ordos_heal
+		Prerequisites: ordos_heal
+	ChangesHealth@Ordos:
+		Step: 0
+		PercentageStep: 2
+		Delay: 100
+		StartIfBelow: 100
+		DamageCooldown: 200
+		RequiresCondition: ordos_heal
+	ProvidesPrerequisite@Ordos:
+		Prerequisite: ordos_heal
+		Factions: ordos
 	MapEditorData:
 		Categories: Vehicle
 
