@@ -569,7 +569,7 @@ ATMine:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Falloff: 100, 100, 100, 100, 100
-		Damage: 1500
+		Damage: 15000
 		Versus:
 			none: 50
 			flak: 40
@@ -596,7 +596,7 @@ APMine:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Falloff: 100, 100, 100, 100, 100
-		Damage: 1500
+		Damage: 15000
 		Versus:
 			none: 100
 			wall: 0
