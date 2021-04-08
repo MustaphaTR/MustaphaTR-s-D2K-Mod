@@ -85,9 +85,17 @@ BazookaAA:
 	Range: 4c0
 	MinRange: 0c512
 	ValidTargets: Air
-	Projectile: Bullet
-		Inaccuracy: 64
+	-Projectile:
+	Projectile: Missile
+		Inaccuracy: 0
+		Image: RPG
+		HorizontalRateOfTurn: 24
+		VerticalRateOfTurn: 80
+		TrailImage: bazooka_trail2
+		TrailPalette: effect75alpha
+		TrailInterval: 1
 		Speed: 384
+		RangeLimit: 4c614
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Air
@@ -129,9 +137,17 @@ RocketAA:
 	Range: 4c512
 	MinRange: 0c512
 	ValidTargets: Air
-	Projectile: Bullet
+	-Projectile:
+	Projectile: Missile
 		Inaccuracy: 0
+		Image: RPG
+		HorizontalRateOfTurn: 24
+		VerticalRateOfTurn: 80
+		TrailImage: bazooka_trail2
+		TrailPalette: effect75alpha
+		TrailInterval: 1
 		Speed: 384
+		RangeLimit: 5c204
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Air
@@ -186,9 +202,17 @@ Rocket.stealthAA:
 	Range: 5c0
 	MinRange: 0c512
 	ValidTargets: Air
-	Projectile: Bullet
+	-Projectile:
+	Projectile: Missile
 		Inaccuracy: 0
+		Image: RPG
+		HorizontalRateOfTurn: 24
+		VerticalRateOfTurn: 80
+		TrailImage: bazooka_trail2
+		TrailPalette: effect75alpha
+		TrailInterval: 1
 		Speed: 384
+		RangeLimit: 5c614
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Air

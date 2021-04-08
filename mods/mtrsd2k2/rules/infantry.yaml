@@ -45,8 +45,11 @@ trooper:
 		Range: 4c768
 	Mobile:
 		Speed: 31
-	Armament:
+	Armament@Ground:
 		Weapon: Bazooka
+		LocalOffset: 128,0,256
+	Armament@AA:
+		Weapon: BazookaAA
 		LocalOffset: 128,0,256
 	TakeCover:
 		ProneOffset: 324,0,-204
