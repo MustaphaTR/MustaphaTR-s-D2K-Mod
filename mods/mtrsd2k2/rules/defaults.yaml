@@ -480,6 +480,7 @@
 		Adjacent: 3
 	GivesBuildableArea:
 		AreaTypes: building
+	EngineerRepairable:
 	CaptureManager:
 	Capturable:
 		RequiresCondition: !build-incomplete

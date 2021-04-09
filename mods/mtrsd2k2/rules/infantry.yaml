@@ -135,7 +135,7 @@ engineer:
 		BuildDuration: 125
 		BuildDurationModifier: 100
 		Prerequisites: upgrade.barracks, ~techlevel.3
-		Description: Infiltrates and captures enemy structures\n  Strong vs Buildings\n  Weak vs Everything
+		Description: Infiltrates and captures enemy structures.\nRepairs friendly ones.\n  Strong vs Buildings\n  Weak vs Everything
 	Valued:
 		Cost: 400
 	Tooltip:
