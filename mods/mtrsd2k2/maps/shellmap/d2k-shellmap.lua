@@ -1,5 +1,5 @@
 --[[
-   Copyright 2007-2020 The OpenRA Developers (see AUTHORS)
+   Copyright 2007-2021 The OpenRA Developers (see AUTHORS)
    This file is part of OpenRA, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -43,6 +43,7 @@ AtreidesInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "tro
 AtreidesVehicleTypes = { "trike.mg", "trike.mg", "trike.rocket" }
 AtreidesTankTypes = { "combat_tank_a", "combat_tank_a", "combat_tank_a", "siege_tank" }
 AtreidesStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_a.starport" }
+AtreidesAirTypes = { "ornithopter.controllable" }
 
 FremenInfantryTypes = { "light_inf", "trooper", "nsfremen", "nsfremen", "nsfremen", "nsfremen", "nsfremen", "nsfremen" }
 
@@ -50,10 +51,12 @@ HarkonnenInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "tr
 HarkonnenVehicleTypes = { "quad.mg", "quad.rocket", "quad.rocket" }
 HarkonnenTankTypes = { "combat_tank_h", "combat_tank_h", "combat_tank_h", "siege_tank" }
 HarkonnenStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_h.starport" }
+HarkonnenAirTypes = { "phoenix" }
 
 OrdosInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
 OrdosVehicleTypes = { "quad.mg", "quad.rocket", "raider.rocket", "stealth_raider" }
 OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "combat_tank_o", "siege_tank" }
+OrdosAirTypes = { "swarmer" }
 
 MercenaryStarportTypes = { "raider.mg.starport", "quad.rocket.starport", "light_tank.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_m.starport", "light_inf.starport", "trooper.starport" }
 
@@ -61,6 +64,7 @@ CorrinoInfantryTypes = { "light_inf", "trooper", "plasma_infantry", "sardaukar",
 CorrinoVehicleTypes = { "trike.mg", "quad.rocket", "quad.rocket" }
 CorrinoTankTypes = { "combat_tank_c", "combat_tank_c", "combat_tank_c", "siege_tank" }
 CorrinoStarportTypes = { "trike.mg.starport", "quad.rocket.starport", "siege_tank.starport", "missile_tank.starport", "combat_tank_c.starport" }
+CorrinoAirTypes = { "phoenix" }
 
 Upgrades = { "upgrade.barracks", "upgrade.light", "upgrade.conyard", "upgrade.heavy", "upgrade.hightech" }
 
@@ -193,6 +197,7 @@ WorldLoaded = function()
 		Produce(atreides, AtreidesVehicleTypes)
 		Produce(atreides, AtreidesTankTypes)
 		Produce(atreides, AtreidesStarportTypes)
+		Produce(atreides, AtreidesAirTypes)
 
 		Produce(fremen, FremenInfantryTypes)
 
@@ -200,10 +205,12 @@ WorldLoaded = function()
 		Produce(harkonnen, HarkonnenVehicleTypes)
 		Produce(harkonnen, HarkonnenTankTypes)
 		Produce(harkonnen, HarkonnenStarportTypes)
+		Produce(harkonnen, HarkonnenAirTypes)
 
 		Produce(ordos, OrdosInfantryTypes)
 		Produce(ordos, OrdosVehicleTypes)
 		Produce(ordos, OrdosTankTypes)
+		Produce(ordos, OrdosAirTypes)
 
 		Produce(mercenary, MercenaryStarportTypes)
 
@@ -211,5 +218,6 @@ WorldLoaded = function()
 		Produce(corrino, CorrinoVehicleTypes)
 		Produce(corrino, CorrinoTankTypes)
 		Produce(corrino, CorrinoStarportTypes)
+		Produce(corrino, CorrinoAirTypes)
 	end)
 end
