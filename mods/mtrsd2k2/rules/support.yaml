@@ -390,7 +390,7 @@ medium_gun_turret:
 large_gun_turret:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	AutoTarget:
 		ScanRadius: 7
 	AttackTurreted:
