@@ -861,6 +861,87 @@ mechanic:
 	icon: mechanicicon.shp
 		Offset: 0,-1
 
+rocketeer:
+	Defaults: rocketeer.shp
+		Length: 6
+		Facings: 8
+	stand:
+		Length: 1
+	run:
+		Start: 8
+		Tick: 120
+	idle1:
+		Start: 56
+		Length: 15
+		Facings: 1
+		Tick: 100
+	idle2:
+		Start: 71
+		Length: 15
+		Facings: 1
+		Tick: 100
+	prone-run:
+		Start: 86
+		Tick: 100
+	die1:
+		Start: 340
+		Length: 15
+		Facings: 2
+		Tick: 80
+	die2:
+		Start: 340
+		Length: 15
+		Facings: 2
+		Tick: 80
+	die3:
+		Start: 340
+		Length: 15
+		Facings: 2
+		Tick: 80
+	die4:
+		Start: 340
+		Length: 15
+		Facings: 2
+		Tick: 80
+	shoot:
+		Start: 164
+		Tick: 80
+	prone-shoot:
+		Start: 212
+		Tick: 80
+	fly:
+		Start: 292
+	die-air:
+		Start: 340
+		Length: 16
+		Facings: 2
+		Tick: 80
+	shoot-air:
+		Start: 370
+		Tick: 80
+	idle-air:
+		Start: 418
+		Length: 9
+		Facings: 1
+		Tick: 100
+	shadow: infshdw.shp
+		Start: 1
+		Length: 1
+		Facings: 1
+	icon: rocketeericon.shp
+		Length: *
+		Facings: 1
+		Offset: 0,-1
+
+rocketeer.husk:
+	idle: rocketeer.shp
+		Start: 340
+		Length: 16
+		Facings: 2
+		Tick: 80
+	shadow: infshdw.shp
+		Start: 1
+
 sniper:
 	stand: sniper.shp
 		Facings: 8

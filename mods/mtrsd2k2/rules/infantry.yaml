@@ -466,6 +466,71 @@ fedaykin:
 	Voiced:
 		VoiceSet: FremenVoice
 
+rocketeer:
+	Inherits: ^Infantry
+	HiddenUnderFog:
+		Type: CenterPosition
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 140
+		Prerequisites: ~disabled
+		Description: Flying infantry unit armed with dual machine guns.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Rocketeer
+	Health:
+		HP: 5000
+	Armor:
+		Type: light
+	-Mobile:
+	RevealsShroud:
+		Range: 5c0
+		Type: CenterPosition
+	Armament:
+		Weapon: 20mm
+	Aircraft:
+		CruiseAltitude: 1200
+		InitialFacing: 92
+		LandWhenIdle: false
+		TurnSpeed: 1023
+		Speed: 88
+		AltitudeVelocity: 83
+		AirborneCondition: airborne
+		VTOL: true
+		CanSlide: true
+		CanHover: true
+		IdealSeparation: 512
+	WithInfantryBody:
+		StandSequences: fly
+		MoveSequence: fly
+		DefaultAttackSequence: shoot-air
+		IdleSequences: idle-air
+	Hovers:
+		OffsetModifier: -45
+	-Targetable:
+	Targetable@GROUND:
+		TargetTypes: Ground, Infantry, DetonateAttack
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithSpriteBody@shadow:
+		Name: shadow
+		Sequence: shadow
+		ForceToGround: true
+	-Passenger:
+	-WithDeathAnimation:
+	RenderSprites:
+		PlayerPalette: ra2player
+	-ExternalCondition@STEALTH:
+	-Cloak@STEALTH:
+	-TimedConditionBar:
+	SpawnActorOnDeath:
+		Actor: rocketeer.husk
+
 sardaukar:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

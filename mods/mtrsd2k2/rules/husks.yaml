@@ -253,3 +253,22 @@ phoenix.husk:
 	RenderSprites:
 		Image: phoenix
 		PlayerPalette: raplayer
+
+rocketeer.husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Rocketeer
+	Aircraft:
+		TurnSpeed: 8
+		Speed: 88
+		CanHover: True
+	RenderSprites:
+		PlayerPalette: ra2player
+	-WithShadow:
+	WithSpriteBody@shadow:
+		Name: shadow
+		Sequence: shadow
+		ForceToGround: true
+	FallsToEarth:
+		Velocity: 0c50
+		Explosion: UnitExplodeSmall

@@ -1090,6 +1090,19 @@ palace:
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Fedaykin
+	ProduceActorPower@rocketeer:
+		Description: Recruit Rocketeer
+		LongDesc: Flying infantry unit armed with dual machine guns\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Flying
+		Icon: rocketeer
+		PauseOnCondition: disabled
+		RequiresCondition: harkonnen
+		Prerequisites: ~palace.harkonnen, ~techlevel.7
+		Actors: rocketeer, rocketeer, rocketeer
+		Type: Rocketeer
+		ChargeInterval: 2750
+		ReadyAudio: Reinforce
+		BlockedAudio: NoRoom
+		OrderName: ProduceActorPower.Rocketeer
 	ProduceActorPower@suicidebomber:
 		Description: Recruit Suicide Bomber
 		LongDesc: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
@@ -1121,6 +1134,8 @@ palace:
 		Description: Recruit Saboteur
 		LongDesc: Stealth infantry that can steal enemy vehicles\nand disable enemy structures\n\n  Unarmed
 		Icon: hijacker
+		PauseOnCondition: disabled
+		RequiresCondition: smuggler
 		Prerequisites: ~palace.smuggler, ~techlevel.7
 		Actors: hijacker
 		Type: Saboteur
@@ -1143,6 +1158,9 @@ palace:
 	Production@Fremen:
 		Produces: Fedaykin
 		RequiresCondition: fremen
+	Production@Harkonnen:
+		Produces: Rocketeer
+		RequiresCondition: harkonnen
 	Production@Ordos:
 		Produces: SuicideBomber
 		RequiresCondition: ordos

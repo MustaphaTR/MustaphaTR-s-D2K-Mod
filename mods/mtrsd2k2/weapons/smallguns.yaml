@@ -182,6 +182,18 @@ SniperRifle-ifv:
 	Warhead@1Dam: SpreadDamage
 		Damage: 8500
 
+20mm:
+	Inherits: ^MG
+	Range: 4c0
+	MinRange: 0c001
+	ValidTargets: Ground, Air
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Air
+		Versus:
+			none: 200
+			wall: 8
+			light: 50
+
 ChainGun:
 	ReloadDelay: 3
 	Range: 5c0

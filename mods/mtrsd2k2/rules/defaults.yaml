@@ -349,6 +349,12 @@
 		Explosion: UnitExplodeLarge
 	-MapEditorData:
 
+^HelicopterHusk:
+	Inherits: ^AircraftHusk
+	FallsToEarth:
+		-MaximumSpinSpeed:
+		Moves: False
+
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
