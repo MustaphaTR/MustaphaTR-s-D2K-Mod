@@ -1048,5 +1048,10 @@ Actors:
 		SubCell: 3
 		Location: 62,81
 		Facing: 512
+	smg_saboteur: hijacker
+		Owner: Smugglers
+		SubCell: 3
+		Location: 60,57
+		Facing: 896
 
 Rules: mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
