@@ -251,7 +251,7 @@ World:
 		ClassName: Medium Support
 		Factions: ixian
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, grenadier, raider.mg, raider.rocket, combat_tank_i
+		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, mechanic, raider.mg, raider.rocket, combat_tank_i
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartUnits@mediumharkonnen:
@@ -315,7 +315,7 @@ World:
 		ClassName: Heavy Support
 		Factions: ixian
 		BaseActor: mcv
-		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, grenadier, raider.mg, raider.mg, raider.rocket, combat_tank_i, combat_tank_i, missile_tank, siege_tank
+		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, mechanic, raider.mg, raider.mg, raider.rocket, combat_tank_i, combat_tank_i, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
 	MPStartUnits@heavyharkonnen:
