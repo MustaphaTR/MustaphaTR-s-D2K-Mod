@@ -7,7 +7,7 @@
    information, see COPYING.
 ]]
 
-HarkonnenBase = { HarkonnenOutpost, HarkonnenRefinery, HarkonnenHeavyFact, HarkonnenTurret1, HarkonnenTurret2, HarkonnenBarracks, HarkonnenSilo1, HarkonnenSilo2, HarkonnenWindTrap1, HarkonnenWindTrap2, HarkonnenWindTrap3, HarkonnenWindTrap4, HarkonnenWindTrap5 }
+HarkonnenBase = { HarkonnenOutpost, HarkonnenRefinery, HarkonnenHeavyFact, HarkonnenTurret1, HarkonnenTurret2, HarkonnenFlameTower1, HarkonnenFlameTower2, HarkonnenBarracks, HarkonnenSilo1, HarkonnenSilo2, HarkonnenWindTrap1, HarkonnenWindTrap2, HarkonnenWindTrap3, HarkonnenWindTrap4, HarkonnenWindTrap5 }
 
 HarkonnenReinforcements =
 {
@@ -17,7 +17,7 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" }
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" }
 	},
 
 	normal =
@@ -26,9 +26,9 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "combat_tank_h", "light_inf", "trooper", "trooper", "quad" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" }
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" }
 	},
 
 	hard =
@@ -37,10 +37,10 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "combat_tank_h", "light_inf", "trooper", "trooper", "quad" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
-		{ "combat_tank_h", "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
+		{ "combat_tank_h", "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
 		{ "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h" }
 	}
 }
@@ -71,8 +71,8 @@ HarkonnenPaths =
 
 AtreidesReinforcements =
 {
-	{ "trike", "combat_tank_a", "combat_tank_a" },
-	{ "quad", "combat_tank_a", "combat_tank_a" }
+	{ "trike.mg", "combat_tank_a", "combat_tank_a" },
+	{ "quad.rocket", "combat_tank_a", "combat_tank_a" }
 }
 AtreidesPath = { AtreidesEntry.Location, AtreidesRally.Location }
 
@@ -200,7 +200,7 @@ WorldLoaded = function()
 	Trigger.OnEnteredProximityTrigger(HarkonnenRally1.CenterPosition, WDist.New(6 * 1024), function(a, id)
 		if a.Owner == player then
 			Trigger.RemoveProximityTrigger(id)
-			local units = Reinforcements.Reinforce(harkonnen, { "light_inf", "combat_tank_h", "trike" }, HarkonnenPaths[1])
+			local units = Reinforcements.Reinforce(harkonnen, { "light_inf", "combat_tank_h", "quad.mg" }, HarkonnenPaths[1])
 			Utils.Do(units, IdleHunt)
 		end
 	end)
