@@ -23,11 +23,11 @@ AttackDelays =
 
 EnemyInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
 
-HarkonnenVehicleTypes = { "trike", "trike", "quad" }
+HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "trike.rocket" }
 HarkonnenTankType = { "combat_tank_h" }
 
-SmugglerVehicleTypes = { "raider", "raider", "quad" }
-SmugglerTankType = { "combat_tank_o" }
+SmugglerVehicleTypes = { "trike.mg", "trike.mg", "raider.rocket" }
+SmugglerTankType = { "combat_tank_s" }
 
 InitAIUnits = function(house)
 	LastHarvesterEaten[house] = true

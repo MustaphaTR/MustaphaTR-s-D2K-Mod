@@ -219,7 +219,7 @@ Actors:
 	Actor53: wall
 		Location: 27,13
 		Owner: Harkonnen
-	Actor54: wall
+	HFlameTower1: flame_tower
 		Location: 28,13
 		Owner: Harkonnen
 	HBarracks: barracks
@@ -378,13 +378,13 @@ Actors:
 	Actor112: wall
 		Location: 17,36
 		Owner: Harkonnen
-	Actor113: trike
+	Actor113: quad.mg
 		Location: 37,39
 		Owner: Harkonnen
-	Actor114: trike
+	Actor114: quad.mg
 		Location: 39,39
 		Owner: Harkonnen
-	Actor115: trike
+	Actor115: quad.mg
 		Location: 41,39
 		Owner: Harkonnen
 	Actor116: spicebloom.spawnpoint
@@ -402,7 +402,7 @@ Actors:
 	Actor120: wall
 		Location: 37,41
 		Owner: Harkonnen
-	Actor121: wall
+	HFlameTower2: flame_tower
 		Location: 42,41
 		Owner: Harkonnen
 	Actor122: wall
@@ -426,7 +426,7 @@ Actors:
 	Actor128: spicebloom.spawnpoint
 		Location: 5,58
 		Owner: Neutral
-	Actor129: raider
+	Actor129: quad.mg
 		Location: 64,58
 		Owner: Ordos
 	Actor130: light_inf
@@ -447,13 +447,13 @@ Actors:
 	Actor135: spicebloom.spawnpoint
 		Location: 26,62
 		Owner: Neutral
-	Actor136: raider
+	Actor136: quad.mg
 		Location: 60,62
 		Owner: Ordos
 	OConyard: construction_yard
 		Location: 62,62
 		Owner: Ordos
-	Actor138: raider
+	Actor138: quad.mg
 		Location: 60,63
 		Owner: Ordos
 	Actor139: light_inf
@@ -516,5 +516,32 @@ Actors:
 	Actor152: wall
 		Owner: Smugglers
 		Location: 49,19
+	Actor160: mine_at
+		Owner: Smugglers
+		Location: 61,23
+	Actor161: mine_at
+		Owner: Smugglers
+		Location: 63,24
+	Actor162: mine_at
+		Owner: Smugglers
+		Location: 57,25
+	Actor163: mine_at
+		Owner: Smugglers
+		Location: 60,30
+	Actor164: mine_at
+		Owner: Smugglers
+		Location: 55,15
+	Actor165: mine_ap
+		Owner: Smugglers
+		Location: 60,25
+	Actor166: mine_ap
+		Owner: Smugglers
+		Location: 62,26
+	Actor167: mine_ap
+		Owner: Smugglers
+		Location: 57,28
+	Actor168: mine_ap
+		Owner: Smugglers
+		Location: 58,32
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
