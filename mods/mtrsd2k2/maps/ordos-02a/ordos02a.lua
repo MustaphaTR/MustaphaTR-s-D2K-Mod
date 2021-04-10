@@ -14,32 +14,32 @@ HarkonnenReinforcements =
 {
 	easy =
 	{
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" }
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" }
+		{ "light_inf", "quad.mg" }
 	},
 
 	hard =
 	{
-		{ "trike", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "quad.mg", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf" },
-		{ "trike", "trike" },
+		{ "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" },
-		{ "trike", "trike" }
+		{ "light_inf", "quad.mg" },
+		{ "quad.mg", "quad.mg" }
 	}
 }
 
@@ -59,7 +59,7 @@ InitialHarkonnenReinforcementsPaths =
 
 InitialHarkonnenReinforcements =
 {
-	{ "trike", "trike" },
+	{ "quad.mg", "quad.mg" },
 	{ "light_inf", "light_inf" }
 }
 
@@ -77,7 +77,7 @@ HarkonnenAttackWaves =
 	hard = 9
 }
 
-OrdosReinforcements = { "light_inf", "light_inf", "raider" }
+OrdosReinforcements = { "light_inf", "light_inf", "quad.mg" }
 OrdosEntryPath = { OrdosEntry.Location, OrdosRally.Location }
 
 Tick = function()

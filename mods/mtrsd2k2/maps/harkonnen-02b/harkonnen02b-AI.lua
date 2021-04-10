@@ -22,7 +22,7 @@ AttackDelays =
 }
 
 AtreidesInfantryTypes = { "light_inf" }
-AtreidesVehicleTypes = { "trike" }
+AtreidesVehicleTypes = { "trike.mg" }
 
 ActivateAI = function()
 	IdlingUnits[atreides] = { }

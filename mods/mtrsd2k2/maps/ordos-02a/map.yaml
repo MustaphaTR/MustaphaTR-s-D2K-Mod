@@ -53,7 +53,7 @@ Actors:
 	Actor1: light_inf
 		Location: 18,25
 		Owner: Ordos
-	Actor2: raider
+	Actor2: quad.mg
 		Location: 21,26
 		Owner: Ordos
 	Actor3: light_inf
@@ -62,10 +62,10 @@ Actors:
 	OConyard: construction_yard
 		Location: 18,27
 		Owner: Ordos
-	Actor5: raider
+	Actor5: quad.mg
 		Location: 16,28
 		Owner: Ordos
-	Actor6: raider
+	Actor6: quad.mg
 		Location: 22,28
 		Owner: Ordos
 	Actor7: light_inf
@@ -80,7 +80,7 @@ Actors:
 	Actor10: light_inf
 		Location: 27,40
 		Owner: Harkonnen
-	Actor11: trike
+	Actor11: quad.mg
 		Location: 31,41
 		Owner: Harkonnen
 	Actor12: light_inf
@@ -89,7 +89,7 @@ Actors:
 	HOutpost: outpost
 		Location: 25,42
 		Owner: Harkonnen
-	Actor14: trike
+	Actor14: quad.mg
 		Location: 29,42
 		Owner: Harkonnen
 	Actor15: light_inf
@@ -104,13 +104,13 @@ Actors:
 	HPower1: wind_trap
 		Location: 22,45
 		Owner: Harkonnen
-	Actor19: trike
+	Actor19: quad.mg
 		Location: 40,45
 		Owner: Harkonnen
 	HConyard: construction_yard
 		Location: 26,46
 		Owner: Harkonnen
-	Actor21: trike
+	Actor21: quad.mg
 		Location: 37,46
 		Owner: Harkonnen
 	HarkonnenRally1: waypoint

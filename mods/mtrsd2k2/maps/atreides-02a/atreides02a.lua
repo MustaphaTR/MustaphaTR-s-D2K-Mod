@@ -13,32 +13,32 @@ HarkonnenReinforcements =
 {
 	easy =
 	{
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" }
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" }
+		{ "light_inf", "quad.mg" }
 	},
 
 	hard =
 	{
-		{ "trike", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "quad.mg", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf" },
-		{ "trike", "trike" },
+		{ "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" },
-		{ "trike", "trike" }
+		{ "light_inf", "quad.mg" },
+		{ "quad.mg", "quad.mg" }
 	}
 }
 

@@ -9,7 +9,7 @@ World:
 		Briefing: Harkonnen forces are weakened in the Imperial Basin. Use the sensors in our Outpost to find them. Strike hard and destroy everything.\n
 		BriefingVideo: O_BR02_E.VQA
 	MapOptions:
-		TechLevel: low
+		TechLevel: 1
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -22,39 +22,3 @@ World:
 carryall.reinforce:
 	Cargo:
 		MaxWeight: 10
-
-upgrade.conyard:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.barracks:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.light:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.heavy:
-	Buildable:
-		Prerequisites: ~disabled
-
-concreteb:
-	Buildable:
-		Prerequisites: ~disabled
-
-heavy_factory:
-	Buildable:
-		Prerequisites: ~disabled
-
-medium_gun_turret:
-	Buildable:
-		Prerequisites: ~disabled
-
-wall:
-	Buildable:
-		Prerequisites: ~disabled
-
-outpost:
-	Buildable:
-		Prerequisites: barracks

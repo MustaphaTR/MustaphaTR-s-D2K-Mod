@@ -13,32 +13,32 @@ AtreidesReinforcements =
 {
 	easy =
 	{
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" }
+		{ "light_inf", "trike.mg" },
+		{ "light_inf", "trike.mg" },
+		{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "light_inf", "trike.mg" },
+		{ "light_inf", "trike.mg" },
+		{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
 		{ "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" }
+		{ "light_inf", "trike.mg" }
 	},
 
 	hard =
 	{
-		{ "trike", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "trike.mg", "trike.mg" },
+		{ "light_inf", "trike.mg" },
+		{ "light_inf", "trike.mg" },
+		{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
 		{ "light_inf", "light_inf" },
-		{ "trike", "trike" },
+		{ "trike.mg", "trike.mg" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" },
-		{ "trike", "trike" }
+		{ "light_inf", "trike.mg" },
+		{ "trike.mg", "trike.mg" }
 	}
 }
 
