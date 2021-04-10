@@ -7,7 +7,7 @@
    information, see COPYING.
 ]]
 
-HarkonnenBase = { HarkonnenConstructionYard, HarkonnenWindTrap1, HarkonnenWindTrap2, HarkonnenWindTrap3, HarkonnenWindTrap4, HarkonnenWindTrap5, HarkonnenWindTrap6, HarkonnenWindTrap7, HarkonnenWindTrap8, HarkonnenSilo1, HarkonnenSilo2, HarkonnenSilo3, HarkonnenSilo4, HarkonnenGunTurret1, HarkonnenGunTurret2, HarkonnenGunTurret3, HarkonnenGunTurret4, HarkonnenGunTurret5, HarkonnenGunTurret6, HarkonnenGunTurret7, HarkonnenHeavyFactory, HarkonnenRefinery, HarkonnenOutpost, HarkonnenLightFactory }
+HarkonnenBase = { HarkonnenConstructionYard, HarkonnenWindTrap1, HarkonnenWindTrap2, HarkonnenWindTrap3, HarkonnenWindTrap4, HarkonnenWindTrap5, HarkonnenWindTrap6, HarkonnenWindTrap7, HarkonnenWindTrap8, HarkonnenSilo1, HarkonnenSilo2, HarkonnenSilo3, HarkonnenSilo4, HarkonnenFlameTower, HarkonnenGunTurret1, HarkonnenGunTurret2, HarkonnenGunTurret3, HarkonnenGunTurret4, HarkonnenGunTurret5, HarkonnenGunTurret6, HarkonnenGunTurret7, HarkonnenHeavyFactory, HarkonnenRefinery, HarkonnenOutpost, HarkonnenLightFactory }
 SmugglerBase = { SmugglerWindTrap1, SmugglerWindTrap2 }
 
 HarkonnenReinforcements =
@@ -18,7 +18,7 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" }
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" }
 	},
 
 	normal =
@@ -27,9 +27,9 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "combat_tank_h", "light_inf", "trooper", "trooper", "quad" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" }
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" }
 	},
 
 	hard =
@@ -38,10 +38,10 @@ HarkonnenReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "trooper", "trooper" },
 		{ "combat_tank_h", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "trike", "combat_tank_h", "light_inf", "trooper", "trooper", "quad" },
-		{ "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
-		{ "combat_tank_h", "combat_tank_h", "trike", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_h", "quad.mg", "combat_tank_h", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
+		{ "combat_tank_h", "combat_tank_h", "quad.mg", "light_inf", "light_inf", "trooper", "trooper", "trike.rocket", "trike.rocket" },
 		{ "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h", "combat_tank_h" }
 	}
 }
@@ -79,32 +79,32 @@ MercenaryReinforcements =
 {
 	easy =
 	{
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike", "trike", "trike" },
-		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" }
+		{ "combat_tank_m", "combat_tank_m", "quad.rocket", "quad.rocket", "light_inf", "light_inf", "light_inf", "light_inf" },
+		{ "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "raider.mg" },
+		{ "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" }
 	},
 
 	normal =
 	{
-		{ "trike", "trike", "quad", "quad", "quad", "trike", "trike", "trike" },
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike", "trike", "trike", "trike", "trike", "trike" },
-		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" }
+		{ "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "raider.mg" },
+		{ "combat_tank_m", "combat_tank_m", "quad.rocket", "quad.rocket", "light_inf", "light_inf", "light_inf", "light_inf" },
+		{ "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
+		{ "combat_tank_m", "combat_tank_m", "quad.rocket", "quad.rocket", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
+		{ "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "raider.mg" },
+		{ "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" }
 	},
 
 	hard =
 	{
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike", "trike", "trike" },
-		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike", "trike", "trike", "trike", "trike", "trike" },
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
-		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad", "trike", "trike", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike", "trike", "trike", "trike", "trike", "trike", "quad", "quad" },
-		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "trike", "trike", "quad", "quad", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" }
+		{ "combat_tank_m", "combat_tank_m", "quad.rocket", "quad.rocket", "light_inf", "light_inf", "light_inf", "light_inf" },
+		{ "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "raider.mg" },
+		{ "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
+		{ "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "raider.mg" },
+		{ "combat_tank_m", "combat_tank_m", "quad.rocket", "quad.rocket", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
+		{ "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
+		{ "combat_tank_m", "combat_tank_m", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
+		{ "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "quad.rocket", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "raider.mg", "quad.rocket", "quad.rocket" },
+		{ "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "combat_tank_m", "raider.mg", "raider.mg", "quad.rocket", "quad.rocket", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" }
 	}
 }
 
@@ -124,10 +124,10 @@ MercenaryAttackWaves =
 
 MercenarySpawn = { HarkonnenRally4.Location + CVec.New(2, -2) }
 
--- Ordos tanks because those were intended for the Smugglers not the Atreides
-ContrabandReinforcements = { "mcv", "quad", "quad", "combat_tank_o", "combat_tank_o", "combat_tank_o" }
-SmugglerReinforcements = { "quad", "quad", "trike", "trike" }
-InitialHarkonnenReinforcements = { "trooper", "trooper", "quad", "quad", "trike", "trike", "trike", "light_inf" }
+-- Smuggler tanks because those were intended for the Smugglers not the Atreides
+ContrabandReinforcements = { "mcv", "quad.rocket", "quad.rocket", "combat_tank_s", "combat_tank_s", "combat_tank_s" }
+SmugglerReinforcements = { "raider.rocket", "raider.rocket", "trike.mg", "trike.mg" }
+InitialHarkonnenReinforcements = { "trooper", "trooper", "trike.rocket", "trike.rocket", "quad.mg", "quad.mg", "quad.mg", "light_inf" }
 
 HarkonnenPaths =
 {
@@ -138,7 +138,7 @@ HarkonnenPaths =
 	{ HarkonnenEntry2.Location }
 }
 
-AtreidesReinforcements = { "trike", "combat_tank_a" }
+AtreidesReinforcements = { "trike.mg", "combat_tank_a" }
 AtreidesPath = { AtreidesEntry.Location, AtreidesRally.Location }
 
 ContrabandTimes =

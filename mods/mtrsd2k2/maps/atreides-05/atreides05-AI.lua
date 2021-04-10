@@ -22,7 +22,7 @@ AttackDelays =
 }
 
 HarkonnenInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper" }
-HarkonnenVehicleTypes = { "trike", "trike", "trike", "quad", "quad" }
+HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "quad.mg", "trike.rocket", "trike.rocket" }
 HarkonnenTankType = { "combat_tank_h" }
 
 InitAIUnits = function()

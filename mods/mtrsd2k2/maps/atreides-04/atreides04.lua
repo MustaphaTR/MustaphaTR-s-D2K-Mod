@@ -7,7 +7,7 @@
    information, see COPYING.
 ]]
 
-HarkonnenBase = { HarkonnenOutpost, HarkonnenRefinery, HarkonnenHeavyFact, HarkonnenTurret1, HarkonnenTurret2, HarkonnenFlameTower1, HarkonnenFlameTower2, HarkonnenBarracks, HarkonnenSilo1, HarkonnenSilo2, HarkonnenWindTrap1, HarkonnenWindTrap2, HarkonnenWindTrap3, HarkonnenWindTrap4, HarkonnenWindTrap5 }
+HarkonnenBase = { HarkonnenOutpost, HarkonnenRefinery, HarkonnenHeavyFact, HarkonnenFlameTower1, HarkonnenFlameTower2, HarkonnenTurret1, HarkonnenTurret2, HarkonnenBarracks, HarkonnenSilo1, HarkonnenSilo2, HarkonnenWindTrap1, HarkonnenWindTrap2, HarkonnenWindTrap3, HarkonnenWindTrap4, HarkonnenWindTrap5 }
 
 HarkonnenReinforcements =
 {
