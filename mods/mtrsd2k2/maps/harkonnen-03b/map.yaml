@@ -126,16 +126,16 @@ Actors:
 	HConyard: construction_yard
 		Location: 57,39
 		Owner: Harkonnen
-	Actor27: trike
+	Actor27: quad.mg
 		Location: 54,40
 		Owner: Harkonnen
 	Actor28: light_inf
 		Location: 54,42
 		Owner: Harkonnen
-	Actor29: trike
+	Actor29: quad.mg
 		Location: 56,42
 		Owner: Harkonnen
-	Actor30: quad
+	Actor30: trike.rocket
 		Location: 62,42
 		Owner: Harkonnen
 	Actor31: light_inf
@@ -144,7 +144,7 @@ Actors:
 	Actor32: trooper
 		Location: 58,44
 		Owner: Harkonnen
-	Actor33: quad
+	Actor33: trike.rocket
 		Location: 59,44
 		Owner: Harkonnen
 	Actor34: trooper

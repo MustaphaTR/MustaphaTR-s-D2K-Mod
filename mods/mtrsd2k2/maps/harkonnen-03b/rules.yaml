@@ -9,7 +9,7 @@ World:
 		Briefing: Attack and destroy the Atreides base at Sietch Tabr. Strike hard and eliminate all resistance.\n\nHeavier Quad vehicles will be made available for your attack. Upgrade your Light Factory to gain access to these vehicles.\n
 		BriefingVideo: H_BR03_E.VQA
 	MapOptions:
-		TechLevel: low
+		TechLevel: 2
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -22,35 +22,3 @@ World:
 carryall.reinforce:
 	Cargo:
 		MaxWeight: 10
-
-concreteb:
-	Buildable:
-		Prerequisites: ~disabled
-
-heavy_factory:
-	Buildable:
-		Prerequisites: ~disabled
-
-medium_gun_turret:
-	Buildable:
-		Prerequisites: ~disabled
-
-outpost:
-	Buildable:
-		Prerequisites: barracks
-
-quad:
-	Buildable:
-		Prerequisites: upgrade.light
-
-trooper:
-	Buildable:
-		Prerequisites: upgrade.barracks
-
-upgrade.conyard:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.heavy:
-	Buildable:
-		Prerequisites: ~disabled

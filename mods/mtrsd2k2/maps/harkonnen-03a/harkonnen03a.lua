@@ -19,32 +19,32 @@ AtreidesReinforcements =
 {
 	easy =
 	{
-		{ "light_inf", "trike", "trooper" },
-		{ "light_inf", "trike", "quad" },
-		{ "light_inf", "light_inf", "trooper", "trike", "trike", "quad" }
+		{ "light_inf", "trike.mg", "trooper" },
+		{ "light_inf", "trike.mg", "quad.rocket" },
+		{ "light_inf", "light_inf", "trooper", "trike.mg", "trike.mg", "quad.rocket" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "trike", "trooper" },
-		{ "light_inf", "trike", "trike" },
-		{ "light_inf", "light_inf", "trooper", "trike", "trike", "quad" },
+		{ "light_inf", "trike.mg", "trooper" },
+		{ "light_inf", "trike.mg", "trike.mg" },
+		{ "light_inf", "light_inf", "trooper", "trike.mg", "trike.mg", "quad.rocket" },
 		{ "light_inf", "light_inf", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike", "quad", "quad" }
+		{ "light_inf", "trike.mg", "quad.rocket", "quad.rocket" }
 	},
 
 	hard =
 	{
-		{ "trike", "trike", "quad" },
-		{ "light_inf", "trike", "trike" },
-		{ "trooper", "trooper", "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "trike.mg", "trike.mg", "quad.rocket" },
+		{ "light_inf", "trike.mg", "trike.mg" },
+		{ "trooper", "trooper", "light_inf", "trike.mg" },
+		{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
 		{ "light_inf", "light_inf", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
-		{ "light_inf", "trike", "light_inf", "trooper", "trooper", "quad" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike" }
+		{ "trike.mg", "trike.mg", "quad.rocket", "quad.rocket", "quad.rocket", "trike.mg" },
+		{ "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
+		{ "light_inf", "trike.mg", "light_inf", "trooper", "trooper", "quad.rocket" },
+		{ "trike.mg", "trike.mg", "quad.rocket", "quad.rocket", "quad.rocket", "trike.mg" }
 	}
 }
 
@@ -65,10 +65,10 @@ AtreidesAttackWaves =
 AtreidesHunters =
 {
 	{ "trooper", "trooper", "trooper", "trooper" },
-	{ "trike", "trike", "trike" },
-	{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "trike", "trike" },
-	{ "trooper", "trooper", "trooper", "trooper", "trooper", "quad", "quad" },
-	{ "quad", "trooper", "trooper", "trooper" }
+	{ "trike.mg", "trike.mg", "trike.mg" },
+	{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "trike.mg", "trike.mg" },
+	{ "trooper", "trooper", "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" },
+	{ "quad.rocket", "trooper", "trooper", "trooper" }
 }
 
 AtreidesPaths =
@@ -87,7 +87,7 @@ AtreidesHunterPaths =
 	{ AtreidesEntry8.Location, AtreidesRally8.Location }
 }
 
-HarkonnenReinforcements = { "trike", "trike", "quad" }
+HarkonnenReinforcements = { "quad.mg", "quad.mg", "trike.rocket" }
 HarkonnenPath = { HarkonnenEntry.Location, HarkonnenRally.Location }
 
 HarkonnenBaseBuildings = { "barracks", "light_factory" }

@@ -22,7 +22,7 @@ AttackDelays =
 }
 
 AtreidesInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-AtreidesVehicleTypes = { "trike", "trike", "quad" }
+AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 
 InitAIUnits = function()
 	IdlingUnits[atreides] = Reinforcements.Reinforce(atreides, AtreidesInitialReinforcements, AtreidesInitialPath)
