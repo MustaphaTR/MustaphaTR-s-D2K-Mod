@@ -18,16 +18,16 @@ HarkonnenReinforcements =
 	{
 		{ "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" }
+		{ "light_inf", "quad.mg" }
 	},
 
 	hard =
 	{
 		{ "light_inf", "light_inf" },
-		{ "trike", "trike" },
+		{ "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" },
-		{ "trike", "trike" }
+		{ "light_inf", "quad.mg" },
+		{ "quad.mg", "quad.mg" }
 	}
 }
 

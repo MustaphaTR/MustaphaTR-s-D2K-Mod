@@ -73,7 +73,7 @@ Actors:
 	Actor8: light_inf
 		Location: 13,14
 		Owner: Harkonnen
-	Actor9: trike
+	Actor9: quad.mg
 		Location: 4,16
 		Owner: Harkonnen
 	Actor10: light_inf
@@ -82,7 +82,7 @@ Actors:
 	Actor11: light_inf
 		Location: 7,18
 		Owner: Harkonnen
-	Actor12: trike
+	Actor12: quad.mg
 		Location: 11,19
 		Owner: Harkonnen
 	Actor13: light_inf

@@ -18,16 +18,16 @@ AtreidesReinforcements =
 	{
 		{ "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" }
+		{ "light_inf", "trike.mg" }
 	},
 
 	hard =
 	{
 		{ "light_inf", "light_inf" },
-		{ "trike", "trike" },
+		{ "trike.mg", "trike.mg" },
 		{ "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike" },
-		{ "trike", "trike" }
+		{ "light_inf", "trike.mg" },
+		{ "trike.mg", "trike.mg" }
 	}
 }
 
@@ -48,7 +48,7 @@ ToHarvest =
 	hard = 3500
 }
 
-HarkonnenReinforcements = { "light_inf", "light_inf", "light_inf", "trike" }
+HarkonnenReinforcements = { "light_inf", "light_inf", "light_inf", "quad.mg" }
 HarkonnenEntryPath = { HarkonnenWaypoint.Location, HarkonnenRally.Location }
 
 Messages =

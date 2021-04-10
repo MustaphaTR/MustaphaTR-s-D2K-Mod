@@ -9,7 +9,7 @@ World:
 		Briefing: Mine the Spice from the Imperial Basin, before the Atreides try to seize the area. Execute anyone who tries to stop you.\n\nBuild Silos to store the Spice. Remember to place buildings on concrete foundations to prevent erosion and gradual decline. To build without concrete would be inefficient. Inefficiency will not be tolerated.\n
 		BriefingVideo: H_BR01_E.VQA
 	MapOptions:
-		TechLevel: low
+		TechLevel: 1
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -19,23 +19,11 @@ World:
 			hard: Hard
 		Default: easy
 
-upgrade.conyard:
-	Buildable:
-		Prerequisites: ~disabled
-
 upgrade.barracks:
 	Buildable:
 		Prerequisites: ~disabled
 
 upgrade.light:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.heavy:
-	Buildable:
-		Prerequisites: ~disabled
-
-concreteb:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -47,11 +35,7 @@ light_factory:
 	Buildable:
 		Prerequisites: ~disabled
 
-heavy_factory:
-	Buildable:
-		Prerequisites: ~disabled
-
-medium_gun_turret:
+outpost:
 	Buildable:
 		Prerequisites: ~disabled
 

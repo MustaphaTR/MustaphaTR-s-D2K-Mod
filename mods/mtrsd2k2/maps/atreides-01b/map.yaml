@@ -65,16 +65,16 @@ Actors:
 	Actor5: light_inf
 		Location: 14,8
 		Owner: Atreides
-	Actor6: trike
+	Actor6: quad.mg
 		Location: 29,8
 		Owner: Harkonnen
-	Actor7: trike
+	Actor7: trike.mg
 		Location: 8,9
 		Owner: Atreides
 	Actor9: light_inf
 		Location: 14,10
 		Owner: Atreides
-	Actor10: trike
+	Actor10: trike.mg
 		Location: 14,12
 		Owner: Atreides
 	Actor11: light_inf

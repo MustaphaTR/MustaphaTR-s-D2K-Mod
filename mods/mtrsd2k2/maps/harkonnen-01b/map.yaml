@@ -70,10 +70,10 @@ Actors:
 	HarkonnenConyard: construction_yard
 		Location: 13,13
 		Owner: Harkonnen
-	Actor8: trike
+	Actor8: quad.mg
 		Location: 12,14
 		Owner: Harkonnen
-	Actor9: trike
+	Actor9: quad.mg
 		Location: 16,14
 		Owner: Harkonnen
 	Actor10: light_inf

@@ -68,10 +68,10 @@ Actors:
 	Actor6: light_inf
 		Location: 12,11
 		Owner: Ordos
-	Actor7: raider
+	Actor7: quad.mg
 		Location: 5,12
 		Owner: Ordos
-	Actor8: raider
+	Actor8: quad.mg
 		Location: 10,12
 		Owner: Ordos
 	OrdosConyard: construction_yard

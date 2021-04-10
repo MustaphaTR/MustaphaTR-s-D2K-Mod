@@ -9,7 +9,7 @@ World:
 		Briefing: Spice is wealth. Serve the Ordos by harvesting Spice in the Imperial Basin. If Harkonnen forces attempt to interrupt the flow of the Spice - neutralize them.\n\nEfficiency dictates that Silos must be built to avoid loss of Spice. Build concrete foundations to avoid unnecessary damage from the elements. To do otherwise is wasteful.
 		BriefingVideo: O_BR01_E.VQA
 	MapOptions:
-		TechLevel: low
+		TechLevel: 1
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -19,23 +19,11 @@ World:
 			hard: Hard
 		Default: easy
 
-upgrade.conyard:
-	Buildable:
-		Prerequisites: ~disabled
-
 upgrade.barracks:
 	Buildable:
 		Prerequisites: ~disabled
 
 upgrade.light:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.heavy:
-	Buildable:
-		Prerequisites: ~disabled
-
-concreteb:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -47,11 +35,7 @@ light_factory:
 	Buildable:
 		Prerequisites: ~disabled
 
-heavy_factory:
-	Buildable:
-		Prerequisites: ~disabled
-
-medium_gun_turret:
+outpost:
 	Buildable:
 		Prerequisites: ~disabled
 
