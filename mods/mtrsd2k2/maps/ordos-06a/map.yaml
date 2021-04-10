@@ -89,7 +89,7 @@ Actors:
 		Location: 76,3
 		Owner: Ordos
 	OBarracks: barracks
-		Location: 79,3
+		Location: 79,6
 		Owner: Ordos
 	Actor12: wall
 		Location: 65,4
@@ -128,9 +128,6 @@ Actors:
 	Actor23: trooper
 		Location: 4,8
 		Owner: Atreides
-	Actor24: wall
-		Location: 65,8
-		Owner: Ordos
 	Actor25: wall
 		Location: 66,8
 		Owner: Ordos
@@ -198,9 +195,11 @@ Actors:
 	OGunt1: medium_gun_turret
 		Location: 71,12
 		Owner: Ordos
+		TurretFacing: 512
 	OGunt2: medium_gun_turret
 		Location: 78,12
 		Owner: Ordos
+		TurretFacing: 512
 	Actor48: wall
 		Location: 79,12
 		Owner: Ordos
@@ -218,9 +217,6 @@ Actors:
 		Owner: Atreides
 	Actor53: combat_tank_a
 		Location: 8,18
-		Owner: Atreides
-	Actor54: wall
-		Location: 10,19
 		Owner: Atreides
 	Actor55: wall
 		Location: 11,19
@@ -326,7 +322,7 @@ Actors:
 	Actor88: trooper
 		Location: 77,55
 		Owner: Ordos
-	Actor89: raider
+	Actor89: quad.mg
 		Location: 78,56
 		Owner: Ordos
 	HGunt1: medium_gun_turret
@@ -477,6 +473,7 @@ Actors:
 		Location: 38,77
 		Facing: 768
 		Owner: Harkonnen
+		TurretFacing: 512
 	HPower8: wind_trap
 		Location: 23,78
 		Owner: Harkonnen
@@ -498,9 +495,6 @@ Actors:
 	HGunt4: medium_gun_turret
 		Location: 19,80
 		Facing: 256
-		Owner: Harkonnen
-	Actor145: wall
-		Location: 39,80
 		Owner: Harkonnen
 	Actor146: wall
 		Location: 19,81
@@ -574,5 +568,19 @@ Actors:
 	HarkonnenEntry7: waypoint
 		Owner: Neutral
 		Location: 34,2
+	OArty: artillery_platform
+		Owner: Ordos
+		Location: 65,8
+		TurretFacing: 384
+	AMGun: machine_gun_tower
+		Owner: Atreides
+		Location: 10,19
+	HFTur: flame_tower
+		Faction: atreides
+		Location: 39,80
+		Owner: Harkonnen
+	OPower3: wind_trap
+		Owner: Ordos
+		Location: 79,3
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

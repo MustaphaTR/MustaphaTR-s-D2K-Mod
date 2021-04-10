@@ -22,7 +22,7 @@ ProductionDelays =
 }
 
 EnemyInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-EnemyVehicleTypes = { "trike", "trike", "quad" }
+EnemyVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 
 AtreidesTankTypes = { "combat_tank_a", "siege_tank", "missile_tank" }
 HarkonnenTankTypes = { "combat_tank_h", "siege_tank" }

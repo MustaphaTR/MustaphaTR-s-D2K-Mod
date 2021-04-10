@@ -9,8 +9,8 @@
 
 Base =
 {
-	Atreides = { AConyard, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9, APower10, APower11, APower12, ABarracks, ARefinery, ALightFactory, AHeavyFactory, ARepair, AResearch, AGunt1, AGunt2, ARock1, ARock2, ARock3, ARock4 },
-	Harkonnen = { HConyard, HPower1, HPower2, HPower3, HPower4, HPower5, HPower6, HPower7, HPower8, HPower9, HPower10, HBarracks, HRefinery, HOutpost, HHeavyFactory, HGunt1, HGunt2, HGunt3, HGunt4, HRock, HSilo1, HSilo2, HSilo3 }
+	Atreides = { AConyard, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9, APower10, APower11, APower12, ABarracks, ARefinery, ALightFactory, AHeavyFactory, ARepair, AResearch, AMGun, AGunt1, AGunt2, ARock1, ARock2, ARock3, ARock4 },
+	Harkonnen = { HConyard, HPower1, HPower2, HPower3, HPower4, HPower5, HPower6, HPower7, HPower8, HPower9, HPower10, HBarracks, HRefinery, HOutpost, HHeavyFactory, HFTur, HGunt1, HGunt2, HGunt3, HGunt4, HRock, HSilo1, HSilo2, HSilo3 }
 }
 
 AtreidesReinforcements =
@@ -18,24 +18,24 @@ AtreidesReinforcements =
 	easy =
 	{
 		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "quad", "quad", "combat_tank_a" },
-		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" }
+		{ "quad.rocket", "quad.rocket", "combat_tank_a" },
+		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad" },
-		{ "quad", "quad", "combat_tank_a", "combat_tank_a" },
-		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad", "quad" },
+		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket" },
+		{ "quad.rocket", "quad.rocket", "combat_tank_a", "combat_tank_a" },
+		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket", "quad.rocket" },
 		{ "combat_tank_a", "combat_tank_a", "combat_tank_a" }
 	},
 
 	hard =
 	{
-		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "quad", "quad" },
-		{ "quad", "quad", "quad", "combat_tank_a", "combat_tank_a" },
-		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad", "quad", "quad", "quad" },
-		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad" },
+		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" },
+		{ "quad.rocket", "quad.rocket", "quad.rocket", "combat_tank_a", "combat_tank_a" },
+		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper", "quad.rocket", "quad.rocket", "quad.rocket", "quad.rocket" },
+		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad.rocket" },
 		{ "combat_tank_a", "combat_tank_a", "missile_tank", "siege_tank" }
 	}
 }
@@ -44,37 +44,37 @@ HarkonnenReinforcements =
 {
 	easy =
 	{
-		{ "quad", "trike", "trike" },
+		{ "trike.rocket", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "quad" },
+		{ "combat_tank_h", "trike.rocket" },
 		{ "trooper", "trooper", "trooper", "trooper", "trooper" }
 	},
 
 	normal =
 	{
-		{ "combat_tank_h", "combat_tank_h", "trike", "trike" },
+		{ "combat_tank_h", "combat_tank_h", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "quad", "quad" },
+		{ "combat_tank_h", "trike.rocket", "trike.rocket" },
 		{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "siege_tank" }
+		{ "quad.mg", "quad.mg", "trike.rocket", "siege_tank" }
 	},
 
 	hard =
 	{
-		{ "combat_tank_h", "combat_tank_h", "trike", "trike", "trike" },
+		{ "combat_tank_h", "combat_tank_h", "quad.mg", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_h", "combat_tank_h", "quad", "quad" },
+		{ "combat_tank_h", "combat_tank_h", "trike.rocket", "trike.rocket" },
 		{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "quad", "siege_tank" },
+		{ "quad.mg", "quad.mg", "trike.rocket", "trike.rocket", "siege_tank" },
 		{ "missile_tank", "missile_tank", "missile_tank", "missile_tank" }
 	}
 }
 
 IxianReinforcements =
 {
-	easy = { "deviator", "deviator", "missile_tank", "missile_tank", "missile_tank", "siege_tank", "siege_tank", "combat_tank_o", "combat_tank_o" },
-	normal = { "deviator", "deviator", "missile_tank", "missile_tank", "missile_tank", "siege_tank", "siege_tank", "combat_tank_o" },
-	hard = { "deviator", "deviator", "missile_tank", "missile_tank", "siege_tank", "siege_tank", "combat_tank_o" }
+	easy = { "deviator", "deviator", "missile_tank", "missile_tank", "missile_tank", "siege_tank", "siege_tank", "combat_tank_i", "combat_tank_i" },
+	normal = { "deviator", "deviator", "missile_tank", "missile_tank", "missile_tank", "siege_tank", "siege_tank", "combat_tank_i" },
+	hard = { "deviator", "deviator", "missile_tank", "missile_tank", "siege_tank", "siege_tank", "combat_tank_i" }
 }
 
 EnemyAttackDelay =
@@ -117,7 +117,7 @@ HarkonnenAttackWaves =
 
 InitialReinforcements =
 {
-	Atreides = { "combat_tank_a", "quad", "quad", "trike", "trike" },
+	Atreides = { "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg" },
 	Harkonnen = { "trooper", "trooper", "trooper", "trooper", "trooper", "combat_tank_h" }
 }
 
