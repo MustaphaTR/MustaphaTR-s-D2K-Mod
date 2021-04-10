@@ -75,19 +75,19 @@ Actors:
 	Actor15: light_inf
 		Location: 50,50
 		Owner: Atreides
-	Actor16: quad
+	Actor16: quad.rocket
 		Location: 47,51
 		Owner: Atreides
-	Actor18: trike
+	Actor18: trike.mg
 		Location: 46,53
 		Owner: Atreides
-	Actor19: quad
+	Actor19: quad.rocket
 		Location: 53,53
 		Owner: Atreides
 	Actor21: trooper
 		Location: 50,55
 		Owner: Atreides
-	Actor22: trike
+	Actor22: trike.mg
 		Location: 52,55
 		Owner: Atreides
 	OWindTrap1: wind_trap

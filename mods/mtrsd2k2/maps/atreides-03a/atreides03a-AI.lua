@@ -21,13 +21,13 @@ AttackDelays =
 }
 
 OrdosInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-OrdosVehicleTypes = { "raider", "raider", "quad" }
+OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.mg" }
 
 InitAIUnits = function()
 	IdlingUnits[ordos] = Reinforcements.Reinforce(ordos, InitialOrdosReinforcements, OrdosPaths[2])
 	IdlingUnits[ordos][#IdlingUnits + 1] = OTrooper1
 	IdlingUnits[ordos][#IdlingUnits + 1] = OTrooper2
-	IdlingUnits[ordos][#IdlingUnits + 1] = ORaider
+	IdlingUnits[ordos][#IdlingUnits + 1] = OMGQuad
 
 	DefendAndRepairBase(ordos, OrdosBase, 0.75, AttackGroupSize[Difficulty])
 end
