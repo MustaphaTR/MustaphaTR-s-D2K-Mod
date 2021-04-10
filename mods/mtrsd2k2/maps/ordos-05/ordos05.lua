@@ -9,10 +9,10 @@
 
 Base =
 {
-	AtreidesMainBase = { AConyard, APower1, APower2, APower3, ABarracks1, ARefinery1, ALightFactory, AHeavyFactory, AGunt1, AGunt2, AGunt3, AGunt4, AGunt5 },
-	AtreidesSmallBase1 = { APower4, APower5, ABarracks2, ARefinery2, AGunt6, AGunt7 },
-	AtreidesSmallBase2 = { APower6, APower7, ABarracks3, AGunt8, AGunt9, AGunt10 },
-	AtreidesSmallBase3 = { APower8, APower9, AStarport, AGunt11, AGunt12 }
+	AtreidesMainBase = { AConyard, APower1, APower2, APower3, APower10, ABarracks1, ARefinery1, ALightFactory, AHeavyFactory, AMGun1, AGunt1, AGunt2, AGunt3, AGunt4, AGunt5 },
+	AtreidesSmallBase1 = { APower4, APower5, ABarracks2, ARefinery2, AMGun2, AGunt6, AGunt7 },
+	AtreidesSmallBase2 = { APower6, APower7, ABarracks3, AMGun3, AGunt8, AGunt9, AGunt10 },
+	AtreidesSmallBase3 = { APower8, APower9, AStarport, AMGun4, AGunt11, AGunt12 }
 }
 
 AtreidesReinforcements =
@@ -20,37 +20,37 @@ AtreidesReinforcements =
 	easy =
 	{
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "quad", "trike", "combat_tank_a"},
+		{ "quad.rocket", "trike.mg", "combat_tank_a"},
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper" },
-		{ "combat_tank_a", "combat_tank_a", "quad"  },
-		{ "quad", "quad", "trooper", "quad", "quad", "trooper" },
-		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad", "siege_tank", "missile_tank" },
-		{ "quad", "quad", "quad", "trooper", "trooper", "trooper", "trooper" }
+		{ "combat_tank_a", "combat_tank_a", "quad.rocket"  },
+		{ "quad.rocket", "quad.rocket", "trooper", "quad.rocket", "quad.rocket", "trooper" },
+		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad.rocket", "siege_tank", "missile_tank" },
+		{ "quad.rocket", "quad.rocket", "quad.rocket", "trooper", "trooper", "trooper", "trooper" }
 	},
 
 	normal =
 	{
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "quad", "trike", "trike", "combat_tank_a"},
+		{ "quad.rocket", "trike.mg", "trike.mg", "combat_tank_a"},
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper" },
 		{ "combat_tank_a", "combat_tank_a", "combat_tank_a" },
-		{ "quad", "quad", "quad", "quad", "quad", "quad" },
-		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad", "siege_tank", "missile_tank" },
-		{ "quad", "quad", "quad", "trooper", "trooper", "trooper", "trooper", "trooper" }
+		{ "quad.rocket", "quad.rocket", "quad.rocket", "quad.rocket", "quad.rocket", "quad.rocket" },
+		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad.rocket", "siege_tank", "missile_tank" },
+		{ "quad.rocket", "quad.rocket", "quad.rocket", "trooper", "trooper", "trooper", "trooper", "trooper" }
 	},
 
 	hard =
 	{
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "quad", "quad", "trike", "trike", "combat_tank_a"},
+		{ "quad.rocket", "quad.rocket", "trike.mg", "trike.mg", "combat_tank_a"},
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "trooper", "trooper", "trooper", "trooper", "trooper" },
-		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad" },
-		{ "quad", "quad", "quad", "trooper", "quad", "quad", "quad", "trooper"  },
-		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad", "siege_tank", "siege_tank", "missile_tank" },
-		{ "quad", "quad", "quad", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper" }
+		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad.rocket" },
+		{ "quad.rocket", "quad.rocket", "quad.rocket", "trooper", "quad.rocket", "quad.rocket", "quad.rocket", "trooper"  },
+		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "combat_tank_a", "quad.rocket", "siege_tank", "siege_tank", "missile_tank" },
+		{ "quad.rocket", "quad.rocket", "quad.rocket", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper" }
 	}
 }
 
@@ -72,7 +72,7 @@ AtreidesPaths =
 
 InitialReinforcements =
 {
-	AtreidesMainBase = { "combat_tank_a", "combat_tank_a", "quad", "quad", "trike", "light_inf", "light_inf", "light_inf", "light_inf" },
+	AtreidesMainBase = { "combat_tank_a", "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg", "light_inf", "light_inf", "light_inf", "light_inf" },
 	AtreidesSmallBase1 = { "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf" },
 	AtreidesSmallBase2 = { "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf" }
 }

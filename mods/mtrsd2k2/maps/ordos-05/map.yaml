@@ -39,40 +39,40 @@ Players:
 		Enemies: AtreidesMainBase, AtreidesSmallBase1, AtreidesSmallBase2, AtreidesSmallBase3, Creeps
 	PlayerReference@AtreidesMainBase:
 		Name: AtreidesMainBase
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: AtreidesSmallBase1, AtreidesSmallBase2
 		Enemies: Ordos, Creeps
-		Bot: campaign
 	PlayerReference@AtreidesSmallBase1:
 		Name: AtreidesSmallBase1
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: AtreidesMainBase, AtreidesSmallBase2, AtreidesSmallBase3
 		Enemies: Ordos, Creeps
-		Bot: campaign
 	PlayerReference@AtreidesSmallBase2:
 		Name: AtreidesSmallBase2
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: AtreidesMainBase, AtreidesSmallBase1, AtreidesSmallBase3
 		Enemies: Ordos, Creeps
-		Bot: campaign
 	PlayerReference@AtreidesSmallBase3:
 		Name: AtreidesSmallBase3
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: AtreidesMainBase, AtreidesSmallBase1, AtreidesSmallBase2
 		Enemies: Ordos, Creeps
-		Bot: campaign
 
 Actors:
 	Actor0: wall
@@ -149,9 +149,6 @@ Actors:
 	Actor23: wall
 		Location: 17,12
 		Owner: AtreidesMainBase
-	Actor24: wall
-		Location: 17,13
-		Owner: AtreidesMainBase
 	Actor25: light_inf
 		Location: 4,14
 		Owner: AtreidesMainBase
@@ -207,7 +204,7 @@ Actors:
 	Actor42: carryall
 		Location: 5,20
 		Owner: AtreidesMainBase
-	Actor43: trike
+	Actor43: trike.mg
 		Location: 34,20
 		Owner: AtreidesSmallBase1
 		Facing: 768
@@ -230,7 +227,7 @@ Actors:
 	ABarracks2: barracks
 		Location: 30,23
 		Owner: AtreidesSmallBase1
-	Actor50: trike
+	Actor50: trike.mg
 		Location: 34,23
 		Owner: AtreidesSmallBase1
 		Facing: 768
@@ -279,7 +276,7 @@ Actors:
 	Actor64: wall
 		Location: 33,27
 		Owner: AtreidesSmallBase1
-	Actor65: quad
+	Actor65: quad.rocket
 		Location: 30,28
 		Owner: AtreidesMainBase
 	Actor66: wall
@@ -288,9 +285,6 @@ Actors:
 	Actor67: spicebloom.spawnpoint
 		Location: 21,29
 		Owner: Neutral
-	Actor68: wall
-		Location: 33,29
-		Owner: AtreidesSmallBase1
 	Actor69: spicebloom.spawnpoint
 		Location: 8,32
 		Owner: Neutral
@@ -383,9 +377,6 @@ Actors:
 	Actor98: wall
 		Location: 65,57
 		Owner: AtreidesSmallBase3
-	Actor99: wall
-		Location: 47,58
-		Owner: AtreidesSmallBase2
 	Actor100: wall
 		Location: 63,58
 		Owner: AtreidesSmallBase3
@@ -419,7 +410,7 @@ Actors:
 	Actor110: light_inf
 		Location: 74,71
 		Owner: AtreidesSmallBase3
-	Actor111: trike
+	Actor111: trike.mg
 		Location: 75,71
 		Owner: AtreidesSmallBase3
 	Actor112: wall
@@ -456,9 +447,6 @@ Actors:
 	Actor122: wall
 		Location: 74,74
 		Owner: AtreidesSmallBase3
-	Actor123: wall
-		Location: 69,75
-		Owner: AtreidesSmallBase3
 	Actor124: wall
 		Location: 70,75
 		Owner: AtreidesSmallBase3
@@ -483,10 +471,10 @@ Actors:
 	OTrooper1: trooper
 		Location: 80,77
 		Owner: Ordos
-	ORaider1: raider
+	ORaider1: quad.mg
 		Location: 78,78
 		Owner: Ordos
-	ORaider2: raider
+	ORaider2: quad.mg
 		Location: 79,78
 		Owner: Ordos
 	OCombat1: combat_tank_o
@@ -570,5 +558,23 @@ Actors:
 	AtreidesEntry8: waypoint
 		Owner: Neutral
 		Location: 2,58
+	AMGun4: machine_gun_tower
+		Owner: AtreidesSmallBase3
+		Location: 69,75
+	AMGun3: machine_gun_tower
+		Owner: AtreidesSmallBase3
+		Location: 47,58
+	AMGun2: machine_gun_tower
+		Owner: AtreidesSmallBase3
+		Location: 33,29
+	AMGun1: machine_gun_tower
+		Owner: AtreidesSmallBase3
+		Location: 19,12
+	Actor164: wall
+		Owner: AtreidesSmallBase3
+		Location: 18,12
+	APower10: wind_trap
+		Owner: AtreidesMainBase
+		Location: 12,11
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

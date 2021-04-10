@@ -22,7 +22,7 @@ AttackDelays =
 }
 
 EnemyInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-EnemyVehicleTypes = { "trike", "trike", "quad" }
+EnemyVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 EnemyTankType = { "combat_tank_a" }
 
 InitAIUnits = function(house)
