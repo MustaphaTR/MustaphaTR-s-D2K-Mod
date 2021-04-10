@@ -207,7 +207,6 @@ sietch:
 	-RepairableBuilding:
 	Demolishable:
 		-Condition:
-	ProvidesPrerequisite@buildingname:
 	-WithMakeAnimation:
 	-WithCrumbleOverlay:
 	-WithBuildingRepairDecoration:

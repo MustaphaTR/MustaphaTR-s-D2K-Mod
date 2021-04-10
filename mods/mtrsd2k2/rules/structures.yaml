@@ -678,12 +678,9 @@ high_tech_factory:
 		RequiresCondition: !build-incomplete
 		Queues: Aircraft
 		Sequence: production-welding
-	ProvidesPrerequisite@upgrade:
-		Prerequisite: hightech.atreides
-		Factions: atreides
 	ProvidesPrerequisite@hi_tech_or_ix:
 		Prerequisite: hi_tech_or_ix
-	ProvidesPrerequisite@upgrade:
+	ProvidesPrerequisite@atreides:
 		Prerequisite: hightech.atreides
 		Factions: atreides
 	ProvidesPrerequisite@smuggler:

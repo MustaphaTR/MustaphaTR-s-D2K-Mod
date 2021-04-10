@@ -1,6 +1,6 @@
 MapFormat: 11
 
-RequiresMod: d2k
+RequiresMod: mtrsd2k2
 
 Title: Ordos 06a
 
@@ -575,4 +575,4 @@ Actors:
 		Owner: Neutral
 		Location: 34,2
 
-Rules: d2k|rules/campaign-rules.yaml, d2k|rules/campaign-tooltips.yaml, d2k|rules/campaign-palettes.yaml, rules.yaml
+Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
