@@ -134,6 +134,16 @@
 		Condition: stealth
 		Color: DDDDDD
 
+^EcmDisable:
+	ExternalCondition@ECMDISABLE:
+		Condition: ecmdisable
+	WithColoredOverlay@ECMDISABLE:
+		RequiresCondition: ecmdisable
+		Palette: disabled
+	TimedConditionBar@ECMDISABLE:
+		Condition: ecmdisable
+		Color: DDDDDD
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -207,6 +217,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
+	Inherits@4: ^EcmDisable
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
@@ -217,7 +228,7 @@
 	Mobile:
 		TurnSpeed: 20
 		Locomotor: vehicle
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: notmobile || being-captured || ecmdisable
 	Selectable:
 		Bounds: 32,32
 	Targetable:
@@ -323,6 +334,7 @@
 	WithIdleOverlay@Burns:
 		Image: fire
 		Sequence: 1
+		Palette: d2k
 		IsDecoration: True
 	ChangesHealth:
 		Step: -100

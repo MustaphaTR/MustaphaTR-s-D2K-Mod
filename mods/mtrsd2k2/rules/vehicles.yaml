@@ -35,6 +35,7 @@ trike.mg:
 		LocalOffset: -544,0,0
 		MuzzleSequence: muzzle
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -79,6 +80,7 @@ raider.mg:
 		LocalOffset: 170,0,0
 		MuzzleSequence: muzzle
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -122,6 +124,7 @@ quad.mg:
 		LocalOffset: -544,64,64, -544,-64,64
 		MuzzleSequence: muzzle
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -166,6 +169,7 @@ trike.rocket:
 		Weapon: RocketAA_trike
 		LocalOffset: 180,0,110
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -209,6 +213,7 @@ raider.rocket:
 		Weapon: RocketAA_raider
 		LocalOffset: 170,0,0
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -252,6 +257,7 @@ quad.rocket:
 		Weapon: RocketAA_quad
 		LocalOffset: 128,64,64, 128,-64,64
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -332,6 +338,7 @@ light_tank:
 		LocalOffset: 768,0,90
 		MuzzleSequence: muzzle
 	AttackTurreted:
+		PauseOnCondition: ecmdisable
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 	Explodes:
@@ -463,6 +470,7 @@ harvester.smuggler:
 		LocalOffset: 256,0,0
 		MuzzleSequence: muzzle
 	AttackTurreted:
+		PauseOnCondition: ecmdisable
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 	Explodes:
@@ -613,6 +621,7 @@ siege_tank:
 		LocalOffset: 512,0,320
 		MuzzleSequence: muzzle
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 	Explodes:
@@ -707,6 +716,7 @@ missile_tank:
 		Weapon: mtank_priAA
 		LocalOffset: -128,128,171, -128,-128,171
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	AutoTarget:
 		InitialStanceAI: Defend
 	Explodes:
@@ -751,6 +761,7 @@ sonic_tank:
 		Weapon: Sound
 		LocalOffset: 600,0,427
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	Explodes:
 		Weapon: UnitExplodeLarge
 		EmptyWeapon: UnitExplodeLarge
@@ -803,12 +814,11 @@ stealth_tank:
 	Armament@Ground:
 		Weapon: Rocket.stealth
 		LocalOffset: 213,43,128, 213,-43,128
-		RequiresCondition: !ecmdisable
 	Armament@AA:
 		Weapon: Rocket.stealthAA
 		LocalOffset: 213,43,128, 213,-43,128
-		RequiresCondition: !ecmdisable
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	SpawnActorOnDeath:
 		Actor: stealth_tank.husk
 	-MustBeDestroyed:
@@ -820,6 +830,71 @@ stealth_tank:
 	-TimedConditionBar:
 	AttractsWorms:
 		Intensity: 520
+
+jammer:
+	Inherits: ^Tank
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Jammer
+	Buildable:
+		Queue: Armor
+		BuildPaletteOrder: 80
+		BuildDuration: 562
+		BuildDurationModifier: 100
+		Prerequisites: ~heavy.ixian, research_centre, ~techlevel.6
+		Description: Jams nearby enemy outposts\nand deflects incoming missiles.\nCan detect cloaked units.\nCan disable enemy vehicles.
+	Health:
+		HP: 9000
+	Armor:
+		Type: heavy
+	Mobile:
+		TurnSpeed: 12
+		Speed: 62
+	RevealsShroud:
+		Range: 7c0
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: -256,0,256
+	ProximityExternalCondition@JAMMER:
+		Range: 18c0
+		ValidStances: Enemy, Neutral
+		Condition: jammed
+	WithRangeCircle@JAMMER:
+		Type: jammer
+		Range: 18c0
+		Color: 0000FF80
+	Armament@Anim:
+		Weapon: ECMRay.anim
+		RequiresCondition: end_disable == 0
+	Armament@End:
+		Weapon: ECMRay.end
+		RequiresCondition: end_disable >= 1
+	GrantConditionOnAttack@End:
+		Condition: end_disable
+		RequiredShotsPerInstance: 25
+		MaximumInstances: 1
+		RevokeDelay: 4
+		RevokeAll: true
+		IsCyclic: false
+	AttackFrontal:
+		PauseOnCondition: ecmdisable
+	JamsMissiles:
+		Range: 5c0
+		DeflectionStances: Neutral, Enemy
+	Targetable:
+		TargetTypes: Ground, Jammer, Repair, Vehicle
+	RenderJammerCircle:
+	SpawnActorOnDeath:
+		Actor: jammer.husk
+	DetectCloaked:
+		Range: 7c0
+	Cloak@STEALTH:
+		Palette: racloak
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.1
 
 devastator:
 	Inherits: ^Tank
@@ -856,6 +931,7 @@ devastator:
 		LocalOffset: 640,0,32
 		MuzzleSequence: muzzle
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	WithMuzzleOverlay:
 		IgnoreOffset: true
 	Explodes:
@@ -884,7 +960,7 @@ quake_tank:
 	Tooltip:
 		Name: Quake Tank
 	Health:
-		HP: 550000
+		HP: 55000
 	Armor:
 		Type: heavy
 	Mobile:
@@ -950,6 +1026,7 @@ deviator:
 		Weapon: DeviatorMissile
 		LocalOffset: -299,0,85
 	AttackFrontal:
+		PauseOnCondition: ecmdisable
 	AutoTarget:
 		InitialStanceAI: Defend
 	Explodes:
@@ -982,7 +1059,7 @@ bomb_buggy:
 	Mobile:
 		TurnSpeed: 24
 		Speed: 110
-		PauseOnCondition: !remote
+		PauseOnCondition: notmobile || ecmdisable || !remote
 	GrantConditionOnPrerequisite@Remote:
 		Prerequisites: heavy_factory
 		Condition: remote
@@ -997,6 +1074,7 @@ bomb_buggy:
 		EmptyWeapon: BuggyExplosion
 	AttackFrontal:
 		FacingTolerance: 512
+		PauseOnCondition: ecmdisable
 	Armament@PRIMARY:
 		Weapon: BombBuggyTargeting
 	GrantConditionOnAttack:
@@ -1124,6 +1202,7 @@ ifv:
 		LocalOffset: 575, 0, 175
 		RequiresCondition: ifv-repair
 	AttackTurreted:
+		PauseOnCondition: ecmdisable
 	AutoTarget:
 	Cargo:
 		Types: Infantry

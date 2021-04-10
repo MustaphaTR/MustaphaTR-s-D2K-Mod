@@ -357,7 +357,7 @@ outpost:
 	RevealsShroud:
 		Range: 5c768
 	ProvidesRadar:
-		RequiresCondition: !disabled
+		RequiresCondition: !jammed && !disabled
 	RenderSprites:
 		Image: outpost.ordos
 		FactionImages:
@@ -414,6 +414,8 @@ outpost:
 		Types: Sabotage
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.outpost
+	ExternalCondition@JAMMED:
+		Condition: jammed
 
 light_factory:
 	Inherits: ^Building

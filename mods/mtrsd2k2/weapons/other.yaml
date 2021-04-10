@@ -616,3 +616,41 @@ APMine:
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Structure, Wall
+
+ECMRay.anim:
+	ReloadDelay: 2
+	Range: 5c0
+	ValidTargets: Vehicle, Drone
+	InvaildTargets: Jammer
+	TargetActorCenter: true
+	Projectile: LaserZap
+		Width: 60
+		BeamDuration: 2
+		Color: 00FF0070
+		SecondaryBeam: true
+		SecondaryBeamWidth: 90
+		SecondaryBeamColor: FF000035
+	Warhead@1Dam: TargetDamage
+		ValidTargets: Vehicle, Drone
+		InvaildTargets: Jammer
+
+ECMRay.end:
+	ReloadDelay: 3
+	Range: 5c0
+	ValidTargets: Vehicle, Drone
+	InvaildTargets: Jammer
+	TargetActorCenter: true
+	Projectile: LaserZap
+		Width: 60
+		BeamDuration: 2
+		Color: 00FF0070
+		SecondaryBeam: true
+		SecondaryBeamWidth: 90
+		SecondaryBeamColor: FF000035
+	Warhead@1Dam: TargetDamage
+		ValidTargets: Vehicle, Drone
+		InvaildTargets: Jammer
+	Warhead@2Dis: GrantExternalCondition
+		Range: 0c512
+		Duration: 100
+		Condition: ecmdisable

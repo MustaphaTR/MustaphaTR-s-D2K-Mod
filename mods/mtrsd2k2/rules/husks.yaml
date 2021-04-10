@@ -155,6 +155,22 @@ stealth_tank.husk:
 		PlayerPalette: cncplayer
 		Scale: 1.25
 
+jammer.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 10000
+	Tooltip:
+		Name: Destroyed Jammer
+	ThrowsParticle@spinner:
+		Anim: spinner
+	TransformOnCapture:
+		IntoActor: jammer
+	InfiltrateForTransform:
+		IntoActor: jammer
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.1
+
 devastator.husk:
 	Inherits: ^VehicleHusk
 	Health:

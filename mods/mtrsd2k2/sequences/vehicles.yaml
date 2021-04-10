@@ -375,6 +375,27 @@ stealth_tank.husk:
 		ZOffset: -512
 		UseClassicFacingFudge: True
 
+jammer:
+	idle: jammer.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner: jammer.shp
+		Start: 32
+		Length: 32
+	icon: jammericon.shp
+		Offset: 0,-1
+
+jammer.husk:
+	idle: jammer.shp
+		Facings: 32
+		ZOffset: -512
+		UseClassicFacingFudge: True
+	spinner: jammer.shp
+		Start: 32
+		Facings: 32
+		ZOffset: -512
+		UseClassicFacingFudge: True
+
 devastator:
 	idle: DATA.R8
 		Start: 2083
