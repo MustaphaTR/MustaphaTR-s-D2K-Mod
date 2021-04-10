@@ -22,7 +22,7 @@ AttackDelays =
 }
 
 HarkonnenInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-HarkonnenVehicleTypes = { "trike", "trike", "quad" }
+HarkonnenVehicleTypes = { "quad.mg", "quad.mg", "trike.rocket" }
 
 InitAIUnits = function()
 	IdlingUnits[harkonnen] = Reinforcements.Reinforce(harkonnen, HarkonnenInitialReinforcements, HarkonnenInitialPath)

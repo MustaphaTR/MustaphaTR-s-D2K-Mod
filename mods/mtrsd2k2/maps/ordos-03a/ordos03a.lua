@@ -14,32 +14,32 @@ HarkonnenReinforcements =
 {
 	easy =
 	{
-		{ "light_inf", "trike", "trooper" },
-		{ "light_inf", "trike", "quad" },
-		{ "light_inf", "light_inf", "trooper", "trike", "trike", "quad" }
+		{ "light_inf", "quad.mg", "trooper" },
+		{ "light_inf", "quad.mg", "trike.rocket" },
+		{ "light_inf", "light_inf", "trooper", "quad.mg", "quad.mg", "trike.rocket" }
 	},
 
 	normal =
 	{
-		{ "light_inf", "trike", "trooper" },
-		{ "light_inf", "trike", "trike" },
-		{ "light_inf", "light_inf", "trooper", "trike", "trike", "quad" },
+		{ "light_inf", "quad.mg", "trooper" },
+		{ "light_inf", "quad.mg", "quad.mg" },
+		{ "light_inf", "light_inf", "trooper", "quad.mg", "quad.mg", "trike.rocket" },
 		{ "light_inf", "light_inf", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "trike", "quad", "quad" }
+		{ "light_inf", "quad.mg", "trike.rocket", "trike.rocket" }
 	},
 
 	hard =
 	{
-		{ "trike", "trike", "quad" },
-		{ "light_inf", "trike", "trike" },
-		{ "trooper", "trooper", "light_inf", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
+		{ "quad.mg", "quad.mg", "trike.rocket" },
+		{ "light_inf", "quad.mg", "quad.mg" },
+		{ "trooper", "trooper", "light_inf", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "trooper", "trooper" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike" },
-		{ "light_inf", "light_inf", "light_inf", "trike", "trike" },
-		{ "light_inf", "trike", "light_inf", "trooper", "trooper", "quad" },
-		{ "trike", "trike", "quad", "quad", "quad", "trike" }
+		{ "quad.mg", "quad.mg", "trike.rocket", "trike.rocket", "trike.rocket", "quad.mg" },
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
+		{ "light_inf", "quad.mg", "light_inf", "trooper", "trooper", "trike.rocket" },
+		{ "quad.mg", "quad.mg", "trike.rocket", "trike.rocket", "trike.rocket", "quad.mg" }
 	}
 }
 
@@ -64,13 +64,13 @@ HarkonnenPaths =
 	{ HarkonnenEntry3.Location, HarkonnenRally3.Location }
 }
 
-HarkonnenHunters = { "light_inf", "light_inf", "trike", "quad" }
-HarkonnenInitialReinforcements = { "light_inf", "light_inf", "quad", "quad", "trike", "trike", "trooper", "trooper" }
+HarkonnenHunters = { "light_inf", "light_inf", "quad.mg", "trike.rocket" }
+HarkonnenInitialReinforcements = { "light_inf", "light_inf", "trike.rocket", "trike.rocket", "quad.mg", "quad.mg", "trooper", "trooper" }
 
 HarkonnenHunterPath = { HarkonnenEntry5.Location, HarkonnenRally5.Location }
 HarkonnenInitialPath = { HarkonnenEntry4.Location, HarkonnenRally4.Location }
 
-OrdosReinforcements = { "quad", "raider" }
+OrdosReinforcements = { "raider.rocket", "quad.mg" }
 OrdosPath = { OrdosEntry.Location, OrdosRally.Location }
 
 OrdosBaseBuildings = { "barracks", "light_factory" }

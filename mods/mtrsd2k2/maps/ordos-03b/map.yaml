@@ -59,10 +59,10 @@ Actors:
 	Actor3: trooper
 		Location: 30,10
 		Owner: Ordos
-	Actor4: quad
+	Actor4: raider.rocket
 		Location: 31,10
 		Owner: Ordos
-	Actor5: quad
+	Actor5: raider.rocket
 		Location: 38,11
 		Owner: Ordos
 	Actor6: spicebloom.spawnpoint
@@ -77,7 +77,7 @@ Actors:
 	Actor9: light_inf
 		Location: 31,13
 		Owner: Ordos
-	Actor10: raider
+	Actor10: quad.mg
 		Location: 35,13
 		Owner: Ordos
 	Actor11: spicebloom.spawnpoint

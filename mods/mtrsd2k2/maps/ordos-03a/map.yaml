@@ -53,7 +53,7 @@ Actors:
 	Actor1: trooper
 		Location: 50,38
 		Owner: Ordos
-	Actor2: raider
+	Actor2: quad.mg
 		Location: 44,41
 		Owner: Ordos
 	OConyard: construction_yard
@@ -62,16 +62,16 @@ Actors:
 	Actor4: light_inf
 		Location: 51,42
 		Owner: Ordos
-	Actor5: quad
+	Actor5: raider.rocket
 		Location: 46,44
 		Owner: Ordos
 	Actor6: wormspawner
 		Location: 26,46
 		Owner: Creeps
-	Actor7: trike
+	Actor7: quad.mg
 		Location: 11,48
 		Owner: Harkonnen
-	Actor8: quad
+	Actor8: trike.rocket
 		Location: 3,49
 		Owner: Harkonnen
 	HRefinery: refinery
