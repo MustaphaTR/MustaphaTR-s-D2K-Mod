@@ -7,18 +7,18 @@
    information, see COPYING.
 ]]
 
-AtreidesMainBase = { AConYard1, AOutpost1, APalace, ARefinery1, ARefinery2, ARefinery3, AHeavyFactory1, ALightFactory1, AStarport, AHiTechFactory, AResearch, AGunt1, AGunt2, AGunt3, AGunt4, AGunt5, ARock1, ARock2, ARock3, ARock4, ABarracks1, ABarracks2, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9, APower10, APower11, APower12, APower13, APower14 }
+AtreidesMainBase = { AConYard1, AOutpost1, APalace, ARefinery1, ARefinery2, ARefinery3, AHeavyFactory1, ALightFactory1, AStarport, AHiTechFactory, AResearch, AMGun1, AGunt1, AGunt2, AGunt3, AGunt4, AGunt5, ARock1, ARock2, ARock3, ARock4, ABarracks1, ABarracks2, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9, APower10, APower11, APower12, APower13, APower14 }
 AtreidesSmall1Base = { AConYard2, ARefinery4, ABarracks3, AHeavyFactory2, ALightFactory2, ARepair, ARock5, ARock6, ARock7, ARock8, ARock9, APower15, APower16, APower17, APower18, APower19, APower20 }
-AtreidesSmall2Base = { AOutpost2, ABarracks3, AGunt6, AGunt7, AGunt8, ARock10, APower21, APower22 }
-CorrinoMainBase = { COutpost, CPalace, CRefinery1, CHeavyFactory1, CLightFactory1, CStarport, CResearch, CGunt1, CGunt2, CRock1, CRock2, CBarracks1, CPower1, CPower2, CPower3, CPower4, CPower5, CPower6, CPower7 }
-CorrinoSmallBase = { CConYard, CRefinery2, CHeavyFactory2, CLightFactory2, CRock3, CRock4, CBarracks2, CPower8, CPower9, CPower10, CPower11 }
+AtreidesSmall2Base = { AOutpost2, ABarracks3, AMGun2, AGunt6, AGunt7, AGunt8, ARock10, APower21, APower22 }
+CorrinoMainBase = { COutpost, CPalace, CRefinery1, CHeavyFactory1, CLightFactory1, CStarport, CResearch, CFTur1, CGunt1, CGunt2, CRock1, CRock2, CBarracks1, CPower1, CPower2, CPower3, CPower4, CPower5, CPower6, CPower7 }
+CorrinoSmallBase = { CConYard, CRefinery2, CHeavyFactory2, CLightFactory2, CFTur2, CFTur3, CRock3, CRock4, CBarracks2, CPower8, CPower9, CPower10, CPower11 }
 
 AtreidesReinforcements =
 {
 	easy =
 	{
 		{ "missile_tank", "trooper", "light_inf", "light_inf" },
-		{ "quad", "light_inf", "combat_tank_a"},
+		{ "quad.rocket", "light_inf", "combat_tank_a"},
 		{ "light_inf", "trooper", "missile_tank" },
 		{ "light_inf", "light_inf", "siege_tank" }
 	},
@@ -26,20 +26,20 @@ AtreidesReinforcements =
 	normal =
 	{
 		{ "missile_tank", "trooper", "trooper", "light_inf", "light_inf" },
-		{ "quad", "trike", "combat_tank_a"},
+		{ "quad.rocket", "trike.mg", "combat_tank_a"},
 		{ "trooper", "trooper", "missile_tank" },
 		{ "light_inf", "light_inf", "light_inf", "siege_tank" },
-		{ "combat_tank_a", "trike", "trike", "fremen" }
+		{ "combat_tank_a", "trike.mg", "trike.mg", "fremen" }
 	},
 
 	hard =
 	{
 		{ "missile_tank", "trooper", "trooper", "trooper", "light_inf", "light_inf" },
-		{ "quad", "trike", "light_inf", "combat_tank_a"},
+		{ "quad.rocket", "trike.mg", "light_inf", "combat_tank_a"},
 		{ "light_inf", "trooper", "trooper", "missile_tank" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "siege_tank" },
-		{ "combat_tank_a", "trike", "trike", "fremen", "fremen" },
-		{ "sonic_tank", "combat_tank_a", "combat_tank_a", "quad" }
+		{ "combat_tank_a", "trike.mg", "trike.mg", "fremen", "fremen" },
+		{ "sonic_tank", "combat_tank_a", "combat_tank_a", "quad.rocket" }
 	}
 }
 
@@ -99,13 +99,13 @@ InitialAtreidesReinforcements =
 {
 	{ "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 	{ "trooper", "trooper", "trooper", "combat_tank_a", "combat_tank_a" },
-	{ "combat_tank_a", "combat_tank_a", "quad", "quad", "trike" },
+	{ "combat_tank_a", "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg" },
 	{ "trooper", "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 	{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "combat_tank_a", "combat_tank_a" },
-	{ "combat_tank_a", "quad", "quad", "trike", "trike", "trike" }
+	{ "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg", "trike.mg" }
 }
 
-InitialCorrinoReinforcements = { "trooper", "trooper", "trooper", "trooper", "quad", "quad" }
+InitialCorrinoReinforcements = { "trooper", "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" }
 
 AtreidesPaths =
 {
@@ -171,6 +171,7 @@ SendAirStrike = function()
 		return
 			actor.HasProperty("Sell") and
 			actor.Type ~= "wall" and
+			actor.Type ~= "flame_tower" and
 			actor.Type ~= "medium_gun_turret" and
 			actor.Type ~= "large_gun_turret" and
 			actor.Type ~= "silo" and

@@ -37,76 +37,76 @@ Players:
 		Enemies: Atreides Main Base, Atreides Small Base, Corrino Main Base, Corrino Small Base, Smugglers - Enemy to Harkonnen, Smugglers - Enemy to Both, Creeps
 	PlayerReference@Atreides Main Base:
 		Name: Atreides Main Base
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Small Base, Corrino Main Base, Corrino Small Base
 		Enemies: Harkonnen, Smugglers - Enemy to AI, Smugglers - Enemy to Both, Creeps
-		Bot: campaign
 	PlayerReference@Atreides Small Base:
 		Name: Atreides Small Base
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Main Base, Corrino Main Base, Corrino Small Base
 		Enemies: Harkonnen, Smugglers - Enemy to AI, Smugglers - Enemy to Both, Creeps
-		Bot: campaign
 	PlayerReference@Corrino Main Base:
 		Name: Corrino Main Base
+		Bot: campaign
 		LockFaction: True
 		Faction: corrino
 		LockColor: True
 		Color: 7D00FE
 		Allies: Atreides Main Base, Atreides Small Base, Corrino Small Base
 		Enemies: Harkonnen, Smugglers - Enemy to AI, Smugglers - Enemy to Both, Creeps
-		Bot: campaign
 	PlayerReference@Corrino Small Base:
 		Name: Corrino Small Base
+		Bot: campaign
 		LockFaction: True
 		Faction: corrino
 		LockColor: True
 		Color: 7D00FE
 		Allies: Atreides Main Base, Atreides Small Base, Corrino Main Base
 		Enemies: Harkonnen, Smugglers - Enemy to AI, Smugglers - Enemy to Both, Creeps
-		Bot: campaign
 	PlayerReference@Smugglers - Neutral:
 		Name: Smugglers - Neutral
+		Bot: campaign
 		NonCombatant: True
 		LockFaction: True
 		Faction: smuggler
 		LockColor: True
 		Color: 542209
-		Bot: campaign
 		Enemies: Creeps
 	PlayerReference@Smugglers - Enemy to Harkonnen:
 		Name: Smugglers - Enemy to Harkonnen
+		Bot: campaign
 		NonCombatant: True
 		LockFaction: True
 		Faction: smuggler
 		LockColor: True
 		Color: 542209
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Smugglers - Enemy to AI:
 		Name: Smugglers - Enemy to AI
+		Bot: campaign
 		NonCombatant: True
 		LockFaction: True
 		Faction: smuggler
 		LockColor: True
 		Color: 542209
 		Enemies: Atreides Main Base, Atreides Small Base, Corrino Main Base, Corrino Small Base, Creeps
-		Bot: campaign
 	PlayerReference@Smugglers - Enemy to Both:
 		Name: Smugglers - Enemy to Both
+		Bot: campaign
 		NonCombatant: True
 		LockFaction: True
 		Faction: smuggler
 		LockColor: True
 		Color: 542209
 		Enemies: Harkonnen, Atreides Main Base, Atreides Small Base, Corrino Main Base, Corrino Small Base, Creeps
-		Bot: campaign
 
 Actors:
 	Actor0: trooper
@@ -211,9 +211,6 @@ Actors:
 	Actor33: wall
 		Location: 107,9
 		Owner: Atreides Small Base
-	Actor34: wall
-		Location: 107,10
-		Owner: Atreides Small Base
 	Actor35: wall
 		Location: 108,10
 		Owner: Atreides Small Base
@@ -226,7 +223,7 @@ Actors:
 	AGunt1: medium_gun_turret
 		Location: 111,10
 		Owner: Atreides Small Base
-	Actor39: trike
+	Actor39: quad.mg
 		Location: 3,11
 		Owner: Harkonnen
 	Actor40: trooper
@@ -403,9 +400,6 @@ Actors:
 	CBarracks3: barracks
 		Location: 38,40
 		Owner: Corrino Small Base
-	Actor98: wall
-		Location: 57,40
-		Owner: Corrino Main Base
 	CPower1: wind_trap
 		Location: 83,40
 		Owner: Corrino Main Base
@@ -640,6 +634,7 @@ Actors:
 	CGunt6: medium_gun_turret
 		Location: 88,56
 		Owner: Corrino Main Base
+		TurretFacing: 512
 	Actor177: wall
 		Location: 83,57
 		Owner: Corrino Main Base
@@ -1005,5 +1000,14 @@ Actors:
 	CPower8: wind_trap
 		Owner: Corrino Main Base
 		Location: 90,48
+	CFTur1: flame_tower
+		Owner: Corrino Main Base
+		Location: 57,40
+	CFTur2: flame_tower
+		Owner: Corrino Small Base
+		Location: 35,48
+	AMGun: machine_gun_tower
+		Owner: Atreides Small Base
+		Location: 107,10
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

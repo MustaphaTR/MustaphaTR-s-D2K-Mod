@@ -26,10 +26,12 @@ EnemyInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper"
 OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.rocket" }
 OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank", "missile_tank", "deviator" }
 OrdosStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_o.starport", "combat_tank_o.starport", "siege_tank.starport", "missile_tank.starport" }
+OrdosAircraftTypes = { "swarmer" }
 
 AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 AtreidesTankTypes = { "combat_tank_a", "combat_tank_a", "siege_tank" }
 AtreidesStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
+AtreidesAircraftTypes = { "ornithopter.controllable" }
 
 MercenaryTankTypes = { "combat_tank_m", "combat_tank_m", "siege_tank" }
 
@@ -53,17 +55,21 @@ ActivateAI = function()
 	local tanksToBuildMercenary = function() return { Utils.Random(MercenaryTankTypes) } end
 	local unitsToBuyOrdos = function() return { Utils.Random(OrdosStarportTypes) } end
 	local unitsToBuyAtreides = function() return { Utils.Random(AtreidesStarportTypes) } end
+	local aircraftToBuildOrdos = function() return { Utils.Random(OrdosAircraftTypes) } end
+	local aircraftToBuildAtreides = function() return { Utils.Random(AtreidesAircraftTypes) } end
 	local attackThresholdSize = AttackGroupSize[Difficulty] * 2.5
 
 	ProduceUnits(ordos, OBarracks1, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(ordos, OLightFactory, delay, vehilcesToBuildOrdos, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(ordos, OHeavyFactory, delay, tanksToBuildOrdos, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(ordos, OStarport, delay, unitsToBuyOrdos, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(ordos, OHiTechFactory, delay, aircraftToBuildOrdos, AttackGroupSize[Difficulty], attackThresholdSize)
 
 	ProduceUnits(atreides_enemy, ABarracks1, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_enemy, ALightFactory, delay, vehilcesToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_enemy, AHeavyFactory, delay, tanksToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_enemy, AStarport, delay, unitsToBuyAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(atreides_enemy, AHiTechFactory, delay, aircraftToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 
 	ProduceUnits(mercenary_enemy, MHeavyFactory, delay, tanksToBuildMercenary, AttackGroupSize[Difficulty], attackThresholdSize)
 end

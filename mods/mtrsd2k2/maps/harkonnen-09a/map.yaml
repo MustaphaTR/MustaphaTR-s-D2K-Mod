@@ -37,49 +37,49 @@ Players:
 		Enemies: Atreides Main Base, Atreides Small Base 1, Atreides Small Base 2, Corrino Main Base, Corrino Small Base, Creeps
 	PlayerReference@Atreides Main Base:
 		Name: Atreides Main Base
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Small Base 1, Atreides Small Base 2, Corrino Main Base, Corrino Small Base
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Atreides Small Base 1:
 		Name: Atreides Small Base 1
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Main Base, Atreides Small Base 2, Corrino Main Base, Corrino Small Base
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Atreides Small Base 2:
 		Name: Atreides Small Base 2
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Main Base, Atreides Small Base 1, Corrino Main Base, Corrino Small Base
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Corrino Main Base:
 		Name: Corrino Main Base
+		Bot: campaign
 		LockFaction: True
 		Faction: corrino
 		LockColor: True
 		Color: 7D00FE
 		Allies: Atreides Main Base, Atreides Small Base 1, Atreides Small Base 2, Corrino Small Base
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Corrino Small Base:
 		Name: Corrino Small Base
+		Bot: campaign
 		LockFaction: True
 		Faction: corrino
 		LockColor: True
 		Color: 7D00FE
 		Allies: Atreides Main Base, Atreides Small Base 1, Atreides Small Base 2, Corrino Main Base
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 
 Actors:
 	Actor0: combat_tank_a
@@ -199,9 +199,6 @@ Actors:
 	Actor38: wall
 		Location: 55,9
 		Owner: Atreides Main Base
-	Actor39: wall
-		Location: 17,10
-		Owner: Corrino Main Base
 	Actor40: wall
 		Location: 18,10
 		Owner: Corrino Main Base
@@ -243,9 +240,6 @@ Actors:
 		Owner: Atreides Main Base
 	Actor53: wall
 		Location: 29,11
-		Owner: Atreides Main Base
-	Actor54: wall
-		Location: 30,11
 		Owner: Atreides Main Base
 	Actor55: wall
 		Location: 31,11
@@ -289,6 +283,7 @@ Actors:
 	CRock1: large_gun_turret
 		Location: 21,13
 		Owner: Corrino Main Base
+		TurretFacing: 512
 	Actor69: wall
 		Location: 30,13
 		Owner: Atreides Main Base
@@ -331,6 +326,7 @@ Actors:
 	CGunt1: medium_gun_turret
 		Location: 20,15
 		Owner: Corrino Main Base
+		TurretFacing: 512
 	Actor83: wall
 		Location: 30,15
 		Owner: Atreides Main Base
@@ -616,9 +612,6 @@ Actors:
 	Actor177: wall
 		Location: 22,31
 		Owner: Atreides Small Base 2
-	Actor178: wall
-		Location: 81,31
-		Owner: Corrino Small Base
 	AGunt7: medium_gun_turret
 		Location: 21,32
 		Owner: Atreides Small Base 2
@@ -670,9 +663,6 @@ Actors:
 	Actor195: wall
 		Location: 86,34
 		Owner: Corrino Small Base
-	Actor196: wall
-		Location: 87,34
-		Owner: Corrino Small Base
 	Actor197: wall
 		Location: 29,35
 		Owner: Atreides Small Base 2
@@ -705,9 +695,6 @@ Actors:
 		Owner: Atreides Small Base 2
 	Actor207: wall
 		Location: 28,37
-		Owner: Atreides Small Base 2
-	Actor208: wall
-		Location: 29,37
 		Owner: Atreides Small Base 2
 	Actor209: spicebloom.spawnpoint
 		Location: 39,37
@@ -753,9 +740,6 @@ Actors:
 		Owner: Corrino Small Base
 	CLightFactory2: light_factory
 		Location: 92,41
-		Owner: Corrino Small Base
-	Actor224: wall
-		Location: 83,42
 		Owner: Corrino Small Base
 	Actor225: spicebloom.spawnpoint
 		Location: 5,44
@@ -907,7 +891,7 @@ Actors:
 	Actor274: missile_tank
 		Location: 81,77
 		Owner: Harkonnen
-	Actor275: trike
+	Actor275: quad.mg
 		Location: 76,78
 		Owner: Harkonnen
 	Actor276: siege_tank
@@ -1042,5 +1026,23 @@ Actors:
 	CorrinoStarportExit: waypoint
 		Owner: Neutral
 		Location: 2,13
+	AMGun2: machine_gun_tower
+		Owner: Atreides Small Base 2
+		Location: 29,37
+	AMGun1: machine_gun_tower
+		Owner: Atreides Main Base
+		Location: 30,11
+	CFTur1: flame_tower
+		Owner: Corrino Main Base
+		Location: 17,10
+	Actor196: wall
+		Location: 87,34
+		Owner: Corrino Small Base
+	CFTur3: flame_tower
+		Owner: Corrino Small Base
+		Location: 83,42
+	CFTur2: flame_tower
+		Owner: Corrino Small Base
+		Location: 81,31
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

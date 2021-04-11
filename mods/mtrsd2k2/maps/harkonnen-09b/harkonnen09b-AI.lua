@@ -22,15 +22,17 @@ AttackDelays =
 }
 
 EnemyInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-EnemyVehicleTypes = { "trike", "trike", "quad" }
+EnemyVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 
 AtreidesMainTankTypes = { "combat_tank_a", "combat_tank_a", "siege_tank", "missile_tank", "sonic_tank" }
 AtreidesSmallTankTypes = { "combat_tank_a", "combat_tank_a", "siege_tank" }
-AtreidesStarportTypes = { "trike.starport", "trike.starport", "quad.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
+AtreidesStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
+AtreidesAircraftTypes = { "ornithopter.controllable" }
 
 CorrinoMainInfantryTypes = { "light_inf", "light_inf", "trooper", "sardaukar" }
-CorrinoTankTypes = { "combat_tank_h", "combat_tank_h", "siege_tank", "missile_tank" }
-CorrinoStarportTypes = { "trike.starport", "trike.starport", "quad.starport", "combat_tank_h.starport", "combat_tank_h.starport", "siege_tank.starport", "missile_tank.starport" }
+CorrinoTankTypes = { "combat_tank_c", "combat_tank_c", "siege_tank", "missile_tank" }
+CorrinoStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_c.starport", "combat_tank_c.starport", "siege_tank.starport", "missile_tank.starport" }
+CorrinoAircraftTypes = { "phoenix" }
 
 ActivateAI = function()
 	IdlingUnits[atreides_main] = Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[2], InitialAtreidesPaths[2])
@@ -52,12 +54,15 @@ ActivateAI = function()
 	local tanksToBuildCorrino = function() return { Utils.Random(CorrinoTankTypes) } end
 	local unitsToBuyAtreides = function() return { Utils.Random(AtreidesStarportTypes) } end
 	local unitsToBuyCorrino = function() return { Utils.Random(CorrinoStarportTypes) } end
+	local aircraftToBuildAtreides = function() return { Utils.Random(AtreidesAircraftTypes) } end
+	local aircraftToBuildCorrino = function() return { Utils.Random(CorrinoAircraftTypes) } end
 	local attackThresholdSize = AttackGroupSize[Difficulty] * 2.5
 
 	ProduceUnits(atreides_main, ABarracks1, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_main, ALightFactory1, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_main, AHeavyFactory1, delay, tanksToBuildAtreidesMain, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_main, AStarport1, delay, unitsToBuyAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(atreides_main, AHiTechFactory, delay, aircraftToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 
 	ProduceUnits(atreides_small, ABarracks3, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(atreides_small, ALightFactory2, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
@@ -66,6 +71,7 @@ ActivateAI = function()
 
 	ProduceUnits(corrino_main, CBarracks1, delay, infantryToBuildCorrinoMain, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(corrino_main, CHeavyFactory, delay, tanksToBuildCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(corrino_main, CHiTechFactory, delay, aircraftToBuildCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
 
 	ProduceUnits(corrino_small, CBarracks3, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(corrino_small, CLightFactory, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
