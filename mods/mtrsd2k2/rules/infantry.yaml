@@ -468,6 +468,7 @@ fedaykin:
 
 rocketeer:
 	Inherits: ^Infantry
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	HiddenUnderFog:
 		Type: CenterPosition
 	Buildable:
