@@ -22,7 +22,7 @@ AttackDelays =
 }
 
 AtreidesInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper" }
-AtreidesVehicleTypes = { "trike", "trike", "quad" }
+AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 AtreidesTankType = { "combat_tank_a" }
 
 ActivateAI = function()

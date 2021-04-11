@@ -79,7 +79,7 @@ Actors:
 	Actor7: wall
 		Location: 59,14
 		Owner: Fremen
-	FGunt1: medium_gun_turret
+	FGunt1: medium_gun_turret.not_powered
 		Location: 61,14
 		Owner: Fremen
 	Actor9: wall
@@ -274,9 +274,6 @@ Actors:
 	Actor72: wall
 		Location: 20,82
 		Owner: Fremen
-	Actor73: wall
-		Location: 21,82
-		Owner: Fremen
 	Actor74: fremen
 		Location: 19,83
 		Owner: Fremen
@@ -295,9 +292,10 @@ Actors:
 	Actor79: wall
 		Location: 20,86
 		Owner: Fremen
-	FGunt2: medium_gun_turret
+	FGunt2: medium_gun_turret.not_powered
 		Location: 21,86
 		Owner: Fremen
+		TurretFacing: 512
 	Actor81: fremen
 		Location: 14,87
 		Owner: Fremen
@@ -376,5 +374,44 @@ Actors:
 	AtreidesEntry3: waypoint
 		Owner: Neutral
 		Location: 22,91
+	FMGun1: machine_gun_tower
+		Owner: Fremen
+		Location: 61,16
+	Actor108: wall
+		Owner: Fremen
+		Location: 60,16
+	Actor109: wall
+		Owner: Fremen
+		Location: 60,17
+	Actor110: wall
+		Owner: Fremen
+		Location: 61,17
+	Actor111: wall
+		Owner: Fremen
+		Location: 62,17
+	Actor112: wall
+		Owner: Fremen
+		Location: 62,16
+	Actor113: wall
+		Owner: Atreides
+		Location: 25,76
+	Actor114: wall
+		Owner: Atreides
+		Location: 27,76
+	AMGun1: machine_gun_tower
+		Owner: Atreides
+		Location: 26,76
+	Actor116: wall
+		Owner: Atreides
+		Location: 47,72
+	Actor117: wall
+		Owner: Atreides
+		Location: 48,73
+	AMGun2: machine_gun_tower
+		Owner: Atreides
+		Location: 48,72
+	FMGun2: machine_gun_tower
+		Owner: Fremen
+		Location: 21,82
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

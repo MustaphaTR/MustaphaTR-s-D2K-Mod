@@ -7,8 +7,8 @@
    information, see COPYING.
 ]]
 
-AtreidesBase = { AConyard, AOutpost, ARefinery, AHeavyFactory, ALightFactory, AGunt1, AGunt2, ABarracks, ASilo, APower1, APower2, APower3, APower4, APower5, APower6 }
-FremenBase = { FGunt1, FGunt2 }
+AtreidesBase = { AConyard, AOutpost, ARefinery, AHeavyFactory, ALightFactory, AMGun1, AMGun2, AGunt1, AGunt2, ABarracks, ASilo, APower1, APower2, APower3, APower4, APower5, APower6 }
+FremenBase = { FMGun1, FMGun2, FGunt1, FGunt2 }
 
 BaseAreaTriggers =
 {
@@ -23,35 +23,35 @@ FremenReinforcements =
 {
 	easy =
 	{
-		{ "combat_tank_a", "combat_tank_a" },
+		{ "combat_tank_f", "combat_tank_f" },
 		{ "trooper", "trooper", "trooper" },
-		{ "combat_tank_a", "combat_tank_a" },
-		{ "combat_tank_a", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_a", "trike", "trike", "quad", "trooper", "nsfremen" }
+		{ "combat_tank_f", "combat_tank_f" },
+		{ "combat_tank_f", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_f", "raider.mg", "raider.mg", "trike.rocket", "trooper", "nsfremen" }
 	},
 
 	normal =
 	{
-		{ "combat_tank_a", "combat_tank_a" },
+		{ "combat_tank_f", "combat_tank_f" },
 		{ "trooper", "trooper", "trooper" },
-		{ "combat_tank_a", "combat_tank_a" },
-		{ "combat_tank_a", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_a", "trike", "trike", "quad", "trooper", "nsfremen" },
-		{ "combat_tank_a", "trike", "combat_tank_a", "quad", "nsfremen", "nsfremen" },
+		{ "combat_tank_f", "combat_tank_f" },
+		{ "combat_tank_f", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_f", "raider.mg", "raider.mg", "trike.rocket", "trooper", "nsfremen" },
+		{ "combat_tank_f", "raider.mg", "combat_tank_f", "trike.rocket", "nsfremen", "nsfremen" },
 		{ "fremen", "fremen", "fremen", "fremen", "trooper", "trooper", "trooper", "trooper" }
 	},
 
 	hard =
 	{
-		{ "combat_tank_a", "combat_tank_a" },
+		{ "combat_tank_f", "combat_tank_f" },
 		{ "trooper", "trooper", "trooper" },
-		{ "combat_tank_a", "combat_tank_a" },
-		{ "combat_tank_a", "light_inf", "light_inf", "trooper", "trooper" },
-		{ "combat_tank_a", "trike", "trike", "quad", "trooper", "nsfremen" },
-		{ "combat_tank_a", "trike", "combat_tank_a", "quad", "nsfremen", "nsfremen" },
+		{ "combat_tank_f", "combat_tank_f" },
+		{ "combat_tank_f", "light_inf", "light_inf", "trooper", "trooper" },
+		{ "combat_tank_f", "raider.mg", "raider.mg", "trike.rocket", "trooper", "nsfremen" },
+		{ "combat_tank_f", "raider.mg", "combat_tank_f", "trike.rocket", "nsfremen", "nsfremen" },
 		{ "fremen", "fremen", "fremen", "fremen", "trooper", "trooper", "trooper", "trooper" },
-		{ "combat_tank_a", "combat_tank_a", "combat_tank_a", "combat_tank_a", "missile_tank" },
-		{ "combat_tank_a", "combat_tank_a", "quad", "quad", "trike", "trike", "trooper", "trooper", "light_inf", "light_inf" }
+		{ "combat_tank_f", "combat_tank_f", "combat_tank_f", "combat_tank_f", "missile_tank" },
+		{ "combat_tank_f", "combat_tank_f", "trike.rocket", "trike.rocket", "raider.mg", "raider.mg", "trooper", "trooper", "light_inf", "light_inf" }
 	}
 }
 
@@ -74,14 +74,14 @@ AtreidesHunters = { "trooper", "trooper", "trooper", "trooper", "trooper", "troo
 FremenHunters =
 {
 	{ "fremen", "fremen", "fremen" },
-	{ "combat_tank_a", "combat_tank_a", "combat_tank_a" },
+	{ "combat_tank_f", "combat_tank_f", "combat_tank_f" },
 	{ "missile_tank", "missile_tank", "missile_tank" }
 }
 
 InitialAtreidesReinforcements =
 {
 	{ "trooper", "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf" },
-	{ "combat_tank_a", "combat_tank_a", "quad", "trike" }
+	{ "combat_tank_a", "combat_tank_a", "quad.rocket", "trike.mg" }
 }
 
 AtreidesPaths =
