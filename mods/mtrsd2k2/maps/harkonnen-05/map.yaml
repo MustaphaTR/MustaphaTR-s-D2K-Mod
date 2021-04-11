@@ -73,9 +73,6 @@ Actors:
 	Actor2: wall
 		Location: 71,10
 		Owner: Ordos Main Base
-	Actor3: wall
-		Location: 64,11
-		Owner: Ordos Main Base
 	Actor4: wall
 		Location: 65,11
 		Owner: Ordos Main Base
@@ -94,6 +91,7 @@ Actors:
 	OGunt1: medium_gun_turret
 		Location: 59,13
 		Owner: Ordos Main Base
+		TurretFacing: 512
 	CSardaukar1: sardaukar
 		Location: 69,13
 		Owner: Corrino
@@ -514,5 +512,9 @@ Actors:
 	HarkonnenEntry2: waypoint
 		Owner: Neutral
 		Location: 2,29
+	Actor149: artillery_platform
+		Owner: Ordos Main Base
+		Location: 64,11
+		TurretFacing: 258
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

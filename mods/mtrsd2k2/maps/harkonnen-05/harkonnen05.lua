@@ -24,9 +24,9 @@ OrdosReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_o", "quad" },
-		{ "combat_tank_o", "raider", "light_inf", "light_inf" },
-		{ "siege_tank", "combat_tank_o", "quad" }
+		{ "combat_tank_o", "raider.rocket" },
+		{ "combat_tank_o", "quad.mg", "light_inf", "light_inf" },
+		{ "siege_tank", "combat_tank_o", "raider.rocket" }
 	},
 
 	normal =
@@ -35,8 +35,8 @@ OrdosReinforcements =
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "combat_tank_o", "combat_tank_o" },
-		{ "combat_tank_o", "raider", "raider", "light_inf" },
-		{ "siege_tank", "combat_tank_o", "quad", "quad" },
+		{ "combat_tank_o", "quad.mg", "quad.mg", "light_inf" },
+		{ "siege_tank", "combat_tank_o", "raider.rocket", "raider.rocket" },
 		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o" }
 	},
 
@@ -45,19 +45,19 @@ OrdosReinforcements =
 		{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_o", "combat_tank_o", "quad" },
-		{ "combat_tank_o", "raider", "raider", "raider" },
-		{ "siege_tank", "combat_tank_o", "combat_tank_o", "quad" },
+		{ "combat_tank_o", "combat_tank_o", "raider.rocket" },
+		{ "combat_tank_o", "quad.mg", "quad.mg", "quad.mg" },
+		{ "siege_tank", "combat_tank_o", "combat_tank_o", "raider.rocket" },
 		{ "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o", "combat_tank_o" },
-		{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "quad", "quad", "raider" }
+		{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "raider.rocket", "raider.rocket", "quad.mg" }
 	}
 }
 
 CorrinoStarportReinforcements =
 {
-	easy = { "trooper", "trooper", "quad", "quad", "trike", "trike", "missile_tank", "missile_tank" },
-	normal = { "trooper", "trooper", "trooper", "quad", "quad", "trike", "trike", "missile_tank", "missile_tank" },
-	hard = { "trooper", "trooper", "trooper", "quad", "quad", "quad", "trike", "trike", "trike", "missile_tank", "missile_tank" }
+	easy = { "trooper", "trooper", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg", "missile_tank", "missile_tank" },
+	normal = { "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg", "missile_tank", "missile_tank" },
+	hard = { "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg", "trike.mg", "missile_tank", "missile_tank" }
 }
 
 OrdosAttackDelay =
@@ -90,7 +90,7 @@ OrdosHunters =
 InitialOrdosReinforcements =
 {
 	{ "trooper", "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-	{ "combat_tank_o", "combat_tank_o", "quad", "quad", "raider", "raider" }
+	{ "combat_tank_o", "combat_tank_o", "raider.rocket", "raider.rocket", "quad.mg", "quad.mg" }
 }
 
 OrdosPaths =

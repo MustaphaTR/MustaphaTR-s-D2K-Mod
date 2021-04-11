@@ -9,7 +9,7 @@ World:
 		Briefing: Protect the Outpost at Habbanya to prevent Imperial interference. Rush ground troops through the mountain passes and secure our Outpost. Once this is done, turn on the Ordos and crush them.
 		BriefingVideo: H_BR05_E.VQA
 	MapOptions:
-		TechLevel: medium
+		TechLevel: 4
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -32,38 +32,6 @@ carryall.reinforce:
 frigate:
 	Aircraft:
 		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
-
-concreteb:
-	Buildable:
-		Prerequisites: ~disabled
-
-large_gun_turret:
-	Buildable:
-		Prerequisites: ~disabled
-
-research_centre:
-	Buildable:
-		Prerequisites: outpost, heavy_factory, upgrade.heavy
-
-missile_tank:
-	Buildable:
-		Prerequisites: ~heavy.missile_tank, upgrade.heavy, research_centre
-
-siege_tank:
-	Buildable:
-		Prerequisites: ~disabled
-
-mpsardaukar:
-	Buildable:
-		Prerequisites: ~disabled
-
-stealth_raider:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.conyard:
-	Buildable:
-		Prerequisites: ~disabled
 
 outpost:
 	ExternalCondition@lua:
