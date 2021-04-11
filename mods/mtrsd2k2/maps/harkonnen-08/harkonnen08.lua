@@ -7,9 +7,9 @@
    information, see COPYING.
 ]]
 
-OrdosBase = { OConYard, OOutpost, OPalace, ORefinery1, ORefinery2, OHeavyFactory, OLightFactory, OHiTechFactory, OResearch, ORepair, OStarport, OGunt1, OGunt2, OGunt3, OGunt4, OGunt5, OGunt6, ORock1, ORock2, ORock3, ORock4, OBarracks1, OBarracks2, OPower1, OPower2, OPower3, OPower4, OPower5, OPower6, OPower7, OPower8, OPower9, OPower10, OPower11, OPower12, OPower13 }
-AtreidesBase = { AConYard, AOutpost, ARefinery1, ARefinery2, AHeavyFactory, ALightFactory, AHiTechFactory, ARepair, AStarport, AGunt1, AGunt2, ARock1, ARock2, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9 }
-MercenaryBase = { MHeavyFactory, MStarport, MGunt, MPower1, MPower2 }
+OrdosBase = { OConYard, OOutpost, OPalace, ORefinery1, ORefinery2, OHeavyFactory, OLightFactory, OHiTechFactory, OResearch, ORepair, OStarport, OArty1, OArty2, OArty3, OGunt1, OGunt2, OGunt3, OGunt4, OGunt5, OGunt6, ORock1, ORock2, ORock3, ORock4, OBarracks1, OBarracks2, OPower1, OPower2, OPower3, OPower4, OPower5, OPower6, OPower7, OPower8, OPower9, OPower10, OPower11, OPower12, OPower13 }
+AtreidesBase = { AConYard, AOutpost, ARefinery1, ARefinery2, AHeavyFactory, ALightFactory, AHiTechFactory, ARepair, AStarport, AMGun, AGunt1, AGunt2, ARock1, ARock2, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9 }
+MercenaryBase = { MHeavyFactory, MStarport, MArty, MGunt, MPower1, MPower2 }
 
 OrdosReinforcements =
 {
