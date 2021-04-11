@@ -25,7 +25,7 @@ light_inf:
 
 trooper:
 	Inherits: ^Infantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 20

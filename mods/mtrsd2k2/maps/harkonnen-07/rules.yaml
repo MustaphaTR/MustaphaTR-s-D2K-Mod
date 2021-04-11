@@ -9,7 +9,7 @@ World:
 		Briefing: Your target is the Atreides High Tech Factory, the weak link of the Duke's plan to combine with the Imperial Troops. Without it, the Imperial Carryalls will soon fall into disrepair and not be able to ferry further reinforcements to the battle.\n\nThe Atreides force is large and well-fortified - a frontal assault will fail. However, one Construction Yard to the West of their position is isolated and lightly defended. A small strike force has been airlifted deep into enemy territory. Capture the Construction Yard and use it against the Atreides.
 		BriefingVideo: H_BR07_E.VQA
 	MapOptions:
-		TechLevel: nopowers
+		TechLevel: 6
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -29,54 +29,14 @@ carryall.reinforce:
 	Cargo:
 		MaxWeight: 10
 
-combat_tank_a:
-	Buildable:
-		Prerequisites: ~heavy_factory, ~player.atreides
-
-combat_tank_h:
-	Buildable:
-		Prerequisites: ~heavy_factory, ~player.harkonnen
-
-combat_tank_a.starport:
-	Buildable:
-		Prerequisites: ~starport, ~player.atreides
-
-combat_tank_h.starport:
-	Buildable:
-		Prerequisites: ~starport, ~player.harkonnen
-
 sonic_tank:
 	Buildable:
-		Prerequisites: ~heavy_factory, research_centre, ~techlevel.high, ~player.atreides
+		Prerequisites: research_centre, ~techlevel.6, ~player.atreides
 
 devastator:
 	Buildable:
-		Prerequisites: ~heavy_factory, research_centre, ~techlevel.high, ~player.harkonnen
-
-high_tech_factory:
-	AirstrikePower:
-		Prerequisites: upgrade.hightech
-
-upgrade.hightech:
-	Buildable:
-		Prerequisites: ~hightech.atreides
-
-palace:
-	Buildable:
-		Prerequisites: ~disabled
+		Prerequisites: research_centre, ~techlevel.6, ~player.harkonnen
 
 sardaukar:
 	Buildable:
 		Prerequisites: ~barracks, ~player.corrino
-
-mpsardaukar:
-	Buildable:
-		Prerequisites: ~disabled
-
-grenadier:
-	Buildable:
-		Prerequisites: ~disabled
-
-thumper:
-	Buildable:
-		Prerequisites: ~disabled

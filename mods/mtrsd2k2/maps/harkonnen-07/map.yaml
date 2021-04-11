@@ -37,31 +37,31 @@ Players:
 		Enemies: Atreides Main Base, Atreides Small Base, Corrino, Creeps
 	PlayerReference@Atreides Main Base:
 		Name: Atreides Main Base
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Small Base, Corrino
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Atreides Small Base:
 		Name: Atreides Small Base
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Atreides Main Base, Corrino
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Corrino:
 		Name: Corrino
+		Bot: campaign
 		LockFaction: True
 		Faction: corrino
 		LockColor: True
 		Color: 7D00FE
 		Allies: Atreides Main Base, Atreides Small Base
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 
 Actors:
 	Actor0: wormspawner
@@ -170,11 +170,11 @@ Actors:
 	AHeavyFactory2: heavy_factory
 		Location: 9,20
 		Owner: Atreides Small Base
-	Actor35: trike
+	Actor35: quad.mg
 		Location: 50,20
 		Owner: Harkonnen
 		Facing: 512
-	Actor36: quad
+	Actor36: trike.rocket
 		Location: 52,20
 		Owner: Harkonnen
 		Facing: 512
@@ -301,9 +301,6 @@ Actors:
 	Actor77: wall
 		Location: 81,27
 		Owner: Atreides Main Base
-	Actor78: wall
-		Location: 82,27
-		Owner: Atreides Main Base
 	Actor79: wall
 		Location: 83,27
 		Owner: Atreides Main Base
@@ -327,9 +324,6 @@ Actors:
 		Owner: Atreides Small Base
 	Actor86: wall
 		Location: 14,28
-		Owner: Atreides Small Base
-	Actor87: wall
-		Location: 15,28
 		Owner: Atreides Small Base
 	ALightFactory1: light_factory
 		Location: 74,28
@@ -376,7 +370,7 @@ Actors:
 	APower4: wind_trap
 		Location: 84,30
 		Owner: Atreides Main Base
-	Actor103: quad
+	Actor103: quad.rocket
 		Location: 46,31
 		Owner: Atreides Small Base
 	APower27: wind_trap
@@ -448,9 +442,6 @@ Actors:
 	APower8: wind_trap
 		Location: 88,37
 		Owner: Atreides Main Base
-	Actor127: wall
-		Location: 93,37
-		Owner: Corrino
 	Actor128: wall
 		Location: 94,37
 		Owner: Corrino
@@ -634,9 +625,6 @@ Actors:
 	Actor188: wall
 		Location: 82,54
 		Owner: Atreides Main Base
-	Actor189: wall
-		Location: 83,54
-		Owner: Atreides Main Base
 	Actor190: wall
 		Location: 50,55
 		Owner: Atreides Main Base
@@ -649,9 +637,6 @@ Actors:
 	Actor193: spicebloom.spawnpoint
 		Location: 32,56
 		Owner: Neutral
-	Actor194: wall
-		Location: 69,56
-		Owner: Atreides Main Base
 	Actor195: wall
 		Location: 73,56
 		Owner: Atreides Main Base
@@ -769,5 +754,20 @@ Actors:
 	AtreidesEntry2: waypoint
 		Owner: Neutral
 		Location: 2,27
+	Actor233: flame_tower
+		Owner: Corrino
+		Location: 93,37
+	AMGun1: machine_gun_tower
+		Owner: Atreides Main Base
+		Location: 82,27
+	AMGun2: machine_gun_tower
+		Owner: Atreides Main Base
+		Location: 69,56
+	AMGun3: machine_gun_tower
+		Owner: Atreides Main Base
+		Location: 83,54
+	AMGun4: machine_gun_tower
+		Owner: Atreides Small Base
+		Location: 15,28
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

@@ -7,35 +7,35 @@
    information, see COPYING.
 ]]
 
-AtreidesMainBase = { AConYard1, AOutpost1, ARefinery1, ARefinery2, AHeavyFactory1, ALightFactory1, ALightFactory2, AHiTechFactory, AResearch, ARepair, AStarport, AGunt1, AGunt2, AGunt3, AGunt4, AGunt5, AGunt6, ARock1, ARock2, ARock3, ARock4, ARock5, ARock6, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9, APower10, APower11, APower12, APower13, APower14, APower15, APower16, APower17, APower18, APower19, APower20, APower21, APower22, ASilo1, ASilo2, ASilo3 }
-AtreidesSmallBase = { AOutpost2, ARefinery3, ABarracks, AHeavyFactory2, AGunt7, AGunt8, APower23, APower24, APower25, APower26, ASilo4, ASilo5, ASilo6, ASilo7 }
+AtreidesMainBase = { AConYard1, AOutpost1, ARefinery1, ARefinery2, AHeavyFactory1, ALightFactory1, ALightFactory2, AHiTechFactory, AResearch, ARepair, AStarport, AMGun1, AMGun2, AMGun3, AGunt1, AGunt2, AGunt3, AGunt4, AGunt5, AGunt6, ARock1, ARock2, ARock3, ARock4, ARock5, ARock6, APower1, APower2, APower3, APower4, APower5, APower6, APower7, APower8, APower9, APower10, APower11, APower12, APower13, APower14, APower15, APower16, APower17, APower18, APower19, APower20, APower21, APower22, ASilo1, ASilo2, ASilo3 }
+AtreidesSmallBase = { AOutpost2, ARefinery3, ABarracks, AHeavyFactory2, AMGun4, AGunt7, AGunt8, APower23, APower24, APower25, APower26, ASilo4, ASilo5, ASilo6, ASilo7 }
 CorrinoBase = { CBarracks, COutpost, CPower1, CPower2, CPower3, CRock1, CRock2 }
 
 AtreidesReinforcements =
 {
 	easy = { "sonic_tank" },
 	normal = { "sonic_tank", "trooper" },
-	hard = { "sonic_tank", "quad" }
+	hard = { "sonic_tank", "quad.rocket" }
 }
 
 CorrinoReinforcements =
 {
 	easy =
 	{
-		{ "sardaukar", "sardaukar", "sardaukar", "quad", "quad", "trike" },
-		{ "sardaukar", "sardaukar", "combat_tank_h", "trike" }
+		{ "sardaukar", "sardaukar", "sardaukar", "quad.rocket", "quad.rocket", "trike.mg" },
+		{ "sardaukar", "sardaukar", "combat_tank_c", "trike.mg" }
 	},
 
 	normal =
 	{
-		{ "sardaukar", "sardaukar", "sardaukar", "combat_tank_h", "quad", "trike" },
-		{ "sardaukar", "sardaukar", "combat_tank_h", "siege_tank" }
+		{ "sardaukar", "sardaukar", "sardaukar", "combat_tank_c", "quad.rocket", "trike.mg" },
+		{ "sardaukar", "sardaukar", "combat_tank_c", "siege_tank" }
 	},
 
 	hard =
 	{
-		{ "sardaukar", "sardaukar", "sardaukar", "combat_tank_h", "quad", "quad", "trike" },
-		{ "sardaukar", "sardaukar", "sardaukar", "combat_tank_h", "siege_tank" }
+		{ "sardaukar", "sardaukar", "sardaukar", "combat_tank_c", "quad.rocket", "quad.rocket", "trike.mg" },
+		{ "sardaukar", "sardaukar", "sardaukar", "combat_tank_c", "siege_tank" }
 	}
 }
 
@@ -58,22 +58,22 @@ InitialAtreidesReinforcements =
 	easy =
 	{
 		{ "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_a", "quad", "quad", "trike", "trike" },
-		{ "trooper", "trooper", "quad", "quad" }
+		{ "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg" },
+		{ "trooper", "trooper", "quad.rocket", "quad.rocket" }
 	},
 
 	normal =
 	{
 		{ "trooper", "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_a", "combat_tank_a", "quad", "trike", "trike" },
-		{ "trooper", "trooper", "trooper", "quad", "quad" }
+		{ "combat_tank_a", "combat_tank_a", "quad.rocket", "trike.mg", "trike.mg" },
+		{ "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" }
 	},
 
 	hard =
 	{
 		{ "trooper", "trooper", "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_a", "combat_tank_a", "quad", "quad", "trike", "trike" },
-		{ "trooper", "trooper", "trooper", "trooper", "quad", "quad" }
+		{ "combat_tank_a", "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg", "trike.mg" },
+		{ "trooper", "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" }
 	}
 }
 
@@ -101,19 +101,19 @@ HarkonnenReinforcements =
 	easy =
 	{
 		{ "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "quad", "trike", "trike", "siege_tank", "combat_tank_h", "combat_tank_h" }
+		{ "trike.rocket", "quad.mg", "quad.mg", "siege_tank", "combat_tank_h", "combat_tank_h" }
 	},
 
 	normal =
 	{
 		{ "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "quad", "trike", "siege_tank", "combat_tank_h", "combat_tank_h" }
+		{ "trike.rocket", "quad.mg", "siege_tank", "combat_tank_h", "combat_tank_h" }
 	},
 
 	hard =
 	{
 		{ "trooper", "trooper", "light_inf", "light_inf", "light_inf" },
-		{ "quad", "trike", "trike", "combat_tank_h", "combat_tank_h" }
+		{ "trike.rocket", "quad.mg", "quad.mg", "combat_tank_h", "combat_tank_h" }
 	},
 }
 
@@ -156,6 +156,7 @@ SendAirStrike = function()
 		return
 			actor.HasProperty("Sell") and
 			actor.Type ~= "wall" and
+			actor.Type ~= "machine_gun_tower" and
 			actor.Type ~= "medium_gun_turret" and
 			actor.Type ~= "large_gun_turret" and
 			actor.Type ~= "silo" and

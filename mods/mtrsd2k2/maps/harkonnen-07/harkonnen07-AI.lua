@@ -29,10 +29,11 @@ InitialProductionDelay =
 }
 
 AtreidesInfantryTypes = { "light_inf", "light_inf", "light_inf", "trooper", "trooper" }
-AtreidesVehicleTypes = { "trike", "trike", "quad" }
+AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 AtreidesMainTankTypes = { "combat_tank_a", "combat_tank_a", "siege_tank", "missile_tank", "sonic_tank" }
 AtreidesSmallTankTypes = { "combat_tank_a", "combat_tank_a", "siege_tank" }
-AtreidesStarportTypes = { "trike.starport", "trike.starport", "quad.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
+AtreidesStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
+AtreidesAircraftTypes = { "ornithopter.controllable" }
 
 CorrinoInfantryTypes = { "light_inf", "trooper", "sardaukar" }
 
@@ -52,12 +53,14 @@ ActivateAI = function()
 	local tanksToBuildMain = function() return { Utils.Random(AtreidesMainTankTypes) } end
 	local tanksToBuildSmall = function() return { Utils.Random(AtreidesSmallTankTypes) } end
 	local unitsToBuy = function() return { Utils.Random(AtreidesStarportTypes) } end
+	local aircraftToBuild = function() return { Utils.Random(AtreidesAircraftTypes) } end
 	local attackThresholdSize = AttackGroupSize[Difficulty] * 2.5
 
 	Trigger.AfterDelay(InitialProductionDelay[Difficulty], function()
 		ProduceUnits(atreides_main, ALightFactory1, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 		ProduceUnits(atreides_main, AHeavyFactory1, delay, tanksToBuildMain, AttackGroupSize[Difficulty], attackThresholdSize)
 		ProduceUnits(atreides_main, AStarport, delay, unitsToBuy, AttackGroupSize[Difficulty], attackThresholdSize)
+		ProduceUnits(atreides_main, AHiTechFactory, delay, aircraftToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 
 		ProduceUnits(atreides_small, ABarracks, delay, infantryToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 		ProduceUnits(atreides_small, AHeavyFactory2, delay, tanksToBuildSmall, AttackGroupSize[Difficulty], attackThresholdSize)
