@@ -9,7 +9,7 @@ World:
 		Briefing: The weak Ordos are no match for Harkonnen troops. However, smuggled Ixian technologies may upset this balance of power.\n\nThis cannot be allowed to happen. Establish a base on the plain, locate the Ordos Starport and destroy or capture it before the expensive shipments of Ixian weaponry begin to arrive. Time is short - the transports have already entered the system.
 		BriefingVideo: H_BR06_E.VQA
 	MapOptions:
-		TechLevel: medium
+		TechLevel: 5
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -36,35 +36,3 @@ carryall.reinforce:
 frigate:
 	Aircraft:
 		LandableTerrainTypes: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
-
-concreteb:
-	Buildable:
-		Prerequisites: ~disabled
-
-large_gun_turret:
-	Buildable:
-		Prerequisites: ~disabled
-
-research_centre:
-	Buildable:
-		Prerequisites: outpost, heavy_factory, upgrade.heavy
-
-starport:
-	Buildable:
-		Prerequisites: heavy_factory, outpost
-
-missile_tank:
-	Buildable:
-		Prerequisites: ~heavy.missile_tank, upgrade.heavy, research_centre
-
-mpsardaukar:
-	Buildable:
-		Prerequisites: ~disabled
-
-stealth_raider:
-	Buildable:
-		Prerequisites: ~disabled
-
-upgrade.conyard:
-	Buildable:
-		Prerequisites: ~disabled

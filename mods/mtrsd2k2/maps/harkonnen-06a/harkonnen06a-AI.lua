@@ -22,9 +22,9 @@ AttackDelays =
 }
 
 OrdosInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper" }
-OrdosVehicleTypes = { "raider", "raider", "quad" }
-OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank" }
-OrdosStarportTypes = { "trike.starport", "trike.starport", "quad.starport", "combat_tank_o.starport", "combat_tank_o.starport", "siege_tank.starport", "missile_tank.starport" }
+OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.rocket" }
+OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank", "missile_tank" }
+OrdosStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_o.starport", "combat_tank_o.starport", "siege_tank.starport", "missile_tank.starport" }
 
 ActivateAI = function()
 	IdlingUnits[ordos_main] = Reinforcements.Reinforce(ordos_main, InitialOrdosReinforcements[1], InitialOrdosPaths[1]), Reinforcements.Reinforce(ordos_main, InitialOrdosReinforcements[2], InitialOrdosPaths[2])

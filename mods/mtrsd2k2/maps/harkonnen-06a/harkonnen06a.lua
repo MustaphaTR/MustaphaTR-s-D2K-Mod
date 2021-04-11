@@ -7,8 +7,8 @@
    information, see COPYING.
 ]]
 
-OrdosMainBase = { OOutpost, ORefinery1, ORefinery2, OHeavyFactory1, OHeavyFactory2, OLightFactory1, OHiTechFactory, OResearch, ORepair, OStarport, OGunt1, OGunt2, OGunt3, OGunt4, OGunt5, OGunt6, OGunt7, OGunt8, OGunt9, OGunt10, OGunt11, OGunt12, OBarracks1, OPower1, OPower2, OPower3, OPower4, OPower5, OPower6, OPower7, OPower8, OPower9, OPower10 }
-OrdosSmallBase = { OConyard, ORefinery3, OBarracks2, OLightFactory2, OGunt13, OGunt14, OGunt15, OGunt16, OPower11, OPower12, OPower13, OPower14 }
+OrdosMainBase = { OOutpost, ORefinery1, ORefinery2, OHeavyFactory1, OHeavyFactory2, OLightFactory1, OHiTechFactory, OResearch, ORepair, OStarport, OArty1, OArty2, OArty3, OArty4, OArty5, OGunt1, OGunt2, OGunt3, OGunt4, OGunt5, OGunt6, OGunt7, OGunt8, OGunt9, OGunt10, OGunt11, OGunt12, OBarracks1, OPower1, OPower2, OPower3, OPower4, OPower5, OPower6, OPower7, OPower8, OPower9, OPower10 }
+OrdosSmallBase = { OConyard, ORefinery3, OBarracks2, OLightFactory2, OArty6, OGunt13, OGunt14, OGunt15, OGunt16, OPower11, OPower12, OPower13, OPower14 }
 
 OrdosReinforcements =
 {
@@ -16,10 +16,10 @@ OrdosReinforcements =
 	{
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "combat_tank_o", "combat_tank_o" },
-		{ "quad", "raider", "raider" },
+		{ "raider.rocket", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_o", "quad", "trooper" },
+		{ "combat_tank_o", "raider.rocket", "trooper" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "missile_tank" }
 	},
 
@@ -27,10 +27,10 @@ OrdosReinforcements =
 	{
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "combat_tank_o", "combat_tank_o" },
-		{ "quad", "quad", "raider" },
+		{ "raider.rocket", "raider.rocket", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
 		{ "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_o", "quad", "quad" },
+		{ "combat_tank_o", "raider.rocket", "raider.rocket" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "missile_tank" },
 		{ "combat_tank_o", "combat_tank_o", "siege_tank" }
 	},
@@ -38,22 +38,22 @@ OrdosReinforcements =
 	hard =
 	{
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "combat_tank_o", "combat_tank_o", "raider" },
-		{ "quad", "quad", "raider", "raider" },
+		{ "combat_tank_o", "combat_tank_o", "quad.mg" },
+		{ "raider.rocket", "raider.rocket", "quad.mg", "quad.mg" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "trooper" },
 		{ "combat_tank_o", "combat_tank_o", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "trooper" },
-		{ "combat_tank_o", "combat_tank_o", "quad", "quad" },
+		{ "combat_tank_o", "combat_tank_o", "raider.rocket", "raider.rocket" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "missile_tank" },
 		{ "combat_tank_o", "combat_tank_o", "siege_tank", "siege_tank" },
-		{ "missile_tank", "quad", "quad", "raider", "raider" }
+		{ "missile_tank", "raider.rocket", "raider.rocket", "quad.mg", "quad.mg" }
 	}
 }
 
 OrdosStarportReinforcements =
 {
-	easy = { "raider", "missile_tank", "combat_tank_o", "quad", "deviator", "deviator" },
-	normal = { "raider", "missile_tank", "missile_tank", "quad", "deviator", "deviator" },
-	hard = { "raider", "raider", "missile_tank", "missile_tank", "quad", "quad", "deviator", "deviator" }
+	easy = { "raider.mg", "missile_tank", "combat_tank_i", "raider.rocket", "deviator", "deviator" },
+	normal = { "raider.mg", "missile_tank", "missile_tank", "raider.rocket", "deviator", "deviator" },
+	hard = { "raider.mg", "raider.mg", "missile_tank", "missile_tank", "raider.rocket", "raider.rocket", "deviator", "deviator" }
 }
 
 OrdosAttackDelay =
@@ -80,7 +80,7 @@ OrdosAttackWaves =
 InitialOrdosReinforcements =
 {
 	{ "trooper", "trooper", "trooper", "trooper", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-	{ "combat_tank_o", "combat_tank_o", "quad", "quad", "raider", "raider" }
+	{ "combat_tank_o", "combat_tank_o", "raider.rocket", "raider.rocket", "quad.mg", "quad.mg" }
 }
 
 OrdosPaths =

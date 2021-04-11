@@ -512,7 +512,7 @@ Actors:
 	HarkonnenEntry2: waypoint
 		Owner: Neutral
 		Location: 2,29
-	Actor149: artillery_platform
+	OArty: artillery_platform
 		Owner: Ordos Main Base
 		Location: 64,11
 		TurretFacing: 258
