@@ -38,48 +38,48 @@ Players:
 		Enemies: Ordos Aligned Atreides, Ordos, Ordos Aligned Mercenaries, Creeps
 	PlayerReference@Ordos Aligned Atreides:
 		Name: Ordos Aligned Atreides
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
 		Allies: Ordos, Ordos Aligned Mercenaries
 		Enemies: Harkonnen, Harkonnen Aligned Mercenaries, Creeps
-		Bot: campaign
 	PlayerReference@Neutral Atreides:
 		Name: Neutral Atreides
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
 		Color: 9191FF
-		Bot: campaign
 		Enemies: Creeps
 	PlayerReference@Ordos:
 		Name: Ordos
+		Bot: campaign
 		LockFaction: True
 		Faction: ordos
 		LockColor: True
 		Color: B3EAA5
 		Allies: Ordos Aligned Atreides, Ordos Aligned Mercenaries
 		Enemies: Harkonnen, Harkonnen Aligned Mercenaries, Creeps
-		Bot: campaign
 	PlayerReference@Ordos Aligned Mercenaries:
 		Name: Ordos Aligned Mercenaries
+		Bot: campaign
 		LockFaction: True
 		Faction: mercenary
 		LockColor: True
 		Color: DDDD00
 		Allies: Ordos, Ordos Aligned Atreides
 		Enemies: Harkonnen, Creeps
-		Bot: campaign
 	PlayerReference@Harkonnen Aligned Mercenaries:
 		Name: Harkonnen Aligned Mercenaries
+		Bot: campaign
 		LockFaction: True
 		Faction: mercenary
 		LockColor: True
 		Color: DDDD00
 		Allies: Harkonnen
 		Enemies: Ordos, Ordos Aligned Atreides, Creeps
-		Bot: campaign
 
 Actors:
 	AOutpost: outpost
@@ -150,9 +150,6 @@ Actors:
 		Owner: Ordos Aligned Atreides
 	Actor22: wall
 		Location: 19,9
-		Owner: Ordos Aligned Atreides
-	Actor23: wall
-		Location: 20,9
 		Owner: Ordos Aligned Atreides
 	Actor24: wormspawner
 		Location: 51,9
@@ -256,9 +253,6 @@ Actors:
 	Actor57: wall
 		Location: 50,25
 		Owner: Ordos
-	Actor58: wall
-		Location: 50,26
-		Owner: Ordos
 	Actor59: wall
 		Location: 51,26
 		Owner: Ordos
@@ -268,6 +262,7 @@ Actors:
 	OGunt1: medium_gun_turret
 		Location: 53,26
 		Owner: Ordos
+		TurretFacing: 512
 	OGunt2: medium_gun_turret
 		Location: 58,26
 		Owner: Ordos
@@ -433,9 +428,6 @@ Actors:
 	Actor116: wall
 		Location: 72,46
 		Owner: Ordos
-	Actor117: wall
-		Location: 42,47
-		Owner: Ordos
 	Actor118: wall
 		Location: 66,47
 		Owner: Ordos
@@ -474,9 +466,6 @@ Actors:
 		Owner: Ordos
 	Actor130: wall
 		Location: 64,51
-		Owner: Ordos
-	Actor131: wall
-		Location: 65,51
 		Owner: Ordos
 	Actor132: wall
 		Location: 66,51
@@ -535,9 +524,7 @@ Actors:
 	MGunt: medium_gun_turret
 		Location: 32,71
 		Owner: Ordos Aligned Mercenaries
-	Actor151: wall
-		Location: 31,72
-		Owner: Ordos Aligned Mercenaries
+		TurretFacing: 512
 	Actor152: wall
 		Location: 32,72
 		Owner: Ordos Aligned Mercenaries
@@ -577,7 +564,7 @@ Actors:
 	Actor164: trooper
 		Location: 71,82
 		Owner: Harkonnen
-	Actor165: trike
+	Actor165: quad.mg
 		Location: 65,84
 		Owner: Harkonnen
 	Actor166: siege_tank
@@ -649,5 +636,36 @@ Actors:
 	SaboteurWaypoint6: waypoint
 		Owner: Neutral
 		Location: 64,91
+	OArty3: artillery_platform
+		Owner: Ordos
+		Location: 65,51
+		TurretFacing: 512
+	OArty1: artillery_platform
+		Owner: Ordos
+		Location: 50,26
+		TurretFacing: 512
+	OArty2: artillery_platform
+		Owner: Ordos
+		Location: 42,47
+		TurretFacing: 512
+	Actor151: wall
+		Location: 31,72
+		Owner: Ordos Aligned Mercenaries
+	Actor191: wall
+		Owner: Ordos Aligned Mercenaries
+		Location: 42,64
+	Actor192: wall
+		Owner: Ordos Aligned Mercenaries
+		Location: 44,64
+	MArty: artillery_platform
+		Owner: Ordos Aligned Mercenaries
+		Location: 43,64
+		TurretFacing: 0
+	AMGun: machine_gun_tower
+		Owner: Ordos Aligned Atreides
+		Location: 20,9
+	MercenaryAttackPoint: waypoint
+		Owner: Neutral
+		Location: 53,38
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml

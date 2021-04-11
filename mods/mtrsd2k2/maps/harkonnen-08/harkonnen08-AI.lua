@@ -23,15 +23,15 @@ AttackDelays =
 
 EnemyInfantryTypes = { "light_inf", "light_inf", "trooper", "trooper", "trooper" }
 
-OrdosVehicleTypes = { "raider", "raider", "quad" }
-OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank", "deviator" }
-OrdosStarportTypes = { "trike.starport", "trike.starport", "quad.starport", "combat_tank_o.starport", "combat_tank_o.starport", "siege_tank.starport", "missile_tank.starport" }
+OrdosVehicleTypes = { "quad.mg", "quad.mg", "raider.rocket" }
+OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank", "missile_tank", "deviator" }
+OrdosStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_o.starport", "combat_tank_o.starport", "siege_tank.starport", "missile_tank.starport" }
 
-AtreidesVehicleTypes = { "trike", "trike", "quad" }
+AtreidesVehicleTypes = { "trike.mg", "trike.mg", "quad.rocket" }
 AtreidesTankTypes = { "combat_tank_a", "combat_tank_a", "siege_tank" }
-AtreidesStarportTypes = { "trike.starport", "trike.starport", "quad.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
+AtreidesStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_a.starport", "combat_tank_a.starport", "siege_tank.starport", "missile_tank.starport" }
 
-MercenaryTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank" }
+MercenaryTankTypes = { "combat_tank_m", "combat_tank_m", "siege_tank" }
 
 ActivateAI = function()
 	IdlingUnits[ordos] = Reinforcements.Reinforce(ordos, InitialOrdosReinforcements[1], InitialOrdosPaths[1]), Reinforcements.Reinforce(ordos, InitialOrdosReinforcements[2], InitialOrdosPaths[2])

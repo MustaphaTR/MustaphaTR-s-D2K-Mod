@@ -15,38 +15,38 @@ OrdosReinforcements =
 {
 	easy =
 	{
-		{ "trooper", "trooper", "quad", "quad" },
+		{ "trooper", "trooper", "raider.rocket", "raider.rocket" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "light_inf", "light_inf", "raider", "raider" },
-		{ "combat_tank_o", "quad" }
+		{ "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
+		{ "combat_tank_o", "raider.rocket" }
 	},
 
 	normal =
 	{
-		{ "trooper", "trooper", "trooper", "quad", "quad" },
+		{ "trooper", "trooper", "trooper", "raider.rocket", "raider.rocket" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "light_inf", "light_inf", "light_inf", "raider", "raider" },
+		{ "light_inf", "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
 		{ "combat_tank_o", "combat_tank_o" },
-		{ "raider", "raider", "quad", "quad", "deviator" }
+		{ "quad.mg", "quad.mg", "raider.rocket", "raider.rocket", "deviator" }
 	},
 
 	hard =
 	{
-		{ "trooper", "trooper", "trooper", "trooper", "quad", "quad" },
+		{ "trooper", "trooper", "trooper", "trooper", "raider.rocket", "raider.rocket" },
 		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "light_inf" },
-		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "raider", "raider" },
-		{ "combat_tank_o", "combat_tank_o", "quad" },
-		{ "raider", "raider", "raider", "quad", "quad", "deviator" },
-		{ "siege_tank", "combat_tank_o", "combat_tank_o", "raider" }
+		{ "light_inf", "light_inf", "light_inf", "light_inf", "light_inf", "quad.mg", "quad.mg" },
+		{ "combat_tank_o", "combat_tank_o", "raider.rocket" },
+		{ "quad.mg", "quad.mg", "quad.mg", "raider.rocket", "raider.rocket", "deviator" },
+		{ "siege_tank", "combat_tank_o", "combat_tank_o", "quad.mg" }
 	}
 }
 
 MercenaryStarportReinforcements =
 {
-	{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "quad", "quad" },
-	{ "quad", "combat_tank_o", "trike", "quad", "trooper", "trooper" },
+	{ "trooper", "trooper", "trooper", "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" },
+	{ "quad.rocket", "combat_tank_m", "raider.mg", "quad.rocket", "trooper", "trooper" },
 	{ "trooper", "trooper", "trooper", "trooper", "siege_tank", "siege_tank" },
-	{ "quad", "quad", "combat_tank_o", "combat_tank_o", "combat_tank_o" }
+	{ "quad.rocket", "quad.rocket", "combat_tank_m", "combat_tank_m", "combat_tank_m" }
 }
 
 OrdosAttackDelay =
@@ -71,9 +71,9 @@ InitialOrdosReinforcements =
 	{ "trooper", "trooper", "trooper", "trooper", "trooper", "combat_tank_o", "combat_tank_o" }
 }
 
-InitialAtreidesReinforcements = { "combat_tank_a", "combat_tank_a", "quad", "quad", "trike" }
+InitialAtreidesReinforcements = { "combat_tank_a", "combat_tank_a", "quad.rocket", "quad.rocket", "trike.mg" }
 
-InitialMercenaryReinforcements = { "trooper", "trooper", "trooper", "trooper", "quad", "quad" }
+InitialMercenaryReinforcements = { "trooper", "trooper", "trooper", "trooper", "quad.rocket", "quad.rocket" }
 
 OrdosPaths =
 {
@@ -126,6 +126,7 @@ SendAirStrike = function()
 		return
 			actor.HasProperty("Sell") and
 			actor.Type ~= "wall" and
+			actor.Type ~= "flame_tower" and
 			actor.Type ~= "medium_gun_turret" and
 			actor.Type ~= "large_gun_turret" and
 			actor.Type ~= "silo" and
@@ -144,6 +145,7 @@ GetSaboteurTargets = function(player)
 		return
 			actor.HasProperty("Sell") and
 			actor.Type ~= "wall" and
+			actor.Type ~= "flame_tower" and
 			actor.Type ~= "medium_gun_turret" and
 			actor.Type ~= "large_gun_turret" and
 			actor.Type ~= "silo"
@@ -281,7 +283,7 @@ WorldLoaded = function()
 	Trigger.OnCapture(MHeavyFactory, function()
 		player.MarkCompletedObjective(AllyWithMercenaries)
 		Media.DisplayMessage("Leader Captured. Mercenaries have been persuaded to fight with House Harkonnen.", "Mentat")
-		MercenaryAttackLocation = OPalace.Location
+		MercenaryAttackLocation = MercenaryAttackPoint.Location
 
 		ChangeOwner(mercenary_enemy, mercenary_ally)
 		SendStarportReinforcements(mercenary_ally)
