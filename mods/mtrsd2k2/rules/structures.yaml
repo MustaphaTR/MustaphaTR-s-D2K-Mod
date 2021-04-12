@@ -1334,6 +1334,7 @@ conyard.mercenary:
 
 light_or_heavy:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Light or Heavy Factory
 	Buildable:
@@ -1341,6 +1342,7 @@ light_or_heavy:
 
 hi_tech_or_ix:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: High Tech Factory or Ix Research Center
 	Buildable:
@@ -1348,6 +1350,7 @@ hi_tech_or_ix:
 
 palace.corrino:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Imperial Palace
 	Buildable:
