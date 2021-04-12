@@ -53,8 +53,8 @@ carryall.reinforce.smuggler:
 	Tooltip:
 		Name: Smuggler Carryall
 	Carryall:
-		LoadingDelay: 8
-		UnloadingDelay: 12
+		BeforeLoadDelay: 8
+		BeforeUnloadDelay: 12
 	Aircraft:
 		Speed: 164
 		TurnSpeed: 20
@@ -93,8 +93,8 @@ carryall.smuggler:
 	Tooltip:
 		Name: Smuggler Carryall
 	AutoCarryall:
-		LoadingDelay: 8
-		UnloadingDelay: 12
+		BeforeLoadDelay: 8
+		BeforeUnloadDelay: 12
 	Aircraft:
 		Speed: 164
 		TurnSpeed: 20
