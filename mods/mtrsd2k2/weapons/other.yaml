@@ -499,7 +499,7 @@ Flamegun-tower:
 
 DogJaw:
 	ValidTargets: Infantry
-	InvaildTargets: Drone
+	InvalidTargets: Drone
 	ReloadDelay: 10
 	Range: 3c0
 	Report: dogg5p.aud
@@ -509,7 +509,7 @@ DogJaw:
 		Spread: 213
 		Damage: 10000
 		ValidTargets: Infantry
-		InvaildTargets: Drone
+		InvalidTargets: Drone
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 
 DroneJump:
@@ -653,35 +653,35 @@ ECMRay.anim:
 	ReloadDelay: 2
 	Range: 5c0
 	ValidTargets: Vehicle, Drone
-	InvaildTargets: Jammer
+	InvalidTargets: Jammer
 	TargetActorCenter: true
 	Projectile: LaserZap
 		Width: 60
-		BeamDuration: 2
+		Duration: 2
 		Color: 00FF0070
 		SecondaryBeam: true
 		SecondaryBeamWidth: 90
 		SecondaryBeamColor: FF000035
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Vehicle, Drone
-		InvaildTargets: Jammer
+		InvalidTargets: Jammer
 
 ECMRay.end:
 	ReloadDelay: 3
 	Range: 5c0
 	ValidTargets: Vehicle, Drone
-	InvaildTargets: Jammer
+	InvalidTargets: Jammer
 	TargetActorCenter: true
 	Projectile: LaserZap
 		Width: 60
-		BeamDuration: 2
+		Duration: 2
 		Color: 00FF0070
 		SecondaryBeam: true
 		SecondaryBeamWidth: 90
 		SecondaryBeamColor: FF000035
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Vehicle, Drone
-		InvaildTargets: Jammer
+		InvalidTargets: Jammer
 	Warhead@2Dis: GrantExternalCondition
 		Range: 0c512
 		Duration: 100
