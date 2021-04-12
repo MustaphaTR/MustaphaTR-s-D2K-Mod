@@ -3,7 +3,7 @@ light_inf.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 10
-		Prerequisites: starport, ~starport.mercenary, ~techlevel.1
+		Prerequisites: ~starport.mercenary, ~techlevel.1
 	Valued:
 		Cost: 60
 	-MapEditorData:
@@ -17,7 +17,7 @@ trooper.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 20
-		Prerequisites: starport, ~starport.mercenary, ~techlevel.2
+		Prerequisites: ~starport.mercenary, ~techlevel.2
 	Valued:
 		Cost: 100
 	-MapEditorData:
@@ -31,7 +31,7 @@ dog.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 30
-		Prerequisites: starport, ~starport.mercenary, ~barracks.smuggler, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~barracks.smuggler, ~techlevel.5
 	Valued:
 		Cost: 90
 	-MapEditorData:
@@ -45,7 +45,7 @@ engineer.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 40
-		Prerequisites: starport, ~starport.mercenary, ~techlevel.3
+		Prerequisites: ~starport.mercenary, ~techlevel.3
 	Valued:
 		Cost: 750
 	-MapEditorData:
@@ -59,7 +59,7 @@ thumper.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 50
-		Prerequisites: starport, ~starport.mercenary, ~techlevel.7
+		Prerequisites: ~starport.mercenary, ~techlevel.7
 	Valued:
 		Cost: 300
 	-MapEditorData:
@@ -73,7 +73,7 @@ grenadier.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 60
-		Prerequisites: starport, ~starport.mercenary, ~barracks.atreides, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~barracks.atreides, ~techlevel.5
 	Valued:
 		Cost: 105
 	-MapEditorData:
@@ -87,7 +87,7 @@ nsfremen.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 70
-		Prerequisites: starport, ~starport.mercenary, ~barracks.fremen, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~barracks.fremen, ~techlevel.5
 	Valued:
 		Cost: 220
 	-MapEditorData:
@@ -99,7 +99,7 @@ flamethrower.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 90
-		Prerequisites: starport, ~starport.mercenary, ~barracks.harkonnen, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~barracks.harkonnen, ~techlevel.5
 	Valued:
 		Cost: 325
 	-MapEditorData:
@@ -113,7 +113,7 @@ plasma_infantry.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 100
-		Prerequisites: starport, ~starport.mercenary, ~barracks.corrino, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~barracks.corrino, ~techlevel.5
 	Valued:
 		Cost: 190
 	-MapEditorData:
@@ -127,7 +127,7 @@ sardaukar.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 110
-		Prerequisites: starport, ~starport.mercenary, ~barracks.corrino, ~techlevel.7
+		Prerequisites: ~starport.mercenary, ~barracks.corrino, ~techlevel.7
 	Valued:
 		Cost: 170
 	-MapEditorData:
@@ -141,7 +141,7 @@ trike.mg.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 120
-		Prerequisites: starport, ~starport.mgtrike, ~techlevel.1
+		Prerequisites: ~starport.mgtrike, ~techlevel.1
 	Valued:
 		Cost: 375
 	RenderSprites:
@@ -155,7 +155,7 @@ raider.mg.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 130
-		Prerequisites: starport, ~starport.mgraider, ~techlevel.1
+		Prerequisites: ~starport.mgraider, ~techlevel.1
 	Valued:
 		Cost: 375
 	-MapEditorData:
@@ -167,7 +167,7 @@ quad.mg.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 140
-		Prerequisites: starport, ~starport.mercenary, ~light.mgquad, ~techlevel.1
+		Prerequisites: ~starport.mercenary, ~light.mgquad, ~techlevel.1
 	Valued:
 		Cost: 375
 	-MapEditorData:
@@ -179,7 +179,7 @@ trike.rocket.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 150
-		Prerequisites: starport, ~starport.mercenary, ~light.rockettrike, ~techlevel.2
+		Prerequisites: ~starport.mercenary, ~light.rockettrike, ~techlevel.2
 	Valued:
 		Cost: 475
 	-MapEditorData:
@@ -191,7 +191,7 @@ raider.rocket.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 160
-		Prerequisites: starport, ~starport.mercenary, ~light.rocketraider, ~techlevel.2
+		Prerequisites: ~starport.mercenary, ~light.rocketraider, ~techlevel.2
 	Valued:
 		Cost: 475
 	-MapEditorData:
@@ -203,7 +203,7 @@ quad.rocket.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 170
-		Prerequisites: starport, ~techlevel.2
+		Prerequisites: ~techlevel.2
 	Valued:
 		Cost: 475
 	-MapEditorData:
@@ -215,7 +215,7 @@ stealth_raider.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 180
-		Prerequisites: starport, ~starport.mercenary, ~light.ordos, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~light.ordos, ~techlevel.5
 	Valued:
 		Cost: 550
 	-MapEditorData:
@@ -229,7 +229,7 @@ light_tank.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 190
-		Prerequisites: starport, ~starport.mercenary, ~techlevel.5
+		Prerequisites: ~starport.mercenary, ~techlevel.5
 	Valued:
 		Cost: 575
 	-MapEditorData:
@@ -243,7 +243,7 @@ harvester.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 200
-		Prerequisites: starport, ~!starport.smuggler, ~techlevel.1
+		Prerequisites: ~!starport.smuggler, ~techlevel.1
 	Valued:
 		Cost: 1500
 	-MapEditorData:
@@ -257,7 +257,7 @@ harvester.smuggler.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 210
-		Prerequisites: starport, ~starport.smuggler, ~techlevel.1
+		Prerequisites: ~starport.smuggler, ~techlevel.1
 	Valued:
 		Cost: 1250
 	-MapEditorData:
@@ -383,7 +383,7 @@ siege_tank.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 300
-		Prerequisites: starport, ~techlevel.5
+		Prerequisites: ~techlevel.5
 	Valued:
 		Cost: 1075
 	-MapEditorData:
@@ -397,7 +397,7 @@ mcv.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 310
-		Prerequisites: starport, ~techlevel.3
+		Prerequisites: ~techlevel.3
 	Valued:
 		Cost: 2500
 	-MapEditorData:
@@ -411,7 +411,7 @@ missile_tank.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 320
-		Prerequisites: starport, ~techlevel.4
+		Prerequisites: ~techlevel.4
 	Valued:
 		Cost: 1250
 	-MapEditorData:
@@ -425,7 +425,7 @@ sonic_tank.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 330
-		Prerequisites: starport, ~starport.mercenary, ~heavy.atreides, ~techlevel.6
+		Prerequisites: ~starport.mercenary, ~heavy.atreides, ~techlevel.6
 	Valued:
 		Cost: 1200
 	-MapEditorData:
@@ -439,7 +439,7 @@ stealth_tank.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 340
-		Prerequisites: starport, ~starport.mercenary, ~heavy.fremen, ~techlevel.6
+		Prerequisites: ~starport.mercenary, ~heavy.fremen, ~techlevel.6
 	Valued:
 		Cost: 1075
 	-MapEditorData:
@@ -453,7 +453,7 @@ devastator.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 360
-		Prerequisites: starport, ~starport.mercenary, ~heavy.harkonnen, ~techlevel.6
+		Prerequisites: ~starport.mercenary, ~heavy.harkonnen, ~techlevel.6
 	Valued:
 		Cost: 1275
 	-MapEditorData:
@@ -481,7 +481,7 @@ deviator.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 380
-		Prerequisites: starport, ~starport.mercenary, ~heavy.ordos, ~techlevel.6
+		Prerequisites: ~starport.mercenary, ~heavy.ordos, ~techlevel.6
 	Valued:
 		Cost: 1200
 	-MapEditorData:
@@ -509,7 +509,7 @@ ifv.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 400
-		Prerequisites: starport, ~starport.mercenary, ~heavy.smuggler, ~techlevel.6
+		Prerequisites: ~starport.mercenary, ~heavy.smuggler, ~techlevel.6
 	Valued:
 		Cost: 1050
 	-MapEditorData:
@@ -523,7 +523,7 @@ carryall.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 410
-		Prerequisites: starport, ~!starport.smuggler, ~techlevel.4
+		Prerequisites: ~!starport.smuggler, ~techlevel.4
 	Valued:
 		Cost: 1500
 	-MapEditorData:
@@ -535,9 +535,45 @@ carryall.smuggler.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 420
-		Prerequisites: starport, ~starport.smuggler, ~techlevel.4
+		Prerequisites: ~starport.smuggler, ~techlevel.4
 	Valued:
 		Cost: 1500
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: carryall
+
+ornithopter.controllable.starport:
+	Inherits: ornithopter.controllable
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 430
+		Prerequisites: ~starport.mercenary, ~hightech.ornithopter, ~techlevel.6
+	Valued:
+		Cost: 1600
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: ornithopter.controllable
+
+swarmer.starport:
+	Inherits: swarmer
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 440
+		Prerequisites: ~starport.mercenary, ~techlevel.6
+	Valued:
+		Cost: 500
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: swarmer
+
+phoenix.starport:
+	Inherits: phoenix
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 450
+		Prerequisites: ~starport.mercenary, ~hightech.phoenix, ~techlevel.6
+	Valued:
+		Cost: 1550
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: phoenix
