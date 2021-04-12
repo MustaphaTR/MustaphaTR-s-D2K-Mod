@@ -168,10 +168,31 @@ DogVoice:
 		Guard: I_GUARD
 
 DroneVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .AUD
+	Variants:
+		atreides: .wav
+		fremen: .wav
+		ixian: .wav
+		ordos: .wav
+		smuggler: .wav
+		mercenary: .wav
+		harkonnen: .wav
+		corrino: .wav
+	Prefixes:
+		atreides: A
+		fremen: A
+		ixian: A
+		ordos: O
+		smuggler: O
+		mercenary: O
+		harkonnen: H
+		corrino: H
 	Voices:
 		Action: vtermova
 		Select: vtersela, vterselb
 		Move: vtermova
 		Attack: vteratta
 		Die: vterdiea, vterdieb
+		Guard: I_GUARD
+	DisablePrefixes: Select, Action, Move, Attack, Die
+	DisableVariants: Guard
