@@ -4,8 +4,13 @@ GenericVoice:
 	DefaultVariant: .AUD
 	Variants:
 		atreides: .WAV
+		fremen: .WAV
+		ixian: .WAV
 		ordos: .WAV
+		smuggler: .WAV
+		mercenary: .WAV
 		harkonnen: .WAV
+		corrino: .WAV
 	Prefixes:
 		atreides: A
 		fremen: A
@@ -43,8 +48,13 @@ InfantryVoice:
 	DefaultVariant: .AUD
 	Variants:
 		atreides: .WAV
+		fremen: .WAV
+		ixian: .WAV
 		ordos: .WAV
+		smuggler: .WAV
+		mercenary: .WAV
 		harkonnen: .WAV
+		corrino: .WAV
 	Prefixes:
 		atreides: A
 		fremen: A
@@ -66,8 +76,13 @@ EngineerVoice:
 	DefaultVariant: .AUD
 	Variants:
 		atreides: .WAV
+		fremen: .WAV
+		ixian: .WAV
 		ordos: .WAV
+		smuggler: .WAV
+		mercenary: .WAV
 		harkonnen: .WAV
+		corrino: .WAV
 	Prefixes:
 		atreides: A
 		fremen: A
@@ -89,8 +104,13 @@ FremenVoice:
 	DefaultVariant: .AUD
 	Variants:
 		atreides: .WAV
+		fremen: .WAV
+		ixian: .WAV
 		ordos: .WAV
+		smuggler: .WAV
+		mercenary: .WAV
 		harkonnen: .WAV
+		corrino: .WAV
 	Prefixes:
 		atreides: A
 		fremen: A
@@ -112,8 +132,13 @@ SaboteurVoice:
 	DefaultVariant: .AUD
 	Variants:
 		atreides: .WAV
+		fremen: .WAV
+		ixian: .WAV
 		ordos: .WAV
+		smuggler: .WAV
+		mercenary: .WAV
 		harkonnen: .WAV
+		corrino: .WAV
 	Prefixes:
 		atreides: A
 		fremen: A
