@@ -121,7 +121,7 @@ PlasBullet:
 		Image: oneblastbullet
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 2500
+		Damage: 3000
 		Versus:
 			building: 40
 			wood: 30
@@ -134,7 +134,7 @@ PlasBullet-ifv:
 	ReloadDelay: 55
 	Range: 4c128
 	Warhead@1Dam: SpreadDamage
-		Damage: 3250
+		Damage: 3750
 
 155mm:
 	Inherits: ^Cannon
