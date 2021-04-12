@@ -495,7 +495,7 @@ bomb_buggy.starport:
 	Buildable:
 		Queue: Starport
 		BuildPaletteOrder: 390
-		Prerequisites: starport, ~starport.mercenary, ~heavy.mercenary, ~techlevel.6
+		Prerequisites: ~starport.mercenary, heavy_factory, ~techlevel.6
 	Valued:
 		Cost: 875
 	-MapEditorData:
