@@ -105,6 +105,8 @@ BazookaAA-ifv:
 	Inherits: BazookaAA
 	ReloadDelay: 35
 	Range: 4c768
+	Projectile: Missile
+		RangeLimit: 5c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 4250
 
