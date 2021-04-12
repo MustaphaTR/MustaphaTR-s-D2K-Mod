@@ -217,3 +217,5 @@ ChainGun:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 500

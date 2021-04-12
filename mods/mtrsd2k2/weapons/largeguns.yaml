@@ -167,3 +167,5 @@ PlasBullet-ifv:
 	Warhead@3Eff: CreateEffect
 		Explosions: med_explosion
 		ImpactSounds: EXPLMD2.WAV
+	Warhead@4Concrete: DamagesConcrete
+		Damage: 768

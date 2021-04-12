@@ -464,6 +464,8 @@ Flamegun:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: flame
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 100
 
 Flamegun-ifv:
 	Inherits: Flamegun
@@ -471,6 +473,8 @@ Flamegun-ifv:
 	Range: 3c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 900
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 110
 
 Flamegun-tower:
 	Inherits: Flamegun
@@ -490,6 +494,8 @@ Flamegun-tower:
 			invulnerable: 0
 			cy: 8
 			harvester: 10
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 110
 
 DogJaw:
 	ValidTargets: Infantry
