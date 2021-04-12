@@ -30,7 +30,7 @@ Sound:
 			invulnerable: 0
 			cy: 20
 			harvester: 50
-		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
+		DamageTypes: Prone50Percent, TriggerProne, SoundDeath, SuppressDrone
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
@@ -47,7 +47,7 @@ Sound:
 			invulnerable: 0
 			cy: 20
 			harvester: 50
-		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
+		DamageTypes: Prone50Percent, TriggerProne, SoundDeath, SuppressDrone
 	Warhead@3Concrete: DamagesConcrete
 		Damage: 1720
 
@@ -107,6 +107,7 @@ Repair:
 	Warhead@1Dam: SpreadDamage
 		Damage: -1500
 		ValidTargets: Repair
+		DamageTypes: KillsDrone
 
 Repair-ifv:
 	Inherits: Repair
@@ -145,7 +146,7 @@ OrniBomb:
 			invulnerable: 0
 			cy: 25
 			harvester: 60
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -209,7 +210,7 @@ DeathHandCluster:
 			invulnerable: 0
 			cy: 25
 			harvester: 60
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -236,7 +237,7 @@ CrateExplosion:
 			cy: 20
 			harvester: 25
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -297,7 +298,7 @@ grenade:
 			invulnerable: 0
 			cy: 20
 			harvester: 25
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater
@@ -331,7 +332,7 @@ GrenDeath:
 			invulnerable: 0
 			cy: 20
 			harvester: 25
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -356,7 +357,7 @@ SardDeath:
 			invulnerable: 0
 			cy: 30
 			harvester: 50
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -388,7 +389,7 @@ SpiceExplosion:
 			invulnerable: 0
 			cy: 20
 			harvester: 25
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 		AffectsParent: true
 	Warhead@2Res: CreateResource
@@ -416,7 +417,7 @@ BloomExplosion:
 			invulnerable: 0
 			cy: 20
 			harvester: 25
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 		AffectsParent: true
 
@@ -431,7 +432,7 @@ PlasmaExplosion:
 			Light: 100
 			Heavy: 100
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater
@@ -492,6 +493,7 @@ Flamegun-tower:
 
 DogJaw:
 	ValidTargets: Infantry
+	InvaildTargets: Drone
 	ReloadDelay: 10
 	Range: 3c0
 	Report: dogg5p.aud
@@ -501,6 +503,30 @@ DogJaw:
 		Spread: 213
 		Damage: 10000
 		ValidTargets: Infantry
+		InvaildTargets: Drone
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+DroneJump:
+	ValidTargets: Dronable
+	ReloadDelay: 40
+	Range: 3c0
+	Report: vteratta.wav
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Falloff: 100, 0
+		Damage: 10000
+		ValidTargets: Dronable
+		Versus:
+			none: 100
+			wall: 0
+			building: 0
+			wood: 0
+			light: 0
+			heavy: 0
+			invulnerable: 0
+			cy: 0
+			harvester: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 
 BombBuggyTargeting:
@@ -528,7 +554,7 @@ BuggyExplosion:
 			cy: 30
 			harvester: 70
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, SuppressDrone
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: EXPLSML4.WAV
@@ -584,7 +610,7 @@ ATMine:
 			harvester: 100
 		AffectsParent: true
 		InvalidTargets: Structure, Wall, Mine
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: EXPLLG2.WAV
@@ -609,7 +635,7 @@ APMine:
 			harvester: 10
 		AffectsParent: true
 		InvalidTargets: Structure, Wall, Mine
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 	Warhead@2Eff: CreateEffect
 		Explosions: self_destruct
 		ImpactSounds: EXPLSML1.WAV

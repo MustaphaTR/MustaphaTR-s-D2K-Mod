@@ -144,6 +144,21 @@
 		Condition: ecmdisable
 		Color: DDDDDD
 
+^Dronable:
+	Infectable:
+		KillInfectorDamageTypes: KillsDrone
+		BeingInfectedCondition: being-droned
+		InfectedCondition: droned
+	Targetable@DRONE:
+		TargetTypes: Dronable
+	RevealsShroud@DRONE:
+		Range: 2c0
+		ValidRelationships: Enemy, Neutral
+		RequiresCondition: droned
+	SpeedMultiplier@DRONE:
+		RequiresCondition: being-droned
+		Modifier: 0
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -218,6 +233,7 @@
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
 	Inherits@4: ^EcmDisable
+	Inherits@5: ^Dronable
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
@@ -228,7 +244,7 @@
 	Mobile:
 		TurnSpeed: 20
 		Locomotor: vehicle
-		PauseOnCondition: notmobile || being-captured || ecmdisable
+		PauseOnCondition: notmobile || being-captured || being-droned || ecmdisable
 	Selectable:
 		Bounds: 32,32
 	Targetable:
@@ -372,6 +388,7 @@
 	Inherits@2: ^GainsExperience
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^Cloakable
+	Inherits@5: ^Dronable
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:

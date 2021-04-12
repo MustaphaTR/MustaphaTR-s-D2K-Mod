@@ -20,7 +20,7 @@
 			invulnerable: 0
 			cy: 20
 			harvester: 50
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater, RockCrater
@@ -161,7 +161,7 @@ PlasBullet-ifv:
 			invulnerable: 0
 			cy: 20
 			harvester: 25
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 5625
 	Warhead@3Eff: CreateEffect

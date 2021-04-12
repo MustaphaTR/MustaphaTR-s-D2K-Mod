@@ -466,6 +466,97 @@ fedaykin:
 	Voiced:
 		VoiceSet: FremenVoice
 
+drone:
+	Inherits: ^Infantry
+	Inherits@ECM: ^EcmDisable
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 130
+		Prerequisites: ~disabled
+		Description: Robotic vehicle that can sabotage vehicles\nand kill infantry.\nCan detect cloaked units.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+	Valued:
+		Cost: 175
+	Tooltip:
+		Name: Drone
+		GenericName: Drone
+	Selectable:
+		Bounds: 24,24,0,0
+	Health:
+		HP: 3000
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 76
+		Voice: Move
+		RequiresCondition: !ecmdisable
+	RevealsShroud:
+		Range: 4c384
+	Armament@primary:
+		Weapon: DroneJump
+	AttackInfect:
+		Voice: Attack
+		Damage: 750
+		DamageInterval: 25
+		DamageTypes: DroneInfection, BulletDeath
+		SuppressionDamageThreshold: 25
+		SuppressionCountThreshold: 1
+		SuppressionDamageType: SuppressDrone
+		JoustRange: 1c768
+		RequiresCondition: !ecmdisable
+	RejectsOrders:
+		RequiresCondition: jousting
+	SpeedMultiplier@JOUSTING:
+		Modifier: 150
+		RequiresCondition: jousting
+	AttackMove:
+		Voice: Move
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Dronable
+	Repairable:
+		RepairActors: repair_pad, repair_pad.ixian
+	WithInfantryBody:
+		-IdleSequences:
+		StandSequences: stand
+		DefaultAttackSequence: jump
+		RequiresCondition: !jousting
+	WithFacingSpriteBody:
+		Sequence: shoot
+		RequiresCondition: jousting
+	Targetable:
+		TargetTypes: Ground, Infantry, DetonateAttack, Drone
+		RequiresCondition: !jousting
+	Targetable@REPAIR:
+		TargetTypes: Repair
+		RequiresCondition: damaged && !jousting
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	IgnoresDisguise:
+	Crushable:
+		CrushClasses: drone
+	DetectCloaked:
+		Range: 4c384
+	Voiced:
+		VoiceSet: DroneVoice
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	-Infectable:
+	-Targetable@DRONE:
+	-RevealsShroud@DRONE:
+	-SpeedMultiplier@DRONE:
+	-TakeCover:
+	-Passenger:
+	-WithDeathAnimation:
+	RenderSprites:
+		Scale: 0.75
+		PlayerPalette: ra2player
+	Cloak@STEALTH:
+		Palette: ra2cloak
+
 rocketeer:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove

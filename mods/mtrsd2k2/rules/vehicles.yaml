@@ -884,7 +884,7 @@ jammer:
 		Range: 5c0
 		DeflectionStances: Neutral, Enemy
 	Targetable:
-		TargetTypes: Ground, Jammer, Repair, Vehicle
+		TargetTypes: Ground, Jammer, Vehicle
 	RenderJammerCircle:
 	SpawnActorOnDeath:
 		Actor: jammer.husk

@@ -64,6 +64,10 @@ Player:
 				OrderName: ProduceActorPower.Fedaykin
 				Consideration@1:
 					Against: Ally
+			Drone:
+				OrderName: ProduceActorPower.Drone
+				Consideration@1:
+					Against: Ally
 			Rocketeer:
 				OrderName: ProduceActorPower.Rocketeer
 				Consideration@1:

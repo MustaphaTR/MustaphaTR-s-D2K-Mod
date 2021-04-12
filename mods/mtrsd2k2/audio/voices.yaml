@@ -141,3 +141,12 @@ DogVoice:
 		Burned: dogw6
 		Zapped: dogw6
 		Guard: I_GUARD
+
+DroneVoice:
+	DefaultVariant: .wav
+	Voices:
+		Action: vtermova
+		Select: vtersela, vterselb
+		Move: vtermova
+		Attack: vteratta
+		Die: vterdiea, vterdieb

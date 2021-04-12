@@ -135,6 +135,60 @@ trooper:
 		Start: 4273
 		Offset: -30,-24
 
+dog:
+	stand: dog.shp
+		Facings: 8
+	stand2: dog.shp
+		Facings: 8
+	walk: dog.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	run: dog.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	eat: dog.shp
+		Start: 104
+		Length: 14
+		Facings: 8
+		Tick: 120
+	idle1: dog.shp
+		Start: 216
+		Length: 7
+		Tick: 120
+	idle2: dog.shp
+		Start: 224
+		Length: 11
+		Tick: 120
+	die1: dog.shp
+		Start: 236
+		Length: 6
+	die2: dog.shp
+		Start: 242
+		Length: 9
+	die3: dog.shp
+		Start: 236
+		Length: 6
+	die4: dog.shp
+		Start: 242
+		Length: 9
+	die5: dog.shp
+		Start: 251
+		Length: 14
+	die-crushed: DATA.R8
+		Frames: 386, 393, 400, 407, 414, 421, 428, 435
+		Length: 8
+		Tick: 800
+		ZOffset: -511
+	jump: dogbullt.shp
+		Length: 4
+		Facings: 8
+	icon: dogicon.shp
+		Offset: 0,-1
+
 engineer:
 	stand: DATA.R8
 		Start: 1166
@@ -265,6 +319,65 @@ thumper:
 		Start: 4275
 		Offset: -30,-24
 
+grenadier:
+	stand: DATA.R8
+		Start: 2606
+		Facings: -8
+		Transpose: true
+	idle1: DATA.R8
+		Frames: 2700, 2707, 2714, 2721, 2728, 2735, 2742, 2749
+		Length: 8
+	idle2: DATA.R8
+		Frames: 2699, 2706, 2713, 2720, 2727, 2734, 2741, 2748
+		Length: 8
+	run: DATA.R8
+		Start: 2526
+		Length: 6
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	throw: DATA.R8
+		Start: 2574
+		Length: 5
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	die1: DATA.R8
+		Frames: 2694, 2701, 2708, 2715, 2722, 2729, 2736, 2743
+		Length: 8
+	die2: DATA.R8
+		Frames: 2695, 2702, 2709, 2716, 2723, 2730, 2737, 2744
+		Length: 8
+	die3: DATA.R8
+		Frames: 2696, 2703, 2710, 2717, 2724, 2731, 2738, 2745
+		Length: 8
+	die4: DATA.R8
+		Frames: 2697, 2704, 2711, 2718, 2725, 2732, 2738, 2746
+		Length: 8
+	die-crushed: DATA.R8
+		Frames: 2698, 2705, 2712, 2719, 2726, 2733, 2740, 2747
+		Tick: 800
+		ZOffset: -511
+	prone-stand: DATA.R8
+		Start: 2622
+		Facings: -8
+		Transpose: true
+	prone-run: DATA.R8
+		Start: 2622
+		Length: 4
+		Facings: -8
+		Tick: 120
+		Transpose: true
+	prone-throw: DATA.R8
+		Start: 2654
+		Length: 5
+		Facings: -8
+		Tick: 120
+		Transpose: true
+	icon: DATA.R8
+		Start: 4297
+		Offset: -30,-24
+
 fremen:
 	stand: DATA.R8
 		Start: 694
@@ -334,290 +447,59 @@ fremen:
 		Start: 4293
 		Offset: -30,-24
 
-saboteur:
-	stand: DATA.R8
-		Start: 2149
-		Facings: -8
-		Transpose: true
-	idle1: DATA.R8
-		Frames: 2330, 2337, 2344, 2351, 2358, 2365, 2372, 2379
-		Length: 8
-		Tick: 80
-	idle2: DATA.R8
-		Frames: 2331, 2338, 2345, 2352, 2359, 2366, 2373, 2380
-		Length: 8
-		Tick: 80
-	run: DATA.R8
-		Start: 2157
+mechanic:
+	stand: mechanic.shp
+		Facings: 8
+	run: mechanic.shp
+		Start: 8
 		Length: 6
-		Facings: -8
-		Transpose: true
+		Facings: 8
+		Tick: 100
+	repair: mechanic.shp
+		Start: 56
+		Length: 58
 		Tick: 120
-	prone-stand: DATA.R8
-		Start: 2253
-		Facings: -8
-		Transpose: true
-	prone-run: DATA.R8
-		Start: 2261
-		Length: 3
-		Facings: -8
-		Transpose: true
+	standup: mechanic.shp
+		Start: 114
+		Length: 2
+		Facings: 8
+	idle1: mechanic.shp
+		Start: 163
+		Length: 14
 		Tick: 120
-	standup: DATA.R8
-		Start: 2245
-		Facings: -8
-		Transpose: true
+	idle2: mechanic.shp
+		Start: 178
+		Length: 14
 		Tick: 120
-	die1: DATA.R8
-		Frames: 2325, 2332, 2339, 2346, 2353, 2360, 2367, 2374, 2381, 2383, 2385, 2387
+	die1: mechanic.shp
+		Start: 193
+		Length: 7
+	die2: mechanic.shp
+		Start: 201
+		Length: 8
+	die3: mechanic.shp
+		Start: 209
+		Length: 8
+	die4: mechanic.shp
+		Start: 217
 		Length: 12
-		Tick: 80
-	die2: DATA.R8
-		Frames: 2326, 2333, 2340, 2347, 2354, 2361, 2368, 2375, 2382, 2384, 2386, 2388
-		Length: 12
-		Tick: 80
-	die3: DATA.R8
-		Frames: 2327, 2334, 2341, 2348, 2355, 2362, 2369, 2376
-		Length: 8
-		Tick: 80
-	die4: DATA.R8
-		Frames: 2328, 2335, 2342, 2349, 2356, 2363, 2370, 2377
-		Length: 8
-		Tick: 80
-	die-crushed: DATA.R8
-		Frames: 2329, 2336, 2343, 2350, 2357, 2364, 2371, 2378
-		Length: 8
-		Tick: 800
-		ZOffset: -511
-	icon: DATA.R8
-		Start: 4295
-		Offset: -30,-24
-
-sardaukar:
-	stand: DATA.R8
-		Start: 930
-		Facings: -8
-		Transpose: true
-	idle1: DATA.R8
-		Frames: 1111, 1118, 1125, 1132, 1139, 1146, 1153, 1160
-		Length: 8
-		Tick: 80
-		Offset: -1,0
-	idle2: DATA.R8
-		Frames: 1112, 1119, 1126, 1133, 1140, 1147, 1154, 1161
-		Length: 8
-		Tick: 80
-		Offset: -1,0
-	run: DATA.R8
-		Start: 938
-		Length: 6
-		Facings: -8
-		Transpose: true
-		Tick: 120
-	shoot: DATA.R8
-		Start: 978
-		Length: 6
-		Facings: -8
-		Transpose: true
-	prone-stand: DATA.R8
-		Start: 1034
-		Facings: -8
-		Transpose: true
-	prone-run: DATA.R8
-		Start: 1042
-		Length: 3
-		Facings: -8
-		Transpose: true
-		Tick: 120
-	standup: DATA.R8
-		Start: 1026
-		Facings: -8
-		Transpose: true
-		Tick: 120
-	prone-shoot: DATA.R8
-		Start: 1058
-		Length: 6
-		Facings: -8
-		Transpose: true
-	die1: DATA.R8
-		Frames: 1106, 1113, 1120, 1127, 1134, 1141, 1148, 1155, 1162, 1163, 1164, 1165
-		Length: 12
-		Tick: 80
-	die2: DATA.R8
-		Frames: 1107, 1114, 1121, 1128, 1135, 1142, 1149, 1156
-		Length: 8
-		Tick: 80
-	die3: DATA.R8
-		Frames: 1108, 1115, 1122, 1129, 1136, 1143, 1150, 1157
-		Length: 8
-		Tick: 80
-	die4: DATA.R8
-		Frames: 1109, 1116, 1123, 1130, 1137, 1144, 1151, 1158
-		Length: 8
-		Tick: 80
-	die-crushed: DATA.R8
-		Frames: 1110, 1117, 1124, 1131, 1138, 1145, 1152, 1159
-		Length: 8
-		Tick: 800
-		ZOffset: -511
-	icon: DATA.R8
-		Start: 4276
-		Offset: -30,-24
-
-grenadier:
-	stand: DATA.R8
-		Start: 2606
-		Facings: -8
-		Transpose: true
-	idle1: DATA.R8
-		Frames: 2700, 2707, 2714, 2721, 2728, 2735, 2742, 2749
-		Length: 8
-	idle2: DATA.R8
-		Frames: 2699, 2706, 2713, 2720, 2727, 2734, 2741, 2748
-		Length: 8
-	run: DATA.R8
-		Start: 2526
-		Length: 6
-		Facings: -8
-		Transpose: true
-		Tick: 120
-	throw: DATA.R8
-		Start: 2574
-		Length: 5
-		Facings: -8
-		Transpose: true
-		Tick: 120
-	die1: DATA.R8
-		Frames: 2694, 2701, 2708, 2715, 2722, 2729, 2736, 2743
-		Length: 8
-	die2: DATA.R8
-		Frames: 2695, 2702, 2709, 2716, 2723, 2730, 2737, 2744
-		Length: 8
-	die3: DATA.R8
-		Frames: 2696, 2703, 2710, 2717, 2724, 2731, 2738, 2745
-		Length: 8
-	die4: DATA.R8
-		Frames: 2697, 2704, 2711, 2718, 2725, 2732, 2738, 2746
-		Length: 8
+	die5: mechanic.shp
+		Start: 229
+		Length: 18
 	die-crushed: DATA.R8
 		Frames: 2698, 2705, 2712, 2719, 2726, 2733, 2740, 2747
 		Tick: 800
 		ZOffset: -511
-	prone-stand: DATA.R8
-		Start: 2622
-		Facings: -8
-		Transpose: true
-	prone-run: DATA.R8
-		Start: 2622
-		Length: 4
-		Facings: -8
-		Tick: 120
-		Transpose: true
-	prone-throw: DATA.R8
-		Start: 2654
-		Length: 5
-		Facings: -8
-		Tick: 120
-		Transpose: true
-	icon: DATA.R8
-		Start: 4297
-		Offset: -30,-24
-
-sandworm:
-	mouth: DATA.R8
-		Start: 3802
-		Length: 15
-		Tick: 100
-	sand: DATA.R8
-		Start: 3818
-		Length: 20
-		Tick: 100
-	idle: DATA.R8
-		Start: 39
-	lightninga: DATA.R8
-		Start: 3844
-		Length: 5
-		Tick: 80
-		BlendMode: Additive
-	lightningb: DATA.R8
-		Start: 3849
-		Length: 5
-		Tick: 80
-		BlendMode: Additive
-	lightningc: DATA.R8
-		Start: 3854
-		Length: 5
-		Tick: 80
-		BlendMode: Additive
-	lightningd: DATA.R8
-		Start: 3859
-		Length: 5
-		Tick: 80
-		BlendMode: Additive
-	lightninge: DATA.R8
-		Start: 3864
-		Length: 5
-		Tick: 80
-		BlendMode: Additive
-	lightningf: DATA.R8
-		Start: 3869
-		Length: 5
-		Tick: 80
-		BlendMode: Additive
-	icon: wormicon.shp
-
-dog:
-	stand: dog.shp
+	prone-stand: mechanic.shp
+		Start: 130
+		Stride: 4
 		Facings: 8
-	stand2: dog.shp
-		Facings: 8
-	walk: dog.shp
-		Start: 8
-		Length: 6
-		Facings: 8
-		Tick: 80
-	run: dog.shp
-		Start: 56
-		Length: 6
-		Facings: 8
-		Tick: 80
-	eat: dog.shp
-		Start: 104
-		Length: 14
-		Facings: 8
-		Tick: 120
-	idle1: dog.shp
-		Start: 216
-		Length: 7
-		Tick: 120
-	idle2: dog.shp
-		Start: 224
-		Length: 11
-		Tick: 120
-	die1: dog.shp
-		Start: 236
-		Length: 6
-	die2: dog.shp
-		Start: 242
-		Length: 9
-	die3: dog.shp
-		Start: 236
-		Length: 6
-	die4: dog.shp
-		Start: 242
-		Length: 9
-	die5: dog.shp
-		Start: 251
-		Length: 14
-	die-crushed: DATA.R8
-		Frames: 386, 393, 400, 407, 414, 421, 428, 435
-		Length: 8
-		Tick: 800
-		ZOffset: -511
-	jump: dogbullt.shp
+	prone-run: mechanic.shp
+		Start: 130
 		Length: 4
 		Facings: 8
-	icon: dogicon.shp
+		Tick: 100
+	icon: mechanicicon.shp
 		Offset: 0,-1
 
 flamethrower:
@@ -806,59 +688,26 @@ fedaykin:
 	icon: fedaykinicon.shp
 		Offset: 0,-1
 
-mechanic:
-	stand: mechanic.shp
-		Facings: 8
-	run: mechanic.shp
-		Start: 8
+drone:
+	stand: drone.shp
+		Start: 48
+		ShadowStart: 138
+		Facings: -8
+	run: drone.shp
+		Start: 0
 		Length: 6
-		Facings: 8
-		Tick: 100
-	repair: mechanic.shp
+		ShadowStart: 88
+		Facings: -8
+		Tick: 80
+	jump: drone.shp
 		Start: 56
-		Length: 58
-		Tick: 120
-	standup: mechanic.shp
-		Start: 114
-		Length: 2
-		Facings: 8
-	idle1: mechanic.shp
-		Start: 163
-		Length: 14
-		Tick: 120
-	idle2: mechanic.shp
-		Start: 178
-		Length: 14
-		Tick: 120
-	die1: mechanic.shp
-		Start: 193
-		Length: 7
-	die2: mechanic.shp
-		Start: 201
-		Length: 8
-	die3: mechanic.shp
-		Start: 209
-		Length: 8
-	die4: mechanic.shp
-		Start: 217
-		Length: 12
-	die5: mechanic.shp
-		Start: 229
-		Length: 18
-	die-crushed: DATA.R8
-		Frames: 2698, 2705, 2712, 2719, 2726, 2733, 2740, 2747
-		Tick: 800
-		ZOffset: -511
-	prone-stand: mechanic.shp
-		Start: 130
-		Stride: 4
-		Facings: 8
-	prone-run: mechanic.shp
-		Start: 130
 		Length: 4
+		ShadowStart: 144
+		Facings: -8
+	shoot: dronejump.shp
 		Facings: 8
-		Tick: 100
-	icon: mechanicicon.shp
+		ShadowStart: 8
+	icon: droneicon.shp
 		Offset: 0,-1
 
 rocketeer:
@@ -941,6 +790,136 @@ rocketeer.husk:
 		Tick: 80
 	shadow: infshdw.shp
 		Start: 1
+
+sardaukar:
+	stand: DATA.R8
+		Start: 930
+		Facings: -8
+		Transpose: true
+	idle1: DATA.R8
+		Frames: 1111, 1118, 1125, 1132, 1139, 1146, 1153, 1160
+		Length: 8
+		Tick: 80
+		Offset: -1,0
+	idle2: DATA.R8
+		Frames: 1112, 1119, 1126, 1133, 1140, 1147, 1154, 1161
+		Length: 8
+		Tick: 80
+		Offset: -1,0
+	run: DATA.R8
+		Start: 938
+		Length: 6
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	shoot: DATA.R8
+		Start: 978
+		Length: 6
+		Facings: -8
+		Transpose: true
+	prone-stand: DATA.R8
+		Start: 1034
+		Facings: -8
+		Transpose: true
+	prone-run: DATA.R8
+		Start: 1042
+		Length: 3
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	standup: DATA.R8
+		Start: 1026
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	prone-shoot: DATA.R8
+		Start: 1058
+		Length: 6
+		Facings: -8
+		Transpose: true
+	die1: DATA.R8
+		Frames: 1106, 1113, 1120, 1127, 1134, 1141, 1148, 1155, 1162, 1163, 1164, 1165
+		Length: 12
+		Tick: 80
+	die2: DATA.R8
+		Frames: 1107, 1114, 1121, 1128, 1135, 1142, 1149, 1156
+		Length: 8
+		Tick: 80
+	die3: DATA.R8
+		Frames: 1108, 1115, 1122, 1129, 1136, 1143, 1150, 1157
+		Length: 8
+		Tick: 80
+	die4: DATA.R8
+		Frames: 1109, 1116, 1123, 1130, 1137, 1144, 1151, 1158
+		Length: 8
+		Tick: 80
+	die-crushed: DATA.R8
+		Frames: 1110, 1117, 1124, 1131, 1138, 1145, 1152, 1159
+		Length: 8
+		Tick: 800
+		ZOffset: -511
+	icon: DATA.R8
+		Start: 4276
+		Offset: -30,-24
+
+saboteur:
+	stand: DATA.R8
+		Start: 2149
+		Facings: -8
+		Transpose: true
+	idle1: DATA.R8
+		Frames: 2330, 2337, 2344, 2351, 2358, 2365, 2372, 2379
+		Length: 8
+		Tick: 80
+	idle2: DATA.R8
+		Frames: 2331, 2338, 2345, 2352, 2359, 2366, 2373, 2380
+		Length: 8
+		Tick: 80
+	run: DATA.R8
+		Start: 2157
+		Length: 6
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	prone-stand: DATA.R8
+		Start: 2253
+		Facings: -8
+		Transpose: true
+	prone-run: DATA.R8
+		Start: 2261
+		Length: 3
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	standup: DATA.R8
+		Start: 2245
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	die1: DATA.R8
+		Frames: 2325, 2332, 2339, 2346, 2353, 2360, 2367, 2374, 2381, 2383, 2385, 2387
+		Length: 12
+		Tick: 80
+	die2: DATA.R8
+		Frames: 2326, 2333, 2340, 2347, 2354, 2361, 2368, 2375, 2382, 2384, 2386, 2388
+		Length: 12
+		Tick: 80
+	die3: DATA.R8
+		Frames: 2327, 2334, 2341, 2348, 2355, 2362, 2369, 2376
+		Length: 8
+		Tick: 80
+	die4: DATA.R8
+		Frames: 2328, 2335, 2342, 2349, 2356, 2363, 2370, 2377
+		Length: 8
+		Tick: 80
+	die-crushed: DATA.R8
+		Frames: 2329, 2336, 2343, 2350, 2357, 2364, 2371, 2378
+		Length: 8
+		Tick: 800
+		ZOffset: -511
+	icon: DATA.R8
+		Start: 4295
+		Offset: -30,-24
 
 sniper:
 	stand: sniper.shp
@@ -1047,3 +1026,46 @@ hijacker:
 		Tick: 80
 	icon: hijackericon.shp
 		Offset: 0,-1
+
+sandworm:
+	mouth: DATA.R8
+		Start: 3802
+		Length: 15
+		Tick: 100
+	sand: DATA.R8
+		Start: 3818
+		Length: 20
+		Tick: 100
+	idle: DATA.R8
+		Start: 39
+	lightninga: DATA.R8
+		Start: 3844
+		Length: 5
+		Tick: 80
+		BlendMode: Additive
+	lightningb: DATA.R8
+		Start: 3849
+		Length: 5
+		Tick: 80
+		BlendMode: Additive
+	lightningc: DATA.R8
+		Start: 3854
+		Length: 5
+		Tick: 80
+		BlendMode: Additive
+	lightningd: DATA.R8
+		Start: 3859
+		Length: 5
+		Tick: 80
+		BlendMode: Additive
+	lightninge: DATA.R8
+		Start: 3864
+		Length: 5
+		Tick: 80
+		BlendMode: Additive
+	lightningf: DATA.R8
+		Start: 3869
+		Length: 5
+		Tick: 80
+		BlendMode: Additive
+	icon: wormicon.shp

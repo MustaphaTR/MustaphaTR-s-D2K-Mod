@@ -421,6 +421,7 @@ icon:
 		Offset: -30,-24
 	stealth: stealthicon.shp
 	fedaykin: fedaykinicon.shp
+	drone: droneicon.shp
 	rocketeer: rocketeericon.shp
 	sniper: snipericon.shp
 	hijacker: hijackericon.shp

@@ -846,6 +846,7 @@ repair_pad:
 	RepairsUnits:
 		Interval: 10
 		HpPerStep: 800
+		RepairDamageTypes: KillsDrone
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
@@ -1089,6 +1090,19 @@ palace:
 		ReadyAudio: Reinforce
 		BlockedAudio: NoRoom
 		OrderName: ProduceActorPower.Fedaykin
+	ProduceActorPower@drone:
+		Description: Build Drones
+		LongDesc: Robotic vehicle that can sabotage vehicles\nand kill infantry.\nCan detect cloaked units.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Icon: drone
+		PauseOnCondition: disabled
+		RequiresCondition: ixian
+		Prerequisites: ~palace.ixian, ~techlevel.7
+		Actors: drone, drone, drone
+		Type: Drone
+		ChargeInterval: 3000
+		ReadyAudio: Reinforce
+		BlockedAudio: NoRoom
+		OrderName: ProduceActorPower.Drone
 	ProduceActorPower@rocketeer:
 		Description: Recruit Rocketeer
 		LongDesc: Flying infantry unit armed with dual machine guns\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Flying
@@ -1157,6 +1171,9 @@ palace:
 	Production@Fremen:
 		Produces: Fedaykin
 		RequiresCondition: fremen
+	Production@Ixian:
+		Produces: Drone
+		RequiresCondition: ixian
 	Production@Harkonnen:
 		Produces: Rocketeer
 		RequiresCondition: harkonnen
@@ -1175,6 +1192,9 @@ palace:
 	GrantConditionOnFaction@Fremen:
 		Condition: fremen
 		Factions: fremen
+	GrantConditionOnFaction@Ixian:
+		Condition: ixian
+		Factions: ixian
 	GrantConditionOnFaction@Harkonnen:
 		Condition: harkonnen
 		Factions: harkonnen
@@ -1188,7 +1208,7 @@ palace:
 		Condition: smuggler
 		Factions: smuggler
 	SupportPowerChargeBar:
-		RequiresCondition: atreides || fremen || harkonnen || ordos || mercenary || smuggler
+		RequiresCondition: atreides || fremen || ixian || harkonnen || ordos || mercenary || smuggler
 	ProvidesPrerequisite@buildingname:
 
 conyard.atreides:
