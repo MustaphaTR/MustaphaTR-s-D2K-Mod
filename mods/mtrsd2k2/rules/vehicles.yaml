@@ -859,7 +859,7 @@ jammer:
 		Offset: -256,0,256
 	ProximityExternalCondition@JAMMER:
 		Range: 18c0
-		ValidStances: Enemy, Neutral
+		ValidRelationships: Enemy, Neutral
 		Condition: jammed
 	WithRangeCircle@JAMMER:
 		Type: jammer
@@ -882,7 +882,7 @@ jammer:
 		PauseOnCondition: ecmdisable
 	JamsMissiles:
 		Range: 5c0
-		DeflectionStances: Neutral, Enemy
+		DeflectionRelationships: Neutral, Enemy
 	Targetable:
 		TargetTypes: Ground, Jammer, Vehicle
 	RenderJammerCircle:
@@ -1210,8 +1210,6 @@ ifv:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 1
-		PipCount: 1
-		UnloadVoice: Move
 		LoadingCondition: notmobile
 		PassengerConditions:
 			light_inf: ifv-light

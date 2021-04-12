@@ -584,7 +584,6 @@ rocketeer:
 	Aircraft:
 		CruiseAltitude: 1200
 		InitialFacing: 92
-		LandWhenIdle: false
 		TurnSpeed: 1023
 		Speed: 88
 		AltitudeVelocity: 83
@@ -599,7 +598,7 @@ rocketeer:
 		DefaultAttackSequence: shoot-air
 		IdleSequences: idle-air
 	Hovers:
-		OffsetModifier: -45
+		BobDistance: -45
 	-Targetable:
 	Targetable@GROUND:
 		TargetTypes: Ground, Infantry, DetonateAttack
@@ -754,8 +753,6 @@ hijacker:
 		HP: 50000
 	RevealsShroud:
 		Range: 3c0
-	Passenger:
-		PipType: Yellow
 	CaptureManager:
 	Captures:
 		CaptureTypes: vehicle
