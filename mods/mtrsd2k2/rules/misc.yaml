@@ -488,5 +488,4 @@ upgrade.hightech:
 			ixian: hightech.atreides
 			harkonnen: hightech.harkonnen
 			corrino: hightech.harkonnen
-			mercenary: hightech.mercenary
 	ProvidesPrerequisite@upgradename:
