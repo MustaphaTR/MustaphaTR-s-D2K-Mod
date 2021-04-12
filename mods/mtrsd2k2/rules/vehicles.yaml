@@ -988,6 +988,9 @@ quake_tank:
 	WithRangeCircle:
 		Color: FFFF0080
 		Range: 7c0
+	SpawnActorOnDeath:
+		Actor: quake_tank.husk
+		RequiresCondition: !deployed
 	Cloak@STEALTH:
 		Palette: racloak
 	RenderSprites:

@@ -182,6 +182,20 @@ devastator.husk:
 	InfiltrateForTransform:
 		IntoActor: devastator
 
+quake_tank.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 12500
+	Tooltip:
+		Name: Quake Tank (Destroyed)
+	TransformOnCapture:
+		IntoActor: quake_tank
+	InfiltrateForTransform:
+		IntoActor: quake_tank
+	RenderSprites:
+		PlayerPalette: raplayer
+		Scale: 1.25
+
 deviator.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:
