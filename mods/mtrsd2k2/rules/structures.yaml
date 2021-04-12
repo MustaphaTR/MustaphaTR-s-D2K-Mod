@@ -412,6 +412,8 @@ outpost:
 		Amount: -125
 	InfiltrateForExploration:
 		Types: Sabotage
+	InfiltrateForSupportPowerReset:
+		Types: Sabotage
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.outpost
 	ExternalCondition@JAMMED:
@@ -632,6 +634,9 @@ high_tech_factory:
 		BuildDurationModifier: 100
 		Prerequisites: outpost, ~techlevel.4
 		Description: Unlocks advanced technology.
+	Targetable@SABOTAGE:
+		TargetTypes: Sabotage
+		RequiresCondition: ornithopter
 	Selectable:
 		Bounds: 96,96
 	Valued:
@@ -698,6 +703,9 @@ high_tech_factory:
 		Prerequisite: hightech.swarmer
 		Factions: ordos, mercenary, smuggler
 	ProvidesPrerequisite@buildingname:
+	GrantConditionOnPrerequisite@ornithopter:
+		Prerequisites: upgrade.hightech
+		Condition: ornithopter
 	AirstrikePower:
 		Icon: ornistrike
 		Description: Air Strike
@@ -714,6 +722,8 @@ high_tech_factory:
 		SupportPowerPaletteOrder: 10
 	Power:
 		Amount: -80
+	InfiltrateForSupportPowerReset:
+		Types: Sabotage
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.hightech
 
@@ -896,6 +906,9 @@ research_centre:
 		BuildDurationModifier: 100
 		Prerequisites: outpost, heavy_factory, upgrade.heavy, ~techlevel.4
 		Description: Unlocks advanced tanks.
+	Targetable@SABOTAGE:
+		TargetTypes: Sabotage
+		RequiresCondition: corrino
 	Selectable:
 		Bounds: 96,96
 	Valued:
@@ -936,11 +949,16 @@ research_centre:
 		Sequence: idle-lights
 	Power:
 		Amount: -175
+	InfiltrateForSupportPowerReset:
+		Types: Sabotage
 	ProvidesPrerequisite@hi_tech_or_ix:
 		Prerequisite: hi_tech_or_ix
 	ProvidesPrerequisite@corrino:
 		Prerequisite: research_centre.corrino
 		Factions: corrino
+	GrantConditionOnPrerequisite@Corrino:
+		Prerequisites: research_centre.corrino
+		Condition: corrino
 	GrantExternalConditionPower@RocketStrike:
 		OrderName: RocketStrikePowerInfoOrder
 		Icon: large_gun_turret
@@ -965,6 +983,9 @@ palace:
 		BuildDurationModifier: 100
 		Prerequisites: research_centre, ~techlevel.7
 		Description: Unlocks elite infantry and weapons.
+	Targetable@SABOTAGE:
+		TargetTypes: Sabotage
+		RequiresCondition: atreides || fremen || ixian || harkonnen || ordos || mercenary || smuggler
 	Selectable:
 		Bounds: 96,96
 	Valued:
@@ -1008,6 +1029,8 @@ palace:
 		Condition: launchpad-damaged
 	Power:
 		Amount: -200
+	InfiltrateForSupportPowerReset:
+		Types: Sabotage
 	ProvidesPrerequisite@atreides:
 		Prerequisite: palace.atreides
 		Factions: atreides
