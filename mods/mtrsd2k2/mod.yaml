@@ -258,7 +258,7 @@ ModContent:
 			TestFiles: ^SupportDir|Content/d2k/v2/Movies/A_BR01_E.VQA
 			Sources: d2k-a, d2k-a-linux, d2k-b, d2k-b-linux, d2k-c, d2k-c-linux, d2k-d, d2k-d-linux, d2k-e, d2k-e-linux
 	Downloads:
-		d2k|installer/downloads.yaml
+		mtrsd2k2|installer/downloads.yaml
 	Sources:
 		mtrsd2k2|installer/d2k-a.yaml
 		mtrsd2k2|installer/d2k-b.yaml
