@@ -150,7 +150,7 @@ sietch:
 		BuildSounds: BUILD1.WAV
 	-D2kActorPreviewPlaceBuildingPreview:
 	ActorPreviewPlaceBuildingPreview:
-		OverridePalette: placebuilding
+		PreviewAlpha: 0.65
 	Valued:
 		Cost: 225
 	Health:
@@ -160,6 +160,8 @@ sietch:
 	RevealsShroud:
 		Range: 10c0
 	RallyPoint:
+	CommandBarBlacklist:
+		DisableStop: false
 	Exit@1:
 		SpawnOffset: 352,576,0
 		ExitCell: 0,2

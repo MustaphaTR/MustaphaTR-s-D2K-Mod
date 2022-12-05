@@ -27,6 +27,10 @@ concretea:
 		Dimensions: 2,2
 	Tooltip:
 		Name: Concrete Slab
+	Encyclopedia:
+		Description: If buildings are not placed on concrete, they will be damaged. Buildings can be repaired, but unless the building sits completely on concrete, the building will suffer continual weathering damage from the erosive desert environment.\n\nConcrete is vulnerable to most weapon types. Concrete cannot be repaired if damaged.
+		Category: Support Buildings
+		Order: 10
 	Valued:
 		Cost: 15
 	Buildable:
@@ -34,6 +38,8 @@ concretea:
 		BuildDuration: 62
 		BuildDurationModifier: 100
 		Prerequisites: ~!global-auto-concrete, ~techlevel.1
+	WithSpriteBody:
+		Sequence: preview
 
 concreteb:
 	Inherits: ^concrete
@@ -60,7 +66,11 @@ silo:
 		Prerequisites: refinery, ~!cyard.smuggler, ~techlevel.1
 		Description: Stores excess harvested Spice.
 	Selectable:
-		Bounds: 32,32
+		Bounds: 1024, 1024
+	Encyclopedia:
+		Description: The Spice Silo allows the player to store 2000 harvested Spice. When a Refinery completes processing, excess Spice is automatically distributed evenly among the Silos and Refineries. When harvested Spice exceeds Silo capacity, the excess will be lost. When Spice Silos are destroyed or captured, the amount stored will be dispersed among other Silos and Refineries unless there is insufficient storage capacity.\n\nThe Spice Silo is vulnerable to most types of weapons.
+		Category: Support Buildings
+		Order: 10
 	Valued:
 		Cost: 120
 	Tooltip:
@@ -121,6 +131,8 @@ silo.smuggler:
 		Class: silo
 	Power:
 		Amount: -10
+	UpdatesPlayerStatistics:
+		OverrideActor: silo
 
 wall:
 	Inherits@1: ^SpriteActor
@@ -150,8 +162,12 @@ wall:
 	D2kBuilding:
 		BuildSounds: CHUNG.WAV
 		TerrainTypes: Rock, Concrete
+	Encyclopedia:
+		Description: Base defense. Concrete walls are the most effective barriers on Dune. Concrete walls will block tank bullets and impede unit movement.\n\nWalls can only be damaged by explosive weapons, missiles and shells. Like concrete slabs, walls cannot be repaired if damaged.
+		Category: Support Buildings
+		Order: 20
 	FootprintPlaceBuildingPreview:
-		LineBuildSegmentPalette: placelinesegment
+		LineBuildFootprintAlpha: 0.65
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 7
@@ -207,6 +223,10 @@ mine_ap:
 	Explodes:
 		Weapon: APMine
 		EmptyWeapon: APMine
+	Encyclopedia:
+		Description: Mines are defensive measures used by the Smugglers instead of towers. They are hidden from enemy's view and explode when an enemy unit moves over them, dealing damage.\n\nThe Anti-Personnel Mine is good against Infantry.\n\nWhile normally invisible to enemy, if detected mines can be easily destroyed by any weapon.
+		Category: Support Buildings
+		Order: 60
 
 mine_at:
 	Inherits: ^Mine
@@ -222,6 +242,10 @@ mine_at:
 	Explodes:
 		Weapon: ATMine
 		EmptyWeapon: ATMine
+	Encyclopedia:
+		Description: Mines are defensive measures used by the Smugglers instead of towers. They are hidden from enemy's view and explode when an enemy unit moves over them, dealing damage.\n\nThe Anti-Tank Mine is good against Vehicles.\n\nWhile normally invisible to enemy, if detected mines can be easily destroyed by any weapon.
+		Category: Support Buildings
+		Order: 70
 
 machine_gun_tower:
 	Inherits: ^Defense
@@ -237,11 +261,15 @@ machine_gun_tower:
 		Cost: 500
 	Tooltip:
 		Name: Machine Gun Tower
+	Encyclopedia:
+		Description: The Machine Gun Tower is a medium range defensive structure used by House Atreides, the Fremen and the Ixians. It is effective against infantry and light vehicles. The Machine Gun Tower will fire on any enemy unit within range.\n\nThe Machine Gun Tower is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Category: Support Buildings
+		Order: 30
 	RequiresBuildableArea:
 		Adjacent: 4
 	Selectable:
-		Bounds: 32,32
-		DecorationBounds: 32,40,0,-8
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1280, 0, -256
 	Health:
 		HP: 25000
 	Armor:
@@ -277,11 +305,15 @@ flame_tower:
 		Cost: 500
 	Tooltip:
 		Name: Flame Tower
+	Encyclopedia:
+		Description: The Flame Tower is a short range defensive structure used by House Harkonnen and House Corrino. It is effective against infantry and light vehicles. The Flame Tower will fire on any enemy unit within range.\n\nThe Flame Tower is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Category: Support Buildings
+		Order: 40
 	RequiresBuildableArea:
 		Adjacent: 4
 	Selectable:
-		Bounds: 32,32
-		DecorationBounds: 32,40,0,-8
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1280, 0, -256
 	Health:
 		HP: 25000
 	Armor:
@@ -314,11 +346,15 @@ artillery_platform:
 		Cost: 500
 	Tooltip:
 		Name: Artillery Platform
+	Encyclopedia:
+		Description: The Artillery Platform is a long range defensive structure used by House Ordos and thier mercenaries. It is effective against infantry and light vehicles. The Artillery Platform will fire on any enemy unit within range.\n\nThe Artillery Platform is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Category: Support Buildings
+		Order: 50
 	RequiresBuildableArea:
 		Adjacent: 4
 	Selectable:
-		Bounds: 32,32
-		DecorationBounds: 32,40,0,-8
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1280, 0, -256
 	Health:
 		HP: 25000
 	Armor:
@@ -363,10 +399,14 @@ medium_gun_turret:
 	RequiresBuildableArea:
 		Adjacent: 4
 	Selectable:
-		Bounds: 32,32
-		DecorationBounds: 32,40,0,-8
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1280, 0, -256
 	Health:
 		HP: 27000
+	Encyclopedia:
+		Description: The Gun Turret has a medium range gun which is effective against vehicles, especially heavily armored vehicles. The Gun Turret will fire on any enemy unit within range. The Gun Turret's targeting equipment requires power to operate.\n\nThe Gun Turret is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Category: Support Buildings
+		Order: 80
 	Armor:
 		Type: heavy
 	RevealsShroud:
@@ -406,11 +446,15 @@ large_gun_turret:
 		Cost: 750
 	Tooltip:
 		Name: Rocket Turret
+	Encyclopedia:
+		Description: The substantially improved Rocket Turret has a longer range and a higher rate of fire than the Gun Turret. The Rocket Turret's advanced targeting equipment requires power to operate.\n\nThe Rocket Turret is resistant to bullet and explosive weapons, but vulnerable to missiles and high caliber guns.
+		Category: Support Buildings
+		Order: 90
 	RequiresBuildableArea:
 		Adjacent: 4
 	Selectable:
-		Bounds: 32,32
-		DecorationBounds: 32,40,0,-8
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1280, 0, -256
 	Health:
 		HP: 30000
 	Armor:

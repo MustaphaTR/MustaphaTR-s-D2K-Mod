@@ -15,6 +15,7 @@
 ^GainsExperience:
 	GainsExperience:
 		LevelUpNotification: LevelUp
+		LevelUpTextNotification: Unit promoted.
 		Conditions:
 			200: rank-veteran
 			400: rank-veteran
@@ -139,7 +140,7 @@
 		Condition: ecmdisable
 	WithColoredOverlay@ECMDISABLE:
 		RequiresCondition: ecmdisable
-		Palette: disabled
+		Color: 000000B4
 	TimedConditionBar@ECMDISABLE:
 		Condition: ecmdisable
 		Color: DDDDDD
@@ -246,7 +247,7 @@
 		Locomotor: vehicle
 		PauseOnCondition: notmobile || being-captured || being-droned || ecmdisable
 	Selectable:
-		Bounds: 32,32
+		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Vehicle, DetonateAttack, C4
 	Targetable@REPAIR:
@@ -260,6 +261,7 @@
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	Repairable:
 		RepairActors: repair_pad, repair_pad.ixian
 	Guard:
@@ -343,7 +345,7 @@
 	OwnerLostAction:
 		Action: ChangeOwner
 	WithColoredOverlay@IDISABLE:
-		Palette: disabled
+		Color: 000000B4
 	Explodes:
 		Weapon: UnitExplodeMed
 		EmptyWeapon: UnitExplodeMed
@@ -406,8 +408,8 @@
 		AlwaysTurnInPlace: true
 		Locomotor: foot
 	Selectable:
-		Bounds: 24,24,0,-4
-		DecorationBounds: 12,20,0,-4
+		Bounds: 768, 768, 0, -128
+		DecorationBounds: 384, 640, 0, -128
 	Targetable:
 		TargetTypes: Ground, Infantry, DetonateAttack
 	QuantizeFacingsFromSequence:
@@ -431,6 +433,7 @@
 		CargoType: Infantry
 	HiddenUnderFog:
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	Crushable:
 		CrushSound: CRUSH1.WAV
 	Guard:
@@ -455,6 +458,7 @@
 	MapEditorData:
 		Categories: Infantry
 	AttackFrontal:
+		FacingTolerance: 0
 	EdibleByLeap:
 
 ^Plane:
@@ -471,8 +475,8 @@
 		UseLocation: true
 	HiddenUnderFog:
 		Type: GroundPosition
-		AlwaysVisibleRelationships: None
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	AttackMove:
 	WithFacingSpriteBody:
 	WithShadow:
@@ -509,7 +513,7 @@
 		ConcretePrerequisites: global-auto-concrete
 	D2kActorPreviewPlaceBuildingPreview:
 		RequiresPrerequisites: !global-auto-concrete
-		OverridePalette: placebuilding
+		PreviewAlpha: 0.65
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 3
@@ -529,7 +533,7 @@
 		EmptyWeapon: BuildingExplode
 	RepairableBuilding:
 		RepairStep: 500
-		PlayerExperience: 25
+		PlayerExperience: 5
 		RepairingNotification: Repairing
 	SpawnActorsOnSell:
 		ActorTypes: light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, trooper, trooper, trooper, trooper, engineer, engineer, engineer, engineer, engineer
@@ -537,14 +541,18 @@
 		RequiredForShortGame: true
 	FrozenUnderFog:
 	CaptureNotification:
+		TextNotification: Enemy building captured.
+		LoseTextNotification: One of our buildings has been captured.
 	ActorLostNotification:
 		Notification: BuildingLost
+		TextNotification: Building lost.
 	ShakeOnDeath:
 	Demolishable:
 		Condition: being-demolished
 	Sellable:
 		RequiresCondition: !build-incomplete && !being-demolished
 		SellSounds: BUILD1.WAV
+		Notification: StructureSold
 	Guardable:
 		Range: 3c0
 	ThrowsShrapnel:
@@ -614,7 +622,7 @@
 ^Mine:
 	Inherits: ^SpriteActor
 	Interactable:
-		Bounds: 24,24
+		Bounds: 768, 768
 	Buildable:
 		Queue: Defense
 		BuildDurationModifier: 100
@@ -637,7 +645,7 @@
 		AreaTypes: building
 		Adjacent: 8
 	ActorPreviewPlaceBuildingPreview:
-		OverridePalette: placebuildingra
+		PreviewAlpha: 0.65
 	RevealsShroud:
 		Range: 1c0
 	Sellable:
@@ -646,7 +654,7 @@
 		CloakSound:
 		UncloakSound:
 		Palette:
-		CloakTypes: Mine
+		DetectionTypes: Mine
 		InitialDelay: 0
 	Tooltip:
 		Name: Mine
@@ -658,12 +666,11 @@
 		Categories: System
 	RenderSprites:
 		PlayerPalette: raplayer
-		Scale: 1.25
 
 ^DisableOnLowPower:
 	WithColoredOverlay@IDISABLE:
 		RequiresCondition: disabled
-		Palette: disabled
+		Color: 000000B4
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
@@ -701,7 +708,7 @@
 ^DisabledByPowerOutage:
 	WithColoredOverlay@IDISABLE:
 		RequiresCondition: disabled
-		Palette: disabled
+		Color: 000000B4
 	GrantCondition@IDISABLE:
 		RequiresCondition: power-outage
 		Condition: disabled
@@ -752,6 +759,7 @@
 		PrimaryCondition: primary
 		ProductionQueues: Building
 		SelectionNotification: PrimaryBuildingSelected
+		SelectionTextNotification: Primary building selected.
 	WithTextDecoration@primary:
 		RequiresCondition: primary
 		Position: Top

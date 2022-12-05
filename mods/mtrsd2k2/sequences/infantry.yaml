@@ -689,6 +689,8 @@ fedaykin:
 		Offset: 0,-1
 
 drone:
+	Defaults:
+		Scale: 0.75
 	stand: drone.shp
 		Start: 48
 		ShadowStart: 138
@@ -709,6 +711,7 @@ drone:
 		ShadowStart: 8
 	icon: droneicon.shp
 		Offset: 0,-1
+		Scale: 1
 
 rocketeer:
 	Defaults: rocketeer.shp

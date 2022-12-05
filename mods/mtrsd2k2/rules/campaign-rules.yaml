@@ -16,12 +16,12 @@ Player:
 
 World:
 	-CrateSpawner:
-	-SpawnMPUnits:
-	-MPStartLocations:
+	-SpawnStartingUnits:
+	-MapStartingLocations:
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES
 	ActorSpawnManager:
-		Minimum: 1
+		Minimum: 0
 		Maximum: 1
 	MapCreeps:
 		CheckboxLocked: True
@@ -41,3 +41,10 @@ World:
 ^AutoTargetAllAssaultMove:
 	GrantConditionOnBotOwner@BOTOWNER:
 		Bots: campaign
+
+sandworm:
+	Sandworm:
+		ChanceToDisappear: 40
+
+harvester:
+	-MustBeDestroyed:

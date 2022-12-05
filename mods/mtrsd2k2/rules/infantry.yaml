@@ -20,6 +20,10 @@ light_inf:
 		Speed: 43
 	Armament:
 		Weapon: LMG
+	Encyclopedia:
+		Description: Light Infantry are lightly armored foot soldiers, equipped with 9mm RP assault rifles. Light Infantry are effective against other infantry and lightly armored vehicles.\n\nLight Infantry are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 0
+		Category: Infantry
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 
@@ -51,6 +55,10 @@ trooper:
 	Armament@AA:
 		Weapon: BazookaAA
 		LocalOffset: 128,0,256
+	Encyclopedia:
+		Description: Armed with missile launchers, Troopers fire wire guided armor-piercing warheads. These units are particularly effective against vehicles (especially armored ones) and buildings. However, this unit is largely useless against infantry.\n\nTroopers are resistant to anti-tank weaponry but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 10
+		Category: Infantry
 	TakeCover:
 		ProneOffset: 324,0,-204
 	WithInfantryBody:
@@ -72,9 +80,13 @@ dog:
 		AddToArmyValue: true
 	Selectable:
 		Class: dog
-		Bounds: 12,17,-1,-4
+		Bounds: 384, 544, -32, -128
 	Health:
 		HP: 1400
+	Encyclopedia:
+		Description: The Attack Dog is a fast scout infantry capable of dealing with lone infantry with ease.\n\nAttack Dogs are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 50
+		Category: Infantry
 	Mobile:
 		Speed: 89
 		Voice: Move
@@ -152,7 +164,11 @@ engineer:
 	CaptureManager:
 	Captures:
 		CaptureTypes: building
-		PlayerExperience: 50
+		PlayerExperience: 10
+	Encyclopedia:
+		Description: Engineers can be used to capture enemy buildings and repair friendly ones.\n\nEngineers are resistant to anti-tank weaponry but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 40
+		Category: Infantry
 	-RevealOnFire:
 	Voiced:
 		VoiceSet: EngineerVoice
@@ -180,12 +196,17 @@ thumper:
 		Range: 2c768
 	Mobile:
 		Speed: 43
-		RequiresCondition: undeployed
+		RequireForceMoveCondition: !undeployed
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
+		UndeployOnMove: true
 		Facing: 512
 		AllowedTerrainTypes: Sand, Spice, Dune, SpiceSand
+	Encyclopedia:
+		Description: The Thumper Infantry can deploy a noisy hammering device which will attract sand worms to the area.\n\nGrenadiers are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 50
+		Category: Infantry
 	WithInfantryBody:
 		RequiresCondition: undeployed
 	WithSpriteBody@DEPLOYED:
@@ -230,6 +251,10 @@ grenadier:
 		Weapon: grenade
 		LocalOffset: 192,0,224
 		FireDelay: 3
+	Encyclopedia:
+		Description: The Grenadier is an infantry artillery unit which are strong against buildings. They can explode when killed dealing damage to nearby units.\n\nGrenadiers are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 60
+		Category: Infantry
 	TakeCover:
 		ProneOffset: 96,100,-64
 	WithInfantryBody:
@@ -249,6 +274,10 @@ nsfremen:
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.fremen, upgrade.barracks, high_tech_factory, ~techlevel.5
 		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+	Encyclopedia:
+		Description: Fremen are the native desert warriors of Dune. Fremen ground units carry 10mm Assault Rifles and Rockets. Their firepower is equally effective against infantry and vehicles. Fremen employed by House Atreides are stealthed unless firing.\n\nFremen units are very vulnerable to high explosive and bullet weapons.
+		Order: 70
+		Category: Infantry
 	Selectable:
 		Class: nsfremen
 	RenderSprites:
@@ -285,6 +314,10 @@ mechanic:
 		HP: 52500
 	Armor:
 		Type: none
+	Encyclopedia:
+		Description: The Mechanic are support infantry capable of repairing nearby vehicles or vehicle husks.\n\nMechanics are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 80
+		Category: Infantry
 	Mobile:
 		Speed: 38
 	RevealsShroud:
@@ -296,6 +329,7 @@ mechanic:
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
 	AttackFrontal:
+		FacingTolerance: 0
 	CaptureManager:
 	Captures:
 		CaptureTypes: husk
@@ -342,6 +376,10 @@ flamethrower:
 		HP: 6000
 	Armor:
 		Type: none
+	Encyclopedia:
+		Description: Flamethrowers are infantry armed with short range flame weapons that can deal high damage to infantry and buildings.\n\nFlamethrowers are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 90
+		Category: Infantry
 	Mobile:
 		Speed: 36
 	RevealsShroud:
@@ -351,6 +389,7 @@ flamethrower:
 	Armament:
 		Weapon: flamegun
 	AttackFrontal:
+		FacingTolerance: 0
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	RenderSprites:
@@ -380,6 +419,10 @@ plasma_infantry:
 		HP: 6500
 	Armor:
 		Type: none
+	Encyclopedia:
+		Description: Plasma Infantry are infantry armed with portable plasma launchers that can deal good damage to armored units.\n\nPlasma Infantry are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 100
+		Category: Infantry
 	Mobile:
 		Speed: 28
 	RevealsShroud:
@@ -390,6 +433,7 @@ plasma_infantry:
 		Weapon: PlasBullet
 		LocalOffset: 427,0,341
 	AttackFrontal:
+		FacingTolerance: 0
 
 fremen:
 	Inherits: ^Infantry
@@ -448,10 +492,14 @@ fedaykin:
 		BuildPaletteOrder: 120
 		Prerequisites: ~disabled
 		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+	Encyclopedia:
+		Description: The Fedaykin is elite Fremen infantry armed with portable sonic weapons. They are effective against infantry and lightly armored vehicles - but weaker against armored targets.\n\nThe Fedaykin is resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 120
+		Category: Infantry
 	Mobile:
 		Speed: 41
 	Valued:
-		Cost: 400	## actually 0, but spawns from support power at Palace
+		Cost: 400 ## actually 0, but spawns from support power at Palace
 	Health:
 		HP: 8500
 	RevealsShroud:
@@ -459,6 +507,7 @@ fedaykin:
 	Armament:
 		Weapon: sound2
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	Crushable:
@@ -480,11 +529,15 @@ drone:
 		Name: Drone
 		GenericName: Drone
 	Selectable:
-		Bounds: 24,24,0,0
+		Bounds: 768, 768, 0, 0
 	Health:
 		HP: 3000
 	Armor:
 		Type: light
+	Encyclopedia:
+		Description: The Drone is a small remote controlled vehicle that can slowly damage a vehicle it infects. Repairing the infected vehicles with a Repair Pad removed the drone.\n\nDrones are vulnerable to most types of weapon, though high caliber guns are slightly less effective.
+		Order: 130
+		Category: Infantry
 	Mobile:
 		Speed: 76
 		Voice: Move
@@ -552,7 +605,6 @@ drone:
 	-Passenger:
 	-WithDeathAnimation:
 	RenderSprites:
-		Scale: 0.75
 		PlayerPalette: ra2player
 	Cloak@STEALTH:
 		Palette: ra2cloak
@@ -573,6 +625,10 @@ rocketeer:
 		Name: Rocketeer
 	Health:
 		HP: 5000
+	Encyclopedia:
+		Description: Rocketeers are elite infantry using rocket backpack to fly. They are armed with machine guns making them effective against infantry.\n\nThey are vulnerable to missiles and can only be hit by anti-aircraft weapons.
+		Order: 140
+		Category: Infantry
 	Armor:
 		Type: light
 	-Mobile:
@@ -640,6 +696,10 @@ sardaukar:
 		AddToArmyValue: true
 	Health:
 		HP: 10000
+	Encyclopedia:
+		Description: Sardaukars elite heavy troopers of House Corrino that are armed a machine gun that's effective against infantry, and a rocket launcher for vehicles.\n\nThe Sardaukar is resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Order: 140
+		Category: Infantry
 	Mobile:
 		Speed: 31
 	RevealsShroud:
@@ -672,6 +732,10 @@ saboteur:
 		AddToArmyValue: true
 	Health:
 		HP: 4000
+	Encyclopedia:
+		Description: The Suicide Bomber is a special military unit acquired by House Ordos. A single Suicide Bomber can destroy any enemy building or vehicle once he moves into it, though also destroys himself! A Suicide Bomber is stealthed while standing still.\n\nThe Suicide Bomber is resistant to anti-tank weaponry, but very vulnerable to high explosives, fire, and bullet weapons.
+		Order: 150
+		Category: Infantry
 	Mobile:
 		Speed: 43
 	Demolition:
@@ -709,6 +773,10 @@ sniper:
 		AddToArmyValue: true
 	Health:
 		HP: 7500
+	Encyclopedia:
+		Description: The Sniper is a special military unit used by the Mercenaries. They can deal with enemy infantry from a great range with ease. A Sniper is stealthed unless firing.\n\nThe Sniper is resistant to anti-tank weaponry, but very vulnerable to high explosives, fire, and bullet weapons.
+		Order: 160
+		Category: Infantry
 	Armor:
 		Type: none
 	Mobile:
@@ -716,6 +784,7 @@ sniper:
 	Armament:
 		Weapon: SniperRifle
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	Crushable:
@@ -751,6 +820,10 @@ hijacker:
 		Name: Saboteur
 	Health:
 		HP: 50000
+	Encyclopedia:
+		Description: The Saboteur is a special military unit used by the Smugglers. They can deal steal enemy vehicles, or enter enemy structures to disable them for a while. A Saboteur is stealthed while standing still.\n\nThe Saboteur is resistant to anti-tank weaponry, but very vulnerable to high explosives, fire, and bullet weapons.
+		Order: 160
+		Category: Infantry
 	RevealsShroud:
 		Range: 3c0
 	CaptureManager:
@@ -771,7 +844,7 @@ hijacker:
 		InitialDelay: 200
 		CloakDelay: 100
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
-		CloakTypes: Cloak, Hijacker
+		DetectionTypes: Cloak, Hijacker
 		Palette: racloak
 		IsPlayerPalette: true
 	Mobile:

@@ -73,6 +73,10 @@ carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 15
 		LocalOffset: 0, 0, -128
+	Encyclopedia:
+		Description: Carryalls will automatically transport Harvesters back and forth from the Spice Fields to the Refineries. They will also pick up units and deliver them to the Repair Pad, when ordered to.\n\nThe Carryall is a lightly armored transport aircraft. They are vulnerable to missiles and can only be hit by anti-aircraft weapons.
+		Order: 0
+		Category: Aircraft
 	Aircraft:
 		MinAirborneAltitude: 400
 	RevealsShroud@lifting_low:
@@ -106,6 +110,8 @@ carryall.smuggler:
 		Step: 60
 	Health:
 		HP: 50000
+	UpdatesPlayerStatistics:
+		OverrideActor: carryall
 
 frigate:
 	Inherits: ^Plane
@@ -132,10 +138,11 @@ frigate:
 ornithopter:
 	Inherits: ^Plane
 	AttackBomber:
+		FacingTolerance: 8
 	Armament:
 		Weapon: OrniBomb
 	Health:
-		HP: 9000
+		HP: 10000
 	Armor:
 		Type: light
 	Aircraft:
@@ -143,6 +150,8 @@ ornithopter:
 		TurnSpeed: 8
 		Repulsable: False
 		CruiseAltitude: 1920
+	Targetable:
+		TargetTypes: Air
 	AmmoPool:
 		Ammo: 5
 	Tooltip:
@@ -157,6 +166,7 @@ ornithopter.controllable:
 	Inherits: ornithopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@SELECTABLE: ^SelectableCombatUnit
 	AutoTarget:
 		InitialStance: ReturnFire
 	Valued:
@@ -170,8 +180,10 @@ ornithopter.controllable:
 		Description: Aircraft armed with dual rocket launchers.\n Strong vs Tanks\n  Weak vs Infantry
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Health:
-		HP: 10000
+	Encyclopedia:
+		Description: The Ornithopther is an armored aircraft typically armed with twin missile launchers, although House Atreides also uses variants that use 500lb bombs. While missile versions are better against armored targets, the bombs do good damage against infantry and buildings.\n\nThey are vulnerable to missiles and can only be hit by anti-aircraft weapons.
+		Order: 10
+		Category: Aircraft
 	-AttackBomber:
 	AmmoPool:
 		Ammo: 8
@@ -211,7 +223,7 @@ ornithopter.controllable:
 	-Interactable:
 	Selectable:
 		Class: ornithopter.controllable
-		Bounds: 40,30,0,0
+		Bounds: 1280, 960, 0, 0
 	SelectionDecorations:
 	SpawnActorOnDeath:
 		Actor: ornithopter.controllable.husk
@@ -231,6 +243,7 @@ swarmer:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@SELECTABLE: ^SelectableCombatUnit
 	AutoTarget:
 		InitialStance: ReturnFire
 	Valued:
@@ -250,6 +263,10 @@ swarmer:
 		HP: 5000
 	Armor:
 		Type: light
+	Encyclopedia:
+		Description: The Swarmer is a small, cheap and light aircraft armed with machine guns, dealing good damage against infantry.\n\nThey are vulnerable to missiles and can only be hit by anti-aircraft weapons.
+		Order: 30
+		Category: Aircraft
 	RevealsShroud:
 		Range: 5c0
 		Type: GroundPosition
@@ -293,12 +310,11 @@ swarmer:
 	-Interactable:
 	Selectable:
 		Class: phoenix
-		Bounds: 30,25,0,0
+		Bounds: 960, 800, 0, 0
 	SelectionDecorations:
 	Voiced:
 		VoiceSet: VehicleVoice
 	RenderSprites:
-		Scale: 0.8
 		Image: swarmer
 		PlayerPalette: raplayer
 	WithAmmoPipsDecoration:
@@ -311,6 +327,7 @@ phoenix:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@SELECTABLE: ^SelectableCombatUnit
 	AutoTarget:
 		InitialStance: ReturnFire
 	Valued:
@@ -330,6 +347,10 @@ phoenix:
 		HP: 7500
 	Armor:
 		Type: light
+	Encyclopedia:
+		Description: The Phoenix is a fast and light aircraft armed napalm missiles, dealing good damage against buildings and infantry.\n\nThey are vulnerable to missiles and can only be hit by anti-aircraft weapons.
+		Order: 20
+		Category: Aircraft
 	RevealsShroud:
 		Range: 4c512
 		Type: GroundPosition
@@ -367,15 +388,15 @@ phoenix:
 	-Interactable:
 	Selectable:
 		Class: phoenix
-		Bounds: 36,28,0,2
-		DecorationBounds: 40,29,0,1
+		Bounds: 1152, 896, 0, 64
+		DecorationBounds: 1280, 928, 0, 32
 	SelectionDecorations:
 	Contrail@1:
 		Offset: -538,-614,0
-		UsePlayerColor: false
+		StartColorUsePlayerColor: false
 	Contrail@2:
 		Offset: -538,614,0
-		UsePlayerColor: false
+		StartColorUsePlayerColor: false
 	Voiced:
 		VoiceSet: VehicleVoice
 	RenderSprites:

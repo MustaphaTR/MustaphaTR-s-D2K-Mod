@@ -153,7 +153,6 @@ stealth_tank.husk:
 		IntoActor: stealth_tank
 	RenderSprites:
 		PlayerPalette: cncplayer
-		Scale: 1.25
 
 jammer.husk:
 	Inherits: ^VehicleHusk
@@ -169,7 +168,6 @@ jammer.husk:
 		IntoActor: jammer
 	RenderSprites:
 		PlayerPalette: raplayer
-		Scale: 1.1
 
 devastator.husk:
 	Inherits: ^VehicleHusk
@@ -194,7 +192,6 @@ quake_tank.husk:
 		IntoActor: quake_tank
 	RenderSprites:
 		PlayerPalette: raplayer
-		Scale: 1.25
 
 deviator.husk:
 	Inherits: ^VehicleHusk
@@ -218,7 +215,6 @@ ifv.husk:
 	InfiltrateForTransform:
 		IntoActor: ifv
 	RenderSprites:
-		Scale: 1.25
 		PlayerPalette: raplayer
 
 carryall.husk:

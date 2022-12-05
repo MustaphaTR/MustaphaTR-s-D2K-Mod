@@ -1,7 +1,16 @@
 Container@PLAYER_WIDGETS:
+	Logic: LoadIngameChatLogic
 	Children:
-		LogicKeyListener@CONTROLGROUP_KEYHANDLER:
-			Logic: ControlGroupLogic
+		Container@CHAT_ROOT:
+		LogicKeyListener@PLAYER_KEYHANDLER:
+			Logic: RemoveFromControlGroupHotkeyLogic
+				RemoveFromControlGroupKey: RemoveFromControlGroup
+		ControlGroups@CONTROLGROUPS:
+			SelectGroupKeyPrefix: ControlGroupSelect
+			CreateGroupKeyPrefix: ControlGroupCreate
+			AddToGroupKeyPrefix: ControlGroupAddTo
+			CombineWithGroupKeyPrefix: ControlGroupCombineWith
+			JumpToGroupKeyPrefix: ControlGroupJumpTo
 		LogicTicker@SIDEBAR_TICKER:
 		Container@SUPPORT_POWERS:
 			Logic: SupportPowerBinLogic
@@ -56,7 +65,7 @@ Container@PLAYER_WIDGETS:
 					Background: command-button
 					DisableKeySound: true
 					TooltipText: Force Move
-					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n - Deployed thumpers will undeploy and move to the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -145,7 +154,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Stop
-					TooltipDesc: Selected units will stop their current activity.\n\nActs immediately on selected units.
+					TooltipDesc: Selected units will stop their current activity.\nSelected buildings will reset their rally point.\n\nActs immediately on selected targets.
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -383,7 +392,7 @@ Container@PLAYER_WIDGETS:
 							SoundUp: RadarUp
 							SoundDown: RadarDown
 							Children:
-						VqaPlayer@PLAYER:
+						VideoPlayer@PLAYER:
 							X: 12
 							Y: 32
 							Width: 202
@@ -644,3 +653,22 @@ Container@PLAYER_WIDGETS:
 							Children:
 								Image@ICON:
 									ImageCollection: production-icons
+		Container@HPF_OVERLAY:
+			Logic: HierarchicalPathFinderOverlayLogic
+			X: WINDOW_RIGHT - WIDTH - 231
+			Y: 40
+			Width: 175
+			Height: 60
+			Children:
+				DropDownButton@HPF_OVERLAY_LOCOMOTOR:
+					Y: PARENT_TOP
+					Width: PARENT_RIGHT
+					Height: 25
+					Text: Select Locomotor
+					Font: Regular
+				DropDownButton@HPF_OVERLAY_CHECK:
+					Y: PARENT_TOP + 35
+					Width: PARENT_RIGHT
+					Height: 25
+					Text: Select BlockedByActor
+					Font: Regular

@@ -1,8 +1,9 @@
 Metadata:
 	Title: MustaphaTR's Dune 2000 Mod
-	Version: v2.0
+	Version: v2.1
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/d2k_32x32.png
+	WindowTitle: OpenRA - MustaphaTR's Dune 2000 Mod
 
 PackageFormats: D2kSoundResources
 
@@ -24,7 +25,7 @@ Packages:
 
 MapFolders:
 	mtrsd2k2|maps: System
-	~^SupportDir|maps/d2k/v2.0: User
+	~^SupportDir|maps/d2k/v2.1: User
 
 Rules:
 	mtrsd2k2|rules/misc.yaml
@@ -71,6 +72,7 @@ Assemblies:
 ChromeLayout:
 	common|chrome/ingame.yaml
 	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-transients.yaml
 	common|chrome/ingame-fmvplayer.yaml
 	mtrsd2k2|chrome/ingame-menu.yaml
 	common|chrome/ingame-info.yaml
@@ -78,6 +80,7 @@ ChromeLayout:
 	common|chrome/ingame-infobriefing.yaml
 	common|chrome/ingame-infoobjectives.yaml
 	mtrsd2k2|chrome/ingame-infostats.yaml
+	common|chrome/ingame-info-lobby-options.yaml
 	mtrsd2k2|chrome/ingame-observer.yaml
 	mtrsd2k2|chrome/ingame-player.yaml
 	common|chrome/ingame-perf.yaml
@@ -87,6 +90,11 @@ ChromeLayout:
 	mtrsd2k2|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
+	common|chrome/settings-display.yaml
+	common|chrome/settings-audio.yaml
+	common|chrome/settings-input.yaml
+	common|chrome/settings-hotkeys.yaml
+	common|chrome/settings-advanced.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
 	common|chrome/lobby-mappreview.yaml
@@ -113,6 +121,11 @@ ChromeLayout:
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
 	common|chrome/gamesave-loading.yaml
+	common|chrome/text-notifications.yaml
+	mtrsd2k2|chrome/encyclopedia.yaml
+
+Translations:
+	common|languages/en.ftl
 
 Weapons:
 	mtrsd2k2|weapons/debris.yaml
@@ -130,15 +143,15 @@ Notifications:
 Music:
 	mtrsd2k2|audio/music.yaml
 
-Translations:
-	mtrsd2k2|languages/english.yaml
-
 Hotkeys:
 	common|hotkeys/game.yaml
 	common|hotkeys/observer.yaml
 	common|hotkeys/production-common.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/editor.yaml
+	common|hotkeys/control-groups.yaml
 	mtrsd2k2|hotkeys.yaml
 
 LoadScreen: LogoStripeLoadScreen
@@ -194,47 +207,57 @@ Fonts:
 Missions:
 	mtrsd2k2|missions.yaml
 
+DefaultOrderGenerator: UnitOrderGenerator
+
 SupportsMapsFrom: mtrsd2k2
 
 SoundFormats: Aud, Wav
 
 SpriteFormats: R8, ShpTD, ShpTS, TmpRA
 
+VideoFormats: Vqa
+
+TerrainFormat: DefaultTerrain
+
 SpriteSequenceFormat: DefaultSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
 
 AssetBrowser:
-	SupportedExtensions: .shp, .r8, .vqa
+	SpriteExtensions: .shp, .r8, .tmp
+	AudioExtensions: .aud, .wav
+	VideoExtensions: .vqa
 
 GameSpeeds:
-	slowest:
-		Name: Slowest
-		Timestep: 80
-		OrderLatency: 2
-	slower:
-		Name: Slower
-		Timestep: 50
-		OrderLatency: 3
-	default:
-		Name: Normal
-		Timestep: 40
-		OrderLatency: 3
-	fast:
-		Name: Fast
-		Timestep: 35
-		OrderLatency: 4
-	faster:
-		Name: Faster
-		Timestep: 30
-		OrderLatency: 4
-	fastest:
-		Name: Fastest
-		Timestep: 20
-		OrderLatency: 6
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: fastest
+			Timestep: 20
+			OrderLatency: 6
 
-ColorValidator:
-	TeamColorPresets: 9023cd, f53333, ffae00, fff830, 87f506, f872ad, da06f3, ddb8ff, def7b2, 39c46f, 200738, 280df6, 2f86f2, 76d2f8, 498221, 392929
+#ColorValidator:
+#	TeamColorPresets: 9023cd, f53333, ffae00, fff830, 87f506, f872ad, da06f3, ddb8ff, def7b2, 39c46f, 200738, 280df6, 2f86f2, 76d2f8, 498221, 392929
 
 ModContent:
 	InstallPromptMessage: Dune 2000 requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without\nmusic or videos) from an online mirror of the game files.\n\nAdvanced Install includes options for copying the music, videos,\nand other content from an original game disc.

@@ -138,7 +138,7 @@ Container@LOBBY_PLAYER_BIN:
 									Height: 23
 								Label@FACTIONNAME:
 									X: 34
-									Width: 70
+									Width: 80
 									Height: 25
 									Text: Faction
 						DropDownButton@TEAM_DROPDOWN:
@@ -168,7 +168,7 @@ Container@LOBBY_PLAYER_BIN:
 							Y: 4
 							Width: 20
 							Height: 20
-							ImageCollection: checkbox-bits
+							ImageCollection: checkmark-tick
 							ImageName: checked
 							Visible: false
 				Container@TEMPLATE_NONEDITABLE_PLAYER:
@@ -248,7 +248,7 @@ Container@LOBBY_PLAYER_BIN:
 									Height: 23
 								Label@FACTIONNAME:
 									X: 34
-									Width: 70
+									Width: 80
 									Height: 25
 									Text: Faction
 						Label@TEAM:
@@ -288,7 +288,7 @@ Container@LOBBY_PLAYER_BIN:
 							Y: 4
 							Width: 20
 							Height: 20
-							ImageCollection: checkbox-bits
+							ImageCollection: checkmark-tick
 							ImageName: checked
 							Visible: false
 				Container@TEMPLATE_EMPTY:
@@ -373,7 +373,7 @@ Container@LOBBY_PLAYER_BIN:
 							Y: 4
 							Width: 20
 							Height: 20
-							ImageCollection: checkbox-bits
+							ImageCollection: checkmark-tick
 							ImageName: checked
 							Visible: false
 				Container@TEMPLATE_NONEDITABLE_SPECTATOR:
@@ -448,7 +448,7 @@ Container@LOBBY_PLAYER_BIN:
 							Y: 4
 							Width: 20
 							Height: 20
-							ImageCollection: checkbox-bits
+							ImageCollection: checkmark-tick
 							ImageName: checked
 							Visible: false
 				Container@TEMPLATE_NEW_SPECTATOR:
@@ -474,7 +474,7 @@ ScrollPanel@FACTION_DROPDOWN_TEMPLATE:
 	Width: DROPDOWN_WIDTH
 	Children:
 		ScrollItem@HEADER:
-			BaseName: scrollheader
+			Background: scrollheader
 			Width: PARENT_RIGHT - 27
 			Height: 13
 			X: 2
@@ -501,5 +501,5 @@ ScrollPanel@FACTION_DROPDOWN_TEMPLATE:
 					Height: 15
 				Label@LABEL:
 					X: 30
-					Width: 70
+					Width: 80
 					Height: 25

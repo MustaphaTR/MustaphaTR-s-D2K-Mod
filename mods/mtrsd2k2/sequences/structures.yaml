@@ -2,6 +2,8 @@ concretea:
 	icon: DATA.R8
 		Start: 4314
 		Offset: -30,-24
+	preview: BLOXBASE.R8
+		Start: 657
 
 concreteb:
 	icon: DATA.R8
@@ -10,12 +12,14 @@ concreteb:
 
 mine_ap:
 	idle: mine_ap.shp
+		Scale: 1.25
 		ZOffset: -512
 	icon: mine_apicon.shp
 		Offset: 0,-1
 
 mine_at:
 	idle: mine_at.shp
+		Scale: 1.25
 		ZOffset: -512
 	icon: mine_aticon.shp
 		Offset: 0,-1

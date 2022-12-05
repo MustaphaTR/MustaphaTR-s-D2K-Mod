@@ -468,12 +468,24 @@ moveflsh:
 		Tick: 80
 		BlendMode: Multiply
 		ZOffset: 2047
-		EmbeddedPalette: moveflash
+		HasEmbeddedPalette: True
 
 resources:
-	spice: BLOXBASE.R8
-		Frames: 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 300, 301, 320, 321
-		Length: 54
+	spicea: BLOXBASE.R8
+		Frames: 748, 300, 750, 751, 752, 753, 754, 755, 756, 757, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 300
+		Length: *
+		Offset: -16,-16
+	spiceb: BLOXBASE.R8
+		Frames: 749, 301, 750, 751, 752, 753, 754, 755, 756, 757, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 301
+		Length: *
+		Offset: -16,-16
+	spicec: BLOXBASE.R8
+		Frames: 793, 320, 750, 751, 752, 753, 754, 755, 756, 757, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 320
+		Length: *
+		Offset: -16,-16
+	spiced: BLOXBASE.R8
+		Frames: 748, 321, 750, 751, 752, 753, 754, 755, 756, 757, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 321
+		Length: *
 		Offset: -16,-16
 
 shroud:
@@ -483,7 +495,7 @@ shroud:
 		Length: 14
 	palette: DATA.R8
 		Start: 38
-		EmbeddedPalette: shroud
+		HasEmbeddedPalette: True
 	shrouda: DATA.R8
 		Start: 40
 	shroudb: DATA.R8
@@ -531,6 +543,32 @@ sandcraters:
 		Start: 162
 		Length: 16
 		Offset: -16,-16
+
+ornidirection:
+	arrow-t: MOUSE.R8
+		Start: 112
+		Offset: -25, -53, 0
+	arrow-tr: MOUSE.R8
+		Start: 120
+		Offset: 6, -47, 0
+	arrow-r: MOUSE.R8
+		Start: 128
+		Offset: 17, -26, 0
+	arrow-br: MOUSE.R8
+		Start: 136
+		Offset: 6, -1, 0
+	arrow-b: MOUSE.R8
+		Start: 148
+		Offset: -25, 7, 0
+	arrow-bl: MOUSE.R8
+		Start: 156
+		Offset: -52, -3, 0
+	arrow-l: MOUSE.R8
+		Start: 164
+		Offset: -61, -26, 0
+	arrow-tl: MOUSE.R8
+		Start: 172
+		Offset: -52, -44, 0
 
 null:
 	idle: DATA.R8

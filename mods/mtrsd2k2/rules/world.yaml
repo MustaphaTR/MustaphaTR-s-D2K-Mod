@@ -4,6 +4,7 @@
 	ScreenMap:
 	ActorMap:
 	Selection:
+	ControlGroups:
 	MusicPlaylist:
 		VictoryMusic: score
 		DefeatMusic: score
@@ -132,25 +133,20 @@
 		InternalName: ixian
 		Side: Atreides
 		Description: The Ixians\n Special Units:\n - Mechanic\n - Jammer\n - Drone\n Defensive Structures:\n - Machine Gun Tower\n - Gun Turret\n - Missile Turret\n Light Vehicles:\n - MG Raider\n - Rocket Raider\n Combat Tank Speciality:\n - Manual Repair\n Aircraft:\n - Ornithopter\n Speical Ability:\n - Has better Repair Pad
-	ResourceType@Spice:
-		Type: Spice
-		Name: Spice
-		ResourceType: 1
-		Palette: d2k
-		TerrainType: Spice
-		Sequences: spice
-		MaxDensity: 20
-		ValuePerUnit: 25
-		AllowedTerrainTypes: SpiceSand
-		AllowUnderActors: true
 	D2kResourceRenderer:
-		RenderTypes: Spice
+		ResourceTypes:
+			Spice:
+				Sequences: spicea, spiceb, spicec, spiced
+				Palette: d2k
+				Name: Spice
 
 World:
 	Inherits: ^BaseWorld
 	ChatCommands:
 	DevCommands:
 	DebugVisualizationCommands:
+	PathFinderOverlay:
+	HierarchicalPathFinderOverlay:
 	PlayerCommands:
 	HelpCommand:
 	ScreenShaker:
@@ -167,10 +163,16 @@ World:
 		ValidGround: Sand, Rock, Transition, Spice, SpiceSand, Dune, Concrete
 		InitialSpawnDelay: 1500
 		CheckboxDisplayOrder: 1
-	DomainIndex:
 	WarheadDebugOverlay:
 	BuildableTerrainLayer:
 	ResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Spice:
+				ResourceIndex: 1
+				TerrainType: Spice
+				AllowedTerrainTypes: SpiceSand
+				MaxDensity: 20
 	ResourceClaimLayer:
 	CustomTerrainDebugOverlay:
 	SmudgeLayer@Rock:
@@ -192,21 +194,21 @@ World:
 		TechLevel: 7
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
-	CreateMPPlayers:
-	MPStartLocations:
+	CreateMapPlayers:
+	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
-	MPStartUnits@mcv:
+	StartingUnits@mcv:
 		Class: none
 		ClassName: MCV Only
 		BaseActor: mcv
 		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, smuggler, mercenary
-	MPStartUnits@cyard:
+	StartingUnits@cyard:
 		Class: cyard
 		ClassName: Con. Yard Only
 		BaseActor: construction_yard
 		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, smuggler, mercenary
 		BaseActorOffset: -1,-1
-	MPStartUnits@lighttrike:
+	StartingUnits@lighttrike:
 		Class: light
 		ClassName: Light Support
 		Factions: atreides, corrino, smuggler
@@ -214,7 +216,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, trooper, trike.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@lightraider:
+	StartingUnits@lightraider:
 		Class: light
 		ClassName: Light Support
 		Factions: fremen, ixian, mercenary
@@ -222,7 +224,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, trooper, raider.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@lightquad:
+	StartingUnits@lightquad:
 		Class: light
 		ClassName: Light Support
 		Factions: harkonnen, ordos
@@ -230,7 +232,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, trooper, quad.mg
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumatreides:
+	StartingUnits@mediumatreides:
 		Class: medium
 		ClassName: Medium Support
 		Factions: atreides
@@ -238,7 +240,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, grenadier, trike.mg, quad.rocket, combat_tank_a
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumfremen:
+	StartingUnits@mediumfremen:
 		Class: medium
 		ClassName: Medium Support
 		Factions: fremen
@@ -246,7 +248,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, nsfremen, raider.mg, trike.rocket, combat_tank_f
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumixian:
+	StartingUnits@mediumixian:
 		Class: medium
 		ClassName: Medium Support
 		Factions: ixian
@@ -254,7 +256,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, mechanic, raider.mg, raider.rocket, combat_tank_i
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumharkonnen:
+	StartingUnits@mediumharkonnen:
 		Class: medium
 		ClassName: Medium Support
 		Factions: harkonnen
@@ -262,7 +264,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, flamethrower, quad.mg, trike.rocket, combat_tank_h
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumcorrino:
+	StartingUnits@mediumcorrino:
 		Class: medium
 		ClassName: Medium Support
 		Factions: corrino
@@ -270,7 +272,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, plasma_infantry, trike.mg, quad.rocket, combat_tank_c
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumordos:
+	StartingUnits@mediumordos:
 		Class: medium
 		ClassName: Medium Support
 		Factions: ordos
@@ -278,7 +280,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, stealth_raider, quad.mg, raider.rocket, combat_tank_o
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediummercenary:
+	StartingUnits@mediummercenary:
 		Class: medium
 		ClassName: Medium Support
 		Factions: mercenary
@@ -286,7 +288,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, light_tank, raider.mg, quad.rocket, combat_tank_m
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@mediumsmuggler:
+	StartingUnits@mediumsmuggler:
 		Class: medium
 		ClassName: Medium Support
 		Factions: smuggler
@@ -294,7 +296,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, dog, dog, trike.mg, raider.rocket, combat_tank_s
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	MPStartUnits@heavyatreides:
+	StartingUnits@heavyatreides:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: atreides
@@ -302,7 +304,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, grenadier, trike.mg, trike.mg, quad.rocket, combat_tank_a, combat_tank_a, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavyfremen:
+	StartingUnits@heavyfremen:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: fremen
@@ -310,7 +312,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, nsfremen, raider.mg, raider.mg, trike.rocket, combat_tank_f, combat_tank_f, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavyixian:
+	StartingUnits@heavyixian:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: ixian
@@ -318,7 +320,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, mechanic, raider.mg, raider.mg, raider.rocket, combat_tank_i, combat_tank_i, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavyharkonnen:
+	StartingUnits@heavyharkonnen:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: harkonnen
@@ -326,7 +328,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, flamethrower, quad.mg, quad.mg, trike.rocket, combat_tank_h, combat_tank_h, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavycorrino:
+	StartingUnits@heavycorrino:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: corrino
@@ -334,7 +336,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, plasma_infantry, trike.mg, trike.mg, quad.rocket, combat_tank_c, combat_tank_c, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavyordos:
+	StartingUnits@heavyordos:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: ordos
@@ -342,7 +344,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, stealth_raider, quad.mg, quad.mg, raider.rocket, combat_tank_o, combat_tank_o, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavymercenary:
+	StartingUnits@heavymercenary:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: mercenary
@@ -350,7 +352,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, light_tank, raider.mg, raider.mg, quad.rocket, combat_tank_m, combat_tank_m, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	MPStartUnits@heavysmuggler:
+	StartingUnits@heavysmuggler:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: smuggler
@@ -358,7 +360,7 @@ World:
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, dog, dog, trike.mg, trike.mg, raider.rocket, combat_tank_s, combat_tank_s, missile_tank, siege_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 6
-	SpawnMPUnits:
+	SpawnStartingUnits:
 		DropdownDisplayOrder: 1
 	PathFinder:
 	ValidateOrder:
@@ -369,14 +371,32 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
+	CellTriggerOverlay:
 	StartGameNotification:
 	TimeLimitManager:
+	ColorPickerManager:
+		PreviewActor: carryall.colorpicker
+		PresetHues: 0, 0.13, 0.18, 0.3, 0.475, 0.625, 0.82, 0.89, 0.97, 0.05, 0.23, 0.375, 0.525, 0.6, 0.75, 0.85
+		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.5, 0.35, 0.4, 0.4, 0.5, 0.5, 0.4, 0.35
+	OrderEffects:
+		TerrainFlashImage: moveflsh
+		TerrainFlashSequence: idle
+		TerrainFlashPalette: moveflash
 
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
 	EditorCursorLayer:
 	EditorResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Spice:
+				ResourceIndex: 1
+				TerrainType: Spice
+				AllowedTerrainTypes: SpiceSand
+				MaxDensity: 20
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Rock, Concrete

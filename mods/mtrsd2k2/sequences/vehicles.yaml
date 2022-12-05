@@ -11,6 +11,11 @@ trike:
 		Start: 4305
 		Offset: -30,-24
 
+trike.mg:
+	Inherits: trike
+	idle:
+		Scale: 0.9
+
 raider:
 	idle: DATA.R8
 		Start: 2421
@@ -24,6 +29,11 @@ raider:
 		Start: 4278
 		Offset: -30,-24
 
+raider.mg:
+	Inherits: raider
+	idle:
+		Scale: 0.9
+
 quad:
 	idle: DATA.R8
 		Start: 1667
@@ -31,6 +41,11 @@ quad:
 	icon: DATA.R8
 		Start: 4279
 		Offset: -30,-24
+
+quad.mg:
+	Inherits: quad
+	idle:
+		Scale: 0.9
 
 stealth_raider:
 	idle: DATA.R8
@@ -48,10 +63,12 @@ stealth_raider:
 light_tank:
 	idle: light_tank.shp
 		Facings: 32
+		Scale: 1.25
 		UseClassicFacingFudge: True
 	turret: light_tank.shp
 		Start: 32
 		Facings: 32
+		Scale: 1.25
 		UseClassicFacingFudge: True
 	muzzle: DATA.R8
 		Start: 4028
@@ -365,6 +382,7 @@ sonic_tank.husk:
 stealth_tank:
 	idle: stealth_tank.shp
 		Facings: 32
+		Scale: 1.25
 		UseClassicFacingFudge: True
 	icon: stealth_tankicon.shp
 		Offset: 0,-1
@@ -372,27 +390,32 @@ stealth_tank:
 stealth_tank.husk:
 	idle: stealth_tank.shp
 		Facings: 32
+		Scale: 1.25
 		ZOffset: -512
 		UseClassicFacingFudge: True
 
 jammer:
 	idle: jammer.shp
 		Facings: 32
+		Scale: 1.25
 		UseClassicFacingFudge: True
 	spinner: jammer.shp
 		Start: 32
 		Length: 32
+		Scale: 1.25
 	icon: jammericon.shp
 		Offset: 0,-1
 
 jammer.husk:
 	idle: jammer.shp
 		Facings: 32
+		Scale: 1.25
 		ZOffset: -512
 		UseClassicFacingFudge: True
 	spinner: jammer.shp
 		Start: 32
 		Facings: 32
+		Scale: 1.25
 		ZOffset: -512
 		UseClassicFacingFudge: True
 
@@ -428,11 +451,13 @@ devastator.husk:
 quake_tank:
 	idle: quake_tank.shp
 		Facings: 32
+		Scale: 1.25
 		UseClassicFacingFudge: True
 	piston: quake_tank.shp
 		Start: 32
 		Facings: 8
 		Length: 8
+		Scale: 1.25
 	icon: quake_tankicon.shp
 		Offset: 0,-1
 
@@ -440,6 +465,7 @@ quake_tank.husk:
 	idle: quake_tank.shp
 		Facings: 32
 		ZOffset: -512
+		Scale: 1.25
 		UseClassicFacingFudge: True
 
 deviator:
@@ -464,6 +490,8 @@ bomb_buggy:
 		Offset: 0,-1
 
 ifv:
+	Defaults:
+		Scale: 1.25
 	idle: ifv.shp
 		Facings: 32
 	turret-tank: ifv.shp
@@ -501,12 +529,15 @@ ifv:
 		Facings: 32
 	icon: ifvicon.shp
 		Offset: 0,-2
+		Scale: 1
 
 ifv.husk:
 	idle: ifv.shp
 		Facings: 32
+		Scale: 1.25
 		ZOffset: -512
 	turret: ifv.shp
 		Start: 32
 		Facings: 32
+		Scale: 1.25
 		ZOffset: -512
