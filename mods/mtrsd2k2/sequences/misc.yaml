@@ -155,6 +155,11 @@ pips:
 		Start: 110
 		Offset: 34,-7
 
+cameoicons:
+	mg-vehicle: cameoicons.shp
+		Start: 1
+	rocket-vehicle: cameoicons.shp
+
 clock:
 	idle: clock.shp
 		Length: *

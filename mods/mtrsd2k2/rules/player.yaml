@@ -228,6 +228,14 @@ Player:
 		Type: upgraded
 		Image: pips
 		Sequence: cameo-upgraded
+	ProductionIconOverlayManager@mg-vehicle:
+		Type: mg-vehicle
+		Image: cameoicons
+		Sequence: mg-vehicle
+	ProductionIconOverlayManager@rocket-vehicle:
+		Type: rocket-vehicle
+		Image: cameoicons
+		Sequence: rocket-vehicle
 	EnemyWatcher:
 	HarvesterInsurance:
 	GrantConditionOnPrerequisiteManager:

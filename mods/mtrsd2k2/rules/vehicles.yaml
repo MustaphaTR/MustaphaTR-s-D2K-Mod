@@ -46,6 +46,8 @@ trike.mg:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 420
+	WithProductionIconOverlay:
+		Types: mg-vehicle
 	RenderSprites:
 		Image: trike.mg
 
@@ -95,6 +97,8 @@ raider.mg:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 420
+	WithProductionIconOverlay:
+		Types: mg-vehicle
 	RenderSprites:
 		Image: raider.mg
 
@@ -143,6 +147,8 @@ quad.mg:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 420
+	WithProductionIconOverlay:
+		Types: mg-vehicle
 	RenderSprites:
 		Image: quad.mg
 
@@ -192,6 +198,8 @@ trike.rocket:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 470
+	WithProductionIconOverlay:
+		Types: rocket-vehicle
 	RenderSprites:
 		Image: trike
 
@@ -241,6 +249,8 @@ raider.rocket:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 470
+	WithProductionIconOverlay:
+		Types: rocket-vehicle
 	RenderSprites:
 		Image: raider
 
@@ -290,6 +300,8 @@ quad.rocket:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 470
+	WithProductionIconOverlay:
+		Types: rocket-vehicle
 	RenderSprites:
 		Image: quad
 
@@ -331,6 +343,7 @@ stealth_raider:
 	-ExternalCondition@STEALTH:
 	-Cloak@STEALTH:
 	-TimedConditionBar:
+	-WithProductionIconOverlay:
 
 light_tank:
 	Inherits: ^Vehicle
