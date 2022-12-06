@@ -91,6 +91,42 @@ construction_yard:
 	ProvidesPrerequisite@artillery_platform:
 		Prerequisite: cyard.artillery_platform
 		Factions: ordos, mercenary
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: cyard.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: cyard.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: cyard.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: cyard.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: cyard.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: cyard.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: cyard.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: cyard.corrino
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@gun_turret-unholy:
+		RequiresPrerequisites: global-unholy-alliance
+		Factions: atreides, fremen, ixian, harkonnen, corrino, ordos, mercenary
+	ProvidesPrerequisite@machine_gun_tower-unholy:
+		Prerequisite: cyard.machine_gun_tower
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@flame_tower-unholy:
+		Prerequisite: cyard.flame_tower
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@artillery_platform-unholy:
+		Prerequisite: cyard.artillery_platform
+		RequiresPrerequisites: global-unholy-alliance
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.conyard
 	RevealOnDeath:
@@ -226,6 +262,30 @@ barracks:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: barracks.corrino
 		Factions: corrino
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: barracks.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: barracks.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: barracks.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: barracks.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: barracks.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: barracks.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: barracks.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: barracks.corrino
+		RequiresPrerequisites: global-unholy-alliance
 	Power:
 		Amount: -30
 	RenderSprites:
@@ -432,6 +492,30 @@ outpost:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: outpost.corrino
 		Factions: corrino
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: outpost.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: outpost.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: outpost.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: outpost.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: outpost.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: outpost.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: outpost.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: outpost.corrino
+		RequiresPrerequisites: global-unholy-alliance
 	ProvidesPrerequisite@buildingname:
 	Power:
 		Amount: -125
@@ -553,6 +637,48 @@ light_factory:
 	ProvidesPrerequisite@rocketquad:
 		Prerequisite: light.rocketquad
 		Factions: atreides, corrino, mercenary
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: light.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: light.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: light.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: light.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: light.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: light.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: light.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: light.corrino
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mgtrike-unholy:
+		Prerequisite: light.mgtrike
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@rockettrike-unholy:
+		Prerequisite: light.rockettrike
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mgraider-unholy:
+		Prerequisite: light.mgraider
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@rocketraider-unholy:
+		Prerequisite: light.rocketraider
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mgquad-unholy:
+		Prerequisite: light.mgquad
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@rocketquad-unholy:
+		Prerequisite: light.rocketquad
+		RequiresPrerequisites: global-unholy-alliance
 	ProvidesPrerequisite@buildingname:
 	Power:
 		Amount: -125
@@ -638,6 +764,30 @@ heavy_factory:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: heavy.corrino
 		Factions: corrino
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: heavy.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: heavy.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: heavy.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: heavy.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: heavy.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: heavy.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: heavy.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: heavy.corrino
+		RequiresPrerequisites: global-unholy-alliance
 	RenderSprites:
 		Image: heavy.ordos
 		FactionImages:
@@ -744,6 +894,21 @@ high_tech_factory:
 	ProvidesPrerequisite@swarmer:
 		Prerequisite: hightech.swarmer
 		Factions: ordos, mercenary, smuggler
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: hightech.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: hightech.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ornithopter-unholy:
+		Prerequisite: hightech.ornithopter
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@phoenix-unholy:
+		Prerequisite: hightech.phoenix
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@swarmer-unholy:
+		Prerequisite: hightech.swarmer
+		RequiresPrerequisites: global-unholy-alliance
 	ProvidesPrerequisite@buildingname:
 	GrantConditionOnPrerequisite@ornithopter:
 		Prerequisites: upgrade.hightech
@@ -871,6 +1036,36 @@ starport:
 	ProvidesPrerequisite@mgraider:
 		Prerequisite: starport.mgraider
 		Factions: mercenary
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: starport.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: starport.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: starport.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: starport.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: starport.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: starport.smuggler
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: starport.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: starport.corrino
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mgtrike-unholy:
+		Prerequisite: starport.mgtrike
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mgraider-unholy:
+		Prerequisite: starport.mgraider
+		RequiresPrerequisites: global-unholy-alliance
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
@@ -1025,6 +1220,9 @@ research_centre:
 	ProvidesPrerequisite@corrino:
 		Prerequisite: research_centre.corrino
 		Factions: corrino
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: research_centre.corrino
+		RequiresPrerequisites: global-unholy-alliance
 	GrantConditionOnPrerequisite@Corrino:
 		Prerequisites: research_centre.corrino
 		Condition: corrino
@@ -1131,6 +1329,30 @@ palace:
 	ProvidesPrerequisite@smuggler:
 		Prerequisite: palace.smuggler
 		Factions: smuggler
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: palace.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: palace.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ixian-unholy:
+		Prerequisite: palace.ixian
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: palace.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: palace.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: palace.corrino
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: palace.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: palace.smuggler
+		RequiresPrerequisites: global-unholy-alliance
 	PrimaryBuilding:
 		RequiresCondition: atreides || ordos
 	WithTextDecoration@primary:

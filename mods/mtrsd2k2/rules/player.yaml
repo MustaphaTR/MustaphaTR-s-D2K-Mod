@@ -142,6 +142,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 7
 		Prerequisites: global-auto-concrete
+	LobbyPrerequisiteCheckbox@UNHOLYALLIANCE:
+		ID: unholyalliance
+		Label: Unholy Alliance
+		Description: Allows production of all faction specific units
+		Enabled: False
+		DisplayOrder: 9
+		Prerequisites: global-unholy-alliance
 	FrozenActorLayer:
 	HarvesterAttackNotifier:
 		TextNotification: Harvester under attack.
@@ -168,6 +175,28 @@ Player:
 	ProvidesPrerequisite@smuggler:
 		Prerequisite: player.smuggler
 		Factions: smuggler
+	GrantConditionOnPrerequisiteManager:
+	ProvidesPrerequisite@atreides-unholy:
+		Prerequisite: player.atreides
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@harkonnen-unholy:
+		Prerequisite: player.harkonnen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@ordos-unholy:
+		Prerequisite: player.ordos
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@corrino-unholy:
+		Prerequisite: player.corrino
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@fremen-unholy:
+		Prerequisite: player.fremen
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@mercenary-unholy:
+		Prerequisite: player.mercenary
+		RequiresPrerequisites: global-unholy-alliance
+	ProvidesPrerequisite@smuggler-unholy:
+		Prerequisite: player.smuggler
+		RequiresPrerequisites: global-unholy-alliance
 	ProvidesTechPrerequisite@1:
 		Name: 1
 		Prerequisites: techlevel.1
@@ -198,7 +227,6 @@ Player:
 		Id: 7
 	EnemyWatcher:
 	HarvesterInsurance:
-	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 		AdviceInterval: 26000
 		TextNotification: Silos needed.
