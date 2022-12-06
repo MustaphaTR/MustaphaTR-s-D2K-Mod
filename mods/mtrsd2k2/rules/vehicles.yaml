@@ -46,6 +46,8 @@ trike.mg:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 420
+	RenderSprites:
+		Image: trike.mg
 
 raider.mg:
 	Inherits: ^Vehicle
@@ -93,6 +95,8 @@ raider.mg:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 420
+	RenderSprites:
+		Image: raider.mg
 
 quad.mg:
 	Inherits: ^Vehicle
@@ -139,6 +143,8 @@ quad.mg:
 		EmptyWeapon: UnitExplodeSmall
 	AttractsWorms:
 		Intensity: 420
+	RenderSprites:
+		Image: quad.mg
 
 trike.rocket:
 	Inherits: ^Vehicle
