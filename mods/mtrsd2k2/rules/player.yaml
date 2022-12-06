@@ -224,6 +224,10 @@ Player:
 		Name: 7
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7
 		Id: 7
+	ProductionIconOverlayManager@upgraded:
+		Type: upgraded
+		Image: pips
+		Sequence: cameo-upgraded
 	EnemyWatcher:
 	HarvesterInsurance:
 	GrantConditionOnPrerequisiteManager:

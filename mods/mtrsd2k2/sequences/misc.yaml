@@ -151,6 +151,9 @@ pips:
 	tag-upgraded: DATA.R8
 		Start: 110
 		Offset: -8,-8
+	cameo-upgraded: DATA.R8
+		Start: 110
+		Offset: 34,-7
 
 clock:
 	idle: clock.shp
