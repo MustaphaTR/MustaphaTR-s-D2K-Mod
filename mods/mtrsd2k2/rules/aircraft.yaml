@@ -247,7 +247,7 @@ swarmer:
 	AutoTarget:
 		InitialStance: ReturnFire
 	Valued:
-		Cost: 450
+		Cost: 500
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
