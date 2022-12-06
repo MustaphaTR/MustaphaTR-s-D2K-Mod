@@ -94,6 +94,20 @@ nsfremen.starport:
 	UpdatesPlayerStatistics:
 		OverrideActor: nsfremen
 
+mechanic.starport:
+	Inherits: mechanic
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 80
+		Prerequisites: ~starport.mercenary, ~barracks.ixian, ~techlevel.5
+	Valued:
+		Cost: 300
+	-MapEditorData:
+	RenderSprites:
+		Image: mechanic
+	UpdatesPlayerStatistics:
+		OverrideActor: mechanic
+
 flamethrower.starport:
 	Inherits: flamethrower
 	Buildable:
@@ -447,6 +461,20 @@ stealth_tank.starport:
 		Image: stealth_tank
 	UpdatesPlayerStatistics:
 		OverrideActor: stealth_tank
+
+jammer.starport:
+	Inherits: jammer
+	Buildable:
+		Queue: Starport
+		BuildPaletteOrder: 350
+		Prerequisites: ~starport.mercenary, ~heavy.ixian, ~techlevel.6
+	Valued:
+		Cost: 1200
+	-MapEditorData:
+	RenderSprites:
+		Image: jammer
+	UpdatesPlayerStatistics:
+		OverrideActor: jammer
 
 devastator.starport:
 	Inherits: devastator

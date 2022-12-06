@@ -175,7 +175,6 @@ Player:
 	ProvidesPrerequisite@smuggler:
 		Prerequisite: player.smuggler
 		Factions: smuggler
-	GrantConditionOnPrerequisiteManager:
 	ProvidesPrerequisite@atreides-unholy:
 		Prerequisite: player.atreides
 		RequiresPrerequisites: global-unholy-alliance
@@ -227,6 +226,7 @@ Player:
 		Id: 7
 	EnemyWatcher:
 	HarvesterInsurance:
+	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 		AdviceInterval: 26000
 		TextNotification: Silos needed.
