@@ -123,6 +123,19 @@ mcv.husk:
 	InfiltrateForTransform:
 		IntoActor: mcv
 
+mcv.no_concrete.husk:
+	Inherits: ^VehicleHusk
+	Health:
+		HP: 17500
+	Tooltip:
+		Name: Mobile Construction Vehicle (Destroyed)
+	TransformOnCapture:
+		IntoActor: mcv.no_concrete
+	InfiltrateForTransform:
+		IntoActor: mcv.no_concrete
+	RenderSprites:
+		Image: mcv.husk
+
 missile_tank.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:

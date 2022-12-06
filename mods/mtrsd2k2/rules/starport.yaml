@@ -415,8 +415,6 @@ mcv.starport:
 	Valued:
 		Cost: 2500
 	-MapEditorData:
-	RenderSprites:
-		Image: mcv
 	UpdatesPlayerStatistics:
 		OverrideActor: mcv
 

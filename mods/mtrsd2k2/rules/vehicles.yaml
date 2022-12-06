@@ -776,6 +776,18 @@ mcv:
 		Delay: 3
 		StartIfBelow: 50
 	-RevealOnFire:
+	RenderSprites:
+		Image: mcv
+
+mcv.no_concrete:
+	Inherits: mcv
+	-Buildable:
+	Transforms:
+		IntoActor: construction_yard.no_concrete
+	SpawnActorOnDeath:
+		Actor: mcv.no_concrete.husk
+	UpdatesPlayerStatistics:
+		OverrideActor: mcv
 
 missile_tank:
 	Inherits: ^Tank

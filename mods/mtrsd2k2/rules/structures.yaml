@@ -15,6 +15,7 @@ construction_yard:
 		Order: 0
 	WithBuildingBib:
 	Selectable:
+		Class: construction_yard
 		Bounds: 3072, 2048
 	Health:
 		HP: 30000
@@ -54,7 +55,23 @@ construction_yard:
 		Palette: d2k
 	PrimaryBuilding:
 		ProductionQueues: Building, Defense
+	Transforms:
+		Facing: 64
+		IntoActor: mcv.no_concrete
+		Offset: 1,1
+		TransformSounds: BUILD1.WAV
+		NoTransformNotification: CannotDeploy
+		NoTransformTextNotification: Cannot deploy here.
+		RequiresCondition: factundeploy && !build-incomplete
+	TransformsIntoMobile:
+		Locomotor: vehicle
+		RequiresForceMove: true
+		RequiresCondition: factundeploy && !build-incomplete
+	GrantConditionOnPrerequisite@factundeploy:
+		Condition: factundeploy
+		Prerequisites: global-factundeploy
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: construction_yard
 	ProvidesPrerequisite@atreides:
 		Prerequisite: cyard.atreides
 		Factions: atreides
@@ -131,6 +148,15 @@ construction_yard:
 		Prerequisites: upgrade.conyard
 	RevealOnDeath:
 		Radius: 5c768
+
+construction_yard.no_concrete:
+	Inherits: construction_yard
+	-Buildable:
+	D2kBuilding:
+		StartOnThreshold: false
+		ConcretePrerequisites: global-auto-concrete
+	UpdatesPlayerStatistics:
+		OverrideActor: construction_yard
 
 wind_trap:
 	Inherits: ^Building

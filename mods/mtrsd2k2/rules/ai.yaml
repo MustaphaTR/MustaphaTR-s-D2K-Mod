@@ -265,11 +265,11 @@ Player:
 		RequiresCondition: enable-omnius-ai
 		SquadSize: 8
 		MaxBaseRadius: 40
-		ExcludeFromSquadsTypes: harvester, harvester.smuggler, mcv, carryall, carryall.smuggler, carryall.reinforce, carryall.reinforce.smuggler
-		ConstructionYardTypes: construction_yard
+		ExcludeFromSquadsTypes: harvester, harvester.starport, harvester.smuggler, harvester.smuggler.starport, mcv, mcv.no_concrete, mcv.starport, carryall, carryall.starport, carryall.smuggler, carryall.smuggler.starport, carryall.reinforce, carryall.reinforce.smuggler
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		IgnoredEnemyTargetTypes: Creep
 		AirUnitsTypes: rocketeer, ornithopter, ornithopter.controllable, swarmer, phoenix, ornithopter.controllable.starport, swarmer.starport, phoenix.starport
-		ProtectionTypes: harvester, harvester.smuggler, mcv, construction_yard, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
+		ProtectionTypes: harvester, harvester.smuggler, mcv, mcv.no_concrete, construction_yard, construction_yard.no_concrete, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
 	UnitBuilderBotModule@omnius:
 		RequiresCondition: enable-omnius-ai
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
@@ -327,17 +327,17 @@ Player:
 	McvManagerBotModule:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 		McvTypes: mcv
-		ConstructionYardTypes: construction_yard
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		McvFactoryTypes: heavy_factory, starport
 	SquadManagerBotModule@vidious:
 		RequiresCondition: enable-vidious-ai
 		SquadSize: 6
 		MaxBaseRadius: 40
-		ExcludeFromSquadsTypes: harvester, harvester.smuggler, mcv, carryall, carryall.smuggler, carryall.reinforce, carryall.reinforce.smuggler
-		ConstructionYardTypes: construction_yard
+		ExcludeFromSquadsTypes: harvester, harvester.starport, harvester.smuggler, harvester.smuggler.starport, mcv, mcv.no_concrete, mcv.starport, carryall, carryall.starport, carryall.smuggler, carryall.smuggler.starport, carryall.reinforce, carryall.reinforce.smuggler
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		IgnoredEnemyTargetTypes: Creep
 		AirUnitsTypes: rocketeer, ornithopter, ornithopter.controllable, swarmer, phoenix, ornithopter.controllable.starport, swarmer.starport, phoenix.starport
-		ProtectionTypes: harvester, harvester.smuggler, mcv, construction_yard, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
+		ProtectionTypes: harvester, harvester.smuggler, mcv, mcv.no_concrete, construction_yard, construction_yard.no_concrete, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
 	UnitBuilderBotModule@vidious:
 		RequiresCondition: enable-vidious-ai
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
@@ -396,11 +396,11 @@ Player:
 		RequiresCondition: enable-gladius-ai
 		SquadSize: 10
 		MaxBaseRadius: 40
-		ExcludeFromSquadsTypes: harvester, harvester.smuggler, mcv, carryall, carryall.smuggler, carryall.reinforce, carryall.reinforce.smuggler
-		ConstructionYardTypes: construction_yard
+		ExcludeFromSquadsTypes: harvester, harvester.starport, harvester.smuggler, harvester.smuggler.starport, mcv, mcv.no_concrete, mcv.starport, carryall, carryall.starport, carryall.smuggler, carryall.smuggler.starport, carryall.reinforce, carryall.reinforce.smuggler
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		IgnoredEnemyTargetTypes: Creep
 		AirUnitsTypes: rocketeer, ornithopter, ornithopter.controllable, swarmer, phoenix, ornithopter.controllable.starport, swarmer.starport, phoenix.starport
-		ProtectionTypes: harvester, harvester.smuggler, mcv, construction_yard, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
+		ProtectionTypes: harvester, harvester.smuggler, mcv, mcv.no_concrete, construction_yard, construction_yard.no_concrete, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
 	UnitBuilderBotModule@gladius:
 		RequiresCondition: enable-gladius-ai
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft

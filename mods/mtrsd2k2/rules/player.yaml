@@ -149,6 +149,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 9
 		Prerequisites: global-unholy-alliance
+	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
+		ID: factundeploy
+		Label: Redeployable MCVs
+		Description: Allow undeploying Construction Yards
+		Enabled: False
+		DisplayOrder: 10
+		Prerequisites: global-factundeploy
 	FrozenActorLayer:
 	HarvesterAttackNotifier:
 		TextNotification: Harvester under attack.
