@@ -1298,7 +1298,7 @@ palace:
 	WithBuildingBib:
 		HasMinibib: True
 	WithSupportPowerActivationOverlay:
-		RequiresCondition: !build-incomplete && !launchpad-damaged && harkonnen
+		RequiresCondition: !build-incomplete && !launchpad-damaged && harkonnen-artwork
 	GrantConditionOnDamageState@LAUNCHPADDAMAGED:
 		Condition: launchpad-damaged
 	Power:
@@ -1546,6 +1546,9 @@ palace:
 	GrantConditionOnFaction@Harkonnen:
 		Condition: harkonnen
 		Factions: harkonnen
+	GrantConditionOnFaction@HarkonnenArtwork:
+		Condition: harkonnen-artwork
+		Factions: harkonnen
 	GrantConditionOnFaction@Ordos:
 		Condition: ordos
 		Factions: ordos
@@ -1555,6 +1558,27 @@ palace:
 	GrantConditionOnFaction@Smuggler:
 		Condition: smuggler
 		Factions: smuggler
+	GrantConditionOnPrerequisite@Atreides-unholy:
+		Condition: atreides
+		Prerequisites: global-unholy-alliance
+	GrantConditionOnPrerequisite@Fremen-unholy:
+		Condition: fremen
+		Prerequisites: global-unholy-alliance
+	GrantConditionOnPrerequisite@Ixian-unholy:
+		Condition: ixian
+		Prerequisites: global-unholy-alliance
+	GrantConditionOnPrerequisite@Harkonnen-unholy:
+		Condition: harkonnen
+		Prerequisites: global-unholy-alliance
+	GrantConditionOnPrerequisite@Ordos-unholy:
+		Condition: ordos
+		Prerequisites: global-unholy-alliance
+	GrantConditionOnPrerequisite@Mercenary-unholy:
+		Condition: mercenary
+		Prerequisites: global-unholy-alliance
+	GrantConditionOnPrerequisite@Smuggler-unholy:
+		Condition: smuggler
+		Prerequisites: global-unholy-alliance
 	SupportPowerChargeBar:
 		RequiresCondition: atreides || fremen || ixian || harkonnen || ordos || mercenary || smuggler
 	ProvidesPrerequisite@buildingname:
