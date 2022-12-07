@@ -659,6 +659,8 @@ rocketeer:
 	Targetable@GROUND:
 		TargetTypes: Ground, Infantry, DetonateAttack
 		RequiresCondition: !airborne
+	Targetable@DRONE:
+		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
 		TargetTypes: Air
 		RequiresCondition: airborne
