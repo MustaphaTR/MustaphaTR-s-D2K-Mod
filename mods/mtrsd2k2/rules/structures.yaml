@@ -1171,7 +1171,7 @@ repair_pad.ixian:
 	Tooltip:
 		Name: Ixian Repair Pad
 	D2kBuilding:
-		Footprint: _x_ xxx _x_
+		Footprint: _+_ +++ _+_
 	Health:
 		HP: 400000
 	RepairsUnits:
