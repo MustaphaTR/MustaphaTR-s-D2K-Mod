@@ -34,6 +34,8 @@ fremen:
 
 medium_gun_turret.not_powered:
 	Inherits: medium_gun_turret
+	-WithColoredOverlay@IDISABLE:
+	-GrantConditionOnPowerState@LOWPOWER:
 	-GrantCondition@IDISABLE:
 	-ToggleConditionOnOrder:
 	-WithDecoration@POWERDOWN:

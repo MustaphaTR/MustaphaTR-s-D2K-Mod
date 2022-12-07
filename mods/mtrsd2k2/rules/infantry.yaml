@@ -544,7 +544,6 @@ drone:
 		RequiresCondition: !ecmdisable
 	RevealsShroud:
 		Range: 4c384
-		Type: GroundPosition
 	Armament@primary:
 		Weapon: DroneJump
 	AttackInfect:
@@ -635,7 +634,7 @@ rocketeer:
 	-Mobile:
 	RevealsShroud:
 		Range: 5c0
-		Type: CenterPosition
+		Type: GroundPosition
 	Armament:
 		Weapon: 20mm
 	Aircraft:
