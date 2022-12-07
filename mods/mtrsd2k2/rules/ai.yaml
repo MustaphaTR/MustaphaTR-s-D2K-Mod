@@ -280,8 +280,8 @@ Player:
 		RequiresCondition: enable-omnius-ai
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
 		UnitsToBuild:
-			carryall: 1
-			carryall.smuggler: 1
+			carryall: 3
+			carryall.smuggler: 3
 			light_inf: 65
 			trooper: 40
 			grenadier: 20
@@ -326,12 +326,18 @@ Player:
 			combat_tank_c: 100
 			combat_tank_m: 100
 			combat_tank_s: 100
+			ornithopter.controllable: 1
+			phoenix: 1
+			swarmer: 1
 		UnitLimits:
 			mechanic: 2
 			harvester: 8
 			harvester.smuggler: 8
 			carryall: 4
 			carryall.smuggler: 4
+			ornithopter.controllable: 4
+			phoenix: 4
+			swarmer: 10
 	McvManagerBotModule:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 		McvTypes: mcv
@@ -350,8 +356,8 @@ Player:
 		RequiresCondition: enable-vidious-ai
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
 		UnitsToBuild:
-			carryall: 1
-			carryall.smuggler: 1
+			carryall: 3
+			carryall.smuggler: 3
 			light_inf: 65
 			trooper: 40
 			grenadier: 20
@@ -396,12 +402,18 @@ Player:
 			combat_tank_c: 100
 			combat_tank_m: 100
 			combat_tank_s: 100
+			ornithopter.controllable: 1
+			phoenix: 1
+			swarmer: 1
 		UnitLimits:
 			mechanic: 2
 			harvester: 8
 			harvester.smuggler: 8
 			carryall: 4
 			carryall.smuggler: 4
+			ornithopter.controllable: 4
+			phoenix: 4
+			swarmer: 10
 	SquadManagerBotModule@gladius:
 		RequiresCondition: enable-gladius-ai
 		SquadSize: 10
@@ -415,8 +427,8 @@ Player:
 		RequiresCondition: enable-gladius-ai
 		UnitQueues: Infantry, Vehicle, Armor, Starport, Aircraft
 		UnitsToBuild:
-			carryall: 1
-			carryall.smuggler: 1
+			carryall: 3
+			carryall.smuggler: 3
 			light_inf: 65
 			trooper: 40
 			grenadier: 20
@@ -461,9 +473,15 @@ Player:
 			combat_tank_c: 100
 			combat_tank_m: 100
 			combat_tank_s: 100
+			ornithopter.controllable: 1
+			phoenix: 1
+			swarmer: 1
 		UnitLimits:
 			mechanic: 2
 			harvester: 8
 			harvester.smuggler: 8
 			carryall: 4
 			carryall.smuggler: 4
+			ornithopter.controllable: 4
+			phoenix: 4
+			swarmer: 10
