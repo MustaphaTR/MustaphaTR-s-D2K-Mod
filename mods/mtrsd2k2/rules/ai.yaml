@@ -106,6 +106,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -130,6 +131,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -166,6 +168,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -190,6 +193,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -226,6 +230,7 @@ Player:
 			heavy_factory: 1
 			starport: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -249,6 +254,7 @@ Player:
 			light_factory: 1
 			heavy_factory: 1
 			repair_pad: 1
+			repair_pad.ixian: 1
 			research_centre: 1
 			palace: 1
 			upgrade.conyard: 1
@@ -282,6 +288,7 @@ Player:
 			nsfremen: 20
 			flamethrower: 20
 			plasma_infantry: 20
+			mechanic: 1
 			harvester: 1
 			harvester.smuggler: 1
 			trike.mg.starport: 5
@@ -320,6 +327,7 @@ Player:
 			combat_tank_m: 100
 			combat_tank_s: 100
 		UnitLimits:
+			mechanic: 2
 			harvester: 8
 			harvester.smuggler: 8
 			carryall: 4
@@ -350,6 +358,7 @@ Player:
 			nsfremen: 20
 			flamethrower: 20
 			plasma_infantry: 20
+			mechanic: 1
 			harvester: 1
 			harvester.smuggler: 1
 			trike.mg.starport: 7
@@ -388,6 +397,7 @@ Player:
 			combat_tank_m: 100
 			combat_tank_s: 100
 		UnitLimits:
+			mechanic: 2
 			harvester: 8
 			harvester.smuggler: 8
 			carryall: 4
@@ -413,6 +423,7 @@ Player:
 			nsfremen: 20
 			flamethrower: 20
 			plasma_infantry: 20
+			mechanic: 1
 			harvester: 1
 			harvester.smuggler: 1
 			trike.mg.starport: 5
@@ -451,6 +462,7 @@ Player:
 			combat_tank_m: 100
 			combat_tank_s: 100
 		UnitLimits:
+			mechanic: 2
 			harvester: 8
 			harvester.smuggler: 8
 			carryall: 4
