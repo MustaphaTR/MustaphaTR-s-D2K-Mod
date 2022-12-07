@@ -475,6 +475,8 @@ harvester.smuggler:
 	Mobile:
 		Speed: 50
 		Locomotor: smugglerharvester
+		TerrainCursors:
+			Rough: move-rough
 	RevealsShroud:
 		Range: 4c0
 	SpawnActorOnDeath:
