@@ -1173,7 +1173,7 @@ repair_pad.ixian:
 	D2kBuilding:
 		Footprint: _+_ +++ _+_
 	Health:
-		HP: 400000
+		HP: 40000
 	RepairsUnits:
 		Interval: 5
 	Power:
