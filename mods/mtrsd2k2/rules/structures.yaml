@@ -494,6 +494,7 @@ outpost:
 		Description: Makes a group of units or buildings stealth\nfor 30 seconds.
 		Duration: 750
 		Condition: stealth
+		Sequence: idle
 	ProvidesPrerequisite@atreides:
 		Prerequisite: outpost.atreides
 		Factions: atreides
@@ -1263,6 +1264,7 @@ research_centre:
 		Description: Makes a group of rocket turrets\nable to attack anywhere for 10 seconds.
 		Duration: 250
 		Condition: corrino.rocket_strike
+		Sequence: idle
 	ProvidesPrerequisite@buildingname:
 
 palace:

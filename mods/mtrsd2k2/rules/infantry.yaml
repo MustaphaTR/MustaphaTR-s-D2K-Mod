@@ -544,6 +544,7 @@ drone:
 		RequiresCondition: !ecmdisable
 	RevealsShroud:
 		Range: 4c384
+		Type: GroundPosition
 	Armament@primary:
 		Weapon: DroneJump
 	AttackInfect:

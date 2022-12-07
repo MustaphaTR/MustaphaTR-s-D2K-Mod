@@ -138,7 +138,6 @@ quad.mg:
 	Armament@muzzle:
 		Weapon: HMG_quad_muzzle
 		LocalOffset: -544,64,64, -544,-64,64
-		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisable
 		FacingTolerance: 0

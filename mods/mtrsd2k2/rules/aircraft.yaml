@@ -216,10 +216,7 @@ ornithopter.controllable:
 	Targetable:
 		TargetTypes: Air, Plane
 	WithFacingSpriteBody:
-		RequiresCondition: airborne
-	WithFacingSpriteBody@LANDED:
-		Sequence: idle-landed
-		RequiresCondition: !airborne
+		PauseOnCondition: !airborne
 	-Interactable:
 	Selectable:
 		Class: ornithopter.controllable

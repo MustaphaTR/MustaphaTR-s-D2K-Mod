@@ -13,11 +13,6 @@ ornithopter:
 		Length: 3
 		Tick: 120
 		Transpose: true
-	idle-landed: DATA.R8
-		Start: 1987
-		Facings: -32
-		Length: 1
-		Tick: 120
 	icon: DATA.R8
 		Start: 4292
 		Offset: -30,-24
