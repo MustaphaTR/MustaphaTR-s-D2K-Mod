@@ -21,7 +21,7 @@ light_inf:
 	Armament:
 		Weapon: LMG
 	Encyclopedia:
-		Description: Light Infantry are lightly armored foot soldiers, equipped with 9mm RP assault rifles. Light Infantry are effective against other infantry and lightly armored vehicles.\n\nLight Infantry are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: Light Infantry are lightly armored foot soldiers, equipped with 9mm RP assault rifles. Light Infantry are effective against other infantry and lightly armored vehicles.\n\nLight Infantry are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 0
 		Category: Infantry
 	WithInfantryBody:
@@ -56,7 +56,7 @@ trooper:
 		Weapon: BazookaAA
 		LocalOffset: 128,0,256
 	Encyclopedia:
-		Description: Armed with missile launchers, Troopers fire wire guided armor-piercing warheads. These units are particularly effective against vehicles (especially armored ones) and buildings. However, this unit is largely useless against infantry.\n\nTroopers are resistant to anti-tank weaponry but very vulnerable to high explosives, fire and bullet weapons.
+		Description: Armed with missile launchers, Troopers fire wire guided armor-piercing warheads. These units are particularly effective against vehicles (especially armored ones) and buildings. However, this unit is largely useless against infantry.\n\nTroopers are resistant to anti-tank weaponry but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 10
 		Category: Infantry
 	TakeCover:
@@ -84,7 +84,7 @@ dog:
 	Health:
 		HP: 1400
 	Encyclopedia:
-		Description: The Attack Dog is a fast scout infantry capable of dealing with lone infantry with ease.\n\nAttack Dogs are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: The Attack Dog is a fast scout infantry capable of dealing with lone infantry with ease.\n\nAttack Dogs are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 50
 		Category: Infantry
 	Mobile:
@@ -166,7 +166,7 @@ engineer:
 		CaptureTypes: building
 		PlayerExperience: 10
 	Encyclopedia:
-		Description: Engineers can be used to capture enemy buildings and repair friendly ones.\n\nEngineers are resistant to anti-tank weaponry but very vulnerable to high explosives, fire and bullet weapons.
+		Description: Engineers can be used to capture enemy buildings and repair friendly ones.\n\nEngineers are resistant to anti-tank weaponry but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 40
 		Category: Infantry
 	-RevealOnFire:
@@ -204,7 +204,7 @@ thumper:
 		Facing: 512
 		AllowedTerrainTypes: Sand, Spice, Dune, SpiceSand
 	Encyclopedia:
-		Description: The Thumper Infantry can deploy a noisy hammering device which will attract sand worms to the area.\n\nGrenadiers are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: The Thumper Infantry can deploy a noisy hammering device which will attract sand worms to the area.\n\nGrenadiers are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 50
 		Category: Infantry
 	WithInfantryBody:
@@ -252,7 +252,7 @@ grenadier:
 		LocalOffset: 192,0,224
 		FireDelay: 3
 	Encyclopedia:
-		Description: The Grenadier is an infantry artillery unit which are strong against buildings. They can explode when killed dealing damage to nearby units.\n\nGrenadiers are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: The Grenadier is an infantry artillery unit which are strong against buildings. They can explode when killed dealing damage to nearby units.\n\nGrenadiers are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 60
 		Category: Infantry
 	TakeCover:
@@ -315,7 +315,7 @@ mechanic:
 	Armor:
 		Type: none
 	Encyclopedia:
-		Description: The Mechanic are support infantry capable of repairing nearby vehicles or vehicle husks.\n\nMechanics are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: The Mechanic are support infantry capable of repairing nearby vehicles or vehicle husks.\n\nMechanics are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 80
 		Category: Infantry
 	Mobile:
@@ -377,7 +377,7 @@ flamethrower:
 	Armor:
 		Type: none
 	Encyclopedia:
-		Description: Flamethrowers are infantry armed with short range flame weapons that can deal high damage to infantry and buildings.\n\nFlamethrowers are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: Flamethrowers are infantry armed with short range flame weapons that can deal high damage to infantry and buildings.\n\nFlamethrowers are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 90
 		Category: Infantry
 	Mobile:
@@ -420,7 +420,7 @@ plasma_infantry:
 	Armor:
 		Type: none
 	Encyclopedia:
-		Description: Plasma Infantry are infantry armed with portable plasma launchers that can deal good damage to armored units.\n\nPlasma Infantry are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: Plasma Infantry are infantry armed with portable plasma launchers that can deal good damage to armored units.\n\nPlasma Infantry are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 100
 		Category: Infantry
 	Mobile:
@@ -493,7 +493,7 @@ fedaykin:
 		Prerequisites: ~disabled
 		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
 	Encyclopedia:
-		Description: The Fedaykin is elite Fremen infantry armed with portable sonic weapons. They are effective against infantry and lightly armored vehicles - but weaker against armored targets.\n\nThe Fedaykin is resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: The Fedaykin is elite Fremen infantry armed with portable sonic weapons. They are effective against infantry and lightly armored vehicles - but weaker against armored targets.\n\nThe Fedaykin is resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 120
 		Category: Infantry
 	Mobile:
@@ -699,7 +699,7 @@ sardaukar:
 	Health:
 		HP: 10000
 	Encyclopedia:
-		Description: Sardaukars elite heavy troopers of House Corrino that are armed a machine gun that's effective against infantry, and a rocket launcher for vehicles.\n\nThe Sardaukar is resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
+		Description: Sardaukars elite heavy troopers of House Corrino that are armed a machine gun that's effective against infantry, and a rocket launcher for vehicles.\n\nThe Sardaukar is resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
 		Order: 140
 		Category: Infantry
 	Mobile:
@@ -735,7 +735,7 @@ saboteur:
 	Health:
 		HP: 4000
 	Encyclopedia:
-		Description: The Suicide Bomber is a special military unit acquired by House Ordos. A single Suicide Bomber can destroy any enemy building or vehicle once he moves into it, though also destroys himself! A Suicide Bomber is stealthed while standing still.\n\nThe Suicide Bomber is resistant to anti-tank weaponry, but very vulnerable to high explosives, fire, and bullet weapons.
+		Description: The Suicide Bomber is a special military unit acquired by House Ordos. A single Suicide Bomber can destroy any enemy building or vehicle once he moves into it, though also destroys himself! A Suicide Bomber is stealthed while standing still.\n\nThe Suicide Bomber is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
 		Order: 150
 		Category: Infantry
 	Mobile:
@@ -776,7 +776,7 @@ sniper:
 	Health:
 		HP: 7500
 	Encyclopedia:
-		Description: The Sniper is a special military unit used by the Mercenaries. They can deal with enemy infantry from a great range with ease. A Sniper is stealthed unless firing.\n\nThe Sniper is resistant to anti-tank weaponry, but very vulnerable to high explosives, fire, and bullet weapons.
+		Description: The Sniper is a special military unit used by the Mercenaries. They can deal with enemy infantry from a great range with ease. A Sniper is stealthed unless firing.\n\nThe Sniper is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
 		Order: 160
 		Category: Infantry
 	Armor:
@@ -823,7 +823,7 @@ hijacker:
 	Health:
 		HP: 50000
 	Encyclopedia:
-		Description: The Saboteur is a special military unit used by the Smugglers. They can deal steal enemy vehicles, or enter enemy structures to disable them for a while. A Saboteur is stealthed while standing still.\n\nThe Saboteur is resistant to anti-tank weaponry, but very vulnerable to high explosives, fire, and bullet weapons.
+		Description: The Saboteur is a special military unit used by the Smugglers. They can deal steal enemy vehicles, or enter enemy structures to disable them for a while. A Saboteur is stealthed while standing still.\n\nThe Saboteur is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
 		Order: 160
 		Category: Infantry
 	RevealsShroud:

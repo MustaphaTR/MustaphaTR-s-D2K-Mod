@@ -165,11 +165,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Water, Defense
+		ValidTargets: Infantry, Vehicle, Defense
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Water, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Structure, Defense
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@CREEPS:
 		ValidTargets: Creep
@@ -192,16 +192,24 @@
 		AttackMoveCondition: attack-move
 		AssaultMoveCondition: assault-move
 
+^AutoTargetVehicleAssaultMove:
+	Inherits: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@VEHICLES:
+		ValidTargets: Vehicle
+		InvalidTargets: Infantry, Structure, Defense
+		RequiresCondition: bot-owned
+		Priority: 10
+
 ^AutoTargetAll:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Water, Air, Defense
+		ValidTargets: Infantry, Vehicle, Air, Defense
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Water, Air, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Air, Structure, Defense
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@CREEPS:
 		ValidTargets: Creep
