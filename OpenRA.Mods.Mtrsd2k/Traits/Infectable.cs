@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2021 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -24,10 +23,10 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 	public class InfectableInfo : ConditionalTraitInfo, Requires<HealthInfo>
 	{
 		[Desc("Damage types that removes the infector.")]
-		public readonly BitSet<DamageType> RemoveInfectorDamageTypes = default(BitSet<DamageType>);
+		public readonly BitSet<DamageType> RemoveInfectorDamageTypes = default;
 
 		[Desc("Damage types that kills the infector.")]
-		public readonly BitSet<DamageType> KillInfectorDamageTypes = default(BitSet<DamageType>);
+		public readonly BitSet<DamageType> KillInfectorDamageTypes = default;
 
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while infected by any actor.")]
@@ -52,7 +51,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 		readonly Health health;
 
 		public Tuple<Actor, AttackInfect, AttackInfectInfo> Infector;
-		public int[] FirepowerMultipliers = new int[] { };
+		public int[] FirepowerMultipliers = Array.Empty<int>();
 
 		[Sync]
 		public int Ticks;
@@ -153,7 +152,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 					RevokeCondition(self);
 					Infector = null;
-					FirepowerMultipliers = new int[] { };
+					FirepowerMultipliers = Array.Empty<int>();
 					dealtDamage = 0;
 					suppressionCount = 0;
 					killInfectorOnDeath = false;
