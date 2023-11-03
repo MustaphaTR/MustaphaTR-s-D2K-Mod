@@ -36,7 +36,7 @@ AtreidesAircraftTypes = { "ornithopter.controllable" }
 MercenaryTankTypes = { "combat_tank_m", "combat_tank_m", "siege_tank" }
 
 ActivateAI = function()
-	IdlingUnits[ordos] = Reinforcements.Reinforce(ordos, InitialOrdosReinforcements[1], InitialOrdosPaths[1]), Reinforcements.Reinforce(ordos, InitialOrdosReinforcements[2], InitialOrdosPaths[2])
+	IdlingUnits[ordos] = Utils.Concat(Reinforcements.Reinforce(ordos, InitialOrdosReinforcements[1], InitialOrdosPaths[1]), Reinforcements.Reinforce(ordos, InitialOrdosReinforcements[2], InitialOrdosPaths[2]))
 	IdlingUnits[atreides_enemy] = Reinforcements.Reinforce(atreides_enemy, InitialAtreidesReinforcements, InitialAtreidesPath)
 	IdlingUnits[atreides_neutral] = { }
 	IdlingUnits[mercenary_enemy] = Reinforcements.Reinforce(mercenary_enemy, InitialMercenaryReinforcements, InitialMercenaryPath)

@@ -247,7 +247,7 @@ crate:
 		Units: ifv
 		ValidFactions: smuggler
 		Prerequisites: techlevel.6, heavy_factory, research_centre
-	GiveMcvCrateAction:
+	GiveBaseBuilderCrateAction:
 		SelectionShares: 0
 		NoBaseSelectionShares: 9001
 		Units: mcv

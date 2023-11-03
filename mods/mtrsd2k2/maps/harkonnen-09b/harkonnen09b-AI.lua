@@ -35,9 +35,9 @@ CorrinoStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.
 CorrinoAircraftTypes = { "phoenix" }
 
 ActivateAI = function()
-	IdlingUnits[atreides_main] = Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[2], InitialAtreidesPaths[2])
+	IdlingUnits[atreides_main] = Utils.Concat(Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[2], InitialAtreidesPaths[2]))
 	IdlingUnits[atreides_small] = Reinforcements.Reinforce(atreides_small, InitialAtreidesReinforcements[3], InitialAtreidesPaths[3])
-	IdlingUnits[corrino_main] = Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[1], InitialCorrinoPaths[1]), Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[2], InitialCorrinoPaths[2])
+	IdlingUnits[corrino_main] = Utils.Concat(Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[1], InitialCorrinoPaths[1]), Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[2], InitialCorrinoPaths[2]))
 	IdlingUnits[corrino_small] = Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[3], InitialCorrinoPaths[3])
 
 	DefendAndRepairBase(atreides_main, AtreidesMainBase, 0.75, AttackGroupSize[Difficulty])

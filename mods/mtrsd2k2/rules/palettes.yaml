@@ -29,10 +29,10 @@
 		Filename: PALETTE.BIN
 		ShadowIndex: 1
 		AllowModifiers: false
-	PaletteFromFile@colorpicker:
+	ColorPickerPalette@colorpicker:
 		Name: colorpicker
-		Filename: PALETTE.BIN
-		ShadowIndex: 4
+		BasePalette: d2k
+		RemapIndex: 255, 254, 253, 252, 251, 250, 249, 248, 247, 246, 245, 244, 243, 242, 241, 240
 		AllowModifiers: false
 	PaletteFromRGBA@shadow:
 		Name: shadow
@@ -48,8 +48,8 @@
 		A: 128
 	PaletteFromEmbeddedSpritePalette@moveflash-base:
 		Name: moveflash-base
-		Image: moveflsh
-		Sequence: idle
+		Filename: DATA.R8
+		Frame: 3874
 	PaletteFromScaledPalette@moveflash:
 		Name: moveflash
 		BasePalette: moveflash-base
@@ -77,8 +77,12 @@
 		Offset: -64
 	PaletteFromEmbeddedSpritePalette@shroud:
 		Name: shroud
-		Image: shroud
-		Sequence: palette
+		Filename: DATA.R8
+		Frame: 38
+	PaletteFromEmbeddedSpritePalette@smoke3:
+		Name: smoke3
+		Filename: DATA.R8
+		Frame: 3747
 	D2kFogPalette@fog:
 		Name: fog
 		BasePalette: shroud

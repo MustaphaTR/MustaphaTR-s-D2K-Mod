@@ -1,38 +1,48 @@
 carryall:
-	idle: DATA.R8
+	idle:
+		Filename: DATA.R8
 		Start: 1923
 		Facings: -32
-	icon: DATA.R8
+	icon:
+		Filename: DATA.R8
 		Start: 4290
 		Offset: -30,-24
 
 ornithopter:
-	idle: DATA.R8
+	idle:
+		Filename: DATA.R8
 		Start: 1955
 		Facings: -32
 		Length: 3
 		Tick: 120
 		Transpose: true
-	icon: DATA.R8
+	icon:
+		Filename: DATA.R8
 		Start: 4292
 		Offset: -30,-24
 
 frigate:
-	idle: DATA.R8
+	idle:
+		Filename: DATA.R8
 		Start: 2517
 		Facings: 1
 
 phoenix:
-	idle: phoenix.shp
+	idle:
+		Filename: phoenix.shp
 		Facings: 16
-	icon: phoenixicon.shp
+	icon:
+		Filename: phoenixicon.shp
 
 swarmer:
-	idle: swarmer.shp
+	idle:
+		Filename: swarmer.shp
 		Facings: 16
 		Scale: 0.8
-	muzzle: minigun.shp
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.8
-	icon: swarmericon.shp
+	icon:
+		Filename: swarmericon.shp

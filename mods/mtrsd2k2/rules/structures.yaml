@@ -548,6 +548,7 @@ outpost:
 		Amount: -125
 	InfiltrateForExploration:
 		Types: Sabotage
+		PlayerExperience: 10
 	InfiltrateForSupportPowerReset:
 		Types: Sabotage
 	GrantConditionOnPrerequisite@UPGRADEABLE:
@@ -963,6 +964,7 @@ high_tech_factory:
 		Amount: -80
 	InfiltrateForSupportPowerReset:
 		Types: Sabotage
+		PlayerExperience: 10
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.hightech
 
@@ -1243,6 +1245,7 @@ research_centre:
 		Amount: -175
 	InfiltrateForSupportPowerReset:
 		Types: Sabotage
+		PlayerExperience: 10
 	ProvidesPrerequisite@hi_tech_or_ix:
 		Prerequisite: hi_tech_or_ix
 	ProvidesPrerequisite@corrino:
@@ -1334,6 +1337,7 @@ palace:
 		Amount: -200
 	InfiltrateForSupportPowerReset:
 		Types: Sabotage
+		PlayerExperience: 10
 	ProvidesPrerequisite@atreides:
 		Prerequisite: palace.atreides
 		Factions: atreides

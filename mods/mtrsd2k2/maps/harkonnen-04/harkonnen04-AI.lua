@@ -27,7 +27,7 @@ AtreidesTankType = { "combat_tank_a" }
 
 ActivateAI = function()
 	IdlingUnits[fremen] = { }
-	IdlingUnits[atreides] = Reinforcements.Reinforce(atreides, InitialAtreidesReinforcements[1], AtreidesPaths[2]), Reinforcements.Reinforce(atreides, InitialAtreidesReinforcements[2], AtreidesPaths[3])
+	IdlingUnits[atreides] = Utils.Concat(Reinforcements.Reinforce(atreides, InitialAtreidesReinforcements[1], AtreidesPaths[2]), Reinforcements.Reinforce(atreides, InitialAtreidesReinforcements[2], AtreidesPaths[3]))
 	FremenProduction()
 
 	DefendAndRepairBase(atreides, AtreidesBase, 0.75, AttackGroupSize[Difficulty])

@@ -160,7 +160,7 @@ engineer:
 		Range: 2c768
 	Mobile:
 		Speed: 31
-	EngineerRepair:
+	InstantlyRepairs:
 	CaptureManager:
 	Captures:
 		CaptureTypes: building
@@ -338,7 +338,6 @@ mechanic:
 		Types: Husk
 		ValidRelationships: Ally
 		EnterCursor: goldwrench
-		PlayerExperience: 25
 	WithInfantryBody:
 		DefaultAttackSequence: repair
 		StandSequences: stand
@@ -823,7 +822,7 @@ hijacker:
 	Health:
 		HP: 50000
 	Encyclopedia:
-		Description: The Saboteur is a special military unit used by the Smugglers. They can deal steal enemy vehicles, or enter enemy structures to disable them for a while. A Saboteur is stealthed while standing still.\n\nThe Saboteur is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
+		Description: The Saboteur is a special military unit used by the Smugglers. They can steal enemy vehicles, or enter enemy structures to disable them for a while. A Saboteur is stealthed while standing still.\n\nThe Saboteur is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
 		Order: 160
 		Category: Infantry
 	RevealsShroud:
@@ -834,7 +833,6 @@ hijacker:
 		PlayerExperience: 50
 	Infiltrates:
 		Types: Sabotage
-		PlayerExperience: 50
 		Notification:
 	-TakeCover:
 	WithInfantryBody:

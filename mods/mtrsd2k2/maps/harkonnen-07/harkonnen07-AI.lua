@@ -38,7 +38,7 @@ AtreidesAircraftTypes = { "ornithopter.controllable" }
 CorrinoInfantryTypes = { "light_inf", "trooper", "sardaukar" }
 
 ActivateAI = function()
-	IdlingUnits[atreides_main] = Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[Difficulty][1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[Difficulty][2], InitialAtreidesPaths[2])
+	IdlingUnits[atreides_main] = Utils.Concat(Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[Difficulty][1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[Difficulty][2], InitialAtreidesPaths[2]))
 	IdlingUnits[atreides_small] = Reinforcements.Reinforce(atreides_small, InitialAtreidesReinforcements[Difficulty][1], InitialAtreidesPaths[3])
 	IdlingUnits[corrino] = Reinforcements.Reinforce(corrino, InitialCorrinoReinforcements, InitialCorrinoPath)
 

@@ -390,9 +390,11 @@ phoenix:
 	SelectionDecorations:
 	Contrail@1:
 		Offset: -538,-614,0
+		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
 	Contrail@2:
 		Offset: -538,614,0
+		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
 	Voiced:
 		VoiceSet: VehicleVoice

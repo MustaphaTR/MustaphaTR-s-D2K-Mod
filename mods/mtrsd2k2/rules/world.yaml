@@ -199,18 +199,18 @@ World:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	StartingUnits@mcv:
 		Class: none
-		ClassName: MCV Only
+		ClassName: options-starting-units.mcv-only
 		BaseActor: mcv
 		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, smuggler, mercenary
 	StartingUnits@cyard:
 		Class: cyard
-		ClassName: Con. Yard Only
+		ClassName: options-starting-units.conyard-only
 		BaseActor: construction_yard
 		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, smuggler, mercenary
 		BaseActorOffset: -1,-1
 	StartingUnits@lighttrike:
 		Class: light
-		ClassName: Light Support
+		ClassName: options-starting-units.light-support
 		Factions: atreides, corrino, smuggler
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, trooper, trike.mg
@@ -218,7 +218,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@lightraider:
 		Class: light
-		ClassName: Light Support
+		ClassName: options-starting-units.light-support
 		Factions: fremen, ixian, mercenary
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, trooper, raider.mg
@@ -234,7 +234,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumatreides:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: atreides
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, grenadier, trike.mg, quad.rocket, combat_tank_a
@@ -242,7 +242,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumfremen:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: fremen
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, nsfremen, raider.mg, trike.rocket, combat_tank_f
@@ -250,7 +250,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumixian:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: ixian
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, mechanic, raider.mg, raider.rocket, combat_tank_i
@@ -258,7 +258,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumharkonnen:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: harkonnen
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, flamethrower, quad.mg, trike.rocket, combat_tank_h
@@ -266,7 +266,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumcorrino:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: corrino
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, plasma_infantry, trike.mg, quad.rocket, combat_tank_c
@@ -274,7 +274,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumordos:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: ordos
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, stealth_raider, quad.mg, raider.rocket, combat_tank_o
@@ -282,7 +282,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediummercenary:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: mercenary
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, light_tank, raider.mg, quad.rocket, combat_tank_m
@@ -290,7 +290,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@mediumsmuggler:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: options-starting-units.medium-support
 		Factions: smuggler
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, trooper, trooper, dog, dog, trike.mg, raider.rocket, combat_tank_s
@@ -298,7 +298,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@heavyatreides:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: atreides
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, grenadier, trike.mg, trike.mg, quad.rocket, combat_tank_a, combat_tank_a, missile_tank, siege_tank
@@ -306,7 +306,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavyfremen:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: fremen
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, nsfremen, raider.mg, raider.mg, trike.rocket, combat_tank_f, combat_tank_f, missile_tank, siege_tank
@@ -314,7 +314,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavyixian:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: ixian
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, mechanic, raider.mg, raider.mg, raider.rocket, combat_tank_i, combat_tank_i, missile_tank, siege_tank
@@ -322,7 +322,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavyharkonnen:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: harkonnen
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, flamethrower, quad.mg, quad.mg, trike.rocket, combat_tank_h, combat_tank_h, missile_tank, siege_tank
@@ -330,7 +330,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavycorrino:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: corrino
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, plasma_infantry, trike.mg, trike.mg, quad.rocket, combat_tank_c, combat_tank_c, missile_tank, siege_tank
@@ -338,7 +338,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavyordos:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: ordos
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, stealth_raider, quad.mg, quad.mg, raider.rocket, combat_tank_o, combat_tank_o, missile_tank, siege_tank
@@ -346,7 +346,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavymercenary:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: mercenary
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, light_tank, raider.mg, raider.mg, quad.rocket, combat_tank_m, combat_tank_m, missile_tank, siege_tank
@@ -354,7 +354,7 @@ World:
 		OuterSupportRadius: 6
 	StartingUnits@heavysmuggler:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: options-starting-units.heavy-support
 		Factions: smuggler
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, light_inf, light_inf, trooper, trooper, trooper, dog, dog, trike.mg, trike.mg, raider.rocket, combat_tank_s, combat_tank_s, missile_tank, siege_tank
@@ -376,8 +376,7 @@ World:
 		TimeLimitDisplayOrder: 2
 	ColorPickerManager:
 		PreviewActor: carryall.colorpicker
-		PresetHues: 0, 0.13, 0.18, 0.3, 0.475, 0.625, 0.82, 0.89, 0.97, 0.05, 0.23, 0.375, 0.525, 0.6, 0.75, 0.85
-		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.5, 0.35, 0.4, 0.4, 0.5, 0.5, 0.4, 0.35
+		PresetColors: F21818, FFAE00, FFF830, 44F218, 39C46F, 498221, F2798F, E118F2, 9023CD, 392929, 200738, F218A8, DDB8FF, 184FF2, 2F86F2, 76D2F8
 	OrderEffects:
 		TerrainFlashImage: moveflsh
 		TerrainFlashSequence: idle

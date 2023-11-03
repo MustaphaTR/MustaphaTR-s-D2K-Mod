@@ -137,22 +137,22 @@ Player:
 		FogCheckboxDisplayOrder: 3
 	LobbyPrerequisiteCheckbox@AUTOCONCRETE:
 		ID: autoconcrete
-		Label: Automatic Concrete
-		Description: Concrete foundations are automatically created beneath buildings
+		Label: checkbox-automatic-concrete.label
+		Description: checkbox-automatic-concrete.description
 		Enabled: False
 		DisplayOrder: 7
 		Prerequisites: global-auto-concrete
 	LobbyPrerequisiteCheckbox@UNHOLYALLIANCE:
 		ID: unholyalliance
-		Label: Unholy Alliance
-		Description: Allows production of all faction specific units
+		Label: checkbox-unholy-alliance.label
+		Description: checkbox-unholy-alliance.description
 		Enabled: False
 		DisplayOrder: 9
 		Prerequisites: global-unholy-alliance
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
-		Label: Redeployable MCVs
-		Description: Allow undeploying Construction Yards
+		Label: checkbox-redeployable-mcvs.label
+		Description: checkbox-redeployable-mcvs.description
 		Enabled: False
 		DisplayOrder: 10
 		Prerequisites: global-factundeploy
@@ -204,31 +204,31 @@ Player:
 		Prerequisite: player.smuggler
 		RequiresPrerequisites: global-unholy-alliance
 	ProvidesTechPrerequisite@1:
-		Name: 1
+		Name: options-tech-level.one
 		Prerequisites: techlevel.1
 		Id: 1
 	ProvidesTechPrerequisite@2:
-		Name: 2
+		Name: options-tech-level.two
 		Prerequisites: techlevel.1, techlevel.2
 		Id: 2
 	ProvidesTechPrerequisite@3:
-		Name: 3
+		Name: options-tech-level.three
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3
 		Id: 3
 	ProvidesTechPrerequisite@4:
-		Name: 4
+		Name: options-tech-level.four
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4
 		Id: 4
 	ProvidesTechPrerequisite@5:
-		Name: 5
+		Name: options-tech-level.five
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5
 		Id: 5
 	ProvidesTechPrerequisite@6:
-		Name: 6
+		Name: options-tech-level.six
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6
 		Id: 6
 	ProvidesTechPrerequisite@7:
-		Name: 7
+		Name: options-tech-level.seven
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7
 		Id: 7
 	ProductionIconOverlayManager@upgraded:

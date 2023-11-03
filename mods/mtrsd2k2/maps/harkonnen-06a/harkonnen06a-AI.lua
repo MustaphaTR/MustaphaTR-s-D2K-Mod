@@ -27,7 +27,7 @@ OrdosTankTypes = { "combat_tank_o", "combat_tank_o", "siege_tank", "missile_tank
 OrdosStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.starport", "combat_tank_o.starport", "combat_tank_o.starport", "siege_tank.starport", "missile_tank.starport" }
 
 ActivateAI = function()
-	IdlingUnits[ordos_main] = Reinforcements.Reinforce(ordos_main, InitialOrdosReinforcements[1], InitialOrdosPaths[1]), Reinforcements.Reinforce(ordos_main, InitialOrdosReinforcements[2], InitialOrdosPaths[2])
+	IdlingUnits[ordos_main] = Utils.Concat(Reinforcements.Reinforce(ordos_main, InitialOrdosReinforcements[1], InitialOrdosPaths[1]), Reinforcements.Reinforce(ordos_main, InitialOrdosReinforcements[2], InitialOrdosPaths[2]))
 	IdlingUnits[ordos_small] = Reinforcements.Reinforce(ordos_small, InitialOrdosReinforcements[1], InitialOrdosPaths[3])
 
 	DefendAndRepairBase(ordos_main, OrdosMainBase, 0.75, AttackGroupSize[Difficulty])
