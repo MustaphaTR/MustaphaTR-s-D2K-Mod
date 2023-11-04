@@ -108,9 +108,8 @@ function build_platform()
 		echo "Mod version ${MOD_VERSION} will remain unchanged.";
 	fi
 
-	TAG_TYPE="${TAG%%-*}"
-	TAG_VERSION="${TAG#*-}"
-	BACKWARDS_TAG="${TAG_VERSION}-${TAG_TYPE}"
+	TAG_VERSION="${TAG#*v}"
+	BACKWARDS_TAG="${TAG_VERSION}"
 
 	# Create multi-resolution icon
 	convert "${ARTWORK_DIR}/icon_16x16.png" "${ARTWORK_DIR}/icon_24x24.png" "${ARTWORK_DIR}/icon_32x32.png" "${ARTWORK_DIR}/icon_48x48.png" "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/${MOD_ID}.ico"
