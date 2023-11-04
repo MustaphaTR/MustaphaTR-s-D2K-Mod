@@ -182,8 +182,8 @@ World:
 		Type: SandCrater
 		Sequence: sandcraters
 	MapCreeps:
-		CheckboxLabel: Worms
-		CheckboxDescription: Worms roam the map and devour unprepared forces
+		CheckboxLabel: dropdown-map-worms.label
+		CheckboxDescription: dropdown-map-worms.description
 		CheckboxDisplayOrder: 5
 	SpawnMapActors:
 	MapBuildRadius:
@@ -226,7 +226,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@lightquad:
 		Class: light
-		ClassName: Light Support
+		ClassName: options-starting-units.light-support
 		Factions: harkonnen, ordos
 		BaseActor: mcv
 		SupportActors: light_inf, light_inf, light_inf, trooper, quad.mg

@@ -634,6 +634,8 @@ rocketeer:
 	RevealsShroud:
 		Range: 5c0
 		Type: GroundPosition
+	RevealsShroud@DRONE:
+		Type: GroundPosition
 	Armament:
 		Weapon: 20mm
 	Aircraft:
