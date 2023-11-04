@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -38,7 +38,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 		[Desc("Conditions to grant when infected by specified actors.",
 			"A dictionary of [actor id]: [condition].")]
-		public readonly Dictionary<string, string> InfectedByConditions = new Dictionary<string, string>();
+		public readonly Dictionary<string, string> InfectedByConditions = new();
 
 		[GrantedConditionReference]
 		public IEnumerable<string> LinterConditions { get { return InfectedByConditions.Values; } }
@@ -95,8 +95,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 			if (infectedToken == Actor.InvalidConditionToken && !string.IsNullOrEmpty(Info.InfectedCondition))
 				infectedToken = self.GrantCondition(Info.InfectedCondition);
 
-			string infectedByCondition;
-			if (Info.InfectedByConditions.TryGetValue(Infector.Item1.Info.Name, out infectedByCondition))
+			if (Info.InfectedByConditions.TryGetValue(Infector.Item1.Info.Name, out var infectedByCondition))
 				infectedByToken = self.GrantCondition(infectedByCondition);
 		}
 
@@ -144,10 +143,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 					else
 					{
 						var mobile = Infector.Item1.TraitOrDefault<Mobile>();
-						if (mobile != null)
-						{
-							mobile.Nudge(Infector.Item1);
-						}
+						mobile?.Nudge(Infector.Item1);
 					}
 
 					RevokeCondition(self);
