@@ -231,6 +231,12 @@ CrateExplosion:
 	Warhead@2Concrete: DamagesConcrete
 		Damage: 4500
 
+UnitExplodeTiny:
+	Warhead@1Eff: CreateEffect
+		Explosions: self_destruct_small
+		ImpactSounds: EXPLSML1.WAV
+		ImpactActors: false
+
 UnitExplodeSmall:
 	Warhead@1Eff: CreateEffect
 		Explosions: self_destruct

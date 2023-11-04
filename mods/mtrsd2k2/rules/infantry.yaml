@@ -594,8 +594,8 @@ drone:
 	Voiced:
 		VoiceSet: DroneVoice
 	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: UnitExplodeTiny
+		EmptyWeapon: UnitExplodeTiny
 	-Infectable:
 	-Targetable@DRONE:
 	-RevealsShroud@DRONE:

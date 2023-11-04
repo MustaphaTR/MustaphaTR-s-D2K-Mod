@@ -31,6 +31,11 @@ explosion:
 		Filename: DATA.R8
 		Start: 3686
 		Length: 15
+	self_destruct_small:
+		Filename: DATA.R8
+		Start: 3686
+		Length: 15
+		Scale: 0.5
 	building:
 		Filename: DATA.R8
 		Start: 3701
