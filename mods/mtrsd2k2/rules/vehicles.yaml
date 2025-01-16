@@ -420,6 +420,7 @@ harvester:
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 30
 		SearchFromHarvesterRadius: 15
+		EmptyCondition: harvester-empty
 	StoresResources:
 		Capacity: 28
 		Resources: Spice
@@ -934,6 +935,7 @@ stealth_tank:
 		InitialDelay: 40
 		CloakDelay: 80
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Damage, Heal
+		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical

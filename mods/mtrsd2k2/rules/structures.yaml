@@ -61,7 +61,7 @@ construction_yard:
 		Offset: 1,1
 		TransformSounds: BUILD1.WAV
 		NoTransformNotification: CannotDeploy
-		NoTransformTextNotification: actor-construction-yard.transforms-no-transform-text-notification
+		NoTransformTextNotification: notification-cannot-deploy-here
 		RequiresCondition: factundeploy && !build-incomplete
 	TransformsIntoMobile:
 		Locomotor: vehicle

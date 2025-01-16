@@ -65,6 +65,7 @@ Sequences:
 	mtrsd2k2|sequences/infantry.yaml
 	mtrsd2k2|sequences/structures.yaml
 	mtrsd2k2|sequences/misc.yaml
+	mtrsd2k2|sequences/arrakis.yaml
 
 TileSets:
 	mtrsd2k2|tilesets/arrakis.yaml
@@ -97,6 +98,7 @@ ChromeLayout:
 	mtrsd2k2|chrome/ingame-player.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
 	d2k|chrome/mainmenu.yaml
@@ -144,8 +146,9 @@ FluentMessages:
 	d2k|fluent/chrome.ftl
 	d2k|fluent/hotkeys.ftl
 	d2k|fluent/rules.ftl
-	mtrsd2k2|fluent/mtrsd2k2.ftl
+	mtrsd2k2|fluent/chrome.ftl
 	mtrsd2k2|fluent/hotkeys.ftl
+	mtrsd2k2|fluent/mtrsd2k2.ftl
 	mtrsd2k2|fluent/rules.ftl
 
 AllowUnusedFluentMessagesInExternalPackages: true

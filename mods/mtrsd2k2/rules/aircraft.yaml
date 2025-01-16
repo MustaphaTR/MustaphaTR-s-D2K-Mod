@@ -155,7 +155,7 @@ ornithopter:
 	AmmoPool:
 		Ammo: 5
 	Tooltip:
-		Name: actor-ornithopter-name
+		Name: actor-ornithopter.name
 	SpawnActorOnDeath:
 		Actor: ornithopter.husk
 	RejectsOrders:
