@@ -376,7 +376,6 @@
 	CaptureManager:
 	Capturable:
 		Types: husk
-		ValidRelationships: Enemy, Neutral
 	WithIdleOverlay@Burns:
 		Image: fire
 		Sequence: 1
@@ -697,8 +696,7 @@
 		InitialDelay: 0
 		CloakStyle: None
 	Tooltip:
-		Name: meta-mine.name
-		GenericName: meta-mine.generic-name
+		GenericName: meta-mine-generic-name
 	Targetable:
 		TargetTypes: Ground, Mine
 	HitShape:

@@ -245,6 +245,9 @@ actor-phoenix =
     
     They are vulnerable to missiles and can only be hit by anti-aircraft weapons.
 
+## defaults.yaml
+meta-mine-generic-name = Mine
+
 ## husks.yaml
 actor-harvester-smuggler-husk-name = Smuggler Spice Harvester (Destroyed)
 actor-combat-tank-a-husk-name = Atreides Combat Tank (Destroyed)
