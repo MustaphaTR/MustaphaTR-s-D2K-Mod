@@ -3,7 +3,7 @@ harvester.husk:
 	Health:
 		HP: 15000
 	Tooltip:
-		Name: Spice Harvester (Destroyed)
+		Name: actor-harvester-husk-name
 	TransformOnCapture:
 		IntoActor: harvester
 	InfiltrateForTransform:
@@ -12,7 +12,7 @@ harvester.husk:
 harvester.smuggler.husk:
 	Inherits: harvester.husk
 	Tooltip:
-		Name: Smuggler Spice Harvester (Destroyed)
+		Name: actor-harvester-smuggler-husk-name
 	TransformOnCapture:
 		IntoActor: harvester.smuggler
 	InfiltrateForTransform:
@@ -25,14 +25,14 @@ harvester.smuggler.husk:
 	Health:
 		HP: 10000
 	Tooltip:
-		Name: Combat Tank (Destroyed)
+		Name: meta-combat-tank-husk-name
 	ThrowsParticle@turret:
 		Anim: turret
 
 combat_tank_a.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Atreides Combat Tank (Destroyed)
+		Name: actor-combat-tank-a-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_a
 	InfiltrateForTransform:
@@ -41,7 +41,7 @@ combat_tank_a.husk:
 combat_tank_h.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Harkonnen Combat Tank (Destroyed)
+		Name: actor-combat-tank-h-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_h
 	InfiltrateForTransform:
@@ -50,7 +50,7 @@ combat_tank_h.husk:
 combat_tank_o.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Ordos Combat Tank (Destroyed)
+		Name: actor-combat-tank-o-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_o
 	InfiltrateForTransform:
@@ -59,7 +59,7 @@ combat_tank_o.husk:
 combat_tank_f.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Freman Combat Tank (Destroyed)
+		Name: actor-combat-tank-f-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_f
 	InfiltrateForTransform:
@@ -68,7 +68,7 @@ combat_tank_f.husk:
 combat_tank_m.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Mercenary Combat Tank (Destroyed)
+		Name: actor-combat-tank-m-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_m
 	InfiltrateForTransform:
@@ -77,7 +77,7 @@ combat_tank_m.husk:
 combat_tank_s.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Smuggler Combat Tank (Destroyed)
+		Name: actor-combat-tank-s-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_s
 	InfiltrateForTransform:
@@ -86,7 +86,7 @@ combat_tank_s.husk:
 combat_tank_c.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Imperial Combat Tank (Destroyed)
+		Name: actor-combat-tank-c-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_c
 	InfiltrateForTransform:
@@ -95,7 +95,7 @@ combat_tank_c.husk:
 combat_tank_i.husk:
 	Inherits: ^combat_tank.husk
 	Tooltip:
-		Name: Ixian Combat Tank (Destroyed)
+		Name: actor-combat-tank-i-husk-name
 	TransformOnCapture:
 		IntoActor: combat_tank_i
 	InfiltrateForTransform:
@@ -104,7 +104,7 @@ combat_tank_i.husk:
 siege_tank.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:
-		Name: Siege Tank (Destroyed)
+		Name: actor-siege-tank-husk-name
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -117,7 +117,7 @@ mcv.husk:
 	Health:
 		HP: 17500
 	Tooltip:
-		Name: Mobile Construction Vehicle (Destroyed)
+		Name: actor-mcv-husk-name
 	TransformOnCapture:
 		IntoActor: mcv
 	InfiltrateForTransform:
@@ -128,7 +128,7 @@ mcv.no_concrete.husk:
 	Health:
 		HP: 17500
 	Tooltip:
-		Name: Mobile Construction Vehicle (Destroyed)
+		Name: actor-mcv-husk-name
 	TransformOnCapture:
 		IntoActor: mcv.no_concrete
 	InfiltrateForTransform:
@@ -139,7 +139,17 @@ mcv.no_concrete.husk:
 missile_tank.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:
-		Name: Missile Tank (Destroyed)
+		Name: actor-missile-tank-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	ThrowsParticle@debris01:
+		Anim: tankdebris01
+	ThrowsParticle@debris02:
+		Anim: tankdebris02
+	ThrowsParticle@debris03:
+		Anim: tankdebris03
+	ThrowsParticle@debris04:
+		Anim: tankdebris04
 	TransformOnCapture:
 		IntoActor: missile_tank
 	InfiltrateForTransform:
@@ -147,10 +157,22 @@ missile_tank.husk:
 
 sonic_tank.husk:
 	Inherits: ^VehicleHusk
+	Husk:
+		Locomotor: vehicle
 	Health:
-		HP: 10000
+		HP: 11000
 	Tooltip:
-		Name: Sonic Tank (Destroyed)
+		Name: actor-sonic-tank-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	ThrowsParticle@debris01:
+		Anim: tankdebris01
+	ThrowsParticle@debris02:
+		Anim: tankdebris02
+	ThrowsParticle@debris03:
+		Anim: tankdebris03
+	ThrowsParticle@debris04:
+		Anim: tankdebris04
 	TransformOnCapture:
 		IntoActor: sonic_tank
 	InfiltrateForTransform:
@@ -159,7 +181,7 @@ sonic_tank.husk:
 stealth_tank.husk:
 	Inherits: ^VehicleHusk
 	Tooltip:
-		Name: Destroyed Stealth Tank
+		Name: actor-stealth-tank-husk-name
 	TransformOnCapture:
 		IntoActor: stealth_tank
 	InfiltrateForTransform:
@@ -172,7 +194,7 @@ jammer.husk:
 	Health:
 		HP: 10000
 	Tooltip:
-		Name: Destroyed Jammer
+		Name: actor-jammer-husk-name
 	ThrowsParticle@spinner:
 		Anim: spinner
 	TransformOnCapture:
@@ -187,7 +209,7 @@ devastator.husk:
 	Health:
 		HP: 12500
 	Tooltip:
-		Name: Devastator (Destroyed)
+		Name: actor-devastator-husk-name
 	TransformOnCapture:
 		IntoActor: devastator
 	InfiltrateForTransform:
@@ -198,7 +220,7 @@ quake_tank.husk:
 	Health:
 		HP: 12500
 	Tooltip:
-		Name: Quake Tank (Destroyed)
+		Name: actor-quake-tank-husk-name
 	TransformOnCapture:
 		IntoActor: quake_tank
 	InfiltrateForTransform:
@@ -208,8 +230,21 @@ quake_tank.husk:
 
 deviator.husk:
 	Inherits: ^VehicleHusk
+	Health:
+		HP: 11000
 	Tooltip:
-		Name: Deviator (Destroyed)
+		Name: actor-deviator-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+		TurnSpeed: 150
+	ThrowsParticle@debris01:
+		Anim: tankdebris01
+	ThrowsParticle@debris02:
+		Anim: tankdebris02
+	ThrowsParticle@debris03:
+		Anim: tankdebris03
+	ThrowsParticle@debris04:
+		Anim: tankdebris04
 	TransformOnCapture:
 		IntoActor: deviator
 	InfiltrateForTransform:
@@ -220,7 +255,7 @@ ifv.husk:
 	Health:
 		HP: 10000
 	Tooltip:
-		Name: Destroyed Infantry Fighting Vehicle
+		Name: actor-ifv-husk-name
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -233,7 +268,7 @@ ifv.husk:
 carryall.husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Carryall
+		Name: actor-carryall-husk-name
 	Aircraft:
 		TurnSpeed: 16
 		Speed: 144
@@ -245,7 +280,7 @@ carryall.husk:
 carryall.huskVTOL:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Carryall
+		Name: actor-carryall-huskvtol-name
 	FallsToEarth:
 		Moves: False
 		Velocity: 0c128
@@ -259,7 +294,7 @@ carryall.huskVTOL:
 ornithopter.husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Ornithopter
+		Name: actor-ornithopter-husk-name
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 224
@@ -274,7 +309,7 @@ ornithopter.controllable.husk:
 swarmer.husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Swarmer
+		Name: actor-swarmer-husk-name
 	Aircraft:
 		TurnSpeed: 2
 		Speed: 172
@@ -285,7 +320,7 @@ swarmer.husk:
 phoenix.husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Phoenix
+		Name: actor-phoenix-husk-name
 	Aircraft:
 		TurnSpeed: 2
 		Speed: 172
@@ -296,7 +331,7 @@ phoenix.husk:
 rocketeer.husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Rocketeer
+		Name: actor-rocketeer-husk-name
 	Aircraft:
 		TurnSpeed: 8
 		Speed: 88

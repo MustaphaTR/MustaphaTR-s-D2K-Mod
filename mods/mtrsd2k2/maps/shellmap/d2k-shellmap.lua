@@ -1,5 +1,5 @@
 --[[
-   Copyright 2007-2021 The OpenRA Developers (see AUTHORS)
+   Copyright (c) The OpenRA Developers and Contributors
    This file is part of OpenRA, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -73,8 +73,6 @@ HarCarryHarvWaypoints = { har_harvcarry_2.Location, har_harvcarry_1.Location }
 OrdCarryHarvWaypoints = { ord_harvcarry_2.Location, ord_harvcarry_1.Location }
 CorCarryHarvWaypoints = { cor_harvcarry_2.Location, cor_harvcarry_1.Location }
 SmgCarryHarvWaypoints = { smg_harvcarry_2.Location, smg_harvcarry_1.Location }
-
-IdleHunt = function(unit) if not unit.IsDead then Trigger.OnIdle(unit, unit.Hunt) end end
 
 Produce = function(house, units)
     if HoldProduction[house.Name] then
@@ -152,26 +150,26 @@ InitializeHarvester = function(harvester)
 	harvester.FindResources()
 end
 
-ticks = 0
-speed = 5
+Ticks = 0
+Speed = 5
 
 Tick = function()
-	ticks = ticks + 1
+	Ticks = Ticks + 1
 
-	if ticks > 1 or not Map.IsPausedShellmap then
-		local t = (ticks + 45) % (360 * speed) * (math.pi / 180) / speed;
+	if Ticks > 1 or not Map.IsPausedShellmap then
+		local t = (Ticks + 45) % (360 * Speed) * (math.pi / 180) / Speed;
 		Camera.Position = viewportOrigin + WVec.New(19200 * math.sin(t), 28800 * math.cos(t), 0)
 	end
 end
 
 WorldLoaded = function()
-	atreides = Player.GetPlayer("Atreides")
-	fremen = Player.GetPlayer("Fremen")
-	harkonnen = Player.GetPlayer("Harkonnen")
-	ordos = Player.GetPlayer("Ordos")
-	mercenary = Player.GetPlayer("Mercenaries")
-	corrino = Player.GetPlayer("Corrino")
-	smugglers = Player.GetPlayer("Smugglers")
+	Atreides = Player.GetPlayer("Atreides")
+	Fremen = Player.GetPlayer("Fremen")
+	Harkonnen = Player.GetPlayer("Harkonnen")
+	Ordos = Player.GetPlayer("Ordos")
+	Mercenary = Player.GetPlayer("Mercenaries")
+	Corrino = Player.GetPlayer("Corrino")
+	Smugglers = Player.GetPlayer("Smugglers")
 
 	viewportOrigin = Camera.Position
 
@@ -185,39 +183,39 @@ WorldLoaded = function()
 	fre_sietch.Produce(Upgrades[1])
 
 	Trigger.AfterDelay(DateTime.Seconds(45), function()
-		SendNewHarv(atreides, AtrCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
-		SendNewHarv(harkonnen, HarCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
-		SendNewHarv(ordos, OrdCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
-		SendNewHarv(corrino, CorCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
-		SendNewHarv(smugglers, SmgCarryHarvWaypoints, "harvester.smuggler", "carryall.reinforce.smuggler", 1)
+		SendNewHarv(Atreides, AtrCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(Harkonnen, HarCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(Ordos, OrdCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(Corrino, CorCarryHarvWaypoints, "harvester", "carryall.reinforce", 3)
+		SendNewHarv(Smugglers, SmgCarryHarvWaypoints, "harvester.smuggler", "carryall.reinforce.smuggler", 1)
 	end)
 
 	Trigger.AfterDelay(DateTime.Seconds(1), function()
-		Produce(atreides, AtreidesInfantryTypes)
-		Produce(atreides, AtreidesVehicleTypes)
-		Produce(atreides, AtreidesTankTypes)
-		Produce(atreides, AtreidesStarportTypes)
-		Produce(atreides, AtreidesAirTypes)
+		Produce(Atreides, AtreidesInfantryTypes)
+		Produce(Atreides, AtreidesVehicleTypes)
+		Produce(Atreides, AtreidesTankTypes)
+		Produce(Atreides, AtreidesStarportTypes)
+		Produce(Atreides, AtreidesAirTypes)
 
-		Produce(fremen, FremenInfantryTypes)
+		Produce(Fremen, FremenInfantryTypes)
 
-		Produce(harkonnen, HarkonnenInfantryTypes)
-		Produce(harkonnen, HarkonnenVehicleTypes)
-		Produce(harkonnen, HarkonnenTankTypes)
-		Produce(harkonnen, HarkonnenStarportTypes)
-		Produce(harkonnen, HarkonnenAirTypes)
+		Produce(Harkonnen, HarkonnenInfantryTypes)
+		Produce(Harkonnen, HarkonnenVehicleTypes)
+		Produce(Harkonnen, HarkonnenTankTypes)
+		Produce(Harkonnen, HarkonnenStarportTypes)
+		Produce(Harkonnen, HarkonnenAirTypes)
 
-		Produce(ordos, OrdosInfantryTypes)
-		Produce(ordos, OrdosVehicleTypes)
-		Produce(ordos, OrdosTankTypes)
-		Produce(ordos, OrdosAirTypes)
+		Produce(Ordos, OrdosInfantryTypes)
+		Produce(Ordos, OrdosVehicleTypes)
+		Produce(Ordos, OrdosTankTypes)
+		Produce(Ordos, OrdosAirTypes)
 
-		Produce(mercenary, MercenaryStarportTypes)
+		Produce(Mercenary, MercenaryStarportTypes)
 
-		Produce(corrino, CorrinoInfantryTypes)
-		Produce(corrino, CorrinoVehicleTypes)
-		Produce(corrino, CorrinoTankTypes)
-		Produce(corrino, CorrinoStarportTypes)
-		Produce(corrino, CorrinoAirTypes)
+		Produce(Corrino, CorrinoInfantryTypes)
+		Produce(Corrino, CorrinoVehicleTypes)
+		Produce(Corrino, CorrinoTankTypes)
+		Produce(Corrino, CorrinoStarportTypes)
+		Produce(Corrino, CorrinoAirTypes)
 	end)
 end

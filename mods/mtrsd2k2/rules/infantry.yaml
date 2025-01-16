@@ -7,11 +7,11 @@ light_inf:
 		BuildDuration: 62
 		BuildDurationModifier: 100
 		Prerequisites: ~techlevel.1
-		Description: General-purpose infantry\n  Strong vs Infantry\n  Weak vs Vehicles, Artillery
+		Description: actor-light-inf.description
 	Valued:
 		Cost: 50
 	Tooltip:
-		Name: Light Infantry
+		Name: actor-light-inf.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -21,7 +21,7 @@ light_inf:
 	Armament:
 		Weapon: LMG
 	Encyclopedia:
-		Description: Light Infantry are lightly armored foot soldiers, equipped with 9mm RP assault rifles. Light Infantry are effective against other infantry and lightly armored vehicles.\n\nLight Infantry are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-light-inf.encyclopedia
 		Order: 0
 		Category: Infantry
 	WithInfantryBody:
@@ -36,11 +36,11 @@ trooper:
 		BuildDuration: 85
 		BuildDurationModifier: 100
 		Prerequisites: upgrade.barracks, ~techlevel.2
-		Description: Anti-tank infantry\n  Strong vs Tanks\n  Weak vs Infantry, Artillery
+		Description: actor-trooper.description
 	Valued:
 		Cost: 90
 	Tooltip:
-		Name: Trooper
+		Name: actor-trooper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -56,7 +56,7 @@ trooper:
 		Weapon: BazookaAA
 		LocalOffset: 128,0,256
 	Encyclopedia:
-		Description: Armed with missile launchers, Troopers fire wire guided armor-piercing warheads. These units are particularly effective against vehicles (especially armored ones) and buildings. However, this unit is largely useless against infantry.\n\nTroopers are resistant to anti-tank weaponry but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-trooper.encyclopedia
 		Order: 10
 		Category: Infantry
 	TakeCover:
@@ -70,12 +70,12 @@ dog:
 		Queue: Infantry
 		BuildPaletteOrder: 30
 		Prerequisites: ~barracks.smuggler, ~techlevel.5
-		Description: Anti-infantry unit.\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-dog.description
 	Valued:
 		Cost: 75
 	Tooltip:
-		Name: Attack Dog
-		GenericName: Dog
+		Name: actor-dog.name
+		GenericName: actor-dog.generic-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Selectable:
@@ -84,7 +84,7 @@ dog:
 	Health:
 		HP: 1400
 	Encyclopedia:
-		Description: The Attack Dog is a fast scout infantry capable of dealing with lone infantry with ease.\n\nAttack Dogs are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-dog.encyclopedia
 		Order: 50
 		Category: Infantry
 	Mobile:
@@ -135,8 +135,6 @@ dog:
 		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
-	Cloak@STEALTH:
-		Palette: racloak
 
 engineer:
 	Inherits: ^Infantry
@@ -147,11 +145,11 @@ engineer:
 		BuildDuration: 125
 		BuildDurationModifier: 100
 		Prerequisites: upgrade.barracks, ~techlevel.3
-		Description: Infiltrates and captures enemy structures.\nRepairs friendly ones.\n  Strong vs Buildings\n  Weak vs Everything
+		Description: actor-engineer.description
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Engineer
+		Name: actor-engineer.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -166,7 +164,7 @@ engineer:
 		CaptureTypes: building
 		PlayerExperience: 10
 	Encyclopedia:
-		Description: Engineers can be used to capture enemy buildings and repair friendly ones.\n\nEngineers are resistant to anti-tank weaponry but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-engineer.encyclopedia
 		Order: 40
 		Category: Infantry
 	-RevealOnFire:
@@ -183,11 +181,11 @@ thumper:
 		BuildDuration: 125
 		BuildDurationModifier: 100
 		Prerequisites: upgrade.barracks, ~techlevel.7
-		Description: Attracts nearby worms when deployed\n  Unarmed
+		Description: actor-thumper.description
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Thumper Infantry
+		Name: actor-thumper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -204,7 +202,7 @@ thumper:
 		Facing: 512
 		AllowedTerrainTypes: Sand, Spice, Dune, SpiceSand
 	Encyclopedia:
-		Description: The Thumper Infantry can deploy a noisy hammering device which will attract sand worms to the area.\n\nGrenadiers are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-thumper.encyclopedia
 		Order: 50
 		Category: Infantry
 	WithInfantryBody:
@@ -236,11 +234,11 @@ grenadier:
 		BuildDuration: 94
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.atreides, upgrade.barracks, high_tech_factory, ~techlevel.5
-		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+		Description: actor-grenadier.description
 	Valued:
 		Cost: 80
 	Tooltip:
-		Name: Grenadier
+		Name: actor-grenadier.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -252,14 +250,14 @@ grenadier:
 		LocalOffset: 192,0,224
 		FireDelay: 3
 	Encyclopedia:
-		Description: The Grenadier is an infantry artillery unit which are strong against buildings. They can explode when killed dealing damage to nearby units.\n\nGrenadiers are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-grenadier.encyclopedia
 		Order: 60
 		Category: Infantry
 	TakeCover:
 		ProneOffset: 96,100,-64
 	WithInfantryBody:
 		DefaultAttackSequence: throw
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GrenDeath
 		EmptyWeapon: GrenDeath
 
@@ -273,9 +271,9 @@ nsfremen:
 		BuildDuration: 94
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.fremen, upgrade.barracks, high_tech_factory, ~techlevel.5
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Description: actor-nsfremen.description
 	Encyclopedia:
-		Description: Fremen are the native desert warriors of Dune. Fremen ground units carry 10mm Assault Rifles and Rockets. Their firepower is equally effective against infantry and vehicles. Fremen employed by House Atreides are stealthed unless firing.\n\nFremen units are very vulnerable to high explosive and bullet weapons.
+		Description: actor-fremen.encyclopedia
 		Order: 70
 		Category: Infantry
 	Selectable:
@@ -291,7 +289,6 @@ nsfremen:
 		CloakDelay: 25
 		CloakSound: STEALTH1.WAV
 		UncloakSound: STEALTH2.WAV
-		IsPlayerPalette: true
 		RequiresCondition: stealth
 	TimedConditionBar:
 		Condition: stealth
@@ -305,17 +302,17 @@ mechanic:
 		BuildDuration: 111
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.ixian, upgrade.barracks, high_tech_factory, ~techlevel.5
-		Description: Repairs nearby vehicles and defences.\nCan enter vehicle husks to repair them.\n  Unarmed
+		Description: actor-mechanic.description
 	Valued:
 		Cost: 275
 	Tooltip:
-		Name: Mechanic
+		Name: actor-mechanic.name
 	Health:
 		HP: 52500
 	Armor:
 		Type: none
 	Encyclopedia:
-		Description: The Mechanic are support infantry capable of repairing nearby vehicles or vehicle husks.\n\nMechanics are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-mechanic.encyclopedia
 		Order: 80
 		Category: Infantry
 	Mobile:
@@ -350,8 +347,6 @@ mechanic:
 		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
-	Cloak@STEALTH:
-		Palette: racloak
 
 flamethrower:
 	Inherits: ^Infantry
@@ -362,11 +357,11 @@ flamethrower:
 		BuildDuration: 164
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.harkonnen, upgrade.barracks, high_tech_factory, ~techlevel.5
-		Description: Advanced anti-structure unit\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: actor-flamethrower.description
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Flamethrower
+		Name: actor-flamethrower.name
 	Selectable:
 		Class: flamethrower
 	UpdatesPlayerStatistics:
@@ -376,7 +371,7 @@ flamethrower:
 	Armor:
 		Type: none
 	Encyclopedia:
-		Description: Flamethrowers are infantry armed with short range flame weapons that can deal high damage to infantry and buildings.\n\nFlamethrowers are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-flamethrower.encyclopedia
 		Order: 90
 		Category: Infantry
 	Mobile:
@@ -393,8 +388,6 @@ flamethrower:
 		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
-	Cloak@STEALTH:
-		Palette: racloak
 
 plasma_infantry:
 	Inherits: ^Infantry
@@ -405,11 +398,11 @@ plasma_infantry:
 		BuildDuration: 111
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.corrino, upgrade.barracks, high_tech_factory, ~techlevel.5
-		Description: Advanced infantry armed with a plasma ball launcher\n  Strong vs Tanks\n  Weak vs Artillery
+		Description: actor-plasma-infantry.description
 	Valued:
 		Cost: 175
 	Tooltip:
-		Name: Plasma Infantry
+		Name: actor-plasma-infantry.name
 	Selectable:
 		Class: plasma_infantry
 	UpdatesPlayerStatistics:
@@ -419,7 +412,7 @@ plasma_infantry:
 	Armor:
 		Type: none
 	Encyclopedia:
-		Description: Plasma Infantry are infantry armed with portable plasma launchers that can deal good damage to armored units.\n\nPlasma Infantry are resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-plasma-infantry.encyclopedia
 		Order: 100
 		Category: Infantry
 	Mobile:
@@ -441,14 +434,14 @@ fremen:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	Tooltip:
-		Name: Fremen
+		Name: actor-fremen.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 110
 		Prerequisites: ~disabled
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
+		Description: actor-fremen.description
 	Mobile:
 		Speed: 43
 	Valued:
@@ -467,7 +460,6 @@ fremen:
 		InitialDelay: 85
 		CloakDelay: 85
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Damage, Heal
-		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
@@ -483,16 +475,16 @@ fedaykin:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
-		Name: Fedaykin
+		Name: actor-fedaykin.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 120
 		Prerequisites: ~disabled
-		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Description: actor-fedaykin.description
 	Encyclopedia:
-		Description: The Fedaykin is elite Fremen infantry armed with portable sonic weapons. They are effective against infantry and lightly armored vehicles - but weaker against armored targets.\n\nThe Fedaykin is resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-fedaykin.encyclopedia
 		Order: 120
 		Category: Infantry
 	Mobile:
@@ -521,12 +513,12 @@ drone:
 		Queue: Infantry
 		BuildPaletteOrder: 130
 		Prerequisites: ~disabled
-		Description: Robotic vehicle that can sabotage vehicles\nand kill infantry.\nCan detect cloaked units.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: actor-drone.description
 	Valued:
 		Cost: 175
 	Tooltip:
-		Name: Drone
-		GenericName: Drone
+		Name: actor-drone.name
+		GenericName: actor-drone.generic-name
 	Selectable:
 		Bounds: 768, 768, 0, 0
 	Health:
@@ -534,7 +526,7 @@ drone:
 	Armor:
 		Type: light
 	Encyclopedia:
-		Description: The Drone is a small remote controlled vehicle that can slowly damage a vehicle it infects. Repairing the infected vehicles with a Repair Pad removed the drone.\n\nDrones are vulnerable to most types of weapon, though high caliber guns are slightly less effective.
+		Description: actor-drone.encyclopedia
 		Order: 130
 		Category: Infantry
 	Mobile:
@@ -593,7 +585,7 @@ drone:
 		Range: 4c384
 	Voiced:
 		VoiceSet: DroneVoice
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeTiny
 		EmptyWeapon: UnitExplodeTiny
 	-Infectable:
@@ -605,8 +597,6 @@ drone:
 	-WithDeathAnimation:
 	RenderSprites:
 		PlayerPalette: ra2player
-	Cloak@STEALTH:
-		Palette: ra2cloak
 
 rocketeer:
 	Inherits: ^Infantry
@@ -617,15 +607,15 @@ rocketeer:
 		Queue: Infantry
 		BuildPaletteOrder: 140
 		Prerequisites: ~disabled
-		Description: Flying infantry unit armed with dual machine guns.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-rocketeer.description
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Rocketeer
+		Name: actor-rocketeer.name
 	Health:
 		HP: 5000
 	Encyclopedia:
-		Description: Rocketeers are elite infantry using rocket backpack to fly. They are armed with machine guns making them effective against infantry.\n\nThey are vulnerable to missiles and can only be hit by anti-aircraft weapons.
+		Description: actor-rocketeer.encyclopedia
 		Order: 140
 		Category: Infantry
 	Armor:
@@ -690,17 +680,17 @@ sardaukar:
 		BuildDuration: 94
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.corrino, palace.corrino, ~techlevel.7
-		Description: Elite assault infantry of Corrino\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Description: actor-sardaukar.description
 	Valued:
 		Cost: 120
 	Tooltip:
-		Name: Sardaukar
+		Name: actor-sardaukar.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 10000
 	Encyclopedia:
-		Description: Sardaukars elite heavy troopers of House Corrino that are armed a machine gun that's effective against infantry, and a rocket launcher for vehicles.\n\nThe Sardaukar is resistant to missiles and large-caliber guns, but very vulnerable to high-explosives, fire and bullet weapons.
+		Description: actor-sardaukar.encyclopedia
 		Order: 140
 		Category: Infantry
 	Mobile:
@@ -715,7 +705,7 @@ sardaukar:
 		Weapon: M_HMG
 	Voiced:
 		VoiceSet: GenericVoice
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: SardDeath
 		EmptyWeapon: SardDeath
 		Chance: 100
@@ -726,17 +716,17 @@ saboteur:
 		Queue: Infantry
 		BuildPaletteOrder: 150
 		Prerequisites: ~disabled
-		Description: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
+		Description: actor-saboteur.description
 	Valued:
 		Cost: 300 ## actually 0, but spawns from support power at Palace
 	Tooltip:
-		Name: Suicide Bomber
+		Name: actor-saboteur.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 4000
 	Encyclopedia:
-		Description: The Suicide Bomber is a special military unit acquired by House Ordos. A single Suicide Bomber can destroy any enemy building or vehicle once he moves into it, though also destroys himself! A Suicide Bomber is stealthed while standing still.\n\nThe Suicide Bomber is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
+		Description: actor-saboteur.encyclopedia
 		Order: 150
 		Category: Infantry
 	Mobile:
@@ -751,7 +741,6 @@ saboteur:
 		CloakDelay: 85
 		CloakSound: STEALTH1.WAV
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move, Damage, Heal
-		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
@@ -767,17 +756,17 @@ sniper:
 		Queue: Infantry
 		BuildPaletteOrder: 160
 		Prerequisites: ~disabled
-		Description: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
+		Description: actor-sniper.description
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Sniper
+		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 7500
 	Encyclopedia:
-		Description: The Sniper is a special military unit used by the Mercenaries. They can deal with enemy infantry from a great range with ease. A Sniper is stealthed unless firing.\n\nThe Sniper is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
+		Description: actor-sniper.encyclopedia
 		Order: 160
 		Category: Infantry
 	Armor:
@@ -795,8 +784,6 @@ sniper:
 	Cloak:
 		InitialDelay: 85
 		CloakDelay: 85
-		Palette: racloak
-		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
@@ -816,15 +803,15 @@ hijacker:
 		Queue: Infantry
 		BuildPaletteOrder: 170
 		Prerequisites: ~disabled
-		Description: Steals enemy vehicles and disables enemy structures.\n  Unarmed
+		Description: actor-hijacker.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Saboteur
+		Name: actor-hijacker.name
 	Health:
 		HP: 50000
 	Encyclopedia:
-		Description: The Saboteur is a special military unit used by the Smugglers. They can steal enemy vehicles, or enter enemy structures to disable them for a while. A Saboteur is stealthed while standing still.\n\nThe Saboteur is resistant to anti-tank weaponry, but very vulnerable to high-explosives, fire, and bullet weapons.
+		Description: actor-hijacker.encyclopedia
 		Order: 160
 		Category: Infantry
 	RevealsShroud:
@@ -847,8 +834,6 @@ hijacker:
 		CloakDelay: 100
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
 		DetectionTypes: Cloak, Hijacker
-		Palette: racloak
-		IsPlayerPalette: true
 	Mobile:
 		Speed: 43
 	Voiced:

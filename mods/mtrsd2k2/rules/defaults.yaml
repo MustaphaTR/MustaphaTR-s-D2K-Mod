@@ -15,7 +15,7 @@
 ^GainsExperience:
 	GainsExperience:
 		LevelUpNotification: LevelUp
-		LevelUpTextNotification: Unit promoted.
+		LevelUpTextNotification: notification-unit-promoted
 		Conditions:
 			200: rank-veteran
 			400: rank-veteran
@@ -129,7 +129,6 @@
 		CloakDelay: 25
 		CloakSound: STEALTH1.WAV
 		UncloakSound: STEALTH2.WAV
-		IsPlayerPalette: true
 		RequiresCondition: stealth
 	TimedConditionBar:
 		Condition: stealth
@@ -246,7 +245,7 @@
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
-		GenericName: Unit
+		GenericName: meta-vehicle-generic-name
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -269,7 +268,7 @@
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: notification-unit-lost
 	Repairable:
 		RepairActors: repair_pad, repair_pad.ixian
 	Guard:
@@ -319,9 +318,11 @@
 		Categories: Vehicle
 	GrantConditionOnDamageState@HEAVY:
 		Condition: heavy-damage
+	SpeedMultiplier@HEAVYDAMAGE:
+		RequiresCondition: heavy-damage
+		Modifier: 75
 	FloatingSpriteEmitter@SMOKE:
 		RequiresCondition: heavy-damage
-		Palette: smoke3
 		Image: smoke3
 		Lifetime: 15, 20
 		Speed: 3
@@ -349,7 +350,7 @@
 		Type: CenterPosition
 		AlwaysVisibleRelationships: None
 	Tooltip:
-		GenericName: Destroyed Unit
+		GenericName: meta-husk-generic-name
 	ScriptTriggers:
 	WithFacingSpriteBody:
 	HitShape:
@@ -367,34 +368,48 @@
 		RequiresForceFire: true
 	OwnerLostAction:
 		Action: ChangeOwner
-	WithColoredOverlay@IDISABLE:
-		Color: 000000B4
-	Explodes:
+	WithColoredOverlay@husk:
+		Color: 00000060
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeMed
 		EmptyWeapon: UnitExplodeMed
-	WithIdleOverlay@Burns:
-		Image: fire
-		Sequence: 1
-		Palette: d2k
-		IsDecoration: True
-	ChangesHealth:
-		Step: -100
-		StartIfBelow: 101
-		Delay: 6
 	CaptureManager:
 	Capturable:
 		Types: husk
 		ValidRelationships: Enemy, Neutral
+	WithIdleOverlay@Burns:
+		Image: fire
+		Sequence: 1
+		IsDecoration: True
+		RequiresCondition: decoration1 || decoration3
+	FloatingSpriteEmitter@SMOKE:
+		Image: smoke3
+		Lifetime: 10, 20
+		Speed: 7
+		Gravity: 50
+		SpawnFrequency: 2, 10
+		RandomFacing: true
+		RandomRate: 4
+		Offset: 0, 0, 200
+		TurnRate: 3
+		Duration: 1500
+		RequiresCondition: decoration2 || decoration3
+	ChangesHealth:
+		Step: -100
+		StartIfBelow: 101
+		Delay: 6
+	GrantRandomCondition:
+		Conditions: decoration1, decoration2, decoration3
 	TransformOnCapture:
-		ForceHealthPercentage: 25
+		ForceHealthPercentage: 20
 	InfiltrateForTransform:
 		Types: Husk
-		ForceHealthPercentage: 25
+		ForceHealthPercentage: 20
 
 ^AircraftHusk:
 	Inherits: ^Husk
 	Tooltip:
-		GenericName: Unit
+		GenericName: meta-aircrafthusk-generic-name
 	WithShadow:
 	FallsToEarth:
 		MaximumSpinSpeed: 0
@@ -417,7 +432,7 @@
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
-		GenericName: Unit
+		GenericName: meta-infantry-generic-name
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -458,7 +473,7 @@
 		CargoType: Infantry
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: notification-unit-lost
 	Crushable:
 		CrushSound: CRUSH1.WAV
 	Guard:
@@ -492,7 +507,7 @@
 	Inherits@handicaps: ^PlayerHandicaps
 	Interactable:
 	Tooltip:
-		GenericName: Unit
+		GenericName: meta-plane-generic-name
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -501,7 +516,7 @@
 	HiddenUnderFog:
 		Type: GroundPosition
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: notification-unit-lost
 	AttackMove:
 	WithFacingSpriteBody:
 	WithShadow:
@@ -518,7 +533,7 @@
 	Inherits@selection: ^SelectableBuilding
 	Inherits@handicaps: ^PlayerHandicaps
 	Tooltip:
-		GenericName: Structure
+		GenericName: meta-building-generic-name
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -552,7 +567,7 @@
 	SoundOnDamageTransition:
 		DamagedSounds: EXPLSML1.WAV
 		DestroyedSounds: EXPLHG1.WAV
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
@@ -566,11 +581,11 @@
 		RequiredForShortGame: true
 	FrozenUnderFog:
 	CaptureNotification:
-		TextNotification: Enemy building captured.
-		LoseTextNotification: One of our buildings has been captured.
+		TextNotification: notification-enemy-building-captured
+		LoseTextNotification: notification-one-of-our-buildings-has-been-captured
 	ActorLostNotification:
 		Notification: BuildingLost
-		TextNotification: Building lost.
+		TextNotification: notification-building-lost
 	ShakeOnDeath:
 	Demolishable:
 		Condition: being-demolished
@@ -580,7 +595,7 @@
 		Notification: StructureSold
 	Guardable:
 		Range: 3c0
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris, Debris2, Debris3, Debris4
 		Pieces: 2, 5
 		Range: 1c512, 4c0
@@ -625,7 +640,7 @@
 		RequiresCondition: !build-incomplete
 	LineBuildNode:
 		Types: turret
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris, Debris3
 		Pieces: 2, 2
 		Range: 2c0, 4c0
@@ -678,12 +693,12 @@
 	Cloak:
 		CloakSound:
 		UncloakSound:
-		Palette:
 		DetectionTypes: Mine
 		InitialDelay: 0
+		CloakStyle: None
 	Tooltip:
-		Name: Mine
-		GenericName: Mine
+		Name: meta-mine.name
+		GenericName: meta-mine.generic-name
 	Targetable:
 		TargetTypes: Ground, Mine
 	HitShape:
@@ -785,7 +800,7 @@
 		PrimaryCondition: primary
 		ProductionQueues: Building
 		SelectionNotification: PrimaryBuildingSelected
-		SelectionTextNotification: Primary building selected.
+		SelectionTextNotification: notification-primary-building-selected
 	WithTextDecoration@primary:
 		RequiresCondition: primary
 		Position: Top
@@ -803,3 +818,74 @@
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-upgraded
+
+^UndestroyableTile:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	FrozenUnderFog:
+	WithSpriteBody:
+	Building:
+		TerrainTypes: Rock, Concrete, Cliff, Sand, Rock, Transition, Spice, SpiceSand, Dune,
+	Health:
+		HP: 30000
+	Armor:
+		Type: invulnerable
+	HitShape:
+		UseTargetableCellsOffsets: false
+		Type: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+	MapEditorData:
+		Categories: Tile actors
+	Interactable:
+
+^DestroyableTile:
+	Inherits: ^UndestroyableTile
+	Targetable:
+		TargetTypes: Ground, Cliff
+		RequiresForceFire: true
+	Armor:
+		Type: wall
+	Health:
+		HP: 30000
+	OwnerLostAction:
+		Action: ChangeOwner
+		Owner: Neutral
+	HitShape:
+		UseTargetableCellsOffsets: true
+	FireWarheadsOnDeath:
+		Type: CenterPosition
+		Weapon: cliffExplode
+		EmptyWeapon: cliffExplode
+	MapEditorData:
+		Categories: Destroable Tiles
+	Tooltip:
+		GenericName: meta-destroyabletile.generic-name
+		Name: meta-destroyabletile.name
+
+^DestroyedTile:
+	Inherits: ^UndestroyableTile
+	CaptureManager:
+	Building:
+	OwnerLostAction:
+		Action: ChangeOwner
+		Owner: Neutral
+	Tooltip:
+		GenericName: meta-destroyedtile.generic-name
+		Name: meta-destroyedtile.name
+	CaptureManager:
+	CapturableProgressBar:
+	CapturableProgressBlink:
+		Interval: 30
+	Capturable:
+		Types: cliff
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1048, -1048
+			BottomRight: 1024, 1054
+	Targetable:
+		TargetTypes: Ground, Cliff
+		RequiresForceFire: true
+	MapEditorData:
+		Categories: Destroyed Tiles

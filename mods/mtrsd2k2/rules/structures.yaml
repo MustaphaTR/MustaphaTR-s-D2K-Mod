@@ -3,14 +3,14 @@ construction_yard:
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Inherits@UPGRADEABLE: ^Upgradeable
 	Buildable:
-		Description: Produces structures.
+		Description: actor-construction-yard.description
 	D2kBuilding:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		-ConcretePrerequisites:
 	Encyclopedia:
-		Description: The Construction Yard is the foundation of any base built on Arrakis. Construction Yards produce a small amount of power and are required for the building of any new structures. Protect this structure! It is critical to the success of your base.\n\nConstruction yards are fairly strong, but vulnerable in varying degrees to all types of weapons.
+		Description: actor-construction-yard.encyclopedia
 		Category: Buildings
 		Order: 0
 	WithBuildingBib:
@@ -32,7 +32,7 @@ construction_yard:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Construction Yard
+		Name: actor-construction-yard.name
 	CustomSellValue:
 		Value: 2000
 	BaseBuilding:
@@ -61,7 +61,7 @@ construction_yard:
 		Offset: 1,1
 		TransformSounds: BUILD1.WAV
 		NoTransformNotification: CannotDeploy
-		NoTransformTextNotification: Cannot deploy here.
+		NoTransformTextNotification: actor-construction-yard.transforms-no-transform-text-notification
 		RequiresCondition: factundeploy && !build-incomplete
 	TransformsIntoMobile:
 		Locomotor: vehicle
@@ -167,7 +167,7 @@ wind_trap:
 		BuildDuration: 208
 		BuildDurationModifier: 100
 		Prerequisites: ~techlevel.1
-		Description: Provides power for other structures.
+		Description: actor-wind-trap.description
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Sabotage, DetonateAttack
 	Selectable:
@@ -175,13 +175,13 @@ wind_trap:
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: Wind Trap
+		Name: actor-wind-trap.name
 	D2kBuilding:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: Wind Traps provide power and water to an installation. Large, above-ground ducts funnel wind currents underground into massive turbines which power generators and humidity extractors.\n\nWind Traps are vulnerable to most types of weapons.
+		Description: actor-wind-trap.encyclopedia
 		Category: Buildings
 		Order: 10
 	Health:
@@ -223,19 +223,19 @@ barracks:
 		BuildDuration: 268
 		BuildDurationModifier: 100
 		Prerequisites: wind_trap, ~techlevel.1
-		Description: Trains infantry.
+		Description: actor-barracks.description
 	Selectable:
 		Bounds: 2048, 2048
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: Barracks
+		Name: actor-barracks.name
 	D2kBuilding:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: Barracks are required to produce and train light infantry units. Barracks can be upgraded for the production of more advanced infantry in later missions.\n\nBarracks are vulnerable to most types of weapons.
+		Description: actor-barracks.encyclopedia
 		Category: Buildings
 		Order: 20
 	Health:
@@ -337,19 +337,19 @@ refinery:
 		BuildDuration: 625
 		BuildDurationModifier: 100
 		Prerequisites: wind_trap, ~!cyard.smuggler, ~techlevel.1
-		Description: Harvesters unload Spice here for processing.
+		Description: actor-refinery.description
 	Selectable:
 		Bounds: 3072, 2048
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Spice Refinery
+		Name: actor-refinery.name
 	D2kBuilding:
 		Footprint: =xx xx= ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: The Refinery is the basis of all Spice production on Dune. Harvesters transport mined Spice to the Refinery where it is converted into credits. Refined Spice is automatically distributed among the Silos and Refineries for storage. A refinery can store 2000 spice. A Spice Harvester is delivered via Carryall once a Refinery is built.\n\nRefineries are vulnerable to most types of weapons.
+		Description: actor-refinery.encyclopedia
 		Category: Buildings
 		Order: 30
 	Health:
@@ -367,10 +367,8 @@ refinery:
 	RevealsShroud:
 		Range: 3c768
 	Refinery:
-		DockAngle: 640
-		DockOffset: 2,1
 		TickRate: 20
-	StoresResources:
+	StoresPlayerResources:
 		Capacity: 2000
 	CustomSellValue:
 		Value: 500
@@ -402,6 +400,10 @@ refinery:
 		Margin: 1, 4
 		RequiresSelection: true
 		PipCount: 10
+	DockHost:
+		Type: Unload
+		DockAngle: 640
+		DockOffset: 1024,512,0
 
 refinery.smuggler:
 	Inherits: refinery
@@ -413,10 +415,10 @@ refinery.smuggler:
 		Cost: 1400
 	CustomSellValue:
 		Value: 400
-	StoresResources:
+	StoresPlayerResources:
 		Capacity: 2500
 	Tooltip:
-		Name: Smuggler Spice Refinery
+		Name: actor-refinery-smuggler-name
 	Health:
 		HP: 35000
 	Selectable:
@@ -440,7 +442,7 @@ outpost:
 		BuildDuration: 312
 		BuildDurationModifier: 100
 		Prerequisites: barracks, ~techlevel.1
-		Description: Provides a radar map of the battlefield.\n  Requires power to operate.
+		Description: actor-outpost.description
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Sabotage, DetonateAttack
 	Selectable:
@@ -448,13 +450,13 @@ outpost:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Outpost
+		Name: actor-outpost.name
 	D2kBuilding:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: If the player has sufficient power, the Radar Outpost will generate a radar map. Radar is automatically activated when construction of the Outpost is complete. The Fremen can upgrade the Radar Outpost to make units or buildings to invisible to the enemy for a short while.\n\nThe Radar Outpost is vulnerable to most types of weapons.
+		Description: actor-outpost.encyclopedia
 		Category: Buildings
 		Order: 40
 	Health:
@@ -490,11 +492,12 @@ outpost:
 		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
 		Prerequisites: upgrade.outpost, ~techlevel.6
 		ChargeInterval: 3750
-		Name: Stealth Device
-		Description: Makes a group of units or buildings stealth\nfor 30 seconds.
+		Name: actor-outpost.grantexternalconditionpower-stealth-name
+		Description: actor-outpost.grantexternalconditionpower-stealth-description
 		Duration: 750
 		Condition: stealth
 		Sequence: idle
+		BlockedCursor: move-blocked
 	ProvidesPrerequisite@atreides:
 		Prerequisite: outpost.atreides
 		Factions: atreides
@@ -566,19 +569,19 @@ light_factory:
 		BuildDuration: 321
 		BuildDurationModifier: 100
 		Prerequisites: refinery, ~techlevel.1
-		Description: Produces light vehicles.
+		Description: actor-light-factory.description
 	Selectable:
 		Bounds: 3072, 2048
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Light Factory
+		Name: actor-light-factory.name
 	D2kBuilding:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: The Light Factory is required for the production of small, lightly armored, combat vehicles. The Light Factory can be upgraded to produce more advanced light vehicles in later missions.\n\nA Light Factory is vulnerable to most types of weapons.
+		Description: actor-light-factory.encyclopedia
 		Category: Buildings
 		Order: 50
 	Health:
@@ -723,19 +726,19 @@ heavy_factory:
 		BuildDuration: 750
 		BuildDurationModifier: 100
 		Prerequisites: refinery, ~techlevel.3
-		Description: Produces heavy vehicles.
+		Description: actor-heavy-factory.description
 	Selectable:
 		Bounds: 3072, 3072
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Heavy Factory
+		Name: actor-heavy-factory.name
 	D2kBuilding:
 		Footprint: _x_ xxx =xX ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: The Heavy Factory allows the player to build heavy vehicles such as Harvesters and Combat Tanks. When upgraded, this facility allows the construction of advanced vehicles, though some vehicles also require other buildings.\n\nThe Heavy Factory is vulnerable to most types of weapons.
+		Description: actor-heavy-factory.encyclopedia
 		Category: Buildings
 		Order: 60
 	Health:
@@ -849,7 +852,7 @@ high_tech_factory:
 		BuildDuration: 468
 		BuildDurationModifier: 100
 		Prerequisites: outpost, ~techlevel.4
-		Description: Produces aircraft.\nUnlocks advanced technology.
+		Description: actor-high-tech-factory.description
 	Targetable@SABOTAGE:
 		TargetTypes: Sabotage
 		RequiresCondition: ornithopter
@@ -858,7 +861,7 @@ high_tech_factory:
 	Valued:
 		Cost: 1150
 	Tooltip:
-		Name: High Tech Factory
+		Name: actor-high-tech-factory.name
 	ProductionFromMapEdge:
 		Produces: Aircraft, Upgrade
 	ProductionBar:
@@ -873,7 +876,7 @@ high_tech_factory:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: The High Tech Factory produces airborne units, and is required for the production of Carryalls. House Atreides can upgrade the High Tech Factory to build Ornithopters for an air strike.\n\nThe High Tech Factory is vulnerable to most types of weapons.
+		Description: actor-high-tech-factory.encyclopedia
 		Category: Buildings
 		Order: 70
 	Health:
@@ -943,12 +946,12 @@ high_tech_factory:
 		Condition: ornithopter
 	AirstrikePower:
 		Icon: ornistrike
-		Name: Air Strike
+		Name: actor-high-tech-factory.airstrikepower-name
 		Prerequisites: upgrade.hightech, ~techlevel.6
 		ChargeInterval: 7500
 		SquadSize: 3
 		SquadOffset: -1536, 1024, 0
-		Description: Ornithopters hit the target with bombs
+		Description: actor-high-tech-factory.airstrikepower-description
 		UnitType: ornithopter
 		DisplayBeacon: True
 		CameraActor: camera
@@ -958,8 +961,8 @@ high_tech_factory:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: ornidirection
 		SupportPowerPaletteOrder: 10
-		EndChargeTextNotification: Airstrike ready.
-		SelectTargetTextNotification: Select target.
+		EndChargeTextNotification: notification-airstrike-ready
+		SelectTargetTextNotification: notification-select-target
 	Power:
 		Amount: -80
 	InfiltrateForSupportPowerReset:
@@ -972,21 +975,21 @@ starport:
 	Inherits: ^Building
 	Inherits@PRIMARY: ^PrimaryBuilding
 	Tooltip:
-		Name: Starport
+		Name: actor-starport.name
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 80
 		BuildDuration: 625
 		BuildDurationModifier: 100
 		Prerequisites: heavy_factory, outpost, ~techlevel.5
-		Description: Dropzone for quick reinforcements, at a price.
+		Description: actor-starport.description
 	Valued:
 		Cost: 1500
 	D2kBuilding:
 		Footprint: xxx x=x =x=
 		Dimensions: 3,3
 	Encyclopedia:
-		Description: The Starport allows you to engage in intergalactic trading with the C.H.O.A.M. Merchants' Guild. The Starport provides a trading market for vehicles and airborne units at varying rates. You cannot purchase units from the Guild without this facility.\n\nArmor is heavy, but the Starport is vulnerable to most types of weapons.
+		Description: actor-starport.encyclopedia
 		Category: Buildings
 		Order: 80
 	Selectable:
@@ -1016,9 +1019,12 @@ starport:
 		SpawnOffset: 0,-480,0
 		ExitCell: 0,2
 	ProductionAirdrop:
+		WaitTickBeforeProduce: 10
+		WaitTickAfterProduce: 15
+		LandOffset: 0, -256, 0
 		Produces: Starport
 		ActorType: frigate
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 	RenderSprites:
 		Image: starport.ordos
 		FactionImages:
@@ -1030,7 +1036,6 @@ starport:
 			smuggler: starport.smuggler
 	WithDeliveryOverlay:
 		RequiresCondition: !build-incomplete
-		Palette: starportlights
 	ProductionBar:
 		ProductionType: Starport
 	PrimaryBuilding:
@@ -1107,16 +1112,16 @@ repair_pad:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Prerequisites: heavy_factory, upgrade.heavy, ~!cyard.ixian, ~techlevel.3
-		Description: Repairs vehicles.\n Allows construction of MCVs
+		Description: actor-repair-pad.description
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Repair Pad
+		Name: actor-repair-pad.name
 	D2kBuilding:
 		Footprint: +++ +++ +++
 		Dimensions: 3,3
 	Encyclopedia:
-		Description: With a Repair Pad, vehicles can be repaired for a varying price.\n\nThe Repair Pad is vulnerable to most types of weapons.
+		Description: actor-repair-pad.encyclopedia
 		Category: Buildings
 		Order: 90
 	Health:
@@ -1142,9 +1147,9 @@ repair_pad:
 		HpPerStep: 800
 		RepairDamageTypes: KillsDrone
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Repairing.
+		StartRepairingTextNotification: notification-repairing
 		FinishRepairingNotification: UnitRepaired
-		FinishRepairingTextNotification: Unit repaired.
+		FinishRepairingTextNotification: notification-unit-repaired
 		PlayerExperience: 10
 	RallyPoint:
 	CommandBarBlacklist:
@@ -1159,7 +1164,6 @@ repair_pad:
 			corrino: repair_pad.harkonnen
 	WithRepairOverlay:
 		RequiresCondition: !build-incomplete
-		Palette: effect75alpha
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
@@ -1173,7 +1177,7 @@ repair_pad.ixian:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Ixian Repair Pad
+		Name: actor-repair-pad-ixian-name
 	D2kBuilding:
 		Footprint: _+_ +++ _+_
 	Health:
@@ -1195,7 +1199,7 @@ research_centre:
 		BuildDuration: 312
 		BuildDurationModifier: 100
 		Prerequisites: outpost, heavy_factory, upgrade.heavy, ~techlevel.4
-		Description: Unlocks advanced tanks.
+		Description: actor-research-centre.description
 	Targetable@SABOTAGE:
 		TargetTypes: Sabotage
 		RequiresCondition: corrino
@@ -1204,13 +1208,13 @@ research_centre:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: IX Research Center
+		Name: actor-research-centre.name
 	D2kBuilding:
 		Footprint: _X_ xxx XXX ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Encyclopedia:
-		Description: The IX Research Center provides technology upgrades for structures and vehicles. This facility is required for production of a number of advanced special weapons and prototypes. House Corrino's IX Research Centers also provide Rocket Strike capabilites to the Rocket Turrets.\n\nThe IX Research Center is vulnerable to most types of weapons.
+		Description: actor-research-centre.encyclopedia
 		Category: Buildings
 		Order: 100
 	Health:
@@ -1264,11 +1268,12 @@ research_centre:
 		Footprint: _x_ xxx _x_
 		Prerequisites: research_centre.corrino, ~techlevel.6
 		ChargeInterval: 6250
-		Name: Rocket Strike
-		Description: Makes a group of rocket turrets\nable to attack anywhere for 10 seconds.
+		Name: actor-research-centre.grantexternalconditionpower-rocketstrike-name
+		Description: actor-research-centre.grantexternalconditionpower-rocketstrike-description
 		Duration: 250
 		Condition: corrino.rocket_strike
 		Sequence: idle
+		BlockedCursor: move-blocked
 	ProvidesPrerequisite@buildingname:
 
 palace:
@@ -1281,7 +1286,7 @@ palace:
 		BuildDuration: 937
 		BuildDurationModifier: 100
 		Prerequisites: research_centre, ~techlevel.7
-		Description: Unlocks elite infantry and weapons.
+		Description: actor-palace.description
 	Targetable@SABOTAGE:
 		TargetTypes: Sabotage
 		RequiresCondition: atreides || fremen || ixian || harkonnen || ordos || mercenary || smuggler
@@ -1290,7 +1295,7 @@ palace:
 	Valued:
 		Cost: 1600
 	Tooltip:
-		Name: Palace
+		Name: actor-palace.name
 	RallyPoint:
 	CommandBarBlacklist:
 		DisableStop: false
@@ -1298,7 +1303,7 @@ palace:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
 	Encyclopedia:
-		Description: The Palace serves as the command center once it is constructed. Palaces feature unique additional options, making available advanced special weapons.\n\nArmor is heavy, but the Palace is vulnerable to most types of weapons.
+		Description: actor-palace.encyclopedia
 		Category: Buildings
 		Order: 120
 	Health:
@@ -1397,15 +1402,15 @@ palace:
 		RequiresCondition: harkonnen
 		Prerequisites: ~palace.harkonnen, ~techlevel.7
 		ChargeInterval: 7500
-		Name: Death Hand
-		Description: Launches an atomic missile at a target location
+		Name: actor-palace.nukepower-name
+		Description: actor-palace.nukepower-description
 		BeginChargeSpeechNotification: DeathHandMissilePrepping
 		EndChargeSpeechNotification: DeathHandMissileReady
 		IncomingSpeechNotification: MissileLaunchDetected
-		BeginChargeTextNotification: Death Hand missile prepping.
-		EndChargeTextNotification: Death Hand missile ready.
-		IncomingTextNotification: Missile launch detected.
-		SelectTargetTextNotification: Select target.
+		BeginChargeTextNotification: notification-death-hand-missile-prepping
+		EndChargeTextNotification: notification-death-hand-missile-ready
+		IncomingTextNotification: notification-missile-launch-detected
+		SelectTargetTextNotification: notification-select-target
 		MissileWeapon: deathhand
 		MissileDelay: 18
 		SpawnOffset: 32,816,0
@@ -1424,8 +1429,8 @@ palace:
 		SupportPowerPaletteOrder: 40
 		MissileImage: deathhand
 	ProduceActorPower@fremen:
-		Name: Recruit Fremen
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
+		Name: actor-palace.produceactorpower-fremen-name
+		Description: actor-fremen.description
 		Icon: fremen
 		PauseOnCondition: disabled
 		RequiresCondition: atreides
@@ -1433,16 +1438,16 @@ palace:
 		Actors: fremen, fremen
 		Type: Fremen
 		ChargeInterval: 2250
-		EndChargeTextNotification: Fremen ready.
+		EndChargeTextNotification: notification-fremen-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.Fremen
 		SupportPowerPaletteOrder: 20
 	ProduceActorPower@fedaykin:
-		Name: Recruit Fedaykin
-		Description: Elite infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Name: actor-palace.produceactorpower-fedaykin-name
+		Description: actor-fedaykin.description
 		Icon: fedaykin
 		PauseOnCondition: disabled
 		RequiresCondition: fremen
@@ -1450,15 +1455,15 @@ palace:
 		Actors: fedaykin, fedaykin, fedaykin
 		Type: Fedaykin
 		ChargeInterval: 2750
-		EndChargeTextNotification: Fedaykin ready.
+		EndChargeTextNotification: notification-fedaykin-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.Fedaykin
 	ProduceActorPower@drone:
-		Name: Build Drones
-		Description: Robotic vehicle that can sabotage vehicles\nand kill infantry.\nCan detect cloaked units.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Name: actor-palace.produceactorpower-drone-name
+		Description: actor-drone.description
 		Icon: drone
 		PauseOnCondition: disabled
 		RequiresCondition: ixian
@@ -1466,15 +1471,15 @@ palace:
 		Actors: drone, drone, drone
 		Type: Drone
 		ChargeInterval: 3000
-		EndChargeTextNotification: Drones ready.
+		EndChargeTextNotification: notification-drones-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.Drone
 	ProduceActorPower@rocketeer:
-		Name: Recruit Rocketeer
-		Description: Flying infantry unit armed with dual machine guns\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Flying
+		Name: actor-palace.produceactorpower-rocketeer-name
+		Description: actor-rocketeer.description
 		Icon: rocketeer
 		PauseOnCondition: disabled
 		RequiresCondition: harkonnen
@@ -1482,15 +1487,15 @@ palace:
 		Actors: rocketeer, rocketeer, rocketeer
 		Type: Rocketeer
 		ChargeInterval: 2750
-		EndChargeTextNotification: Rocketeer ready.
+		EndChargeTextNotification: notification-rocketeer-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.Rocketeer
 	ProduceActorPower@suicidebomber:
-		Name: Recruit Suicide Bomber
-		Description: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
+		Name: actor-palace.produceactorpower-suicidebomber-name
+		Description: actor-saboteur.description
 		Icon: saboteur
 		PauseOnCondition: disabled
 		RequiresCondition: ordos
@@ -1498,15 +1503,15 @@ palace:
 		Actors: saboteur
 		Type: SuicideBomber
 		ChargeInterval: 2250
-		EndChargeTextNotification: Suicide Bomber ready.
+		EndChargeTextNotification: notification-suicide-bomber-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.SuicideBomber
 	ProduceActorPower@sniper:
-		Name: Recruit Sniper
-		Description: Stealth infantry armed with a long range rifle\n  Strong vs Infantry\n  Weak vs Vehicles\n  Special Ability: Invisibility
+		Name: actor-palace.produceactorpower-sniper-name
+		Description: actor-sniper.description
 		Icon: sniper
 		PauseOnCondition: disabled
 		RequiresCondition: mercenary
@@ -1514,16 +1519,16 @@ palace:
 		Actors: sniper, sniper
 		Type: Sniper
 		ChargeInterval: 2500
-		EndChargeTextNotification: Sniper ready.
+		EndChargeTextNotification: notification-sniper-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.Sniper
 		SupportPowerPaletteOrder: 30
 	ProduceActorPower@saboteur:
-		Name: Recruit Saboteur
-		Description: Stealth infantry that can steal enemy vehicles\nand disable enemy structures\n\n  Unarmed
+		Name: actor-palace.produceactorpower-saboteur-name
+		Description: actor-hijacker.description
 		Icon: hijacker
 		PauseOnCondition: disabled
 		RequiresCondition: smuggler
@@ -1531,11 +1536,11 @@ palace:
 		Actors: hijacker
 		Type: Saboteur
 		ChargeInterval: 2000
-		EndChargeTextNotification: Saboteur ready.
+		EndChargeTextNotification: notification-saboteur-ready
 		ReadyAudio: Reinforce
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcements-have-arrived
 		BlockedAudio: NoRoom
-		BlockedTextNotification: No room for new unit.
+		BlockedTextNotification: notification-no-room-for-new-unit
 		OrderName: ProduceActorPower.Saboteur
 	Exit@1:
 		SpawnOffset: -704,768,0
@@ -1624,7 +1629,7 @@ conyard.atreides:
 		Prerequisites: ~disabled
 		ForceFaction: atreides
 	Tooltip:
-		Name: Atreides Construction Yard
+		Name: actor-conyard-atreides-name
 	RenderSprites:
 		Image: conyard.atreides
 		-FactionImages:
@@ -1639,7 +1644,7 @@ conyard.fremen:
 		Prerequisites: ~disabled
 		ForceFaction: fremen
 	Tooltip:
-		Name: Freman Construction Yard
+		Name: actor-conyard-fremen-name
 	RenderSprites:
 		Image: conyard.atreides
 		-FactionImages:
@@ -1654,7 +1659,7 @@ conyard.ixian:
 		Prerequisites: ~disabled
 		ForceFaction: ixian
 	Tooltip:
-		Name: Ixian Construction Yard
+		Name: actor-conyard-ixian-name
 	RenderSprites:
 		Image: conyard.atreides
 		-FactionImages:
@@ -1669,7 +1674,7 @@ conyard.harkonnen:
 		Prerequisites: ~disabled
 		ForceFaction: harkonnen
 	Tooltip:
-		Name: Harkonnen Construction Yard
+		Name: actor-conyard-harkonnen-name
 	RenderSprites:
 		Image: conyard.harkonnen
 		-FactionImages:
@@ -1684,7 +1689,7 @@ conyard.corrino:
 		Prerequisites: ~disabled
 		ForceFaction: corrino
 	Tooltip:
-		Name: Imperial Construction Yard
+		Name: actor-conyard-corrino-name
 	RenderSprites:
 		Image: conyard.harkonnen
 		-FactionImages:
@@ -1699,7 +1704,7 @@ conyard.ordos:
 		Prerequisites: ~disabled
 		ForceFaction: ordos
 	Tooltip:
-		Name: Ordos Construction Yard
+		Name: actor-conyard-ordos-name
 	RenderSprites:
 		Image: conyard.ordos
 		-FactionImages:
@@ -1714,7 +1719,7 @@ conyard.smuggler:
 		Prerequisites: ~disabled
 		ForceFaction: smuggler
 	Tooltip:
-		Name: Smuggler Construction Yard
+		Name: actor-conyard-smuggler-name
 	RenderSprites:
 		Image: conyard.ordos
 		-FactionImages:
@@ -1729,7 +1734,7 @@ conyard.mercenary:
 		Prerequisites: ~disabled
 		ForceFaction: mercenary
 	Tooltip:
-		Name: Mercenary Construction Yard
+		Name: actor-conyard-mercenary-name
 	RenderSprites:
 		Image: conyard.ordos
 		-FactionImages:
@@ -1740,22 +1745,22 @@ light_or_heavy:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Light or Heavy Factory
+		Name: actor-light-or-heavy.name
 	Buildable:
-		Description: Light or Heavy Factory
+		Description: actor-light-or-heavy.description
 
 hi_tech_or_ix:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: High Tech Factory or Ix Research Center
+		Name: actor-hi-tech-or-ix.name
 	Buildable:
-		Description: High Tech Factory or Ix Research Center
+		Description: actor-hi-tech-or-ix.description
 
 palace.corrino:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Imperial Palace
+		Name: actor-palace-corrino.name
 	Buildable:
-		Description: Imperial Palace
+		Description: actor-palace-corrino.description

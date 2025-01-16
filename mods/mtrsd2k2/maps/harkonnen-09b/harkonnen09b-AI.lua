@@ -1,5 +1,5 @@
 --[[
-   Copyright 2007-2020 The OpenRA Developers (see AUTHORS)
+   Copyright (c) The OpenRA Developers and Contributors
    This file is part of OpenRA, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -35,15 +35,15 @@ CorrinoStarportTypes = { "trike.mg.starport", "trike.mg.starport", "quad.rocket.
 CorrinoAircraftTypes = { "phoenix" }
 
 ActivateAI = function()
-	IdlingUnits[atreides_main] = Utils.Concat(Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(atreides_main, InitialAtreidesReinforcements[2], InitialAtreidesPaths[2]))
-	IdlingUnits[atreides_small] = Reinforcements.Reinforce(atreides_small, InitialAtreidesReinforcements[3], InitialAtreidesPaths[3])
-	IdlingUnits[corrino_main] = Utils.Concat(Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[1], InitialCorrinoPaths[1]), Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[2], InitialCorrinoPaths[2]))
-	IdlingUnits[corrino_small] = Reinforcements.Reinforce(corrino_main, InitialCorrinoReinforcements[3], InitialCorrinoPaths[3])
+	IdlingUnits[AtreidesMain] = Utils.Concat(Reinforcements.Reinforce(AtreidesMain, InitialAtreidesReinforcements[1], InitialAtreidesPaths[1]), Reinforcements.Reinforce(AtreidesMain, InitialAtreidesReinforcements[2], InitialAtreidesPaths[2]))
+	IdlingUnits[AtreidesSmall] = Reinforcements.Reinforce(AtreidesSmall, InitialAtreidesReinforcements[3], InitialAtreidesPaths[3])
+	IdlingUnits[CorrinoMain] = Utils.Concat(Reinforcements.Reinforce(CorrinoMain, InitialCorrinoReinforcements[1], InitialCorrinoPaths[1]), Reinforcements.Reinforce(CorrinoMain, InitialCorrinoReinforcements[2], InitialCorrinoPaths[2]))
+	IdlingUnits[CorrinoSmall] = Reinforcements.Reinforce(CorrinoMain, InitialCorrinoReinforcements[3], InitialCorrinoPaths[3])
 
-	DefendAndRepairBase(atreides_main, AtreidesMainBase, 0.75, AttackGroupSize[Difficulty])
-	DefendAndRepairBase(atreides_small, AtreidesSmallBase, 0.75, AttackGroupSize[Difficulty])
-	DefendAndRepairBase(corrino_main, CorrinoMainBase, 0.75, AttackGroupSize[Difficulty])
-	DefendAndRepairBase(corrino_small, CorrinoSmallBase, 0.75, AttackGroupSize[Difficulty])
+	DefendAndRepairBase(AtreidesMain, AtreidesMainBase, 0.75, AttackGroupSize[Difficulty])
+	DefendAndRepairBase(AtreidesSmall, AtreidesSmallBase, 0.75, AttackGroupSize[Difficulty])
+	DefendAndRepairBase(CorrinoMain, CorrinoMainBase, 0.75, AttackGroupSize[Difficulty])
+	DefendAndRepairBase(CorrinoSmall, CorrinoSmallBase, 0.75, AttackGroupSize[Difficulty])
 
 	local delay = function() return Utils.RandomInteger(AttackDelays[Difficulty][1], AttackDelays[Difficulty][2] + 1) end
 	local infantryToBuild = function() return { Utils.Random(EnemyInfantryTypes) } end
@@ -58,22 +58,22 @@ ActivateAI = function()
 	local aircraftToBuildCorrino = function() return { Utils.Random(CorrinoAircraftTypes) } end
 	local attackThresholdSize = AttackGroupSize[Difficulty] * 2.5
 
-	ProduceUnits(atreides_main, ABarracks1, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_main, ALightFactory1, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_main, AHeavyFactory1, delay, tanksToBuildAtreidesMain, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_main, AStarport1, delay, unitsToBuyAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_main, AHiTechFactory, delay, aircraftToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesMain, ABarracks1, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesMain, ALightFactory1, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesMain, AHeavyFactory1, delay, tanksToBuildAtreidesMain, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesMain, AStarport1, delay, unitsToBuyAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesMain, AHiTechFactory, delay, aircraftToBuildAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 
-	ProduceUnits(atreides_small, ABarracks3, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_small, ALightFactory2, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_small, AHeavyFactory2, delay, tanksToBuildAtreidesSmall, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(atreides_small, AStarport2, delay, unitsToBuyAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesSmall, ABarracks3, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesSmall, ALightFactory2, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesSmall, AHeavyFactory2, delay, tanksToBuildAtreidesSmall, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(AtreidesSmall, AStarport2, delay, unitsToBuyAtreides, AttackGroupSize[Difficulty], attackThresholdSize)
 
-	ProduceUnits(corrino_main, CBarracks1, delay, infantryToBuildCorrinoMain, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(corrino_main, CHeavyFactory, delay, tanksToBuildCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(corrino_main, CHiTechFactory, delay, aircraftToBuildCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(CorrinoMain, CBarracks1, delay, infantryToBuildCorrinoMain, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(CorrinoMain, CHeavyFactory, delay, tanksToBuildCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(CorrinoMain, CHiTechFactory, delay, aircraftToBuildCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
 
-	ProduceUnits(corrino_small, CBarracks3, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(corrino_small, CLightFactory, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
-	ProduceUnits(corrino_small, CStarport, delay, unitsToBuyCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(CorrinoSmall, CBarracks3, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(CorrinoSmall, CLightFactory, delay, vehilcesToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+	ProduceUnits(CorrinoSmall, CStarport, delay, unitsToBuyCorrino, AttackGroupSize[Difficulty], attackThresholdSize)
 end

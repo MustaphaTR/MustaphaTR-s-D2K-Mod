@@ -61,14 +61,14 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 	public class AttackInfect : AttackFrontal
 	{
-		readonly AttackInfectInfo info;
+		public readonly AttackInfectInfo InfectInfo;
 
 		int joustToken = Actor.InvalidConditionToken;
 
 		public AttackInfect(Actor self, AttackInfectInfo info)
 			: base(self, info)
 		{
-			this.info = info;
+			InfectInfo = info;
 		}
 
 		protected override bool CanAttack(Actor self, in Target target)
@@ -84,8 +84,8 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 		public void GrantJoustCondition(Actor self)
 		{
-			if (!string.IsNullOrEmpty(info.JoustCondition))
-				joustToken = self.GrantCondition(info.JoustCondition);
+			if (!string.IsNullOrEmpty(InfectInfo.JoustCondition))
+				joustToken = self.GrantCondition(InfectInfo.JoustCondition);
 		}
 
 		public void RevokeJoustCondition(Actor self)
@@ -96,7 +96,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 		public override Activity GetAttackActivity(Actor self, AttackSource source, in Target newTarget, bool allowMove, bool forceAttack, Color? targetLineColor)
 		{
-			return new Infect(self, newTarget, this, info, targetLineColor);
+			return new Infect(self, newTarget, this, InfectInfo, targetLineColor);
 		}
 	}
 }

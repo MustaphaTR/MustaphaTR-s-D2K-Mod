@@ -10,15 +10,14 @@
 		AreaTypes: building
 		Adjacent: 4
 	Tooltip:
-		Name: Concrete
-		GenericName: Structure
+		GenericName: meta-concrete.generic-name
 	RenderSprites:
 	KillsSelf:
 		RemoveInstead: true
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 10
-		Description: Provides a strong foundation that prevents\ndamage from the terrain.
+		Description: meta-concrete.description
 
 concretea:
 	Inherits: ^concrete
@@ -26,9 +25,9 @@ concretea:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Concrete Slab
+		Name: actor-concrete-a.name
 	Encyclopedia:
-		Description: If buildings are not placed on concrete, they will be damaged. Buildings can be repaired, but unless the building sits completely on concrete, the building will suffer continual weathering damage from the erosive desert environment.\n\nConcrete is vulnerable to most weapon types. Concrete cannot be repaired if damaged.
+		Description: actor-concrete-a.encyclopedia
 		Category: Support Buildings
 		Order: 10
 	Valued:
@@ -47,7 +46,7 @@ concreteb:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Tooltip:
-		Name: Large Concrete Slab
+		Name: actor-concrete-b-name
 	Valued:
 		Cost: 35
 	Buildable:
@@ -64,17 +63,17 @@ silo:
 		BuildDuration: 156
 		BuildDurationModifier: 100
 		Prerequisites: refinery, ~!cyard.smuggler, ~techlevel.1
-		Description: Stores excess harvested Spice.
+		Description: actor-silo.description
 	Selectable:
 		Bounds: 1024, 1024
 	Encyclopedia:
-		Description: The Spice Silo allows the player to store 2000 harvested Spice. When a Refinery completes processing, excess Spice is automatically distributed evenly among the Silos and Refineries. When harvested Spice exceeds Silo capacity, the excess will be lost. When Spice Silos are destroyed or captured, the amount stored will be dispersed among other Silos and Refineries unless there is insufficient storage capacity.\n\nThe Spice Silo is vulnerable to most types of weapons.
+		Description: actor-silo.encyclopedia
 		Category: Support Buildings
 		Order: 10
 	Valued:
 		Cost: 120
 	Tooltip:
-		Name: Silo
+		Name: actor-silo.name
 	RequiresBuildableArea:
 		Adjacent: 4
 	-GivesBuildableArea:
@@ -95,14 +94,14 @@ silo:
 	-WithSpriteBody:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
-	StoresResources:
+	StoresPlayerResources:
 		Capacity: 2000
 	-SpawnActorsOnSell:
 	Power:
 		Amount: -15
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris, Debris2, Debris3, Debris4
 		Pieces: 3, 5
 		Range: 2c0, 5c0
@@ -119,14 +118,14 @@ silo.smuggler:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: refinery, ~cyard.smuggler, ~techlevel.1
-	StoresResources:
+	StoresPlayerResources:
 		Capacity: 2500
 	Health:
 		HP: 20000
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Smuggler Silo
+		Name: actor-silo-smuggler-name
 	Selectable:
 		Class: silo
 	Power:
@@ -148,7 +147,7 @@ wall:
 		BuildDuration: 62
 		BuildDurationModifier: 100
 		Prerequisites: barracks, ~techlevel.2
-		Description: Stop units and blocks enemy fire.
+		Description: actor-wall.description
 	Valued:
 		Cost: 20
 	CustomSellValue:
@@ -156,14 +155,14 @@ wall:
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: false
 	Tooltip:
-		Name: Concrete Wall
-		GenericName: Structure
+		Name: actor-wall.name
+		GenericName: actor-wall.generic-name
 	AppearsOnRadar:
 	D2kBuilding:
 		BuildSounds: CHUNG.WAV
 		TerrainTypes: Rock, Concrete
 	Encyclopedia:
-		Description: Base defense. Concrete walls are the most effective barriers on Dune. Concrete walls will block tank bullets and impede unit movement.\n\nWalls can only be damaged by explosive weapons, missiles and shells. Like concrete slabs, walls cannot be repaired if damaged.
+		Description: actor-wall.encyclopedia
 		Category: Support Buildings
 		Order: 20
 	FootprintPlaceBuildingPreview:
@@ -192,10 +191,10 @@ wall:
 	Sellable:
 		SellSounds: CHUNG.WAV
 	Guardable:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WallExplode
 		EmptyWeapon: WallExplode
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris2, Debris3
 		Pieces: 1, 1
 		Range: 1c512, 2c768
@@ -215,16 +214,16 @@ mine_ap:
 		BuildPaletteOrder: 60
 		BuildDuration: 150
 		Prerequisites: barracks, ~cyard.smuggler, ~techlevel.3
-		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
+		Description: actor-mine-ap.description
 	Valued:
 		Cost: 150
 	Tooltip:
-		Name: Anti-Personnel Mine
-	Explodes:
+		Name: actor-mine-ap.name
+	FireWarheadsOnDeath:
 		Weapon: APMine
 		EmptyWeapon: APMine
 	Encyclopedia:
-		Description: Mines are defensive measures used by the Smugglers instead of towers. They are hidden from enemy's view and explode when an enemy unit moves over them, dealing damage.\n\nThe Anti-Personnel Mine is good against Infantry.\n\nWhile normally invisible to enemy, if detected mines can be easily destroyed by any weapon.
+		Description: actor-mine-ap.encyclopedia
 		Category: Support Buildings
 		Order: 60
 
@@ -234,16 +233,16 @@ mine_at:
 		BuildPaletteOrder: 70
 		BuildDuration: 200
 		Prerequisites: barracks, ~cyard.smuggler, ~techlevel.4
-		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
+		Description: actor-mine-at.description
 	Valued:
 		Cost: 275
 	Tooltip:
-		Name: Anti-Tank Mine
-	Explodes:
+		Name: actor-mine-at.name
+	FireWarheadsOnDeath:
 		Weapon: ATMine
 		EmptyWeapon: ATMine
 	Encyclopedia:
-		Description: Mines are defensive measures used by the Smugglers instead of towers. They are hidden from enemy's view and explode when an enemy unit moves over them, dealing damage.\n\nThe Anti-Tank Mine is good against Vehicles.\n\nWhile normally invisible to enemy, if detected mines can be easily destroyed by any weapon.
+		Description: actor-mine-at.encyclopedia
 		Category: Support Buildings
 		Order: 70
 
@@ -256,13 +255,13 @@ machine_gun_tower:
 		BuildDuration: 222
 		BuildDurationModifier: 40
 		Prerequisites: barracks, ~cyard.machine_gun_tower, ~techlevel.3
-		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-machine-gun-tower.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Machine Gun Tower
+		Name: actor-machine-gun-tower.name
 	Encyclopedia:
-		Description: The Machine Gun Tower is a medium range defensive structure used by House Atreides, the Fremen and the Ixians. It is effective against infantry and light vehicles. The Machine Gun Tower will fire on any enemy unit within range.\n\nThe Machine Gun Tower is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Description: actor-machine-gun-tower.encyclopedia
 		Category: Support Buildings
 		Order: 30
 	RequiresBuildableArea:
@@ -300,13 +299,13 @@ flame_tower:
 		BuildDuration: 222
 		BuildDurationModifier: 40
 		Prerequisites: barracks, ~cyard.flame_tower, ~techlevel.3
-		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-flame-tower.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Flame Tower
+		Name: actor-flame-tower.name
 	Encyclopedia:
-		Description: The Flame Tower is a short range defensive structure used by House Harkonnen and House Corrino. It is effective against infantry and light vehicles. The Flame Tower will fire on any enemy unit within range.\n\nThe Flame Tower is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Description: actor-flame-tower.encyclopedia
 		Category: Support Buildings
 		Order: 40
 	RequiresBuildableArea:
@@ -341,13 +340,13 @@ artillery_platform:
 		BuildDuration: 222
 		BuildDurationModifier: 40
 		Prerequisites: barracks, ~cyard.artillery_platform, ~techlevel.3
-		Description: Defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-artillery-platform.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Artillery Platform
+		Name: actor-artillery-platform.name
 	Encyclopedia:
-		Description: The Artillery Platform is a long range defensive structure used by House Ordos and thier mercenaries. It is effective against infantry and light vehicles. The Artillery Platform will fire on any enemy unit within range.\n\nThe Artillery Platform is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Description: actor-artillery-platform.encyclopedia
 		Category: Support Buildings
 		Order: 50
 	RequiresBuildableArea:
@@ -391,11 +390,11 @@ medium_gun_turret:
 		BuildDuration: 268
 		BuildDurationModifier: 100
 		Prerequisites: light_or_heavy, ~cyard.gun_turret, ~techlevel.4
-		Description: Defensive structure.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Requires power to operate.
+		Description: actor-medium-gun-turret.description
 	Valued:
 		Cost: 550
 	Tooltip:
-		Name: Gun Turret
+		Name: actor-medium-gun-turret.name
 	RequiresBuildableArea:
 		Adjacent: 4
 	Selectable:
@@ -404,7 +403,7 @@ medium_gun_turret:
 	Health:
 		HP: 27000
 	Encyclopedia:
-		Description: The Gun Turret has a medium range gun which is effective against vehicles, especially heavily armored vehicles. The Gun Turret will fire on any enemy unit within range. The Gun Turret's targeting equipment requires power to operate.\n\nThe Gun Turret is resistant to bullet and explosive weapons, but vulnerable to missiles and high-caliber guns.
+		Description: actor-medium-gun-turret.encyclopedia
 		Category: Support Buildings
 		Order: 80
 	Armor:
@@ -441,13 +440,13 @@ large_gun_turret:
 		BuildDuration: 312
 		BuildDurationModifier: 100
 		Prerequisites: hi_tech_or_ix, upgrade.conyard, ~techlevel.6
-		Description: Defensive structure.\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate.
+		Description: actor-large-gun-turret.description
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Rocket Turret
+		Name: actor-large-gun-turret.name
 	Encyclopedia:
-		Description: The substantially improved Rocket Turret has a longer range and a higher rate of fire than the Gun Turret. The Rocket Turret's advanced targeting equipment requires power to operate.\n\nThe Rocket Turret is resistant to bullet and explosive weapons, but vulnerable to missiles and high caliber guns.
+		Description: actor-large-gun-turret.encyclopedia
 		Category: Support Buildings
 		Order: 90
 	RequiresBuildableArea:

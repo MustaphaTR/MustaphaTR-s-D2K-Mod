@@ -11,7 +11,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -27,6 +26,9 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 		[Desc("Damage types that kills the infector.")]
 		public readonly BitSet<DamageType> KillInfectorDamageTypes = default;
+
+		[Desc("Teleport types that removes the infector.")]
+		public readonly HashSet<string> RemoveInfectorTeleportTypes = default;
 
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while infected by any actor.")]
@@ -121,11 +123,11 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 			}
 		}
 
-		void RemoveInfector(Actor self, bool kill, AttackInfo e)
+		void RemoveInfector(Actor self, WPos spawnLoc, bool kill, AttackInfo e)
 		{
 			if (Infector != null && !Infector.Item1.IsDead)
 			{
-				Infector.Item1.TraitOrDefault<IPositionable>().SetPosition(Infector.Item1, self.CenterPosition);
+				Infector.Item1.TraitOrDefault<IPositionable>().SetPosition(Infector.Item1, spawnLoc);
 				self.World.AddFrameEndTask(w =>
 				{
 					if (Infector == null || Infector.Item1.IsDead)
@@ -141,10 +143,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 							Infector.Item1.Kill(self);
 					}
 					else
-					{
-						var mobile = Infector.Item1.TraitOrDefault<Mobile>();
-						mobile?.Nudge(Infector.Item1);
-					}
+						Infector.Item1.QueueActivity(false, new Nudge(Infector.Item1));
 
 					RevokeCondition(self);
 					Infector = null;
@@ -161,9 +160,9 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 			if (Infector != null)
 			{
 				if (e.Damage.DamageTypes.Overlaps(Info.KillInfectorDamageTypes))
-					RemoveInfector(self, true, e);
+					RemoveInfector(self, self.CenterPosition, true, e);
 				else if (e.Damage.DamageTypes.Overlaps(Info.RemoveInfectorDamageTypes))
-					RemoveInfector(self, false, e);
+					RemoveInfector(self, self.CenterPosition, false, e);
 				else if (e.Attacker != Infector.Item1 && e.Damage.DamageTypes.Overlaps(Infector.Item3.SuppressionDamageType))
 				{
 					killInfectorOnDeath |= Infector.Item3.SuppressionDamageThreshold > 0 && e.Damage.Value > Infector.Item3.SuppressionDamageThreshold;
@@ -182,8 +181,8 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 			if (Infector != null)
 			{
 				var shdt = Infector.Item3.SurviveHostDamageTypes;
-				var kill = killInfectorOnDeath || (shdt.Any() && !shdt.Overlaps(e.Damage.DamageTypes));
-				RemoveInfector(self, kill, e);
+				var kill = killInfectorOnDeath || (!shdt.IsEmpty && !shdt.Overlaps(e.Damage.DamageTypes));
+				RemoveInfector(self, self.CenterPosition, kill, e);
 			}
 		}
 

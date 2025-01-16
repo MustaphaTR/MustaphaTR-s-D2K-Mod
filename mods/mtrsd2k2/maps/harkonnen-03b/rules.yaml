@@ -4,7 +4,7 @@ Player:
 
 World:
 	LuaScript:
-		Scripts: campaign-global.lua, harkonnen03b.lua, harkonnen03b-AI.lua
+		Scripts: campaign.lua, utils.lua, harkonnen03b.lua, harkonnen03b-AI.lua
 	MissionData:
 		Briefing: Attack and destroy the Atreides base at Sietch Tabr. Strike hard and eliminate all resistance.\n\Rocket Trike vehicles will be made available for your attack. Upgrade your Light Factory to gain access to these vehicles.\n
 		BriefingVideo: H_BR03_E.VQA
@@ -12,11 +12,12 @@ World:
 		TechLevel: 2
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: dropdown-difficulty.label
+		Description: dropdown-difficulty.description
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: options-difficulty.easy
+			normal: options-difficulty.normal
+			hard: options-difficulty.hard
 		Default: easy
 
 carryall.reinforce:

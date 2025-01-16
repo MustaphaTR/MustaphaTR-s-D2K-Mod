@@ -34,58 +34,6 @@
 		BasePalette: d2k
 		RemapIndex: 255, 254, 253, 252, 251, 250, 249, 248, 247, 246, 245, 244, 243, 242, 241, 240
 		AllowModifiers: false
-	PaletteFromRGBA@shadow:
-		Name: shadow
-		R: 0
-		G: 0
-		B: 0
-		A: 140
-	PaletteFromRGBA@highlight:
-		Name: highlight
-		R: 255
-		G: 255
-		B: 255
-		A: 128
-	PaletteFromEmbeddedSpritePalette@moveflash-base:
-		Name: moveflash-base
-		Filename: DATA.R8
-		Frame: 3874
-	PaletteFromScaledPalette@moveflash:
-		Name: moveflash
-		BasePalette: moveflash-base
-		Scale: -1
-		Offset: 255
-		AllowModifiers: false
-	PaletteFromRGBA@disabled:
-		Name: disabled
-		R: 0
-		G: 0
-		B: 0
-		A: 180
-	PaletteFromPaletteWithAlpha@effect75alpha:
-		Name: effect75alpha
-		BasePalette: effect
-		Alpha: 0.75
-	PaletteFromPaletteWithAlpha@effect50alpha:
-		Name: effect50alpha
-		BasePalette: effect
-		Alpha: 0.5
-	PaletteFromScaledPalette@starportlights:
-		Name: starportlights
-		BasePalette: d2k
-		AllowModifiers: false
-		Offset: -64
-	PaletteFromEmbeddedSpritePalette@shroud:
-		Name: shroud
-		Filename: DATA.R8
-		Frame: 38
-	PaletteFromEmbeddedSpritePalette@smoke3:
-		Name: smoke3
-		Filename: DATA.R8
-		Frame: 3747
-	D2kFogPalette@fog:
-		Name: fog
-		BasePalette: shroud
 	PlayerColorPalette:
 		BasePalette: d2k
 		RemapIndex: 255, 254, 253, 252, 251, 250, 249, 248, 247, 246, 245, 244, 243, 242, 241, 240
@@ -101,37 +49,11 @@
 		BaseName: ra2player
 		BasePalette: ra2
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-	PaletteFromPlayerPaletteWithAlpha@deviatorgas:
-		BaseName: deviatorgas
+	MenuPostProcessEffect:
+	FlashPostProcessEffect:
+	ColorPickerColorShift:
+		BasePalette: colorpicker
+		MinHue: 0.32
+		MaxHue: 0.34
+	PlayerColorShift:
 		BasePalette: player
-		Alpha: 0.68
-		Premultiply: false
-	FlashPaletteEffect:
-	PaletteFromPlayerPaletteWithAlpha@cloak:
-		BaseName: cloak
-		BasePalette: player
-		Alpha: 0.55
-	PaletteFromPlayerPaletteWithAlpha@racloak:
-		BaseName: racloak
-		BasePalette: raplayer
-		Alpha: 0.55
-	PaletteFromPlayerPaletteWithAlpha@cnccloak:
-		BaseName: cnccloak
-		BasePalette: cncplayer
-		Alpha: 0.55
-	PaletteFromPlayerPaletteWithAlpha@ra2cloak:
-		BaseName: ra2cloak
-		BasePalette: ra2player
-		Alpha: 0.55
-	PaletteFromPaletteWithAlpha@placelinesegment:
-		Name: placelinesegment
-		BasePalette: terrain
-		Alpha: 0.65
-	PaletteFromPlayerPaletteWithAlpha@placebuilding:
-		BaseName: placebuilding
-		BasePalette: player
-		Alpha: 0.65
-	PaletteFromPlayerPaletteWithAlpha@placebuildingra:
-		BaseName: placebuildingra
-		BasePalette: raplayer
-		Alpha: 0.65

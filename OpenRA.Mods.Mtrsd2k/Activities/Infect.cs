@@ -127,7 +127,7 @@ namespace OpenRA.Mods.Mtrsd2k.Activities
 		protected override bool TryStartEnter(Actor self, Actor targetActor)
 		{
 			var canStartInfect = CanStartInfect(self, targetActor);
-			if (canStartInfect == false)
+			if (!canStartInfect)
 			{
 				CancelInfection(self);
 				Cancel(self, true);

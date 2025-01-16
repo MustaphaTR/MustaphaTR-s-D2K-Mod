@@ -9,7 +9,6 @@
 		InaccuracyType: PerCellIncrement
 		Image: RPG
 		TrailImage: bazooka_trail2
-		TrailPalette: effect75alpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
@@ -100,7 +99,6 @@ BazookaAA:
 		HorizontalRateOfTurn: 24
 		VerticalRateOfTurn: 80
 		TrailImage: bazooka_trail2
-		TrailPalette: effect75alpha
 		TrailInterval: 1
 		Speed: 384
 		RangeLimit: 4c614
@@ -140,7 +138,6 @@ Rocket:
 		Damage: 625
 	Warhead@3Eff: CreateEffect
 		Explosions: rocket_explosion
-		ExplosionPalette: effect75alpha
 
 RocketAA:
 	Inherits: Rocket
@@ -154,7 +151,6 @@ RocketAA:
 		HorizontalRateOfTurn: 24
 		VerticalRateOfTurn: 80
 		TrailImage: bazooka_trail2
-		TrailPalette: effect75alpha
 		TrailInterval: 1
 		Speed: 384
 		RangeLimit: 5c204
@@ -219,7 +215,6 @@ Rocket.stealthAA:
 		HorizontalRateOfTurn: 24
 		VerticalRateOfTurn: 80
 		TrailImage: bazooka_trail2
-		TrailPalette: effect75alpha
 		TrailInterval: 1
 		Speed: 384
 		RangeLimit: 5c614
@@ -253,7 +248,6 @@ PhoenixRocket:
 			harvester: 15
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
-		ExplosionPalette: effect75alpha
 		ImpactSounds: firebl3.aud
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 1250
@@ -348,7 +342,7 @@ DeviatorMissile:
 		Inaccuracy: 96
 		Image: MISSILE
 		TrailImage: deviator_trail
-		TrailPalette: deviatorgas
+		TrailPalette: player
 		TrailUsePlayerPalette: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 1000
@@ -366,7 +360,7 @@ DeviatorMissile:
 	-Warhead@2Smu:
 	Warhead@3Eff: CreateEffect
 		Explosions: deviator
-		ExplosionPalette: deviatorgas
+		ExplosionPalette: player
 		UsePlayerPalette: true
 		-ImpactSounds:
 	Warhead@5OwnerChange: ChangeOwner

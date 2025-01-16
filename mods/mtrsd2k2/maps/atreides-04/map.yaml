@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: mtrsd2k2
 
@@ -418,3 +418,5 @@ Actors:
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
 Sequences: sequences.yaml
+
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl

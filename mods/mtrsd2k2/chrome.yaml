@@ -1,16 +1,21 @@
 ^Chrome:
-	Image: chrome.png
+	Image: mtrsd2k2uibits|chrome.png
 
 ^Dialog:
-	Image: dialog.png
+	Image: d2kuibits|dialog.png
 
 ^Glyphs:
-	Image: glyphs.png
-	Image2x: glyphs-2x.png
-	Image3x: glyphs-3x.png
+	Image: mtrsd2k2uibits|glyphs.png
+	Image2x: mtrsd2k2uibits|glyphs-2x.png
+	Image3x: mtrsd2k2uibits|glyphs-3x.png
+
+^GlyphsD2k:
+	Image: d2kuibits|glyphs.png
+	Image2x: d2kuibits|glyphs-2x.png
+	Image3x: d2kuibits|glyphs-3x.png
 
 ^LoadScreen:
-	Image: loadscreen.png
+	Image: mtrsd2k2uibits|loadscreen.png
 
 sidebar:
 	Inherits: ^Chrome
@@ -43,7 +48,7 @@ sidebar-button-highlighted-disabled:
 	Inherits: sidebar-button-disabled
 
 sidebar-bits:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		production-tooltip-time: 136, 51, 16, 16
 		production-tooltip-power: 102, 51, 16, 16
@@ -82,7 +87,7 @@ radar-harkonnen:
 		insignia: 227, 127, 100, 100
 
 power-icons:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		power-normal: 102, 51, 16, 16
 		power-critical: 119, 51, 16, 16
@@ -260,7 +265,7 @@ dialog5:
 		background: 1, 1, 478, 478
 
 lobby-bits:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		spawn-claimed: 27, 119, 22, 22
 		spawn-unclaimed: 50, 119, 22, 22
@@ -277,9 +282,10 @@ lobby-bits:
 		admin-anonymous: 34, 51, 16, 16
 		player-registered: 17, 51, 16, 16
 		player-anonymous: 51, 51, 16, 16
+		bot: 170, 51, 16, 16
 
 reload-icon:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		enabled: 0, 34, 16, 16
 		disabled-0: 17, 34, 16, 16
@@ -296,7 +302,7 @@ reload-icon:
 		disabled-11: 204, 34, 16, 16
 
 music:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		pause: 0, 0, 16, 16
 		stop: 17, 0, 16, 16
@@ -395,7 +401,7 @@ checkbox:
 	Inherits: button-pressed
 
 checkmark-tick:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		checked: 187, 0, 16, 16
 		checked-pressed: 204, 0, 16, 16
@@ -406,7 +412,7 @@ checkmark-tick-highlighted:
 	Inherits: checkmark-tick
 
 checkmark-cross:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		checked: 221, 0, 16, 16
 		checked-pressed: 238, 0, 16, 16
@@ -417,7 +423,7 @@ checkmark-cross-highlighted:
 	Inherits: checkmark-cross
 
 checkmark-mute:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		unchecked: 221, 34, 16, 16
 		unchecked-pressed: 238, 34, 16, 16
@@ -489,13 +495,13 @@ scrollheader-highlighted:
 	Inherits: button
 
 scrollpanel-decorations:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		down: 119, 0, 16, 16
 		up: 102, 0, 16, 16
 
 dropdown-decorations:
-	Inherits: ^Glyphs
+	Inherits: ^GlyphsD2k
 	Regions:
 		marker: 119, 0, 16, 16
 
@@ -519,3 +525,14 @@ loadscreen-stripe:
 	Inherits: ^LoadScreen
 	PanelRegion: 258, 0, 0, 0, 253, 256, 0, 0
 	PanelSides: Center
+
+editor:
+	Inherits: ^GlyphsD2k
+	Regions:
+		select: 51, 144, 16, 16
+		tiles: 0, 144, 16, 16
+		overlays: 17, 144, 16, 16
+		actors: 34, 68, 16, 16
+		tools: 34, 144, 16, 16
+		history: 136, 51, 16, 16
+		erase: 67, 144, 16, 16

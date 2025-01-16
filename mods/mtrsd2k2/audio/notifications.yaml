@@ -74,6 +74,7 @@ Sounds:
 		LevelUp: SCORTIK1
 		ChatLine: CHAT1
 			InterruptType: Interrupt
+		LeaveLobby: CHAT1REVERSE
 		BuildPaletteOpen: BUTTON1
 		BuildPaletteClose: BUTTON1
 		TabClick: SIDEBAR1
@@ -82,5 +83,5 @@ Sounds:
 			InterruptType: Overlap
 		ClickDisabledSound: ENDLIST1
 			InterruptType: Overlap
-		Beacon: CHAT1
+		Beacon: MULTI1
 			InterruptType: Interrupt
