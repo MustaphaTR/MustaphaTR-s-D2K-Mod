@@ -216,8 +216,8 @@ actor-carryall-reinforce-smuggler-name = Smuggler Carryall
 actor-ornithopter-controllable =
    .description = 
     Aircraft armed with dual rocket launchers.
-      Strong vs Tanks
-      Weak vs Infantry
+      Strong vs Tanks.
+      Weak vs Infantry.
    .encyclopedia = 
     The Ornithopther is an armored aircraft typically armed with twin missile launchers, although House Atreides also uses variants that use 500lb bombs. While missile versions are better against armored targets, the bombs do good damage against infantry and buildings.
     
@@ -227,8 +227,8 @@ actor-swarmer =
    .name = Swarmer
    .description = 
     Light plane armed with dual machine guns.
-      Strong vs Infantry
-      Weak vs Tanks
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     The Swarmer is a small, cheap and light aircraft armed with machine guns, dealing good damage against infantry.
     
@@ -238,8 +238,8 @@ actor-phoenix =
    .name = Phoenix
    .description = 
     Light plane armed with dual napalm rockets.
-      Strong vs Buildings
-      Weak vs Tanks
+      Strong vs Buildings.
+      Weak vs Tanks.
    .encyclopedia = 
     The Phoenix is a fast and light aircraft armed napalm missiles, dealing good damage against buildings and infantry.
     
@@ -274,8 +274,8 @@ actor-dog =
    .description = 
     Anti-infantry scout unit.
     Can detect cloaked units.
-      Strong vs. Infantry.
-      Weak vs. Vehicles.
+      Strong vs Infantry.
+      Weak vs Vehicles.
    .encyclopedia = 
     Attack Dogs are fast scout infantry units capable of dealing with lone infantry with ease.
 
@@ -286,8 +286,8 @@ actor-engineer =
    .description = 
     Infiltrates and captures enemy structures.
     Repairs friendly ones and damaged cliffs.
-      Strong vs. Buildings.
-      Weak vs. Everything.
+      Strong vs Buildings.
+      Weak vs Everything.
    .encyclopedia = 
     Can be used to capture enemy buildings and repair friendly ones.
 
@@ -307,8 +307,8 @@ actor-grenadier =
    .name = Grenadier
    .description = 
     Infantry armed with grenades. 
-      Strong vs. Buildings and Infantry.
-      Weak vs. Vehicles.
+      Strong vs Buildings and Infantry.
+      Weak vs Vehicles.
    .encyclopedia = 
     An infantry artillery unit strong against buildings. They have a chance of exploding when killed, so should not be grouped together.
 
@@ -317,8 +317,8 @@ actor-grenadier =
 actor-nsfremen =
    .description = 
     Elite infantry unit with assault rifles and rockets.
-      Strong vs. Infantry and Vehicles.
-      Weak vs. Artillery.
+      Strong vs Infantry and Vehicles.
+      Weak vs Artillery.
 
 actor-mechanic =
    .name = Mechanic
@@ -335,8 +335,8 @@ actor-flamethrower =
    .name = Flamethrower
    .description = 
     Advanced anti-structure infantry.
-      Strong vs. Buildings and Infantry.
-      Weak vs. Vehicles.
+      Strong vs Buildings and Infantry.
+      Weak vs Vehicles.
    .encyclopedia = 
     Infantry unit armed with short range flame weapons that can deal high damage to buildings and infantry.
 
@@ -346,8 +346,8 @@ actor-plasma-infantry =
    .name = Plasma Infantry
    .description = 
     Advanced infantry armed with a plasma ball launcher.
-      Strong vs. Tanks.
-      Weak vs. Artillery.
+      Strong vs Tanks.
+      Weak vs Artillery.
    .encyclopedia = 
     Infantry unit armed with portable plasma launchers that can deal good damage to armored units.
     
@@ -357,8 +357,8 @@ actor-fedaykin =
    .name = Fedaykin
    .description = 
     Elite infantry armed with a Sonic Weapon.
-      Strong vs. Infantry and Vehicles.
-      Weak vs. Artillery.
+      Strong vs Infantry and Vehicles.
+      Weak vs Artillery.
    .encyclopedia = 
     Elite Fremen infantry armed with portable sonic weapons. They are effective against infantry and lightly armored vehicles - but weaker against armored targets.
 
@@ -382,8 +382,8 @@ actor-rocketeer =
    .name = Rocketeer
    .description = 
     Flying infantry unit armed with dual machine guns.
-      Strong vs. Infantry.
-      Weak vs. Vehicles.
+      Strong vs Infantry.
+      Weak vs Vehicles.
    .encyclopedia = 
     Elite infantry using rocket backpack to fly. They are armed with machine guns, making them effective against infantry.
 
@@ -393,8 +393,8 @@ actor-sardaukar =
    .name = Sardaukar
    .description = 
     Elite Corrino assault infantry.
-      Strong vs. Infantry and Vehicles.
-      Weak vs. Artillery.
+      Strong vs Infantry and Vehicles.
+      Weak vs Artillery.
    .encyclopedia = 
     Powerful heavy troopers equipped with a machine gun that is effective against infantry and a rocket launcher for targeting vehicles.
 
@@ -405,8 +405,8 @@ actor-saboteur =
    .description = 
     Sneaky infantry with explosives.
     Turns invisible for a limited time.
-      Strong vs. Buildings and Vehicles.
-      Weak vs. Infantry and Aircraft.
+      Strong vs Buildings and Vehicles.
+      Weak vs Infantry and Aircraft.
       Special Ability: Destroys buildings and vehicles.
    .encyclopedia = 
     A specialized military unit of House Ordos, capable of demolishing enemy buildings upon entry, but dying in the resulting explosion. It can activate stealth mode to become invisible.
@@ -417,8 +417,8 @@ actor-sniper =
    .name = Sniper
    .description = 
     Stealth infantry armed with a long range rifle.
-      Strong vs. Infantry.
-      Weak vs. Vehicles.
+      Strong vs Infantry.
+      Weak vs Vehicles.
       Special Ability: Invisibility.
    .encyclopedia = 
     A specialized military unit used by the Mercenaries, capable of dealing with enemy infantry from a great range with ease. They are stealthed unless firing.
@@ -575,8 +575,8 @@ actor-mine-ap =
    .name = Anti-Personnel Mine
    .description = 
     Defensive structure. Explodes when an enemy unit moves over it.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
 
       Invisible to the enemy.
    .encyclopedia = 
@@ -590,8 +590,8 @@ actor-mine-at =
    .name = Anti-Tank Mine
    .description = 
     Defensive structure. Explodes when an enemy unit moves over it.
-      Strong vs. Tank.
-      Weak vs. Infantry.
+      Strong vs Tank.
+      Weak vs Infantry.
     
       Invisible to the enemy.
    .encyclopedia = 
@@ -605,8 +605,8 @@ actor-machine-gun-tower =
    .name = Machine Gun Tower
    .description = 
     Anti-infantry defensive structure.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     The Machine Gun Tower is a medium range defensive structure used by House Atreides, the Fremen and the Ixians. It is effective against infantry and light vehicles. The Machine Gun Tower will fire on any enemy unit within range.
     
@@ -616,8 +616,8 @@ actor-flame-tower =
    .name = Flame Tower
    .description = 
     Anti-infantry defensive structure.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     The Flame Tower is a short range defensive structure used by House Harkonnen and House Corrino. It is effective against infantry and light vehicles. The Flame Tower will fire on any enemy unit within range.
     
@@ -627,8 +627,8 @@ actor-artillery-platform =
    .name = Artillery Platform
    .description = 
     Anti-infantry defensive structure.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     Long range defensive structure used by House Ordos and thier mercenaries. It is effective against infantry and light vehicles. The Artillery Platform will fire on any enemy unit within range.
     
@@ -639,8 +639,8 @@ actor-medium-gun-turret =
    .description =
     Anti-vehicle defensive structure.
     Requires power to operate.
-      Strong vs. Tanks.
-      Weak vs. Infantry and Aircraft.
+      Strong vs Tanks.
+      Weak vs Infantry and Aircraft.
    .encyclopedia =
     A medium-range weapon that is effective against all types of vehicle, particularly heavily armored ones. It automatically fires upon any enemy unit within its range and requires power to operate.
 
@@ -651,8 +651,8 @@ actor-large-gun-turret =
    .description = 
     Advanced defensive structure.
     Requires power to operate.
-      Strong vs. Infantry and Aircraft.
-      Weak vs. Tanks.
+      Strong vs Infantry and Aircraft.
+      Weak vs Tanks.
    .encyclopedia =
     An enhanced defensive structure with a longer range and faster rate of fire than the Gun Turret. Its advanced targeting system requires power to operate.
 
@@ -663,8 +663,8 @@ actor-trike-mg =
    .name = Machine Gun Trike
    .description = 
     Fast scout vehicle armed with machine guns.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     The Trike chasis provies a balanced amount of armor and mobility to light vehicles. This variant used by House Atreides, House Corrino and the Smugglers is equipped with heavy machine guns, effective against infantry and lightly armored vehicles.
     
@@ -674,8 +674,8 @@ actor-raider-mg =
    .name = Machine Gun Raider
    .description = 
     Fast scout vehicle armed with machine guns.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     The Raider chasis provies light vehicles great mobility, although they are behind in armor department. This variant used by the Fremen, the Ixians and the Mercenaries is equipped with heavy machine guns, effective against infantry and lightly armored vehicles.
     
@@ -685,8 +685,8 @@ actor-quad-mg =
    .name = Machine Gun Quad
    .description = 
     Fast scout vehicle armed with machine guns.
-      Strong vs. Infantry.
-      Weak vs. Tanks.
+      Strong vs Infantry.
+      Weak vs Tanks.
    .encyclopedia = 
     The Quad chasis provies light vehicles with more durability than the others, although they are slower. This variant used by House Harkonnen and House Ordos is equipped with heavy machine guns, effective against infantry and lightly armored vehicles.
     
@@ -696,8 +696,8 @@ actor-trike-rocket =
    .name = Rocket Trike
    .description = 
     Fast scout vehicle armed with rockets.
-      Strong vs. Vehicles.
-      Weak vs. Infantry.
+      Strong vs Vehicles.
+      Weak vs Infantry.
    .encyclopedia = 
     The Trike chasis provies a balanced amount of armor and mobility to light vehicles. This variant used by House Harkonnen and the Fremen is equipped with armor-piercing rockets, effective against vehicles and aircraft.
     
@@ -707,8 +707,8 @@ actor-raider-rocket =
    .name = Rocket Raider
    .description = 
     Fast scout vehicle armed with rockets.
-      Strong vs. Vehicles.
-      Weak vs. Infantry.
+      Strong vs Vehicles.
+      Weak vs Infantry.
    .encyclopedia = 
     The Raider chasis provies light vehicles great mobility, although they are behind in armor department. This variant used by House Ordos, the Ixians and the Smugglers is equipped with armor-piercing rockets, effective against vehicles and aircraft.
     
@@ -718,8 +718,8 @@ actor-quad-rocket =
    .name = Rocket Quad
    .description = 
     Fast scout vehicle armed with rockets.
-      Strong vs. Vehicles.
-      Weak vs. Infantry.
+      Strong vs Vehicles.
+      Weak vs Infantry.
    .encyclopedia = 
     The Quad chasis provies light vehicles with more durability than the others, although they are slower. This variant used by House Atreides, House Corrino and the Mercenaries is equipped with armor-piercing rockets, effective against vehicles and aircraft.
     
@@ -729,8 +729,8 @@ actor-stealth-raider =
    .name = Stealth Rocket Raider
    .description = 
     Invisible scout vehicle armed with rockets.
-      Strong vs. Vehicles.
-      Weak vs. Infantry.
+      Strong vs Vehicles.
+      Weak vs Infantry.
    .encyclopedia = 
     The Stealth Raider is an improved version of the Rocket Raider that is invisible to the enemy unless they are engaged in combat. This variant of the vehicle is only used by the House Ordos. Their weapons are the same with the non-Stealth variant, armor-piercing rockets that are effective against vehicles and aircraft.
     
@@ -753,8 +753,8 @@ actor-combat-tank-a =
    .name = Atreides Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Has longer range than its counterparts.
    .encyclopedia = 
@@ -766,8 +766,8 @@ actor-combat-tank-h =
    .name = Harkonnen Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Has better armor than its counterparts.
    .encyclopedia = 
@@ -779,8 +779,8 @@ actor-combat-tank-o =
    .name = Ordos Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Moves quicker than its counterparts.
    .encyclopedia = 
@@ -792,8 +792,8 @@ actor-combat-tank-m =
    .name = Mercenary Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Fires quicker than its counterparts.
    .encyclopedia = 
@@ -805,8 +805,8 @@ actor-combat-tank-s =
    .name = Smuggler Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Can be built quicker than its counterparts.
    .encyclopedia = 
@@ -818,8 +818,8 @@ actor-combat-tank-f =
    .name = Fremen Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Costs less than its counterparts.
    .encyclopedia = 
@@ -831,8 +831,8 @@ actor-combat-tank-c =
    .name = Imperial Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Damages more than its counterparts.
    .encyclopedia = 
@@ -844,8 +844,8 @@ actor-combat-tank-i =
    .name = Ixian Combat Tank
    .description = 
     Main Battle Tank.
-      Strong vs. Tanks.
-      Weak vs. Infantry.
+      Strong vs Tanks.
+      Weak vs Infantry.
     
     Can be repaired with repair tool like a structure.
    .encyclopedia = 
@@ -916,8 +916,8 @@ actor-ifv =
    .description = 
     Multi-Purpose Vehicle.
     Without passenger:
-      Strong vs. Vehicles.
-      Weak vs. Infantry.
+      Strong vs Vehicles.
+      Weak vs Infantry.
     Special Ability: Armament depends on passenger.
    .encyclopedia = 
     The Infantry Fighting Vehicle is a tank capable of changing its armament depending on the passenger it is carrying. Without any passenger, it has a canon, slightly larger than the ones from Combat Tanks.

@@ -34,13 +34,19 @@ wall:
 	ProductionCostMultiplier:
 		Multiplier: 0
 
-nsfremen:
-	Buildable:
-		Prerequisites: ~barracks.fremen
-
 ^Vehicle:
 	ProductionCostMultiplier:
 		Multiplier: 0
+	WithDecoration@CARRYALL:
+		RequiresSelection: true
+
+^Plane:
+	ProductionCostMultiplier:
+		Multiplier: 0
+
+nsfremen:
+	Buildable:
+		Prerequisites: ~barracks.fremen
 
 stealth_tank:
 	Cloak:
