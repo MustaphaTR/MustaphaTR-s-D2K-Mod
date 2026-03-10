@@ -20,6 +20,7 @@ checkbox-redeployable-mcvs =
 options-starting-units =
     .mcv-only = MCV Only
     .conyard-only = Construction Yard Only
+    .carryall = MCV and Carryall
     .light-support = Light Support
     .medium-support = Medium Support
     .heavy-support = Heavy Support

@@ -40,7 +40,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 
 		[Desc("Conditions to grant when infected by specified actors.",
 			"A dictionary of [actor id]: [condition].")]
-		public readonly Dictionary<string, string> InfectedByConditions = new();
+		public readonly Dictionary<string, string> InfectedByConditions = [];
 
 		[GrantedConditionReference]
 		public IEnumerable<string> LinterConditions { get { return InfectedByConditions.Values; } }
@@ -55,7 +55,7 @@ namespace OpenRA.Mods.Mtrsd2k.Traits
 		public Tuple<Actor, AttackInfect, AttackInfectInfo> Infector;
 		public int[] FirepowerMultipliers = Array.Empty<int>();
 
-		[Sync]
+		[VerifySync]
 		public int Ticks;
 
 		int beingInfectedToken = Actor.InvalidConditionToken;

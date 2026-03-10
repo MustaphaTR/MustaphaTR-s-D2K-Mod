@@ -17,6 +17,9 @@ Player:
 	GrantConditionOnBotOwner@gladius:
 		Condition: enable-gladius-ai
 		Bots: gladius
+	ProvidesPrerequisite@autoConcreteForBots:
+		Prerequisite: global-auto-concrete
+		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 	SupportPowerBotModule:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 		Decisions:
@@ -80,6 +83,12 @@ Player:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 		HarvesterTypes: harvester, harvester.smuggler
 		RefineryTypes: refinery, refinery.smuggler
+	ResourceMapBotModule:
+		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
+		ValuableResourceTypes: spice
+		ResourceCreatorTypes: spicebloom.spawnpoint, spicebloom
+		HarvesterTypes: harvester, harvester.smuggler
+		EnemyBaseBuildingTypes: construction_yard, construction_yard.no_concrete, refinery, refinery.smuggler, barracks, wind_trap, light_factory, heavy_factory, outpost, starport, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
 	BaseBuilderBotModule@omnius:
 		RequiresCondition: enable-omnius-ai
 		BuildingQueues: Building, Defense, Upgrade
@@ -88,12 +97,13 @@ Player:
 		ExcessPowerIncrement: 50
 		ExcessPowerIncreaseThreshold: 4
 		MaxBaseRadius: 40
-		ConstructionYardTypes: construction_yard
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		RefineryTypes: refinery, refinery.smuggler
 		PowerTypes: wind_trap
-		VehiclesFactoryTypes: light_factory, heavy_factory, starport
 		ProductionTypes: light_factory, heavy_factory, barracks, starport
 		SiloTypes: silo, silo.smuggler
+		DefenseTypes: machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
+		SellRefineryInterval: -1
 		BuildingLimits:
 			barracks: 1
 			refinery: 4
@@ -141,7 +151,6 @@ Player:
 			upgrade.hightech: 1
 		BuildingDelays:
 			upgrade.conyard: 3750
-		DefenseTypes: machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
 	BaseBuilderBotModule@vidious:
 		RequiresCondition: enable-vidious-ai
 		BuildingQueues: Building, Defense, Upgrade
@@ -150,12 +159,13 @@ Player:
 		ExcessPowerIncrement: 50
 		ExcessPowerIncreaseThreshold: 4
 		MaxBaseRadius: 40
-		ConstructionYardTypes: construction_yard
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		RefineryTypes: refinery, refinery.smuggler
 		PowerTypes: wind_trap
-		VehiclesFactoryTypes: light_factory, heavy_factory, starport
 		ProductionTypes: light_factory, heavy_factory, barracks, starport
 		SiloTypes: silo, silo.smuggler
+		DefenseTypes: machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
+		SellRefineryInterval: -1
 		BuildingLimits:
 			barracks: 1
 			refinery: 4
@@ -203,7 +213,6 @@ Player:
 			upgrade.hightech: 1
 		BuildingDelays:
 			upgrade.conyard: 3750
-		DefenseTypes: machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
 	BaseBuilderBotModule@gladius:
 		RequiresCondition: enable-gladius-ai
 		BuildingQueues: Building, Defense, Upgrade
@@ -212,12 +221,13 @@ Player:
 		ExcessPowerIncrement: 50
 		ExcessPowerIncreaseThreshold: 4
 		MaxBaseRadius: 40
-		ConstructionYardTypes: construction_yard
+		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
 		RefineryTypes: refinery, refinery.smuggler
 		PowerTypes: wind_trap
-		VehiclesFactoryTypes: light_factory, heavy_factory, starport
 		ProductionTypes: light_factory, heavy_factory, barracks, starport
 		SiloTypes: silo, silo.smuggler
+		DefenseTypes: machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
+		SellRefineryInterval: -1
 		BuildingLimits:
 			barracks: 1
 			refinery: 4
@@ -264,7 +274,6 @@ Player:
 			upgrade.hightech: 1
 		BuildingDelays:
 			upgrade.conyard: 3750
-		DefenseTypes: machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret
 	BuildingRepairBotModule:
 		RequiresCondition: enable-omnius-ai || enable-vidious-ai || enable-gladius-ai
 	SquadManagerBotModule@omnius:
@@ -273,7 +282,7 @@ Player:
 		MaxBaseRadius: 40
 		ExcludeFromSquadsTypes: harvester, harvester.starport, harvester.smuggler, harvester.smuggler.starport, mcv, mcv.no_concrete, mcv.starport, carryall, carryall.starport, carryall.smuggler, carryall.smuggler.starport, carryall.reinforce, carryall.reinforce.smuggler
 		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
-		IgnoredEnemyTargetTypes: Creep
+		IgnoredEnemyTargetTypes: Creep, Air, Cliff
 		AirUnitsTypes: rocketeer, ornithopter, ornithopter.controllable, swarmer, phoenix, ornithopter.controllable.starport, swarmer.starport, phoenix.starport
 		ProtectionTypes: harvester, harvester.smuggler, mcv, mcv.no_concrete, construction_yard, construction_yard.no_concrete, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
 	UnitBuilderBotModule@omnius:
@@ -349,7 +358,7 @@ Player:
 		MaxBaseRadius: 40
 		ExcludeFromSquadsTypes: harvester, harvester.starport, harvester.smuggler, harvester.smuggler.starport, mcv, mcv.no_concrete, mcv.starport, carryall, carryall.starport, carryall.smuggler, carryall.smuggler.starport, carryall.reinforce, carryall.reinforce.smuggler
 		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
-		IgnoredEnemyTargetTypes: Creep
+		IgnoredEnemyTargetTypes: Creep, Air, Cliff
 		AirUnitsTypes: rocketeer, ornithopter, ornithopter.controllable, swarmer, phoenix, ornithopter.controllable.starport, swarmer.starport, phoenix.starport
 		ProtectionTypes: harvester, harvester.smuggler, mcv, mcv.no_concrete, construction_yard, construction_yard.no_concrete, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
 	UnitBuilderBotModule@vidious:
@@ -420,7 +429,7 @@ Player:
 		MaxBaseRadius: 40
 		ExcludeFromSquadsTypes: harvester, harvester.starport, harvester.smuggler, harvester.smuggler.starport, mcv, mcv.no_concrete, mcv.starport, carryall, carryall.starport, carryall.smuggler, carryall.smuggler.starport, carryall.reinforce, carryall.reinforce.smuggler
 		ConstructionYardTypes: construction_yard, construction_yard.no_concrete
-		IgnoredEnemyTargetTypes: Creep
+		IgnoredEnemyTargetTypes: Creep, Air, Cliff
 		AirUnitsTypes: rocketeer, ornithopter, ornithopter.controllable, swarmer, phoenix, ornithopter.controllable.starport, swarmer.starport, phoenix.starport
 		ProtectionTypes: harvester, harvester.smuggler, mcv, mcv.no_concrete, construction_yard, construction_yard.no_concrete, wind_trap, barracks, refinery, refinery.smuggler, outpost, light_factory, heavy_factory, high_tech_factory, starport, repair_pad, repair_pad.ixian, research_centre, palace, conyard.atreides, conyard.fremen, conyard.ixian, conyard.harkonnen, conyard.corrino, conyard.ordos, conyard.smuggler, conyard.mercenary, concretea, concreteb, silo, silo.smuggler, mine_ap, mine_at, machine_gun_tower, flame_tower, artillery_platform, medium_gun_turret, large_gun_turret, harvester.starport, harvester.smuggler.starport, mcv.starport, sietch
 	UnitBuilderBotModule@gladius:

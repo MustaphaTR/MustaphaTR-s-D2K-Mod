@@ -1018,9 +1018,7 @@ starport:
 	Exit@2:
 		SpawnOffset: 0,-480,0
 		ExitCell: 0,2
-	ProductionAirdrop:
-		WaitTickBeforeProduce: 10
-		WaitTickAfterProduce: 15
+	ProductionBulkAirdrop:
 		LandOffset: 0, -256, 0
 		Produces: Starport
 		ActorType: frigate
@@ -1742,7 +1740,6 @@ conyard.mercenary:
 		OverrideActor: construction_yard
 
 light_or_heavy:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-light-or-heavy.name
@@ -1750,7 +1747,6 @@ light_or_heavy:
 		Description: actor-light-or-heavy.description
 
 hi_tech_or_ix:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-hi-tech-or-ix.name
@@ -1758,7 +1754,6 @@ hi_tech_or_ix:
 		Description: actor-hi-tech-or-ix.description
 
 palace.corrino:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-palace-corrino.name
