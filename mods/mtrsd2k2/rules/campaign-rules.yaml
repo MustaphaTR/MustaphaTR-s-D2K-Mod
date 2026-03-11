@@ -23,6 +23,12 @@ Player:
 	ModularBot@CampaignAI:
 		Name: bot-campaign-ai.name
 		Type: campaign
+	GrantConditionOnBotOwner@campaign:
+		Condition: campaign-ai
+		Bots: campaign
+	ProvidesPrerequisite@autoConcreteForBots:
+		Prerequisite: global-auto-concrete
+		RequiresCondition: campaign-ai
 
 World:
 	-CrateSpawner:
