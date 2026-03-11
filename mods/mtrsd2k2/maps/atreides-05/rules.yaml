@@ -1,12 +1,71 @@
 Player:
 	PlayerResources:
 		DefaultCash: 7000
+	ExternalCondition@AI:
+		Condition: base-rebuilder
+	ExternalCondition@AIDefense:
+		Condition: defense-rebuilder
+	BaseBuilderBotModule@campaign:
+		RequiresCondition: base-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 6
+			silo: 4
+		BuildingFractions:
+			wind_trap: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+	BaseBuilderBotModule@defense:
+		RequiresCondition: defense-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory
+		SiloTypes: silo
+		DefenseTypes: flame_tower, medium_gun_turret
+		SellRefineryInterval: -1
+		BuildingLimits:
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 6
+			silo: 4
+			flame_tower: 1
+			medium_gun_turret: 7
+		BuildingFractions:
+			wind_trap: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			flame_tower: 1
+			medium_gun_turret: 1
 
 World:
 	LuaScript:
 		Scripts: campaign.lua, utils.lua, atreides05.lua, atreides05-AI.lua
 	MissionData:
-		Briefing: According to our spies, the Fremen are being held at the far Northwest corner of Sietch Tabr. Push your way through the Harkonnen ranks to rescue the hostages.\n\nScout the terrain before you launch the main assault. Our Engineers must reach the Barracks and capture it intact. The rest of the base can be razed to the ground.\n\nAdditionally, there are rumors of an illegal Smuggling operation in the area. A large shipment of contraband is expected at the Smuggler's Starport. If you can capture the Starport before the contraband arrives, you will be able to confiscate it for the Atreides war effort.\n\nBe warned, the Smugglers have Mercenary allies who may assist them if you interfere.\n\nGood luck.\n
+		Briefing: briefing
 		BriefingVideo: A_BR05_E.VQA
 	MapOptions:
 		TechLevel: 4

@@ -378,15 +378,6 @@ Actors:
 	Actor112: wall
 		Location: 17,36
 		Owner: Harkonnen
-	Actor113: quad.mg
-		Location: 37,39
-		Owner: Harkonnen
-	Actor114: quad.mg
-		Location: 39,39
-		Owner: Harkonnen
-	Actor115: quad.mg
-		Location: 41,39
-		Owner: Harkonnen
 	Actor116: spicebloom.spawnpoint
 		Location: 7,40
 		Owner: Neutral
@@ -395,9 +386,6 @@ Actors:
 		Owner: Harkonnen
 	Actor118: wall
 		Location: 38,40
-		Owner: Harkonnen
-	Actor119: light_inf
-		Location: 42,40
 		Owner: Harkonnen
 	Actor120: wall
 		Location: 37,41
@@ -543,7 +531,25 @@ Actors:
 	Actor168: mine_ap
 		Owner: Smugglers
 		Location: 58,32
+	HPatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 13,42
+	HPatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 47,40
+	HPatrol1: quad.mg
+		Location: 37,39
+		Owner: Harkonnen
+	HPatrol2: quad.mg
+		Location: 39,39
+		Owner: Harkonnen
+	HPatrol3: quad.mg
+		Location: 41,39
+		Owner: Harkonnen
+	HPatrol4: light_inf
+		Location: 42,40
+		Owner: Harkonnen
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

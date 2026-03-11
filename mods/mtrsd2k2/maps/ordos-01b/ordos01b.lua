@@ -118,11 +118,8 @@ WorldLoaded = function()
 	end
 
 	Trigger.OnRemovedFromWorld(OrdosConyard, function()
-
 		-- Mission already failed, no need to check the other conditions as well
-		if checkResourceCapacity() then
-			return
-		end
+		if checkResourceCapacity() then return end
 
 		local refs = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "refinery" and actor.Owner == Ordos end)
 

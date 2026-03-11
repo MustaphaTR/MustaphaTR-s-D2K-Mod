@@ -419,4 +419,4 @@ Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml
 
 Sequences: sequences.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

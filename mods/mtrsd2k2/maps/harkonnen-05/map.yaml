@@ -516,7 +516,13 @@ Actors:
 		Owner: Ordos Main Base
 		Location: 64,11
 		TurretFacing: 258
+	OrdosPatrol1: waypoint
+		Owner: Neutral
+		Location: 33,19
+	OrdosPatrol2: waypoint
+		Owner: Neutral
+		Location: 37,41
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

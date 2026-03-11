@@ -144,8 +144,8 @@ AtreidesPath = { AtreidesEntry.Location, AtreidesRally.Location }
 ContrabandTimes =
 {
 	easy = DateTime.Minutes(10),
-	normal = DateTime.Minutes(5),
-	hard = DateTime.Minutes(2) + DateTime.Seconds(30)
+	normal = DateTime.Minutes(9),
+	hard = DateTime.Minutes(8)
 }
 
 Wave = 0
@@ -400,7 +400,7 @@ WorldLoaded = function()
 		if not Warned and a.Owner == Atreides and a.Type ~= "carryall" then
 			Warned = true
 			Trigger.RemoveFootprintTrigger(id)
-			Media.DisplayMessage(UserInterface.GetFluentMessage("stay-away-from-starport"), UserInterface.GetFluentMessage("smuggler-leader"))
+			Media.DisplayMessage(UserInterface.GetFluentMessage("stay-away-from-starport"), UserInterface.GetFluentMessage("smuggler-leader"), HSLColor.FromHex("9C8408"))
 		end
 	end)
 
@@ -408,7 +408,7 @@ WorldLoaded = function()
 		if not Paid and a.Owner == Atreides and a.Type ~= "carryall" then
 			Paid = true
 			Trigger.RemoveFootprintTrigger(id)
-			Media.DisplayMessage(UserInterface.GetFluentMessage("were-warned-will-pay"), UserInterface.GetFluentMessage("smuggler-leader"))
+			Media.DisplayMessage(UserInterface.GetFluentMessage("were-warned-will-pay"), UserInterface.GetFluentMessage("smuggler-leader"), HSLColor.FromHex("9C8408"))
 			Utils.Do(Smuggler.GetGroundAttackers(), function(unit)
 				unit.AttackMove(SmugglerWaypoint2.Location)
 			end)

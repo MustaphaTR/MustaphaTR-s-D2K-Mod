@@ -1,12 +1,75 @@
 Player:
 	PlayerResources:
 		DefaultCash: 5000
+	ExternalCondition@AI:
+		Condition: base-rebuilder
+	ExternalCondition@AIDefense:
+		Condition: defense-rebuilder
+	BaseBuilderBotModule@AIMainBase:
+		RequiresCondition: base-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 7
+			silo: 1
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+	BaseBuilderBotModule@AIMainBaseWithDefense:
+		RequiresCondition: defense-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks
+		SiloTypes: silo
+		DefenseTypes: machine_gun_tower, medium_gun_turret
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 7
+			silo: 1
+			machine_gun_tower: 2
+			medium_gun_turret: 2
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			machine_gun_tower: 1
+			medium_gun_turret: 1
 
 World:
 	LuaScript:
 		Scripts: campaign.lua, utils.lua, harkonnen04.lua, harkonnen04-AI.lua
 	MissionData:
-		Briefing: The native Fremen must be dealt with. Assemble a strike force to lead a sweep through the mountains. Seek out the Fremen hold, and destroy it. If any House responds, destroy it.\n\nTanks have been deployed to grind the Fremen beneath their treads. Demonstrate the power of House Harkonnen.
+		Briefing: briefing
 		BriefingVideo: H_BR04_E.VQA
 	MapOptions:
 		TechLevel: 3

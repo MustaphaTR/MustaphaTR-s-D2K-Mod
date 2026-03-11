@@ -11,6 +11,8 @@ AtreidesMainBase = { AConYard1, AOutpost1, ARefinery1, ARefinery2, AHeavyFactory
 AtreidesSmallBase = { AOutpost2, ARefinery3, ABarracks, AHeavyFactory2, AMGun4, AGunt7, AGunt8, APower23, APower24, APower25, APower26, ASilo4, ASilo5, ASilo6, ASilo7 }
 CorrinoBase = { CBarracks, COutpost, CPower1, CPower2, CPower3, CRock1, CRock2 }
 
+EarlyGameStage = DateTime.Minutes(7)
+
 AtreidesReinforcements =
 {
 	easy = { "sonic_tank" },
@@ -41,16 +43,16 @@ CorrinoReinforcements =
 
 EnemyAttackDelay =
 {
-	easy = DateTime.Minutes(3) + DateTime.Seconds(30),
-	normal = DateTime.Minutes(2) + DateTime.Seconds(30),
-	hard = DateTime.Minutes(1) + DateTime.Seconds(30)
+	easy = 7000,
+	normal = 6500,
+	hard = 6000
 }
 
 CorrinoInitialAttackDelay =
 {
-	easy = DateTime.Seconds(45),
-	normal = DateTime.Seconds(30),
-	hard = DateTime.Seconds(15)
+	easy = DateTime.Minutes(4),
+	normal = DateTime.Minutes(3),
+	hard = DateTime.Minutes(2)
 }
 
 InitialAtreidesReinforcements =
@@ -113,7 +115,7 @@ HarkonnenReinforcements =
 	hard =
 	{
 		{ "trooper", "trooper", "light_inf", "light_inf", "light_inf" },
-		{ "trike.rocket", "quad.mg", "quad.mg", "combat_tank_h", "combat_tank_h" }
+		{ "trike.rocket", "quad.mg", "siege_tank", "combat_tank_h" }
 	},
 }
 
@@ -147,8 +149,32 @@ SendEnemyReinforcements = function(player, delay, path, unitTypes, customConditi
 	end)
 end
 
-SendAirStrike = function()
-	if HiTechIsDead then
+AirStrikeTimer = 7500
+AirStrikeChargeTime = 7500
+AirstrikeLogic = function(airstrikeProvider)
+	if airstrikeProvider.IsDead then
+		return
+	end
+
+	if DateTime.GameTime <= AirStrikeTimer then
+		Trigger.AfterDelay(AirStrikeTimer - DateTime.GameTime + 1, function()
+			AirstrikeLogic(airstrikeProvider)
+		end)
+		return
+	end
+
+	-- randomly choose if wait again or strike. During waiting Airstrike can still be used by DefensiveAirStrike
+	if Utils.RandomInteger(1, 100) < 30 then
+		Trigger.AfterDelay(1000, function() AirstrikeLogic(airstrikeProvider)end)
+	else
+		AirStrikeVSBuilding(airstrikeProvider)
+		Trigger.AfterDelay(7500, function() AirstrikeLogic(airstrikeProvider) end)
+		IsAirstrikeReady = false
+	end
+end
+
+AirStrikeVSBuilding = function(airstrikeProvider)
+	if airstrikeProvider.IsDead or  DateTime.GameTime < AirStrikeTimer  then
 		return
 	end
 
@@ -166,10 +192,32 @@ SendAirStrike = function()
 	end)
 
 	if #targets > 0 then
-		AHiTechFactory.TargetAirstrike(Utils.Random(targets).CenterPosition)
+		airstrikeProvider.TargetAirstrike(Utils.Random(targets).CenterPosition)
+		AirStrikeTimer = DateTime.GameTime + AirStrikeChargeTime
 	end
+end
 
-	Trigger.AfterDelay(DateTime.Minutes(5), SendAirStrike)
+DefensiveAirStrike = function(airstrikeProvider, possibleTargets)
+	if airstrikeProvider.IsDead or DateTime.GameTime <= AirStrikeTimer then return end
+	local bestValue = {}
+	local bestIndex = 1
+	for i = 1, #possibleTargets, 1 do
+		local ActorsInCircle = Map.ActorsInCircle(possibleTargets[i].CenterPosition, WDist.FromCells(4), function(a)
+			return
+				a.Owner == Harkonnen
+				and not a.IsDead
+				and a.HasProperty("Attack")
+		end)
+		bestValue[i] = 0
+		Utils.Do(ActorsInCircle, function(a)
+			bestValue[i] = bestValue[i] + Actor.Cost(a.Type)
+		end)
+		if bestValue[i] > bestValue[bestIndex] then
+			bestIndex = i
+		end
+	end
+	airstrikeProvider.TargetAirstrike(possibleTargets[bestIndex].CenterPosition)
+	AirStrikeTimer =  DateTime.GameTime + AirStrikeChargeTime
 end
 
 Tick = function()
@@ -198,23 +246,45 @@ Tick = function()
 		HiTechIsDead = true
 	end
 
-	if DateTime.GameTime % DateTime.Seconds(10) == 0 and LastHarvesterEaten[OrdosMain] then
-		local units = OrdosMain.GetActorsByType("harvester")
+	if DateTime.GameTime % DateTime.Seconds(10) == 0 and LastHarvesterEaten[AtreidesMain] then
+		local units = AtreidesMain.GetActorsByType("harvester")
 
 		if #units > 0 then
-			LastHarvesterEaten[OrdosMain] = false
-			ProtectHarvester(units[1], OrdosMain, AttackGroupSize[Difficulty])
+			LastHarvesterEaten[AtreidesMain] = false
+			ProtectHarvester(units[1], AtreidesMain, AttackGroupSize[Difficulty])
 		end
 	end
 
-	if DateTime.GameTime % DateTime.Seconds(10) == 0 and LastHarvesterEaten[OrdosSmall] then
-		local units = OrdosSmall.GetActorsByType("harvester")
+	if DateTime.GameTime % DateTime.Seconds(10) == 0 and LastHarvesterEaten[AtreidesSmall] then
+		local units = AtreidesSmall.GetActorsByType("harvester")
 
 		if #units > 0 then
-			LastHarvesterEaten[OrdosSmall] = false
-			ProtectHarvester(units[1], OrdosSmall, AttackGroupSize[Difficulty])
+			LastHarvesterEaten[AtreidesSmall] = false
+			ProtectHarvester(units[1], AtreidesSmall, AttackGroupSize[Difficulty])
 		end
 	end
+
+	if IdlingUnits[AtreidesMain] == nil and IdlingUnits[AtreidesSmall] == nil then return end
+end
+
+EmergencyBehaviour = function(player, target)
+	if HiTechIsDead or not IsAirstrikeReady or player == Corrino then return end
+
+	local targets = {}
+	if player == AtreidesMain then
+		targets = Map.ActorsInBox(Map.CenterOfCell(CPos.New(73,9)), Map.CenterOfCell(CPos.New(88,26)))
+	else
+		targets = Map.ActorsInBox(Map.CenterOfCell(CPos.New(5,18)), Map.CenterOfCell(CPos.New(16,32)))
+	end
+
+	targets = Utils.Where(targets, function(a)
+		return a.Owner == Harkonnen
+			and not a.IsDead
+			and a.HasProperty("Attack")
+	end)
+
+	if targets[1] == nil  then return end
+	DefensiveAirStrike(AHiTechFactory, targets)
 end
 
 WorldLoaded = function()
@@ -222,6 +292,10 @@ WorldLoaded = function()
 	AtreidesSmall = Player.GetPlayer("Atreides Small Base")
 	Corrino = Player.GetPlayer("Corrino")
 	Harkonnen = Player.GetPlayer("Harkonnen")
+
+	AtreidesMain.Cash = 5000
+	AtreidesSmall.Cash = 5000
+	Corrino.Cash = 5000
 
 	InitObjectives(Harkonnen)
 	CaptureAtreidesConYard = AddPrimaryObjective(Harkonnen, "capture-atreides-construction-yard-south")
@@ -236,7 +310,7 @@ WorldLoaded = function()
 	Camera.Position = HEngineer.CenterPosition
 	AtreidesAttackLocation = AConYard2.Location
 
-	Trigger.AfterDelay(DateTime.Minutes(5), SendAirStrike)
+	Trigger.AfterDelay(EarlyGameStage,function() AirstrikeLogic(AHiTechFactory) end)
 
 	Trigger.OnCapture(AConYard2, function()
 		Harkonnen.MarkCompletedObjective(CaptureAtreidesConYard)
@@ -276,4 +350,8 @@ WorldLoaded = function()
 
 	SendHarkonnenReinforcements(1)
 	SendHarkonnenReinforcements(2)
+
+	Trigger.AfterDelay(7000, function()
+		SendHarkonnenReinforcements(1)
+	end)
 end

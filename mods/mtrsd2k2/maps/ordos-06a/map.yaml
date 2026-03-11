@@ -39,6 +39,7 @@ Players:
 		Enemies: Atreides, Harkonnen, Creeps
 	PlayerReference@Atreides:
 		Name: Atreides
+		Bot: campaign
 		LockFaction: True
 		Faction: atreides
 		LockColor: True
@@ -47,6 +48,7 @@ Players:
 		Enemies: Ordos, Creeps
 	PlayerReference@Harkonnen:
 		Name: Harkonnen
+		Bot: campaign
 		LockFaction: True
 		Faction: harkonnen
 		LockColor: True
@@ -582,7 +584,19 @@ Actors:
 	OPower3: wind_trap
 		Owner: Ordos
 		Location: 79,3
+	APatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 46,7
+	APatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 10,45
+	HPatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 40,49
+	HPatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 62,76
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

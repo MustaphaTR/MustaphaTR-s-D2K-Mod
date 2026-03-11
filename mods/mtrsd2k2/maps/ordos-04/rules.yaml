@@ -1,12 +1,71 @@
 Player:
 	PlayerResources:
 		DefaultCash: 5000
+	ExternalCondition@AIMain:
+		Condition: base-rebuilder
+	ExternalCondition@AIMainDefense:
+		Condition: defense-rebuilder
+	BaseBuilderBotModule@Harkonnen:
+		RequiresCondition: base-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 4
+			silo: 1
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			light_factory: 1
+			heavy_factory: 1
+	BaseBuilderBotModule@HarkonnenDefense:
+		RequiresCondition: defense-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks
+		SiloTypes: silo
+		DefenseTypes: medium_gun_turret
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 4
+			silo: 1
+			flame_tower: 1
+			medium_gun_turret: 3
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			light_factory: 1
+			heavy_factory: 1
+			flame_tower: 1
+			medium_gun_turret: 1
 
 World:
 	LuaScript:
 		Scripts: campaign.lua, utils.lua, ordos04.lua, ordos04-AI.lua
 	MissionData:
-		Briefing: The Smugglers at Sietch Tabr must be neutralized. Capture the Outpost where their families have taken shelter as insurance. The children's lives will assure the loyalties of their fathers. Use an Engineer to enter and capture the building.\n\nThe Smugglers' new partners, the Harkonnen, may attempt to protect them. Harkonnen firepower is great, but we have recently acquired tanks that may counter this.\n\nEnsure our investment is used wisely.\n
+		Briefing: briefing
 		BriefingVideo: O_BR04_E.VQA
 	MapOptions:
 		TechLevel: 3

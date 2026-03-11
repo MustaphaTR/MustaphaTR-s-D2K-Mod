@@ -1,12 +1,174 @@
 Player:
 	PlayerResources:
 		DefaultCash: 7000
+	ExternalCondition@AIOrdos:
+		Condition: base-rebuilder
+	ExternalCondition@AIOrdosDefense:
+		Condition: defense-rebuilder
+	ExternalCondition@AIAtreides:
+		Condition: base-rebuilder2
+	ExternalCondition@AIAtreidesDefense:
+		Condition: defense-rebuilder2
+	BaseBuilderBotModule@Ordos:
+		RequiresCondition: base-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks, starport
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 2
+			refinery: 2
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			research_centre: 1
+			palace: 1
+			starport: 1
+			wind_trap: 13
+			silo: 3
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 2
+			high_tech_factory: 1
+			repair_pad: 1
+			research_centre: 1
+			palace: 1
+			starport: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+	BaseBuilderBotModule@OrdosDefnse:
+		RequiresCondition: defense-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks, starport
+		SiloTypes: silo
+		DefenseTypes: artillery_platform, medium_gun_turret, large_gun_turret
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 2
+			refinery: 2
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 13
+			silo: 3
+			high_tech_factory: 1
+			repair_pad: 1
+			research_centre: 1
+			palace: 1
+			starport: 1
+			artillery_platform: 3
+			medium_gun_turret: 8
+			large_gun_turret: 4
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			research_centre: 1
+			palace: 1
+			starport: 1
+			artillery_platform: 1
+			medium_gun_turret: 1
+			large_gun_turret: 1
+	BaseBuilderBotModule@Atreides:
+		RequiresCondition: base-rebuilder2
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks, starport
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 2
+			refinery: 2
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			starport: 1
+			wind_trap: 9
+			silo: 1
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			starport: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+	BaseBuilderBotModule@AtreidesDefense:
+		RequiresCondition: defense-rebuilder2
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks, starport
+		SiloTypes: silo
+		DefenseTypes: machine_gun_turret, medium_gun_turret, large_gun_turret
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 2
+			refinery: 2
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			wind_trap: 9
+			silo: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			starport: 1
+			machine_gun_turret: 1
+			medium_gun_turret: 2
+			large_gun_turret: 2
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			starport: 1
+			machine_gun_turret: 1
+			medium_gun_turret: 1
+			large_gun_turret: 1
 
 World:
 	LuaScript:
 		Scripts: campaign.lua, utils.lua, harkonnen08.lua, harkonnen08-AI.lua
 	MissionData:
-		Briefing: The Ordos continue to grow in strength, thanks to their acquisition of new weaponry. The Ordos know that the wrath of the Harkonnen will soon fall upon them, and have allied with the Atreides.\n\nThis will not protect them from our Atomics. Eliminate any Atreides you encounter, but focus upon the Ordos as the main target. Smash their army, burn their structures and bring back the spoils to decorate the walls of the Palace! Capturing or destroying the Ordos Palace will show the Atreides the true might of House of Harkonnen and will throw the Ordos allegiance into disarray.\n\nOur scouts report a Mercenary leader inspecting a nearby Heavy Factory. If the Heavy Factory can be captured, the Mercenaries could be persuaded to fight for the Harkonnen. The mercenaries receive reinforcements via the Starport, so this must remain in their possession for them to be of any use.
+		Briefing: briefing
 		BriefingVideo: H_BR08_E.VQA
 	MapOptions:
 		TechLevel: 7

@@ -1,12 +1,39 @@
 Player:
 	PlayerResources:
 		DefaultCash: 5000
+	ExternalCondition@AI:
+		Condition: base-rebuilder
+	BaseBuilderBotModule@campaign:
+		RequiresCondition: base-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, barracks
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			wind_trap: 3
+			silo: 1
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
 
 World:
 	LuaScript:
 		Scripts: campaign.lua, utils.lua, harkonnen03a.lua, harkonnen03a-AI.lua
 	MissionData:
-		Briefing: Attack and destroy the Atreides base at Sietch Tabr. Strike hard and eliminate all resistance.\n\Rocket Trike vehicles will be made available for your attack. Upgrade your Light Factory to gain access to these vehicles.\n
+		Briefing: briefing
 		BriefingVideo: H_BR03_E.VQA
 	MapOptions:
 		TechLevel: 2

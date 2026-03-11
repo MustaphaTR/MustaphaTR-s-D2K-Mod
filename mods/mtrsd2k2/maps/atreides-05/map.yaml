@@ -381,7 +381,16 @@ Actors:
 	Actor104: wall
 		Owner: Harkonnen
 		Location: 30,19
+	HPatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 40,27
+	HPatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 21,38
+	HPatrolPoint3: waypoint
+		Owner: Neutral
+		Location: 24,60
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

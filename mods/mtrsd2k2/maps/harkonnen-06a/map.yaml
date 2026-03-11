@@ -563,18 +563,12 @@ Actors:
 	Actor158: light_inf
 		Location: 9,72
 		Owner: Harkonnen
-	Actor159: light_inf
-		Location: 77,72
-		Owner: Smugglers - Neutral
 	SSilo3: silo.smuggler
 		Location: 81,72
 		Owner: Smugglers - Neutral
 	Actor161: quad.mg
 		Location: 11,73
 		Owner: Harkonnen
-	Actor162: trooper
-		Location: 80,73
-		Owner: Smugglers - Neutral
 	Actor163: trooper
 		Location: 7,74
 		Owner: Harkonnen
@@ -587,15 +581,9 @@ Actors:
 	SRefinery: refinery.smuggler
 		Location: 78,74
 		Owner: Smugglers - Neutral
-	Actor167: light_inf
-		Location: 82,74
-		Owner: Smugglers - Neutral
 	Actor168: combat_tank_h
 		Location: 10,75
 		Owner: Harkonnen
-	Actor169: trooper
-		Location: 82,75
-		Owner: Smugglers - Neutral
 	Actor170: light_inf
 		Location: 15,76
 		Owner: Harkonnen
@@ -620,12 +608,6 @@ Actors:
 	Actor177: spicebloom.spawnpoint
 		Location: 72,77
 		Owner: Neutral
-	Actor178: light_inf
-		Location: 82,77
-		Owner: Smugglers - Neutral
-	Actor179: light_inf
-		Location: 83,77
-		Owner: Smugglers - Neutral
 	Actor180: light_inf
 		Location: 11,78
 		Owner: Harkonnen
@@ -734,7 +716,34 @@ Actors:
 		Owner: Ordos Small Base
 		Location: 7,35
 		TurretFacing: 512
+	OrdosRally11: waypoint
+		Owner: Neutral
+		Location: 51,66
+	OrdosRally12: waypoint
+		Owner: Neutral
+		Location: 79,40
+	OrdosRally13: waypoint
+		Owner: Neutral
+		Location: 19,16
+	Smuggler1: light_inf
+		Location: 77,72
+		Owner: Smugglers - Neutral
+	Smuggler2: trooper
+		Location: 80,73
+		Owner: Smugglers - Neutral
+	Smuggler3: light_inf
+		Location: 82,74
+		Owner: Smugglers - Neutral
+	Smuggler4: trooper
+		Location: 82,75
+		Owner: Smugglers - Neutral
+	Smuggler5: light_inf
+		Location: 82,77
+		Owner: Smugglers - Neutral
+	Smuggler6: light_inf
+		Location: 83,77
+		Owner: Smugglers - Neutral
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

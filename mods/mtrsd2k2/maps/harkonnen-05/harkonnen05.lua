@@ -9,7 +9,10 @@
 
 OrdosMainBase = { OConYard, OOutpost, ORefinery1, ORefinery2, OHeavyFactory, OLightFactory1, OHiTechFactory, OArty, OGunt1, OGunt2, OGunt3, OGunt4, OBarracks1, OBarracks2, OPower1, OPower2, OPower3, OPower4, OPower5, OPower6, OPower7, OPower8, OPower9 }
 OrdosSmallBase = { ORefinery3, OBarracks3, OLightFactory2, OGunt5, OGunt6, OPower10, OPower11, OPower12, OPower13, OSilo }
+ProductionBuildingsOrdosSmallBase = { ORefinery3, OBarracks3, OLightFactory2 }
 CorrinoBase = { CStarport, CPower1, CPower2 }
+
+SmugglerSquad = { Smuggler1, Smuggler2, Smuggler3 }
 
 BaseAreaTriggers =
 {
@@ -222,11 +225,25 @@ Tick = function()
 	end
 end
 
+ChangeOwner = function(old_owner, new_owner)
+	local units = old_owner.GetActors()
+	Utils.Do(units, function(unit)
+		if not unit.IsDead then
+			unit.Owner = new_owner
+		end
+	end)
+end
+
 WorldLoaded = function()
 	OrdosMain = Player.GetPlayer("Ordos Main Base")
 	OrdosSmall = Player.GetPlayer("Ordos Small Base")
 	Corrino = Player.GetPlayer("Corrino")
 	Harkonnen = Player.GetPlayer("Harkonnen")
+	SmugglerNeutral = Player.GetPlayer("Smugglers - Neutral")
+	SmugglerEnemy = Player.GetPlayer("Smugglers - Enemy")
+	Defending[OrdosMain] = {}
+	Defending[OrdosSmall] = {}
+	Defending[Corrino] = {}
 
 	InitObjectives(Harkonnen)
 	KillOrdos = AddPrimaryObjective(Harkonnen, "destroy-ordos")

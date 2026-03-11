@@ -1,12 +1,146 @@
 Player:
 	PlayerResources:
 		DefaultCash: 5000
+	ExternalCondition@AIMain:
+		Condition: base-rebuilder
+	ExternalCondition@AISmall:
+		Condition: base-rebuilder2
+	ExternalCondition@AIMainWithDefense:
+		Condition: defense-rebuilder
+	ExternalCondition@AISmallWithDefense:
+		Condition: defense-rebuilder2
+	BaseBuilderBotModule@MainBase:
+		RequiresCondition: base-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 2
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			wind_trap: 10
+			silo: 6
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+	BaseBuilderBotModule@MainBaseWithDefence:
+		RequiresCondition: defense-rebuilder
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, heavy_factory, barracks
+		SiloTypes: silo
+		DefenseTypes: medium_gun_turret, large_gun_turret
+		PlaceDefenseTowardsEnemyChance: 50
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 2
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			wind_trap: 10
+			silo: 6
+			artillery_platform: 3
+			medium_gun_turret: 5
+			large_gun_turret: 2
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			heavy_factory: 1
+			high_tech_factory: 1
+			repair_pad: 1
+			artillery_platform: 1
+			medium_gun_turret: 1
+			large_gun_turret: 1
+	BaseBuilderBotModule@SmallBase:
+		RequiresCondition: base-rebuilder2
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, barracks
+		SiloTypes: silo
+		SellRefineryInterval: -1
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+			wind_trap: 4
+			silo: 1
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			outpost: 1
+			light_factory: 1
+	BaseBuilderBotModule@SmallBasewithDefence:
+		RequiresCondition: defense-rebuilder2
+		BuildingQueues: Building, Defense, Upgrade
+		MinimumExcessPower: 0
+		MaximumExcessPower: 250
+		MaxBaseRadius: 40
+		ConstructionYardTypes: construction_yard
+		RefineryTypes: refinery
+		PowerTypes: wind_trap
+		ProductionTypes: light_factory, barracks
+		SiloTypes: silo
+		DefenseTypes: medium_gun_turret, large_gun_turret
+		SellRefineryInterval: -1
+		PlaceDefenseTowardsEnemyChance: 50
+		BuildingLimits:
+			barracks: 1
+			refinery: 1
+			light_factory: 1
+			wind_trap: 4
+			silo: 3
+			artillery_platform: 2
+			medium_gun_turret: 2
+			large_gun_turret: 2
+		BuildingFractions:
+			wind_trap: 1
+			barracks: 1
+			refinery: 1
+			light_factory: 1
+			artillery_platform: 1
+			medium_gun_turret: 1
+			large_gun_turret: 1
 
 World:
 	LuaScript:
 		Scripts: campaign.lua, utils.lua, harkonnen06b.lua, harkonnen06b-AI.lua
 	MissionData:
-		Briefing: The weak Ordos are no match for Harkonnen troops. However, smuggled Ixian technologies may upset this balance of power.\n\nThis cannot be allowed to happen. Establish a base on the plain, locate the Ordos Starport and destroy or capture it before the expensive shipments of Ixian weaponry begin to arrive. Time is short - the transports have already entered the system.
+		Briefing: briefing
 		BriefingVideo: H_BR06_E.VQA
 	MapOptions:
 		TechLevel: 5

@@ -129,7 +129,6 @@ Tick = function()
 
 	if DateTime.GameTime % DateTime.Seconds(10) == 0 and LastHarvesterEaten[Harkonnen] then
 		local units = Harkonnen.GetActorsByType("harvester")
-
 		if #units > 0 then
 			LastHarvesterEaten[Harkonnen] = false
 			ProtectHarvester(units[1], Harkonnen, AttackGroupSize[Difficulty])

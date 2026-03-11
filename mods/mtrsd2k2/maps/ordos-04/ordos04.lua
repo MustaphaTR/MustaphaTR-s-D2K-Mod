@@ -73,7 +73,6 @@ end
 CheckHarvester = function(house)
 	if DateTime.GameTime % DateTime.Seconds(10) == 0 and LastHarvesterEaten[house] then
 		local units = house.GetActorsByType("harvester")
-
 		if #units > 0 then
 			LastHarvesterEaten[house] = false
 			ProtectHarvester(units[1], house, AttackGroupSize[Difficulty])
@@ -157,5 +156,15 @@ WorldLoaded = function()
 
 	Trigger.AfterDelay(HarkonnenAttackDelay[Difficulty], function()
 		Media.DisplayMessage(UserInterface.GetFluentMessage("warning-large-force-approaching"), Mentat)
+	end)
+
+	Trigger.OnKilled(HGunTurret4, function()
+		if #IdlingUnits[Harkonnen] > 10 then
+			CheckArea(Harkonnen, HarkonnenRally1.Location, 10)
+		end
+	end)
+
+	Trigger.OnAnyKilled({HPatrol1, HPatrol2, HPatrol3, HPatrol4}, function()
+		CheckArea(Harkonnen, HPatrolPoint2.Location, 10)
 	end)
 end

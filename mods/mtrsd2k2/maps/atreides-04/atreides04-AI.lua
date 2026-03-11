@@ -14,7 +14,7 @@ AttackGroupSize =
 	hard = 10
 }
 
-AttackDelays =
+ProductionDelays =
 {
 	easy = { DateTime.Seconds(4), DateTime.Seconds(7) },
 	normal = { DateTime.Seconds(2), DateTime.Seconds(5) },
@@ -26,22 +26,28 @@ HarkonnenTankType = { "combat_tank_h" }
 
 -- Overwrite the template function because of the message
 SendAttack = function(owner, size)
-	if Attacking[owner] then
-		return
-	end
+	if Attacking[owner] then return end
+
 	Attacking[owner] = true
 	HoldProduction[owner] = true
 
 	local units = SetupAttackGroup(owner, size)
-	Utils.Do(units, IdleHunt)
+	Utils.Do(units, Trigger.ClearAll)
 
 	if #units > 0 then
 		Media.DisplayMessage(UserInterface.GetFluentMessage("harkonnen-units-approaching"), UserInterface.GetFluentMessage("fremen-leader"))
 	end
 
-	Trigger.OnAllRemovedFromWorld(units, function()
-		Attacking[owner] = false
-		HoldProduction[owner] = false
+	Trigger.AfterDelay(1, function()
+		Utils.Do(units, function(u)
+			u.Stop()
+			IdleHunt(u)
+		end)
+
+		Trigger.OnAllRemovedFromWorld(units, function()
+			Attacking[owner] = false
+			HoldProduction[owner] = false
+		end)
 	end)
 end
 
@@ -52,15 +58,21 @@ InitAIUnits = function()
 end
 
 ActivateAI = function()
+	Defending[Harkonnen] = {}
+	HarvesterCount[Harkonnen] = 2
+	AttackDelay[Harkonnen] = 9000 * DifficultyModifier[Difficulty]
+	TimeBetweenAttacks[Harkonnen] = 9000 * DifficultyModifier[Difficulty]
 	LastHarvesterEaten[Harkonnen] = true
 	InitAIUnits()
 	FremenProduction()
 
-	local delay = function() return Utils.RandomInteger(AttackDelays[Difficulty][1], AttackDelays[Difficulty][2] + 1) end
+	local delay = function() return Utils.RandomInteger(ProductionDelays[Difficulty][1], ProductionDelays[Difficulty][2] + 1) end
 	local infantryToBuild = function() return { Utils.Random(HarkonnenInfantryTypes) } end
 	local tanksToBuild = function() return HarkonnenTankType end
 	local attackThresholdSize = AttackGroupSize[Difficulty] * 2.5
 
 	ProduceUnits(Harkonnen, HarkonnenBarracks, delay, infantryToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
 	ProduceUnits(Harkonnen, HarkonnenHeavyFact, delay, tanksToBuild, AttackGroupSize[Difficulty], attackThresholdSize)
+
+	ActivateCrushLogic()
 end

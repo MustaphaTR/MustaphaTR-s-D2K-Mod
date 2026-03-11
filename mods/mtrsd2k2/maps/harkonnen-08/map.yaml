@@ -632,7 +632,7 @@ Actors:
 		Location: 18,59
 	SaboteurWaypoint5: waypoint
 		Owner: Neutral
-		Location: 31,91
+		Location: 31,81
 	SaboteurWaypoint6: waypoint
 		Owner: Neutral
 		Location: 64,91
@@ -667,7 +667,25 @@ Actors:
 	MercenaryAttackPoint: waypoint
 		Owner: Neutral
 		Location: 53,38
+	OrdosPatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 78,45
+	OrdosPatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 55,63
+	OrdosPatrolPoint3: waypoint
+		Owner: Neutral
+		Location: 30,54
+	OrdosPatrolPoint4: waypoint
+		Owner: Neutral
+		Location: 73,21
+	AtreidesPatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 14,65
+	AtreidesPatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 48,10
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

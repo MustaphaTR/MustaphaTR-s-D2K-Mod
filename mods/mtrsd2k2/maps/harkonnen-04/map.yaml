@@ -413,7 +413,43 @@ Actors:
 	FMGun2: machine_gun_tower
 		Owner: Fremen
 		Location: 21,82
+	APatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 56,67
+	APatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 34,43
+	APatrolPoint3: waypoint
+		Owner: Neutral
+		Location: 23,18
+	APatrolPoint4: waypoint
+		Owner: Neutral
+		Location: 60,17
+	FremenAmbuser1: fremen
+		Owner: Fremen
+		Location: 15,25
+		SubCell: 3
+		Facing: 384
+		Stance: ReturnFire
+	FremenAmbuser2: fremen
+		Owner: Fremen
+		Location: 20,25
+		SubCell: 3
+		Stance: ReturnFire
+		Facing: 384
+	FremenAmbuser3: fremen
+		Owner: Fremen
+		Location: 15,28
+		SubCell: 3
+		Stance: ReturnFire
+		Facing: 384
+	FremenAmbuser4: fremen
+		Owner: Fremen
+		Location: 15,29
+		SubCell: 3
+		Stance: ReturnFire
+		Facing: 384
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

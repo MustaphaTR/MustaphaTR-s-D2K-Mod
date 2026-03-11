@@ -577,7 +577,13 @@ Actors:
 	APower10: wind_trap
 		Owner: AtreidesMainBase
 		Location: 12,11
+	APatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 51,17
+	APatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 52,44
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl

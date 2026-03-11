@@ -109,6 +109,16 @@ CheckHarvester = function(house)
 end
 
 CachedResources = -1
+EmergencyBehaviour = function(player, target)
+	HoldProduction[player] = false
+	if Difficulty == "hard" then
+		player.Cash = player.Cash + 2000
+	end
+	if player == AtreidesSmall2 and #IdlingUnits[AtreidesMain] > 10 then
+		CheckArea(AtreidesMain, target, 10)
+	end
+end
+
 Tick = function()
 	if Ordos.Resources > SpiceToHarvest - 1 then
 		Ordos.MarkCompletedObjective(GatherSpice)

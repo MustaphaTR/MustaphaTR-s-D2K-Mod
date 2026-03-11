@@ -1009,7 +1009,34 @@ Actors:
 	AMGun: machine_gun_tower
 		Owner: Atreides Small Base
 		Location: 107,10
+	APatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 10,60
+	APatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 38,85
+	APatrolPoint3: waypoint
+		Owner: Neutral
+		Location: 75,73
+	APatrolPoint4: waypoint
+		Owner: Neutral
+		Location: 44,32
+	APatrolPoint5: waypoint
+		Owner: Neutral
+		Location: 99,33
+	APatrolPoint6: waypoint
+		Owner: Neutral
+		Location: 82,17
+	APatrolPoint7: waypoint
+		Owner: Neutral
+		Location: 65,30
+	CPatrolPoint1: waypoint
+		Owner: Neutral
+		Location: 49,13
+	CPatrolPoint2: waypoint
+		Owner: Neutral
+		Location: 15,47
 
 Rules: mtrsd2k2|rules/campaign-rules.yaml, mtrsd2k2|rules/campaign-tooltips.yaml, mtrsd2k2|rules/campaign-palettes.yaml, rules.yaml
 
-FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl
+FluentMessages: d2k|fluent/lua.ftl, d2k|fluent/campaign.ftl, map.ftl
