@@ -93,6 +93,7 @@ OrniBomb:
 	Burst: 5
 	BurstDelays: 6
 	Range: 3c0
+	Report: ORNIBOMB.WAV
 	Projectile: GravityBomb
 		Image: BOMBS
 		Velocity: 0, 0, -64
@@ -191,7 +192,7 @@ DeathHandCluster:
 CrateExplosion:
 	Warhead@1Dam: SpreadDamage
 		Damage: 5000
-		Spread: 1c0
+		Spread: 2c0
 		Falloff: 100, 0
 		Versus:
 			none: 90
@@ -270,7 +271,7 @@ grenade:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
-		Spread: 1c512
+		Spread: 2c0
 		Falloff: 100, 0
 		Versus:
 			none: 135
@@ -308,7 +309,7 @@ grenade-ifv:
 GrenDeath:
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
-		Spread: 1c0
+		Spread: 2c0
 		Falloff: 100, 0
 		Versus:
 			none: 125

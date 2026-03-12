@@ -6,17 +6,17 @@
    the License, or (at your option) any later version. For more
    information, see COPYING.
 ]]
-AttackGroupSize = {8}
+AttackGroupSize = { 8 }
 AttackDelay = { DateTime.Seconds(2), DateTime.Seconds(4) }
 
 IdlingUnits =
 {
-	Atreides = { },
-	Fremen = { },
-	Harkonnen = { },
-	Ordos = { },
-	Mercenaries = { },
-	Corrino = { }
+	Atreides = {},
+	Fremen = {},
+	Harkonnen = {},
+	Ordos = {},
+	Mercenaries = {},
+	Corrino = {}
 }
 
 HoldProduction =
@@ -91,13 +91,13 @@ Produce = function(house, units)
         Trigger.AfterDelay(delay, function() Produce(house, units) end)
 
         if unitCount >= (AttackGroupSize[1] * 2) then
-            SendAttack(house)
+			SendAttack(house)
         end
     end)
 end
 
 SetupAttackGroup = function(house)
-	local units = { }
+	local units = {}
 
 	for i = 0, AttackGroupSize[1], 1 do
 		if #IdlingUnits[house.Name] == 0 then
@@ -150,18 +150,6 @@ InitializeHarvester = function(harvester)
 	harvester.FindResources()
 end
 
-Ticks = 0
-Speed = 5
-
-Tick = function()
-	Ticks = Ticks + 1
-
-	if Ticks > 1 or not Map.IsPausedShellmap then
-		local t = (Ticks + 45) % (360 * Speed) * (math.pi / 180) / Speed;
-		Camera.Position = viewportOrigin + WVec.New(19200 * math.sin(t), 28800 * math.cos(t), 0)
-	end
-end
-
 WorldLoaded = function()
 	Atreides = Player.GetPlayer("Atreides")
 	Fremen = Player.GetPlayer("Fremen")
@@ -170,8 +158,6 @@ WorldLoaded = function()
 	Mercenary = Player.GetPlayer("Mercenaries")
 	Corrino = Player.GetPlayer("Corrino")
 	Smugglers = Player.GetPlayer("Smugglers")
-
-	viewportOrigin = Camera.Position
 
 	Utils.Do(Utils.Take(4, Upgrades), function(upgrade)
 		atr_cyard.Produce(upgrade)

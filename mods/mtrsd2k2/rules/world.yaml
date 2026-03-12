@@ -148,8 +148,10 @@ World:
 	DebugVisualizationCommands:
 	PathFinderOverlay:
 	HierarchicalPathFinderOverlay:
+	ActorMapOverlay:
 	PlayerCommands:
 	HelpCommand:
+	AutoSave:
 	ScreenShaker:
 	BuildingInfluence:
 	ProductionQueueFromSelection:
@@ -393,6 +395,7 @@ World:
 	ScriptTriggers:
 	CellTriggerOverlay:
 	StartGameNotification:
+		SavedTextNotification: notification-game-saved
 	TimeLimitManager:
 		TimeLimitDisplayOrder: 2
 	ColorPickerManager:
