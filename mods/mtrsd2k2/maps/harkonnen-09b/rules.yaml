@@ -285,12 +285,12 @@ frigate:
 palace:
 	ProduceActorPower@ReleaseSardaukars:
 		Name: actor-palace.produceactorpower-fremen-name
-		Description: actor-palace.produceactorpower-fremen-description
+		Description: actor-sardaukar.description
 		Icon: fremen
 		PauseOnCondition: disabled
 		RequiresCondition: corrino
 		Prerequisites: ~techlevel.superweapons, ~palace.sardaukar
-		Actors: mpsardaukar, mpsardaukar, mpsardaukar, mpsardaukar, mpsardaukar
+		Actors: sardaukar, sardaukar, sardaukar, sardaukar, sardaukar
 		Type: sardaukar
 		ChargeInterval: 2250
 		EndChargeTextNotification: notification-fremen-ready
