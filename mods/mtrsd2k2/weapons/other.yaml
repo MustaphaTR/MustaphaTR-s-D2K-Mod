@@ -10,7 +10,6 @@ Sound:
 		Falloff: 0, 0, 100, 0
 		Range: 0, 0c512, 4c0, 6c0
 		MinDistance: 5c0
-		Color: 00FFFFC8
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 0
 		Spread: 1c756
@@ -35,18 +34,11 @@ sound2:
 	Inherits: Sound
 	Range: 4c0
 	ReloadDelay: 70
-	Projectile: AreaBeam
+	Projectile: SonicBlast
 		Speed: 0c256
-		Duration: 2
-		Width: 0c256
 	Warhead@1Dam: SpreadDamage
-		Damage: 800
-		Versus:
-			none: 150
-	Warhead@2Dam: SpreadDamage
-		Damage: 800
-		Versus:
-			none: 150
+		Damage: 660
+		Spread: 1c0
 	Warhead@3Concrete: DamagesConcrete
 		Damage: 1500
 
@@ -55,13 +47,7 @@ sound2-ifv:
 	ReloadDelay: 65
 	Range: 4c768
 	Warhead@1Dam: SpreadDamage
-		Damage: 900
-		Versus:
-			none: 125
-	Warhead@2Dam: SpreadDamage
-		Damage: 900
-		Versus:
-			none: 125
+		Damage: 720
 	Warhead@3Concrete: DamagesConcrete
 		Damage: 2000
 
