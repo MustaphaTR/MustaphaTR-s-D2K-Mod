@@ -65,7 +65,7 @@ if [ ! -d "${OUTPUTDIR}" ]; then
 fi
 
 echo "Building core files"
-install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/openra" "linux-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/openra" "linux-x64" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/openra"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
@@ -74,7 +74,7 @@ for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 done
 
 echo "Building mod files"
-install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}/usr/lib/openra" "linux-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}/usr/lib/openra" "linux-x64" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}/usr/lib/openra/mods"
 
@@ -89,9 +89,9 @@ fi
 # Add native libraries
 echo "Downloading appimagetool"
 if command -v curl >/dev/null 2>&1; then
-	curl -s -L -O https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage || exit 3
+	curl -s -L -O https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage || exit 3
 else
-	wget -cq https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage || exit 3
+	wget -cq https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage || exit 3
 fi
 
 echo "Building AppImage"
