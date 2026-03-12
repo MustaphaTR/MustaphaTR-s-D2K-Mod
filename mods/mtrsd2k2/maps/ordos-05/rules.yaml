@@ -16,14 +16,13 @@ Player:
 		PowerTypes: wind_trap
 		ProductionTypes: light_factory, heavy_factory, barracks
 		SiloTypes: silo
-		DefenseTypes: medium_gun_turret,large_gun_turret
 		SellRefineryInterval: -1
 		BuildingLimits:
 			barracks: 1
 			refinery: 1
 			light_factory: 1
 			heavy_factory: 1
-			wind_trap: 3
+			wind_trap: 4
 			silo: 1
 		BuildingFractions:
 			wind_trap: 1
@@ -42,15 +41,16 @@ Player:
 		PowerTypes: wind_trap
 		ProductionTypes: light_factory, heavy_factory, barracks
 		SiloTypes: silo
-		DefenseTypes: medium_gun_turret
+		DefenseTypes: machine_gun_tower, medium_gun_turret
 		SellRefineryInterval: -1
 		BuildingLimits:
 			barracks: 1
 			refinery: 1
 			light_factory: 1
 			heavy_factory: 1
-			wind_trap: 3
+			wind_trap: 4
 			silo: 1
+			machine_gun_tower: 1
 			medium_gun_turret: 5
 		BuildingFractions:
 			wind_trap: 1
@@ -58,6 +58,7 @@ Player:
 			refinery: 1
 			light_factory: 1
 			heavy_factory: 1
+			machine_gun_tower: 1
 			medium_gun_turret: 1
 
 World:
