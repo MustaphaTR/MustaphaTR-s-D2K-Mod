@@ -98,6 +98,7 @@ dog:
 	Armament:
 		Weapon: DogJaw
 		ReloadingCondition: attack-cooldown
+	-AttackFrontal:
 	AttackLeap:
 		Voice: Attack
 		PauseOnCondition: attacking || attack-cooldown
@@ -326,8 +327,6 @@ mechanic:
 		OutsideRangeCursor: repair
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
-	AttackFrontal:
-		FacingTolerance: 0
 	CaptureManager:
 	Captures:
 		CaptureTypes: husk
@@ -383,8 +382,6 @@ flamethrower:
 		DefaultAttackSequence: shoot
 	Armament:
 		Weapon: flamegun
-	AttackFrontal:
-		FacingTolerance: 0
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	RenderSprites:
@@ -425,8 +422,6 @@ plasma_infantry:
 	Armament:
 		Weapon: PlasBullet
 		LocalOffset: 427,0,341
-	AttackFrontal:
-		FacingTolerance: 0
 
 fremen:
 	Inherits: ^Infantry
@@ -498,8 +493,6 @@ fedaykin:
 		Range: 4c768
 	Armament:
 		Weapon: sound2
-	AttackFrontal:
-		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	Crushable:
@@ -538,6 +531,7 @@ drone:
 		Range: 4c384
 	Armament@primary:
 		Weapon: DroneJump
+	-AttackFrontal:
 	AttackInfect:
 		Voice: Attack
 		Damage: 750
@@ -776,8 +770,6 @@ sniper:
 		Speed: 40
 	Armament:
 		Weapon: SniperRifle
-	AttackFrontal:
-		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	Crushable:
