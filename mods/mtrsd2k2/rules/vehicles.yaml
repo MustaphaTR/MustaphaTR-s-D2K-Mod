@@ -31,12 +31,9 @@ trike.mg:
 	RevealsShroud:
 		Range: 4c768
 	WithMuzzleOverlay:
-	Armament@damage:
+	Armament:
 		Weapon: HMG_trike
-		LocalOffset: 180,0,110
-	Armament@muzzle:
-		Weapon: HMG_trike_muzzle
-		LocalOffset: -544,0,0
+		LocalOffset: 90,0,0
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisable
@@ -82,12 +79,9 @@ raider.mg:
 	RevealsShroud:
 		Range: 4c768
 	WithMuzzleOverlay:
-	Armament@damage:
+	Armament:
 		Weapon: HMG_raider
-		LocalOffset: 170,0,0
-	Armament@muzzle:
-		Weapon: HMG_raider_muzzle
-		LocalOffset: 170,0,0
+		LocalOffset: 90,0,0
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisable
@@ -132,12 +126,11 @@ quad.mg:
 		Speed: 96
 	RevealsShroud:
 		Range: 4c768
-	Armament@damage:
+	WithMuzzleOverlay:
+	Armament:
 		Weapon: HMG_quad
-		LocalOffset: 128,64,64, 128,-64,64
-	Armament@muzzle:
-		Weapon: HMG_quad_muzzle
-		LocalOffset: -544,64,64, -544,-64,64
+		LocalOffset: 100,0,0
+		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisable
 		FacingTolerance: 0

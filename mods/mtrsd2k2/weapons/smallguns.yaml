@@ -143,25 +143,6 @@ HMG_turret:
 		Versus:
 			none: 175
 
-HMG_muzzle:
-	ReloadDelay: 16
-	Range: 3c0
-	Burst: 3
-	BurstDelays: 2
-	Projectile: InstantHit
-	Warhead@TargetValidation: SpreadDamage
-
-HMG_trike_muzzle:
-	Inherits: HMG_muzzle
-
-HMG_raider_muzzle:
-	Inherits: HMG_muzzle
-	ReloadDelay: 14
-
-HMG_quad_muzzle:
-	Inherits: HMG_muzzle
-	ReloadDelay: 18
-
 SniperRifle:
 	Report: FREMODD1.WAV
 	ReloadDelay: 80
