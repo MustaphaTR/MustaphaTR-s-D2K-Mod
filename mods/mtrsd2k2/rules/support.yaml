@@ -111,6 +111,20 @@ silo:
 		Margin: 1, 4
 		RequiresSelection: true
 		PipCount: 5
+	GrantConditionOnDamageState@heavyDamage:
+		Condition: heavy-damage
+	FloatingSpriteEmitter@SmokeSmall:
+		Offset: 0, -300, 0
+		RequiresCondition: heavy-damage
+		Image: smoke3
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 4, 15
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: 1024
 
 silo.smuggler:
 	Inherits: silo
@@ -288,6 +302,20 @@ machine_gun_tower:
 		Amount: -30
 	Replacement:
 		ReplaceableTypes: Tower
+	GrantConditionOnDamageState@heavyDamage:
+		Condition: heavy-damage
+	FloatingSpriteEmitter@smoke2_small:
+		Offset: 0, -700, 0
+		RequiresCondition: heavy-damage
+		Image: smoke3
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 4, 15
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: 1024
 
 flame_tower:
 	Inherits: ^Defense
@@ -329,6 +357,20 @@ flame_tower:
 		Amount: -30
 	Replacement:
 		ReplaceableTypes: Tower
+	GrantConditionOnDamageState@heavyDamage:
+		Condition: heavy-damage
+	FloatingSpriteEmitter@smoke2_small:
+		Offset: 0, -700, 0
+		RequiresCondition: heavy-damage
+		Image: smoke3
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 4, 15
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: 1024
 
 artillery_platform:
 	Inherits: ^Defense
@@ -376,6 +418,20 @@ artillery_platform:
 		Amount: -30
 	Replacement:
 		ReplaceableTypes: Tower
+	GrantConditionOnDamageState@heavyDamage:
+		Condition: heavy-damage
+	FloatingSpriteEmitter@smoke2_small:
+		Offset: 0, -700, 0
+		RequiresCondition: heavy-damage
+		Image: smoke3
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 4, 15
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: 1024
 
 medium_gun_turret:
 	Inherits: ^Defense
@@ -424,6 +480,20 @@ medium_gun_turret:
 		Amount: -50
 	Replacement:
 		ReplaceableTypes: Tower
+	GrantConditionOnDamageState@heavyDamage:
+		Condition: heavy-damage
+	FloatingSpriteEmitter@smoke2_small:
+		Offset: 0, -700, 0
+		RequiresCondition: heavy-damage
+		Image: smoke3
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 4, 15
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: 1024
 
 large_gun_turret:
 	Inherits: ^Defense
@@ -488,3 +558,17 @@ large_gun_turret:
 	TimedConditionBar@Strike:
 		Condition: corrino.rocket_strike
 		Color: 222222
+	GrantConditionOnDamageState@heavyDamage:
+		Condition: heavy-damage
+	FloatingSpriteEmitter@smokeSmall:
+		Offset: 0, -700, 0
+		RequiresCondition: heavy-damage
+		Image: smoke3
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 4, 15
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: 1024
