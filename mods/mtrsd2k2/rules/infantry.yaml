@@ -310,7 +310,7 @@ mechanic:
 	Tooltip:
 		Name: actor-mechanic.name
 	Health:
-		HP: 52500
+		HP: 5250
 	Armor:
 		Type: none
 	Encyclopedia:
