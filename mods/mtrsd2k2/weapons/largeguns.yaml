@@ -116,12 +116,12 @@ DevBullet:
 PlasBullet:
 	Inherits: DevBullet
 	ReloadDelay: 60
-	Range: 3c512
+	Range: 4c0
 	Projectile: Bullet
 		Speed: 320
 		Image: oneblastbullet
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 384
 		Damage: 3000
 		Versus:
 			building: 40
@@ -133,7 +133,7 @@ PlasBullet:
 PlasBullet-ifv:
 	Inherits: PlasBullet
 	ReloadDelay: 55
-	Range: 4c128
+	Range: 4c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 3750
 

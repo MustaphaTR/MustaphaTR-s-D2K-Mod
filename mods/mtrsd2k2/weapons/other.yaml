@@ -428,7 +428,7 @@ PlasmaExplosion:
 
 Flamegun:
 	ReloadDelay: 5
-	Range: 2c0
+	Range: 2c128
 	Report: FLAMER1.WAV
 	Projectile: Bullet
 		Speed: 1c256
@@ -455,7 +455,7 @@ Flamegun:
 Flamegun-ifv:
 	Inherits: Flamegun
 	ReloadDelay: 4
-	Range: 3c0
+	Range: 3c128
 	Warhead@1Dam: SpreadDamage
 		Damage: 900
 	Warhead@3Concrete: DamagesConcrete
@@ -464,7 +464,7 @@ Flamegun-ifv:
 Flamegun-tower:
 	Inherits: Flamegun
 	ReloadDelay: 4
-	Range: 3c0
+	Range: 3c512
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
@@ -636,7 +636,7 @@ APMine:
 
 ECMRay.anim:
 	ReloadDelay: 2
-	Range: 5c0
+	Range: 6c0
 	ValidTargets: Vehicle, Drone
 	InvalidTargets: Jammer
 	TargetActorCenter: true
@@ -653,7 +653,7 @@ ECMRay.anim:
 
 ECMRay.end:
 	ReloadDelay: 3
-	Range: 5c0
+	Range: 6c0
 	ValidTargets: Vehicle, Drone
 	InvalidTargets: Jammer
 	TargetActorCenter: true
