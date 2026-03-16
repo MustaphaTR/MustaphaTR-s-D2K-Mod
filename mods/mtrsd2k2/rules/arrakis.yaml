@@ -203,6 +203,7 @@ sietch:
 	ProvidesPrerequisite@buildingname:
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade.barracks
+	-AmbientSound@onBeingDemolished:
 	-GivesBuildableArea:
 	-Sellable:
 	-Capturable:
