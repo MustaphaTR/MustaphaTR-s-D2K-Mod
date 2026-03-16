@@ -1,6 +1,6 @@
 ^Cannon:
 	ReloadDelay: 50
-	Range: 4c0
+	Range: 4c640
 	Report: MEDTANK1.WAV
 	Projectile: Bullet
 		Speed: 562
@@ -34,7 +34,7 @@
 110mm_Gun:
 	Inherits: ^Cannon
 	ReloadDelay: 35
-	Range: 5c0
+	Range: 6c0
 	Report: TURRET1.WAV
 	Projectile: Bullet
 		Speed: 875
@@ -49,7 +49,7 @@
 
 80mm_A:
 	Inherits: ^Cannon
-	Range: 5c0
+	Range: 5c128
 
 80mm_M:
 	Inherits: ^Cannon
@@ -63,14 +63,14 @@
 90mm:
 	Inherits: 80mm
 	ReloadDelay: 48
-	Range: 4c128
+	Range: 4c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 3400
 
 25mm:
 	Inherits: 80mm
 	ReloadDelay: 25
-	Range: 3c256
+	Range: 3c896
 	Projectile: Bullet
 		Speed: 768
 		Inaccuracy: 96
@@ -96,6 +96,7 @@ DevBullet:
 		Image: doubleblastbullet
 	Warhead@1Dam: SpreadDamage
 		Damage: 6500
+		Spread: 1c256
 		Versus:
 			none: 65
 			wall: 100
@@ -139,7 +140,7 @@ PlasBullet-ifv:
 155mm:
 	Inherits: ^Cannon
 	ReloadDelay: 80
-	Range: 5c512
+	Range: 6c896
 	Report: MORTAR1.WAV
 	Projectile: Bullet
 		Speed: 192
@@ -150,7 +151,7 @@ PlasBullet-ifv:
 		Image: 155mm
 	Warhead@1Dam: SpreadDamage
 		Damage: 4500
-		Spread: 2c0
+		Spread: 1c768
 		Versus:
 			none: 125
 			wall: 100
@@ -162,10 +163,6 @@ PlasBullet-ifv:
 			cy: 20
 			harvester: 25
 		DamageTypes: Prone50Percent, ExplosionDeath, SuppressDrone
-	Warhead@proneeffect: TargetDamage
-		DamageTypes: TriggerProne
-		Damage: 1
-		Spread: 1c512
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 5625
 	Warhead@3Eff: CreateEffect

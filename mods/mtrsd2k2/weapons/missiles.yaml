@@ -1,18 +1,18 @@
 ^Rocket:
 	ReloadDelay: 40
-	Range: 3c0
+	Range: 3c896
 	Report: ROCKET1.WAV
 	Projectile: Bullet
 		Blockable: false
 		Speed: 281
-		Inaccuracy: 140
+		Inaccuracy: 130
 		InaccuracyType: PerCellIncrement
 		Image: RPG
 		TrailImage: bazooka_trail2
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
-		Spread: 1c0
+		Spread: 0c896
 		Falloff: 100, 0
 		Versus:
 			none: 15
@@ -39,14 +39,14 @@
 ^Missile:
 	Inherits: ^Rocket
 	ReloadDelay: 60
-	Range: 5c512
+	Range: 7c0
 	MinRange: 0c512
 	Projectile: Missile
 		Shadow: true
 		InaccuracyType: Maximum
 		Inaccuracy: 250
 		HorizontalRateOfTurn: 22
-		RangeLimit: 7c614
+		RangeLimit: 10c0
 		CruiseAltitude: 1c0
 		MinimumLaunchAngle: 64
 		VerticalRateOfTurn: 40
@@ -83,13 +83,13 @@ Bazooka:
 Bazooka-ifv:
 	Inherits: Bazooka
 	ReloadDelay: 35
-	Range: 3c768
+	Range: 4c640
 	Warhead@1Dam: SpreadDamage
 		Damage: 4250
 
 BazookaAA:
 	Inherits: Bazooka
-	Range: 4c0
+	Range: 4c896
 	MinRange: 0c512
 	ValidTargets: Air
 	-Projectile:
@@ -101,7 +101,7 @@ BazookaAA:
 		TrailImage: bazooka_trail2
 		TrailInterval: 1
 		Speed: 384
-		RangeLimit: 4c614
+		RangeLimit: 5c384
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Air
@@ -110,18 +110,19 @@ BazookaAA:
 BazookaAA-ifv:
 	Inherits: BazookaAA
 	ReloadDelay: 35
-	Range: 4c768
+	Range: 5c640
 	Projectile: Missile
-		RangeLimit: 5c512
+		RangeLimit: 6c128
 	Warhead@1Dam: SpreadDamage
 		Damage: 4250
 
 Rocket:
 	Inherits: ^Rocket
 	ReloadDelay: 30
-	Range: 3c512
+	Range: 4c128
 	Projectile: Bullet
 		Speed: 352
+		Inaccuracy: 140
 	Warhead@1Dam: SpreadDamage
 		Damage: 2500
 		Versus:
@@ -141,7 +142,7 @@ Rocket:
 
 RocketAA:
 	Inherits: Rocket
-	Range: 4c512
+	Range: 5c128
 	MinRange: 0c512
 	ValidTargets: Air
 	-Projectile:
@@ -153,7 +154,7 @@ RocketAA:
 		TrailImage: bazooka_trail2
 		TrailInterval: 1
 		Speed: 384
-		RangeLimit: 5c204
+		RangeLimit: 5c640
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Air
@@ -192,7 +193,7 @@ RocketAA_quad:
 Rocket.stealth:
 	Inherits: Rocket
 	ReloadDelay: 40
-	Range: 4c0
+	Range: 4c512
 	Projectile: Bullet
 		Inaccuracy: 64
 	Warhead@1Dam: SpreadDamage
@@ -205,7 +206,7 @@ Rocket.stealth:
 
 Rocket.stealthAA:
 	Inherits: Rocket.stealth
-	Range: 5c0
+	Range: 5c512
 	MinRange: 0c512
 	ValidTargets: Air
 	-Projectile:
@@ -217,7 +218,7 @@ Rocket.stealthAA:
 		TrailImage: bazooka_trail2
 		TrailInterval: 1
 		Speed: 384
-		RangeLimit: 5c614
+		RangeLimit: 6c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Air
@@ -228,11 +229,11 @@ PhoenixRocket:
 	ReloadDelay: 100
 	Burst: 2
 	BurstDelays: 10
-	Range: 4c0
+	Range: 5c0
 	Projectile: Missile
 		Inaccuracy: 96
 		Speed: 256
-		RangeLimit: 4c512
+		RangeLimit: 5c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 7000
@@ -287,10 +288,10 @@ mtank_pri:
 	ReloadDelay: 115
 	Burst: 2
 	BurstDelays: 115
-	Range: 6c0
+	Range: 7c896
 	ValidTargets: Ground
 	Projectile: Missile
-		RangeLimit: 7c204
+		RangeLimit: 11c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 6000
 		ValidTargets: Ground
@@ -299,7 +300,7 @@ mtank_pri:
 
 mtank_priAA:
 	Inherits: mtank_pri
-	Range: 7c0
+	Range: 8c896
 	MinRange: 0c512
 	ValidTargets: Air
 	Projectile: Missile
@@ -313,7 +314,7 @@ mtank_priAA:
 OrniRocket:
 	Inherits: mtank_pri
 	BurstDelays: 10
-	Range: 4c0
+	Range: 5c0
 	Projectile: Missile
 		Speed: 256
 		RangeLimit: 5c204
@@ -335,7 +336,7 @@ OrniRocket:
 DeviatorMissile:
 	Inherits: ^Missile
 	ReloadDelay: 160
-	Range: 5c0
+	Range: 6c0
 	Report: MISSLE1.WAV
 	Projectile: Missile
 		RangeLimit: 6c0

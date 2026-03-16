@@ -1,13 +1,13 @@
 ^MG:
 	ReloadDelay: 30
-	Range: 2c512
+	Range: 3c128
 	Report: MGUN2.WAV
 	Projectile: InstantHit
 		Inaccuracy: 135
 		InaccuracyType: PerCellIncrement
 	Warhead@1Dam: SpreadDamage
 		Damage: 1250
-		Spread: 480
+		Spread: 512
 		Falloff: 100, 0
 		Versus:
 			none: 110
@@ -55,18 +55,19 @@ M_LMG:
 	Inherits: ^MG
 	ReloadDelay: 40
 	ValidTargets: Infantry
+	Range: 4c0
 
 M_LMG-ifv:
 	Inherits: M_LMG
 	ReloadDelay: 35
-	Range: 3c128
+	Range: 4c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 2000
 
 M_HMG:
 	Inherits: ^MG
 	ReloadDelay: 40
-	Range: 3c512
+	Range: 4c0
 	Report: 20MMGUN1.WAV
 	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
@@ -88,7 +89,7 @@ M_HMG:
 M_HMG-ifv:
 	Inherits: M_HMG
 	ReloadDelay: 35
-	Range: 4c128
+	Range: 4c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 3750
 
@@ -110,7 +111,7 @@ Fremen_L-ifv:
 HMG:
 	Inherits: ^MG
 	ReloadDelay: 20
-	Range: 3c0
+	Range: 3c896
 	Report: 20MMGUN1.WAV
 	Warhead@1Dam: SpreadDamage
 		Damage: 1550
@@ -166,7 +167,7 @@ SniperRifle-ifv:
 
 20mm:
 	Inherits: ^MG
-	Range: 4c0
+	Range: 4c640
 	MinRange: 0c001
 	ValidTargets: Ground, Air
 	Warhead@1Dam: SpreadDamage
@@ -178,7 +179,7 @@ SniperRifle-ifv:
 
 ChainGun:
 	ReloadDelay: 3
-	Range: 5c0
+	Range: 5c512
 	Report: MGUN2.WAV
 	MinRange: 3c0
 	Projectile: InstantHit

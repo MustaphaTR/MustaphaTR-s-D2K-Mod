@@ -1,6 +1,6 @@
 Sound:
 	ReloadDelay: 90
-	Range: 5c0
+	Range: 6c0
 	Report: SONIC1.WAV
 	Projectile: SonicBlast
 		Speed: 0c128
@@ -8,8 +8,8 @@ Sound:
 		InaccuracyType: PerCellIncrement
 		DamageInterval: 1
 		Falloff: 0, 0, 100, 0
-		Range: 0, 0c512, 4c0, 6c0
-		MinDistance: 5c0
+		Range: 0, 0c756, 6c0, 6c128
+		MinDistance: 6c0
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 0
 		Spread: 1c756
@@ -32,7 +32,7 @@ Sound:
 
 sound2:
 	Inherits: Sound
-	Range: 4c0
+	Range: 4c512
 	ReloadDelay: 70
 	Projectile: SonicBlast
 		Speed: 0c256
@@ -45,7 +45,7 @@ sound2:
 sound2-ifv:
 	Inherits: sound2
 	ReloadDelay: 65
-	Range: 4c768
+	Range: 5c256
 	Warhead@1Dam: SpreadDamage
 		Damage: 720
 	Warhead@3Concrete: DamagesConcrete
@@ -53,7 +53,7 @@ sound2-ifv:
 
 Heal:
 	ReloadDelay: 160
-	Range: 4c0
+	Range: 4c512
 	Report:
 	ValidTargets: Infantry
 	Projectile: InstantHit
@@ -156,6 +156,7 @@ DeathHand:
 		Multiplier: 1,1
 
 DeathHandCluster:
+	Report: NAPALM1.WAV
 	Inherits: Debris2
 	Range: 7c0
 	Projectile: Bullet
@@ -260,7 +261,7 @@ CliffExplode:
 
 grenade:
 	ReloadDelay: 50
-	Range: 4c0
+	Range: 4c256
 	Projectile: Bullet
 		Speed: 160
 		Blockable: false
@@ -271,7 +272,7 @@ grenade:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
-		Spread: 2c0
+		Spread: 1c512
 		Falloff: 100, 0
 		Versus:
 			none: 135
@@ -281,12 +282,8 @@ grenade:
 			invulnerable: 0
 			cy: 20
 			harvester: 25
-		DamageTypes: Prone50Percent, ExplosionDeath, SuppressDrone
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, SuppressDrone
 		DamageCalculationType: ClosestTargetablePosition
-	Warhead@proneeffect: TargetDamage
-		Damage: 1
-		Spread: 1c0
-		DamageTypes: TriggerProne
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SandCrater
 		InvalidTargets: Vehicle, Structure
@@ -300,7 +297,7 @@ grenade:
 grenade-ifv:
 	Inherits: grenade
 	ReloadDelay: 45
-	Range: 4c768
+	Range: 5c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 2250
 	Warhead@4Concrete: DamagesConcrete
@@ -309,7 +306,7 @@ grenade-ifv:
 GrenDeath:
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
-		Spread: 2c0
+		Spread: 1c512
 		Falloff: 100, 0
 		Versus:
 			none: 125
@@ -333,7 +330,7 @@ GrenDeath:
 SardDeath:
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
-		Spread: 512
+		Spread: 1c0
 		Falloff: 100, 0
 		Versus:
 			none: 15
@@ -411,7 +408,7 @@ BloomExplosion:
 PlasmaExplosion:
 	Warhead@1Dam: SpreadDamage
 		Damage: 20000
-		Spread: 3c0
+		Spread: 6c0
 		Falloff: 100, 0
 		Versus:
 			None: 100
@@ -425,6 +422,7 @@ PlasmaExplosion:
 		SmudgeType: SandCrater
 	Warhead@3Eff: CreateEffect
 		Explosions: devastator
+		ImpactSounds: EXPLLG5.WAV
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 20000
 
