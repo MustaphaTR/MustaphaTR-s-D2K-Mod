@@ -21,6 +21,7 @@ options-starting-units =
     .mcv-only = MCV Only
     .conyard-only = Construction Yard Only
     .carryall = MCV and Carryall
+    .conyard-carryall = ConYard and Carryall
     .light-support = Light Support
     .medium-support = Medium Support
     .heavy-support = Heavy Support

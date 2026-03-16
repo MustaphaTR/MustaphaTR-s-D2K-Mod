@@ -223,6 +223,18 @@ World:
 		BaseActor: mcv
 		SupportActors: carryall.smuggler
 		Factions: smuggler
+	StartingUnits@cyardcarryall:
+		Class: cyardcarryall
+		ClassName: options-starting-units.conyard-carryall
+		BaseActor: construction_yard
+		SupportActors: carryall
+		Factions: atreides, ordos, harkonnen, fremen, ixian, corrino, mercenary
+	StartingUnits@cyardcarryallsmuggler:
+		Class: cyardcarryall
+		ClassName: options-starting-units.conyard-carryall
+		BaseActor: construction_yard
+		SupportActors: carryall.smuggler
+		Factions: smuggler
 	StartingUnits@lighttrike:
 		Class: light
 		ClassName: options-starting-units.light-support
